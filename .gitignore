@@ -1,6 +1,7 @@
-### macOS ###
-## Apple Finder's file
+## macOS ##
+### Apple Finder's file
 .DS_Store
 
-## Xcode
+### Xcode
 xcuserdata/
+
