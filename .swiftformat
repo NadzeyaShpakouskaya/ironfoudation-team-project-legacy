@@ -12,4 +12,4 @@
 --disable wrapMultilineStatementBraces
 
 # min swift format version
---minversion 0.50.6
+--minversion 0.51.7
