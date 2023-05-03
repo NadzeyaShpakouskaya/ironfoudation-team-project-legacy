@@ -11,6 +11,9 @@
 		FDE0CEAB2A00F8370023F784 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE0CEAA2A00F8370023F784 /* ContentView.swift */; };
 		FDE0CEAD2A00F8390023F784 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDE0CEAC2A00F8390023F784 /* Assets.xcassets */; };
 		FDE0CEB02A00F8390023F784 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDE0CEAF2A00F8390023F784 /* Preview Assets.xcassets */; };
+		FDEC395E2A029235004DF739 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = FDEC395D2A029235004DF739 /* .gitkeep */; };
+		FDEC39602A0292C8004DF739 /* Sitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEC395F2A0292C8004DF739 /* Sitter.swift */; };
+		FDEC39622A0292F1004DF739 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = FDEC39612A0292F1004DF739 /* .gitkeep */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		FDE0CEAA2A00F8370023F784 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FDE0CEAC2A00F8390023F784 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDE0CEAF2A00F8390023F784 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FDEC395D2A029235004DF739 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		FDEC395F2A0292C8004DF739 /* Sitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sitter.swift; sourceTree = "<group>"; };
+		FDEC39612A0292F1004DF739 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,7 @@
 		FDE0CEBB2A0269280023F784 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FDEC395F2A0292C8004DF739 /* Sitter.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -88,6 +95,7 @@
 		FDE0CEBC2A02693A0023F784 /* View Model */ = {
 			isa = PBXGroup;
 			children = (
+				FDEC39612A0292F1004DF739 /* .gitkeep */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -95,6 +103,7 @@
 		FDE0CEBD2A0269570023F784 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				FDEC395D2A029235004DF739 /* .gitkeep */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -159,8 +168,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDEC395E2A029235004DF739 /* .gitkeep in Resources */,
 				FDE0CEB02A00F8390023F784 /* Preview Assets.xcassets in Resources */,
 				FDE0CEAD2A00F8390023F784 /* Assets.xcassets in Resources */,
+				FDEC39622A0292F1004DF739 /* .gitkeep in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDEC39602A0292C8004DF739 /* Sitter.swift in Sources */,
 				FDE0CEAB2A00F8370023F784 /* ContentView.swift in Sources */,
 				FDE0CEA92A00F8370023F784 /* WoofApp.swift in Sources */,
 			);
