@@ -52,7 +52,10 @@
 			isa = PBXGroup;
 			children = (
 				FDE0CEA82A00F8370023F784 /* WoofApp.swift */,
-				FDE0CEAA2A00F8370023F784 /* ContentView.swift */,
+				FDE0CEBB2A0269280023F784 /* Model */,
+				FDE0CEBA2A02691D0023F784 /* View */,
+				FDE0CEBC2A02693A0023F784 /* View Model */,
+				FDE0CEBD2A0269570023F784 /* Helper */,
 				FDE0CEAC2A00F8390023F784 /* Assets.xcassets */,
 				FDE0CEAE2A00F8390023F784 /* Preview Content */,
 			);
@@ -65,6 +68,35 @@
 				FDE0CEAF2A00F8390023F784 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FDE0CEBA2A02691D0023F784 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FDE0CEAA2A00F8370023F784 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FDE0CEBB2A0269280023F784 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FDE0CEBC2A02693A0023F784 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		FDE0CEBD2A0269570023F784 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
