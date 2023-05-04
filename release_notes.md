@@ -24,7 +24,7 @@ Software requirements:
  * Supported devices - iPhone only
  * Supported modes - portrait
  * Dark/night theme - deactivate
- * The linters (Swiftformat and Swiftlint) integrated with Xcode in the build phase.nters (Swiftformat and Swiftlint) integrated with Xcode in the build phase.
+ * The linters (Swiftformat and Swiftlint) integrated with Xcode in the build phase.
 
 ### Notes
 
