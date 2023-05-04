@@ -3,6 +3,10 @@ import SwiftUI
 struct OwnerMainTabView: View {
     @State private var selection: Tab = .sitters
 
+    init() {
+        customizeTabBar()
+    }
+
     var body: some View {
         NavigationView {
             TabView(selection: $selection) {
@@ -29,6 +33,11 @@ struct OwnerMainTabView: View {
             .navigationTitle(selection.header)
             .navigationBarTitleDisplayMode(.inline)
         }
+    }
+
+    private func customizeTabBar() {
+        let tabBarAppearance = UITabBar.appearance()
+        tabBarAppearance.unselectedItemTintColor = UIColor(Color.grayDark)
     }
 }
 
