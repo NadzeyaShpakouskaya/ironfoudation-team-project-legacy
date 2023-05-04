@@ -10,4 +10,4 @@ All notable changes to this project will be documented in this file.
 - Add the Swiftformat script to the build phase of the Woof target.
 - Update the deployment target to 15.0. 
 
-## [0.1.0] - 2023-03-05
+## [0.1.0]
