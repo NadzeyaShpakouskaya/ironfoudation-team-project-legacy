@@ -6,11 +6,11 @@ The description of the team workflow for the board.
 
 The board consists of 5 columns:
 
-**Common backlog** - includes all tasks that should be done.
-**Sprint backlog** - includes the list of tasks for the current sprint.
-**In Progress** - the list of tasks that the team works on.
-**In Review** - the list of tasks that are under review process.
-**Done** - the list of tasks that successfully merged to main branch.
+- `Common backlog`- includes all tasks that should be done.
+- `Sprint backlog` - includes the list of tasks for the current sprint.
+- `In Progress` - the list of tasks that the team works on.
+- `In Review` - the list of tasks that are under review process.
+- `Done` - the list of tasks that successfully merged to main branch.
 
 ### Common backlog
 
@@ -30,16 +30,16 @@ During the sprint planning process, the issues from the sprint backlog are estim
 Except estimation labels in progect also provided labels: 
 `high`, `medium`, `bug`, `blocker`, `enhancement`, `help wanted`:
 
-`High` - high level of priority.
-`Invalid`- this doesn't seem right.
-`Documentation` - improvements or additions to documentation.
-`Medium` - medium level of priority.
-`Enhancement`- new feature or request.
-`Need more discussion`- further information is requested.
-`Bug`- something isn't working.
-`Help wanted` - extra attention is needed.
-`Low` - low level of priority.
-`Blocker` - urgent level of priority, it's blocking another task.
+- `High` - high level of priority.
+- `Invalid`- this doesn't seem right.
+- `Documentation` - improvements or additions to documentation.
+- `Medium` - medium level of priority.
+- `Enhancement`- new feature or request.
+- `Need more discussion`- further information is requested.
+- `Bug`- something isn't working.
+- `Help wanted` - extra attention is needed.
+- `Low` - low level of priority.
+- `Blocker` - urgent level of priority, it's blocking another task.
 
 All types of labels are marked with separate color.
 
