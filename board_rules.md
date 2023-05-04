@@ -39,7 +39,6 @@ Except estimation labels in progect also provided labels:
 `Bug`- something isn't working.
 `Help wanted` - extra attention is needed.
 `Low` - low level of priority.
-`Invalid' - this doesn't seem right.
 `Blocker` - urgent level of priority, it's blocking another task.
 
 All types of labels are marked with separate color.
