@@ -14,8 +14,8 @@ Woof application connects dog owners with pet sitters which contributes to build
 App also makes managing sitting bussines and pet owner's schedule. They can choose their own schedule, prices, and requirements for servise. 
 
 **Features include**
-- Secure store all of pet owners' and pet sitters' data base. 
-- Regularly data base update with personal information.
+- Secure store all of pet owners and pet sitters databases.
+- Regularly database update with personal information.
 
 **It also important to know:**
 To process the application some personal information about customers is required, for example, home address, mobile phone.
