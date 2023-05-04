@@ -23,16 +23,13 @@ To process the application some personal information about customers is required
 ## Technologies
 
 To install the application, please, see the list of requirements and restrictions settings below:
+ * Deployment target for iOS SDKs - 15.0
+ * Supported devices - iPhone only
+ * Supported modes - portrait
+ * Dark/night theme - deactivate
+ * The linters (Swiftformat and Swiftlint) integrated with Xcode in the build phase.nters (Swiftformat and Swiftlint) integrated with Xcode in the build phase.
 
-```
- Deployment target for iOS SDKs - 15.0
- Supported devices - iPhone only
- Supported modes - portrait
- Dark/night theme - deactivate
- The linters (Swiftformat and Swiftlint) integrated with Xcode in the build phase.
-```
 To contribute code, please, use:
-
 * macOS ventura 13.3
 * Xcode version: 14.3
 * Swift: 5.8
@@ -58,11 +55,9 @@ git@github.com:ios-course/ironfoudation-team-project.git
 
 You can contact the authors by the following GitHub's usernames:
 
-```
-Nadia Shpakouskaya: @NadzeyaShpakouskaya 
-Alex Zavadskiy: @iBYarchitect
-Julya Kmita: @julyakmita
-```
+- Nadia Shpakouskaya: [@NadzeyaShpakouskaya](https://github.com/NadzeyaShpakouskaya)
+- Alex Zavadskiy: [@iBYarchitect](https://github.com/iBYarchitect)
+- Julya Kmita: [@julyakmita](https://github.com/julyakmita)
 
 ## NOTES:
 More information about working with the application will be added during development.
