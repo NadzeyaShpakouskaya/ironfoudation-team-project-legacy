@@ -1,6 +1,6 @@
  # Release notes
 
-- WOOF Mobile APP
+- Woof Mobile APP
 - Release notes version: 1
 - Release note date: May. 4, 2023
 
@@ -28,7 +28,7 @@ Software requirements:
 
 ### Notes
 
-Anyone can download the and use the app features.
+Anyone can download and use the app features.
 
 ### Support
 
