@@ -1,6 +1,5 @@
 # WOOF application 
 
-
 ## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)
@@ -44,7 +43,7 @@ To contribute code, please, use:
 ## Installation
 
 **Pre-requisites**: 
-To run this project: install Xcode(SDKs for iOS 15.0 as a deployment target).
+To run this project: install Xcode (SDKs for iOS 15.0 as a deployment target).
 Then:
 
 1) clone the current repository via ssh: 
