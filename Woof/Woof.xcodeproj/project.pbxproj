@@ -7,20 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FDD143C72A03BD48000BBA77 /* OwnerMainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD143C62A03BD48000BBA77 /* OwnerMainTabView.swift */; };
 		FDE0CEA92A00F8370023F784 /* WoofApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE0CEA82A00F8370023F784 /* WoofApp.swift */; };
-		FDE0CEAB2A00F8370023F784 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE0CEAA2A00F8370023F784 /* ContentView.swift */; };
 		FDE0CEAD2A00F8390023F784 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDE0CEAC2A00F8390023F784 /* Assets.xcassets */; };
 		FDE0CEB02A00F8390023F784 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDE0CEAF2A00F8390023F784 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FDD143BF2A02CB1E000BBA77 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		FDD143C62A03BD48000BBA77 /* OwnerMainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerMainTabView.swift; sourceTree = "<group>"; };
 		FDE0CEA52A00F8370023F784 /* Woof.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Woof.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDE0CEA82A00F8370023F784 /* WoofApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoofApp.swift; sourceTree = "<group>"; };
-		FDE0CEAA2A00F8370023F784 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FDE0CEAC2A00F8390023F784 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDE0CEAF2A00F8390023F784 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		FDEC395D2A029235004DF739 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		FDEC39612A0292F1004DF739 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; name = .gitkeep; path = "Woof/View Model/.gitkeep"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -76,7 +75,7 @@
 		FDE0CEBA2A02691D0023F784 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FDE0CEAA2A00F8370023F784 /* ContentView.swift */,
+				FDD143C62A03BD48000BBA77 /* OwnerMainTabView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -100,7 +99,6 @@
 		FDE0CEBD2A0269570023F784 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				FDEC395D2A029235004DF739 /* .gitkeep */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -218,7 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDE0CEAB2A00F8370023F784 /* ContentView.swift in Sources */,
+				FDD143C72A03BD48000BBA77 /* OwnerMainTabView.swift in Sources */,
 				FDE0CEA92A00F8370023F784 /* WoofApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
