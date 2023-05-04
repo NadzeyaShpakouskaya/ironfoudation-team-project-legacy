@@ -23,7 +23,7 @@ Don't forget to link the project Repository.
 ### Sprint backlog
 
 Before sprint planning the issues place into Sprint backlog by PM.
-During the sprint planning process, the issues from the sprint backlog are estimated (labels with estimation are assigned), and the assignee is defined.
+During the sprint planning process, the issues from the sprint backlog are estimated (labels with estimation are assigned).
 
 **Estimation** is carried out with the participation of all team members online using the **Scrum Poker** technology on the resource [planningpokeronline](https://planningpokeronline.com).
 
@@ -43,11 +43,13 @@ Except estimation labels in progect also provided labels:
 
 All types of labels are marked with separate color.
 
-**Important**: the field assignee should be strictly added In Progress section. The fields milestone, and labels with estimation points should be filled for the issues after Sprint planning.
+**Important**: the fields milestone, and labels with estimation points should be filled for the issues after Sprint planning.
 
 ### In Progress
 
 When the work on the task starts it moves to in Progress section and stays there until PR will be opened.
+
+**Important**: the field assignee should be strictly added `In Progress` section. 
 
 ### In Review
 
@@ -70,26 +72,20 @@ Common backlog -> Sprint backlog -> In progress -> In review -> Done.
 
 You can contact the authors by the following email adresses:
 
-```
-Nadia Shpakouskaya: @NadzeyaShpakouskaya 
-Alex Zavadskiy: @iBYarchitect
-Julya Kmita: @julyakmita
-```
+- Nadia Shpakouskaya: [@NadzeyaShpakouskaya](https://github.com/NadzeyaShpakouskaya)
+- Alex Zavadskiy: [@iBYarchitect](https://github.com/iBYarchitect)
+- Julya Kmita: [@julyakmita](https://github.com/julyakmita)
+
 ## Important:
 
 ### Creating a new branch:
 1) all branches should be created from the main branch;
-2) name of a new branch should show the issue type, issue number and branch name:
- 
- ```
- [type_of_task - #issue_from_backlog - title].
- For example:
- feature-1-create-project.
- ```
+2) name of a new branch should show the issue type, issue number, and branch name and follow this pattern  [type_of_task - #issue_from_backlog - title]. 
+For example: **feature-1-create-project.**
 
 ### Merge restrictions to the main branch:
 - minimum two approvals;
-- all conversations should be closed (resolve) after exhaustive discussion.
+- all conversations should be closed (resolved) after exhaustive discussion.
 
 ## Note
 The team has daily stand ups at ten o'clock (GTM+3).
