@@ -34,6 +34,7 @@ struct OwnerMainTabView: View {
                         .tag(Tab.profile)
                 }
             }
+            .tint(Color.App.purpleDark)
             .navigationTitle(selection.header)
             .navigationBarTitleDisplayMode(.inline)
         }
