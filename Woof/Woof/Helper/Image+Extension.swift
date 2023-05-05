@@ -4,12 +4,12 @@ extension Image {
     /**
      Represents the different icons used within the application.
      */
-    enum Icon {
+    enum IconName {
         /// The icon used for the "Find Sitter" tab.
-        static let findSitterTabIcon = "magnifyingglass"
+        static let findSitterTab = "magnifyingglass"
         /// The icon used for the "Walkings" tab.
-        static let walkingsTabIcon = "pawprint"
+        static let walkingsTab = "pawprint"
         /// The icon used for the "Profile" tab.
-        static let profileTabIcon = "person.text.rectangle"
+        static let profileTab = "person.text.rectangle"
     }
 }
