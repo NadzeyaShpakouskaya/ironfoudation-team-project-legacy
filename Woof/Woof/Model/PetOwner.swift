@@ -1,11 +1,9 @@
 import Foundation
 
 /**
- A struct representing a pet owner.
- This struct conforms to the Identifiable and Codable protocols, allowing it
- to be easily used in SwiftUI and encoded/decoded from JSON.
+ A person who owns a pet (or several pets) and might be interested in finding a pet sitter for them.
  */
-struct PetOwner: Identifiable, Codable {
+struct Owner: Identifiable, Codable {
     /// Uniquely identifies the pet owner.
     let id: UUID
     
@@ -18,12 +16,12 @@ struct PetOwner: Identifiable, Codable {
     /// The phone number of the pet owner.
     var phone: String
     
-    /// The optionl URL of the pet owner's avatar image.
+    /// URL that contains an avatar image of the pet owner.
     var avatarUrl: URL?
     
     /// The address of the pet owner.
     var address: String
     
-    /// The rating of the pet owner from 0 to 5.
+    /// The rating of the pet owner.
     var rating: Double
 }
