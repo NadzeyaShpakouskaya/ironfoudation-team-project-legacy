@@ -47,8 +47,7 @@ Then:
 For example, using the command line:
 ```
 $ git clone git@github.com:ios-course/ironfoudation-team-project.git
-```bash
-
+```
 2) open the file Woof.xcodeproj in Xcode
 
 ## Authors
