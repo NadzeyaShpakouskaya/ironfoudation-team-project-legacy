@@ -1,6 +1,6 @@
 # WOOF application 
 
-![macOS](https://img.shields.io/badge/macOS-13.3.1+-blue) ![Swift](https://img.shields.io/badge/Swift-5.8-orange)  ![Xcode](https://img.shields.io/badge/Xcode-14.3-red) ![SwiftFormat](https://img.shields.io/badge/SwiftFormat-0.51.7-yellow) ![SwiftLint](https://img.shields.io/badge/SwiftLint-0.51.0-green)
+![macOS](https://img.shields.io/badge/macOS-13.3+-blue) ![Swift](https://img.shields.io/badge/Swift-5.8-orange)  ![Xcode](https://img.shields.io/badge/Xcode-14.3-red) ![SwiftFormat](https://img.shields.io/badge/SwiftFormat-0.51.7-white) ![SwiftLint](https://img.shields.io/badge/SwiftLint-0.51.0-green)
 
 ## Table of contents
 * [General info](#general-info)
@@ -38,16 +38,16 @@ To contribute code, please, use:
 ## Installation
 
 **Pre-requisites**: 
-To run this project: install Xcode (SDKs for iOS 15.0 as a deployment target).
+To run this project: install Xcode (SDKs for iOS 15.0+ as a deployment target).
 Then:
 
 1) clone the current repository:
 [GITHUB Docs](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) 
 
-For example, using the commant line:
+For example, using the command line:
 ```
 $ git clone git@github.com:ios-course/ironfoudation-team-project.git
-```
+```bash
 
 2) open the file Woof.xcodeproj in Xcode
 
