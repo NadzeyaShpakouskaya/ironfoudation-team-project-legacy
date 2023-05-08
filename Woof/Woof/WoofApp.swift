@@ -4,7 +4,7 @@ import SwiftUI
 struct WoofApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            OwnerMainTabView()
         }
     }
 }
