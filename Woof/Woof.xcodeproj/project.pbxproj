@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD1FA3B52A090916000A3A91 /* Sitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD143CC2A03E575000BBA77 /* Sitter.swift */; };
 		FDD143C72A03BD48000BBA77 /* OwnerMainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD143C62A03BD48000BBA77 /* OwnerMainTabView.swift */; };
 		FDD143CB2A03C629000BBA77 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD143CA2A03C629000BBA77 /* Color+Extension.swift */; };
 		FDD143E02A051F96000BBA77 /* OwnerMainTabView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD143DF2A051F96000BBA77 /* OwnerMainTabView+Extension.swift */; };
@@ -32,9 +33,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FDD143BF2A02CB1E000BBA77 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		FDD143C62A03BD48000BBA77 /* OwnerMainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerMainTabView.swift; sourceTree = "<group>"; };
 		FDD143CA2A03C629000BBA77 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		FDD143CC2A03E575000BBA77 /* Sitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sitter.swift; sourceTree = "<group>"; };
 		FDD143DF2A051F96000BBA77 /* OwnerMainTabView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OwnerMainTabView+Extension.swift"; sourceTree = "<group>"; };
 		FDD143E12A05233B000BBA77 /* Image+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extension.swift"; sourceTree = "<group>"; };
 		FDD143F42A052A11000BBA77 /* WoofTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WoofTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				3673D6362A04F7FD009D699D /* PetOwner.swift */,
+				FDD143CC2A03E575000BBA77 /* Sitter.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -303,6 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD1FA3B52A090916000A3A91 /* Sitter.swift in Sources */,
 				FDD143E22A05233B000BBA77 /* Image+Extension.swift in Sources */,
 				FDD143C72A03BD48000BBA77 /* OwnerMainTabView.swift in Sources */,
 				FDD143CB2A03C629000BBA77 /* Color+Extension.swift in Sources */,
