@@ -45,7 +45,7 @@ Then:
 [GITHUB Docs](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) 
 
 For example, using the command line:
-```
+```bash
 $ git clone git@github.com:ios-course/ironfoudation-team-project.git
 ```
 2) open the file Woof.xcodeproj in Xcode
