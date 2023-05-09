@@ -98,11 +98,19 @@
 			path = Sitter;
 			sourceTree = "<group>";
 		};
-		FDD143F52A052A11000BBA77 /* WoofTests */ = {
+		FD1FA3CD2A0A7DDB000A3A91 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				FDD143F62A052A11000BBA77 /* AppColorSchemeTests.swift */,
 				FDD144002A0532D5000BBA77 /* ImageNamesTests.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FDD143F52A052A11000BBA77 /* WoofTests */ = {
+			isa = PBXGroup;
+			children = (
+				FD1FA3CD2A0A7DDB000A3A91 /* Helpers */,
 			);
 			path = WoofTests;
 			sourceTree = "<group>";

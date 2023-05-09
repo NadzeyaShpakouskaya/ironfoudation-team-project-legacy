@@ -67,7 +67,7 @@ struct SitterCardView_Previews: PreviewProvider {
     static var previews: some View {
         SitterCardView(
             viewModel:
-                SitterCardViewModel(sitter: Sitter.dummySitter)
+            SitterCardViewModel(sitter: Sitter.dummySitter)
         ).frame(height: 160)
     }
 }
