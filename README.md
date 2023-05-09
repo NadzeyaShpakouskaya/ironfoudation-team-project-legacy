@@ -20,23 +20,18 @@ To process the application some personal information about customers is required
 
 ## Technologies
 
-To install the application, please, see the list of requirements and restrictions settings below:
- * Deployment target for iOS SDKs - 15.0
- * Supported devices - iPhone only
- * Supported modes - portrait
- * Dark/night theme - deactivate
- * The linters (Swiftformat and Swiftlint) integrated with Xcode in the build phase.nters (Swiftformat and Swiftlint) integrated with Xcode in the build phase.
-
 To contribute code, please, use:
 * macOS minimal version - Ventura 13.3
 * Xcode version: 14.3
 * Swift: 5.8
-* SDKs for iOS: 15.0
+* SDKs for iOS: 15.0+
 * SwiftLint: 0.51.0: [SwiftLint](https://github.com/realm/SwiftLint)
 * SwiftFormat: 0.51.7: [SwiftFormat](https://github.com/nicklockwood/SwiftFormat)
 
 ## Installation
 
+ Supported devices - iPhone only.
+ 
 **Pre-requisites**: 
 To run this project: install Xcode (SDKs for iOS 15.0+ as a deployment target).
 Then:
@@ -48,7 +43,10 @@ For example, using the command line:
 ```bash
 $ git clone git@github.com:ios-course/ironfoudation-team-project.git
 ```
-2) open the file Woof.xcodeproj in Xcode
+2) open the file Woof.xcodeproj in Xcode.
+3) select your device as destination.
+[Running your app in Simulator or on a device](https://developer.apple.com/documentation/xcode/running-your-app-in-simulator-or-on-a-device)
+4) press the run button.
 
 ## Authors
 
@@ -59,4 +57,5 @@ You can contact the authors by the following GitHub's usernames:
 - Julya Kmita: [@julyakmita](https://github.com/julyakmita)
 
 ## NOTES:
+
 More information about working with the application will be added during development.
