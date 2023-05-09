@@ -10,14 +10,15 @@ struct SitterCardView: View {
 
             HStack {
                 AsyncImage(url: viewModel.imageURL) { image in
-                    image.resizable()
+                    image
+                        .resizable()
                         .scaledToFill()
                         .overlay {
                             Circle()
                                 .stroke(lineWidth: 8.0)
                         }
                 } placeholder: {
-                    Image(systemName: "person")
+                    Image(systemName: Image.IconName.avatarPlaceholder)
                         .font(.largeTitle)
                 }
                 .foregroundColor(Color.App.grayDark)
@@ -36,7 +37,7 @@ struct SitterCardView: View {
                                 } else {
                                     HStack(spacing: 0) {
                                         ForEach(0..<viewModel.rating, id: \.self) { _ in
-                                            Image(systemName: "star.fill")
+                                            Image(systemName: Image.IconName.filledStar)
                                         }
                                     }
                                 }
@@ -64,6 +65,9 @@ struct SitterCardView: View {
 
 struct SitterCardView_Previews: PreviewProvider {
     static var previews: some View {
-        SitterCardView(viewModel: SitterCardViewModel(sitter: Sitter.dummySitter))
+        SitterCardView(
+            viewModel:
+                SitterCardViewModel(sitter: Sitter.dummySitter)
+        ).frame(height: 160)
     }
 }
