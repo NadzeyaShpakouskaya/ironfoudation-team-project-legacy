@@ -1,8 +1,16 @@
 # WOOF application 
 
+| Dev Environment|
+|---------------------|
+| ![macOS](https://img.shields.io/badge/macOS-13.3+-blue)|
+| ![Xcode](https://img.shields.io/badge/Xcode-14.3-red)  |
+| ![Swift](https://img.shields.io/badge/Swift-5.8-orange)|
+| ![SDKs for iOS](https://img.shields.io/badge/SDKs%20for%20iOS-15%2B-lightgrey)
+| ![SwiftLint](https://img.shields.io/badge/SwiftLint-0.51.0-green): [SwiftLint](https://github.com/realm/SwiftLint)|
+| ![SwiftFormat](https://img.shields.io/badge/SwiftFormat-0.51.7-white): [SwiftFormat](https://github.com/nicklockwood/SwiftFormat)|
+
 ## Table of contents
 * [General info](#general-info)
-* [Technologies](#technologies)
 * [Installation](#installation)
 * [Authors](#authors)
 * [Notes](#notes)
@@ -17,16 +25,6 @@ As a pet sitter, you can provide the service of walks using your own schedule, p
 
 **It also important to know:**
 To process the application some personal information about customers is required, for example, home address, mobile phone.
-
-## Technologies
-| Dev Environment|
-|---------------------|
-| ![macOS](https://img.shields.io/badge/macOS-13.3+-blue)|
-| ![Xcode](https://img.shields.io/badge/Xcode-14.3-red)  |
-| ![Swift](https://img.shields.io/badge/Swift-5.8-orange)|
-| ![SDKs for iOS](https://img.shields.io/badge/SDKs%20for%20iOS-15%2B-lightgrey)
-| ![SwiftLint](https://img.shields.io/badge/SwiftLint-0.51.0-green): [SwiftLint](https://github.com/realm/SwiftLint)|
-| ![SwiftFormat](https://img.shields.io/badge/SwiftFormat-0.51.7-white): [SwiftFormat](https://github.com/nicklockwood/SwiftFormat)|
 
 ## Installation
 
