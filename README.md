@@ -1,13 +1,15 @@
 # WOOF application 
 
-| Dev Environment|
-|---------------------|
-| ![macOS](https://img.shields.io/badge/macOS-13.3+-blue)|
-| ![Xcode](https://img.shields.io/badge/Xcode-14.3-red)  |
-| ![Swift](https://img.shields.io/badge/Swift-5.8-orange)|
-| ![SDKs for iOS](https://img.shields.io/badge/SDKs%20for%20iOS-15%2B-lightgrey)
-| ![SwiftLint](https://img.shields.io/badge/SwiftLint-0.51.0-green): [SwiftLint](https://github.com/realm/SwiftLint)|
-| ![SwiftFormat](https://img.shields.io/badge/SwiftFormat-0.51.7-white): [SwiftFormat](https://github.com/nicklockwood/SwiftFormat)|
+## Current dev environment 
+
+| Dev  environment| Ref link |
+| --- | -- |
+| ![macOS](https://img.shields.io/badge/macOS-13.3+-blue) | | 
+| ![Xcode](https://img.shields.io/badge/Xcode-14.3-red) | |
+| ![Swift](https://img.shields.io/badge/Swift-5.8-orange) | |
+| ![SDKs for iOS](https://img.shields.io/badge/SDKs%20for%20iOS-15%2B-lightgrey) | |
+| ![SwiftFormat](https://img.shields.io/badge/SwiftFormat-0.51.7-yellow) | [Link](https://github.com/nicklockwood/SwiftFormat) |
+| ![SwiftLint](https://img.shields.io/badge/SwiftLint-0.51.0-green)| [Link](https://github.com/realm/SwiftLint) |
 
 ## Table of contents
 * [General info](#general-info)
