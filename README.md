@@ -1,5 +1,7 @@
 # WOOF application 
 
+⚠️ The app is under active development.
+
 ## Current dev environment 
 
 | Dev  environment| Ref link |
@@ -19,20 +21,16 @@
 
 ## General info
 
-This is the application for iOS.
-The `Woof` application provides the opportunity to connect dog owners and pet sitters to build trusted relationships between them. 
+The repo contains the source code of the `Woof` application.
+The `Woof` application is an iOS app that provides the opportunity to connect dog owners and pet sitters to build trusted relationships between them.
 You can use the app in 2 modes: like a pet owner or like a pet sitter.
 As a pet owner, you can find a sitter for your pet(s) and manage a schedule of your pets' walks, which makes the process of caring for your lovely doggies easier.
 As a pet sitter, you can provide the service of walks using your own schedule, prices, and other requirements, if needed.
-
-**It also important to know:**
-To process the application some personal information about customers is required, for example, home address, mobile phone.
 
 ## Installation
 
 **Pre-requisites**: 
 - installed Xcode with the version specified under the Development Environments section.
-Then:
 
 1) clone the current repository:
 [GITHUB Docs](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) 
