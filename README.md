@@ -1,7 +1,5 @@
 # WOOF application 
 
-![macOS](https://img.shields.io/badge/macOS-13.3+-blue) ![Swift](https://img.shields.io/badge/Swift-5.8-orange)  ![Xcode](https://img.shields.io/badge/Xcode-14.3-red) ![SwiftFormat](https://img.shields.io/badge/SwiftFormat-0.51.7-white) ![SwiftLint](https://img.shields.io/badge/SwiftLint-0.51.0-green)
-
 ## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)
@@ -21,21 +19,14 @@ As a pet sitter, you can provide the service of walks using your own schedule, p
 To process the application some personal information about customers is required, for example, home address, mobile phone.
 
 ## Technologies
-| Name Dev Environment|
+| Dev Environment|
 |---------------------|
 | ![macOS](https://img.shields.io/badge/macOS-13.3+-blue)|
 | ![Xcode](https://img.shields.io/badge/Xcode-14.3-red)  |
 | ![Swift](https://img.shields.io/badge/Swift-5.8-orange)|
-| ![SDKs for iOS](https://img.shields.io/badge/SSDKs-for-iOS-15+-purple)
+| ![SDKs for iOS](https://img.shields.io/badge/SSDKs-for-iOS-15+-blue)
 | ![SwiftLint](https://img.shields.io/badge/SwiftLint-0.51.0-green): [SwiftLint](https://github.com/realm/SwiftLint)|
 | ![SwiftFormat](https://img.shields.io/badge/SwiftFormat-0.51.7-white): [SwiftFormat](https://github.com/nicklockwood/SwiftFormat)|
-
-* macOS minimal version - Ventura 13.3
-* Xcode version: 14.3
-* Swift: 5.8
-* SDKs for iOS: 15.0+
-* SwiftLint: 0.51.0: [SwiftLint](https://github.com/realm/SwiftLint)
-* SwiftFormat: 0.51.7: [SwiftFormat](https://github.com/nicklockwood/SwiftFormat)
 
 ## Installation
 
