@@ -57,7 +57,9 @@ Don't forget to link the opened PR with the issue. For doing that, please, fill 
 
 ### Done
 
-`Done` - the list of tasks that successfully finished. If a task contains code, it should be merged to the main branch. In the case, when a task is useless or can not be closed for some resons it should be closed in the next mode "Close as not planned" (won't fix, can't repro, duplicate, stale etc.).
+An issue containing code can be moved to the `Done` section after a successful merge process with the main branch.
+If the issue does not contain code and does not require a merge process, it can be closed by skipping the `In Review` section and moving directly from the `In Progress` section to the `Done` section.
+In case the issue is useless, duplicates some other issues, or is not planned to be fixed, it should be closed in the next mode "Close as not scheduled" (does not fix, cannot reproduce, duplicates, outdated, etc.). Additional comments about why the issue is closed are required.
 
 ## Usage
 
