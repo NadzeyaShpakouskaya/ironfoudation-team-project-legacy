@@ -10,14 +10,14 @@ The board consists of 5 columns:
 - `Sprint backlog` - includes the list of tasks for the current sprint.
 - `In Progress` - the list of tasks that the team works on.
 - `In Review` - the list of tasks that are under review process.
-- `Done` - the list of tasks that successfully merged to main branch.
+- `Done` - the list of tasks that successfully finished. If a task contains code, it should be merged to the main branch. In the case, when a task is useless or can not be closed for some resons it should be closed in the next mode "Close as not planned" (won't fix, can't repro, duplicate, stale etc.).
 
 ### Common backlog
 
 The process of the issue creating and adding to Common backlog.
 Every issue is placed in a common backlog when it is created.
 The issue should contain a clear title and description with definitions of done (**DoD**).
-Select necessary labels, if applicable.
+Select necessary labels, if applicable. For example, if you add a task to create documentation, put the lable "Documentation" (labels' descriptiopn is provided below). 
 Don't forget to link the project Repository.
 
 ### Sprint backlog
@@ -28,22 +28,20 @@ During the sprint planning process, the issues from the sprint backlog are estim
 **Estimation** is carried out with the participation of all team members online using the **Scrum Poker** technology on the resource [planningpokeronline](https://planningpokeronline.com).
 
 Except estimation labels in progect also provided labels: 
-`high`, `medium`, `bug`, `blocker`, `enhancement`, `help wanted`:
 
-- `High` - high level of priority.
 - `Invalid`- this doesn't seem right.
 - `Documentation` - improvements or additions to documentation.
-- `Medium` - medium level of priority.
-- `Enhancement`- new feature or request.
 - `Need more discussion`- further information is requested.
 - `Bug`- something isn't working.
-- `Help wanted` - extra attention is needed.
-- `Low` - low level of priority.
 - `Blocker` - urgent level of priority, it's blocking another task.
+- `Blocked` - this task cannot be done until the task on which it depends is completed. (Inside the blocked issue is placed a link to the blocker).
 
 All types of labels are marked with separate color.
 
-**Important**: the fields milestone, and labels with estimation points should be filled for the issues after Sprint planning.
+**Important**: 
+
+* the fields milestone, and labels with estimation points should be filled for the issues after Sprint planning;
+* if the PR is approved, then the PR creator can independently resolove conversations. 
 
 ### In Progress
 
@@ -53,8 +51,9 @@ When the work on the task starts it moves to in Progress section and stays there
 
 ### In Review
 
-When the work on the task is done, the PR is opened and waited for the review process, the issue is placed in the in Review section.
-Don't forget to link the opened PR with the issue.
+When the task code is under review, it is located in Progress column.
+When the work on the task is done, the PR is opened and waited for the review process, the PR is placed in the in Review section. In the review column there are only open PR.
+Don't forget to link the opened PR with the issue. For doing that, please, fill the "Develoment section" when describing the issue and choose menu item "Link a branch or pull request" -> select the a repository and PR.
 
 ### Done
 
@@ -62,25 +61,17 @@ The issues have successfully gone through the review process and merged into mai
 
 ## Usage
 
-The issue moves from left to right and can't skip any step (board section).
+The issue moves from left to right and can't skip any step (board section). The exception is when the team decides that the task cannot be completed or it needs to be canceled (read the description of **Done** section).
 The main flow is:
  `
 Common backlog -> Sprint backlog -> In progress -> In review -> Done.
 `
 
-## Ironfoundation-team
-
-You can contact the authors by the following email adresses:
-
-- Nadia Shpakouskaya: [@NadzeyaShpakouskaya](https://github.com/NadzeyaShpakouskaya)
-- Alex Zavadskiy: [@iBYarchitect](https://github.com/iBYarchitect)
-- Julya Kmita: [@julyakmita](https://github.com/julyakmita)
-
 ## Important:
 
 ### Creating a new branch:
 1) all branches should be created from the main branch;
-2) name of a new branch should show the issue type, issue number, and branch name and follow this pattern  [type_of_task - #issue_from_backlog - title]. 
+2) name of a new branch should show the issue type(feature, bug fix), issue number, and branch name and follow this pattern  [type_of_task - #issue_from_backlog - title]. 
 For example: **feature-1-create-project.**
 
 ### Merge restrictions to the main branch:
@@ -88,4 +79,5 @@ For example: **feature-1-create-project.**
 - all conversations should be closed (resolved) after exhaustive discussion.
 
 ## Note
+
 The team has daily stand ups at ten o'clock (GTM+3).
