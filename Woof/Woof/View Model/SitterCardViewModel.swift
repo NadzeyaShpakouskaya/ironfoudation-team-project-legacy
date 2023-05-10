@@ -23,7 +23,7 @@ final class SitterCardViewModel: ObservableObject {
     init(sitter: Sitter) {
         self.sitter = sitter
         fullName = DataTransformer.getFormattedNameFor(surname: sitter.surname, name: sitter.name)
-        rating = DataTransformer.formatRatingZeroToFiveStyle(sitter.rating)
+        rating = DataTransformer.convertValueZeroToFiveStyle(sitter.rating)
         price = sitter.pricePerHour
         imageURL = sitter.avatarUrl
         bio = sitter.bio
