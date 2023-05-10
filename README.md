@@ -30,18 +30,18 @@ As a pet sitter, you can provide the service of walks using your own schedule, p
 ## Installation
 
 **Pre-requisites**: 
-- installed Xcode with the version specified under the [Development Environment](https://github.com/ios-course/ironfoudation-team-project/blob/0467f4531423c7869f7e4fe3f45dad07835cadf8/README.md#current-dev-environment).
+- installed Xcode with the version specified under the [Current development Environment](https://github.com/ios-course/ironfoudation-team-project/blob/c2b76b2a0c10a53aa2eb6be70dec2642dccc9b1d/README.md#current-dev-environment).
 
 1) clone the current repository by running the following command in shell:
 ```bash
 $ git clone git@github.com:ios-course/ironfoudation-team-project.git
 ```
-If you need more info, please check the [GitHub's documentation](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
+If you need more information, please check the [GitHub's documentation](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
 
 2) open the file `Woof.xcodeproj` in Xcode.
 3) select your device as the destination.
 4) press the run button.
-If you don't know how to run the app on a real device, please check the [documentation](https://developer.apple.com/documentation/xcode/running-your-app-in-simulator-or-on-a-device)
+If you don't know how to run the app on a real device, please check the [documentation](https://developer.apple.com/documentation/xcode/running-your-app-in-simulator-or-on-a-device).
 
 ## Authors
 
