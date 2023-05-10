@@ -1,6 +1,6 @@
 import XCTest
 
-final class DataTransformerTests: XCTestCase {
+final class GetFormattedNameTests: XCTestCase {
     func testGetFormattedNameReturnsEmptyStringWhenEmptyDataProvided() {
         let actualValue = DataTransformer.getFormattedNameFor(name: "", surname: "")
         XCTAssertEqual(actualValue, "")
