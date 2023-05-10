@@ -9,9 +9,9 @@ enum DataTransformer {
     ///   - name: The name of the person.
     /// - Returns: The formatted full name in the format "name initial-of-surname."
     /// If either the surname or the name is empty, an empty string is returned.
-    static func getFormattedNameFor(surname: String, name: String) -> String {
-        guard !surname.isEmpty, !name.isEmpty else { return "" }
-        return "\(name) \(surname.prefix(1))."
+    static func getFormattedNameFor(name: String, surname: String) -> String {
+        let fullName = "\(name) \(surname)".trimmingCharacters(in: .whitespacesAndNewlines)
+        return fullName
     }
 
     /// Converts a numeric value to an integer within the range of 0 to 5, following the zero-to-five style.
@@ -25,5 +25,4 @@ enum DataTransformer {
         let roundedValue = Int(value.rounded(.toNearestOrAwayFromZero))
         return max(0, min(roundedValue, 5))
     }
-
 }
