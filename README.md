@@ -4,7 +4,7 @@
 
 ## Current dev environment 
 
-| Dev  environment| Ref link |
+| Dev environment| Ref link |
 | --- | -- |
 | ![macOS](https://img.shields.io/badge/macOS-13.3+-blue) | | 
 | ![Xcode](https://img.shields.io/badge/Xcode-14.3-red) | |
@@ -30,15 +30,14 @@ As a pet sitter, you can provide the service of walks using your own schedule, p
 ## Installation
 
 **Pre-requisites**: 
-- installed Xcode with the version specified under the Development Environments section.
+- installed Xcode with the version specified under the [Development Environment](https://github.com/ios-course/ironfoudation-team-project/blob/0467f4531423c7869f7e4fe3f45dad07835cadf8/README.md#current-dev-environment).
 
-1) clone the current repository:
-[GITHUB Docs](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) 
-
-For example, using the command line:
+1) clone the current repository by running the following command in shell:
 ```bash
 $ git clone git@github.com:ios-course/ironfoudation-team-project.git
 ```
+If you need more info, please check the [GitHub's documentation](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
+
 2) open the file `Woof.xcodeproj` in Xcode.
 3) select your device as the destination.
 4) press the run button.
