@@ -12,6 +12,7 @@
 		FD1FA3C32A0A682E000A3A91 /* SitterCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1FA3C22A0A682E000A3A91 /* SitterCardViewModel.swift */; };
 		FD1FA3C92A0A7783000A3A91 /* SitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1FA3C82A0A7783000A3A91 /* SitterCardView.swift */; };
 		FD1FA3CC2A0A781E000A3A91 /* Sitter+DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1FA3CB2A0A781E000A3A91 /* Sitter+DummyData.swift */; };
+		FD37A9902A0B65120001BABB /* DataTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD37A98F2A0B65120001BABB /* DataTransformer.swift */; };
 		FDD143C72A03BD48000BBA77 /* OwnerMainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD143C62A03BD48000BBA77 /* OwnerMainTabView.swift */; };
 		FDD143CB2A03C629000BBA77 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD143CA2A03C629000BBA77 /* Color+Extension.swift */; };
 		FDD143E02A051F96000BBA77 /* OwnerMainTabView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD143DF2A051F96000BBA77 /* OwnerMainTabView+Extension.swift */; };
@@ -40,6 +41,7 @@
 		FD1FA3C22A0A682E000A3A91 /* SitterCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitterCardViewModel.swift; sourceTree = "<group>"; };
 		FD1FA3C82A0A7783000A3A91 /* SitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitterCardView.swift; sourceTree = "<group>"; };
 		FD1FA3CB2A0A781E000A3A91 /* Sitter+DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sitter+DummyData.swift"; sourceTree = "<group>"; };
+		FD37A98F2A0B65120001BABB /* DataTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransformer.swift; sourceTree = "<group>"; };
 		FDD143C62A03BD48000BBA77 /* OwnerMainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerMainTabView.swift; sourceTree = "<group>"; };
 		FDD143CA2A03C629000BBA77 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		FDD143CC2A03E575000BBA77 /* Sitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sitter.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 			children = (
 				FDD143CA2A03C629000BBA77 /* Color+Extension.swift */,
 				FDD143E12A05233B000BBA77 /* Image+Extension.swift */,
+				FD37A98F2A0B65120001BABB /* DataTransformer.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				FD1FA3C92A0A7783000A3A91 /* SitterCardView.swift in Sources */,
 				FD1FA3C32A0A682E000A3A91 /* SitterCardViewModel.swift in Sources */,
 				3673D6372A04F7FD009D699D /* PetOwner.swift in Sources */,
+				FD37A9902A0B65120001BABB /* DataTransformer.swift in Sources */,
 				FDE0CEA92A00F8370023F784 /* WoofApp.swift in Sources */,
 				FD1FA3CC2A0A781E000A3A91 /* Sitter+DummyData.swift in Sources */,
 			);
