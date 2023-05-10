@@ -10,7 +10,7 @@ The board consists of 5 columns:
 - `Sprint backlog` - includes the list of tasks for the current sprint.
 - `In Progress` - the list of tasks that the team works on.
 - `In Review` - the list of tasks that are under review process.
-- `Done` - the list of tasks that were successfully finished. If a task contains code, it should be merged into the main branch. In the case, when a task is useless or can not be closed for some reason it should be closed in the next mode "Close as not planned" (won't fix, can't repro, duplicate, stale, etc.).
+- `Done` - the list of tasks that are considered as completed. If a task is no longer makes sense, then it must be closed with an appropriate comment. Good examples are "Closed as not planned", "Duplicate of the issue XXX", "The team has agreed to close task. Details are available in wiki (link here)".
 
 ### Usage
 
@@ -51,7 +51,7 @@ Except estimation labels in project also provided labels:
 
 When a team member start working on the task, they must move it into the `In Progress` section. Issue stays there until PR will be opened.
 
-**Important**: the field assignee should be strictly added `In Progress` section. 
+**Important**: the field assignee should be immediately filled when the task'll be moved `In Progress` section.
 
 ### In Review
 
