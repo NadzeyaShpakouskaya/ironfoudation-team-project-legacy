@@ -12,6 +12,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Add the Swiftformat script to the build phase of the Woof target.
 - Update the deployment target to 15.0+. 
 
-###Changed
+### Changed
 
-###Fixed
+### Fixed
