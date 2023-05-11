@@ -51,9 +51,10 @@ When a team member start working on the task, they must move it into the `In Pro
 
 When the task code is under review, it is located in `In Progress` column.
 When the work on the task is done, the PR is opened and waited for the review process, the PR is placed in the in Review section. There are only open PRs in the `In Review` column.
-Don't forget to link the opened PR with the issue. For doing that, please, fill the "Development section" when describing the issue and choose menu item "Link a branch or pull request" -> select the a repository and PR.
+Don't forget to link the opened PR with the issue. For doing that, please, fill the `Development section' when describing the issue and choose menu item "Link a branch or pull request" -> select the a repository and PR.
 **Important**: if the PR is approved, then the PR creator can independently resolve conversations. 
 
 ### Done
 
-An issue implying PR can be moved from the `In Review` section to the `Done` section after successful completion. If the issue does not require the creation of a PR, it can be closed by skipping the `In Review` section and moving directly from the `In Progress` section to the `Done` section in the case of its successful completion and after team's approve.
+An issue implying PR can be moved from the `In Review` section to the `Done` section after successful completion. 
+If the issue does not require the creation of a PR, it can be closed by skipping the `In Review` section and moving directly from the `In Progress` section to the `Done` section in the case of its successful completion and after team's approve.
