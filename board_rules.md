@@ -56,5 +56,4 @@ Don't forget to link the opened PR with the issue. For doing that, please, fill 
 
 ### Done
 
-An issue implying PR can be moved from the `In Review` section to the `Done` section after successful completion. 
-If the issue does not require the creation of a PR, it can be closed by skipping the `In Review` section and moving directly from the `In Progress` section to the `Done` section in the case of its successful completion and after team's approve.
+Done - the list of completed tasks or tasks that where closed as not-relevant.
