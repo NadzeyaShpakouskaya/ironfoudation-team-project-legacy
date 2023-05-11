@@ -24,7 +24,7 @@ Common backlog -> Sprint backlog -> In progress -> In review -> Done.
 
 Every issue is placed in a common backlog when it is created.
 The issue must contain a clear title and description with definition of done (**DoD**).
-Select necessary labels, if applicable. For example, if you add a task to create documentation, put the label "Documentation" (label's description is provided below). 
+Select necessary labels, if applicable. For example, if you add a task to create documentation, put the label "Documentation" ([label's description](https://github.com/ios-course/ironfoudation-team-project/labels)). 
 Don't forget to choose corresponding project in the `Projects` section on pages, describing PR's and issue's contain.
 
 ### Sprint backlog
