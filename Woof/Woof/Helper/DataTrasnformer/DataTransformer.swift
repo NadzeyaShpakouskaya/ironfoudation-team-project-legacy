@@ -3,7 +3,7 @@ import Foundation
 /// A utility for converting and formatting data into a format convenient for the work of the application
 /// and displaying data to the user.
 enum DataTransformer {
-    /// Returns formatted full name by combining the given name and surname.
+    /// Returns full name by combining the given name and surname.
     ///
     /// Examples of usage:
     /// ```
@@ -20,7 +20,7 @@ enum DataTransformer {
     /// - Parameters:
     ///   - surname: The surname of the person.
     ///   - name: The name of the person.
-    /// - Returns: The formatted full name in the format "Name Surname".
+    /// - Returns: The full name in the format "Name Surname".
     static func fullName(name: String, surname: String) -> String {
         let formattedName = name.trimmingCharacters(in: .whitespacesAndNewlines)
         let formattedSurname = surname.trimmingCharacters(in: .whitespacesAndNewlines)
