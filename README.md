@@ -17,7 +17,6 @@
 * [General info](#general-info)
 * [Installation](#installation)
 * [Authors](#authors)
-* [Notes](#notes)
 
 ## General info
 
@@ -50,7 +49,3 @@ You can contact the authors by the following GitHub's usernames:
 - Nadia Shpakouskaya: [@NadzeyaShpakouskaya](https://github.com/NadzeyaShpakouskaya)
 - Alex Zavadskiy: [@iBYarchitect](https://github.com/iBYarchitect)
 - Julya Kmita: [@julyakmita](https://github.com/julyakmita)
-
-## NOTES:
-
-More information about working with the application will be added during development.
