@@ -29,7 +29,7 @@ As a pet sitter, you can provide the service of walks using your own schedule, p
 ## Installation
 
 **Pre-requisites**: 
-- installed Xcode with the version specified under the [Current development Environment](https://github.com/ios-course/ironfoudation-team-project/blob/34d602116ed0d8664f4cfb4a11563b4a3dc1f0c2/README.md#current-dev-environment).
+- installed Xcode with the version specified under the [Current development Environment](#current-dev-environment).
 
 1) clone the current repository by running the following command in shell:
 ```bash
