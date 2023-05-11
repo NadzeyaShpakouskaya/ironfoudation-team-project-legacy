@@ -1,7 +1,7 @@
 import SwiftUI
 import XCTest
 
-final class ImageNamesTests: XCTestCase {
+final class ImageIconNameTests: XCTestCase {
     func testAllIconNamesReturnCorrectValues() {
         let findSitterTabIconName = "magnifyingglass"
         let walkingsTabIconName = "pawprint"
