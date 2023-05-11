@@ -16,7 +16,7 @@ The board consists of 5 columns:
 
 The issue moves from left to right and can't skip any step (board section). The exception is when the team decides that the task cannot be completed or it needs to be canceled (read the description of **Done** section).
 The main flow is:
- `
+
 Common backlog -> Sprint backlog -> In progress -> In review -> Done.
 
 ### Common backlog
