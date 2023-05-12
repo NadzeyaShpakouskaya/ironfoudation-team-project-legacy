@@ -8,6 +8,6 @@ extension AppStyle {
         /// Size of font uses as main font size.
         static let body = 18.0
         /// Size of font uses for additional elements.
-        static let callout = 14.0
+        static let footnote = 14.0
     }
 }
