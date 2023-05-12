@@ -10,50 +10,23 @@ struct SitterCardView: View {
                 AvatarView(url: viewModel.imageURL)
 
                 VStack(alignment: .leading) {
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text(viewModel.fullName)
-                                .textCase(.uppercase)
-                            Group {
-                                if viewModel.rating == 0 {
-                                    Text("Rating n/a")
-                                        .font(.headline)
-                                } else {
-                                    HStack(spacing: 0) {
-                                        ForEach(0..<viewModel.rating, id: \.self) { _ in
-                                            Image(systemName: Image.IconName.filledStar)
-                                        }
-                                    }
-                                }
-                            }.foregroundColor(Color.App.purpleDark)
-                        }
-                        Spacer()
-                        VStack {
-                            Text(viewModel.price, format: .currency(code: Locale.current.currencyCode ?? "USD"))
-                            Text("per hour")
-                                .font(.caption)
-                        }
-                    }.font(.title3)
-                        .padding(.vertical, AppStyle.UIElementSize.minPadding)
-                    Text(viewModel.bio)
-                        .font(.caption)
-                        .multilineTextAlignment(.leading)
-                        .lineLimit(3)
+                    GeneralInfoView(
+                        fullName: viewModel.fullName,
+                        rating: viewModel.rating,
+                        price: viewModel.price
+                    )
+                    BioSectionView(bio: viewModel.bio)
                 }
             }
             .padding(.horizontal)
         }
-        .foregroundColor(Color.App.grayDark)
         .clipShape(RoundedRectangle(cornerRadius: AppStyle.UIElementSize.cornerRadius))
     }
 }
 
 struct SitterCardView_Previews: PreviewProvider {
     static var previews: some View {
-        SitterCardView(
-            viewModel: SitterCardViewModel(
-                sitter: Sitter.Dummy.emilyDoe
-            )
-        ).frame(height: 160)
+        SitterCardView( viewModel: SitterCardViewModel(sitter: Sitter.Dummy.emilyDoe))
+            .frame(height: 160)
     }
 }
