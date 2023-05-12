@@ -20,7 +20,7 @@ struct SitterCardView: View {
                     BioSectionView(bio: viewModel.bio)
                 }
             }
-            .padding(.horizontal)
+            .padding()
         }
         .clipShape(RoundedRectangle(cornerRadius: AppStyle.UIElementSize.cornerRadius))
     }
