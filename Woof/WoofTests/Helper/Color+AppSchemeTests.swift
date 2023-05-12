@@ -1,7 +1,7 @@
 import SwiftUI
 import XCTest
 
-final class AppColorSchemeTests: XCTestCase {
+final class ColorAppSchemeTests: XCTestCase {
     func testColorAppEnumReturnsCorrectValuesForAppColorScheme() {
         let white = Color(red: 251 / 255, green: 251 / 255, blue: 251 / 255)
         let grayLight = Color(red: 239 / 255, green: 232 / 255, blue: 232 / 255)
