@@ -1,6 +1,8 @@
 import SwiftUI
 
+/// A view displaying information about a sitter.
 struct SitterCardView: View {
+    /// The view model responsible for providing data to the view.
     @ObservedObject var viewModel: SitterCardViewModel
 
     var body: some View {
@@ -10,7 +12,7 @@ struct SitterCardView: View {
                 AvatarView(url: viewModel.imageURL)
 
                 VStack(alignment: .leading) {
-                    GeneralInfoView(
+                    GeneralInfoSectionView(
                         fullName: viewModel.fullName,
                         rating: viewModel.rating,
                         price: viewModel.price
@@ -26,7 +28,7 @@ struct SitterCardView: View {
 
 struct SitterCardView_Previews: PreviewProvider {
     static var previews: some View {
-        SitterCardView( viewModel: SitterCardViewModel(sitter: Sitter.Dummy.emilyDoe))
+        SitterCardView(viewModel: SitterCardViewModel(sitter: Sitter.Dummy.emilyDoe))
             .frame(height: 160)
     }
 }

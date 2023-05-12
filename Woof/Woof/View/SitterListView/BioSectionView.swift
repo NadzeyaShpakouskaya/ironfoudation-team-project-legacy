@@ -1,6 +1,8 @@
 import SwiftUI
 
+/// A view displaying a section for the biography information.
 struct BioSectionView: View {
+    /// The biography text to be displayed.
     let bio: String
 
     var body: some View {

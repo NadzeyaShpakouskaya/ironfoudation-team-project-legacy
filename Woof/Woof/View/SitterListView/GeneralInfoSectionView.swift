@@ -1,8 +1,13 @@
 import SwiftUI
-
-struct GeneralInfoView: View {
+/// A view displaying general information about a person.
+struct GeneralInfoSectionView: View {
+    /// The full name of the person.
     let fullName: String
+
+    /// The rating of the person.
     let rating: Int
+
+    /// The price associated with the person.
     let price: Double
 
     var body: some View {
@@ -38,7 +43,7 @@ struct GeneralInfoView: View {
 
 struct GeneralInfoView_Previews: PreviewProvider {
     static var previews: some View {
-        GeneralInfoView(
+        GeneralInfoSectionView(
             fullName: "Kate Alnderson",
             rating: 0,
             price: 18.78

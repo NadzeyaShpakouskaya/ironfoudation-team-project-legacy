@@ -1,6 +1,8 @@
 import SwiftUI
 
+/// A view displaying an avatar image.
 struct AvatarView: View {
+    /// The URL of the avatar image.
     let url: URL?
 
     var body: some View {
