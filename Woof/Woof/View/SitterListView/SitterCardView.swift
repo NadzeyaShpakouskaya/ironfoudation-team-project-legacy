@@ -9,7 +9,7 @@ struct SitterCardView: View {
             HStack {
                 AvatarView(url: viewModel.imageURL)
 
-                VStack(alignment: .leading, spacing: 8) {
+                VStack(alignment: .leading) {
                     HStack {
                         VStack(alignment: .leading) {
                             Text(viewModel.fullName)
@@ -34,6 +34,7 @@ struct SitterCardView: View {
                                 .font(.caption)
                         }
                     }.font(.title3)
+                        .padding(.vertical, AppStyle.UIElementSize.minPadding)
                     Text(viewModel.bio)
                         .font(.caption)
                         .multilineTextAlignment(.leading)
@@ -43,7 +44,7 @@ struct SitterCardView: View {
             .padding(.horizontal)
         }
         .foregroundColor(Color.App.grayDark)
-        .clipShape(RoundedRectangle(cornerRadius: 10))
+        .clipShape(RoundedRectangle(cornerRadius: AppStyle.UIElementSize.cornerRadius))
     }
 }
 

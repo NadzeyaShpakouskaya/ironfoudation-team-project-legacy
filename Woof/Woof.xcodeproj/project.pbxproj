@@ -92,6 +92,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FD0291702A0E16D000F88377 /* AppStyle */ = {
+			isa = PBXGroup;
+			children = (
+				FDD143CA2A03C629000BBA77 /* Color+AppScheme.swift */,
+				FDD143E12A05233B000BBA77 /* Image+IconName.swift */,
+				FD7F989E2A0E0D2C0058DBEB /* AppStyle.swift */,
+				FD7F98A02A0E0E280058DBEB /* FontSize.swift */,
+				FD7F98A22A0E10510058DBEB /* UIElementSize.swift */,
+			);
+			path = AppStyle;
+			sourceTree = "<group>";
+		};
+		FD0291712A0E16DF00F88377 /* AppStyleTests */ = {
+			isa = PBXGroup;
+			children = (
+				FDD143F62A052A11000BBA77 /* Color+AppSchemeTests.swift */,
+				FDD144002A0532D5000BBA77 /* Image+IconNameTests.swift */,
+			);
+			path = AppStyleTests;
+			sourceTree = "<group>";
+		};
 		FD1FA3CA2A0A77FE000A3A91 /* Sitter */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,8 +125,7 @@
 		FD1FA3CD2A0A7DDB000A3A91 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				FDD143F62A052A11000BBA77 /* Color+AppSchemeTests.swift */,
-				FDD144002A0532D5000BBA77 /* Image+IconNameTests.swift */,
+				FD0291712A0E16DF00F88377 /* AppStyleTests */,
 				FD37A9962A0B76BA0001BABB /* DataTransformerTests */,
 			);
 			path = Helper;
@@ -248,11 +268,7 @@
 		FDE0CEBD2A0269570023F784 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				FDD143CA2A03C629000BBA77 /* Color+AppScheme.swift */,
-				FDD143E12A05233B000BBA77 /* Image+IconName.swift */,
-				FD7F989E2A0E0D2C0058DBEB /* AppStyle.swift */,
-				FD7F98A02A0E0E280058DBEB /* FontSize.swift */,
-				FD7F98A22A0E10510058DBEB /* UIElementSize.swift */,
+				FD0291702A0E16D000F88377 /* AppStyle */,
 				FDAA7BF52A0CB8E2007905CB /* DataTrasnformer */,
 			);
 			path = Helper;
