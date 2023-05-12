@@ -7,21 +7,7 @@ struct SitterCardView: View {
         ZStack {
             Color.App.grayLight
             HStack {
-                AsyncImage(url: viewModel.imageURL) { image in
-                    image
-                        .resizable()
-                        .scaledToFill()
-                        .overlay {
-                            Circle()
-                                .stroke(lineWidth: 10.0)
-                        }
-                } placeholder: {
-                    Image(systemName: Image.IconName.avatarPlaceholder)
-                        .font(.largeTitle)
-                }
-                .foregroundColor(Color.App.grayDark)
-                .frame(width: 80, height: 80)
-                .clipShape(Circle())
+                AvatarView(url: viewModel.imageURL)
 
                 VStack(alignment: .leading, spacing: 8) {
                     HStack {
