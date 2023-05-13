@@ -2,7 +2,7 @@ import SwiftUI
 
 extension AppStyle {
     /// Provides the font sizes used within the application.
-    enum FontSize {
+    enum FontStyle {
         /// Size of font uses for titles and headings.
         static let heading = 22.0
         /// Size of font uses as main font size.

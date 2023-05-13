@@ -2,17 +2,17 @@ import Foundation
 
 extension AppStyle {
     /// A utility enum defining various sizes for UI elements.
-    enum UIElementSize {
-        /// The stroke size used for borders.
-        static let stroke = 12.0
+    enum UIElementConstant {
+        /// The default stroke size used for borders.
+        static let borderStroke = 12.0
 
-        /// The corner radius size used for rounded corners.
+        /// The default corner radius size used for rounded corners.
         static let cornerRadius = 10.0
 
         /// The minimum padding size.
         static let minPadding = 4.0
 
-        /// The side size of an avatar image.
+        /// The default side size of an avatar image.
         static let avatarSideSize = 80.0
     }
 }

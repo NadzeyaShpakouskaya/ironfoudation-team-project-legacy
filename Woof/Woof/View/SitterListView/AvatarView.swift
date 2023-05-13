@@ -11,7 +11,7 @@ struct AvatarView: View {
                 .resizable()
                 .overlay {
                     Circle()
-                        .stroke(lineWidth: AppStyle.UIElementSize.stroke)
+                        .stroke(lineWidth: AppStyle.UIElementConstant.borderStroke)
                 }
         } placeholder: {
             Image(systemName: Image.IconName.avatarPlaceholder)
@@ -19,7 +19,7 @@ struct AvatarView: View {
         }
         .foregroundColor(Color.App.grayDark)
         .scaledToFill()
-        .frame(width: AppStyle.UIElementSize.avatarSideSize, height: AppStyle.UIElementSize.avatarSideSize)
+        .frame(width: AppStyle.UIElementConstant.avatarSideSize, height: AppStyle.UIElementConstant.avatarSideSize)
         .clipShape(Circle())
     }
 }

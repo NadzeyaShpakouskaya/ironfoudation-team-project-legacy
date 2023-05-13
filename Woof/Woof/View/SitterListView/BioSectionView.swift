@@ -8,7 +8,7 @@ struct BioSectionView: View {
     var body: some View {
         Text(bio)
             .foregroundColor(Color.App.grayDark)
-            .font(Font.system(size: AppStyle.FontSize.footnote))
+            .font(Font.system(size: AppStyle.FontStyle.footnote))
             .multilineTextAlignment(.leading)
             .lineLimit(3)
     }

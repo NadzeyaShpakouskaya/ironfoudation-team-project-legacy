@@ -22,7 +22,7 @@ struct SitterCardView: View {
             }
             .padding()
         }
-        .clipShape(RoundedRectangle(cornerRadius: AppStyle.UIElementSize.cornerRadius))
+        .clipShape(RoundedRectangle(cornerRadius: AppStyle.UIElementConstant.cornerRadius))
     }
 }
 
