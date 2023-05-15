@@ -6,22 +6,20 @@ struct SitterCardView: View {
     @ObservedObject var viewModel: SitterCardViewModel
 
     var body: some View {
-        ZStack {
-            Color.App.grayLight
-            HStack {
-                AvatarView(url: viewModel.imageURL)
+        HStack {
+            AvatarView(url: viewModel.imageURL)
 
-                VStack(alignment: .leading) {
-                    GeneralInfoSectionView(
-                        fullName: viewModel.fullName,
-                        rating: viewModel.rating,
-                        price: viewModel.price
-                    )
-                    BioSectionView(bio: viewModel.bio)
-                }
+            VStack(alignment: .leading) {
+                GeneralInfoSectionView(
+                    fullName: viewModel.fullName,
+                    rating: viewModel.rating,
+                    price: viewModel.price
+                )
+                BioSectionView(bio: viewModel.bio)
             }
-            .padding()
         }
+        .padding()
+        .background(Color.App.grayLight)
         .clipShape(RoundedRectangle(cornerRadius: AppStyle.UIElementConstant.cornerRadius))
     }
 }

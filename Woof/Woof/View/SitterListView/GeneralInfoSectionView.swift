@@ -44,7 +44,7 @@ struct GeneralInfoSectionView: View {
 struct GeneralInfoView_Previews: PreviewProvider {
     static var previews: some View {
         GeneralInfoSectionView(
-            fullName: "Kate Alnderson",
+            fullName: "Kate Anderson",
             rating: 0,
             price: 18.78
         )
