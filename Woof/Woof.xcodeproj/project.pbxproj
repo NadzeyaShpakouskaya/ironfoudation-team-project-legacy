@@ -22,6 +22,8 @@
 		FD2F7B322A0CE029008F6F49 /* Sitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD143CC2A03E575000BBA77 /* Sitter.swift */; };
 		FD2F7B332A0CE032008F6F49 /* PetOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3673D6362A04F7FD009D699D /* PetOwner.swift */; };
 		FD2F7B342A0CE03B008F6F49 /* SitterCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1FA3C22A0A682E000A3A91 /* SitterCardViewModel.swift */; };
+		FD2FA2292A129C53002B618B /* SitterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2FA2282A129C53002B618B /* SitterListView.swift */; };
+		FD2FA22B2A129CA1002B618B /* SitterList:ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2FA22A2A129CA1002B618B /* SitterList:ViewModel.swift */; };
 		FD37A9902A0B65120001BABB /* DataTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD37A98F2A0B65120001BABB /* DataTransformer.swift */; };
 		FD37A9942A0B6E960001BABB /* FullNameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD37A9932A0B6E960001BABB /* FullNameTests.swift */; };
 		FD37A9952A0B6EA90001BABB /* DataTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD37A98F2A0B65120001BABB /* DataTransformer.swift */; };
@@ -63,6 +65,8 @@
 		FD1FA3C22A0A682E000A3A91 /* SitterCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitterCardViewModel.swift; sourceTree = "<group>"; };
 		FD1FA3CB2A0A781E000A3A91 /* Sitter+Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sitter+Dummy.swift"; sourceTree = "<group>"; };
 		FD2F7B2C2A0CDC44008F6F49 /* EmilyDoeAvatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = EmilyDoeAvatar.jpg; sourceTree = "<group>"; };
+		FD2FA2282A129C53002B618B /* SitterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitterListView.swift; sourceTree = "<group>"; };
+		FD2FA22A2A129CA1002B618B /* SitterList:ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SitterList:ViewModel.swift"; sourceTree = "<group>"; };
 		FD37A98F2A0B65120001BABB /* DataTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransformer.swift; sourceTree = "<group>"; };
 		FD37A9932A0B6E960001BABB /* FullNameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullNameTests.swift; sourceTree = "<group>"; };
 		FD37A9972A0B77A90001BABB /* NormalizeToZeroToFiveRangeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalizeToZeroToFiveRangeTests.swift; sourceTree = "<group>"; };
@@ -168,6 +172,17 @@
 			path = Mock;
 			sourceTree = "<group>";
 		};
+		FD2FA2272A129C32002B618B /* SitterCardView */ = {
+			isa = PBXGroup;
+			children = (
+				FD7F989C2A0E04650058DBEB /* SitterCardView.swift */,
+				FD7F98A42A0E12290058DBEB /* AvatarView.swift */,
+				FD0291722A0E256F00F88377 /* GeneralInfoSectionView.swift */,
+				FD0291742A0E273500F88377 /* BioSectionView.swift */,
+			);
+			path = SitterCardView;
+			sourceTree = "<group>";
+		};
 		FD37A9962A0B76BA0001BABB /* DataTransformerTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,10 +204,8 @@
 		FD7F989B2A0E04390058DBEB /* SitterListView */ = {
 			isa = PBXGroup;
 			children = (
-				FD7F989C2A0E04650058DBEB /* SitterCardView.swift */,
-				FD7F98A42A0E12290058DBEB /* AvatarView.swift */,
-				FD0291722A0E256F00F88377 /* GeneralInfoSectionView.swift */,
-				FD0291742A0E273500F88377 /* BioSectionView.swift */,
+				FD2FA2272A129C32002B618B /* SitterCardView */,
+				FD2FA2282A129C53002B618B /* SitterListView.swift */,
 			);
 			path = SitterListView;
 			sourceTree = "<group>";
@@ -276,6 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				FD1FA3C22A0A682E000A3A91 /* SitterCardViewModel.swift */,
+				FD2FA22A2A129CA1002B618B /* SitterList:ViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -464,10 +478,12 @@
 				FDD143E02A051F96000BBA77 /* OwnerMainTabView+Tab.swift in Sources */,
 				FD1FA3C32A0A682E000A3A91 /* SitterCardViewModel.swift in Sources */,
 				FD7F98A12A0E0E280058DBEB /* AppStyle+FontStyle.swift in Sources */,
+				FD2FA2292A129C53002B618B /* SitterListView.swift in Sources */,
 				3673D6372A04F7FD009D699D /* PetOwner.swift in Sources */,
 				FD7F98A32A0E10510058DBEB /* AppStyle+UIElementConstant.swift in Sources */,
 				FD37A9902A0B65120001BABB /* DataTransformer.swift in Sources */,
 				FD7F989D2A0E04650058DBEB /* SitterCardView.swift in Sources */,
+				FD2FA22B2A129CA1002B618B /* SitterList:ViewModel.swift in Sources */,
 				FDE0CEA92A00F8370023F784 /* WoofApp.swift in Sources */,
 				FD7F98A52A0E12290058DBEB /* AvatarView.swift in Sources */,
 				FD1FA3CC2A0A781E000A3A91 /* Sitter+Dummy.swift in Sources */,
