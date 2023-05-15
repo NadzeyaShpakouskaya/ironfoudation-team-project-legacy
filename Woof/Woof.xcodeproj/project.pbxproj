@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3673D6372A04F7FD009D699D /* PetOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3673D6362A04F7FD009D699D /* PetOwner.swift */; };
 		36BCC17C2A1254750063B70D /* OwnerCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BCC17B2A1254750063B70D /* OwnerCardViewModel.swift */; };
-		36BCC17E2A12558A0063B70D /* OwnerInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BCC17D2A12558A0063B70D /* OwnerInformation.swift */; };
+		36BCC17E2A12558A0063B70D /* OwnerInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BCC17D2A12558A0063B70D /* OwnerInformationView.swift */; };
 		36BCC1802A1255B70063B70D /* OwnerCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BCC17F2A1255B70063B70D /* OwnerCardView.swift */; };
 		FD1FA3B52A090916000A3A91 /* Sitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD143CC2A03E575000BBA77 /* Sitter.swift */; };
 		FD1FA3C32A0A682E000A3A91 /* SitterCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1FA3C22A0A682E000A3A91 /* SitterCardViewModel.swift */; };
@@ -48,7 +48,7 @@
 /* Begin PBXFileReference section */
 		3673D6362A04F7FD009D699D /* PetOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetOwner.swift; sourceTree = "<group>"; };
 		36BCC17B2A1254750063B70D /* OwnerCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerCardViewModel.swift; sourceTree = "<group>"; };
-		36BCC17D2A12558A0063B70D /* OwnerInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerInformation.swift; sourceTree = "<group>"; };
+		36BCC17D2A12558A0063B70D /* OwnerInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerInformationView.swift; sourceTree = "<group>"; };
 		36BCC17F2A1255B70063B70D /* OwnerCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerCardView.swift; sourceTree = "<group>"; };
 		FD1FA3C22A0A682E000A3A91 /* SitterCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitterCardViewModel.swift; sourceTree = "<group>"; };
 		FD1FA3CB2A0A781E000A3A91 /* Sitter+Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sitter+Dummy.swift"; sourceTree = "<group>"; };
@@ -201,7 +201,7 @@
 			children = (
 				FDD143C62A03BD48000BBA77 /* OwnerMainTabView.swift */,
 				FDD143DF2A051F96000BBA77 /* OwnerMainTabView+Tab.swift */,
-				36BCC17D2A12558A0063B70D /* OwnerInformation.swift */,
+				36BCC17D2A12558A0063B70D /* OwnerInformationView.swift */,
 				36BCC17F2A1255B70063B70D /* OwnerCardView.swift */,
 			);
 			path = View;
@@ -408,7 +408,7 @@
 				36BCC17C2A1254750063B70D /* OwnerCardViewModel.swift in Sources */,
 				FDE0CEA92A00F8370023F784 /* WoofApp.swift in Sources */,
 				36BCC1802A1255B70063B70D /* OwnerCardView.swift in Sources */,
-				36BCC17E2A12558A0063B70D /* OwnerInformation.swift in Sources */,
+				36BCC17E2A12558A0063B70D /* OwnerInformationView.swift in Sources */,
 				FD1FA3CC2A0A781E000A3A91 /* Sitter+Dummy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
