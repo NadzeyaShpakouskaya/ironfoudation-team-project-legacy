@@ -27,7 +27,7 @@ struct OwnerCardView: View {
                             .font(.system(size: 18, weight: .bold))
                             .foregroundColor(Color.App.white)
 
-                        TextField("Adress", text: $viewModel.owner.address)
+                        TextField("Address", text: $viewModel.owner.address)
                             .font(.system(size: 18, weight: .bold))
                             .foregroundColor(Color.App.white)
                     }
