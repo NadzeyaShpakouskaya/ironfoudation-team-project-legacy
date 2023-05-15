@@ -6,8 +6,8 @@ final class FontStyleTests: XCTestCase {
         let body = 18.0
         let footnote = 14.0
 
-        XCTAssertEqual(heading, AppStyle.FontStyle.heading)
-        XCTAssertEqual(body, AppStyle.FontStyle.body)
-        XCTAssertEqual(footnote, AppStyle.FontStyle.footnote)
+        XCTAssertEqual(heading, AppStyle.FontStyle.heading.size)
+        XCTAssertEqual(body, AppStyle.FontStyle.body.size)
+        XCTAssertEqual(footnote, AppStyle.FontStyle.footnote.size)
     }
 }

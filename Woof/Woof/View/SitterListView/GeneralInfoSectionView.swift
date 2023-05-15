@@ -18,7 +18,7 @@ struct GeneralInfoSectionView: View {
                 Group {
                     if rating == 0 {
                         Text("not rated")
-                            .font(Font.system(size: AppStyle.FontStyle.footnote))
+                            .font(Font.system(size: AppStyle.FontStyle.footnote.size))
                     } else {
                         HStack(spacing: 0) {
                             ForEach(0..<rating, id: \.self) { _ in
@@ -32,11 +32,11 @@ struct GeneralInfoSectionView: View {
             VStack {
                 Text(price, format: .currency(code: Locale.current.currencyCode ?? "USD"))
                 Text("per hour")
-                    .font(Font.system(size: AppStyle.FontStyle.footnote))
+                    .font(Font.system(size: AppStyle.FontStyle.footnote.size))
             }
         }
         .padding(.vertical, AppStyle.UIElementConstant.minPadding)
-        .font(Font.system(size: AppStyle.FontStyle.heading))
+        .font(Font.system(size: AppStyle.FontStyle.heading.size))
         .foregroundColor(Color.App.grayDark)
     }
 }
