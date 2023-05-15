@@ -1,15 +1,16 @@
-//
-//  SitterListView.swift
-//  Woof
-//
-//  Created by Nadzeya Shpakouskaya on 15/05/2023.
-//
-
 import SwiftUI
 
+/// A view displaying the list of available sitter.
 struct SitterListView: View {
+    /// The view model responsible for providing data to the view.
+    @State private var viewModel = SitterListViewModel()
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView {
+            ForEach(viewModel.sitters) { sitter in
+                SitterCardView(viewModel: SitterCardViewModel(sitter: sitter))
+            }
+        }.padding(AppStyle.UIElementConstant.minPadding)
     }
 }
 
