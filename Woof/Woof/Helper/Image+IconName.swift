@@ -11,5 +11,7 @@ extension Image {
         static let walkingsTab = "pawprint"
         /// The icon used for the "Profile" tab.
         static let profileTab = "person.text.rectangle"
+        /// The icon used for the owner card view
+        static let ownerCard = "person.circle"
     }
 }

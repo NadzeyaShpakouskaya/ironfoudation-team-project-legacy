@@ -1,14 +1,14 @@
 import SwiftUI
 
-/// OwnerCardView is a SwiftUI view that displays the profile information in card view style of an Owner.
+/// A view that displays the profile information of an Owner.
 struct OwnerCardView: View {
-    @ObservedObject var viewModel = OwnerCardViewModel()
+    @ObservedObject private var viewModel = OwnerCardViewModel()
     @State private var isEditMode: Bool = false
 
     var body: some View {
         VStack {
             HStack {
-                Image(systemName: "person.circle")
+                Image(systemName: Image.IconName.ownerCard)
                     .resizable()
                     .frame(width: 40, height: 40)
                     .foregroundColor(Color.App.purpleDark)
@@ -17,28 +17,27 @@ struct OwnerCardView: View {
                     Group {
                         TextField("Name", text: $viewModel.owner.name)
                             .font(.system(size: 22, weight: .heavy))
-                            .foregroundColor(Color.App.white)
+                            .foregroundColor(.App.white)
 
                         TextField("Surname", text: $viewModel.owner.surname)
                             .font(.system(size: 22, weight: .heavy))
-                            .foregroundColor(Color.App.white)
+                            .foregroundColor(.App.white)
 
                         TextField("Phone", text: $viewModel.owner.phone)
                             .font(.system(size: 18, weight: .bold))
-                            .foregroundColor(Color.App.white)
+                            .foregroundColor(.App.white)
 
                         TextField("Address", text: $viewModel.owner.address)
                             .font(.system(size: 18, weight: .bold))
-                            .foregroundColor(Color.App.white)
+                            .foregroundColor(.App.white)
                     }
                     .disabled(!isEditMode)
-                    .background(isEditMode ? Color.App.purpleDark : Color.clear)
-                    .foregroundColor(isEditMode ? Color.App.purpleDark : Color.App.purpleDark)
+                    .background(isEditMode ? .App.purpleDark : Color.clear)
 
                     HStack(spacing: 1.0) {
                         ForEach(1...5, id: \.self) { index in
                             Image(systemName: index <= Int(viewModel.owner.rating) ? "star.fill" : "star")
-                                .foregroundColor(Color.App.purpleDark)
+                                .foregroundColor(.App.purpleDark)
                         }
                     }
                 }
@@ -50,7 +49,7 @@ struct OwnerCardView: View {
                 }, label: {
                     Text(isEditMode ? "Save" : "Edit")
                         .fontWeight(.bold)
-                        .foregroundColor(Color.App.white)
+                        .foregroundColor(.App.white)
                 })
                 .padding(.all, 10.0)
                 .cornerRadius(10)
@@ -59,7 +58,7 @@ struct OwnerCardView: View {
             .background(Color.App.purpleLight)
             .cornerRadius(10)
         }
-        .shadow(color: Color.App.grayDark, radius: 5)
+        .shadow(color: .App.grayDark, radius: 5)
         .padding()
     }
 }
