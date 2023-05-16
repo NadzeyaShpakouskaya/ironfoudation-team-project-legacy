@@ -9,7 +9,8 @@ struct SitterListView: View {
             ForEach(viewModel.sitters) { sitter in
                 SitterCardView(viewModel: SitterCardViewModel(sitter: sitter))
             }
-        }.padding(AppStyle.UIElementConstant.minPadding)
+        }
+        .padding(AppStyle.UIElementConstant.minPadding)
     }
 }
 

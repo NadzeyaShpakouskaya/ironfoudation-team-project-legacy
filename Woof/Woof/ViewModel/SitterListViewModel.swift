@@ -1,6 +1,6 @@
 import Foundation
 
-///An interface is responsible for preparing and providing data for the `SitterListView`.
+/// An interface is responsible for preparing and providing data for the `SitterListView`.
 final class SitterListViewModel: ObservableObject {
     /// The sequence of sitters to display in view.
     @Published var sitters: [Sitter] = []
