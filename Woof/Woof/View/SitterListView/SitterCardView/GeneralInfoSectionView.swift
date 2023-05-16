@@ -15,6 +15,7 @@ struct GeneralInfoSectionView: View {
             VStack(alignment: .leading) {
                 Text(fullName)
                     .bold()
+                    .lineLimit(1)
                 Group {
                     if rating == 0 {
                         Text("not rated")
