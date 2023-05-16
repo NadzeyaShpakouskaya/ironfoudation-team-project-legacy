@@ -2,6 +2,7 @@ import SwiftUI
 
 /// A view displaying the list of available sitters.
 struct SitterListView: View {
+    /// The view model responsible for providing data to the view.
     @State private var viewModel = SitterListViewModel()
 
     var body: some View {
