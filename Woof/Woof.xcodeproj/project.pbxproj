@@ -24,6 +24,14 @@
 		FD2F7B342A0CE03B008F6F49 /* SitterCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1FA3C22A0A682E000A3A91 /* SitterCardViewModel.swift */; };
 		FD2FA2292A129C53002B618B /* SitterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2FA2282A129C53002B618B /* SitterListView.swift */; };
 		FD2FA22B2A129CA1002B618B /* SitterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2FA22A2A129CA1002B618B /* SitterListViewModel.swift */; };
+		FD2FA2382A13BA20002B618B /* OliviaDavisAvatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD2FA2312A13BA20002B618B /* OliviaDavisAvatar.jpg */; };
+		FD2FA2392A13BA20002B618B /* MichaelBrownAvatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD2FA2322A13BA20002B618B /* MichaelBrownAvatar.jpg */; };
+		FD2FA23A2A13BA20002B618B /* AvaMooreAvatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD2FA2332A13BA20002B618B /* AvaMooreAvatar.jpg */; };
+		FD2FA23B2A13BA20002B618B /* JaneSmithAvatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD2FA2342A13BA20002B618B /* JaneSmithAvatar.jpg */; };
+		FD2FA23C2A13BA20002B618B /* JamesAndersonAvatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD2FA2352A13BA20002B618B /* JamesAndersonAvatar.jpg */; };
+		FD2FA23D2A13BA20002B618B /* WilliamWilsonAvatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD2FA2362A13BA20002B618B /* WilliamWilsonAvatar.jpg */; };
+		FD2FA23E2A13BA20002B618B /* JohnAlisonAvatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD2FA2372A13BA20002B618B /* JohnAlisonAvatar.jpg */; };
+		FD2FA2402A13BE87002B618B /* SophiaTaylorAvatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD2FA23F2A13BE87002B618B /* SophiaTaylorAvatar.jpg */; };
 		FD37A9902A0B65120001BABB /* DataTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD37A98F2A0B65120001BABB /* DataTransformer.swift */; };
 		FD37A9942A0B6E960001BABB /* FullNameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD37A9932A0B6E960001BABB /* FullNameTests.swift */; };
 		FD37A9952A0B6EA90001BABB /* DataTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD37A98F2A0B65120001BABB /* DataTransformer.swift */; };
@@ -67,6 +75,14 @@
 		FD2F7B2C2A0CDC44008F6F49 /* EmilyDoeAvatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = EmilyDoeAvatar.jpg; sourceTree = "<group>"; };
 		FD2FA2282A129C53002B618B /* SitterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitterListView.swift; sourceTree = "<group>"; };
 		FD2FA22A2A129CA1002B618B /* SitterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitterListViewModel.swift; sourceTree = "<group>"; };
+		FD2FA2312A13BA20002B618B /* OliviaDavisAvatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = OliviaDavisAvatar.jpg; sourceTree = "<group>"; };
+		FD2FA2322A13BA20002B618B /* MichaelBrownAvatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MichaelBrownAvatar.jpg; sourceTree = "<group>"; };
+		FD2FA2332A13BA20002B618B /* AvaMooreAvatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AvaMooreAvatar.jpg; sourceTree = "<group>"; };
+		FD2FA2342A13BA20002B618B /* JaneSmithAvatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = JaneSmithAvatar.jpg; sourceTree = "<group>"; };
+		FD2FA2352A13BA20002B618B /* JamesAndersonAvatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = JamesAndersonAvatar.jpg; sourceTree = "<group>"; };
+		FD2FA2362A13BA20002B618B /* WilliamWilsonAvatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WilliamWilsonAvatar.jpg; sourceTree = "<group>"; };
+		FD2FA2372A13BA20002B618B /* JohnAlisonAvatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = JohnAlisonAvatar.jpg; sourceTree = "<group>"; };
+		FD2FA23F2A13BE87002B618B /* SophiaTaylorAvatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SophiaTaylorAvatar.jpg; sourceTree = "<group>"; };
 		FD37A98F2A0B65120001BABB /* DataTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransformer.swift; sourceTree = "<group>"; };
 		FD37A9932A0B6E960001BABB /* FullNameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullNameTests.swift; sourceTree = "<group>"; };
 		FD37A9972A0B77A90001BABB /* NormalizeToZeroToFiveRangeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalizeToZeroToFiveRangeTests.swift; sourceTree = "<group>"; };
@@ -167,7 +183,15 @@
 		FD2F7B2F2A0CDCE7008F6F49 /* Mock */ = {
 			isa = PBXGroup;
 			children = (
+				FD2FA23F2A13BE87002B618B /* SophiaTaylorAvatar.jpg */,
 				FD2F7B2C2A0CDC44008F6F49 /* EmilyDoeAvatar.jpg */,
+				FD2FA2332A13BA20002B618B /* AvaMooreAvatar.jpg */,
+				FD2FA2352A13BA20002B618B /* JamesAndersonAvatar.jpg */,
+				FD2FA2342A13BA20002B618B /* JaneSmithAvatar.jpg */,
+				FD2FA2372A13BA20002B618B /* JohnAlisonAvatar.jpg */,
+				FD2FA2322A13BA20002B618B /* MichaelBrownAvatar.jpg */,
+				FD2FA2312A13BA20002B618B /* OliviaDavisAvatar.jpg */,
+				FD2FA2362A13BA20002B618B /* WilliamWilsonAvatar.jpg */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -393,9 +417,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD2FA23A2A13BA20002B618B /* AvaMooreAvatar.jpg in Resources */,
+				FD2FA2402A13BE87002B618B /* SophiaTaylorAvatar.jpg in Resources */,
 				FDE0CEB02A00F8390023F784 /* Preview Assets.xcassets in Resources */,
 				FDE0CEAD2A00F8390023F784 /* Assets.xcassets in Resources */,
+				FD2FA23B2A13BA20002B618B /* JaneSmithAvatar.jpg in Resources */,
+				FD2FA2382A13BA20002B618B /* OliviaDavisAvatar.jpg in Resources */,
+				FD2FA23E2A13BA20002B618B /* JohnAlisonAvatar.jpg in Resources */,
+				FD2FA23D2A13BA20002B618B /* WilliamWilsonAvatar.jpg in Resources */,
+				FD2FA2392A13BA20002B618B /* MichaelBrownAvatar.jpg in Resources */,
 				FD2F7B2D2A0CDC44008F6F49 /* EmilyDoeAvatar.jpg in Resources */,
+				FD2FA23C2A13BA20002B618B /* JamesAndersonAvatar.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
