@@ -4,7 +4,7 @@ import SwiftUI
 struct ContactDelailsSectionView: View {
     /// The name of an icon.
     let image: String
-    /// The informational  text to be displayed.
+    /// The informational text to be displayed.
     let message: String
 
     var body: some View {
