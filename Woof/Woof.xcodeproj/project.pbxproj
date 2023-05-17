@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		3673D6372A04F7FD009D699D /* PetOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3673D6362A04F7FD009D699D /* PetOwner.swift */; };
+		FD0291732A0E256F00F88377 /* GeneralInfoSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0291722A0E256F00F88377 /* GeneralInfoSectionView.swift */; };
+		FD0291752A0E273500F88377 /* BioSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0291742A0E273500F88377 /* BioSectionView.swift */; };
+		FD0291772A0E2B0700F88377 /* AppStyle+FontStyleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0291762A0E2B0700F88377 /* AppStyle+FontStyleTests.swift */; };
+		FD0291792A0E2B2300F88377 /* AppStyle+UIElementConstantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0291782A0E2B2300F88377 /* AppStyle+UIElementConstantTests.swift */; };
+		FD02917A2A0E2C5000F88377 /* AppStyle+FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7F98A02A0E0E280058DBEB /* AppStyle+FontStyle.swift */; };
+		FD02917B2A0E2C5300F88377 /* AppStyle+UIElementConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7F98A22A0E10510058DBEB /* AppStyle+UIElementConstant.swift */; };
+		FD02917C2A0E2CBC00F88377 /* AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7F989E2A0E0D2C0058DBEB /* AppStyle.swift */; };
 		36BCC17C2A1254750063B70D /* OwnerCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BCC17B2A1254750063B70D /* OwnerCardViewModel.swift */; };
 		36BCC17E2A12558A0063B70D /* OwnerInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BCC17D2A12558A0063B70D /* OwnerInformationView.swift */; };
 		36BCC1802A1255B70063B70D /* OwnerCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BCC17F2A1255B70063B70D /* OwnerCardView.swift */; };
@@ -18,10 +25,25 @@
 		FD2F7B322A0CE029008F6F49 /* Sitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD143CC2A03E575000BBA77 /* Sitter.swift */; };
 		FD2F7B332A0CE032008F6F49 /* PetOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3673D6362A04F7FD009D699D /* PetOwner.swift */; };
 		FD2F7B342A0CE03B008F6F49 /* SitterCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1FA3C22A0A682E000A3A91 /* SitterCardViewModel.swift */; };
+		FD2FA2292A129C53002B618B /* SitterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2FA2282A129C53002B618B /* SitterListView.swift */; };
+		FD2FA22B2A129CA1002B618B /* SitterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2FA22A2A129CA1002B618B /* SitterListViewModel.swift */; };
+		FD2FA2382A13BA20002B618B /* OliviaDavisAvatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD2FA2312A13BA20002B618B /* OliviaDavisAvatar.jpg */; };
+		FD2FA2392A13BA20002B618B /* MichaelBrownAvatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD2FA2322A13BA20002B618B /* MichaelBrownAvatar.jpg */; };
+		FD2FA23A2A13BA20002B618B /* AvaMooreAvatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD2FA2332A13BA20002B618B /* AvaMooreAvatar.jpg */; };
+		FD2FA23B2A13BA20002B618B /* JaneSmithAvatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD2FA2342A13BA20002B618B /* JaneSmithAvatar.jpg */; };
+		FD2FA23C2A13BA20002B618B /* JamesAndersonAvatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD2FA2352A13BA20002B618B /* JamesAndersonAvatar.jpg */; };
+		FD2FA23D2A13BA20002B618B /* WilliamWilsonAvatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD2FA2362A13BA20002B618B /* WilliamWilsonAvatar.jpg */; };
+		FD2FA23E2A13BA20002B618B /* JohnAlisonAvatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD2FA2372A13BA20002B618B /* JohnAlisonAvatar.jpg */; };
+		FD2FA2402A13BE87002B618B /* SophiaTaylorAvatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD2FA23F2A13BE87002B618B /* SophiaTaylorAvatar.jpg */; };
 		FD37A9902A0B65120001BABB /* DataTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD37A98F2A0B65120001BABB /* DataTransformer.swift */; };
 		FD37A9942A0B6E960001BABB /* FullNameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD37A9932A0B6E960001BABB /* FullNameTests.swift */; };
 		FD37A9952A0B6EA90001BABB /* DataTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD37A98F2A0B65120001BABB /* DataTransformer.swift */; };
 		FD37A9982A0B77A90001BABB /* NormalizeToZeroToFiveRangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD37A9972A0B77A90001BABB /* NormalizeToZeroToFiveRangeTests.swift */; };
+		FD7F989D2A0E04650058DBEB /* SitterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7F989C2A0E04650058DBEB /* SitterCardView.swift */; };
+		FD7F989F2A0E0D2C0058DBEB /* AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7F989E2A0E0D2C0058DBEB /* AppStyle.swift */; };
+		FD7F98A12A0E0E280058DBEB /* AppStyle+FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7F98A02A0E0E280058DBEB /* AppStyle+FontStyle.swift */; };
+		FD7F98A32A0E10510058DBEB /* AppStyle+UIElementConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7F98A22A0E10510058DBEB /* AppStyle+UIElementConstant.swift */; };
+		FD7F98A52A0E12290058DBEB /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7F98A42A0E12290058DBEB /* AvatarView.swift */; };
 		FDD143C72A03BD48000BBA77 /* OwnerMainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD143C62A03BD48000BBA77 /* OwnerMainTabView.swift */; };
 		FDD143CB2A03C629000BBA77 /* Color+AppScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD143CA2A03C629000BBA77 /* Color+AppScheme.swift */; };
 		FDD143E02A051F96000BBA77 /* OwnerMainTabView+Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD143DF2A051F96000BBA77 /* OwnerMainTabView+Tab.swift */; };
@@ -47,15 +69,34 @@
 
 /* Begin PBXFileReference section */
 		3673D6362A04F7FD009D699D /* PetOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetOwner.swift; sourceTree = "<group>"; };
+		FD0291722A0E256F00F88377 /* GeneralInfoSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralInfoSectionView.swift; sourceTree = "<group>"; };
+		FD0291742A0E273500F88377 /* BioSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioSectionView.swift; sourceTree = "<group>"; };
+		FD0291762A0E2B0700F88377 /* AppStyle+FontStyleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppStyle+FontStyleTests.swift"; sourceTree = "<group>"; };
+		FD0291782A0E2B2300F88377 /* AppStyle+UIElementConstantTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppStyle+UIElementConstantTests.swift"; sourceTree = "<group>"; };
 		36BCC17B2A1254750063B70D /* OwnerCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerCardViewModel.swift; sourceTree = "<group>"; };
 		36BCC17D2A12558A0063B70D /* OwnerInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerInformationView.swift; sourceTree = "<group>"; };
 		36BCC17F2A1255B70063B70D /* OwnerCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerCardView.swift; sourceTree = "<group>"; };
 		FD1FA3C22A0A682E000A3A91 /* SitterCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitterCardViewModel.swift; sourceTree = "<group>"; };
 		FD1FA3CB2A0A781E000A3A91 /* Sitter+Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sitter+Dummy.swift"; sourceTree = "<group>"; };
 		FD2F7B2C2A0CDC44008F6F49 /* EmilyDoeAvatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = EmilyDoeAvatar.jpg; sourceTree = "<group>"; };
+		FD2FA2282A129C53002B618B /* SitterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitterListView.swift; sourceTree = "<group>"; };
+		FD2FA22A2A129CA1002B618B /* SitterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitterListViewModel.swift; sourceTree = "<group>"; };
+		FD2FA2312A13BA20002B618B /* OliviaDavisAvatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = OliviaDavisAvatar.jpg; sourceTree = "<group>"; };
+		FD2FA2322A13BA20002B618B /* MichaelBrownAvatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MichaelBrownAvatar.jpg; sourceTree = "<group>"; };
+		FD2FA2332A13BA20002B618B /* AvaMooreAvatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AvaMooreAvatar.jpg; sourceTree = "<group>"; };
+		FD2FA2342A13BA20002B618B /* JaneSmithAvatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = JaneSmithAvatar.jpg; sourceTree = "<group>"; };
+		FD2FA2352A13BA20002B618B /* JamesAndersonAvatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = JamesAndersonAvatar.jpg; sourceTree = "<group>"; };
+		FD2FA2362A13BA20002B618B /* WilliamWilsonAvatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WilliamWilsonAvatar.jpg; sourceTree = "<group>"; };
+		FD2FA2372A13BA20002B618B /* JohnAlisonAvatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = JohnAlisonAvatar.jpg; sourceTree = "<group>"; };
+		FD2FA23F2A13BE87002B618B /* SophiaTaylorAvatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SophiaTaylorAvatar.jpg; sourceTree = "<group>"; };
 		FD37A98F2A0B65120001BABB /* DataTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransformer.swift; sourceTree = "<group>"; };
 		FD37A9932A0B6E960001BABB /* FullNameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullNameTests.swift; sourceTree = "<group>"; };
 		FD37A9972A0B77A90001BABB /* NormalizeToZeroToFiveRangeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalizeToZeroToFiveRangeTests.swift; sourceTree = "<group>"; };
+		FD7F989C2A0E04650058DBEB /* SitterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitterCardView.swift; sourceTree = "<group>"; };
+		FD7F989E2A0E0D2C0058DBEB /* AppStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyle.swift; sourceTree = "<group>"; };
+		FD7F98A02A0E0E280058DBEB /* AppStyle+FontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppStyle+FontStyle.swift"; sourceTree = "<group>"; };
+		FD7F98A22A0E10510058DBEB /* AppStyle+UIElementConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppStyle+UIElementConstant.swift"; sourceTree = "<group>"; };
+		FD7F98A42A0E12290058DBEB /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		FDD143C62A03BD48000BBA77 /* OwnerMainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerMainTabView.swift; sourceTree = "<group>"; };
 		FDD143CA2A03C629000BBA77 /* Color+AppScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+AppScheme.swift"; sourceTree = "<group>"; };
 		FDD143CC2A03E575000BBA77 /* Sitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sitter.swift; sourceTree = "<group>"; };
@@ -88,6 +129,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FD0291702A0E16D000F88377 /* AppStyle */ = {
+			isa = PBXGroup;
+			children = (
+				FD7F989E2A0E0D2C0058DBEB /* AppStyle.swift */,
+				FD7F98A02A0E0E280058DBEB /* AppStyle+FontStyle.swift */,
+				FD7F98A22A0E10510058DBEB /* AppStyle+UIElementConstant.swift */,
+				FDD143CA2A03C629000BBA77 /* Color+AppScheme.swift */,
+				FDD143E12A05233B000BBA77 /* Image+IconName.swift */,
+			);
+			path = AppStyle;
+			sourceTree = "<group>";
+		};
+		FD0291712A0E16DF00F88377 /* AppStyleTests */ = {
+			isa = PBXGroup;
+			children = (
+				FDD143F62A052A11000BBA77 /* Color+AppSchemeTests.swift */,
+				FDD144002A0532D5000BBA77 /* Image+IconNameTests.swift */,
+				FD0291762A0E2B0700F88377 /* AppStyle+FontStyleTests.swift */,
+				FD0291782A0E2B2300F88377 /* AppStyle+UIElementConstantTests.swift */,
+			);
+			path = AppStyleTests;
+			sourceTree = "<group>";
+		};
 		FD1FA3CA2A0A77FE000A3A91 /* Sitter */ = {
 			isa = PBXGroup;
 			children = (
@@ -100,8 +164,7 @@
 		FD1FA3CD2A0A7DDB000A3A91 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				FDD143F62A052A11000BBA77 /* Color+AppSchemeTests.swift */,
-				FDD144002A0532D5000BBA77 /* Image+IconNameTests.swift */,
+				FD0291712A0E16DF00F88377 /* AppStyleTests */,
 				FD37A9962A0B76BA0001BABB /* DataTransformerTests */,
 			);
 			path = Helper;
@@ -126,9 +189,28 @@
 		FD2F7B2F2A0CDCE7008F6F49 /* Mock */ = {
 			isa = PBXGroup;
 			children = (
+				FD2FA23F2A13BE87002B618B /* SophiaTaylorAvatar.jpg */,
 				FD2F7B2C2A0CDC44008F6F49 /* EmilyDoeAvatar.jpg */,
+				FD2FA2332A13BA20002B618B /* AvaMooreAvatar.jpg */,
+				FD2FA2352A13BA20002B618B /* JamesAndersonAvatar.jpg */,
+				FD2FA2342A13BA20002B618B /* JaneSmithAvatar.jpg */,
+				FD2FA2372A13BA20002B618B /* JohnAlisonAvatar.jpg */,
+				FD2FA2322A13BA20002B618B /* MichaelBrownAvatar.jpg */,
+				FD2FA2312A13BA20002B618B /* OliviaDavisAvatar.jpg */,
+				FD2FA2362A13BA20002B618B /* WilliamWilsonAvatar.jpg */,
 			);
 			path = Mock;
+			sourceTree = "<group>";
+		};
+		FD2FA2272A129C32002B618B /* SitterCardView */ = {
+			isa = PBXGroup;
+			children = (
+				FD7F989C2A0E04650058DBEB /* SitterCardView.swift */,
+				FD7F98A42A0E12290058DBEB /* AvatarView.swift */,
+				FD0291722A0E256F00F88377 /* GeneralInfoSectionView.swift */,
+				FD0291742A0E273500F88377 /* BioSectionView.swift */,
+			);
+			path = SitterCardView;
 			sourceTree = "<group>";
 		};
 		FD37A9962A0B76BA0001BABB /* DataTransformerTests */ = {
@@ -138,6 +220,24 @@
 				FD37A9972A0B77A90001BABB /* NormalizeToZeroToFiveRangeTests.swift */,
 			);
 			path = DataTransformerTests;
+			sourceTree = "<group>";
+		};
+		FD7F989A2A0E041A0058DBEB /* OwnerMainTabView */ = {
+			isa = PBXGroup;
+			children = (
+				FDD143C62A03BD48000BBA77 /* OwnerMainTabView.swift */,
+				FDD143DF2A051F96000BBA77 /* OwnerMainTabView+Tab.swift */,
+			);
+			path = OwnerMainTabView;
+			sourceTree = "<group>";
+		};
+		FD7F989B2A0E04390058DBEB /* SitterListView */ = {
+			isa = PBXGroup;
+			children = (
+				FD2FA2272A129C32002B618B /* SitterCardView */,
+				FD2FA2282A129C53002B618B /* SitterListView.swift */,
+			);
+			path = SitterListView;
 			sourceTree = "<group>";
 		};
 		FDAA7BF52A0CB8E2007905CB /* DataTrasnformer */ = {
@@ -181,6 +281,7 @@
 				FDE0CEBB2A0269280023F784 /* Model */,
 				FDE0CEBA2A02691D0023F784 /* View */,
 				FDE0CEBC2A02693A0023F784 /* ViewModel */,
+				FD2F7B2E2A0CDCCB008F6F49 /* Resources */,
 				FDE0CEBD2A0269570023F784 /* Helper */,
 				FDE0CEAC2A00F8390023F784 /* Assets.xcassets */,
 				FDE0CEAE2A00F8390023F784 /* Preview Content */,
@@ -199,6 +300,8 @@
 		FDE0CEBA2A02691D0023F784 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FD7F989A2A0E041A0058DBEB /* OwnerMainTabView */,
+				FD7F989B2A0E04390058DBEB /* SitterListView */,
 				FDD143C62A03BD48000BBA77 /* OwnerMainTabView.swift */,
 				FDD143DF2A051F96000BBA77 /* OwnerMainTabView+Tab.swift */,
 				36BCC17D2A12558A0063B70D /* OwnerInformationView.swift */,
@@ -220,6 +323,7 @@
 			isa = PBXGroup;
 			children = (
 				FD1FA3C22A0A682E000A3A91 /* SitterCardViewModel.swift */,
+				FD2FA22A2A129CA1002B618B /* SitterListViewModel.swift */,
 				36BCC17B2A1254750063B70D /* OwnerCardViewModel.swift */,
 			);
 			path = ViewModel;
@@ -228,10 +332,8 @@
 		FDE0CEBD2A0269570023F784 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				FDD143CA2A03C629000BBA77 /* Color+AppScheme.swift */,
-				FDD143E12A05233B000BBA77 /* Image+IconName.swift */,
+				FD0291702A0E16D000F88377 /* AppStyle */,
 				FDAA7BF52A0CB8E2007905CB /* DataTrasnformer */,
-				FD2F7B2E2A0CDCCB008F6F49 /* Resources */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -326,9 +428,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD2FA23A2A13BA20002B618B /* AvaMooreAvatar.jpg in Resources */,
+				FD2FA2402A13BE87002B618B /* SophiaTaylorAvatar.jpg in Resources */,
 				FDE0CEB02A00F8390023F784 /* Preview Assets.xcassets in Resources */,
 				FDE0CEAD2A00F8390023F784 /* Assets.xcassets in Resources */,
+				FD2FA23B2A13BA20002B618B /* JaneSmithAvatar.jpg in Resources */,
+				FD2FA2382A13BA20002B618B /* OliviaDavisAvatar.jpg in Resources */,
+				FD2FA23E2A13BA20002B618B /* JohnAlisonAvatar.jpg in Resources */,
+				FD2FA23D2A13BA20002B618B /* WilliamWilsonAvatar.jpg in Resources */,
+				FD2FA2392A13BA20002B618B /* MichaelBrownAvatar.jpg in Resources */,
 				FD2F7B2D2A0CDC44008F6F49 /* EmilyDoeAvatar.jpg in Resources */,
+				FD2FA23C2A13BA20002B618B /* JamesAndersonAvatar.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,12 +490,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD02917A2A0E2C5000F88377 /* AppStyle+FontStyle.swift in Sources */,
+				FD0291772A0E2B0700F88377 /* AppStyle+FontStyleTests.swift in Sources */,
+				FD0291792A0E2B2300F88377 /* AppStyle+UIElementConstantTests.swift in Sources */,
 				FD37A9942A0B6E960001BABB /* FullNameTests.swift in Sources */,
 				FDD143F72A052A11000BBA77 /* Color+AppSchemeTests.swift in Sources */,
 				FD2F7B322A0CE029008F6F49 /* Sitter.swift in Sources */,
+				FD02917C2A0E2CBC00F88377 /* AppStyle.swift in Sources */,
 				FD2F7B332A0CE032008F6F49 /* PetOwner.swift in Sources */,
 				FDD143FE2A052D5A000BBA77 /* Color+AppScheme.swift in Sources */,
 				FDD144012A0532D5000BBA77 /* Image+IconNameTests.swift in Sources */,
+				FD02917B2A0E2C5300F88377 /* AppStyle+UIElementConstant.swift in Sources */,
 				FD37A9982A0B77A90001BABB /* NormalizeToZeroToFiveRangeTests.swift in Sources */,
 				FDD143FF2A052D5E000BBA77 /* Image+IconName.swift in Sources */,
 				FD37A9952A0B6EA90001BABB /* DataTransformer.swift in Sources */,
@@ -400,16 +515,26 @@
 				FD1FA3B52A090916000A3A91 /* Sitter.swift in Sources */,
 				FDD143E22A05233B000BBA77 /* Image+IconName.swift in Sources */,
 				FDD143C72A03BD48000BBA77 /* OwnerMainTabView.swift in Sources */,
+				FD7F989F2A0E0D2C0058DBEB /* AppStyle.swift in Sources */,
 				FDD143CB2A03C629000BBA77 /* Color+AppScheme.swift in Sources */,
+				FD0291732A0E256F00F88377 /* GeneralInfoSectionView.swift in Sources */,
 				FDD143E02A051F96000BBA77 /* OwnerMainTabView+Tab.swift in Sources */,
 				FD1FA3C32A0A682E000A3A91 /* SitterCardViewModel.swift in Sources */,
+				FD7F98A12A0E0E280058DBEB /* AppStyle+FontStyle.swift in Sources */,
+				FD2FA2292A129C53002B618B /* SitterListView.swift in Sources */,
 				3673D6372A04F7FD009D699D /* PetOwner.swift in Sources */,
+				FD7F98A32A0E10510058DBEB /* AppStyle+UIElementConstant.swift in Sources */,
 				FD37A9902A0B65120001BABB /* DataTransformer.swift in Sources */,
 				36BCC17C2A1254750063B70D /* OwnerCardViewModel.swift in Sources */,
 				FDE0CEA92A00F8370023F784 /* WoofApp.swift in Sources */,
 				36BCC1802A1255B70063B70D /* OwnerCardView.swift in Sources */,
 				36BCC17E2A12558A0063B70D /* OwnerInformationView.swift in Sources */,
+				FD7F989D2A0E04650058DBEB /* SitterCardView.swift in Sources */,
+				FD2FA22B2A129CA1002B618B /* SitterListViewModel.swift in Sources */,
+				FDE0CEA92A00F8370023F784 /* WoofApp.swift in Sources */,
+				FD7F98A52A0E12290058DBEB /* AvatarView.swift in Sources */,
 				FD1FA3CC2A0A781E000A3A91 /* Sitter+Dummy.swift in Sources */,
+				FD0291752A0E273500F88377 /* BioSectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

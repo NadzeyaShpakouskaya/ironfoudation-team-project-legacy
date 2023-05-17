@@ -15,7 +15,7 @@ struct OwnerMainTabView: View {
         NavigationView {
             TabView(selection: $selection) {
                 Group {
-                    Text("List of pet sitters")
+                    SitterListView()
                         .tabItem {
                             Label("Sitters", systemImage: Image.IconName.findSitterTab)
                         }

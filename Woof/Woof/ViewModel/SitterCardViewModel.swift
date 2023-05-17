@@ -22,7 +22,7 @@ final class SitterCardViewModel: ObservableObject {
     /// - Parameter sitter: The sitter for which the view model is created.
     init(sitter: Sitter) {
         self.sitter = sitter
-        fullName = DataTransformer.fullName(name: sitter.surname, surname: sitter.name)
+        fullName = DataTransformer.fullName(name: sitter.name, surname: sitter.surname)
         rating = DataTransformer.normalizeToZeroToFiveRange(sitter.rating)
         price = sitter.pricePerHour
         imageURL = sitter.avatarUrl
