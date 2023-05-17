@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36541FEB2A150581007FA625 /* WoofApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE0CEA82A00F8370023F784 /* WoofApp.swift */; };
 		3673D6372A04F7FD009D699D /* PetOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3673D6362A04F7FD009D699D /* PetOwner.swift */; };
 		36BCC17C2A1254750063B70D /* OwnerCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BCC17B2A1254750063B70D /* OwnerCardViewModel.swift */; };
 		36BCC17E2A12558A0063B70D /* OwnerInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BCC17D2A12558A0063B70D /* OwnerInformationView.swift */; };
@@ -517,6 +518,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36541FEB2A150581007FA625 /* WoofApp.swift in Sources */,
 				FD1FA3B52A090916000A3A91 /* Sitter.swift in Sources */,
 				FDD143E22A05233B000BBA77 /* Image+IconName.swift in Sources */,
 				FDD143C72A03BD48000BBA77 /* OwnerMainTabView.swift in Sources */,
