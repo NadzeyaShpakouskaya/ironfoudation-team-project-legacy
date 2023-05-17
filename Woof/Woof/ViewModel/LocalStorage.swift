@@ -1,1 +1,3 @@
 import Foundation
+
+class LocalStorage {}
