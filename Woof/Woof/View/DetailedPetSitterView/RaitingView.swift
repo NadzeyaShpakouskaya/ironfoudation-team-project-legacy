@@ -11,8 +11,8 @@ struct RatingView: View {
     var offImage: Image?
     /// Highlited image.
     var onImage = Image(systemName: "star.fill")
-    /// Color used for a filled raiting image.
 
+    /// Color used for a filled raiting image.
     var offColor = Color.App.grayDark
     /// Color used for an unfilled raiting image.
     var onColor = Color.App.purpleDark
