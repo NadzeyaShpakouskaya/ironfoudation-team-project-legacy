@@ -52,7 +52,6 @@
 		FDD143FE2A052D5A000BBA77 /* Color+AppScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD143CA2A03C629000BBA77 /* Color+AppScheme.swift */; };
 		FDD143FF2A052D5E000BBA77 /* Image+IconName.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD143E12A05233B000BBA77 /* Image+IconName.swift */; };
 		FDD144012A0532D5000BBA77 /* Image+IconNameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD144002A0532D5000BBA77 /* Image+IconNameTests.swift */; };
-		FDE0CEA92A00F8370023F784 /* WoofApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE0CEA82A00F8370023F784 /* WoofApp.swift */; };
 		FDE0CEAD2A00F8390023F784 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDE0CEAC2A00F8390023F784 /* Assets.xcassets */; };
 		FDE0CEB02A00F8390023F784 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDE0CEAF2A00F8390023F784 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -129,6 +128,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36541FEA2A14FC68007FA625 /* OwnerInformationView */ = {
+			isa = PBXGroup;
+			children = (
+				36BCC17D2A12558A0063B70D /* OwnerInformationView.swift */,
+				36BCC17F2A1255B70063B70D /* OwnerCardView.swift */,
+			);
+			path = OwnerInformationView;
+			sourceTree = "<group>";
+		};
 		FD0291702A0E16D000F88377 /* AppStyle */ = {
 			isa = PBXGroup;
 			children = (
@@ -302,8 +310,7 @@
 			children = (
 				FD7F989A2A0E041A0058DBEB /* OwnerMainTabView */,
 				FD7F989B2A0E04390058DBEB /* SitterListView */,
-				36BCC17D2A12558A0063B70D /* OwnerInformationView.swift */,
-				36BCC17F2A1255B70063B70D /* OwnerCardView.swift */,
+				36541FEA2A14FC68007FA625 /* OwnerInformationView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -524,12 +531,10 @@
 				FD7F98A32A0E10510058DBEB /* AppStyle+UIElementConstant.swift in Sources */,
 				FD37A9902A0B65120001BABB /* DataTransformer.swift in Sources */,
 				36BCC17C2A1254750063B70D /* OwnerCardViewModel.swift in Sources */,
-				FDE0CEA92A00F8370023F784 /* WoofApp.swift in Sources */,
 				36BCC1802A1255B70063B70D /* OwnerCardView.swift in Sources */,
 				36BCC17E2A12558A0063B70D /* OwnerInformationView.swift in Sources */,
 				FD7F989D2A0E04650058DBEB /* SitterCardView.swift in Sources */,
 				FD2FA22B2A129CA1002B618B /* SitterListViewModel.swift in Sources */,
-				FDE0CEA92A00F8370023F784 /* WoofApp.swift in Sources */,
 				FD7F98A52A0E12290058DBEB /* AvatarView.swift in Sources */,
 				FD1FA3CC2A0A781E000A3A91 /* Sitter+Dummy.swift in Sources */,
 				FD0291752A0E273500F88377 /* BioSectionView.swift in Sources */,

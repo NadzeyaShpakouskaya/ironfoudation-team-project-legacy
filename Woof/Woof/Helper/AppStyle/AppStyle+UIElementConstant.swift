@@ -14,5 +14,8 @@ extension AppStyle {
 
         /// The default side size of an avatar image.
         static let avatarSideSize = 80.0
+
+        /// The default side size of an avatar image for profile card view.
+        static let avatarCardSideSize = 40.0
     }
 }

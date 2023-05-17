@@ -10,36 +10,38 @@ struct OwnerCardView: View {
     var body: some View {
         VStack {
             HStack {
-                Image(systemName: Image.IconName.ownerCard)
+                Image(systemName: Image.IconName.avatarPlaceholder)
                     .resizable()
-                    .frame(width: 40, height: 40)
+                    .frame(width: AppStyle.UIElementConstant.avatarCardSideSize,
+                           height: AppStyle.UIElementConstant.avatarCardSideSize)
                     .foregroundColor(.App.purpleDark)
 
-                VStack(alignment: .leading, spacing: 5.0) {
+                VStack(alignment: .leading) {
                     Group {
                         TextField("Name", text: $viewModel.owner.name)
-                            .font(.system(size: 22, weight: .heavy))
+                            .font(.system(size: AppStyle.FontStyle.heading.size, weight: .heavy))
                             .foregroundColor(.App.white)
 
                         TextField("Surname", text: $viewModel.owner.surname)
-                            .font(.system(size: 22, weight: .heavy))
+                            .font(.system(size: AppStyle.FontStyle.heading.size, weight: .heavy))
                             .foregroundColor(.App.white)
 
                         TextField("Phone", text: $viewModel.owner.phone)
-                            .font(.system(size: 18, weight: .bold))
+                            .font(.system(size: AppStyle.FontStyle.body.size, weight: .bold))
                             .foregroundColor(.App.white)
 
                         TextField("Address", text: $viewModel.owner.address)
-                            .font(.system(size: 18, weight: .bold))
+                            .font(.system(size: AppStyle.FontStyle.body.size, weight: .bold))
                             .foregroundColor(.App.white)
                     }
                     .disabled(!isEditMode)
                     .background(isEditMode ? .App.purpleDark : Color.clear)
 
                     if !isEditMode {
-                        HStack(spacing: 1.0) {
+                        HStack {
                             ForEach(1...5, id: \.self) { index in
-                                Image(systemName: index <= Int(viewModel.owner.rating) ? "star.fill" : "star")
+                                Image(systemName: index <= Int(viewModel.owner.rating) ?
+                                    Image.IconName.filledStar : Image.IconName.unfilledStar)
                                     .foregroundColor(.App.purpleDark)
                             }
                         }
