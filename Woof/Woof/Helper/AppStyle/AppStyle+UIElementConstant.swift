@@ -12,7 +12,7 @@ extension AppStyle {
         /// The minimum padding size.
         static let minPadding = 4.0
 
-        /// The minimum padding size.
+        /// The padding size for the ContactDetailsSectionHeight.
         static let frameContactDetailsSectionHeight = 50.0
 
         /// The default side size of an avatar image.
