@@ -2,7 +2,9 @@ import SwiftUI
 
 /// A view that displays the profile information of an Owner.
 struct OwnerCardView: View {
-    @ObservedObject private var viewModel = OwnerCardViewModel()
+    /// View model responsible for managing the data for the owner card.
+    @ObservedObject var viewModel = OwnerCardViewModel()
+    /// Tracks whether the card is in edit mode or not.
     @State private var isEditMode: Bool = false
 
     var body: some View {
@@ -11,7 +13,7 @@ struct OwnerCardView: View {
                 Image(systemName: Image.IconName.ownerCard)
                     .resizable()
                     .frame(width: 40, height: 40)
-                    .foregroundColor(Color.App.purpleDark)
+                    .foregroundColor(.App.purpleDark)
 
                 VStack(alignment: .leading, spacing: 5.0) {
                     Group {
@@ -34,10 +36,12 @@ struct OwnerCardView: View {
                     .disabled(!isEditMode)
                     .background(isEditMode ? .App.purpleDark : Color.clear)
 
-                    HStack(spacing: 1.0) {
-                        ForEach(1...5, id: \.self) { index in
-                            Image(systemName: index <= Int(viewModel.owner.rating) ? "star.fill" : "star")
-                                .foregroundColor(.App.purpleDark)
+                    if !isEditMode {
+                        HStack(spacing: 1.0) {
+                            ForEach(1...5, id: \.self) { index in
+                                Image(systemName: index <= Int(viewModel.owner.rating) ? "star.fill" : "star")
+                                    .foregroundColor(.App.purpleDark)
+                            }
                         }
                     }
                 }
@@ -50,6 +54,12 @@ struct OwnerCardView: View {
                     Text(isEditMode ? "Save" : "Edit")
                         .fontWeight(.bold)
                         .foregroundColor(.App.white)
+                        .padding(.vertical, 10)
+                        .padding(.horizontal, 10)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.App.white, lineWidth: 2)
+                        )
                 })
                 .padding(.all, 10.0)
                 .cornerRadius(10)

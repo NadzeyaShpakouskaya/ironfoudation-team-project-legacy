@@ -1,6 +1,6 @@
 import SwiftUI
 
-/// A view representing the view of pet Owner profile information.
+/// A view representing the view of pet Owner's profile information.
 struct OwnerInformationView: View {
     var body: some View {
         ScrollView {
