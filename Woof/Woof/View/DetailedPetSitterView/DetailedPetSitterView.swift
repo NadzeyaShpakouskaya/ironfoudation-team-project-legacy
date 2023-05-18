@@ -23,7 +23,6 @@ struct DetailPetSitterView: View {
                     .clipShape(RoundedRectangle(cornerRadius: AppStyle.UIElementConstant.cornerRadius))
             }
         }
-        .ignoresSafeArea()
     }
 
     struct DetailPetSitterView_Previews: PreviewProvider {
