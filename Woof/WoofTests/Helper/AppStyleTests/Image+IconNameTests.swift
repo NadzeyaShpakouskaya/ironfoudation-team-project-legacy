@@ -9,6 +9,8 @@ final class ImageIconNameTests: XCTestCase {
         let avatarPlaceholder = "person.circle"
         let filledStar = "star.fill"
         let unfilledStar = "star"
+        let phone = "phone.fill"
+        let fullName = "person.fill"
 
         XCTAssertEqual(findSitterTabIconName, Image.IconName.findSitterTab)
         XCTAssertEqual(walkingsTabIconName, Image.IconName.walkingsTab)
@@ -16,5 +18,7 @@ final class ImageIconNameTests: XCTestCase {
         XCTAssertEqual(avatarPlaceholder, Image.IconName.avatarPlaceholder)
         XCTAssertEqual(filledStar, Image.IconName.filledStar)
         XCTAssertEqual(unfilledStar, Image.IconName.unfilledStar)
+        XCTAssertEqual(phone, Image.IconName.phone)
+        XCTAssertEqual(fullName, Image.IconName.fullName)
     }
 }
