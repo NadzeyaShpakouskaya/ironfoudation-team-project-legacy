@@ -9,7 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### Added 
 - Add environment setting files: `.gitignore` file, rules for linters - [#24](https://github.com/ios-course/ironfoudation-team-project/pull/24)
 - Add project documentation files: `README.md`, `board_rules.md`, `CHANGELOG.md`, `release_notes.md` - [#25](https://github.com/ios-course/ironfoudation-team-project/pull/25)
-- Add Xcode project and integrate linters into Xcode build phase - [#26](https://github.com/ios-course/ironfoudation-team-project/pull/24)
+- Add Xcode project and integrate linters into Xcode build phase - [#26](https://github.com/ios-course/ironfoudation-team-project/pull/26)
 - Create project structure - [#27](https://github.com/ios-course/ironfoudation-team-project/pull/27)
 - Add `Owner` model to the model layer - [#36](https://github.com/ios-course/ironfoudation-team-project/pull/36)
 - Add `Sitter` model to the model layer - [#37](https://github.com/ios-course/ironfoudation-team-project/pull/37)
@@ -21,4 +21,4 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Add `DetailedSitterView` to present the detailed information about the selected sitter from `SitterListView`  - [#55](https://github.com/ios-course/ironfoudation-team-project/pull/55)
 - Add template for PRs  - [#53](https://github.com/ios-course/ironfoudation-team-project/pull/53)
 - Add template for issues  - [#54](https://github.com/ios-course/ironfoudation-team-project/pull/54)
-- Add missed information to `CHANGELOG.md`  - [#55](https://github.com/ios-course/ironfoudation-team-project/pull/55)
+- Add missed information to `CHANGELOG.md`  - [#56](https://github.com/ios-course/ironfoudation-team-project/pull/56)
