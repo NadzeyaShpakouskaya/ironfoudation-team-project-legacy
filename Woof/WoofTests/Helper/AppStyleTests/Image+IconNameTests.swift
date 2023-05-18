@@ -10,7 +10,7 @@ final class ImageIconNameTests: XCTestCase {
         let filledStar = "star.fill"
         let unfilledStar = "star"
         let phone = "phone.fill"
-        let fullName = "person.fill"
+        let filledPerson = "person.fill"
 
         XCTAssertEqual(findSitterTabIconName, Image.IconName.findSitterTab)
         XCTAssertEqual(walkingsTabIconName, Image.IconName.walkingsTab)
@@ -19,6 +19,6 @@ final class ImageIconNameTests: XCTestCase {
         XCTAssertEqual(filledStar, Image.IconName.filledStar)
         XCTAssertEqual(unfilledStar, Image.IconName.unfilledStar)
         XCTAssertEqual(phone, Image.IconName.phone)
-        XCTAssertEqual(fullName, Image.IconName.fullName)
+        XCTAssertEqual(filledPerson, Image.IconName.fullName)
     }
 }
