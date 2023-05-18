@@ -15,14 +15,18 @@ assignees: ''
 <!-- Provides the general description of the issue-->
 ## Description
 
+
+## DoD
 <!-- Describes the requirements from the user's point of view-->
-### User requirements:
+### User story:
 
 <!-- Describes any restrictions and requirements from the developer's point of view -->
 ### Dev requirements and restrictions:
 
+
 <!-- The links to UI mocks-->
 ## UI Mocks
+
 
 <!-- Any additional information that can help to close the issue-->
 ## Other useful information
