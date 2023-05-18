@@ -12,6 +12,7 @@
 		368BF0EE2A15312300F3F750 /* CodableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368BF0ED2A15312300F3F750 /* CodableHelper.swift */; };
 		368BF0EF2A16103B00F3F750 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368BF0EB2A152FA500F3F750 /* LocalStorage.swift */; };
 		368BF0F02A16103B00F3F750 /* CodableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368BF0ED2A15312300F3F750 /* CodableHelper.swift */; };
+		36BEA7582A1621B10020F6AE /* LocalStorageSaveLoadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BEA7572A1621B10020F6AE /* LocalStorageSaveLoadTests.swift */; };
 		FD0291732A0E256F00F88377 /* GeneralInfoSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0291722A0E256F00F88377 /* GeneralInfoSectionView.swift */; };
 		FD0291752A0E273500F88377 /* BioSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0291742A0E273500F88377 /* BioSectionView.swift */; };
 		FD0291772A0E2B0700F88377 /* AppStyle+FontStyleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0291762A0E2B0700F88377 /* AppStyle+FontStyleTests.swift */; };
@@ -72,6 +73,7 @@
 		3673D6362A04F7FD009D699D /* PetOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetOwner.swift; sourceTree = "<group>"; };
 		368BF0EB2A152FA500F3F750 /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
 		368BF0ED2A15312300F3F750 /* CodableHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableHelper.swift; sourceTree = "<group>"; };
+		36BEA7572A1621B10020F6AE /* LocalStorageSaveLoadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageSaveLoadTests.swift; sourceTree = "<group>"; };
 		FD0291722A0E256F00F88377 /* GeneralInfoSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralInfoSectionView.swift; sourceTree = "<group>"; };
 		FD0291742A0E273500F88377 /* BioSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioSectionView.swift; sourceTree = "<group>"; };
 		FD0291762A0E2B0700F88377 /* AppStyle+FontStyleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppStyle+FontStyleTests.swift"; sourceTree = "<group>"; };
@@ -129,6 +131,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36BEA7592A1621B70020F6AE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				36BEA75A2A1621C00020F6AE /* LocalStorage */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		36BEA75A2A1621C00020F6AE /* LocalStorage */ = {
+			isa = PBXGroup;
+			children = (
+				36BEA7572A1621B10020F6AE /* LocalStorageSaveLoadTests.swift */,
+			);
+			path = LocalStorage;
+			sourceTree = "<group>";
+		};
+		36C54AFA2A1631CC00748023 /* LocalStorage */ = {
+			isa = PBXGroup;
+			children = (
+				368BF0EB2A152FA500F3F750 /* LocalStorage.swift */,
+				368BF0ED2A15312300F3F750 /* CodableHelper.swift */,
+			);
+			path = LocalStorage;
+			sourceTree = "<group>";
+		};
 		FD0291702A0E16D000F88377 /* AppStyle */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,6 +278,7 @@
 		FDD143F52A052A11000BBA77 /* WoofTests */ = {
 			isa = PBXGroup;
 			children = (
+				36BEA7592A1621B70020F6AE /* Model */,
 				FD1FA3CD2A0A7DDB000A3A91 /* Helper */,
 			);
 			path = WoofTests;
@@ -310,8 +338,7 @@
 			isa = PBXGroup;
 			children = (
 				3673D6362A04F7FD009D699D /* PetOwner.swift */,
-				368BF0EB2A152FA500F3F750 /* LocalStorage.swift */,
-				368BF0ED2A15312300F3F750 /* CodableHelper.swift */,
+				36C54AFA2A1631CC00748023 /* LocalStorage */,
 				FD1FA3CA2A0A77FE000A3A91 /* Sitter */,
 			);
 			path = Model;
@@ -487,6 +514,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36BEA7582A1621B10020F6AE /* LocalStorageSaveLoadTests.swift in Sources */,
 				FD02917A2A0E2C5000F88377 /* AppStyle+FontStyle.swift in Sources */,
 				FD0291772A0E2B0700F88377 /* AppStyle+FontStyleTests.swift in Sources */,
 				FD0291792A0E2B2300F88377 /* AppStyle+UIElementConstantTests.swift in Sources */,
