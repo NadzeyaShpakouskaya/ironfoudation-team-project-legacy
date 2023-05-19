@@ -23,7 +23,7 @@ struct RaitingView: View {
     }
 }
 
-struct Raiting_Previews: PreviewProvider {
+struct RaitingView_Previews: PreviewProvider {
     static var previews: some View {
         RaitingView(rating: 3)
     }
