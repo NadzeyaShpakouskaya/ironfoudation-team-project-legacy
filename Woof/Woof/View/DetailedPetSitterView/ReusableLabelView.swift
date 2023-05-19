@@ -8,19 +8,19 @@ struct ReusableLabelView: View {
     let message: String
 
     var body: some View {
-        VStack {
+        HStack {
+            Image(systemName: image)
+                .foregroundColor(Color.App.purpleDark)
+            Text(message)
+                .foregroundColor(Color.App.grayDark)
+                .fontWeight(.bold)
+        }
+        .padding(.vertical, AppStyle.UIElementConstant.minPadding)
+        .frame(maxWidth: .infinity)
+        .background(Color.App.white)
+        .clipShape(
             RoundedRectangle(cornerRadius: AppStyle.UIElementConstant.cornerRadius)
-                .padding(.horizontal)
-                .overlay(
-                    HStack {
-                        Image(systemName: image)
-                            .foregroundColor(Color.App.purpleDark)
-                        Text(message)
-                            .foregroundColor(Color.App.grayDark)
-                            .fontWeight(.bold)
-                    }
-                )
-        }.foregroundColor(Color.App.white)
+        )
     }
 }
 
