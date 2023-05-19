@@ -131,12 +131,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF303EBF2A17AFA20086065B /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				EF7B7EFF2A147D8300F00B4E /* ReusableLabelView.swift */,
+				EF303EBD2A1762CF0086065B /* RatingView.swift */,
+			);
+			path = ReusableViews;
+			sourceTree = "<group>";
+		};
 		EF5A7F312A14561000585616 /* DetailedPetSitterView */ = {
 			isa = PBXGroup;
 			children = (
 				EF5A7F322A14563800585616 /* DetailedPetSitterView.swift */,
-				EF7B7EFF2A147D8300F00B4E /* ReusableLabelView.swift */,
-				EF303EBD2A1762CF0086065B /* RatingView.swift */,
 			);
 			path = DetailedPetSitterView;
 			sourceTree = "<group>";
@@ -312,6 +319,7 @@
 		FDE0CEBA2A02691D0023F784 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EF303EBF2A17AFA20086065B /* ReusableViews */,
 				EF5A7F312A14561000585616 /* DetailedPetSitterView */,
 				FD7F989A2A0E041A0058DBEB /* OwnerMainTabView */,
 				FD7F989B2A0E04390058DBEB /* SitterListView */,
