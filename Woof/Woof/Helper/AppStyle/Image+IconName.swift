@@ -20,6 +20,6 @@ extension Image {
         /// The icon used for the phone section image.
         static let phone = "phone.fill"
         /// The icon used for fullName section image.
-        static let fullName = "person.fill"
+        static let filledPerson = "person.fill"
     }
 }
