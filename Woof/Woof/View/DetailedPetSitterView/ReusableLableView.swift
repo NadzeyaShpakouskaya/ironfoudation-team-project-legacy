@@ -8,19 +8,19 @@ struct ReusableLableView: View {
     let message: String
 
     var body: some View {
-        RoundedRectangle(cornerRadius: AppStyle.UIElementConstant.cornerRadius)
-            .padding(.horizontal)
-            .frame(height: AppStyle.UIElementConstant.frameContactDetailsSectionHeight)
-            .overlay(
-                HStack {
-                    Image(systemName: image)
-                        .foregroundColor(Color.App.purpleDark)
-                    Text(message)
-                        .foregroundColor(Color.App.grayDark)
-                        .fontWeight(.bold)
-                }
-            )
-            .foregroundColor(Color.App.white)
+        VStack {
+            RoundedRectangle(cornerRadius: AppStyle.UIElementConstant.cornerRadius)
+                .padding(.horizontal)
+                .overlay(
+                    HStack {
+                        Image(systemName: image)
+                            .foregroundColor(Color.App.purpleDark)
+                        Text(message)
+                            .foregroundColor(Color.App.grayDark)
+                            .fontWeight(.bold)
+                    }
+                )
+        }.foregroundColor(Color.App.white)
     }
 }
 
