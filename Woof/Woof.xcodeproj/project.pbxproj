@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3673D6372A04F7FD009D699D /* PetOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3673D6362A04F7FD009D699D /* PetOwner.swift */; };
+		EF303EBE2A1762CF0086065B /* RaitingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF303EBD2A1762CF0086065B /* RaitingView.swift */; };
 		EF5A7F2F2A14504F00585616 /* DetailPetSitterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5A7F2E2A14504F00585616 /* DetailPetSitterViewModel.swift */; };
 		EF5A7F332A14563800585616 /* DetailedPetSitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5A7F322A14563800585616 /* DetailedPetSitterView.swift */; };
-		EF5A7F372A14568D00585616 /* RaitingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5A7F362A14568D00585616 /* RaitingView.swift */; };
 		EF7B7F002A147D8300F00B4E /* ReusableLableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B7EFF2A147D8300F00B4E /* ReusableLableView.swift */; };
 		FD0291732A0E256F00F88377 /* GeneralInfoSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0291722A0E256F00F88377 /* GeneralInfoSectionView.swift */; };
 		FD0291752A0E273500F88377 /* BioSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0291742A0E273500F88377 /* BioSectionView.swift */; };
@@ -70,9 +70,9 @@
 
 /* Begin PBXFileReference section */
 		3673D6362A04F7FD009D699D /* PetOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetOwner.swift; sourceTree = "<group>"; };
+		EF303EBD2A1762CF0086065B /* RaitingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaitingView.swift; sourceTree = "<group>"; };
 		EF5A7F2E2A14504F00585616 /* DetailPetSitterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPetSitterViewModel.swift; sourceTree = "<group>"; };
 		EF5A7F322A14563800585616 /* DetailedPetSitterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedPetSitterView.swift; sourceTree = "<group>"; };
-		EF5A7F362A14568D00585616 /* RaitingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaitingView.swift; sourceTree = "<group>"; };
 		EF7B7EFF2A147D8300F00B4E /* ReusableLableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableLableView.swift; sourceTree = "<group>"; };
 		FD0291722A0E256F00F88377 /* GeneralInfoSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralInfoSectionView.swift; sourceTree = "<group>"; };
 		FD0291742A0E273500F88377 /* BioSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioSectionView.swift; sourceTree = "<group>"; };
@@ -136,7 +136,7 @@
 			children = (
 				EF5A7F322A14563800585616 /* DetailedPetSitterView.swift */,
 				EF7B7EFF2A147D8300F00B4E /* ReusableLableView.swift */,
-				EF5A7F362A14568D00585616 /* RaitingView.swift */,
+				EF303EBD2A1762CF0086065B /* RaitingView.swift */,
 			);
 			path = DetailedPetSitterView;
 			sourceTree = "<group>";
@@ -527,6 +527,7 @@
 				FDD143C72A03BD48000BBA77 /* OwnerMainTabView.swift in Sources */,
 				FD7F989F2A0E0D2C0058DBEB /* AppStyle.swift in Sources */,
 				FDD143CB2A03C629000BBA77 /* Color+AppScheme.swift in Sources */,
+				EF303EBE2A1762CF0086065B /* RaitingView.swift in Sources */,
 				FD0291732A0E256F00F88377 /* GeneralInfoSectionView.swift in Sources */,
 				FDD143E02A051F96000BBA77 /* OwnerMainTabView+Tab.swift in Sources */,
 				FD1FA3C32A0A682E000A3A91 /* SitterCardViewModel.swift in Sources */,
@@ -541,7 +542,6 @@
 				FD7F98A52A0E12290058DBEB /* AvatarView.swift in Sources */,
 				FD1FA3CC2A0A781E000A3A91 /* Sitter+Dummy.swift in Sources */,
 				EF7B7F002A147D8300F00B4E /* ReusableLableView.swift in Sources */,
-				EF5A7F372A14568D00585616 /* RaitingView.swift in Sources */,
 				EF5A7F2F2A14504F00585616 /* DetailPetSitterViewModel.swift in Sources */,
 				FD0291752A0E273500F88377 /* BioSectionView.swift in Sources */,
 			);
