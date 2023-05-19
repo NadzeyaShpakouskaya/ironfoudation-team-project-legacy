@@ -12,6 +12,5 @@ final class UIElementConstantTests: XCTestCase {
         XCTAssertEqual(cornerRadius, AppStyle.UIElementConstant.cornerRadius)
         XCTAssertEqual(minPadding, AppStyle.UIElementConstant.minPadding)
         XCTAssertEqual(avatarSideSize, AppStyle.UIElementConstant.avatarSideSize)
-        XCTAssertEqual(frameContactDetailsSectionHeight, AppStyle.UIElementConstant.frameContactDetailsSectionHeight)
     }
 }
