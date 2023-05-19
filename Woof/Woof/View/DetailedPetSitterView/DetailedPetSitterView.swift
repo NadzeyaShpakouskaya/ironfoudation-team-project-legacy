@@ -4,15 +4,16 @@ import SwiftUI
 struct DetailPetSitterView: View {
     /// The view model responsible for providing data to the view.
     @ObservedObject var viewModel: DetailSitterViewModel
+
     var body: some View {
         ZStack {
             Color.App.grayLight
                 .ignoresSafeArea()
             VStack {
                 AvatarView(url: viewModel.imageURL)
-                // RatingView(rating: .constant(viewModel.rating))
-                RaitingView(rating: viewModel.rating)
-                ReusableLableView(image: Image.IconName.fullName, message: viewModel.fullName).frame(height: AppStyle.UIElementConstant.frameContactDetailsSectionHeight)
+                RaitingView(rating: viewModel
+                    .rating)
+                ReusableLableView(image: Image.IconName.filledPerson, message: viewModel.fullName).frame(height: AppStyle.UIElementConstant.frameContactDetailsSectionHeight)
                 ReusableLableView(image: Image.IconName.phone, message: viewModel.phoneNumber).frame(height: AppStyle.UIElementConstant.frameContactDetailsSectionHeight)
                 Text(viewModel.bio)
                     .padding()
