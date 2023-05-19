@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		3673D6372A04F7FD009D699D /* PetOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3673D6362A04F7FD009D699D /* PetOwner.swift */; };
 		368BF0EC2A152FA500F3F750 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368BF0EB2A152FA500F3F750 /* LocalStorage.swift */; };
-		368BF0EE2A15312300F3F750 /* CodableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368BF0ED2A15312300F3F750 /* CodableHelper.swift */; };
 		368BF0EF2A16103B00F3F750 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368BF0EB2A152FA500F3F750 /* LocalStorage.swift */; };
-		368BF0F02A16103B00F3F750 /* CodableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368BF0ED2A15312300F3F750 /* CodableHelper.swift */; };
 		36BEA7582A1621B10020F6AE /* LocalStorageSaveLoadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BEA7572A1621B10020F6AE /* LocalStorageSaveLoadTests.swift */; };
 		FD0291732A0E256F00F88377 /* GeneralInfoSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0291722A0E256F00F88377 /* GeneralInfoSectionView.swift */; };
 		FD0291752A0E273500F88377 /* BioSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0291742A0E273500F88377 /* BioSectionView.swift */; };
@@ -72,7 +70,6 @@
 /* Begin PBXFileReference section */
 		3673D6362A04F7FD009D699D /* PetOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetOwner.swift; sourceTree = "<group>"; };
 		368BF0EB2A152FA500F3F750 /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
-		368BF0ED2A15312300F3F750 /* CodableHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableHelper.swift; sourceTree = "<group>"; };
 		36BEA7572A1621B10020F6AE /* LocalStorageSaveLoadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageSaveLoadTests.swift; sourceTree = "<group>"; };
 		FD0291722A0E256F00F88377 /* GeneralInfoSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralInfoSectionView.swift; sourceTree = "<group>"; };
 		FD0291742A0E273500F88377 /* BioSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioSectionView.swift; sourceTree = "<group>"; };
@@ -151,7 +148,6 @@
 			isa = PBXGroup;
 			children = (
 				368BF0EB2A152FA500F3F750 /* LocalStorage.swift */,
-				368BF0ED2A15312300F3F750 /* CodableHelper.swift */,
 			);
 			path = LocalStorage;
 			sourceTree = "<group>";
@@ -527,7 +523,6 @@
 				FDD144012A0532D5000BBA77 /* Image+IconNameTests.swift in Sources */,
 				FD02917B2A0E2C5300F88377 /* AppStyle+UIElementConstant.swift in Sources */,
 				FD37A9982A0B77A90001BABB /* NormalizeToZeroToFiveRangeTests.swift in Sources */,
-				368BF0F02A16103B00F3F750 /* CodableHelper.swift in Sources */,
 				FDD143FF2A052D5E000BBA77 /* Image+IconName.swift in Sources */,
 				368BF0EF2A16103B00F3F750 /* LocalStorage.swift in Sources */,
 				FD37A9952A0B6EA90001BABB /* DataTransformer.swift in Sources */,
@@ -540,7 +535,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD1FA3B52A090916000A3A91 /* Sitter.swift in Sources */,
-				368BF0EE2A15312300F3F750 /* CodableHelper.swift in Sources */,
 				368BF0EC2A152FA500F3F750 /* LocalStorage.swift in Sources */,
 				FDD143E22A05233B000BBA77 /* Image+IconName.swift in Sources */,
 				FDD143C72A03BD48000BBA77 /* OwnerMainTabView.swift in Sources */,
