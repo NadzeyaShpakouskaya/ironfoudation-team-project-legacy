@@ -1,7 +1,7 @@
 import SwiftUI
 
 /// A view displaying a rating of the person.
-struct RaitingView: View {
+struct RatingView: View {
     /// The rating of the person.
     let rating: Int
 
@@ -25,6 +25,6 @@ struct RaitingView: View {
 
 struct RaitingView_Previews: PreviewProvider {
     static var previews: some View {
-        RaitingView(rating: 3)
+        RatingView(rating: 3)
     }
 }

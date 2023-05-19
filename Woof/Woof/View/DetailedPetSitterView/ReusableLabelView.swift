@@ -1,7 +1,7 @@
 import SwiftUI
 
 /// A view displaying a section for the detailed sitter's information.
-struct ReusableLableView: View {
+struct ReusableLabelView: View {
     /// The name of an icon.
     let image: String
     /// The informational text to be displayed.
@@ -26,6 +26,6 @@ struct ReusableLableView: View {
 
 struct ContactDetailsSectionView_Previews: PreviewProvider {
     static var previews: some View {
-        ReusableLableView(image: Image.IconName.filledPerson, message: "Full Name")
+        ReusableLabelView(image: Image.IconName.filledPerson, message: "Full Name")
     }
 }
