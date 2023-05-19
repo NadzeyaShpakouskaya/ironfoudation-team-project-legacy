@@ -13,8 +13,10 @@ struct DetailPetSitterView: View {
                 AvatarView(url: viewModel.imageURL)
                 RaitingView(rating: viewModel
                     .rating)
-                ReusableLableView(image: Image.IconName.filledPerson, message: viewModel.fullName).frame(height: AppStyle.UIElementConstant.frameContactDetailsSectionHeight)
-                ReusableLableView(image: Image.IconName.phone, message: viewModel.phoneNumber).frame(height: AppStyle.UIElementConstant.frameContactDetailsSectionHeight)
+                ReusableLableView(image: Image.IconName.filledPerson, message: viewModel.fullName)
+                    .frame(height: AppStyle.UIElementConstant.frameContactDetailsSectionHeight)
+                ReusableLableView(image: Image.IconName.phone, message: viewModel.phoneNumber)
+                    .frame(height: AppStyle.UIElementConstant.frameContactDetailsSectionHeight)
                 Text(viewModel.bio)
                     .padding()
                 Spacer()
