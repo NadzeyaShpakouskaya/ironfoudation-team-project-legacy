@@ -22,7 +22,7 @@ class LocalStorage {
       Loads a value from `LocalStorage` using the specified key.
 
       - Parameters:
-         - key: The key associated with the value in UserDefaults.
+         - key: The key associated with the value in `LocalStorage`.
 
       - Returns: The decoded value of generic type `T` if it exists.
 
@@ -52,8 +52,8 @@ class LocalStorage {
 enum LocalStorageError: Error {
     /// Indicates no data is found for the specified key.
     case noDataForKey
-    /// Error indicating a failure to decode the data.
+    /// Indicates a failure to decode the data.
     case decodeError
-    /// Error indicating a failure to encode the value.
+    /// Indicates a failure to encode the value.
     case encodeError
 }
