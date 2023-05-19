@@ -19,6 +19,6 @@ final class ImageIconNameTests: XCTestCase {
         XCTAssertEqual(filledStar, Image.IconName.filledStar)
         XCTAssertEqual(unfilledStar, Image.IconName.unfilledStar)
         XCTAssertEqual(phone, Image.IconName.phone)
-        XCTAssertEqual(filledPerson, Image.IconName.fullName)
+        XCTAssertEqual(filledPerson, Image.IconName.filledPerson)
     }
 }
