@@ -15,7 +15,7 @@ final class LocalStorageSaveTests: XCTestCase {
         super.tearDown()
     }
 
-    func testSaveAndLoadValue() {
+    func testSaveAndLoadValueEqual() {
         do {
             // given
             let name = "John Brown"
@@ -28,22 +28,6 @@ final class LocalStorageSaveTests: XCTestCase {
             XCTAssertEqual(loadedName, name)
         } catch {
             XCTFail("Failed to save or load value: \(error)")
-        }
-    }
-
-    func testLoadValueWithNoDataForKey() {
-        do {
-            // given
-
-            // when
-            let _: String = try localStorage.loadValue(key: LocalStorage.Key.owner.rawValue)
-
-            XCTFail("No error was thrown for loading a non-existent value for key.")
-        } catch LocalStorageError.noDataForKey {
-            // then
-            XCTAssert(true)
-        } catch {
-            XCTFail("Unexpected error thrown: \(error)")
         }
     }
 }
