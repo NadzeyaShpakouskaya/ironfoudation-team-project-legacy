@@ -15,7 +15,7 @@ final class LocalStorageSaveTests: XCTestCase {
         super.tearDown()
     }
 
-    func testSaveAndLoadValueEqual() {
+    func testSaveAndLoadValueAreEqual() {
         do {
             // given
             let name = "John Brown"

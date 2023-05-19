@@ -24,7 +24,6 @@ final class LocalStorageLoadTests: XCTestCase {
     func testLoadValueWithNoDataForKeyReturnsExpectedError() {
         do {
             // given
-
             // when
             let _: String = try localStorage.loadValue(key: LocalStorage.Key.owner.rawValue)
 
@@ -38,14 +37,19 @@ final class LocalStorageLoadTests: XCTestCase {
     }
 
     func testLoadValueDoNotThrowsErrorForExistingValueInLocalStorage() throws {
+        // given
+        // when
         let loadedData: String = try localStorage.loadValue(key: savedKey)
         XCTAssertNoThrow(loadedData)
     }
 
     func testLoadValueWithNoDecodableDataReturnsExpectedError() {
         do {
+            // given
+            // when
             let _: Owner = try localStorage.loadValue(key: savedKey)
         } catch LocalStorageError.decodeError {
+            // then
             XCTAssert(true)
         } catch {
             XCTFail("Unexpected error thrown: \(error)")
