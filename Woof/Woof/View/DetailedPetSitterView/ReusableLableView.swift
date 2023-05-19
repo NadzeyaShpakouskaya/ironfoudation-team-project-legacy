@@ -26,6 +26,6 @@ struct ReusableLableView: View {
 
 struct ContactDetailsSectionView_Previews: PreviewProvider {
     static var previews: some View {
-        ReusableLableView(image: Image.IconName.fullName, message: "Full Name")
+        ReusableLableView(image: Image.IconName.filledPerson, message: "Full Name")
     }
 }
