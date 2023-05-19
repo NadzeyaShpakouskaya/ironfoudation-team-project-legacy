@@ -8,7 +8,11 @@ struct SitterListView: View {
     var body: some View {
         ScrollView {
             ForEach(viewModel.sitters) { sitter in
-                SitterCardView(viewModel: SitterCardViewModel(sitter: sitter))
+                NavigationLink {
+                    DetailPetSitterView(viewModel: DetailSitterViewModel(sitter: sitter))
+                } label: {
+                    SitterCardView(viewModel: SitterCardViewModel(sitter: sitter))
+                }
             }
         }
         .padding(AppStyle.UIElementConstant.minPadding)
@@ -17,6 +21,8 @@ struct SitterListView: View {
 
 struct SitterListView_Previews: PreviewProvider {
     static var previews: some View {
-        SitterListView()
+        NavigationView {
+            SitterListView()
+        }
     }
 }
