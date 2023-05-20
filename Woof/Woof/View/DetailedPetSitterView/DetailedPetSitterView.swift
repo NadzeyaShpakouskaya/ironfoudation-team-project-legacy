@@ -11,9 +11,15 @@ struct DetailPetSitterView: View {
                 .ignoresSafeArea()
             VStack {
                 AvatarView(url: viewModel.imageURL)
-                RatingView(rating: viewModel.rating)
-                ReusableLabelView(image: Image.IconName.filledPerson, message: viewModel.fullName)
-                ReusableLabelView(image: Image.IconName.phone, message: viewModel.phoneNumber)
+                FiveStarRatingView(rating: viewModel.rating)
+                TextWithIconLabelView(
+                    iconName: Image.IconName.filledPerson,
+                    text: viewModel.fullName
+                )
+                TextWithIconLabelView(
+                    iconName: Image.IconName.phone,
+                    text: viewModel.phoneNumber
+                )
                 Text(viewModel.bio)
                     .padding()
                 Spacer()
