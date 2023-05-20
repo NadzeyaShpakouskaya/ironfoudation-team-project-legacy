@@ -18,9 +18,9 @@ struct DetailPetSitterView: View {
                 text: viewModel.phoneNumber
             )
             Text(viewModel.bio)
-                .padding()
             Spacer()
         }
+        .padding()
         .background(Color.App.grayLight)
     }
 
