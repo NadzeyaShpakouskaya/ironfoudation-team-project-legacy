@@ -4,7 +4,7 @@ import SwiftUI
 struct FiveStarRatingView: View {
     /// The rating of the person.
     let rating: Int
-
+    /// The text will be displayed if the rating is not specified.
     private let noRatingText = "not rated"
 
     var body: some View {
