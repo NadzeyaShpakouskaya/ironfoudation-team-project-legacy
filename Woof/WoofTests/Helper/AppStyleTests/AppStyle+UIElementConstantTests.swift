@@ -6,7 +6,6 @@ final class UIElementConstantTests: XCTestCase {
         let cornerRadius = 10.0
         let minPadding = 4.0
         let avatarSideSize = 80.0
-        let frameContactDetailsSectionHeight = 50.0
 
         XCTAssertEqual(borderStroke, AppStyle.UIElementConstant.borderStroke)
         XCTAssertEqual(cornerRadius, AppStyle.UIElementConstant.cornerRadius)
