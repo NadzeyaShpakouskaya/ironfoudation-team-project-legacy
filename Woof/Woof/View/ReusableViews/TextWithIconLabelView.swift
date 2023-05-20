@@ -1,18 +1,18 @@
 import SwiftUI
 
 /// A view displaying a section for the detailed sitter's information.
-struct ReusableLabelView: View {
+struct TextWithIconLabelView: View {
     /// The name of an icon.
-    let image: String
+    let systemIconName: String
     /// The informational text to be displayed.
     let message: String
 
     var body: some View {
         HStack {
-            Image(systemName: image)
-                .foregroundColor(Color.App.purpleDark)
+            Image(systemName: systemIconName)
+                .foregroundColor(.App.purpleDark)
             Text(message)
-                .foregroundColor(Color.App.grayDark)
+                .foregroundColor(.App.grayDark)
                 .fontWeight(.bold)
         }
         .padding(.vertical, AppStyle.UIElementConstant.minPadding)
@@ -26,6 +26,9 @@ struct ReusableLabelView: View {
 
 struct ContactDetailsSectionView_Previews: PreviewProvider {
     static var previews: some View {
-        ReusableLabelView(image: Image.IconName.filledPerson, message: "Full Name")
+        TextWithIconLabelView(
+            systemIconName: Image.IconName.filledPerson,
+            message: "Full Name"
+        )
     }
 }

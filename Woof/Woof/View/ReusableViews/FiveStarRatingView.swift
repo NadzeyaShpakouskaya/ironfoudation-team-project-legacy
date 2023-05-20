@@ -1,7 +1,7 @@
 import SwiftUI
 
 /// A view displaying a rating of the person.
-struct RatingView: View {
+struct FiveStarRatingView: View {
     /// The rating of the person.
     let rating: Int
 
@@ -13,18 +13,26 @@ struct RatingView: View {
                         .font(Font.system(size: AppStyle.FontStyle.footnote.size))
                 } else {
                     HStack(spacing: 0) {
-                        ForEach(0..<rating, id: \.self) { _ in
+                        ForEach(1...rating, id: \.self) { _ in
                             Image(systemName: Image.IconName.filledStar)
                         }
                     }
                 }
-            }.foregroundColor(Color.App.purpleDark)
+            }
+            .foregroundColor(.App.purpleDark)
         }
     }
 }
 
 struct RaitingView_Previews: PreviewProvider {
     static var previews: some View {
-        RatingView(rating: 3)
+        VStack {
+            FiveStarRatingView(rating: 5)
+            FiveStarRatingView(rating: 4)
+            FiveStarRatingView(rating: 3)
+            FiveStarRatingView(rating: 2)
+            FiveStarRatingView(rating: 1)
+            FiveStarRatingView(rating: 0)
+        }
     }
 }

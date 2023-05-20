@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3673D6372A04F7FD009D699D /* PetOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3673D6362A04F7FD009D699D /* PetOwner.swift */; };
-		EF303EBE2A1762CF0086065B /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF303EBD2A1762CF0086065B /* RatingView.swift */; };
+		EF303EBE2A1762CF0086065B /* FiveStarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF303EBD2A1762CF0086065B /* FiveStarRatingView.swift */; };
 		EF5A7F2F2A14504F00585616 /* DetailPetSitterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5A7F2E2A14504F00585616 /* DetailPetSitterViewModel.swift */; };
 		EF5A7F332A14563800585616 /* DetailedPetSitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5A7F322A14563800585616 /* DetailedPetSitterView.swift */; };
-		EF7B7F002A147D8300F00B4E /* ReusableLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B7EFF2A147D8300F00B4E /* ReusableLabelView.swift */; };
+		EF7B7F002A147D8300F00B4E /* TextWithIconLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B7EFF2A147D8300F00B4E /* TextWithIconLabelView.swift */; };
 		FD0291732A0E256F00F88377 /* GeneralInfoSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0291722A0E256F00F88377 /* GeneralInfoSectionView.swift */; };
 		FD0291752A0E273500F88377 /* BioSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0291742A0E273500F88377 /* BioSectionView.swift */; };
 		FD0291772A0E2B0700F88377 /* AppStyle+FontStyleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0291762A0E2B0700F88377 /* AppStyle+FontStyleTests.swift */; };
@@ -70,10 +70,10 @@
 
 /* Begin PBXFileReference section */
 		3673D6362A04F7FD009D699D /* PetOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetOwner.swift; sourceTree = "<group>"; };
-		EF303EBD2A1762CF0086065B /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		EF303EBD2A1762CF0086065B /* FiveStarRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveStarRatingView.swift; sourceTree = "<group>"; };
 		EF5A7F2E2A14504F00585616 /* DetailPetSitterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPetSitterViewModel.swift; sourceTree = "<group>"; };
 		EF5A7F322A14563800585616 /* DetailedPetSitterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedPetSitterView.swift; sourceTree = "<group>"; };
-		EF7B7EFF2A147D8300F00B4E /* ReusableLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableLabelView.swift; sourceTree = "<group>"; };
+		EF7B7EFF2A147D8300F00B4E /* TextWithIconLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextWithIconLabelView.swift; sourceTree = "<group>"; };
 		FD0291722A0E256F00F88377 /* GeneralInfoSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralInfoSectionView.swift; sourceTree = "<group>"; };
 		FD0291742A0E273500F88377 /* BioSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioSectionView.swift; sourceTree = "<group>"; };
 		FD0291762A0E2B0700F88377 /* AppStyle+FontStyleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppStyle+FontStyleTests.swift"; sourceTree = "<group>"; };
@@ -134,8 +134,8 @@
 		EF303EBF2A17AFA20086065B /* ReusableViews */ = {
 			isa = PBXGroup;
 			children = (
-				EF7B7EFF2A147D8300F00B4E /* ReusableLabelView.swift */,
-				EF303EBD2A1762CF0086065B /* RatingView.swift */,
+				EF7B7EFF2A147D8300F00B4E /* TextWithIconLabelView.swift */,
+				EF303EBD2A1762CF0086065B /* FiveStarRatingView.swift */,
 			);
 			path = ReusableViews;
 			sourceTree = "<group>";
@@ -535,7 +535,7 @@
 				FDD143C72A03BD48000BBA77 /* OwnerMainTabView.swift in Sources */,
 				FD7F989F2A0E0D2C0058DBEB /* AppStyle.swift in Sources */,
 				FDD143CB2A03C629000BBA77 /* Color+AppScheme.swift in Sources */,
-				EF303EBE2A1762CF0086065B /* RatingView.swift in Sources */,
+				EF303EBE2A1762CF0086065B /* FiveStarRatingView.swift in Sources */,
 				FD0291732A0E256F00F88377 /* GeneralInfoSectionView.swift in Sources */,
 				FDD143E02A051F96000BBA77 /* OwnerMainTabView+Tab.swift in Sources */,
 				FD1FA3C32A0A682E000A3A91 /* SitterCardViewModel.swift in Sources */,
@@ -549,7 +549,7 @@
 				FDE0CEA92A00F8370023F784 /* WoofApp.swift in Sources */,
 				FD7F98A52A0E12290058DBEB /* AvatarView.swift in Sources */,
 				FD1FA3CC2A0A781E000A3A91 /* Sitter+Dummy.swift in Sources */,
-				EF7B7F002A147D8300F00B4E /* ReusableLabelView.swift in Sources */,
+				EF7B7F002A147D8300F00B4E /* TextWithIconLabelView.swift in Sources */,
 				EF5A7F2F2A14504F00585616 /* DetailPetSitterViewModel.swift in Sources */,
 				FD0291752A0E273500F88377 /* BioSectionView.swift in Sources */,
 			);
