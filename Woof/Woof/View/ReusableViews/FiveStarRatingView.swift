@@ -8,7 +8,6 @@ struct FiveStarRatingView: View {
     private let noRatingText = "not rated"
 
     var body: some View {
-        VStack(alignment: .leading) {
             Group {
                 if rating == 0 {
                     Text(noRatingText)
@@ -22,7 +21,6 @@ struct FiveStarRatingView: View {
                 }
             }
             .foregroundColor(.App.purpleDark)
-        }
     }
 }
 
