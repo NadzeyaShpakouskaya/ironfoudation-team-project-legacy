@@ -6,25 +6,22 @@ struct DetailPetSitterView: View {
     @ObservedObject var viewModel: DetailSitterViewModel
 
     var body: some View {
-        ZStack {
-            Color.App.grayLight
-                .ignoresSafeArea()
-            VStack {
-                AvatarView(url: viewModel.imageURL)
-                FiveStarRatingView(rating: viewModel.rating)
-                TextWithIconLabelView(
-                    iconName: Image.IconName.filledPerson,
-                    text: viewModel.fullName
-                )
-                TextWithIconLabelView(
-                    iconName: Image.IconName.phone,
-                    text: viewModel.phoneNumber
-                )
-                Text(viewModel.bio)
-                    .padding()
-                Spacer()
-            }
+        VStack {
+            AvatarView(url: viewModel.imageURL)
+            FiveStarRatingView(rating: viewModel.rating)
+            TextWithIconLabelView(
+                iconName: Image.IconName.filledPerson,
+                text: viewModel.fullName
+            )
+            TextWithIconLabelView(
+                iconName: Image.IconName.phone,
+                text: viewModel.phoneNumber
+            )
+            Text(viewModel.bio)
+                .padding()
+            Spacer()
         }
+        .background(Color.App.grayLight)
     }
 
     struct DetailPetSitterView_Previews: PreviewProvider {
