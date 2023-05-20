@@ -8,19 +8,19 @@ struct FiveStarRatingView: View {
     private let noRatingText = "not rated"
 
     var body: some View {
-            Group {
-                if rating == 0 {
-                    Text(noRatingText)
-                        .font(Font.system(size: AppStyle.FontStyle.footnote.size))
-                } else {
-                    HStack(spacing: 0) {
-                        ForEach(1...rating, id: \.self) { _ in
-                            Image(systemName: Image.IconName.filledStar)
-                        }
+        Group {
+            if rating == 0 {
+                Text(noRatingText)
+                    .font(Font.system(size: AppStyle.FontStyle.footnote.size))
+            } else {
+                HStack(spacing: 0) {
+                    ForEach(1...rating, id: \.self) { _ in
+                        Image(systemName: Image.IconName.filledStar)
                     }
                 }
             }
-            .foregroundColor(.App.purpleDark)
+        }
+        .foregroundColor(.App.purpleDark)
     }
 }
 
