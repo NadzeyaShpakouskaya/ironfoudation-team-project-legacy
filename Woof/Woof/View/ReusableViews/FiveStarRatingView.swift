@@ -5,11 +5,13 @@ struct FiveStarRatingView: View {
     /// The rating of the person.
     let rating: Int
 
+    private let noRatingText = "not rated"
+
     var body: some View {
         VStack(alignment: .leading) {
             Group {
                 if rating == 0 {
-                    Text("not rated")
+                    Text(noRatingText)
                         .font(Font.system(size: AppStyle.FontStyle.footnote.size))
                 } else {
                     HStack(spacing: 0) {
