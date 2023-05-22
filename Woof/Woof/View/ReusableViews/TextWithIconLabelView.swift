@@ -15,6 +15,7 @@ struct TextWithIconLabelView: View {
             Text(text)
                 .foregroundColor(.App.grayDark)
                 .fontWeight(.bold)
+                .lineLimit(1)
         }
         .padding(.vertical, AppStyle.UIElementConstant.minPadding)
         .frame(maxWidth: .infinity)
