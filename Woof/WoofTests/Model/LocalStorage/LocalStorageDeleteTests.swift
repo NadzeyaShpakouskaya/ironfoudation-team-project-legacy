@@ -15,16 +15,26 @@ final class LocalStorageDeleteTests: XCTestCase {
         super.tearDown()
     }
 
-    func testDeleteValue() {
+    func testDeleteValueWithExistingKey() {
         let value = "TestValue"
         let key = "TestKey"
 
-        XCTAssertNoThrow(try localStorage.save(value: value, for: key))
+        localStorage.save(value: value, for: key)
 
         localStorage.deleteValue(forKey: key)
 
         let loadedValue: String? = localStorage.loadValue(key: key)
 
-        XCTAssertNil(loadedValue, "Loaded value should be nil after deleting it")
+        XCTAssertNil(loadedValue)
+    }
+
+    func testDeleteValueWithNonExistingKey() {
+        let key = "NonExistingKey"
+
+        localStorage.deleteValue(forKey: key)
+
+        let loadedValue: String? = localStorage.loadValue(key: key)
+
+        XCTAssertNil(loadedValue)
     }
 }

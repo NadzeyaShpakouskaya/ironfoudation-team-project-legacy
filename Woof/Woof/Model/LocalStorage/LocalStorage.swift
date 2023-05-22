@@ -10,7 +10,7 @@ class LocalStorage {
          - value: The value to be encoded and saved.
          - key: The key under which the encoded value will be stored.
      */
-    func save(value: some Encodable, for key: String) throws {
+    func save(value: some Encodable, for key: String) {
         let data = try? JSONEncoder().encode(value)
         UserDefaults.standard.set(data, forKey: key)
     }
@@ -29,7 +29,7 @@ class LocalStorage {
             return nil
         }
 
-        let result = try? JSONDecoder().decode(T.self, from: data)
+        let result = try? JSONDecoder().decode(type, from: data)
         return result
     }
 

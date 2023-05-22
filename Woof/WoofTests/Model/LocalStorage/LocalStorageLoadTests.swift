@@ -20,7 +20,7 @@ final class LocalStorageLoadTests: XCTestCase {
         let expectedValue = "Hello, World!"
         let key = "TestKey"
 
-        XCTAssertNoThrow(try localStorage.save(value: savingValue, for: key))
+        localStorage.save(value: savingValue, for: key)
 
         let loadedValue: String? = localStorage.loadValue(key: key)
 
@@ -30,8 +30,19 @@ final class LocalStorageLoadTests: XCTestCase {
     func testLoadValueForNonExisteningKey() {
         let key = "NonExisteningKey"
 
-        let loadedValue: String? = localStorage.loadValue(key: key)
+        let loadedValue = localStorage.loadValue(for: key, as: String.self)
 
         XCTAssertNil(loadedValue, "Loaded value should be nil for a nonexistent key")
+    }
+
+    func testLoadValueForDifferentTypeValue() {
+        let key = "NonExisteningKey"
+        let nonExistingValue = 555
+
+        localStorage.save(value: nonExistingValue, for: key)
+
+        let loadedValue = localStorage.loadValue(for: key, as: String.self)
+
+        XCTAssertNil(loadedValue)
     }
 }
