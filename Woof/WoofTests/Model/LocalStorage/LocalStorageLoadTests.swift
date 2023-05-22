@@ -2,18 +2,12 @@ import XCTest
 
 final class LocalStorageLoadTests: XCTestCase {
     var localStorage: LocalStorage!
-    var savedOwner = "Owner data"
-    var savedKey = "test key"
-    let noneExistingKey = UUID().uuidString
 
     override func setUp() {
         let storage = LocalStorage()
         localStorage = storage
 
         UserDefaults.standard.removePersistentDomain(forName: Bundle.main.bundleIdentifier!)
-        do {
-            try localStorage.save(value: savedOwner, for: savedKey)
-        } catch {}
     }
 
     override func tearDown() {
@@ -21,38 +15,23 @@ final class LocalStorageLoadTests: XCTestCase {
         super.tearDown()
     }
 
-    func testLoadValueWithNoDataForKeyReturnsExpectedError() {
-        do {
-            // given
-            // when
-            let _: String = try localStorage.loadValue(key: LocalStorage.Key.owner.rawValue)
+    func testLoadValueForExistingKey() {
+        let savingValue = "Hello, World!"
+        let expectedValue = "Hello, World!"
+        let key = "TestKey"
 
-            XCTFail("No error was thrown for loading a non-existent value for key.")
-        } catch LocalStorageError.noDataForKey {
-            // then
-            XCTAssert(true)
-        } catch {
-            XCTFail("Unexpected error thrown: \(error)")
-        }
+        XCTAssertNoThrow(try localStorage.save(value: savingValue, for: key))
+
+        let loadedValue: String? = localStorage.loadValue(key: key)
+
+        XCTAssertEqual(loadedValue, expectedValue, "Loaded value should match the expected value")
     }
 
-    func testLoadValueDoNotThrowsErrorForExistingValueInLocalStorage() throws {
-        // given
-        // when
-        let loadedData: String = try localStorage.loadValue(key: savedKey)
-        XCTAssertNoThrow(loadedData)
-    }
+    func testLoadValueForNonExisteningKey() {
+        let key = "NonExisteningKey"
 
-    func testLoadValueWithNoDecodableDataReturnsExpectedError() {
-        do {
-            // given
-            // when
-            let _: Owner = try localStorage.loadValue(key: savedKey)
-        } catch LocalStorageError.decodeError {
-            // then
-            XCTAssert(true)
-        } catch {
-            XCTFail("Unexpected error thrown: \(error)")
-        }
+        let loadedValue: String? = localStorage.loadValue(key: key)
+
+        XCTAssertNil(loadedValue, "Loaded value should be nil for a nonexistent key")
     }
 }

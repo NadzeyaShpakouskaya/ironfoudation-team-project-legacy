@@ -14,20 +14,4 @@ final class LocalStorageSaveTests: XCTestCase {
         localStorage = nil
         super.tearDown()
     }
-
-    func testSaveAndLoadValueAreEqualForTheProvidedKey() {
-        do {
-            // given
-            let name = "John Brown"
-            try localStorage.save(value: name, for: LocalStorage.Key.owner.rawValue)
-
-            // when
-            let loadedName: String = try localStorage.loadValue(key: LocalStorage.Key.owner.rawValue)
-
-            // then
-            XCTAssertEqual(loadedName, name)
-        } catch {
-            XCTFail("Failed to save or load value: \(error)")
-        }
-    }
 }

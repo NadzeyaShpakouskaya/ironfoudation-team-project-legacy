@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		362732A22A1B800B0062E4B5 /* LocalStorageDeleteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362732A12A1B800A0062E4B5 /* LocalStorageDeleteTests.swift */; };
 		3673D6372A04F7FD009D699D /* PetOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3673D6362A04F7FD009D699D /* PetOwner.swift */; };
 		368BF0EC2A152FA500F3F750 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368BF0EB2A152FA500F3F750 /* LocalStorage.swift */; };
 		368BF0EF2A16103B00F3F750 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368BF0EB2A152FA500F3F750 /* LocalStorage.swift */; };
@@ -69,6 +70,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		362732A12A1B800A0062E4B5 /* LocalStorageDeleteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageDeleteTests.swift; sourceTree = "<group>"; };
 		3673D6362A04F7FD009D699D /* PetOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetOwner.swift; sourceTree = "<group>"; };
 		368BF0EB2A152FA500F3F750 /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
 		36BEA7572A1621B10020F6AE /* LocalStorageSaveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageSaveTests.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			children = (
 				36BEA7572A1621B10020F6AE /* LocalStorageSaveTests.swift */,
 				36C54AFB2A17A79200748023 /* LocalStorageLoadTests.swift */,
+				362732A12A1B800A0062E4B5 /* LocalStorageDeleteTests.swift */,
 			);
 			path = LocalStorage;
 			sourceTree = "<group>";
@@ -523,6 +526,7 @@
 				FD2F7B322A0CE029008F6F49 /* Sitter.swift in Sources */,
 				FD02917C2A0E2CBC00F88377 /* AppStyle.swift in Sources */,
 				FD2F7B332A0CE032008F6F49 /* PetOwner.swift in Sources */,
+				362732A22A1B800B0062E4B5 /* LocalStorageDeleteTests.swift in Sources */,
 				FDD143FE2A052D5A000BBA77 /* Color+AppScheme.swift in Sources */,
 				FDD144012A0532D5000BBA77 /* Image+IconNameTests.swift in Sources */,
 				FD02917B2A0E2C5300F88377 /* AppStyle+UIElementConstant.swift in Sources */,
