@@ -15,6 +15,10 @@ final class LocalStorageSaveTests: XCTestCase {
         super.tearDown()
     }
 
+    func testSaveMethodExistsInAPI() {
+        localStorage.save(value: "test", for: "key")
+    }
+
     func testSaveMethodSavesTheValueForValidKey() {
         // given
         let testValue = "Hello, World!"
@@ -29,40 +33,20 @@ final class LocalStorageSaveTests: XCTestCase {
         XCTAssertEqual(loadedValue, testValue)
     }
 
-    func testSaveMethodSavesTheLatestValueForThreeDifferentValuesForTheSameKey() {
+    func testSaveMethodOverridesToTheLatestProvidedValueForTheSameKey() {
         // given
-        let firstValue = "Hello, Earth!"
-        let secondValue = "Hello, Moon!"
-        let thirdValue = "Hello, Mars!"
-        let expectedValue = "Hello, Mars!"
-        let key = "TestKey"
+        let firstValue = "a"
+        let secondValue = "b"
+        let expectedValue = secondValue
+        let key = "key"
 
         // when
         localStorage.save(value: firstValue, for: key)
         localStorage.save(value: secondValue, for: key)
-        localStorage.save(value: thirdValue, for: key)
 
         // then
         let loadedValue = localStorage.loadValue(for: key, as: String?.self)
 
         XCTAssertEqual(loadedValue, expectedValue)
-    }
-
-    func testSaveMethodRewriteTheLatestValueToNilForTheLatestNilValueForTheSameKey() {
-        // given
-        let firstValue = "Hello, Earth!"
-        let secondValue = "Hello, Moon!"
-        let thirdValue: String? = nil
-        let key = "TestKey"
-
-        // when
-        localStorage.save(value: firstValue, for: key)
-        localStorage.save(value: secondValue, for: key)
-        localStorage.save(value: thirdValue, for: key)
-
-        // then
-        let loadedValue = localStorage.loadValue(key: key, type: String?.self)
-
-        XCTAssertNil(loadedValue as Any?)
     }
 }

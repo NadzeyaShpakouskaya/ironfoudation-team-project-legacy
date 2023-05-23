@@ -15,6 +15,10 @@ final class LocalStorageDeleteTests: XCTestCase {
         super.tearDown()
     }
 
+    func testDeleteMethodExistsInAPI() {
+        localStorage.deleteValue(forKey: "key")
+    }
+
     func testDeleteValueWithExistingKey() {
         // given
         let value = "TestValue"

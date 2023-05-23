@@ -15,10 +15,14 @@ final class LocalStorageLoadTests: XCTestCase {
         super.tearDown()
     }
 
+    func testLoadMethodExistsInAPI() {
+        _ = localStorage.loadValue(for: "", as: String.self)
+    }
+
     func testLoadValueForExistingKey() {
         // given
         let savingValue = "Hello, World!"
-        let expectedValue = "Hello, World!"
+        let expectedValue = savingValue
         let key = "TestKey"
 
         localStorage.save(value: savingValue, for: key)
@@ -30,9 +34,9 @@ final class LocalStorageLoadTests: XCTestCase {
         XCTAssertEqual(loadedValue, expectedValue)
     }
 
-    func testLoadValueForNonExisteningKey() {
+    func testLoadMethodReturnsNilWhenTryToLoadValueForNonExistingKey() {
         // given
-        let key = "NonExisteningKey"
+        let key = "NonExistingKey"
 
         // when
         let loadedValue = localStorage.loadValue(for: key, as: String.self)
@@ -41,12 +45,12 @@ final class LocalStorageLoadTests: XCTestCase {
         XCTAssertNil(loadedValue)
     }
 
-    func testLoadValueForDifferentTypeValue() {
+    func testLoadMethodReturnsNilWhenTryToLoadValueAsDifferentTypeOfValue() {
         // given
-        let key = "NonExisteningKey"
-        let nonExistingValue = 555
+        let key = "NonExistingKey"
+        let value = 555
 
-        localStorage.save(value: nonExistingValue, for: key)
+        localStorage.save(value: value, for: key)
 
         // when
         let loadedValue = localStorage.loadValue(for: key, as: String.self)
