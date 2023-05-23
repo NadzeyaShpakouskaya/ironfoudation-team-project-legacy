@@ -27,7 +27,7 @@ final class DetailPetSitterViewModelTests: XCTestCase {
         )
 
         let viewModel = DetailSitterViewModel(sitter: sitter)
-        
+
         XCTAssertEqual(viewModel.fullName, "\(sitter.name) \(sitter.surname)")
         XCTAssertEqual(viewModel.phoneNumber, sitter.phone)
         XCTAssertEqual(viewModel.bio, sitter.bio)
