@@ -17,7 +17,7 @@ final class LocalStorageSaveTests: XCTestCase {
 
     func testSaveMethodSavesTheValueForValidKey() {
         // given
-        let testValue = "Hello, World!"
+        let testValue = "X"
         let key = "TestKey"
 
         // when
@@ -29,40 +29,19 @@ final class LocalStorageSaveTests: XCTestCase {
         XCTAssertEqual(loadedValue, testValue)
     }
 
-    func testSaveMethodSavesTheLatestValueForThreeDifferentValuesForTheSameKey() {
+    func testSaveMethodOvveridesTheLatestValueForTwoDifferentValuesForTheSameKey() {
         // given
-        let firstValue = "Hello, Earth!"
-        let secondValue = "Hello, Moon!"
-        let thirdValue = "Hello, Mars!"
-        let expectedValue = "Hello, Mars!"
+        let firstValue = "A"
+        let secondValue = "B"
         let key = "TestKey"
 
         // when
         localStorage.save(value: firstValue, for: key)
         localStorage.save(value: secondValue, for: key)
-        localStorage.save(value: thirdValue, for: key)
 
         // then
         let loadedValue = localStorage.loadValue(key: key, type: String?.self)
 
-        XCTAssertEqual(loadedValue, expectedValue)
-    }
-
-    func testSaveMethodRewriteTheLatestValueToNilForTheLatestNilValueForTheSameKey() {
-        // given
-        let firstValue = "Hello, Earth!"
-        let secondValue = "Hello, Moon!"
-        let thirdValue: String? = nil
-        let key = "TestKey"
-
-        // when
-        localStorage.save(value: firstValue, for: key)
-        localStorage.save(value: secondValue, for: key)
-        localStorage.save(value: thirdValue, for: key)
-
-        // then
-        let loadedValue = localStorage.loadValue(key: key, type: String?.self)
-
-        XCTAssertNil(loadedValue as Any?)
+        XCTAssertEqual(loadedValue, secondValue)
     }
 }

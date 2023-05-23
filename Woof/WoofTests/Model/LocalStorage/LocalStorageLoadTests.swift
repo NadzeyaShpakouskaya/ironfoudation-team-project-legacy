@@ -43,7 +43,7 @@ final class LocalStorageLoadTests: XCTestCase {
 
     func testLoadValueForDifferentTypeValue() {
         // given
-        let key = "NonExisteningKey"
+        let key = "NonExisteningValueKey"
         let nonExistingValue = 555
 
         localStorage.save(value: nonExistingValue, for: key)
