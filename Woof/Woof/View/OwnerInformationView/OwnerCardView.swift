@@ -8,75 +8,82 @@ struct OwnerCardView: View {
     @State private var isEditMode: Bool = false
 
     var body: some View {
-        VStack {
-            HStack {
-                Image(systemName: Image.IconName.avatarPlaceholder)
-                    .resizable()
-                    .frame(width: AppStyle.UIElementConstant.avatarCardSideSize,
-                           height: AppStyle.UIElementConstant.avatarCardSideSize)
-                    .foregroundColor(.App.purpleDark)
-
-                VStack(alignment: .leading) {
-                    Group {
-                        TextField("Name", text: $viewModel.owner.name)
-                            .font(.system(size: AppStyle.FontStyle.heading.size, weight: .heavy))
-                            .foregroundColor(.App.white)
-
-                        TextField("Surname", text: $viewModel.owner.surname)
-                            .font(.system(size: AppStyle.FontStyle.heading.size, weight: .heavy))
-                            .foregroundColor(.App.white)
-
-                        TextField("Phone", text: $viewModel.owner.phone)
-                            .font(.system(size: AppStyle.FontStyle.body.size, weight: .bold))
-                            .foregroundColor(.App.white)
-
-                        TextField("Address", text: $viewModel.owner.address)
-                            .font(.system(size: AppStyle.FontStyle.body.size, weight: .bold))
-                            .foregroundColor(.App.white)
-                    }
-                    .disabled(!isEditMode)
-                    .background(isEditMode ? .App.purpleDark : Color.clear)
-
-                    if !isEditMode {
-                        HStack {
-                            ForEach(1...5, id: \.self) { index in
-                                Image(systemName: index <= Int(viewModel.owner.rating) ?
-                                    Image.IconName.filledStar : Image.IconName.unfilledStar)
-                                    .foregroundColor(.App.purpleDark)
-                            }
-                        }
-                    }
+        ZStack {
+            Group {
+                if isEditMode {
+                    EditView(viewModel: viewModel)
+                } else {
+                    CardInfoView(viewModel: viewModel)
                 }
-                .padding(.horizontal, 10.0)
-
-                Button(action: {
-                    viewModel.save()
-                    isEditMode = !isEditMode
-                }, label: {
-                    Text(isEditMode ? "Save" : "Edit")
-                        .fontWeight(.bold)
-                        .foregroundColor(.App.white)
-                        .padding(.vertical, 10)
-                        .padding(.horizontal, 10)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color.App.white, lineWidth: 2)
-                        )
-                })
-                .padding(.all, 10.0)
-                .cornerRadius(10)
             }
-            .padding()
+            HStack {
+                Spacer()
+                VStack {
+                    Button(action: {
+                        if isEditMode {
+                            viewModel.save()
+                        }
+                        isEditMode = !isEditMode
+                    }, label: {
+                        Text(isEditMode ? "Save" : "Edit")
+                    })
+                    .buttonStyle(DefaultAppButtonStyle())
+                    .disabled(viewModel.owner.name.isEmpty)
+                    Spacer()
+                }
+            }
+        }.padding()
+            .frame(maxWidth: .infinity)
             .background(Color.App.purpleLight)
-            .cornerRadius(10)
-        }
-        .shadow(color: .App.grayDark, radius: 5)
-        .padding()
+            .cornerRadius(AppStyle.UIElementConstant.cornerRadius)
+            .foregroundColor(.App.white)
     }
 }
 
 struct OwnerCardView_Previews: PreviewProvider {
     static var previews: some View {
         OwnerCardView()
+    }
+}
+
+struct CardInfoView: View {
+    var viewModel: OwnerCardViewModel
+
+    var body: some View {
+        HStack {
+            AvatarView(url: viewModel.owner.avatarUrl)
+
+            VStack(alignment: .leading) {
+                Text(viewModel.owner.name)
+                    .font(.system(size: AppStyle.FontStyle.heading.size, weight: .heavy))
+                Text(viewModel.owner.surname)
+                    .font(.system(size: AppStyle.FontStyle.heading.size, weight: .heavy))
+                Text(viewModel.owner.phone)
+                    .font(.system(size: AppStyle.FontStyle.body.size, weight: .bold))
+                Text(viewModel.owner.address)
+                    .font(.system(size: AppStyle.FontStyle.body.size, weight: .bold))
+            }
+            Spacer()
+        }
+    }
+}
+
+struct EditView: View {
+    @ObservedObject var viewModel: OwnerCardViewModel
+
+    var body: some View {
+        VStack {
+            Text("Edit your information")
+            TextField("Name", text: $viewModel.owner.name)
+            TextField("Surname", text: $viewModel.owner.surname)
+            TextField("Phone", text: $viewModel.owner.phone)
+            TextField("Address", text: $viewModel.owner.address)
+
+            if viewModel.owner.name.isEmpty {
+                Text("*Name is a mandatory field")
+            }
+        }
+        .foregroundColor(.App.purpleDark)
+        .textFieldStyle(.roundedBorder)
     }
 }

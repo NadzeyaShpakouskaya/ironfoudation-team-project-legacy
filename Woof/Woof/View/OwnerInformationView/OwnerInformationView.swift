@@ -5,6 +5,7 @@ struct OwnerInformationView: View {
     var body: some View {
         ScrollView {
             OwnerCardView()
+                .padding(.horizontal)
         }
         .background(Color.App.grayLight)
     }

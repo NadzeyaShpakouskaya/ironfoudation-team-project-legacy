@@ -2,28 +2,23 @@ import Foundation
 
 /// The view model for a owner card view, responsible for preparing and providing data for the view.
 final class OwnerCardViewModel: ObservableObject {
-    @Published var owner: Owner
+    @Published var owner: Owner = .init(name: "Name", surname: "Surname", phone: "phone", address: "address", rating: 0)
 
     /**
-     Initializes an instance of the `OwnerCardViewModel` class, loads the owner object from user defaults if it exists,
-     or creates a new instance of the `Owner` object with default values if not.
+     Initializes an instance of the `OwnerCardViewModel` class, loads the owner object from user defaults if it exists.
      */
     init() {
-        let storedOwner = UserDefaults.standard.data(forKey: "storedOwner")
-        let decoder = JSONDecoder()
-
-        if let storedOwner, let decodedOwner = try? decoder.decode(Owner.self, from: storedOwner) {
-            owner = decodedOwner
-        } else {
-            owner = Owner(name: "", surname: "", phone: "", address: "", rating: 0.0)
-        }
+        owner = loadData()
     }
 
-    /// Saves the owner's property to `UserDefaults` as JSON data.
+    /// Saves the owner's property to `Local Storage`.
     func save() {
-        let encoder = JSONEncoder()
-        if let encodedOwner = try? encoder.encode(owner) {
-            UserDefaults.standard.set(encodedOwner, forKey: "storedOwner")
-        }
+        // should be implemented when LocalStorage added.
+    }
+
+    /// Loads the information about owner saved in `Local Storage`.
+    /// - Returns: the `Owner` saved in
+    func loadData() -> Owner {
+        Owner.Dummy.emilyDoe
     }
 }
