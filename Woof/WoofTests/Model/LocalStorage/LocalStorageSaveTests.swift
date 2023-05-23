@@ -15,6 +15,10 @@ final class LocalStorageSaveTests: XCTestCase {
         super.tearDown()
     }
 
+    func testSaveMethodExistsInAPI() {
+        localStorage.save(value: "test", for: "key")
+    }
+
     func testSaveMethodSavesTheValueForValidKey() {
         // given
         let testValue = "X"
@@ -24,24 +28,25 @@ final class LocalStorageSaveTests: XCTestCase {
         localStorage.save(value: testValue, for: key)
 
         // then
-        let loadedValue = localStorage.loadValue(key: key, type: String?.self)
+        let loadedValue = localStorage.loadValue(for: key, as: String?.self)
 
         XCTAssertEqual(loadedValue, testValue)
     }
 
-    func testSaveMethodOvveridesTheLatestValueForTwoDifferentValuesForTheSameKey() {
+    func testSaveMethodOverridesToTheLatestProvidedValueForTheSameKey() {
         // given
-        let firstValue = "A"
-        let secondValue = "B"
-        let key = "TestKey"
+        let firstValue = "a"
+        let secondValue = "b"
+        let expectedValue = secondValue
+        let key = "key"
 
         // when
         localStorage.save(value: firstValue, for: key)
         localStorage.save(value: secondValue, for: key)
 
         // then
-        let loadedValue = localStorage.loadValue(key: key, type: String?.self)
+        let loadedValue = localStorage.loadValue(for: key, as: String?.self)
 
-        XCTAssertEqual(loadedValue, secondValue)
+        XCTAssertEqual(loadedValue, expectedValue)
     }
 }
