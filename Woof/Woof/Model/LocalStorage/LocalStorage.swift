@@ -20,10 +20,11 @@ class LocalStorage {
 
       - Parameters:
          - key: The key associated with the value in data storage.
+         - type: The expected data type of the value from the storage.
 
       - Returns: The decoded value of generic type `T` if it exists.
      */
-    func loadValue<T: Decodable>(key: String) -> T? {
+    func loadValue<T: Decodable>(key: String, type: T.Type) -> T? {
         guard let data = UserDefaults.standard.data(forKey: key) else {
             print("No data found for key: \(key)")
             return nil

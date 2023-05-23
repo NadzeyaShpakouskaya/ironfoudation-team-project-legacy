@@ -15,51 +15,54 @@ final class LocalStorageSaveTests: XCTestCase {
         super.tearDown()
     }
 
+    func testSaveMethodSavesTheValueForValidKey() {
+        // given
+        let testValue = "Hello, World!"
+        let key = "TestKey"
+
+        // when
+        localStorage.save(value: testValue, for: key)
+
+        // then
+        let loadedValue = localStorage.loadValue(key: key, type: String?.self)
+
+        XCTAssertEqual(loadedValue, testValue)
+    }
+
     func testSaveMethodSavesTheLatestValueForThreeDifferentValuesForTheSameKey() {
+        // given
         let firstValue = "Hello, Earth!"
         let secondValue = "Hello, Moon!"
         let thirdValue = "Hello, Mars!"
         let expectedValue = "Hello, Mars!"
         let key = "TestKey"
 
+        // when
         localStorage.save(value: firstValue, for: key)
         localStorage.save(value: secondValue, for: key)
         localStorage.save(value: thirdValue, for: key)
 
-        let loadedValue: String? = localStorage.loadValue(key: key)
+        // then
+        let loadedValue = localStorage.loadValue(key: key, type: String?.self)
 
-        XCTAssertEqual(loadedValue, expectedValue, "Loaded value should match the expected value")
+        XCTAssertEqual(loadedValue, expectedValue)
     }
 
-//    func testSaveMethodRewriteTheLatestValueToNilForTheLatestNilValueForTheSameKey() {
-//        let firstValue = "Hello, Earth!"
-//        let secondValue = "Hello, Moon!"
-//        let thirdValue: String? = nil
-//        let key = "TestKey"
-//
-//        localStorage.save(value: firstValue, for: key)
-//        localStorage.save(value: secondValue, for: key)
-//        localStorage.save(value: thirdValue, for: key)
-//
-//        let loadedValue: String? = localStorage.loadValue(key: key)
-//
-//        XCTAssertNil(loadedValue)
-//    }
+    func testSaveMethodRewriteTheLatestValueToNilForTheLatestNilValueForTheSameKey() {
+        // given
+        let firstValue = "Hello, Earth!"
+        let secondValue = "Hello, Moon!"
+        let thirdValue: String? = nil
+        let key = "TestKey"
 
-//    func testSaveMultipleValues() {
-//        let numberOfPairs = 10
-//        var savedKeys: [String] = []
-//
-//        for i in 0..<numberOfPairs {
-//            let key = "key\(i)"
-//            let value = "value\(i)"
-//
-//            try localStorage.save(value: value, for: key)
-//        }
-//
-//        for key in savedKeys {
-//            let value = localStorage.loadValue(key: key)
-//            print("Key: \(key), Value: \(String(describing: value))")
-//        }
-//    }
+        // when
+        localStorage.save(value: firstValue, for: key)
+        localStorage.save(value: secondValue, for: key)
+        localStorage.save(value: thirdValue, for: key)
+
+        // then
+        let loadedValue = localStorage.loadValue(key: key, type: String?.self)
+
+        XCTAssertNil(loadedValue as Any?)
+    }
 }
