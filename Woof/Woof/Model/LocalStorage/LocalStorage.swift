@@ -24,9 +24,8 @@ class LocalStorage {
 
       - Returns: The decoded value of generic type `T` if it exists.
      */
-    func loadValue<T: Decodable>(key: String, type: T.Type) -> T? {
+    func loadValue<T: Decodable>(for key: String, as type: T.Type) -> T? {
         guard let data = UserDefaults.standard.data(forKey: key) else {
-            print("No data found for key: \(key)")
             return nil
         }
 
@@ -42,11 +41,5 @@ class LocalStorage {
      */
     func deleteValue(forKey key: String) {
         UserDefaults.standard.removeObject(forKey: key)
-    }
-
-    /// Possible keys used for storing data in persistent data storage.
-    enum Key: String {
-        /// Represents the key associated with the data of the owner
-        case owner
     }
 }

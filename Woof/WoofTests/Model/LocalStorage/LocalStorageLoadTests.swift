@@ -24,7 +24,7 @@ final class LocalStorageLoadTests: XCTestCase {
         localStorage.save(value: savingValue, for: key)
 
         // when
-        let loadedValue = localStorage.loadValue(key: key, type: String?.self)
+        let loadedValue = localStorage.loadValue(for: key, as: String?.self)
 
         // then
         XCTAssertEqual(loadedValue, expectedValue)
@@ -35,7 +35,7 @@ final class LocalStorageLoadTests: XCTestCase {
         let key = "NonExisteningKey"
 
         // when
-        let loadedValue = localStorage.loadValue(key: key, type: String.self)
+        let loadedValue = localStorage.loadValue(for: key, as: String.self)
 
         // then
         XCTAssertNil(loadedValue)
@@ -49,7 +49,7 @@ final class LocalStorageLoadTests: XCTestCase {
         localStorage.save(value: nonExistingValue, for: key)
 
         // when
-        let loadedValue = localStorage.loadValue(key: key, type: String.self)
+        let loadedValue = localStorage.loadValue(for: key, as: String.self)
 
         // then
         XCTAssertNil(loadedValue)

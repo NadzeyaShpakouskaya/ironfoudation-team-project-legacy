@@ -26,7 +26,7 @@ final class LocalStorageDeleteTests: XCTestCase {
         localStorage.deleteValue(forKey: key)
 
         // then
-        let loadedValue = localStorage.loadValue(key: key, type: String?.self)
+        let loadedValue = localStorage.loadValue(for: key, as: String?.self)
 
         XCTAssertNil(loadedValue as Any?)
     }
@@ -39,7 +39,7 @@ final class LocalStorageDeleteTests: XCTestCase {
         localStorage.deleteValue(forKey: key)
 
         // then
-        let loadedValue = localStorage.loadValue(key: key, type: String?.self)
+        let loadedValue = localStorage.loadValue(for: key, as: String?.self)
 
         XCTAssertNil(loadedValue as Any?)
     }

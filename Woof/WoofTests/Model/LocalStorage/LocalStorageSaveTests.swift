@@ -24,7 +24,7 @@ final class LocalStorageSaveTests: XCTestCase {
         localStorage.save(value: testValue, for: key)
 
         // then
-        let loadedValue = localStorage.loadValue(key: key, type: String?.self)
+        let loadedValue = localStorage.loadValue(for: key, as: String?.self)
 
         XCTAssertEqual(loadedValue, testValue)
     }
@@ -43,7 +43,7 @@ final class LocalStorageSaveTests: XCTestCase {
         localStorage.save(value: thirdValue, for: key)
 
         // then
-        let loadedValue = localStorage.loadValue(key: key, type: String?.self)
+        let loadedValue = localStorage.loadValue(for: key, as: String?.self)
 
         XCTAssertEqual(loadedValue, expectedValue)
     }
