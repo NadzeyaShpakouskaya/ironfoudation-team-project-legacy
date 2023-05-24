@@ -31,7 +31,7 @@ final class DetailPetSitterViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel.fullName, "\(sitter.name) \(sitter.surname)")
         XCTAssertEqual(viewModel.phoneNumber, sitter.phone)
         XCTAssertEqual(viewModel.bio, sitter.bio)
-        XCTAssertEqual(viewModel.rating, 4)
+        XCTAssertEqual(viewModel.rating, Int(sitter.rating))
         XCTAssertNil(viewModel.imageURL)
     }
 }
