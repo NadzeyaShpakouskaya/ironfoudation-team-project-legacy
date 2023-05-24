@@ -378,7 +378,6 @@
 				FDD143F02A052A11000BBA77 /* Sources */,
 				FDD143F12A052A11000BBA77 /* Frameworks */,
 				FDD143F22A052A11000BBA77 /* Resources */,
-				FD7D689F2A1DF3BC00E22E09 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -476,23 +475,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		FD7D689F2A1DF3BC00E22E09 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "";
-		};
 		FDE0CEB82A011BA10023F784 /* Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
