@@ -1,7 +1,8 @@
 import XCTest
 
 final class LocalStorageDeleteTests: XCTestCase {
-    var localStorage: LocalStorage!
+    private var localStorage: LocalStorage!
+    private let defaultValueToSave = "Hello, World!".data(using: .utf8)!
 
     override func setUp() {
         let storage = LocalStorage()
@@ -21,18 +22,15 @@ final class LocalStorageDeleteTests: XCTestCase {
 
     func testDeleteValueWithExistingKey() {
         // given
-        let value = "TestValue"
         let key = "TestKey"
 
-        localStorage.save(value: value, for: key)
+        localStorage.save(value: defaultValueToSave, for: key)
 
         // when
         localStorage.deleteValue(forKey: key)
 
         // then
-        let loadedValue = localStorage.loadValue(for: key, as: String?.self)
-
-        XCTAssertNil(loadedValue as Any?)
+        XCTAssertNil(localStorage.loadValue(for: key))
     }
 
     func testDeleteValueWithNonExistingKey() {
@@ -43,8 +41,6 @@ final class LocalStorageDeleteTests: XCTestCase {
         localStorage.deleteValue(forKey: key)
 
         // then
-        let loadedValue = localStorage.loadValue(for: key, as: String?.self)
-
-        XCTAssertNil(loadedValue as Any?)
+        XCTAssertNil(localStorage.loadValue(for: key))
     }
 }

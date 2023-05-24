@@ -10,9 +10,8 @@ class LocalStorage {
          - value: The value to be encoded and saved.
          - key: The key under which the encoded value will be stored.
      */
-    func save(value: some Encodable, for key: String) {
-        let data = try? JSONEncoder().encode(value)
-        UserDefaults.standard.set(data, forKey: key)
+    func save(value: Data, for key: String) {
+        UserDefaults.standard.set(value, forKey: key)
     }
 
     /**
@@ -23,14 +22,10 @@ class LocalStorage {
          - type: The expected data type of the value from the storage.
 
       - Returns: The decoded value of generic type `T` if it exists.
+     // TODO: returns nil, then///
      */
-    func loadValue<T: Decodable>(for key: String, as type: T.Type) -> T? {
-        guard let data = UserDefaults.standard.data(forKey: key) else {
-            return nil
-        }
-
-        let result = try? JSONDecoder().decode(type, from: data)
-        return result
+    func loadValue(for key: String) -> Data? {
+        UserDefaults.standard.data(forKey: key)
     }
 
     /**
