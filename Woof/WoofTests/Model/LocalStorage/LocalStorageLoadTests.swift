@@ -1,7 +1,8 @@
 import XCTest
 
 final class LocalStorageLoadTests: XCTestCase {
-    var localStorage: LocalStorage!
+    private var localStorage: LocalStorage!
+    private let defaultValueToSave = "Hello, World!".data(using: .utf8)!
 
     override func setUp() {
         let storage = LocalStorage()
@@ -16,22 +17,20 @@ final class LocalStorageLoadTests: XCTestCase {
     }
 
     func testLoadMethodExistsInAPI() {
-        _ = localStorage.loadValue(for: "", as: String.self)
+        _ = localStorage.loadValue(for: "")
     }
 
     func testLoadValueForExistingKey() {
         // given
-        let savingValue = "Hello, World!"
-        let expectedValue = savingValue
         let key = "TestKey"
 
-        localStorage.save(value: savingValue, for: key)
+        localStorage.save(value: defaultValueToSave, for: key)
 
         // when
-        let loadedValue = localStorage.loadValue(for: key, as: String?.self)
+        let loadedValue = localStorage.loadValue(for: key)
 
         // then
-        XCTAssertEqual(loadedValue, expectedValue)
+        XCTAssertEqual(loadedValue, defaultValueToSave)
     }
 
     func testLoadMethodReturnsNilWhenTryToLoadValueForNonExistingKey() {
@@ -39,23 +38,26 @@ final class LocalStorageLoadTests: XCTestCase {
         let key = "NonExistingKey"
 
         // when
-        let loadedValue = localStorage.loadValue(for: key, as: String.self)
+        let loadedValue = localStorage.loadValue(for: key)
 
         // then
         XCTAssertNil(loadedValue)
     }
 
-    func testLoadMethodReturnsNilWhenTryToLoadValueAsDifferentTypeOfValue() {
+    func test() {
         // given
-        let key = "NonExistingKey"
-        let value = 555
-
-        localStorage.save(value: value, for: key)
+        let keys = (1...1000).map { String($0) }
+        keys.forEach {
+            localStorage.save(value: defaultValueToSave, for: $0)
+        }
 
         // when
-        let loadedValue = localStorage.loadValue(for: key, as: String.self)
+        keys.forEach { key in
+            let value = localStorage.loadValue(for: key)
 
-        // then
-        XCTAssertNil(loadedValue)
+            // then
+            XCTAssertNotNil(value)
+            XCTAssertEqual(value, defaultValueToSave)
+        }
     }
 }
