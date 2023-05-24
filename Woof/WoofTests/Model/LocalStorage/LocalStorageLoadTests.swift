@@ -35,10 +35,10 @@ final class LocalStorageLoadTests: XCTestCase {
 
     func testLoadMethodReturnsNilWhenTryToLoadValueForNonExistingKey() {
         // given
-        let key = "NonExistingKey"
+        let nonExistingKey = "Key"
 
         // when
-        let loadedValue = localStorage.loadValue(for: key)
+        let loadedValue = localStorage.loadValue(for: nonExistingKey)
 
         // then
         XCTAssertNil(loadedValue)
