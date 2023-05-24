@@ -10,6 +10,7 @@ struct FiveStarRatingView: View {
     // MARK: Internal interface
 
     /// The rating in the range from 0 to 5 stars.
+    /// The rating equals zero, if it's not specified.
     let rating: Int
 
     var body: some View {
