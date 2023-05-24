@@ -161,6 +161,8 @@
 				EF5A7F322A14563800585616 /* DetailedPetSitterView.swift */,
 			);
 			path = DetailedPetSitterView;
+			sourceTree = "<group>";
+		};
 		36BEA7592A1621B70020F6AE /* Model */ = {
 			isa = PBXGroup;
 			children = (
