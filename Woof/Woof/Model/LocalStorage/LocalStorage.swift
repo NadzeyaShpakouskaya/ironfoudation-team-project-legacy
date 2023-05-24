@@ -4,7 +4,8 @@ import Foundation
 /// These values are stored and retrieved using a key that uniquely identifies the value.
 /// The key is used to find the data within the storage.
 class LocalStorage {
-    private let localStorage = UserDefaults(suiteName: "woofLocalStorage")
+    /// Instance of persistent storage with the specified database name.
+    let localStorage = UserDefaults(suiteName: "woofLocalStorage")
 
     /**
       Saves the value associated with the specified key.

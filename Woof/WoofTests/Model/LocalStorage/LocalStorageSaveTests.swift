@@ -8,7 +8,9 @@ final class LocalStorageSaveTests: XCTestCase {
         let storage = LocalStorage()
         localStorage = storage
 
-        UserDefaults.standard.removePersistentDomain(forName: Bundle.main.bundleIdentifier!)
+        if let bundleIdentifier = Bundle.main.bundleIdentifier {
+            storage.localStorage?.removePersistentDomain(forName: bundleIdentifier)
+        }
     }
 
     override func tearDown() {
