@@ -17,5 +17,9 @@ extension Image {
         static let filledStar = "star.fill"
         /// The icon used for the unfilled star image.
         static let unfilledStar = "star"
+        /// The icon used in places where picture of a phone is required.
+        static let phone = "phone.fill"
+        /// The icon used in places where picture of a person is required.
+        static let filledPerson = "person.fill"
     }
 }
