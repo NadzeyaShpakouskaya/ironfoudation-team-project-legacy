@@ -16,9 +16,9 @@ struct LoadedOwnerInformationView: View {
                     .font(.system(size: AppStyle.FontStyle.heading.size, weight: .heavy))
                 Text(surname)
                     .font(.system(size: AppStyle.FontStyle.heading.size, weight: .heavy))
-                Label(phone, systemImage: "phone")
+                Label(phone, systemImage: Image.IconName.phone)
                     .font(.system(size: AppStyle.FontStyle.body.size, weight: .bold))
-                Label(address, systemImage: "house")
+                Label(address, systemImage: Image.IconName.house)
                     .font(.system(size: AppStyle.FontStyle.body.size, weight: .bold))
             }
             Spacer()
