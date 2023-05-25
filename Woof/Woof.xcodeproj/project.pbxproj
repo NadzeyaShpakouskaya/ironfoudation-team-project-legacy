@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		362732A22A1B800B0062E4B5 /* LocalStorageDeleteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362732A12A1B800A0062E4B5 /* LocalStorageDeleteTests.swift */; };
-		364D79B42A1F6B9600D0F7CA /* LocalStorageTestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364D79B32A1F6B9600D0F7CA /* LocalStorageTestData.swift */; };
+		36199B0F2A1FB1C900725FC8 /* KeyValueStorageKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36199B0E2A1FB1C900725FC8 /* KeyValueStorageKeys.swift */; };
+		36199B112A1FB1F800725FC8 /* KeyValueStorageValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36199B102A1FB1F800725FC8 /* KeyValueStorageValues.swift */; };
+		362732A22A1B800B0062E4B5 /* KeyValueStorageDeleteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362732A12A1B800A0062E4B5 /* KeyValueStorageDeleteTests.swift */; };
 		3673D6372A04F7FD009D699D /* PetOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3673D6362A04F7FD009D699D /* PetOwner.swift */; };
-		368BF0EC2A152FA500F3F750 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368BF0EB2A152FA500F3F750 /* LocalStorage.swift */; };
-		368BF0EF2A16103B00F3F750 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368BF0EB2A152FA500F3F750 /* LocalStorage.swift */; };
-		36BEA7582A1621B10020F6AE /* LocalStorageSaveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BEA7572A1621B10020F6AE /* LocalStorageSaveTests.swift */; };
-		36C54AFC2A17A79200748023 /* LocalStorageLoadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C54AFB2A17A79200748023 /* LocalStorageLoadTests.swift */; };
+		368BF0EC2A152FA500F3F750 /* KeyValueStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368BF0EB2A152FA500F3F750 /* KeyValueStorage.swift */; };
+		368BF0EF2A16103B00F3F750 /* KeyValueStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368BF0EB2A152FA500F3F750 /* KeyValueStorage.swift */; };
+		36BEA7582A1621B10020F6AE /* KeyValueStorageSaveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BEA7572A1621B10020F6AE /* KeyValueStorageSaveTests.swift */; };
+		36C54AFC2A17A79200748023 /* KeyValueStorageLoadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C54AFB2A17A79200748023 /* KeyValueStorageLoadTests.swift */; };
 		EF303EBE2A1762CF0086065B /* FiveStarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF303EBD2A1762CF0086065B /* FiveStarRatingView.swift */; };
 		EF5A7F2F2A14504F00585616 /* DetailPetSitterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5A7F2E2A14504F00585616 /* DetailPetSitterViewModel.swift */; };
 		EF5A7F332A14563800585616 /* DetailedPetSitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5A7F322A14563800585616 /* DetailedPetSitterView.swift */; };
@@ -77,12 +78,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		362732A12A1B800A0062E4B5 /* LocalStorageDeleteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageDeleteTests.swift; sourceTree = "<group>"; };
-		364D79B32A1F6B9600D0F7CA /* LocalStorageTestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageTestData.swift; sourceTree = "<group>"; };
+		36199B0E2A1FB1C900725FC8 /* KeyValueStorageKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStorageKeys.swift; sourceTree = "<group>"; };
+		36199B102A1FB1F800725FC8 /* KeyValueStorageValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStorageValues.swift; sourceTree = "<group>"; };
+		362732A12A1B800A0062E4B5 /* KeyValueStorageDeleteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStorageDeleteTests.swift; sourceTree = "<group>"; };
 		3673D6362A04F7FD009D699D /* PetOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetOwner.swift; sourceTree = "<group>"; };
-		368BF0EB2A152FA500F3F750 /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
-		36BEA7572A1621B10020F6AE /* LocalStorageSaveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageSaveTests.swift; sourceTree = "<group>"; };
-		36C54AFB2A17A79200748023 /* LocalStorageLoadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageLoadTests.swift; sourceTree = "<group>"; };
+		368BF0EB2A152FA500F3F750 /* KeyValueStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStorage.swift; sourceTree = "<group>"; };
+		36BEA7572A1621B10020F6AE /* KeyValueStorageSaveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStorageSaveTests.swift; sourceTree = "<group>"; };
+		36C54AFB2A17A79200748023 /* KeyValueStorageLoadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStorageLoadTests.swift; sourceTree = "<group>"; };
 		EF303EBD2A1762CF0086065B /* FiveStarRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveStarRatingView.swift; sourceTree = "<group>"; };
 		EF5A7F2E2A14504F00585616 /* DetailPetSitterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPetSitterViewModel.swift; sourceTree = "<group>"; };
 		EF5A7F322A14563800585616 /* DetailedPetSitterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedPetSitterView.swift; sourceTree = "<group>"; };
@@ -156,10 +158,11 @@
 		36BEA75A2A1621C00020F6AE /* LocalStorage */ = {
 			isa = PBXGroup;
 			children = (
-				36BEA7572A1621B10020F6AE /* LocalStorageSaveTests.swift */,
-				36C54AFB2A17A79200748023 /* LocalStorageLoadTests.swift */,
-				362732A12A1B800A0062E4B5 /* LocalStorageDeleteTests.swift */,
-				364D79B32A1F6B9600D0F7CA /* LocalStorageTestData.swift */,
+				36BEA7572A1621B10020F6AE /* KeyValueStorageSaveTests.swift */,
+				36C54AFB2A17A79200748023 /* KeyValueStorageLoadTests.swift */,
+				362732A12A1B800A0062E4B5 /* KeyValueStorageDeleteTests.swift */,
+				36199B0E2A1FB1C900725FC8 /* KeyValueStorageKeys.swift */,
+				36199B102A1FB1F800725FC8 /* KeyValueStorageValues.swift */,
 			);
 			path = LocalStorage;
 			sourceTree = "<group>";
@@ -167,7 +170,7 @@
 		36C54AFA2A1631CC00748023 /* LocalStorage */ = {
 			isa = PBXGroup;
 			children = (
-				368BF0EB2A152FA500F3F750 /* LocalStorage.swift */,
+				368BF0EB2A152FA500F3F750 /* KeyValueStorage.swift */,
 			);
 			path = LocalStorage;
 			sourceTree = "<group>";
@@ -559,9 +562,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				364D79B42A1F6B9600D0F7CA /* LocalStorageTestData.swift in Sources */,
-				36BEA7582A1621B10020F6AE /* LocalStorageSaveTests.swift in Sources */,
-				36C54AFC2A17A79200748023 /* LocalStorageLoadTests.swift in Sources */,
+				36BEA7582A1621B10020F6AE /* KeyValueStorageSaveTests.swift in Sources */,
+				36C54AFC2A17A79200748023 /* KeyValueStorageLoadTests.swift in Sources */,
 				FD02917A2A0E2C5000F88377 /* AppStyle+FontStyle.swift in Sources */,
 				FD0291772A0E2B0700F88377 /* AppStyle+FontStyleTests.swift in Sources */,
 				FD0291792A0E2B2300F88377 /* AppStyle+UIElementConstantTests.swift in Sources */,
@@ -572,13 +574,15 @@
 				FD2F7B322A0CE029008F6F49 /* Sitter.swift in Sources */,
 				FD02917C2A0E2CBC00F88377 /* AppStyle.swift in Sources */,
 				FD2F7B332A0CE032008F6F49 /* PetOwner.swift in Sources */,
-				362732A22A1B800B0062E4B5 /* LocalStorageDeleteTests.swift in Sources */,
+				36199B112A1FB1F800725FC8 /* KeyValueStorageValues.swift in Sources */,
+				362732A22A1B800B0062E4B5 /* KeyValueStorageDeleteTests.swift in Sources */,
 				FDD143FE2A052D5A000BBA77 /* Color+AppScheme.swift in Sources */,
 				FDD144012A0532D5000BBA77 /* Image+IconNameTests.swift in Sources */,
 				FD02917B2A0E2C5300F88377 /* AppStyle+UIElementConstant.swift in Sources */,
 				FD37A9982A0B77A90001BABB /* NormalizeToZeroToFiveRangeTests.swift in Sources */,
 				FDD143FF2A052D5E000BBA77 /* Image+IconName.swift in Sources */,
-				368BF0EF2A16103B00F3F750 /* LocalStorage.swift in Sources */,
+				36199B0F2A1FB1C900725FC8 /* KeyValueStorageKeys.swift in Sources */,
+				368BF0EF2A16103B00F3F750 /* KeyValueStorage.swift in Sources */,
 				FD37A9952A0B6EA90001BABB /* DataTransformer.swift in Sources */,
 				FD2F7B342A0CE03B008F6F49 /* SitterCardViewModel.swift in Sources */,
 			);
@@ -590,7 +594,7 @@
 			files = (
 				EF5A7F332A14563800585616 /* DetailedPetSitterView.swift in Sources */,
 				FD1FA3B52A090916000A3A91 /* Sitter.swift in Sources */,
-				368BF0EC2A152FA500F3F750 /* LocalStorage.swift in Sources */,
+				368BF0EC2A152FA500F3F750 /* KeyValueStorage.swift in Sources */,
 				FDD143E22A05233B000BBA77 /* Image+IconName.swift in Sources */,
 				FDD143C72A03BD48000BBA77 /* OwnerMainTabView.swift in Sources */,
 				FD7F989F2A0E0D2C0058DBEB /* AppStyle.swift in Sources */,

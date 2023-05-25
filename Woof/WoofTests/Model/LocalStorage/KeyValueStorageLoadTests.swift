@@ -1,12 +1,12 @@
 import XCTest
 
-final class LocalStorageLoadTests: XCTestCase {
-    private var localStorage: LocalStorage?
+final class KeyValueStorageLoadTests: XCTestCase {
+    private var localStorage: KeyValueStorage?
 
     override func setUp() {
-        localStorage = LocalStorage()
-        localStorage?.deleteValue(for: LocalStorageTestData.Keys.key)
-        localStorage?.deleteValue(for: LocalStorageTestData.Keys.nonExistingKey)
+        localStorage = KeyValueStorage()
+        localStorage?.deleteValue(for: KeyValueStorageKeys.key)
+        localStorage?.deleteValue(for: KeyValueStorageKeys.nonExistingKey)
     }
 
     override func tearDown() {
@@ -18,12 +18,12 @@ final class LocalStorageLoadTests: XCTestCase {
         _ = localStorage?.loadValue(for: "")
     }
 
-    func testLoadValueReturnsExpectedValueForExistingKey() {
+    func testLoadMethodReturnsExpectedValueForExistingKey() {
         // given
-        let key = LocalStorageTestData.Keys.key
-        let value = LocalStorageTestData.Values.defaultValueToSave
+        let key = KeyValueStorageKeys.key
+        let value = KeyValueStorageValues.defaultValueToSave
 
-        localStorage?.save(value: value, for: key)
+        localStorage?.save(data: value, for: key)
 
         // when
         let loadedValue = localStorage?.loadValue(for: key)
@@ -36,18 +36,18 @@ final class LocalStorageLoadTests: XCTestCase {
         // given
 
         // when
-        let loadedValue = localStorage?.loadValue(for: LocalStorageTestData.Keys.nonExistingKey)
+        let loadedValue = localStorage?.loadValue(for: KeyValueStorageKeys.nonExistingKey)
 
         // then
         XCTAssertNil(loadedValue)
     }
 
-    func testLoadReturnExpectedValuesForOneThousandKeyValuePairsForExistingKeyValuePairs() {
+    func testLoadMethodReturnsExpectedValuesForOneThousandKeyValuePairsForExistingKeyValuePairs() {
         // given
-        let storedValue = LocalStorageTestData.Values.defaultValueToSave
+        let storedValue = KeyValueStorageValues.defaultValueToSave
         let keys = (1...1000).map { String($0) }
         keys.forEach {
-            localStorage?.save(value: storedValue, for: $0)
+            localStorage?.save(data: storedValue, for: $0)
         }
 
         // when

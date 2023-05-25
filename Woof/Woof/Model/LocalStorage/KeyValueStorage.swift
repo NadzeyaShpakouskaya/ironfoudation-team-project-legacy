@@ -3,18 +3,20 @@ import Foundation
 /// A persistent storage designed for managing a collection of values.
 /// These values are stored and retrieved using a key that uniquely identifies the value.
 /// The key is used to find the data within the storage.
-class LocalStorage {
+class KeyValueStorage {
     /// Instance of persistent storage with the specified database name.
-    private let localStorage = UserDefaults(suiteName: "woofLocalStorage")
+    private let localStorage = UserDefaults(suiteName: "com.foundation-iron.iOS.Woof")
     /**
       Saves the value associated with the specified key.
 
       - Parameters:
-         - value: The value to save in `Data` format.
+         - data: The value to save as a byte buffer in memory.
          - key: The key under which the value will be stored.
      */
-    func save(value: Data, for key: String) {
-        localStorage?.set(value, forKey: key)
+    @discardableResult func save(data: Data, for key: String) -> Bool {
+        localStorage?.set(data, forKey: key)
+        guard let _ = localStorage?.object(forKey: key) as? Data else { return false }
+        return true
     }
 
     /**
@@ -23,7 +25,7 @@ class LocalStorage {
       - Parameters:
          - key: The key associated with the value in data storage.
 
-      - Returns: The value in `Data` format associated with the given key.
+      - Returns: The value in `Data` type associated with the given key.
      If there's no value in the storage associated with the given key returns `nil`.
      */
     func loadValue(for key: String) -> Data? {
