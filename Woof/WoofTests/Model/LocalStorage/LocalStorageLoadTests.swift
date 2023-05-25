@@ -1,16 +1,12 @@
 import XCTest
 
 final class LocalStorageLoadTests: XCTestCase {
-    private var localStorage: LocalStorage!
-    private let defaultValueToSave = "Hello, World!".data(using: .utf8)!
+    private var localStorage: LocalStorage?
 
     override func setUp() {
-        let storage = LocalStorage()
-        localStorage = storage
-
-        if let bundleIdentifier = Bundle.main.bundleIdentifier {
-            storage.localStorage?.removePersistentDomain(forName: bundleIdentifier)
-        }
+        localStorage = LocalStorage()
+        localStorage?.deleteValue(for: LocalStorageTestData.Keys.key)
+        localStorage?.deleteValue(for: LocalStorageTestData.Keys.nonExistingKey)
     }
 
     override func tearDown() {
@@ -19,47 +15,50 @@ final class LocalStorageLoadTests: XCTestCase {
     }
 
     func testLoadMethodExistsInAPI() {
-        _ = localStorage.loadValue(for: "")
+        _ = localStorage?.loadValue(for: "")
     }
 
-    func testLoadValueForExistingKey() {
+    func testLoadValueReturnsExpectedValueForExistingKey() {
         // given
-        let key = "TestKey"
+        let key = LocalStorageTestData.Keys.key
+        let value = LocalStorageTestData.Values.defaultValueToSave
 
-        localStorage.save(value: defaultValueToSave, for: key)
+        localStorage?.save(value: value, for: key)
 
         // when
-        let loadedValue = localStorage.loadValue(for: key)
+        let loadedValue = localStorage?.loadValue(for: key)
 
         // then
-        XCTAssertEqual(loadedValue, defaultValueToSave)
+        XCTAssertEqual(loadedValue, value)
     }
 
     func testLoadMethodReturnsNilWhenTryToLoadValueForNonExistingKey() {
         // given
-        let nonExistingKey = "Key"
 
         // when
-        let loadedValue = localStorage.loadValue(for: nonExistingKey)
+        let loadedValue = localStorage?.loadValue(for: LocalStorageTestData.Keys.nonExistingKey)
 
         // then
         XCTAssertNil(loadedValue)
     }
 
-    func test() {
+    func testLoadReturnExpectedValuesForOneThousandKeyValuePairsForExistingKeyValuePairs() {
         // given
+        let storedValue = LocalStorageTestData.Values.defaultValueToSave
         let keys = (1...1000).map { String($0) }
         keys.forEach {
-            localStorage.save(value: defaultValueToSave, for: $0)
+            localStorage?.save(value: storedValue, for: $0)
         }
 
         // when
         keys.forEach { key in
-            let value = localStorage.loadValue(for: key)
+            let value = localStorage?.loadValue(for: key)
 
             // then
             XCTAssertNotNil(value)
-            XCTAssertEqual(value, defaultValueToSave)
+            XCTAssertEqual(value, storedValue)
+
+            localStorage?.deleteValue(for: key)
         }
     }
 }

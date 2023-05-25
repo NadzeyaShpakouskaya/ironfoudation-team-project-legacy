@@ -1,16 +1,12 @@
 import XCTest
 
 final class LocalStorageDeleteTests: XCTestCase {
-    private var localStorage: LocalStorage!
-    private let defaultValueToSave = "Hello, World!".data(using: .utf8)!
+    private var localStorage: LocalStorage?
 
     override func setUp() {
-        let storage = LocalStorage()
-        localStorage = storage
-
-        if let bundleIdentifier = Bundle.main.bundleIdentifier {
-            storage.localStorage?.removePersistentDomain(forName: bundleIdentifier)
-        }
+        localStorage = LocalStorage()
+        localStorage?.deleteValue(for: LocalStorageTestData.Keys.key)
+        localStorage?.deleteValue(for: LocalStorageTestData.Keys.nonExistingKey)
     }
 
     override func tearDown() {
@@ -19,30 +15,30 @@ final class LocalStorageDeleteTests: XCTestCase {
     }
 
     func testDeleteMethodExistsInAPI() {
-        localStorage.deleteValue(forKey: "key")
+        localStorage?.deleteValue(for: LocalStorageTestData.Keys.key)
     }
 
-    func testDeleteValueWithExistingKey() {
+    func testDeleteValueWithExistingKeyWhenTryLoadValueForKeyReturnsNil() {
         // given
-        let key = "TestKey"
+        let key = LocalStorageTestData.Keys.key
 
-        localStorage.save(value: defaultValueToSave, for: key)
+        localStorage?.save(value: LocalStorageTestData.Values.defaultValueToSave, for: key)
 
         // when
-        localStorage.deleteValue(forKey: key)
+        localStorage?.deleteValue(for: key)
 
         // then
-        XCTAssertNil(localStorage.loadValue(for: key))
+        XCTAssertNil(localStorage?.loadValue(for: key))
     }
 
-    func testDeleteValueWithNonExistingKey() {
+    func testDeleteValueWithNonExistingKeyWhenTryLoadValueForKeyReturnsNil() {
         // given
-        let key = "NonExistingKey"
+        let key = LocalStorageTestData.Keys.key
 
         // when
-        localStorage.deleteValue(forKey: key)
+        localStorage?.deleteValue(for: key)
 
         // then
-        XCTAssertNil(localStorage.loadValue(for: key))
+        XCTAssertNil(localStorage?.loadValue(for: key))
     }
 }
