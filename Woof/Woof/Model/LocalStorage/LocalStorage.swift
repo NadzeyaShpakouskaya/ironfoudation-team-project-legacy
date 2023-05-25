@@ -11,7 +11,7 @@ class LocalStorage {
 
       - Parameters:
          - value: The value to save in `Data` format.
-         - key: The key under which the encoded value will be stored.
+         - key: The key under which the value will be stored.
      */
     func save(value: Data, for key: String) {
         localStorage?.set(value, forKey: key)
