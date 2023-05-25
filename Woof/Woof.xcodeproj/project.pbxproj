@@ -45,6 +45,8 @@
 		FD7F98A12A0E0E280058DBEB /* AppStyle+FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7F98A02A0E0E280058DBEB /* AppStyle+FontStyle.swift */; };
 		FD7F98A32A0E10510058DBEB /* AppStyle+UIElementConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7F98A22A0E10510058DBEB /* AppStyle+UIElementConstant.swift */; };
 		FD7F98A52A0E12290058DBEB /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7F98A42A0E12290058DBEB /* AvatarView.swift */; };
+		FD8182242A1EF69D00AE1016 /* EditOwnerInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8182232A1EF69D00AE1016 /* EditOwnerInformationView.swift */; };
+		FD8182282A1F1EB600AE1016 /* LoadedOwnerInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8182272A1F1EB600AE1016 /* LoadedOwnerInformationView.swift */; };
 		FDCF49062A1C67A600CD3BBB /* ButtonStyle+DefaultAppButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCF49052A1C67A600CD3BBB /* ButtonStyle+DefaultAppButtonStyle.swift */; };
 		FDCF49082A1C6AE400CD3BBB /* Owner+Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCF49072A1C6AE400CD3BBB /* Owner+Dummy.swift */; };
 		FDD143C72A03BD48000BBA77 /* OwnerMainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD143C62A03BD48000BBA77 /* OwnerMainTabView.swift */; };
@@ -99,6 +101,8 @@
 		FD7F98A02A0E0E280058DBEB /* AppStyle+FontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppStyle+FontStyle.swift"; sourceTree = "<group>"; };
 		FD7F98A22A0E10510058DBEB /* AppStyle+UIElementConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppStyle+UIElementConstant.swift"; sourceTree = "<group>"; };
 		FD7F98A42A0E12290058DBEB /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		FD8182232A1EF69D00AE1016 /* EditOwnerInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditOwnerInformationView.swift; sourceTree = "<group>"; };
+		FD8182272A1F1EB600AE1016 /* LoadedOwnerInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadedOwnerInformationView.swift; sourceTree = "<group>"; };
 		FDCF49052A1C67A600CD3BBB /* ButtonStyle+DefaultAppButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonStyle+DefaultAppButtonStyle.swift"; sourceTree = "<group>"; };
 		FDCF49072A1C6AE400CD3BBB /* Owner+Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Owner+Dummy.swift"; sourceTree = "<group>"; };
 		FDD143C62A03BD48000BBA77 /* OwnerMainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OwnerMainTabView.swift; path = Woof/View/OwnerMainTabView/OwnerMainTabView.swift; sourceTree = SOURCE_ROOT; };
@@ -138,6 +142,8 @@
 			children = (
 				36BCC17D2A12558A0063B70D /* OwnerInformationView.swift */,
 				36BCC17F2A1255B70063B70D /* OwnerCardView.swift */,
+				FD8182232A1EF69D00AE1016 /* EditOwnerInformationView.swift */,
+				FD8182272A1F1EB600AE1016 /* LoadedOwnerInformationView.swift */,
 			);
 			path = OwnerInformationView;
 			sourceTree = "<group>";
@@ -532,7 +538,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD8182282A1F1EB600AE1016 /* LoadedOwnerInformationView.swift in Sources */,
 				36541FEB2A150581007FA625 /* WoofApp.swift in Sources */,
+				FD8182242A1EF69D00AE1016 /* EditOwnerInformationView.swift in Sources */,
 				FD1FA3B52A090916000A3A91 /* Sitter.swift in Sources */,
 				FDD143E22A05233B000BBA77 /* Image+IconName.swift in Sources */,
 				FDD143C72A03BD48000BBA77 /* OwnerMainTabView.swift in Sources */,
