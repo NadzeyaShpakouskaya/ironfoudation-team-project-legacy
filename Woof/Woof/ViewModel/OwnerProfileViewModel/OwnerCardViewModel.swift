@@ -11,21 +11,24 @@ final class OwnerCardViewModel: ObservableObject {
      Initializes an instance of the `OwnerCardViewModel` class, loads the owner object from user defaults if it exists.
      */
     init() {
-        prepareOwnerData()
+        currentOwner = Owner.getCurrentOwner()
+        name = currentOwner.name
+        surname = currentOwner.surname
+        phone = currentOwner.phone
+        address = currentOwner.address
+        avatarURL = currentOwner.avatarUrl
     }
+
+    private var currentOwner: Owner
 
     /// Saves the owner's property to `Local Storage`.
     func save() {
-        // should be implemented when LocalStorage added.
-    }
+        currentOwner.name = name
+        currentOwner.surname = surname
+        currentOwner.phone = phone
+        currentOwner.address = address
+        currentOwner.avatarUrl = avatarURL
 
-    /// Loads the information about owner saved in `Local Storage`.
-    private func prepareOwnerData() {
-        let owner = Owner.Dummy.emilyDoe
-        name = owner.name
-        surname = owner.surname
-        phone = owner.phone
-        address = owner.address
-        avatarURL = owner.avatarUrl
+        Owner.updateCurrentOwner(with: currentOwner)
     }
 }

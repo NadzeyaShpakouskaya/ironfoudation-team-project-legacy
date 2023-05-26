@@ -3,7 +3,6 @@ import Foundation
 extension Owner {
     enum Dummy {
         static let emilyDoe = Owner(
-            id: UUID(),
             name: "Emily",
             surname: "Doe",
             phone: "6734828993487",

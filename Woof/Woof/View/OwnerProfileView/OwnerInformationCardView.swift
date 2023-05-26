@@ -21,7 +21,7 @@ struct OwnerInformationCardView: View {
         HStack {
             AvatarView(url: avatarUrl)
 
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 8) {
                 Text(name)
                     .font(.system(size: AppStyle.FontStyle.heading.size, weight: .heavy))
                 Text(surname)
