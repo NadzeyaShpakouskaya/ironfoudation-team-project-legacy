@@ -33,12 +33,12 @@ final class KeyValueStorageDeleteTests: XCTestCase {
 
     func testDeleteMethodSuccessfullyRemovesNonExistingKeyValuePair() {
         // given
-        let key = KeyValueStorageKeys.key
+        let nonExistingKey = KeyValueStorageKeys.nonExistingKey
 
         // when
-        localStorage?.deleteValue(for: key)
+        localStorage?.deleteValue(for: nonExistingKey)
 
         // then
-        XCTAssertNil(localStorage?.loadValue(for: key))
+        XCTAssertNil(localStorage?.loadValue(for: nonExistingKey))
     }
 }

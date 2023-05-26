@@ -32,7 +32,7 @@ final class KeyValueStorageLoadTests: XCTestCase {
         XCTAssertEqual(loadedValue, value)
     }
 
-    func testLoadMethodReturnsNilWhenTryToLoadValueForNonExistingKey() {
+    func testLoadMethodReturnsNilWhenLoadMethodCalledForNonExistingKey() {
         // given
 
         // when
@@ -42,7 +42,7 @@ final class KeyValueStorageLoadTests: XCTestCase {
         XCTAssertNil(loadedValue)
     }
 
-    func testLoadMethodReturnsExpectedValuesForOneThousandKeyValuePairsForExistingKeyValuePairs() {
+    func testLoadMethodReturnsExpectedValuesForOneThousandExistingKeyValuePairs() {
         // given
         let storedValue = KeyValueStorageValues.defaultValueToSave
         let keys = (1...1000).map { String($0) }

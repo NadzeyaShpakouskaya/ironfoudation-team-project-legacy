@@ -161,8 +161,7 @@
 				36BEA7572A1621B10020F6AE /* KeyValueStorageSaveTests.swift */,
 				36C54AFB2A17A79200748023 /* KeyValueStorageLoadTests.swift */,
 				362732A12A1B800A0062E4B5 /* KeyValueStorageDeleteTests.swift */,
-				36199B0E2A1FB1C900725FC8 /* KeyValueStorageKeys.swift */,
-				36199B102A1FB1F800725FC8 /* KeyValueStorageValues.swift */,
+				FD81822B2A206B0100AE1016 /* TestData */,
 			);
 			path = LocalStorage;
 			sourceTree = "<group>";
@@ -301,6 +300,15 @@
 				FD2FA2282A129C53002B618B /* SitterListView.swift */,
 			);
 			path = SitterListView;
+			sourceTree = "<group>";
+		};
+		FD81822B2A206B0100AE1016 /* TestData */ = {
+			isa = PBXGroup;
+			children = (
+				36199B0E2A1FB1C900725FC8 /* KeyValueStorageKeys.swift */,
+				36199B102A1FB1F800725FC8 /* KeyValueStorageValues.swift */,
+			);
+			path = TestData;
 			sourceTree = "<group>";
 		};
 		FDAA7BF52A0CB8E2007905CB /* DataTrasnformer */ = {
