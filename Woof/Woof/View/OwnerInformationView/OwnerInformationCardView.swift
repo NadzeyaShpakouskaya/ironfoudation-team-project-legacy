@@ -1,10 +1,20 @@
 import SwiftUI
 
-struct LoadedOwnerInformationView: View {
+/// A view to present the owner information.
+struct OwnerInformationCardView: View {
+    /// The name of the owner
     let name: String
+    
+    /// The surname of the owner
     let surname: String
+    
+    /// The phone of the owner
     let phone: String
+    
+    /// The address of the owner
     let address: String
+    
+    /// The URL of the avatar image of the owner.
     let avatarUrl: URL?
 
     var body: some View {
@@ -31,9 +41,9 @@ struct LoadedOwnerInformationView: View {
     }
 }
 
-struct LoadedOwnerInformationView_Previews: PreviewProvider {
+struct OwnerInformationCardView_Previews: PreviewProvider {
     static var previews: some View {
-        LoadedOwnerInformationView(
+        OwnerInformationCardView(
             name: Owner.Dummy.emilyDoe.name,
             surname: Owner.Dummy.emilyDoe.surname,
             phone: Owner.Dummy.emilyDoe.phone,

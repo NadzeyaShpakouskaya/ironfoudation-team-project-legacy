@@ -2,10 +2,11 @@ import SwiftUI
 
 /// A view that displays the profile information of an Owner.
 struct OwnerCardView: View {
+    /// Tracks whether edit mode is enabled or not.
+    @State private var isEditMode: Bool = false
+    
     /// View model responsible for managing the data for the owner card.
     @ObservedObject var viewModel = OwnerCardViewModel()
-    /// Tracks whether  edit mode is enabled or not.
-    @State private var isEditMode: Bool = false
 
     var body: some View {
         VStack {
@@ -17,7 +18,7 @@ struct OwnerCardView: View {
                     address: $viewModel.address
                 )
             } else {
-                LoadedOwnerInformationView(
+                OwnerInformationCardView(
                     name: viewModel.name,
                     surname: viewModel.surname,
                     phone: viewModel.phone,
