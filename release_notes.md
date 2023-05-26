@@ -21,4 +21,4 @@ The format is based on [Release_notes format](https://github.com/ios-course/iron
 `Easy to navigate`:  Users can easily switch between pet sitters' list and the pet sitter window with detailed information.
 
 ### Notes
-- [General info, installation, authors ](https://github.com/ios-course/ironfoudation-team-project/blob/main/README.md)
+- [General info, installation, authors](https://github.com/ios-course/ironfoudation-team-project/blob/main/README.md)
