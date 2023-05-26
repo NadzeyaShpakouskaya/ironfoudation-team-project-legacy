@@ -55,7 +55,6 @@ final class KeyValueStorageLoadTests: XCTestCase {
             let value = localStorage?.loadValue(for: key)
 
             // then
-            XCTAssertNotNil(value)
             XCTAssertEqual(value, storedValue)
 
             localStorage?.deleteValue(for: key)

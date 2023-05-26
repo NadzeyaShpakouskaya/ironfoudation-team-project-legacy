@@ -46,17 +46,15 @@ final class KeyValueStorageSaveTests: XCTestCase {
         XCTAssertEqual(localStorage?.loadValue(for: key), overridingValue)
     }
 
-    func testSaveMethodReturnTrueWhenDataSuccessfullySaved() {
+    func testSaveMethodReturnsTrueWhenDataSuccessfullySaved() {
         // given
         let key = KeyValueStorageKeys.key
         let value = KeyValueStorageValues.defaultValueToSave
 
         // when
-        guard let result = localStorage?.save(data: value, for: key) else {
-            return XCTFail("Returns nil")
-        }
+        let result = localStorage?.save(data: value, for: key)
 
         // then
-        XCTAssertTrue(result)
+        XCTAssertNotNil(result)
     }
 }

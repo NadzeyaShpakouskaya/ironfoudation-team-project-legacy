@@ -15,9 +15,9 @@ class KeyValueStorage {
       - Returns: `true` if data was successfully saved, otherwise returns `false`.
      */
     @discardableResult func save(data: Data, for key: String) -> Bool {
-        storage?.set(data, forKey: key)
-        let result = storage?.object(forKey: key) as? Data
-        return result != nil ? true : false
+        guard let storage else { return false }
+        storage.set(data, forKey: key)
+        return true
     }
 
     /**
