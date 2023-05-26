@@ -392,10 +392,10 @@
 			isa = PBXGroup;
 			children = (
 				EF303EBF2A17AFA20086065B /* ReusableViews */,
-				EF5A7F312A14561000585616 /* DetailedPetSitterView */,
 				FD7F989A2A0E041A0058DBEB /* OwnerMainTabView */,
-				FD7F989B2A0E04390058DBEB /* SitterListView */,
 				36541FEA2A14FC68007FA625 /* OwnerProfileView */,
+				FD7F989B2A0E04390058DBEB /* SitterListView */,
+				EF5A7F312A14561000585616 /* DetailedPetSitterView */,
 			);
 			path = View;
 			sourceTree = "<group>";

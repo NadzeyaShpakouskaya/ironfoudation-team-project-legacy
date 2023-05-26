@@ -26,7 +26,8 @@ struct OwnerCardView: View {
                     avatarUrl: viewModel.avatarURL
                 )
             }
-        }.toolbar {
+        }
+        .overlay(alignment: .topTrailing) {
             Button(action: {
                 if isEditMode {
                     viewModel.save()
@@ -35,6 +36,7 @@ struct OwnerCardView: View {
             }, label: {
                 Text(isEditMode ? "Save" : "Edit")
             })
+            .padding()
             .buttonStyle(DefaultAppButtonStyle())
             .disabled(viewModel.name.isEmpty)
         }
