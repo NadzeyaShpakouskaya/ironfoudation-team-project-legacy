@@ -1,7 +1,7 @@
 import Foundation
 
-/// A persistent storage designed for managing a collection of data.
-/// These data stores and retrieves using a key that uniquely identifies the data.
+/// A persistent storage designed for managing a collection of raw data (a byte buffer in memory).
+/// This data is stored and retrieved using a key that uniquely identifies itself.
 /// The key is used to find the data within the storage.
 class KeyValueStorage {
     /// Instance of persistent storage with the specified database name.
@@ -24,16 +24,15 @@ class KeyValueStorage {
       - Parameters:
          - key: The key associated with the data in storage.
 
-      - Returns: The data as a byte buffer in memory associated with the given key.
-     If there's no data in the storage associated with the given key returns `nil`.
+      - Returns: The data as a byte buffer in memory associated with the given key, otherwise returns `nil`.
      */
     func loadValue(for key: String) -> Data? {
         storage?.data(forKey: key)
     }
 
     /**
-      Removes the given key and its associated data from the dictionary.
-     If the key isn’t found in the dictionary, method does nothing.
+      Removes the given key and its associated data.
+     If the key isn’t found, method does nothing.
 
        - Parameters:
           - key: The key to remove along with its associated data.
