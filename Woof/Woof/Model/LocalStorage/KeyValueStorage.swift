@@ -4,6 +4,13 @@ import Foundation
 /// This data is stored and retrieved using a key that uniquely identifies itself.
 /// The key is used to find the data within the storage.
 class KeyValueStorage {
+//           private var suitName = ""
+//           if let bundleName = Bundle.main.bundleIdentifier {
+//               suitName = bundleName + "key-value-storage"
+//           } else {
+//               suitName =  "com.IRONFoundation.iOS.Woof"
+//           }
+
     /// Instance of persistent storage with the specified database name.
     private let storage = UserDefaults(suiteName: "com.foundation-iron.iOS.Woof")
     /**

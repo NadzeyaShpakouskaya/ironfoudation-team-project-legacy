@@ -5,8 +5,8 @@ final class KeyValueStorageLoadTests: XCTestCase {
 
     override func setUp() {
         localStorage = KeyValueStorage()
-        localStorage?.deleteValue(for: KeyValueStorageKeys.key)
-        localStorage?.deleteValue(for: KeyValueStorageKeys.nonExistingKey)
+        localStorage?.deleteValue(for: KeyValueStorage.TestKey.defaultKey)
+        localStorage?.deleteValue(for: KeyValueStorage.TestKey.nonExistingKey)
     }
 
     override func tearDown() {
@@ -20,8 +20,8 @@ final class KeyValueStorageLoadTests: XCTestCase {
 
     func testLoadMethodReturnsExpectedValueForExistingKey() {
         // given
-        let key = KeyValueStorageKeys.key
-        let value = KeyValueStorageValues.defaultValueToSave
+        let key = KeyValueStorage.TestKey.defaultKey
+        let value = KeyValueStorage.TestData.defaultData
 
         localStorage?.save(data: value, for: key)
 
@@ -36,7 +36,7 @@ final class KeyValueStorageLoadTests: XCTestCase {
         // given
 
         // when
-        let loadedValue = localStorage?.loadValue(for: KeyValueStorageKeys.nonExistingKey)
+        let loadedValue = localStorage?.loadValue(for: KeyValueStorage.TestKey.nonExistingKey)
 
         // then
         XCTAssertNil(loadedValue)
@@ -44,7 +44,7 @@ final class KeyValueStorageLoadTests: XCTestCase {
 
     func testLoadMethodReturnsExpectedValuesForOneThousandExistingKeyValuePairs() {
         // given
-        let storedValue = KeyValueStorageValues.defaultValueToSave
+        let storedValue = KeyValueStorage.TestData.defaultData
         let keys = (1...1000).map { String($0) }
         keys.forEach {
             localStorage?.save(data: storedValue, for: $0)
@@ -56,7 +56,6 @@ final class KeyValueStorageLoadTests: XCTestCase {
 
             // then
             XCTAssertEqual(value, storedValue)
-
             localStorage?.deleteValue(for: key)
         }
     }

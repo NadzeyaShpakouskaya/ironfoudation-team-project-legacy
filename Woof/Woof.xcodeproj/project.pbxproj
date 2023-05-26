@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		36199B0F2A1FB1C900725FC8 /* KeyValueStorageKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36199B0E2A1FB1C900725FC8 /* KeyValueStorageKeys.swift */; };
-		36199B112A1FB1F800725FC8 /* KeyValueStorageValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36199B102A1FB1F800725FC8 /* KeyValueStorageValues.swift */; };
 		362732A22A1B800B0062E4B5 /* KeyValueStorageDeleteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362732A12A1B800A0062E4B5 /* KeyValueStorageDeleteTests.swift */; };
 		3673D6372A04F7FD009D699D /* PetOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3673D6362A04F7FD009D699D /* PetOwner.swift */; };
 		368BF0EC2A152FA500F3F750 /* KeyValueStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368BF0EB2A152FA500F3F750 /* KeyValueStorage.swift */; };
@@ -52,6 +51,7 @@
 		FD7F98A12A0E0E280058DBEB /* AppStyle+FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7F98A02A0E0E280058DBEB /* AppStyle+FontStyle.swift */; };
 		FD7F98A32A0E10510058DBEB /* AppStyle+UIElementConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7F98A22A0E10510058DBEB /* AppStyle+UIElementConstant.swift */; };
 		FD7F98A52A0E12290058DBEB /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7F98A42A0E12290058DBEB /* AvatarView.swift */; };
+		FD8182302A20C3C300AE1016 /* KeyValueStorage+TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD81822F2A20C3C300AE1016 /* KeyValueStorage+TestData.swift */; };
 		FDCF49132A1CDA8800CD3BBB /* DetailPetSitterViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCF49122A1CDA8800CD3BBB /* DetailPetSitterViewModelTests.swift */; };
 		FDCF49142A1CDB1600CD3BBB /* DetailPetSitterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5A7F2E2A14504F00585616 /* DetailPetSitterViewModel.swift */; };
 		FDD143C72A03BD48000BBA77 /* OwnerMainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD143C62A03BD48000BBA77 /* OwnerMainTabView.swift */; };
@@ -79,7 +79,6 @@
 
 /* Begin PBXFileReference section */
 		36199B0E2A1FB1C900725FC8 /* KeyValueStorageKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStorageKeys.swift; sourceTree = "<group>"; };
-		36199B102A1FB1F800725FC8 /* KeyValueStorageValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStorageValues.swift; sourceTree = "<group>"; };
 		362732A12A1B800A0062E4B5 /* KeyValueStorageDeleteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStorageDeleteTests.swift; sourceTree = "<group>"; };
 		3673D6362A04F7FD009D699D /* PetOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetOwner.swift; sourceTree = "<group>"; };
 		368BF0EB2A152FA500F3F750 /* KeyValueStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStorage.swift; sourceTree = "<group>"; };
@@ -114,6 +113,7 @@
 		FD7F98A02A0E0E280058DBEB /* AppStyle+FontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppStyle+FontStyle.swift"; sourceTree = "<group>"; };
 		FD7F98A22A0E10510058DBEB /* AppStyle+UIElementConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppStyle+UIElementConstant.swift"; sourceTree = "<group>"; };
 		FD7F98A42A0E12290058DBEB /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		FD81822F2A20C3C300AE1016 /* KeyValueStorage+TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyValueStorage+TestData.swift"; sourceTree = "<group>"; };
 		FDCF49122A1CDA8800CD3BBB /* DetailPetSitterViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPetSitterViewModelTests.swift; sourceTree = "<group>"; };
 		FDD143C62A03BD48000BBA77 /* OwnerMainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerMainTabView.swift; sourceTree = "<group>"; };
 		FDD143CA2A03C629000BBA77 /* Color+AppScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+AppScheme.swift"; sourceTree = "<group>"; };
@@ -305,8 +305,8 @@
 		FD81822B2A206B0100AE1016 /* TestData */ = {
 			isa = PBXGroup;
 			children = (
+				FD81822F2A20C3C300AE1016 /* KeyValueStorage+TestData.swift */,
 				36199B0E2A1FB1C900725FC8 /* KeyValueStorageKeys.swift */,
-				36199B102A1FB1F800725FC8 /* KeyValueStorageValues.swift */,
 			);
 			path = TestData;
 			sourceTree = "<group>";
@@ -611,6 +611,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36BEA7582A1621B10020F6AE /* KeyValueStorageSaveTests.swift in Sources */,
+				FD8182302A20C3C300AE1016 /* KeyValueStorage+TestData.swift in Sources */,
 				36C54AFC2A17A79200748023 /* KeyValueStorageLoadTests.swift in Sources */,
 				FD02917A2A0E2C5000F88377 /* AppStyle+FontStyle.swift in Sources */,
 				FD0291772A0E2B0700F88377 /* AppStyle+FontStyleTests.swift in Sources */,
@@ -622,7 +623,6 @@
 				FD2F7B322A0CE029008F6F49 /* Sitter.swift in Sources */,
 				FD02917C2A0E2CBC00F88377 /* AppStyle.swift in Sources */,
 				FD2F7B332A0CE032008F6F49 /* PetOwner.swift in Sources */,
-				36199B112A1FB1F800725FC8 /* KeyValueStorageValues.swift in Sources */,
 				362732A22A1B800B0062E4B5 /* KeyValueStorageDeleteTests.swift in Sources */,
 				FDD143FE2A052D5A000BBA77 /* Color+AppScheme.swift in Sources */,
 				FDD144012A0532D5000BBA77 /* Image+IconNameTests.swift in Sources */,

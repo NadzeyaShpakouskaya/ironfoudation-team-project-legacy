@@ -1,8 +1,10 @@
-/// Represents keys for key-value storage for `WoofTests` target.
-enum KeyValueStorageKeys: CaseIterable {
-    /// The default key to use in the key-value storage.
-    static let key = "A"
+extension KeyValueStorage {
+    /// Provides test keys for key-value storage to use in unit tests.
+    enum TestKey {
+        /// The default key to use in the key-value storage.
+        static let defaultKey = "defaultKey"
 
-    /// The non existing key to use in the key-value storage.
-    static let nonExistingKey = "nonExistingKey"
+        /// The key for which it is safe to expect there's no corresponding value in the test storage.
+        static let nonExistingKey = "nonExistingKey"
+    }
 }

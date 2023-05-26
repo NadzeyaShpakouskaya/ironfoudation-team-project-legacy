@@ -5,8 +5,8 @@ final class KeyValueStorageDeleteTests: XCTestCase {
 
     override func setUp() {
         localStorage = KeyValueStorage()
-        localStorage?.deleteValue(for: KeyValueStorageKeys.key)
-        localStorage?.deleteValue(for: KeyValueStorageKeys.nonExistingKey)
+        localStorage?.deleteValue(for: KeyValueStorage.TestKey.defaultKey)
+        localStorage?.deleteValue(for: KeyValueStorage.TestKey.nonExistingKey)
     }
 
     override func tearDown() {
@@ -15,14 +15,14 @@ final class KeyValueStorageDeleteTests: XCTestCase {
     }
 
     func testDeleteMethodExistsInAPI() {
-        localStorage?.deleteValue(for: KeyValueStorageKeys.key)
+        localStorage?.deleteValue(for: KeyValueStorage.TestKey.defaultKey)
     }
 
     func testDeleteMethodSuccessfullyRemovesExistingKeyValuePair() {
         // given
-        let key = KeyValueStorageKeys.key
+        let key = KeyValueStorage.TestKey.defaultKey
 
-        localStorage?.save(data: KeyValueStorageValues.defaultValueToSave, for: key)
+        localStorage?.save(data: KeyValueStorage.TestData.defaultData, for: key)
 
         // when
         localStorage?.deleteValue(for: key)
@@ -33,7 +33,7 @@ final class KeyValueStorageDeleteTests: XCTestCase {
 
     func testDeleteMethodSuccessfullyRemovesNonExistingKeyValuePair() {
         // given
-        let nonExistingKey = KeyValueStorageKeys.nonExistingKey
+        let nonExistingKey = KeyValueStorage.TestKey.nonExistingKey
 
         // when
         localStorage?.deleteValue(for: nonExistingKey)

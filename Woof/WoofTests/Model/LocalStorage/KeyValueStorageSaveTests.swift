@@ -5,8 +5,8 @@ final class KeyValueStorageSaveTests: XCTestCase {
 
     override func setUp() {
         localStorage = KeyValueStorage()
-        localStorage?.deleteValue(for: KeyValueStorageKeys.key)
-        localStorage?.deleteValue(for: KeyValueStorageKeys.nonExistingKey)
+        localStorage?.deleteValue(for: KeyValueStorage.TestKey.defaultKey)
+        localStorage?.deleteValue(for: KeyValueStorage.TestKey.nonExistingKey)
     }
 
     override func tearDown() {
@@ -16,15 +16,15 @@ final class KeyValueStorageSaveTests: XCTestCase {
 
     func testSaveMethodExistsInAPI() {
         localStorage?.save(
-            data: KeyValueStorageValues.defaultValueToSave,
-            for: KeyValueStorageKeys.key
+            data: KeyValueStorage.TestData.additionalData,
+            for: KeyValueStorage.TestKey.defaultKey
         )
     }
 
     func testSaveMethodSavesTheValueForValidKey() {
         // given
-        let key = KeyValueStorageKeys.key
-        let value = KeyValueStorageValues.defaultValueToSave
+        let key = KeyValueStorage.TestKey.defaultKey
+        let value = KeyValueStorage.TestData.additionalData
 
         // when
         localStorage?.save(data: value, for: key)
@@ -35,21 +35,21 @@ final class KeyValueStorageSaveTests: XCTestCase {
 
     func testSaveMethodOverridesToTheLatestProvidedValueForTheSameKey() {
         // given
-        let overridingValue = KeyValueStorageValues.additionalValueToSave
-        let key = KeyValueStorageKeys.key
+        let overridingValue = KeyValueStorage.TestData.defaultData
+        let key = KeyValueStorage.TestKey.defaultKey
 
         // when
-        localStorage?.save(data: KeyValueStorageValues.defaultValueToSave, for: key)
+        localStorage?.save(data: KeyValueStorage.TestData.additionalData, for: key)
         localStorage?.save(data: overridingValue, for: key)
 
         // then
         XCTAssertEqual(localStorage?.loadValue(for: key), overridingValue)
     }
 
-    func testSaveMethodReturnsTrueWhenDataSuccessfullySaved() {
+    func testSaveMethodReturnTrueWhenDataSuccessfullySaved() {
         // given
-        let key = KeyValueStorageKeys.key
-        let value = KeyValueStorageValues.defaultValueToSave
+        let key = KeyValueStorage.TestKey.defaultKey
+        let value = KeyValueStorage.TestData.defaultData
 
         // when
         let result = localStorage?.save(data: value, for: key)
