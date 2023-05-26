@@ -11,11 +11,13 @@ class KeyValueStorage {
 
       - Parameters:
          - data: The data to save as a byte buffer in memory.
-         - key: The key under which the value will be stored.
+         - key: The key associated with the value to store.
+      - Returns: `true` if data was successfully saved, otherwise returns `false`.
      */
     @discardableResult func save(data: Data, for key: String) -> Bool {
         storage?.set(data, forKey: key)
-        return storage?.object(forKey: key) as? Data != nil ? true : false
+        let result = storage?.object(forKey: key) as? Data
+        return result != nil ? true : false
     }
 
     /**
