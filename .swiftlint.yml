@@ -6,3 +6,6 @@ disabled_rules:
 
 trailing_comma:
     mandatory_comma: true
+
+opt_in_rules:
+  - force_unwrapping
