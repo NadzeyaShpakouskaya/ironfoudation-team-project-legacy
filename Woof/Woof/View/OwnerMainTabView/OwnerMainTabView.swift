@@ -27,7 +27,7 @@ struct OwnerMainTabView: View {
                         }
                         .tag(Tab.walkings)
 
-                    OwnerInformationView()
+                    OwnerProfileView()
                         .tabItem {
                             Label("Profile", systemImage: Image.IconName.profileTab)
                         }

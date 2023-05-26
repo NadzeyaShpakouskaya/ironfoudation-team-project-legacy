@@ -4,7 +4,7 @@ import SwiftUI
 struct OwnerCardView: View {
     /// Tracks whether edit mode is enabled or not.
     @State private var isEditMode: Bool = false
-    
+
     /// View model responsible for managing the data for the owner card.
     @ObservedObject var viewModel = OwnerCardViewModel()
 

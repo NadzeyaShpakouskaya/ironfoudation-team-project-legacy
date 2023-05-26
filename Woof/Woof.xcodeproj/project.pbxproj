@@ -148,7 +148,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		36541FEA2A14FC68007FA625 /* OwnerInformationView */ = {
+		36541FEA2A14FC68007FA625 /* OwnerProfileView */ = {
 			isa = PBXGroup;
 			children = (
 				36BCC17D2A12558A0063B70D /* OwnerProfileView.swift */,
@@ -156,7 +156,7 @@
 				FD8182232A1EF69D00AE1016 /* EditOwnerInformationView.swift */,
 				FD8182272A1F1EB600AE1016 /* OwnerInformationCardView.swift */,
 			);
-			path = OwnerInformationView;
+			path = OwnerProfileView;
 			sourceTree = "<group>";
 		};
 		EF303EBF2A17AFA20086065B /* ReusableViews */ = {
@@ -288,6 +288,31 @@
 			path = SitterListView;
 			sourceTree = "<group>";
 		};
+		FD81822C2A207A5A00AE1016 /* SitterListViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FD1FA3C22A0A682E000A3A91 /* SitterCardViewModel.swift */,
+				FD2FA22A2A129CA1002B618B /* SitterListViewModel.swift */,
+			);
+			path = SitterListViewModel;
+			sourceTree = "<group>";
+		};
+		FD81822D2A207A8500AE1016 /* DetailedPetSitterViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EF5A7F2E2A14504F00585616 /* DetailPetSitterViewModel.swift */,
+			);
+			path = DetailedPetSitterViewModel;
+			sourceTree = "<group>";
+		};
+		FD81822E2A207AA200AE1016 /* OwnerProfileViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				36BCC17B2A1254750063B70D /* OwnerCardViewModel.swift */,
+			);
+			path = OwnerProfileViewModel;
+			sourceTree = "<group>";
+		};
 		FDAA7BF52A0CB8E2007905CB /* DataTrasnformer */ = {
 			isa = PBXGroup;
 			children = (
@@ -370,7 +395,7 @@
 				EF5A7F312A14561000585616 /* DetailedPetSitterView */,
 				FD7F989A2A0E041A0058DBEB /* OwnerMainTabView */,
 				FD7F989B2A0E04390058DBEB /* SitterListView */,
-				36541FEA2A14FC68007FA625 /* OwnerInformationView */,
+				36541FEA2A14FC68007FA625 /* OwnerProfileView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -387,10 +412,9 @@
 		FDE0CEBC2A02693A0023F784 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				FD1FA3C22A0A682E000A3A91 /* SitterCardViewModel.swift */,
-				EF5A7F2E2A14504F00585616 /* DetailPetSitterViewModel.swift */,
-				FD2FA22A2A129CA1002B618B /* SitterListViewModel.swift */,
-				36BCC17B2A1254750063B70D /* OwnerCardViewModel.swift */,
+				FD81822C2A207A5A00AE1016 /* SitterListViewModel */,
+				FD81822D2A207A8500AE1016 /* DetailedPetSitterViewModel */,
+				FD81822E2A207AA200AE1016 /* OwnerProfileViewModel */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";

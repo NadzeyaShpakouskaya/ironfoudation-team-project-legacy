@@ -4,16 +4,16 @@ import SwiftUI
 struct OwnerInformationCardView: View {
     /// The name of the owner
     let name: String
-    
+
     /// The surname of the owner
     let surname: String
-    
+
     /// The phone of the owner
     let phone: String
-    
+
     /// The address of the owner
     let address: String
-    
+
     /// The URL of the avatar image of the owner.
     let avatarUrl: URL?
 

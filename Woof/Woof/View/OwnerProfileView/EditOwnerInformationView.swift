@@ -4,13 +4,13 @@ import SwiftUI
 struct EditOwnerInformationView: View {
     /// The name of the owner
     @Binding var name: String
-    
+
     /// The surname of the owner
     @Binding var surname: String
-    
+
     /// The phone of the owner
     @Binding var phone: String
-    
+
     /// The address of the owner
     @Binding var address: String
 
