@@ -1,5 +1,5 @@
 extension KeyValueStorage {
-    /// Provides test keys for key-value storage to use in unit tests.
+    /// Provides keys for key-value storage to use in unit tests.
     enum TestKey {
         /// The default key to use in the key-value storage.
         static let defaultKey = "defaultKey"
