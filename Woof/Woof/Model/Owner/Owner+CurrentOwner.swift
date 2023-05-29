@@ -1,7 +1,5 @@
 import Foundation
 
 extension Owner {
-    struct CurrentOwner {
-        
-    }
+    struct CurrentOwner {}
 }

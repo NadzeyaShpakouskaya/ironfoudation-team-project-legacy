@@ -24,7 +24,7 @@ final class Owner: Identifiable, Codable {
 
     /// The rating of the pet owner.
     var rating: Double
-    
+
     /**
      Creates an owner instance with the specified parameters.
 

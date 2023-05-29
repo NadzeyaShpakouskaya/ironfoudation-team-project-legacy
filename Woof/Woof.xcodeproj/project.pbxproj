@@ -55,6 +55,7 @@
 		FD7F98A52A0E12290058DBEB /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7F98A42A0E12290058DBEB /* AvatarView.swift */; };
 		FD8182302A20C3C300AE1016 /* KeyValueStorage+TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD81822F2A20C3C300AE1016 /* KeyValueStorage+TestData.swift */; };
 		FD8182332A24B99100AE1016 /* Owner+CurrentOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8182322A24B99100AE1016 /* Owner+CurrentOwner.swift */; };
+		FD81823F2A24C00000AE1016 /* OwnerInitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD81823E2A24C00000AE1016 /* OwnerInitTests.swift */; };
 		FDCF49132A1CDA8800CD3BBB /* DetailPetSitterViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCF49122A1CDA8800CD3BBB /* DetailPetSitterViewModelTests.swift */; };
 		FDCF49142A1CDB1600CD3BBB /* DetailPetSitterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5A7F2E2A14504F00585616 /* DetailPetSitterViewModel.swift */; };
 		FDD143C72A03BD48000BBA77 /* OwnerMainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD143C62A03BD48000BBA77 /* OwnerMainTabView.swift */; };
@@ -120,6 +121,7 @@
 		FD7F98A42A0E12290058DBEB /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		FD81822F2A20C3C300AE1016 /* KeyValueStorage+TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyValueStorage+TestData.swift"; sourceTree = "<group>"; };
 		FD8182322A24B99100AE1016 /* Owner+CurrentOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Owner+CurrentOwner.swift"; sourceTree = "<group>"; };
+		FD81823E2A24C00000AE1016 /* OwnerInitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerInitTests.swift; sourceTree = "<group>"; };
 		FDCF49122A1CDA8800CD3BBB /* DetailPetSitterViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPetSitterViewModelTests.swift; sourceTree = "<group>"; };
 		FDD143C62A03BD48000BBA77 /* OwnerMainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerMainTabView.swift; sourceTree = "<group>"; };
 		FDD143CA2A03C629000BBA77 /* Color+AppScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+AppScheme.swift"; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 		36BEA7592A1621B70020F6AE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FD81823D2A24BFE800AE1016 /* Owner */,
 				36BEA75A2A1621C00020F6AE /* KeyValueStorage */,
 			);
 			path = Model;
@@ -332,6 +335,14 @@
 			children = (
 				3673D6362A04F7FD009D699D /* Owner.swift */,
 				FD8182322A24B99100AE1016 /* Owner+CurrentOwner.swift */,
+			);
+			path = Owner;
+			sourceTree = "<group>";
+		};
+		FD81823D2A24BFE800AE1016 /* Owner */ = {
+			isa = PBXGroup;
+			children = (
+				FD81823E2A24C00000AE1016 /* OwnerInitTests.swift */,
 			);
 			path = Owner;
 			sourceTree = "<group>";
@@ -658,6 +669,7 @@
 				1CE7E9C92A247CF1000A0509 /* KeyValueStorageInitTests.swift in Sources */,
 				36199B0F2A1FB1C900725FC8 /* KeyValueStorage+TestKey.swift in Sources */,
 				368BF0EF2A16103B00F3F750 /* KeyValueStorage.swift in Sources */,
+				FD81823F2A24C00000AE1016 /* OwnerInitTests.swift in Sources */,
 				FD37A9952A0B6EA90001BABB /* DataTransformer.swift in Sources */,
 				FD2F7B342A0CE03B008F6F49 /* SitterCardViewModel.swift in Sources */,
 			);
