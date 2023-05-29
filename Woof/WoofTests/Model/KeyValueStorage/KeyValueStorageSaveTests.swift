@@ -1,60 +1,65 @@
 import XCTest
 
 final class KeyValueStorageSaveTests: XCTestCase {
-    private var localStorage: KeyValueStorage?
+    private var storage = KeyValueStorage("Test-KeyValue-Storage")
 
-    override func setUp() {
-        localStorage = KeyValueStorage()
-        localStorage?.deleteValue(for: KeyValueStorage.TestKey.defaultKey)
-        localStorage?.deleteValue(for: KeyValueStorage.TestKey.nonExistingKey)
+    override func setUp() async throws {
+        try await super.setUp()
+        KeyValueStorage.TestKey.allCases.forEach {
+            storage.deleteData(for: $0.rawValue)
+        }
     }
 
-    override func tearDown() {
-        localStorage = nil
-        super.tearDown()
+    override func tearDown() async throws {
+        KeyValueStorage.TestKey.allCases.forEach {
+            storage.deleteData(for: $0.rawValue)
+        }
+        try await super.tearDown()
     }
 
     func testSaveMethodExistsInAPI() {
-        localStorage?.save(
-            data: KeyValueStorage.TestData.additionalData,
-            for: KeyValueStorage.TestKey.defaultKey
+        storage.save(
+            KeyValueStorage.TestData.dataOneByte,
+            for: KeyValueStorage.TestKey.keyA.rawValue
         )
     }
 
-    func testSaveMethodSavesTheValueForValidKey() {
+    func testSaveMethodReturnsTrueIfTheDataWasSaved() {
         // given
-        let key = KeyValueStorage.TestKey.defaultKey
-        let value = KeyValueStorage.TestData.additionalData
+        let key = KeyValueStorage.TestKey.keyA.rawValue
+        let data = KeyValueStorage.TestData.dataOneByte
 
         // when
-        localStorage?.save(data: value, for: key)
+        let savingResult = storage.save(data, for: key)
 
         // then
-        XCTAssertEqual(localStorage?.loadValue(for: key), value)
+        XCTAssertTrue(savingResult)
     }
 
-    func testSaveMethodOverridesToTheLatestProvidedValueForTheSameKey() {
+    func testSaveMethodStoresTheDataWhenEmptyKeyIsUsed() {
         // given
-        let overridingValue = KeyValueStorage.TestData.defaultData
-        let key = KeyValueStorage.TestKey.defaultKey
+        let key = ""
+        let data = KeyValueStorage.TestData.dataOneByte
 
         // when
-        localStorage?.save(data: KeyValueStorage.TestData.additionalData, for: key)
-        localStorage?.save(data: overridingValue, for: key)
+        let savingResult = storage.save(data, for: key)
 
         // then
-        XCTAssertEqual(localStorage?.loadValue(for: key), overridingValue)
+        XCTAssertTrue(savingResult)
     }
 
-    func testSaveMethodReturnTrueWhenDataSuccessfullySaved() {
+    func testSaveMethodOverridesDataWhenUsesTheSameKey() {
         // given
-        let key = KeyValueStorage.TestKey.defaultKey
-        let value = KeyValueStorage.TestData.defaultData
+        let dataA = KeyValueStorage.TestData.dataOneByte
+        let dataB = KeyValueStorage.TestData.dataTwoBytes
+        let key = KeyValueStorage.TestKey.keyA.rawValue
 
         // when
-        let result = localStorage?.save(data: value, for: key)
+        storage.save(dataA, for: key)
+        storage.save(dataB, for: key)
 
         // then
-        XCTAssertNotNil(result)
+        let savedData = storage.loadData(for: key)
+        XCTAssertEqual(savedData, dataB)
     }
 }
