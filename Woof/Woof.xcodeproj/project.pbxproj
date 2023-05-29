@@ -54,6 +54,7 @@
 		FD7F98A32A0E10510058DBEB /* AppStyle+UIElementConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7F98A22A0E10510058DBEB /* AppStyle+UIElementConstant.swift */; };
 		FD7F98A52A0E12290058DBEB /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7F98A42A0E12290058DBEB /* AvatarView.swift */; };
 		FD8182302A20C3C300AE1016 /* KeyValueStorage+TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD81822F2A20C3C300AE1016 /* KeyValueStorage+TestData.swift */; };
+		FD8182332A24B99100AE1016 /* Owner+CurrentOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8182322A24B99100AE1016 /* Owner+CurrentOwner.swift */; };
 		FDCF49132A1CDA8800CD3BBB /* DetailPetSitterViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCF49122A1CDA8800CD3BBB /* DetailPetSitterViewModelTests.swift */; };
 		FDCF49142A1CDB1600CD3BBB /* DetailPetSitterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5A7F2E2A14504F00585616 /* DetailPetSitterViewModel.swift */; };
 		FDD143C72A03BD48000BBA77 /* OwnerMainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD143C62A03BD48000BBA77 /* OwnerMainTabView.swift */; };
@@ -118,6 +119,7 @@
 		FD7F98A22A0E10510058DBEB /* AppStyle+UIElementConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppStyle+UIElementConstant.swift"; sourceTree = "<group>"; };
 		FD7F98A42A0E12290058DBEB /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		FD81822F2A20C3C300AE1016 /* KeyValueStorage+TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyValueStorage+TestData.swift"; sourceTree = "<group>"; };
+		FD8182322A24B99100AE1016 /* Owner+CurrentOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Owner+CurrentOwner.swift"; sourceTree = "<group>"; };
 		FDCF49122A1CDA8800CD3BBB /* DetailPetSitterViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPetSitterViewModelTests.swift; sourceTree = "<group>"; };
 		FDD143C62A03BD48000BBA77 /* OwnerMainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerMainTabView.swift; sourceTree = "<group>"; };
 		FDD143CA2A03C629000BBA77 /* Color+AppScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+AppScheme.swift"; sourceTree = "<group>"; };
@@ -329,6 +331,7 @@
 			isa = PBXGroup;
 			children = (
 				3673D6362A04F7FD009D699D /* Owner.swift */,
+				FD8182322A24B99100AE1016 /* Owner+CurrentOwner.swift */,
 			);
 			path = Owner;
 			sourceTree = "<group>";
@@ -688,6 +691,7 @@
 				EF7B7F002A147D8300F00B4E /* TextWithIconLabelView.swift in Sources */,
 				EF5A7F2F2A14504F00585616 /* DetailPetSitterViewModel.swift in Sources */,
 				FD0291752A0E273500F88377 /* BioSectionView.swift in Sources */,
+				FD8182332A24B99100AE1016 /* Owner+CurrentOwner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
