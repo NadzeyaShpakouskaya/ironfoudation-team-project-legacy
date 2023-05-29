@@ -1,24 +1,32 @@
 import Foundation
 
-/// A persistent storage designed for managing a collection of raw data (a byte buffer in memory).
-/// This data is stored and retrieved using a key that uniquely identifies itself.
-/// The key is used to find the data within the storage.
+/// A persistent storage designed for storing, retrieving, and managing a collection of data objects.
+/// These data objects are stored and retrieved using a key.
+/// The key uniquely identifies the data in the storage, and is used to find the data within the storage..
 final class KeyValueStorage {
     private var storage: UserDefaults?
 
-    /// Instance of persistent storage with the specified database name.
-    init() {
-        let suitName = (Bundle.main.bundleIdentifier ?? "com.IRONFoundation.iOS.Woof") + "-key-value-storage"
-        storage = UserDefaults(suiteName: suitName)
+    /**
+     Creates a key-value storage with the specified name.
+     The storage is valid and active for the current iOS app.
+
+     - Parameter storageName: The name of the storage to identify the data. The name must be unique within the app.
+     */
+    init(_ storageName: String) {
+        let bundleIdPrefix = Bundle.main.bundleIdentifier ?? "ios-app"
+        let storagePrefix = "key-value-storage-over-the-ios-user-defaults-storage"
+
+        storage = UserDefaults(suiteName: "\(bundleIdPrefix)-\(storagePrefix)-\(storageName)")
     }
 
     /**
-     Saves the data associated with the specified key.
+     Stores the data associated with the specified key.
 
      - Parameters:
-        - data: The data to save as a byte buffer in memory.
-        - key: The key associated with the value to store.
-     - Returns: `true` if data was successfully saved, otherwise returns `false`.
+        - data: The raw data (as a byte buffer) to persist.
+        - key: The key with which to associate the data.
+
+     - Returns: `true` if the data was successfully saved, otherwise returns `false`.
      */
     @discardableResult func save(data: Data, for key: String) -> Bool {
         guard let storage else { return false }
@@ -27,19 +35,19 @@ final class KeyValueStorage {
     }
 
     /**
-      Retrieves the data associated with the given key.
+      Retrieves the data associated with the specified key.
 
       - Parameters:
-         - key: The key associated with the data in storage.
+         - key: A key in the current storage.
 
-      - Returns: The data as a byte buffer in memory associated with the given key, otherwise returns `nil`.
+      - Returns: The raw data (as a byte buffer)  associated with the given key, otherwise returns `nil`.
      */
     func loadValue(for key: String) -> Data? {
         storage?.data(forKey: key)
     }
 
     /**
-     Removes the given key and its associated data.
+     Removes the specified key and the associated data.
      If the key isn’t found, method does nothing.
 
      - Parameter key: The key to remove along with its associated data.
