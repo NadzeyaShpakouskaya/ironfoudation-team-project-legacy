@@ -34,10 +34,6 @@ extension Owner {
                 return false
             }
 
-            guard let result = storage?.save(data, for: ownerKey) else {
-                return false
-            }
-
             return storage?.save(data, for: ownerKey) ?? false
         }
 
@@ -50,6 +46,9 @@ extension Owner {
         }
 
         // MARK: - Private Interface
+
+        private var storage: KeyValueStorage?
+        private let ownerKey = "owner"
 
         /**
          Retrieves the owner from storage.
@@ -67,8 +66,5 @@ extension Owner {
 
             return owner
         }
-
-        private var storage: KeyValueStorage?
-        private let ownerKey = "owner"
     }
 }

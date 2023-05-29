@@ -20,12 +20,13 @@ final class CurrentOwnerDeleteTests: XCTestCase {
     }
 
     func testDeleteMethodsSuccessfullyDeleteExistingOwner() {
-        let testOwner = Owner.CurrentOwner.TestData.owner
+        let testOwner = Owner.CurrentOwner.TestData.defaultOwner
         _ = current?.update(with: testOwner)
 
         current?.delete()
 
         let retrievedOwner = current?.get()
+
         XCTAssertNotEqual(retrievedOwner?.id, testOwner.id)
         XCTAssertNotEqual(retrievedOwner?.name, testOwner.name)
         XCTAssertNotEqual(retrievedOwner?.surname, testOwner.surname)

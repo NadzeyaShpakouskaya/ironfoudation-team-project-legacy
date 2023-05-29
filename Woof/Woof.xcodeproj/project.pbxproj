@@ -60,7 +60,7 @@
 		FD8182422A24C1DF00AE1016 /* Owner+StorageInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8182412A24C1DF00AE1016 /* Owner+StorageInformation.swift */; };
 		FD8182442A24C5C500AE1016 /* CurrentOwnerGetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8182432A24C5C500AE1016 /* CurrentOwnerGetTests.swift */; };
 		FD8182462A24C5F800AE1016 /* CurrentOwnerUpdateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8182452A24C5F800AE1016 /* CurrentOwnerUpdateTests.swift */; };
-		FD81824C2A24D94D00AE1016 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD81824B2A24D94D00AE1016 /* TestData.swift */; };
+		FD81824C2A24D94D00AE1016 /* CurrentOwner+TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD81824B2A24D94D00AE1016 /* CurrentOwner+TestData.swift */; };
 		FDCF49132A1CDA8800CD3BBB /* DetailPetSitterViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCF49122A1CDA8800CD3BBB /* DetailPetSitterViewModelTests.swift */; };
 		FDCF49142A1CDB1600CD3BBB /* DetailPetSitterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5A7F2E2A14504F00585616 /* DetailPetSitterViewModel.swift */; };
 		FDD143C72A03BD48000BBA77 /* OwnerMainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD143C62A03BD48000BBA77 /* OwnerMainTabView.swift */; };
@@ -131,7 +131,7 @@
 		FD8182412A24C1DF00AE1016 /* Owner+StorageInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Owner+StorageInformation.swift"; sourceTree = "<group>"; };
 		FD8182432A24C5C500AE1016 /* CurrentOwnerGetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentOwnerGetTests.swift; sourceTree = "<group>"; };
 		FD8182452A24C5F800AE1016 /* CurrentOwnerUpdateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentOwnerUpdateTests.swift; sourceTree = "<group>"; };
-		FD81824B2A24D94D00AE1016 /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
+		FD81824B2A24D94D00AE1016 /* CurrentOwner+TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CurrentOwner+TestData.swift"; sourceTree = "<group>"; };
 		FDCF49122A1CDA8800CD3BBB /* DetailPetSitterViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPetSitterViewModelTests.swift; sourceTree = "<group>"; };
 		FDD143C62A03BD48000BBA77 /* OwnerMainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerMainTabView.swift; sourceTree = "<group>"; };
 		FDD143CA2A03C629000BBA77 /* Color+AppScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+AppScheme.swift"; sourceTree = "<group>"; };
@@ -358,7 +358,7 @@
 				FD8182432A24C5C500AE1016 /* CurrentOwnerGetTests.swift */,
 				FD8182452A24C5F800AE1016 /* CurrentOwnerUpdateTests.swift */,
 				FDDDA6842A24F40300839091 /* CurrentOwnerDeleteTests.swift */,
-				FD81824B2A24D94D00AE1016 /* TestData.swift */,
+				FD81824B2A24D94D00AE1016 /* CurrentOwner+TestData.swift */,
 			);
 			path = Owner;
 			sourceTree = "<group>";
@@ -669,7 +669,7 @@
 				FD02917A2A0E2C5000F88377 /* AppStyle+FontStyle.swift in Sources */,
 				FD0291772A0E2B0700F88377 /* AppStyle+FontStyleTests.swift in Sources */,
 				FD0291792A0E2B2300F88377 /* AppStyle+UIElementConstantTests.swift in Sources */,
-				FD81824C2A24D94D00AE1016 /* TestData.swift in Sources */,
+				FD81824C2A24D94D00AE1016 /* CurrentOwner+TestData.swift in Sources */,
 				FD37A9942A0B6E960001BABB /* FullNameTests.swift in Sources */,
 				FDCF49132A1CDA8800CD3BBB /* DetailPetSitterViewModelTests.swift in Sources */,
 				FDCF49142A1CDB1600CD3BBB /* DetailPetSitterViewModel.swift in Sources */,

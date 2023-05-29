@@ -24,7 +24,7 @@ final class CurrentOwnerGetTests: XCTestCase {
     }
 
     func testGetMethodReturnsNotNilForExistingRecord() {
-        _ = current?.update(with: Owner.CurrentOwner.TestData.owner)
+        _ = current?.update(with: Owner.CurrentOwner.TestData.defaultOwner)
 
         XCTAssertNotNil(current?.get())
     }
@@ -44,7 +44,7 @@ final class CurrentOwnerGetTests: XCTestCase {
     }
 
     func testGetMethodReturnsExpectedOwnerPropertiesForExistingOwner() {
-        let testOwner = Owner.CurrentOwner.TestData.owner
+        let testOwner = Owner.CurrentOwner.TestData.defaultOwner
         _ = current?.update(with: testOwner)
 
         let retrievedOwner = current?.get()
