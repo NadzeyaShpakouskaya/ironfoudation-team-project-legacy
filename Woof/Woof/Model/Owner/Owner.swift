@@ -47,13 +47,11 @@ final class Owner: Identifiable, Codable {
     }
 
     /// Creates a new owner instance with the specified parameters described below:
-    /// - `name` is `User`;
+    /// - `name` is hardcoded value `User`;
     /// - `avatarUrl` is nil;
     /// - `rating` is equal 0;
     /// - other parameters are specified with the empty string ("").
     convenience init() {
         self.init(name: "User", surname: "", phone: "", avatarUrl: nil, address: "", rating: 0)
     }
-
-    static let current = CurrentOwner()
 }

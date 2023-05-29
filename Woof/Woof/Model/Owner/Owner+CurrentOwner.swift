@@ -7,6 +7,10 @@ extension Owner {
     struct CurrentOwner {
         // MARK: - Public Interface
 
+        init(_ storageName: String) {
+            storage = KeyValueStorage(storageName)
+        }
+
         /**
          Retrieves the current owner.
 
@@ -30,7 +34,15 @@ extension Owner {
                 return false
             }
 
-            return storage.save(data, for: Owner.StorageInformation.ownerKey)
+            guard let result = storage?.save(data, for: ownerKey) else {
+                return false
+            }
+
+            return storage?.save(data, for: ownerKey) ?? false
+        }
+
+        func delete() {
+            storage?.deleteData(for: ownerKey)
         }
 
         // MARK: - Private Interface
@@ -42,7 +54,7 @@ extension Owner {
          otherwise `nil`.
          */
         private func getOwner() -> Owner? {
-            guard let data = storage.loadData(for: Owner.StorageInformation.ownerKey) else {
+            guard let data = storage?.loadData(for: ownerKey) else {
                 return nil
             }
             guard let owner = try? JSONDecoder().decode(Owner.self, from: data) else {
@@ -52,6 +64,7 @@ extension Owner {
             return owner
         }
 
-        private let storage = KeyValueStorage(Owner.StorageInformation.storageName)
+        private var storage: KeyValueStorage?
+        private let ownerKey = "owner"
     }
 }
