@@ -13,32 +13,58 @@ final class KeyValueStorageDeleteTests: XCTestCase {
         try await super.tearDown()
     }
 
-//
-//    func testDeleteMethodExistsInAPI() {
-//        localStorage?.deleteValue(for: KeyValueStorage.TestKey.defaultKey)
-//    }
-//
-//    func testDeleteMethodSuccessfullyRemovesExistingKeyValuePair() {
-//        // given
-//        let key = KeyValueStorage.TestKey.defaultKey
-//
-//        localStorage?.save(data: KeyValueStorage.TestData.defaultData, for: key)
-//
-//        // when
-//        localStorage?.deleteValue(for: key)
-//
-//        // then
-//        XCTAssertNil(localStorage?.loadValue(for: key))
-//    }
-//
-//    func testDeleteMethodSuccessfullyRemovesNonExistingKeyValuePair() {
-//        // given
-//        let nonExistingKey = KeyValueStorage.TestKey.nonExistingKey
-//
-//        // when
-//        localStorage?.deleteValue(for: nonExistingKey)
-//
-//        // then
-//        XCTAssertNil(localStorage?.loadValue(for: nonExistingKey))
-//    }
+    func testMethodExistsInAPI() {
+        storage.deleteData(for: KeyValueStorage.TestKey.keyA.rawValue)
+    }
+
+    func testMethodRemovesDataForExistingKey() {
+        // given
+        let key = KeyValueStorage.TestKey.keyA.rawValue
+        let data = KeyValueStorage.TestData.dataOneByte
+
+        storage.save(data, for: key)
+
+        // when
+        storage.deleteData(for: key)
+
+        // then
+        XCTAssertNil(storage.loadData(for: key))
+    }
+
+    func testMethodDeletesOnlyDataForTheSpecifiedKey() {
+        // given
+        let keyA = KeyValueStorage.TestKey.keyA.rawValue
+        let keyB = KeyValueStorage.TestKey.keyB.rawValue
+        let dataA = KeyValueStorage.TestData.dataOneByte
+        let dataB = KeyValueStorage.TestData.dataTwoBytes
+
+        storage.save(dataA, for: keyA)
+        storage.save(dataB, for: keyB)
+
+        // when
+        storage.deleteData(for: keyA)
+
+        // then
+        XCTAssertEqual(storage.loadData(for: keyB), dataB)
+    }
+
+    func testMethodDoesNotAffectStorageIfTheKeyDoesNotExistInTheStorage() {
+        // given
+        let nonExistingKey = KeyValueStorage.TestKey.nonExistingKey.rawValue
+        let keyA = KeyValueStorage.TestKey.keyA.rawValue
+        let keyB = KeyValueStorage.TestKey.keyB.rawValue
+        let dataA = KeyValueStorage.TestData.dataOneByte
+        let dataB = KeyValueStorage.TestData.dataTwoBytes
+
+        storage.deleteData(for: nonExistingKey)
+        storage.save(dataA, for: keyA)
+        storage.save(dataB, for: keyB)
+
+        // when
+        storage.deleteData(for: nonExistingKey)
+
+        // then
+        XCTAssertEqual(storage.loadData(for: keyA), dataA)
+        XCTAssertEqual(storage.loadData(for: keyB), dataB)
+    }
 }
