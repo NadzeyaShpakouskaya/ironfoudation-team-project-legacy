@@ -41,6 +41,10 @@ extension Owner {
             return storage?.save(data, for: ownerKey) ?? false
         }
 
+        /**
+         Removes existing instance of owner from storage.
+         If instance doesn't exist, do nothing.
+         */
         func delete() {
             storage?.deleteData(for: ownerKey)
         }
