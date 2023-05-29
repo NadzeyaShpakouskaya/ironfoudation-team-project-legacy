@@ -28,7 +28,7 @@ final class KeyValueStorage {
 
      - Returns: `true` if the data was successfully saved, otherwise returns `false`.
      */
-    @discardableResult func save(data: Data, for key: String) -> Bool {
+    @discardableResult func save(_ data: Data, for key: String) -> Bool {
         guard let storage else { return false }
         storage.set(data, forKey: key)
         return true
@@ -42,7 +42,7 @@ final class KeyValueStorage {
 
       - Returns: The raw data (as a byte buffer)  associated with the given key, otherwise returns `nil`.
      */
-    func loadValue(for key: String) -> Data? {
+    func loadData(for key: String) -> Data? {
         storage?.data(forKey: key)
     }
 
@@ -52,7 +52,7 @@ final class KeyValueStorage {
 
      - Parameter key: The key to remove along with its associated data.
      */
-    func deleteValue(for key: String) {
+    func deleteData(for key: String) {
         storage?.removeObject(forKey: key)
     }
 }
