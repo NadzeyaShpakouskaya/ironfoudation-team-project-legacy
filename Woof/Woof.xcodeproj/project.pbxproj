@@ -150,12 +150,12 @@
 		36BEA7592A1621B70020F6AE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				36BEA75A2A1621C00020F6AE /* LocalStorage */,
+				36BEA75A2A1621C00020F6AE /* KeyValueStorage */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		36BEA75A2A1621C00020F6AE /* LocalStorage */ = {
+		36BEA75A2A1621C00020F6AE /* KeyValueStorage */ = {
 			isa = PBXGroup;
 			children = (
 				36BEA7572A1621B10020F6AE /* KeyValueStorageSaveTests.swift */,
@@ -163,15 +163,15 @@
 				362732A12A1B800A0062E4B5 /* KeyValueStorageDeleteTests.swift */,
 				FD81822B2A206B0100AE1016 /* TestData */,
 			);
-			path = LocalStorage;
+			path = KeyValueStorage;
 			sourceTree = "<group>";
 		};
-		36C54AFA2A1631CC00748023 /* LocalStorage */ = {
+		36C54AFA2A1631CC00748023 /* KeyValueStorage */ = {
 			isa = PBXGroup;
 			children = (
 				368BF0EB2A152FA500F3F750 /* KeyValueStorage.swift */,
 			);
-			path = LocalStorage;
+			path = KeyValueStorage;
 			sourceTree = "<group>";
 		};
 		EF303EBF2A17AFA20086065B /* ReusableViews */ = {
@@ -393,7 +393,7 @@
 			isa = PBXGroup;
 			children = (
 				3673D6362A04F7FD009D699D /* PetOwner.swift */,
-				36C54AFA2A1631CC00748023 /* LocalStorage */,
+				36C54AFA2A1631CC00748023 /* KeyValueStorage */,
 				FD1FA3CA2A0A77FE000A3A91 /* Sitter */,
 			);
 			path = Model;
