@@ -1,12 +1,15 @@
 import Foundation
 
 extension KeyValueStorage {
-    /// Provides data for key-value storage to use in unit tests.
+    /// Data for key-value storage to use in unit tests.
     enum TestData {
-        /// The `additional data` as raw data to use in the key-value storage.
-        static let additionalData = Data("additional data".utf8)
+        /// The byte buffer of size 1 byte.
+        static let dataOneByte = Data("A".utf8)
 
-        /// The `default data` as raw data to use in the key-value storage.
-        static let defaultData = Data("default data".utf8)
+        /// The byte buffer of size 2 bytes.
+        static let dataTwoBytes = Data("AA".utf8)
+
+        /// The byte buffer of size 10 bytes.
+        static let dataTenBytes = Data("AAAAAAAAAA".utf8)
     }
 }

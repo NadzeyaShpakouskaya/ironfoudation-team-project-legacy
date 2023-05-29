@@ -1,10 +1,16 @@
 extension KeyValueStorage {
-    /// Provides keys for key-value storage to use in unit tests.
-    enum TestKey {
-        /// The default key to use in the key-value storage.
-        static let defaultKey = "defaultKey"
+    /// Keys in the key-value storage to use in unit tests.
+    enum TestKey: String, CaseIterable {
+        /// An example of key to use in the key-value storage.
+        case keyA = "A"
 
-        /// The key for which it is safe to expect there's no corresponding value in the test storage.
-        static let nonExistingKey = "nonExistingKey"
+        /// An example of key to use in the key-value storage.
+        case keyB = "B"
+
+        /// An example of key to use in the key-value storage.
+        case keyC = "C"
+
+        /// The key that might be used in case when there's no associated data in the key-value storage.
+        case nonExistingKey = "non-existing-key"
     }
 }
