@@ -38,11 +38,11 @@ final class KeyValueStorageSaveTests: XCTestCase {
 
     func testSaveMethodStoresTheDataWhenEmptyKeyIsUsed() {
         // given
-        let key = ""
+        let emptyStringKey = ""
         let data = KeyValueStorage.TestData.dataOneByte
 
         // when
-        let savingResult = storage.save(data, for: key)
+        let savingResult = storage.save(data, for: emptyStringKey)
 
         // then
         XCTAssertTrue(savingResult)
