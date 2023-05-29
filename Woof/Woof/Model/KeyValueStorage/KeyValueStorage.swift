@@ -2,7 +2,7 @@ import Foundation
 
 /// A persistent storage designed for storing, retrieving, and managing a collection of data objects.
 /// These data objects are stored and retrieved using a key.
-/// The key uniquely identifies the data in the storage, and is used to find the data within the storage..
+/// The key uniquely identifies the data in the storage, and is used to find the data within the storage.
 final class KeyValueStorage {
     private var storage: UserDefaults?
 

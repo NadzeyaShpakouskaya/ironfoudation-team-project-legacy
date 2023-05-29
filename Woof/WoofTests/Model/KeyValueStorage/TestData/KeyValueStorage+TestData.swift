@@ -8,8 +8,5 @@ extension KeyValueStorage {
 
         /// The byte buffer of size 2 bytes.
         static let dataTwoBytes = Data("AA".utf8)
-
-        /// The byte buffer of size 10 bytes.
-        static let dataTenBytes = Data("AAAAAAAAAA".utf8)
     }
 }

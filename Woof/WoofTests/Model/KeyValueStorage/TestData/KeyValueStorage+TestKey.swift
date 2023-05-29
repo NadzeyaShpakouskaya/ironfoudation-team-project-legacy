@@ -7,9 +7,6 @@ extension KeyValueStorage {
         /// An example of key to use in the key-value storage.
         case keyB = "B"
 
-        /// An example of key to use in the key-value storage.
-        case keyC = "C"
-
         /// The key that might be used in case when there's no associated data in the key-value storage.
         case nonExistingKey = "non-existing-key"
     }
