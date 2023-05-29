@@ -13,14 +13,14 @@ final class KeyValueStorageSaveTests: XCTestCase {
         try await super.tearDown()
     }
 
-    func testSaveMethodExistsInAPI() {
+    func testMethodExistsInAPI() {
         storage.save(
             KeyValueStorage.TestData.dataOneByte,
             for: KeyValueStorage.TestKey.keyA.rawValue
         )
     }
 
-    func testSaveMethodReturnsTrueIfTheDataWasSaved() {
+    func testMethodReturnsTrueIfTheDataWasSaved() {
         // given
         let key = KeyValueStorage.TestKey.keyA.rawValue
         let data = KeyValueStorage.TestData.dataOneByte
@@ -32,7 +32,7 @@ final class KeyValueStorageSaveTests: XCTestCase {
         XCTAssertTrue(savingResult)
     }
 
-    func testSaveMethodStoresTheDataWhenEmptyKeyIsUsed() {
+    func testMethodStoresTheDataWhenEmptyKeyIsUsed() {
         // given
         let emptyStringKey = ""
         let data = KeyValueStorage.TestData.dataOneByte
@@ -44,7 +44,7 @@ final class KeyValueStorageSaveTests: XCTestCase {
         XCTAssertTrue(savingResult)
     }
 
-    func testSaveMethodOverridesDataWhenUsesTheSameKey() {
+    func testMethodOverridesDataWhenUsesTheSameKey() {
         // given
         let dataA = KeyValueStorage.TestData.dataOneByte
         let dataB = KeyValueStorage.TestData.dataTwoBytes
