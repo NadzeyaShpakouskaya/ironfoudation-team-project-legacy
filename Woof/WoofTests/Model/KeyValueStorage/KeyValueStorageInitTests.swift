@@ -1,19 +1,15 @@
 import XCTest
 
 final class KeyValueStorageInitTests: XCTestCase {
-    private var storage = KeyValueStorage("Test-KeyValue-Storage")
+    private var storage = KeyValueStorage.test
 
     override func setUp() async throws {
         try await super.setUp()
-        KeyValueStorage.TestKey.allCases.forEach {
-            storage.deleteData(for: $0.rawValue)
-        }
+        storage.deleteDataForAllTestKeys()
     }
 
     override func tearDown() async throws {
-        KeyValueStorage.TestKey.allCases.forEach {
-            storage.deleteData(for: $0.rawValue)
-        }
+        storage.deleteDataForAllTestKeys()
         try await super.tearDown()
     }
 
