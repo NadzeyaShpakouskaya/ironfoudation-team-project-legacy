@@ -1,6 +1,6 @@
 import XCTest
 
-final class KeyValueStorageLoadTests: XCTestCase {
+final class KeyValueStorageLoadDataTests: XCTestCase {
     private var storage = KeyValueStorage.test
 
     override func setUp() async throws {
@@ -13,54 +13,53 @@ final class KeyValueStorageLoadTests: XCTestCase {
         try await super.tearDown()
     }
 
-//
-//    func testLoadMethodExistsInAPI() {
-//        _ = localStorage?.loadValue(for: "")
-//    }
-//
-//    func testLoadMethodReturnsExpectedValueForExistingKey() {
-//        // given
-//        let key = KeyValueStorage.TestKey.defaultKey
-//        let value = KeyValueStorage.TestData.defaultData
-//
-//        localStorage?.save(data: value, for: key)
-//
-//        // when
-//        let loadedValue = localStorage?.loadValue(for: key)
-//
-//        // then
-//        XCTAssertEqual(loadedValue, value)
-//    }
-//
-//    func testLoadMethodReturnsNilWhenLoadMethodCalledForNonExistingKey() {
-//        // given
-//
-//        // when
-//        let loadedValue = localStorage?.loadValue(for: KeyValueStorage.TestKey.nonExistingKey)
-//
-//        // then
-//        XCTAssertNil(loadedValue)
-//    }
-//
-//    func testLoadMethodReturnsExpectedValuesForOneThousandExistingKeyValuePairs() {
-//        // given
-//        let storedValue = KeyValueStorage.TestData.defaultData
-//        let keys = (1...1000).map { String($0) }
-//        keys.forEach {
-//            localStorage?.save(data: storedValue, for: $0)
-//        }
-//
-//        // when
-//        keys.forEach { key in
-//            let value = localStorage?.loadValue(for: key)
-//
-//            // then
-//            XCTAssertEqual(value, storedValue)
-//            localStorage?.deleteValue(for: key)
-//        }
-//    }
+    func testMethodExistsInAPI() {
+        _ = storage.loadData(for: "")
+    }
 
-    func testLoadMethodRetrievesTheDataSavedUsingTheDifferentReferenceButTheSameName() {
+    func testMethodReturnsExpectedDataForExistingKey() {
+        // given
+        let key = KeyValueStorage.TestKey.keyA.rawValue
+        let data = KeyValueStorage.TestData.dataOneByte
+
+        storage.save(data, for: key)
+
+        // when
+        let retrievedData = storage.loadData(for: key)
+
+        // then
+        XCTAssertEqual(retrievedData, data)
+    }
+
+    func testMethodReturnsNilIfTheKeyDoesNotExistInStorage() {
+        // given
+        let nonExistingKey = KeyValueStorage.TestKey.nonExistingKey.rawValue
+        storage.deleteData(for: nonExistingKey)
+
+        // when
+        let retrievedData = storage.loadData(for: nonExistingKey)
+
+        // then
+        XCTAssertNil(retrievedData)
+    }
+
+    func testMethodReturnsExpectedDataForOneThousandSavedKeys() {
+        // given
+        let dataInstance = KeyValueStorage.TestData.dataOneByte
+        let keys = (1...1000).map { String($0) }
+
+        keys.forEach { storage.save(dataInstance, for: $0) }
+
+        // when
+        keys.forEach { key in
+            let retrievedDataInstance = storage.loadData(for: key)
+
+            // then
+            XCTAssertEqual(retrievedDataInstance, dataInstance)
+        }
+    }
+
+    func testLoadDataMethodRetrievesTheDataSavedUsingTheDifferentReferenceButTheSameName() {
         // given
         let storageName = "test"
         let key = KeyValueStorage.TestKey.keyA.rawValue
@@ -77,7 +76,7 @@ final class KeyValueStorageLoadTests: XCTestCase {
         XCTAssertEqual(dataRetrievedFromB, dataSavedInA)
     }
 
-    func testLoadMethodDoesNotRetrieveTheDataRemovedUsingTheDifferentReferenceButTheSameName() {
+    func testLoadDataMethodDoesNotRetrieveTheDataRemovedUsingTheDifferentReferenceButTheSameName() {
         // given
         let storageName = "test"
         let key = KeyValueStorage.TestKey.keyA.rawValue
