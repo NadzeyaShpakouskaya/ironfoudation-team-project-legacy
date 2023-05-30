@@ -52,5 +52,41 @@ struct EditOwnerInformationView_Previews: PreviewProvider {
                 address: .constant("")
             )
         }
+        .previewDevice(PreviewDevice(rawValue: "iPhone 14"))
+        .previewDisplayName("iPhone 14")
+        VStack {
+            EditOwnerInformationView(
+                name: .constant("Emily"),
+                surname: .constant("Thompson"),
+                phone: .constant("527637624567"),
+                address: .constant("My home address")
+            )
+
+            EditOwnerInformationView(
+                name: .constant(""),
+                surname: .constant(""),
+                phone: .constant(""),
+                address: .constant("")
+            )
+        }
+        .previewDevice(PreviewDevice(rawValue: "iPhone 14 Pro Max"))
+        .previewDisplayName("iPhone 14 Pro Max")
+        VStack {
+            EditOwnerInformationView(
+                name: .constant("Emily"),
+                surname: .constant("Thompson"),
+                phone: .constant("527637624567"),
+                address: .constant("My home address")
+            )
+
+            EditOwnerInformationView(
+                name: .constant(""),
+                surname: .constant(""),
+                phone: .constant(""),
+                address: .constant("")
+            )
+        }
+        .previewDevice(PreviewDevice(rawValue: "iPhone SE"))
+        .previewDisplayName("iPhone SE")
     }
 }
