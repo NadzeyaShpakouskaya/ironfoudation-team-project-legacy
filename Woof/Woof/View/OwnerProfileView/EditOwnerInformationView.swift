@@ -2,25 +2,25 @@ import SwiftUI
 
 /// A view to edit the owner information.
 struct EditOwnerInformationView: View {
-    /// The name of the owner
+    /// The name of the owner.
     @Binding var name: String
 
-    /// The surname of the owner
+    /// The surname of the owner.
     @Binding var surname: String
 
-    /// The phone of the owner
+    /// The phone of the owner.
     @Binding var phone: String
 
-    /// The address of the owner
+    /// The address of the owner.
     @Binding var address: String
 
     var body: some View {
         VStack {
             Text("Edit your information")
-            TextField("Name", text: $name)
-            TextField("Surname", text: $surname)
-            TextField("Phone", text: $phone)
-            TextField("Address", text: $address)
+            TextField("Enter your name", text: $name)
+            TextField("Enter your surname", text: $surname)
+            TextField("Enter your phone", text: $phone)
+            TextField("Enter your address", text: $address)
 
             if name.isEmpty {
                 Text("*Name is a mandatory field")
