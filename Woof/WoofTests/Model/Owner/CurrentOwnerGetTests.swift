@@ -5,7 +5,7 @@ final class CurrentOwnerGetTests: XCTestCase {
 
     override func setUp() {
         current?.delete()
-        let new = Owner.CurrentOwner()
+        let new = Owner.current
         current = new
     }
 
@@ -24,7 +24,7 @@ final class CurrentOwnerGetTests: XCTestCase {
     }
 
     func testGetMethodReturnsNotNilForExistingRecord() {
-        _ = current?.update(with: Owner.CurrentOwner.TestData.defaultOwner)
+        _ = current?.update(with: Owner.Test.kateAnderson)
 
         XCTAssertNotNil(current?.get())
     }
@@ -41,7 +41,7 @@ final class CurrentOwnerGetTests: XCTestCase {
     }
 
     func testGetMethodReturnsExpectedOwnerPropertiesForExistingOwner() {
-        let testOwner = Owner.CurrentOwner.TestData.defaultOwner
+        let testOwner = Owner.Test.kateAnderson
         _ = current?.update(with: testOwner)
 
         let retrievedOwner = current?.get()

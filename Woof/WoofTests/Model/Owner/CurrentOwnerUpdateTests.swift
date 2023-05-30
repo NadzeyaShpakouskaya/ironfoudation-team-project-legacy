@@ -5,7 +5,7 @@ final class CurrentOwnerUpdateTests: XCTestCase {
 
     override func setUp() {
         current?.delete()
-        let new = Owner.CurrentOwner()
+        let new = Owner.current
         current = new
     }
 
@@ -20,10 +20,10 @@ final class CurrentOwnerUpdateTests: XCTestCase {
     }
 
     func testUpdateMethodUpdatesExistingOwnerWithNewValues() {
-        let existingOwner = Owner.CurrentOwner.TestData.defaultOwner
+        let existingOwner = Owner.Test.kateAnderson
         _ = current?.update(with: existingOwner)
 
-        let updatedOwner = Owner.CurrentOwner.TestData.updatedOwner
+        let updatedOwner = Owner.Test.aleksPeterson
         _ = current?.update(with: updatedOwner)
 
         let retrievedOwner = current?.get()

@@ -54,4 +54,7 @@ final class Owner: Identifiable, Codable {
     convenience init() {
         self.init(name: "User", surname: "", phone: "", avatarUrl: nil, address: "", rating: 0)
     }
+
+    /// The instance of current owner using the app.
+    static let current = CurrentOwner()
 }
