@@ -30,17 +30,14 @@ final class CurrentOwnerGetTests: XCTestCase {
     }
 
     func testGetMethodReturnsNewOwnerWithExpectedPropertiesForNonExistingRecord() {
-        guard let retrievedOwner = current?.get() else {
-            XCTFail("The owner instance returns nil.")
-            return
-        }
+       let retrievedOwner = current?.get()
 
-        XCTAssertEqual(retrievedOwner.name, "User")
-        XCTAssertEqual(retrievedOwner.surname, "")
-        XCTAssertEqual(retrievedOwner.address, "")
-        XCTAssertNil(retrievedOwner.avatarUrl)
-        XCTAssertEqual(retrievedOwner.phone, "")
-        XCTAssertEqual(retrievedOwner.rating, 0)
+        XCTAssertEqual(retrievedOwner?.name, "User")
+        XCTAssertEqual(retrievedOwner?.surname, "")
+        XCTAssertEqual(retrievedOwner?.address, "")
+        XCTAssertNil(retrievedOwner?.avatarUrl)
+        XCTAssertEqual(retrievedOwner?.phone, "")
+        XCTAssertEqual(retrievedOwner?.rating, 0)
     }
 
     func testGetMethodReturnsExpectedOwnerPropertiesForExistingOwner() {

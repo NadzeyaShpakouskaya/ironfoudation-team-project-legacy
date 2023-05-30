@@ -2,7 +2,7 @@ import Foundation
 
 extension Owner {
     /**
-     A private nested struct that handles the retrieval of the current owner.
+     Handles the operations with current owner.
      */
     struct CurrentOwner {
         // MARK: - Public Interface
