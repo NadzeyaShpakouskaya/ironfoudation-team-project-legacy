@@ -4,32 +4,32 @@ import Foundation
  A person who owns a pet (or several pets) and might be interested in finding a pet sitter for them.
  */
 final class Owner: Identifiable, Codable {
-    /// Uniquely identifies the pet owner.
+    /// Unique identifier.
     let id: UUID
 
-    /// The first name of the pet owner.
+    /// The first name.
     var name: String
 
-    /// The last name of the pet owner.
+    /// The last name.
     var surname: String
 
-    /// The phone number of the pet owner.
+    /// The phone number.
     var phone: String
 
-    /// URL that contains an avatar image of the pet owner.
+    /// URL that contains an avatar image.
     var avatarUrl: URL?
 
-    /// The address of the pet owner.
+    /// The home address.
     var address: String
 
-    /// The rating of the pet owner.
+    /// The rating.
     var rating: Double
 
     /**
-     Creates an owner instance with the specified parameters.
+     Creates an owner instance with the specified parameters with the unique identifier.
 
      - Parameters:
-        - name:  The first name of the pet owner.
+        - name: The first name of the pet owner.
         - surname: The last name of the pet owner.
         - phone: The phone number of the pet owner.
         - avatarUrl: The URL that provides an avatar image of the pet owner.
