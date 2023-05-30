@@ -5,7 +5,7 @@ final class CurrentOwnerGetTests: XCTestCase {
 
     override func setUp() {
         current?.delete()
-        let new = Owner.CurrentOwner(Owner.CurrentOwner.TestData.storageName)
+        let new = Owner.CurrentOwner()
         current = new
     }
 
@@ -30,7 +30,7 @@ final class CurrentOwnerGetTests: XCTestCase {
     }
 
     func testGetMethodReturnsNewOwnerWithExpectedPropertiesForNonExistingRecord() {
-       let retrievedOwner = current?.get()
+        let retrievedOwner = current?.get()
 
         XCTAssertEqual(retrievedOwner?.name, "User")
         XCTAssertEqual(retrievedOwner?.surname, "")

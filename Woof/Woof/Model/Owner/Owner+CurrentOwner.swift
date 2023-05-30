@@ -7,10 +7,6 @@ extension Owner {
     struct CurrentOwner {
         // MARK: - Public Interface
 
-        init(_ storageName: String) {
-            storage = KeyValueStorage(storageName)
-        }
-
         /**
          Retrieves the current owner.
 
@@ -34,7 +30,7 @@ extension Owner {
                 return false
             }
 
-            return storage?.save(data, for: ownerKey) ?? false
+            return storage.save(data, for: ownerKey)
         }
 
         /**
@@ -42,14 +38,13 @@ extension Owner {
          If instance doesn't exist, do nothing.
          */
         func delete() {
-            storage?.deleteData(for: ownerKey)
+            storage.deleteData(for: ownerKey)
         }
 
         // MARK: - Private Interface
 
-        private var storage: KeyValueStorage?
-        private let ownerKey = "owner"
-
+        private var storage = KeyValueStorage(KeyValueStorage.StorageName.storageName)
+        private var ownerKey = KeyValueStorage.Key.ownerKey
         /**
          Retrieves the owner from storage.
 
@@ -57,7 +52,7 @@ extension Owner {
          otherwise `nil`.
          */
         private func getOwner() -> Owner? {
-            guard let data = storage?.loadData(for: ownerKey) else {
+            guard let data = storage.loadData(for: ownerKey) else {
                 return nil
             }
             guard let owner = try? JSONDecoder().decode(Owner.self, from: data) else {

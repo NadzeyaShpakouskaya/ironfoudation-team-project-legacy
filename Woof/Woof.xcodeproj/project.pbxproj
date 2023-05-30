@@ -27,6 +27,9 @@
 		FD02917A2A0E2C5000F88377 /* AppStyle+FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7F98A02A0E0E280058DBEB /* AppStyle+FontStyle.swift */; };
 		FD02917B2A0E2C5300F88377 /* AppStyle+UIElementConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7F98A22A0E10510058DBEB /* AppStyle+UIElementConstant.swift */; };
 		FD02917C2A0E2CBC00F88377 /* AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7F989E2A0E0D2C0058DBEB /* AppStyle.swift */; };
+		FD14A29D2A2616ED00362461 /* KeyValueStorage+StorageName.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD14A29C2A2616ED00362461 /* KeyValueStorage+StorageName.swift */; };
+		FD14A29E2A26199300362461 /* KeyValueStorage+Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8182412A24C1DF00AE1016 /* KeyValueStorage+Key.swift */; };
+		FD14A29F2A26199600362461 /* KeyValueStorage+StorageName.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD14A29C2A2616ED00362461 /* KeyValueStorage+StorageName.swift */; };
 		FD1FA3B52A090916000A3A91 /* Sitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD143CC2A03E575000BBA77 /* Sitter.swift */; };
 		FD1FA3C32A0A682E000A3A91 /* SitterCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1FA3C22A0A682E000A3A91 /* SitterCardViewModel.swift */; };
 		FD1FA3CC2A0A781E000A3A91 /* Sitter+Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1FA3CB2A0A781E000A3A91 /* Sitter+Dummy.swift */; };
@@ -57,7 +60,7 @@
 		FD8182332A24B99100AE1016 /* Owner+CurrentOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8182322A24B99100AE1016 /* Owner+CurrentOwner.swift */; };
 		FD81823F2A24C00000AE1016 /* OwnerInitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD81823E2A24C00000AE1016 /* OwnerInitTests.swift */; };
 		FD8182402A24C09200AE1016 /* Owner+CurrentOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8182322A24B99100AE1016 /* Owner+CurrentOwner.swift */; };
-		FD8182422A24C1DF00AE1016 /* Owner+StorageInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8182412A24C1DF00AE1016 /* Owner+StorageInformation.swift */; };
+		FD8182422A24C1DF00AE1016 /* KeyValueStorage+Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8182412A24C1DF00AE1016 /* KeyValueStorage+Key.swift */; };
 		FD8182442A24C5C500AE1016 /* CurrentOwnerGetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8182432A24C5C500AE1016 /* CurrentOwnerGetTests.swift */; };
 		FD8182462A24C5F800AE1016 /* CurrentOwnerUpdateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8182452A24C5F800AE1016 /* CurrentOwnerUpdateTests.swift */; };
 		FD81824C2A24D94D00AE1016 /* CurrentOwner+TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD81824B2A24D94D00AE1016 /* CurrentOwner+TestData.swift */; };
@@ -104,6 +107,7 @@
 		FD0291742A0E273500F88377 /* BioSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioSectionView.swift; sourceTree = "<group>"; };
 		FD0291762A0E2B0700F88377 /* AppStyle+FontStyleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppStyle+FontStyleTests.swift"; sourceTree = "<group>"; };
 		FD0291782A0E2B2300F88377 /* AppStyle+UIElementConstantTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppStyle+UIElementConstantTests.swift"; sourceTree = "<group>"; };
+		FD14A29C2A2616ED00362461 /* KeyValueStorage+StorageName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyValueStorage+StorageName.swift"; sourceTree = "<group>"; };
 		FD1FA3C22A0A682E000A3A91 /* SitterCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitterCardViewModel.swift; sourceTree = "<group>"; };
 		FD1FA3CB2A0A781E000A3A91 /* Sitter+Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sitter+Dummy.swift"; sourceTree = "<group>"; };
 		FD2F7B2C2A0CDC44008F6F49 /* EmilyDoeAvatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = EmilyDoeAvatar.jpg; sourceTree = "<group>"; };
@@ -128,7 +132,7 @@
 		FD81822F2A20C3C300AE1016 /* KeyValueStorage+TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyValueStorage+TestData.swift"; sourceTree = "<group>"; };
 		FD8182322A24B99100AE1016 /* Owner+CurrentOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Owner+CurrentOwner.swift"; sourceTree = "<group>"; };
 		FD81823E2A24C00000AE1016 /* OwnerInitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerInitTests.swift; sourceTree = "<group>"; };
-		FD8182412A24C1DF00AE1016 /* Owner+StorageInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Owner+StorageInformation.swift"; sourceTree = "<group>"; };
+		FD8182412A24C1DF00AE1016 /* KeyValueStorage+Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyValueStorage+Key.swift"; sourceTree = "<group>"; };
 		FD8182432A24C5C500AE1016 /* CurrentOwnerGetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentOwnerGetTests.swift; sourceTree = "<group>"; };
 		FD8182452A24C5F800AE1016 /* CurrentOwnerUpdateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentOwnerUpdateTests.swift; sourceTree = "<group>"; };
 		FD81824B2A24D94D00AE1016 /* CurrentOwner+TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CurrentOwner+TestData.swift"; sourceTree = "<group>"; };
@@ -200,6 +204,8 @@
 			isa = PBXGroup;
 			children = (
 				368BF0EB2A152FA500F3F750 /* KeyValueStorage.swift */,
+				FD8182412A24C1DF00AE1016 /* KeyValueStorage+Key.swift */,
+				FD14A29C2A2616ED00362461 /* KeyValueStorage+StorageName.swift */,
 			);
 			path = KeyValueStorage;
 			sourceTree = "<group>";
@@ -346,7 +352,6 @@
 			children = (
 				3673D6362A04F7FD009D699D /* Owner.swift */,
 				FD8182322A24B99100AE1016 /* Owner+CurrentOwner.swift */,
-				FD8182412A24C1DF00AE1016 /* Owner+StorageInformation.swift */,
 			);
 			path = Owner;
 			sourceTree = "<group>";
@@ -665,6 +670,7 @@
 				36BEA7582A1621B10020F6AE /* KeyValueStorageSaveTests.swift in Sources */,
 				FD8182302A20C3C300AE1016 /* KeyValueStorage+TestData.swift in Sources */,
 				36C54AFC2A17A79200748023 /* KeyValueStorageLoadTests.swift in Sources */,
+				FD14A29E2A26199300362461 /* KeyValueStorage+Key.swift in Sources */,
 				FD8182462A24C5F800AE1016 /* CurrentOwnerUpdateTests.swift in Sources */,
 				FD02917A2A0E2C5000F88377 /* AppStyle+FontStyle.swift in Sources */,
 				FD0291772A0E2B0700F88377 /* AppStyle+FontStyleTests.swift in Sources */,
@@ -679,6 +685,7 @@
 				FD02917C2A0E2CBC00F88377 /* AppStyle.swift in Sources */,
 				FD2F7B332A0CE032008F6F49 /* Owner.swift in Sources */,
 				362732A22A1B800B0062E4B5 /* KeyValueStorageDeleteTests.swift in Sources */,
+				FD14A29F2A26199600362461 /* KeyValueStorage+StorageName.swift in Sources */,
 				FDD143FE2A052D5A000BBA77 /* Color+AppScheme.swift in Sources */,
 				FDD144012A0532D5000BBA77 /* Image+IconNameTests.swift in Sources */,
 				FD02917B2A0E2C5300F88377 /* AppStyle+UIElementConstant.swift in Sources */,
@@ -718,12 +725,13 @@
 				FD37A9902A0B65120001BABB /* DataTransformer.swift in Sources */,
 				FD7F989D2A0E04650058DBEB /* SitterCardView.swift in Sources */,
 				FD2FA22B2A129CA1002B618B /* SitterListViewModel.swift in Sources */,
-				FD8182422A24C1DF00AE1016 /* Owner+StorageInformation.swift in Sources */,
+				FD8182422A24C1DF00AE1016 /* KeyValueStorage+Key.swift in Sources */,
 				FDE0CEA92A00F8370023F784 /* WoofApp.swift in Sources */,
 				FD7F98A52A0E12290058DBEB /* AvatarView.swift in Sources */,
 				FD1FA3CC2A0A781E000A3A91 /* Sitter+Dummy.swift in Sources */,
 				EF7B7F002A147D8300F00B4E /* TextWithIconLabelView.swift in Sources */,
 				EF5A7F2F2A14504F00585616 /* DetailPetSitterViewModel.swift in Sources */,
+				FD14A29D2A2616ED00362461 /* KeyValueStorage+StorageName.swift in Sources */,
 				FD0291752A0E273500F88377 /* BioSectionView.swift in Sources */,
 				FD8182332A24B99100AE1016 /* Owner+CurrentOwner.swift in Sources */,
 			);

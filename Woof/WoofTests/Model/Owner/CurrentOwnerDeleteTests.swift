@@ -5,7 +5,7 @@ final class CurrentOwnerDeleteTests: XCTestCase {
 
     override func setUp() {
         current?.delete()
-        let new = Owner.CurrentOwner(Owner.CurrentOwner.TestData.storageName)
+        let new = Owner.CurrentOwner()
         current = new
     }
 
