@@ -56,5 +56,5 @@ final class Owner: Identifiable, Codable {
     }
 
     /// The instance of current owner using the app.
-    static let current = CurrentOwner(KeyValueStorage.StorageName.storageName)
+    static var current = CurrentOwner(KeyValueStorage.StorageName.ownerStorage)
 }
