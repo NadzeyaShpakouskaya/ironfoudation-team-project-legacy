@@ -38,7 +38,7 @@ extension Owner {
         }
 
         // MARK: - Private Interface
-        
+
         private var storage: KeyValueStorage?
         private var ownerKey = KeyValueStorage.Key.ownerKey
         /**
