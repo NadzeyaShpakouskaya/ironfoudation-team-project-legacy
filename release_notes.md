@@ -24,7 +24,7 @@ The format is based on [Release_notes format](https://github.com/ios-course/iron
 </p>
 </details>
 
-`Get detailed information about the pet sitter`: The app allows pet owners to get more information about the pet sitter by tapping them in the list.```
+`Get detailed information about the pet sitter`: The app allows pet owners to get more information about the pet sitter by tapping them in the list.
 
 </details>
 
