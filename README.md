@@ -28,7 +28,7 @@ As a pet sitter, you can provide the service of walks using your own schedule, p
 
 ## Installation
 
-**Pre-requisites**: _installed Xcode with the version specified under the [current development environment](#current-dev-environment)._
+**Pre-requisites**: _installed Xcode with the version specified under the [current dev environment](#current-dev-environment)._
 
 1. Go to the [Release](https://github.com/ios-course/ironfoudation-team-project/releases) section in the current repository.
 2. Select the latest one or any specific release you want to install.
