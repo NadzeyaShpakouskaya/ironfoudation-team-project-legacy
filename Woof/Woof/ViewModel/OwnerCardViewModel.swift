@@ -5,18 +5,18 @@ final class OwnerCardViewModel: ObservableObject {
     /// The full name of the pet owner.
     @Published var fullName: String
 
-    /// The phone number of the pet owner
+    /// The phone number of the pet owner.
     @Published var phoneNumber: String
 
     /// The address of the pet owner.
     @Published var address: String
 
-    /// The URL of the owner's avatar image.
+    /// The URL of the pet owner's avatar image.
     @Published var imageURL: URL?
 
     /// Initializes a new instance of the pet owner card view model with the provided owner.
     ///
-    /// - Parameter sitter: The owner for which the detailed view model is created.
+    /// - Parameter owner: The owner for which the card view model is created.
     init(owner: Owner) {
         self.owner = owner
         fullName = DataTransformer.fullName(name: owner.name, surname: owner.surname)
