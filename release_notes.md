@@ -6,7 +6,7 @@ The file describes all the changes, that are affected the usage of the applicati
 
 The format is based on [Release_notes format](https://github.com/ios-course/ironfoudation-team-project/wiki/Release_notes-format).
 
-## [0.1.0] - [31.05.2023]
+## [0.1.0]
 
 ### New features
 
