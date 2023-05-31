@@ -6,16 +6,16 @@ The file describes all the changes, that are affected the usage of the applicati
 
 The format is based on [Release_notes format](https://github.com/ios-course/ironfoudation-team-project/wiki/Release_notes-format).
 
-## [0.1.0] - [29.05.2023]
+## [0.1.0] - [31.05.2023]
 
 ### New features
 
-`Quicklook`: Users can check a list of pet sitters available for pet owners. Each list row includes an avatar, full name, price, short bio, and pet sitter rating.
+`Quicklook`: Pet owners can see a list of available pet sitters. For every pet sitter the following information is available: an avatar icon, full name, current rate, short bio, and rating.
 
 </details>
 
 <details>
-<summary> CLICK HERE</summary>
+<summary> See the screenshot of the UI </summary>
 
 <p>
 
@@ -24,7 +24,7 @@ The format is based on [Release_notes format](https://github.com/ios-course/iron
 </p>
 </details>
 
-`Get detailed information about the pet sitter`: The app allows users to get more information on the tap of the pet sitter's row in the list like the pet sitter's phone number, rating, and full bio.
+`Get detailed information about the pet sitter`: The app allows pet owners to get more information about the pet sitter by tapping them in the list.```
 
 </details>
 
@@ -37,6 +37,3 @@ The format is based on [Release_notes format](https://github.com/ios-course/iron
 
 </p>
 </details>
-
-### Notes
-[General info, installation, authors](https://github.com/ios-course/ironfoudation-team-project/blob/main/README.md)
