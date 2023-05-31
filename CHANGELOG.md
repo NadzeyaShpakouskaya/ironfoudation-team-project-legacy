@@ -10,7 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 - Add `OwnerCardView` as part of `OwnerInformationView`, `OwnerInformationView` to the Profile's tab in `MainTabView` - [#47](https://github.com/ios-course/ironfoudation-team-project/pull/47)
 
-## [0.1.0] - 29.05.2023
+## [0.1.0] - 31.05.2023
 
 ### Added 
 
