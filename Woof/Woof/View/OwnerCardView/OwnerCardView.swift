@@ -1,6 +1,6 @@
 import SwiftUI
 
-/// A view displaying  information about the pet owner.
+/// A view displaying information about the pet owner.
 struct OwnerCardView: View {
     /// The view model responsible for providing data to the view.
     @ObservedObject var viewModel: OwnerCardViewModel
