@@ -34,11 +34,10 @@ As a pet sitter, you can provide the service of walks using your own schedule, p
 2. Select the latest one or any specific release you want to install.
 3. Download the archive in the format that best suits your needs from the attached `Assets`.
 4. Extract the project from the downloaded archive.
-5. Open file `Woof.xcodeproj` from a directory with the extracted project in Xcode.
+5. Navigate into the extracted dir and open the `Woof.xcodeproj` file in Xcode.
 6. Select your device as a run destination for the project. If you don't know how to run the app on a real device, please check the [documentation](https://developer.apple.com/documentation/xcode/running-your-app-in-simulator-or-on-a-device).
 7. Press the `Run` button.
-8. Profit 🥳. 
-9. Enjoy the app.
+8. Profit! Enjoy the app. 🥳
 
 ## Authors
 
