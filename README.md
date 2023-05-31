@@ -33,6 +33,7 @@ As a pet sitter, you can provide the service of walks using your own schedule, p
 1. Go to the [Releases](https://github.com/ios-course/ironfoudation-team-project/releases) section in the current repository.
 1. Select the latest one or any specific release you want to install.
 1. Download the archive in the format that best suits your needs from the attached `Assets`.
+(If your browser doesn't automatically unzip the archive, do it yourself by right-clicking on the downloaded archive and select Unzip).
 1. Navigate into the downloaded folder and open the `Woof.xcodeproj` file in Xcode.
 1. Select your device as a run destination for the project. If you don't know how to run the app on a real device, please check the [documentation](https://developer.apple.com/documentation/xcode/running-your-app-in-simulator-or-on-a-device).
 1. Press the `Run` button.
