@@ -17,9 +17,6 @@ final class OwnerProfileViewModel: ObservableObject {
     /// The URL of the owner's avatar image.
     @Published var avatarURL: URL?
 
-    /// The error occurs during work with the model layer
-    @Published var error: DataError?
-
     /**
      Initializes an instance of the `OwnerProfileViewModel` class.
      */
@@ -42,16 +39,10 @@ final class OwnerProfileViewModel: ObservableObject {
         currentOwner.address = address
         currentOwner.avatarUrl = avatarURL
 
-        guard let data = try? JSONEncoder().encode(currentOwner) else {
-            error = .encodeDataError
-            return
-        }
+        guard let data = try? JSONEncoder().encode(currentOwner) else { return }
 
-        guard KeyValueStorage(KeyValueStorage.StorageName.ownerStorage)
-            .save(data, for: KeyValueStorage.Key.ownerKey) != true else {
-            error = .saveDataError
-            return
-        }
+       KeyValueStorage(KeyValueStorage.StorageName.ownerStorage)
+            .save(data, for: KeyValueStorage.Key.ownerKey)
     }
 
     /**
@@ -70,11 +61,9 @@ final class OwnerProfileViewModel: ObservableObject {
     private func loadOwnerFromStorage() -> Owner? {
         guard let data = KeyValueStorage(KeyValueStorage.StorageName.ownerStorage)
             .loadData(for: KeyValueStorage.Key.ownerKey) else {
-            error = .loadDataError
             return nil
         }
         guard let owner = try? JSONDecoder().decode(Owner.self, from: data) else {
-            error = .decodeDataError
             return nil
         }
 

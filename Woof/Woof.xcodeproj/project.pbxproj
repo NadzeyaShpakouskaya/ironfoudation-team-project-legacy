@@ -30,8 +30,6 @@
 		FD14A2A52A277FA400362461 /* OwnerProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD14A2A42A277FA400362461 /* OwnerProfileViewModel.swift */; };
 		FD14A2A72A27803600362461 /* KeyValueStorage+StorageName.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD14A2A62A27803600362461 /* KeyValueStorage+StorageName.swift */; };
 		FD14A2A92A27804F00362461 /* KeyValueStorage+Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD14A2A82A27804F00362461 /* KeyValueStorage+Key.swift */; };
-		FD14A2AD2A2868F200362461 /* DataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD14A2AC2A2868F200362461 /* DataError.swift */; };
-		FD14A2AF2A286A0300362461 /* DataError+Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD14A2AE2A286A0300362461 /* DataError+Description.swift */; };
 		FD14A2B12A286BB800362461 /* OwnerProfileViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD14A2B02A286BB800362461 /* OwnerProfileViewModelTests.swift */; };
 		FD14A2B22A286BBD00362461 /* OwnerProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD14A2A42A277FA400362461 /* OwnerProfileViewModel.swift */; };
 		FD14A2B42A286C5200362461 /* KeyValueStorage+StorageName.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD14A2A62A27803600362461 /* KeyValueStorage+StorageName.swift */; };
@@ -64,7 +62,6 @@
 		FD7F98A32A0E10510058DBEB /* AppStyle+UIElementConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7F98A22A0E10510058DBEB /* AppStyle+UIElementConstant.swift */; };
 		FD7F98A52A0E12290058DBEB /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7F98A42A0E12290058DBEB /* AvatarView.swift */; };
 		FD8182302A20C3C300AE1016 /* KeyValueStorage+TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD81822F2A20C3C300AE1016 /* KeyValueStorage+TestData.swift */; };
-		FD9802262A2875A5003DEE5C /* DataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD14A2AC2A2868F200362461 /* DataError.swift */; };
 		FD9802282A287670003DEE5C /* OwnerProfileViewModelGetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9802272A287670003DEE5C /* OwnerProfileViewModelGetTests.swift */; };
 		FD98022A2A2878C1003DEE5C /* Owner+Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9802292A2878C1003DEE5C /* Owner+Test.swift */; };
 		FDCF49132A1CDA8800CD3BBB /* DetailPetSitterViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCF49122A1CDA8800CD3BBB /* DetailPetSitterViewModelTests.swift */; };
@@ -113,8 +110,6 @@
 		FD14A2A42A277FA400362461 /* OwnerProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerProfileViewModel.swift; sourceTree = "<group>"; };
 		FD14A2A62A27803600362461 /* KeyValueStorage+StorageName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyValueStorage+StorageName.swift"; sourceTree = "<group>"; };
 		FD14A2A82A27804F00362461 /* KeyValueStorage+Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyValueStorage+Key.swift"; sourceTree = "<group>"; };
-		FD14A2AC2A2868F200362461 /* DataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataError.swift; sourceTree = "<group>"; };
-		FD14A2AE2A286A0300362461 /* DataError+Description.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataError+Description.swift"; sourceTree = "<group>"; };
 		FD14A2B02A286BB800362461 /* OwnerProfileViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerProfileViewModelTests.swift; sourceTree = "<group>"; };
 		FD14A2B62A28709400362461 /* OwnerProfileViewModelSaveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerProfileViewModelSaveTests.swift; sourceTree = "<group>"; };
 		FD1FA3C22A0A682E000A3A91 /* SitterCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitterCardViewModel.swift; sourceTree = "<group>"; };
@@ -260,15 +255,6 @@
 				3673D6362A04F7FD009D699D /* Owner.swift */,
 			);
 			path = Owner;
-			sourceTree = "<group>";
-		};
-		FD14A2AB2A2868C900362461 /* DataError */ = {
-			isa = PBXGroup;
-			children = (
-				FD14A2AC2A2868F200362461 /* DataError.swift */,
-				FD14A2AE2A286A0300362461 /* DataError+Description.swift */,
-			);
-			path = DataError;
 			sourceTree = "<group>";
 		};
 		FD14A2B82A2870A500362461 /* OwnerProfileViewModelTests */ = {
@@ -472,7 +458,6 @@
 			children = (
 				FD14A2AA2A28685000362461 /* Owner */,
 				36C54AFA2A1631CC00748023 /* KeyValueStorage */,
-				FD14A2AB2A2868C900362461 /* DataError */,
 				FD1FA3CA2A0A77FE000A3A91 /* Sitter */,
 			);
 			path = Model;
@@ -721,7 +706,6 @@
 				36199B0F2A1FB1C900725FC8 /* KeyValueStorage+TestKey.swift in Sources */,
 				368BF0EF2A16103B00F3F750 /* KeyValueStorage.swift in Sources */,
 				FD37A9952A0B6EA90001BABB /* DataTransformer.swift in Sources */,
-				FD9802262A2875A5003DEE5C /* DataError.swift in Sources */,
 				FD2F7B342A0CE03B008F6F49 /* SitterCardViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -731,9 +715,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF5A7F332A14563800585616 /* DetailedPetSitterView.swift in Sources */,
-				FD14A2AD2A2868F200362461 /* DataError.swift in Sources */,
 				FD1FA3B52A090916000A3A91 /* Sitter.swift in Sources */,
-				FD14A2AF2A286A0300362461 /* DataError+Description.swift in Sources */,
 				368BF0EC2A152FA500F3F750 /* KeyValueStorage.swift in Sources */,
 				FDD143E22A05233B000BBA77 /* Image+IconName.swift in Sources */,
 				FDD143C72A03BD48000BBA77 /* OwnerMainTabView.swift in Sources */,
