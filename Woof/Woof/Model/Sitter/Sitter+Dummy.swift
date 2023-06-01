@@ -102,7 +102,7 @@ extension Sitter {
                 avatarUrl: Bundle.main.url(forResource: "JamesAndersonAvatar", withExtension: "jpg"),
                 bio: """
                 Professional dog walker with a passion for canine fitness.
-                    Customizes exercise routines based on individual needs.
+                Customizes exercise routines based on individual needs.
                 """,
                 rating: 4.7,
                 pricePerHour: 21.0
