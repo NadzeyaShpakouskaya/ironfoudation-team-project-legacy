@@ -16,6 +16,6 @@ extension AppStyle {
         static let avatarSideSize = 80.0
 
         /// The spacing that can be used in VStack.
-        static let vStackSpacing = 8.0
+        static let vStackSpacingOwnerCardView = 8.0
     }
 }
