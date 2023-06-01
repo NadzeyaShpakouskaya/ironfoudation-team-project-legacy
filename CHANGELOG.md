@@ -7,6 +7,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ## [Unreleased]
 
 ### Added 
+
+- Add `OwnerCardView` as part of `OwnerInformationView`, `OwnerInformationView` to the Profile's tab in `MainTabView` - [#47](https://github.com/ios-course/ironfoudation-team-project/pull/47)
+
+## [0.1.0] - 31.05.2023
+
+### Added 
+
 - Add environment setting files: `.gitignore` file, rules for linters - [#24](https://github.com/ios-course/ironfoudation-team-project/pull/24)
 - Add project documentation files: `README.md`, `board_rules.md`, `CHANGELOG.md`, `release_notes.md` - [#25](https://github.com/ios-course/ironfoudation-team-project/pull/25)
 - Add Xcode project and integrate linters into Xcode build phase - [#26](https://github.com/ios-course/ironfoudation-team-project/pull/26)
@@ -17,9 +24,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Add `SitterCardViewModel` for `SitterCardView` - [#38](https://github.com/ios-course/ironfoudation-team-project/pull/38)
 - Add `SitterCardView` as part of `SitterListView` - [#42](https://github.com/ios-course/ironfoudation-team-project/pull/42)
 - Add `SitterListView` to the Sitter's tab in `MainTabView` - [#48](https://github.com/ios-course/ironfoudation-team-project/pull/48)
-- Add `OwnerCardView` as part of `OwnerInformationView`, `OwnerInformationView` to the Profile's tab in `MainTabView` - [#47](https://github.com/ios-course/ironfoudation-team-project/pull/47)
 - Add `DetailedSitterView` to present the detailed information about the selected sitter from `SitterListView`  - [#55](https://github.com/ios-course/ironfoudation-team-project/pull/55)
 - Add template for PRs  - [#53](https://github.com/ios-course/ironfoudation-team-project/pull/53)
 - Add template for issues  - [#54](https://github.com/ios-course/ironfoudation-team-project/pull/54)
 - Add missed information to `CHANGELOG.md`  - [#56](https://github.com/ios-course/ironfoudation-team-project/pull/56)
 - Add the `KeyValueStorage` class to manage persistent data storage - [58](https://github.com/ios-course/ironfoudation-team-project/pull/58)
+- Add `EditOwnerInformationView` - [77](https://github.com/ios-course/ironfoudation-team-project/pull/77)
