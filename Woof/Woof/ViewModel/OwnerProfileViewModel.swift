@@ -1,15 +1,27 @@
 import Foundation
 
+/// The view model for a owner profile view that is responsible for preparing and providing data for it.
 final class OwnerProfileViewModel: ObservableObject {
+    /// The name of owner
     @Published var name: String = ""
+    
+    /// The surname of owner
     @Published var surname: String = ""
+    
+    /// The phone number of owner
     @Published var phone: String = ""
+    
+    /// The home address of owner
     @Published var address: String = ""
+    
+    /// The URL of the owner's avatar image.
     @Published var avatarURL: URL?
+    
+    /// The error occurs during work with the model layer
     @Published var error: DataError?
     
     /**
-     Initializes an instance of the `OwnerCardViewModel` class, loads the owner object from user defaults if it exists.
+     Initializes an instance of the `OwnerProfileViewModel` class.
      */
     init() {
         name = currentOwner.name
@@ -19,7 +31,7 @@ final class OwnerProfileViewModel: ObservableObject {
         avatarURL = currentOwner.avatarUrl
     }
     
-    /// Saves the owner's property to storage.
+    /// Request model layer to save modified data.
     func save() {
         currentOwner.name = name
         currentOwner.surname = surname
@@ -39,6 +51,7 @@ final class OwnerProfileViewModel: ObservableObject {
         }
     }
     
+    // MARK: - Private interface
     private lazy var currentOwner: Owner = loadOwnerFromStorage() ?? Owner()
     
     private func loadOwnerFromStorage() -> Owner? {
