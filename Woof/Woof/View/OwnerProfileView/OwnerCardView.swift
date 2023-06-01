@@ -4,13 +4,17 @@ import SwiftUI
 struct OwnerCardView: View {
     /// The name of the pet owner.
     let name: String
-    /// The surname of the owner
+
+    /// The surname of the pet owner.
     let surname: String
-    /// The phone of the owner
+
+    /// The phone of the pet owner.
     let phone: String
-    /// The address of the owner
+
+    /// The address of the pet owner.
     let address: String
-    /// The URL of the avatar image of the owner.
+
+    /// The URL of the avatar image of the pet owner.
     let avatarUrl: URL?
 
     var body: some View {
@@ -26,7 +30,8 @@ struct OwnerCardView: View {
                     .system(
                         size: AppStyle.FontStyle.heading.size,
                         weight: .heavy
-                    ))
+                    )
+                )
                 Group {
                     Label(phone, systemImage: Image.IconName.phone)
                     Label(address, systemImage: Image.IconName.house)
@@ -50,6 +55,12 @@ struct OwnerCardView: View {
 
 struct OwnerCardView_Previews: PreviewProvider {
     static var previews: some View {
-        OwnerCardView(name: "sdf", surname: "dfdf", phone: "3435", address: "weg", avatarUrl: nil)
+        OwnerCardView(
+            name: Owner.Dummy.laraCroft.name,
+            surname: Owner.Dummy.laraCroft.surname,
+            phone: Owner.Dummy.laraCroft.phone,
+            address: Owner.Dummy.laraCroft.address,
+            avatarUrl: Owner.Dummy.laraCroft.avatarUrl
+        )
     }
 }
