@@ -30,3 +30,4 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Add missed information to `CHANGELOG.md`  - [#56](https://github.com/ios-course/ironfoudation-team-project/pull/56)
 - Add the `KeyValueStorage` class to manage persistent data storage - [58](https://github.com/ios-course/ironfoudation-team-project/pull/58)
 - Add `EditOwnerInformationView` - [77](https://github.com/ios-course/ironfoudation-team-project/pull/77)
+- Add `OwnerCardView`- [81](https://github.com/ios-course/ironfoudation-team-project/pull/81)
