@@ -17,12 +17,8 @@
 		36BEA7582A1621B10020F6AE /* KeyValueStorageSaveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BEA7572A1621B10020F6AE /* KeyValueStorageSaveTests.swift */; };
 		36C54AFC2A17A79200748023 /* KeyValueStorageLoadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C54AFB2A17A79200748023 /* KeyValueStorageLoadTests.swift */; };
 		EF16BB1E2A24D5FA007922C6 /* OwnerCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF16BB1D2A24D5FA007922C6 /* OwnerCardView.swift */; };
-		EF16BB232A24DDFF007922C6 /* OwnerCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF16BB222A24DDFF007922C6 /* OwnerCardViewModel.swift */; };
 		EF16BB262A24E101007922C6 /* PetOwner+Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF16BB252A24E101007922C6 /* PetOwner+Dummy.swift */; };
-		EF16BB282A26F6CF007922C6 /* LabelWithTextAndImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF16BB272A26F6CF007922C6 /* LabelWithTextAndImage.swift */; };
-		EF16BB2A2A26F9D5007922C6 /* OwnerCardViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF16BB292A26F9D5007922C6 /* OwnerCardViewModelTests.swift */; };
 		EF16BB2B2A26FB3E007922C6 /* PetOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3673D6362A04F7FD009D699D /* PetOwner.swift */; };
-		EF16BB2C2A26FBB0007922C6 /* OwnerCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF16BB222A24DDFF007922C6 /* OwnerCardViewModel.swift */; };
 		EF303EBE2A1762CF0086065B /* FiveStarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF303EBD2A1762CF0086065B /* FiveStarRatingView.swift */; };
 		EF5A7F2F2A14504F00585616 /* DetailPetSitterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5A7F2E2A14504F00585616 /* DetailPetSitterViewModel.swift */; };
 		EF5A7F332A14563800585616 /* DetailedPetSitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5A7F322A14563800585616 /* DetailedPetSitterView.swift */; };
@@ -95,10 +91,7 @@
 		36BEA7572A1621B10020F6AE /* KeyValueStorageSaveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStorageSaveTests.swift; sourceTree = "<group>"; };
 		36C54AFB2A17A79200748023 /* KeyValueStorageLoadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStorageLoadTests.swift; sourceTree = "<group>"; };
 		EF16BB1D2A24D5FA007922C6 /* OwnerCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerCardView.swift; sourceTree = "<group>"; };
-		EF16BB222A24DDFF007922C6 /* OwnerCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerCardViewModel.swift; sourceTree = "<group>"; };
 		EF16BB252A24E101007922C6 /* PetOwner+Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PetOwner+Dummy.swift"; sourceTree = "<group>"; };
-		EF16BB272A26F6CF007922C6 /* LabelWithTextAndImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelWithTextAndImage.swift; sourceTree = "<group>"; };
-		EF16BB292A26F9D5007922C6 /* OwnerCardViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerCardViewModelTests.swift; sourceTree = "<group>"; };
 		EF303EBD2A1762CF0086065B /* FiveStarRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveStarRatingView.swift; sourceTree = "<group>"; };
 		EF5A7F2E2A14504F00585616 /* DetailPetSitterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPetSitterViewModel.swift; sourceTree = "<group>"; };
 		EF5A7F322A14563800585616 /* DetailedPetSitterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedPetSitterView.swift; sourceTree = "<group>"; };
@@ -221,7 +214,6 @@
 			children = (
 				EF7B7EFF2A147D8300F00B4E /* TextWithIconLabelView.swift */,
 				EF303EBD2A1762CF0086065B /* FiveStarRatingView.swift */,
-				EF16BB272A26F6CF007922C6 /* LabelWithTextAndImage.swift */,
 			);
 			path = ReusableViews;
 			sourceTree = "<group>";
@@ -366,7 +358,6 @@
 			isa = PBXGroup;
 			children = (
 				FDCF49122A1CDA8800CD3BBB /* DetailPetSitterViewModelTests.swift */,
-				EF16BB292A26F9D5007922C6 /* OwnerCardViewModelTests.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -450,7 +441,6 @@
 				FD1FA3C22A0A682E000A3A91 /* SitterCardViewModel.swift */,
 				EF5A7F2E2A14504F00585616 /* DetailPetSitterViewModel.swift */,
 				FD2FA22A2A129CA1002B618B /* SitterListViewModel.swift */,
-				EF16BB222A24DDFF007922C6 /* OwnerCardViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -665,10 +655,8 @@
 				FD0291792A0E2B2300F88377 /* AppStyle+UIElementConstantTests.swift in Sources */,
 				FD37A9942A0B6E960001BABB /* FullNameTests.swift in Sources */,
 				FDCF49132A1CDA8800CD3BBB /* DetailPetSitterViewModelTests.swift in Sources */,
-				EF16BB2C2A26FBB0007922C6 /* OwnerCardViewModel.swift in Sources */,
 				FDCF49142A1CDB1600CD3BBB /* DetailPetSitterViewModel.swift in Sources */,
 				FDD143F72A052A11000BBA77 /* Color+AppSchemeTests.swift in Sources */,
-				EF16BB2A2A26F9D5007922C6 /* OwnerCardViewModelTests.swift in Sources */,
 				1CE7E9CC2A24889B000A0509 /* KeyValueStorage+UnitTests.swift in Sources */,
 				FD2F7B322A0CE029008F6F49 /* Sitter.swift in Sources */,
 				FD02917C2A0E2CBC00F88377 /* AppStyle.swift in Sources */,
@@ -694,7 +682,6 @@
 				FD1FA3B52A090916000A3A91 /* Sitter.swift in Sources */,
 				368BF0EC2A152FA500F3F750 /* KeyValueStorage.swift in Sources */,
 				FDD143E22A05233B000BBA77 /* Image+IconName.swift in Sources */,
-				EF16BB232A24DDFF007922C6 /* OwnerCardViewModel.swift in Sources */,
 				FDD143C72A03BD48000BBA77 /* OwnerMainTabView.swift in Sources */,
 				EF16BB262A24E101007922C6 /* PetOwner+Dummy.swift in Sources */,
 				FD7F989F2A0E0D2C0058DBEB /* AppStyle.swift in Sources */,
@@ -711,7 +698,6 @@
 				FD37A9902A0B65120001BABB /* DataTransformer.swift in Sources */,
 				FD7F989D2A0E04650058DBEB /* SitterCardView.swift in Sources */,
 				FD2FA22B2A129CA1002B618B /* SitterListViewModel.swift in Sources */,
-				EF16BB282A26F6CF007922C6 /* LabelWithTextAndImage.swift in Sources */,
 				FDE0CEA92A00F8370023F784 /* WoofApp.swift in Sources */,
 				FD7F98A52A0E12290058DBEB /* AvatarView.swift in Sources */,
 				FD1FA3CC2A0A781E000A3A91 /* Sitter+Dummy.swift in Sources */,
