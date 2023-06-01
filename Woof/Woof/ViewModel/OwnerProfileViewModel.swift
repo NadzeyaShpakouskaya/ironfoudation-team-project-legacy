@@ -21,8 +21,7 @@ final class OwnerProfileViewModel: ObservableObject {
      Initializes an instance of the `OwnerProfileViewModel` class.
      */
     init() {
-        let loadedOwner = getOwner()
-        currentOwner = loadedOwner
+        currentOwner = getOwner()
 
         name = currentOwner.name
         surname = currentOwner.surname

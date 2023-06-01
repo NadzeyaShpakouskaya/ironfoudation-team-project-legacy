@@ -1,8 +1,9 @@
 import Foundation
 
 extension KeyValueStorage {
+    /// Provides the name for storage
     enum StorageName {
-        /// The name of storage associated with the owner.
+        /// The storage name associated with the owner.
         static let ownerStorage = "OwnerStorage"
     }
 }
