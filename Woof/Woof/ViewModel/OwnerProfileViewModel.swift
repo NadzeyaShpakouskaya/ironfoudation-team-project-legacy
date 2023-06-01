@@ -69,9 +69,3 @@ final class OwnerProfileViewModel: ObservableObject {
     }
 }
 
-enum DataError: Error {
-    case decodeDataError
-    case encodeDataError
-    case loadDataError
-    case saveDataError
-}

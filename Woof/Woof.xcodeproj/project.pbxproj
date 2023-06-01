@@ -30,6 +30,8 @@
 		FD14A2A52A277FA400362461 /* OwnerProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD14A2A42A277FA400362461 /* OwnerProfileViewModel.swift */; };
 		FD14A2A72A27803600362461 /* KeyValueStorage+StorageName.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD14A2A62A27803600362461 /* KeyValueStorage+StorageName.swift */; };
 		FD14A2A92A27804F00362461 /* KeyValueStorage+Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD14A2A82A27804F00362461 /* KeyValueStorage+Key.swift */; };
+		FD14A2AD2A2868F200362461 /* DataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD14A2AC2A2868F200362461 /* DataError.swift */; };
+		FD14A2AF2A286A0300362461 /* DataError+Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD14A2AE2A286A0300362461 /* DataError+Description.swift */; };
 		FD1FA3B52A090916000A3A91 /* Sitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD143CC2A03E575000BBA77 /* Sitter.swift */; };
 		FD1FA3C32A0A682E000A3A91 /* SitterCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1FA3C22A0A682E000A3A91 /* SitterCardViewModel.swift */; };
 		FD1FA3CC2A0A781E000A3A91 /* Sitter+Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1FA3CB2A0A781E000A3A91 /* Sitter+Dummy.swift */; };
@@ -103,6 +105,8 @@
 		FD14A2A42A277FA400362461 /* OwnerProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerProfileViewModel.swift; sourceTree = "<group>"; };
 		FD14A2A62A27803600362461 /* KeyValueStorage+StorageName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyValueStorage+StorageName.swift"; sourceTree = "<group>"; };
 		FD14A2A82A27804F00362461 /* KeyValueStorage+Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyValueStorage+Key.swift"; sourceTree = "<group>"; };
+		FD14A2AC2A2868F200362461 /* DataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataError.swift; sourceTree = "<group>"; };
+		FD14A2AE2A286A0300362461 /* DataError+Description.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataError+Description.swift"; sourceTree = "<group>"; };
 		FD1FA3C22A0A682E000A3A91 /* SitterCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitterCardViewModel.swift; sourceTree = "<group>"; };
 		FD1FA3CB2A0A781E000A3A91 /* Sitter+Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sitter+Dummy.swift"; sourceTree = "<group>"; };
 		FD2F7B2C2A0CDC44008F6F49 /* EmilyDoeAvatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = EmilyDoeAvatar.jpg; sourceTree = "<group>"; };
@@ -244,6 +248,15 @@
 				3673D6362A04F7FD009D699D /* Owner.swift */,
 			);
 			path = Owner;
+			sourceTree = "<group>";
+		};
+		FD14A2AB2A2868C900362461 /* DataError */ = {
+			isa = PBXGroup;
+			children = (
+				FD14A2AC2A2868F200362461 /* DataError.swift */,
+				FD14A2AE2A286A0300362461 /* DataError+Description.swift */,
+			);
+			path = DataError;
 			sourceTree = "<group>";
 		};
 		FD1FA3CA2A0A77FE000A3A91 /* Sitter */ = {
@@ -435,6 +448,7 @@
 			children = (
 				FD14A2AA2A28685000362461 /* Owner */,
 				36C54AFA2A1631CC00748023 /* KeyValueStorage */,
+				FD14A2AB2A2868C900362461 /* DataError */,
 				FD1FA3CA2A0A77FE000A3A91 /* Sitter */,
 			);
 			path = Model;
@@ -685,7 +699,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF5A7F332A14563800585616 /* DetailedPetSitterView.swift in Sources */,
+				FD14A2AD2A2868F200362461 /* DataError.swift in Sources */,
 				FD1FA3B52A090916000A3A91 /* Sitter.swift in Sources */,
+				FD14A2AF2A286A0300362461 /* DataError+Description.swift in Sources */,
 				368BF0EC2A152FA500F3F750 /* KeyValueStorage.swift in Sources */,
 				FDD143E22A05233B000BBA77 /* Image+IconName.swift in Sources */,
 				FDD143C72A03BD48000BBA77 /* OwnerMainTabView.swift in Sources */,
