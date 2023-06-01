@@ -40,8 +40,8 @@ final class OwnerProfileViewModel: ObservableObject {
 
         guard let data = try? JSONEncoder().encode(currentOwner) else { return }
 
-        KeyValueStorage(KeyValueStorage.StorageName.ownerStorage)
-            .save(data, for: KeyValueStorage.Key.ownerKey)
+        KeyValueStorage(KeyValueStorage.Name.currentOwner)
+            .save(data, for: KeyValueStorage.Key.currentOwner)
     }
 
     /**
@@ -59,8 +59,8 @@ final class OwnerProfileViewModel: ObservableObject {
     private lazy var currentOwner: Owner = getOwner()
 
     private func loadOwnerFromStorage() -> Owner? {
-        guard let data = KeyValueStorage(KeyValueStorage.StorageName.ownerStorage)
-            .loadData(for: KeyValueStorage.Key.ownerKey) else {
+        guard let data = KeyValueStorage(KeyValueStorage.Name.currentOwner)
+            .loadData(for: KeyValueStorage.Key.currentOwner) else {
             return nil
         }
         guard let owner = try? JSONDecoder().decode(Owner.self, from: data) else {

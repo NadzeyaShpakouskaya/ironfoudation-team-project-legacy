@@ -6,8 +6,8 @@ final class OwnerProfileViewModelGetTests: XCTestCase {
     }
 
     func testGetOwnerMethodReturnsNewOwnerInstanceWhenThereIsNoSavedOwnerInformation() {
-        KeyValueStorage(KeyValueStorage.StorageName.ownerStorage)
-            .deleteData(for: KeyValueStorage.Key.ownerKey)
+        KeyValueStorage(KeyValueStorage.Name.currentOwner)
+            .deleteData(for: KeyValueStorage.Key.currentOwner)
 
         let owner = OwnerProfileViewModel().getOwner()
 

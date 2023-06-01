@@ -22,7 +22,7 @@ struct Owner: Identifiable, Codable {
     /// The address of the pet owner.
     var address: String
 
-    /// The rating of the pet owner.
+    /// The rating of the pet owner, that should be provided in range 0 to 5.
     var rating: Double
 
     /**
@@ -38,7 +38,14 @@ struct Owner: Identifiable, Codable {
 
      The new owner instance has a unique id.
      */
-    init(name: String, surname: String, phone: String, avatarUrl: URL?, address: String, rating: Double) {
+    init(
+        name: String,
+        surname: String,
+        phone: String,
+        avatarUrl: URL?,
+        address: String,
+        rating: Double
+    ) {
         id = UUID()
         self.name = name
         self.surname = surname
@@ -61,6 +68,13 @@ struct Owner: Identifiable, Codable {
      */
 
     init() {
-        self.init(name: "User", surname: "", phone: "", avatarUrl: nil, address: "", rating: 0)
+        self.init(
+            name: "User",
+            surname: "",
+            phone: "",
+            avatarUrl: nil,
+            address: "",
+            rating: 0
+        )
     }
 }

@@ -1,9 +1,10 @@
 import Foundation
 
 extension KeyValueStorage {
-    /// Provides the keys for storage
+    /// Provides the keys for storage.
     enum Key {
-        /// The key associated with the owner.
-        static let ownerKey = "owner"
+        /// The key associated with the data that contains information
+        /// about user using the app as owner.
+        static let currentOwner = "owner"
     }
 }
