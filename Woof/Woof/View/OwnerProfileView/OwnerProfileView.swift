@@ -6,15 +6,21 @@ struct OwnerProfileView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Text("Hello, World!")
+                Text(isEditing ? "Edit Owner Information" : "Owner Card View")
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {
                         isEditing.toggle()
-                    }) {
+                    }, label: {
                         Text(isEditing ? "Save" : "Edit")
-                    }
+                            .padding()
+                            .background(
+                                Capsule()
+                                    .foregroundColor(Color.App.purpleDark)
+                            )
+                            .foregroundColor(Color.App.white)
+                    })
                 }
             }
         }
