@@ -21,7 +21,7 @@ struct OwnerCardView: View {
         HStack {
             AvatarView(url: avatarUrl)
 
-            VStack(alignment: .leading, spacing: AppStyle.UIElementConstant.vStackSpacing) {
+            VStack(alignment: .leading, spacing: AppStyle.UIElementConstant.vStackSpacingOwnerCardView) {
                 Group {
                     Text(name)
                     Text(surname)
