@@ -49,7 +49,6 @@ struct OwnerCardView: View {
         .background(Color.App.purpleLight)
         .foregroundColor(.App.white)
         .cornerRadius(AppStyle.UIElementConstant.cornerRadius)
-        .frame(maxWidth: .infinity)
     }
 }
 
