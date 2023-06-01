@@ -41,14 +41,15 @@ final class OwnerProfileViewModel: ObservableObject {
 
         guard let data = try? JSONEncoder().encode(currentOwner) else { return }
 
-       KeyValueStorage(KeyValueStorage.StorageName.ownerStorage)
+        KeyValueStorage(KeyValueStorage.StorageName.ownerStorage)
             .save(data, for: KeyValueStorage.Key.ownerKey)
     }
 
     /**
-     Returns the `Owner` to prepare for presentation in View.
+     Returns the owner information that will be displayed in view.
 
-        - Returns: The owner instance from model layer or new instance of `Owner`, if couldn't get it.
+        - Returns: The owner instance from model layer or new instance of `Owner`,
+     if loading from model layer is failed.
      */
     func getOwner() -> Owner {
         loadOwnerFromStorage() ?? Owner()

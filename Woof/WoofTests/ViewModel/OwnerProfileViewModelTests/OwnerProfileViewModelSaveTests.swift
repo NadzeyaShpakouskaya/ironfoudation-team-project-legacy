@@ -8,10 +8,10 @@ final class OwnerProfileViewModelSaveTests: XCTestCase {
     func testSaveMethodSuccessfullySavedModifiedOwnerProperties() {
         let viewModel = OwnerProfileViewModel()
 
-        let newName = "Kate"
-        let newSurname = "Anderson"
-        let newAddress = "new address"
-        let newPhone = "new phone"
+        let newName = Owner.Test.kateAnderson.name
+        let newSurname = Owner.Test.kateAnderson.surname
+        let newAddress = Owner.Test.kateAnderson.address
+        let newPhone = Owner.Test.kateAnderson.phone
 
         viewModel.name = newName
         viewModel.surname = newSurname

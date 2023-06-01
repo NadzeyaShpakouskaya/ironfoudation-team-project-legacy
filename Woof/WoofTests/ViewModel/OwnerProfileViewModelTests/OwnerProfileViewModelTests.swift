@@ -8,10 +8,10 @@ final class OwnerProfileViewModelTests: XCTestCase {
     func testOwnerProfileViewModelInitializedWithPreviouslySavedData() {
         let savingOwnerVM = OwnerProfileViewModel()
 
-        let savedName = "Kate"
-        let savedSurname = "Anderson"
-        let savedAddress = "new address"
-        let savedPhone = "new phone"
+        let savedName = Owner.Test.kateAnderson.name
+        let savedSurname = Owner.Test.kateAnderson.surname
+        let savedAddress = Owner.Test.kateAnderson.address
+        let savedPhone = Owner.Test.kateAnderson.address
 
         savingOwnerVM.name = savedName
         savingOwnerVM.surname = savedSurname

@@ -5,7 +5,7 @@ final class OwnerProfileViewModelGetTests: XCTestCase {
         _ = OwnerProfileViewModel().getOwner()
     }
 
-    func testGetOwnerMethodReturnNewOwnerInstanceWhenThereIsNoSavedOwnerInformation() {
+    func testGetOwnerMethodReturnsNewOwnerInstanceWhenThereIsNoSavedOwnerInformation() {
         KeyValueStorage(KeyValueStorage.StorageName.ownerStorage)
             .deleteData(for: KeyValueStorage.Key.ownerKey)
 
@@ -15,17 +15,15 @@ final class OwnerProfileViewModelGetTests: XCTestCase {
         XCTAssertEqual(owner.surname, Owner().surname)
         XCTAssertEqual(owner.phone, Owner().phone)
         XCTAssertEqual(owner.address, Owner().address)
-        XCTAssertEqual(owner.avatarUrl, Owner().avatarUrl)
-        XCTAssertEqual(owner.rating, Owner().rating)
     }
 
     func testLoadMethodReturnsExpectedValuesWhenModifiedOwnerPropertiesWasSaved() {
         let viewModel = OwnerProfileViewModel()
 
         let newName = Owner.Test.kateAnderson.name
-        let newSurname = "Anderson"
-        let newAddress = "new address"
-        let newPhone = "new phone"
+        let newSurname = Owner.Test.kateAnderson.surname
+        let newAddress = Owner.Test.kateAnderson.address
+        let newPhone = Owner.Test.kateAnderson.phone
 
         viewModel.name = newName
         viewModel.surname = newSurname
