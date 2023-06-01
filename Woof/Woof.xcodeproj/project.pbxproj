@@ -27,6 +27,9 @@
 		FD02917A2A0E2C5000F88377 /* AppStyle+FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7F98A02A0E0E280058DBEB /* AppStyle+FontStyle.swift */; };
 		FD02917B2A0E2C5300F88377 /* AppStyle+UIElementConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7F98A22A0E10510058DBEB /* AppStyle+UIElementConstant.swift */; };
 		FD02917C2A0E2CBC00F88377 /* AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7F989E2A0E0D2C0058DBEB /* AppStyle.swift */; };
+		FD14A2A52A277FA400362461 /* OwnerProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD14A2A42A277FA400362461 /* OwnerProfileViewModel.swift */; };
+		FD14A2A72A27803600362461 /* KeyValueStorage+StorageName.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD14A2A62A27803600362461 /* KeyValueStorage+StorageName.swift */; };
+		FD14A2A92A27804F00362461 /* KeyValueStorage+Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD14A2A82A27804F00362461 /* KeyValueStorage+Key.swift */; };
 		FD1FA3B52A090916000A3A91 /* Sitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD143CC2A03E575000BBA77 /* Sitter.swift */; };
 		FD1FA3C32A0A682E000A3A91 /* SitterCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1FA3C22A0A682E000A3A91 /* SitterCardViewModel.swift */; };
 		FD1FA3CC2A0A781E000A3A91 /* Sitter+Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1FA3CB2A0A781E000A3A91 /* Sitter+Dummy.swift */; };
@@ -97,6 +100,9 @@
 		FD0291742A0E273500F88377 /* BioSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioSectionView.swift; sourceTree = "<group>"; };
 		FD0291762A0E2B0700F88377 /* AppStyle+FontStyleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppStyle+FontStyleTests.swift"; sourceTree = "<group>"; };
 		FD0291782A0E2B2300F88377 /* AppStyle+UIElementConstantTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppStyle+UIElementConstantTests.swift"; sourceTree = "<group>"; };
+		FD14A2A42A277FA400362461 /* OwnerProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerProfileViewModel.swift; sourceTree = "<group>"; };
+		FD14A2A62A27803600362461 /* KeyValueStorage+StorageName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyValueStorage+StorageName.swift"; sourceTree = "<group>"; };
+		FD14A2A82A27804F00362461 /* KeyValueStorage+Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyValueStorage+Key.swift"; sourceTree = "<group>"; };
 		FD1FA3C22A0A682E000A3A91 /* SitterCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitterCardViewModel.swift; sourceTree = "<group>"; };
 		FD1FA3CB2A0A781E000A3A91 /* Sitter+Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sitter+Dummy.swift"; sourceTree = "<group>"; };
 		FD2F7B2C2A0CDC44008F6F49 /* EmilyDoeAvatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = EmilyDoeAvatar.jpg; sourceTree = "<group>"; };
@@ -186,6 +192,8 @@
 			isa = PBXGroup;
 			children = (
 				368BF0EB2A152FA500F3F750 /* KeyValueStorage.swift */,
+				FD14A2A62A27803600362461 /* KeyValueStorage+StorageName.swift */,
+				FD14A2A82A27804F00362461 /* KeyValueStorage+Key.swift */,
 			);
 			path = KeyValueStorage;
 			sourceTree = "<group>";
@@ -427,6 +435,7 @@
 		FDE0CEBC2A02693A0023F784 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				FD14A2A42A277FA400362461 /* OwnerProfileViewModel.swift */,
 				FD1FA3C22A0A682E000A3A91 /* SitterCardViewModel.swift */,
 				EF5A7F2E2A14504F00585616 /* DetailPetSitterViewModel.swift */,
 				FD2FA22A2A129CA1002B618B /* SitterListViewModel.swift */,
@@ -675,6 +684,7 @@
 				FD7F989F2A0E0D2C0058DBEB /* AppStyle.swift in Sources */,
 				FDD143CB2A03C629000BBA77 /* Color+AppScheme.swift in Sources */,
 				EF303EBE2A1762CF0086065B /* FiveStarRatingView.swift in Sources */,
+				FD14A2A52A277FA400362461 /* OwnerProfileViewModel.swift in Sources */,
 				FD0291732A0E256F00F88377 /* GeneralInfoSectionView.swift in Sources */,
 				FDD143E02A051F96000BBA77 /* OwnerMainTabView+Tab.swift in Sources */,
 				FD1FA3C32A0A682E000A3A91 /* SitterCardViewModel.swift in Sources */,
@@ -689,7 +699,9 @@
 				FDE0CEA92A00F8370023F784 /* WoofApp.swift in Sources */,
 				FD7F98A52A0E12290058DBEB /* AvatarView.swift in Sources */,
 				FD1FA3CC2A0A781E000A3A91 /* Sitter+Dummy.swift in Sources */,
+				FD14A2A92A27804F00362461 /* KeyValueStorage+Key.swift in Sources */,
 				EF7B7F002A147D8300F00B4E /* TextWithIconLabelView.swift in Sources */,
+				FD14A2A72A27803600362461 /* KeyValueStorage+StorageName.swift in Sources */,
 				EF5A7F2F2A14504F00585616 /* DetailPetSitterViewModel.swift in Sources */,
 				FD0291752A0E273500F88377 /* BioSectionView.swift in Sources */,
 			);

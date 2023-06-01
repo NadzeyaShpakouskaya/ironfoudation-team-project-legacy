@@ -24,4 +24,24 @@ struct Owner: Identifiable, Codable {
 
     /// The rating of the pet owner.
     var rating: Double
+
+    init(name: String, surname: String, phone: String, avatarUrl: URL? = nil, address: String, rating: Double) {
+        id = UUID()
+        self.name = name
+        self.surname = surname
+        self.phone = phone
+        self.avatarUrl = avatarUrl
+        self.address = address
+        self.rating = rating
+    }
+
+    init() {
+        id = UUID()
+        name = "User"
+        surname = ""
+        phone = ""
+        avatarUrl = nil
+        address = ""
+        rating = 0
+    }
 }
