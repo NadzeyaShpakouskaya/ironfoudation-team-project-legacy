@@ -1,7 +1,7 @@
 import Foundation
 
 extension Owner {
-    /// Provides dummy data for `PetOwner` model.
+    /// Provides dummy data for `Owner` model.
     enum Dummy {
         /// The instance of dummy pet owner containing a static data in the fields.
         static let laraCroft = Owner(
