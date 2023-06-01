@@ -21,22 +21,22 @@ final class OwnerProfileViewModel: ObservableObject {
      Initializes an instance of the `OwnerProfileViewModel` class.
      */
     init() {
-        currentOwner = getOwner()
+        currentOwner = getCurrentOwner()
 
         name = currentOwner.name
         surname = currentOwner.surname
         phone = currentOwner.phone
         address = currentOwner.address
-        avatarURL = currentOwner.avatarUrl
+        avatarURL = currentOwner.avatarURL
     }
 
-    /// Request model layer to save modified data.
+    /// Requests model layer to save modified data.
     func save() {
         currentOwner.name = name
         currentOwner.surname = surname
         currentOwner.phone = phone
         currentOwner.address = address
-        currentOwner.avatarUrl = avatarURL
+        currentOwner.avatarURL = avatarURL
 
         guard let data = try? JSONEncoder().encode(currentOwner) else { return }
 
@@ -50,13 +50,13 @@ final class OwnerProfileViewModel: ObservableObject {
         - Returns: The owner instance from model layer or new instance of `Owner`,
      if loading from model layer is failed.
      */
-    func getOwner() -> Owner {
+    func getCurrentOwner() -> Owner {
         loadOwnerFromStorage() ?? Owner()
     }
 
     // MARK: - Private interface
 
-    private lazy var currentOwner: Owner = getOwner()
+    private lazy var currentOwner: Owner = getCurrentOwner()
 
     private func loadOwnerFromStorage() -> Owner? {
         guard let data = KeyValueStorage(KeyValueStorage.Name.currentOwner)

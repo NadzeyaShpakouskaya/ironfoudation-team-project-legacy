@@ -17,7 +17,7 @@ struct Owner: Identifiable, Codable {
     var phone: String
 
     /// URL that contains an avatar image of the pet owner.
-    var avatarUrl: URL?
+    var avatarURL: URL?
 
     /// The address of the pet owner.
     var address: String
@@ -36,7 +36,7 @@ struct Owner: Identifiable, Codable {
      - address: The address of the pet owner.
      - rating: The rating of the pet owner.
 
-     The new owner instance has a unique id.
+     Each instance of the new owner has a unique id.
      */
     init(
         name: String,
@@ -50,7 +50,7 @@ struct Owner: Identifiable, Codable {
         self.name = name
         self.surname = surname
         self.phone = phone
-        self.avatarUrl = avatarUrl
+        avatarURL = avatarUrl
         self.address = address
         self.rating = rating
     }

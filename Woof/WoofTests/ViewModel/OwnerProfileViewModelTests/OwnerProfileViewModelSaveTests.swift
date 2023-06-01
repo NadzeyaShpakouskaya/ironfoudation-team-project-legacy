@@ -20,7 +20,7 @@ final class OwnerProfileViewModelSaveTests: XCTestCase {
 
         viewModel.save()
 
-        let loadedOwner = viewModel.getOwner()
+        let loadedOwner = viewModel.getCurrentOwner()
 
         XCTAssertEqual(loadedOwner.name, newName)
         XCTAssertEqual(loadedOwner.surname, newSurname)

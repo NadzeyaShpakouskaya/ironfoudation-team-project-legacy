@@ -2,14 +2,14 @@ import XCTest
 
 final class OwnerProfileViewModelGetTests: XCTestCase {
     func testGetOwnerMethodExistsInAPI() {
-        _ = OwnerProfileViewModel().getOwner()
+        _ = OwnerProfileViewModel().getCurrentOwner()
     }
 
     func testGetOwnerMethodReturnsNewOwnerInstanceWhenThereIsNoSavedOwnerInformation() {
         KeyValueStorage(KeyValueStorage.Name.currentOwner)
             .deleteData(for: KeyValueStorage.Key.currentOwner)
 
-        let owner = OwnerProfileViewModel().getOwner()
+        let owner = OwnerProfileViewModel().getCurrentOwner()
 
         XCTAssertEqual(owner.name, Owner().name)
         XCTAssertEqual(owner.surname, Owner().surname)
@@ -32,7 +32,7 @@ final class OwnerProfileViewModelGetTests: XCTestCase {
 
         viewModel.save()
 
-        let loadedOwner = viewModel.getOwner()
+        let loadedOwner = viewModel.getCurrentOwner()
 
         XCTAssertEqual(loadedOwner.name, newName)
         XCTAssertEqual(loadedOwner.surname, newSurname)
