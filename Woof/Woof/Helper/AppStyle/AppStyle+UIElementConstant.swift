@@ -15,7 +15,7 @@ extension AppStyle {
         /// The default side size of an avatar image.
         static let avatarSideSize = 80.0
 
-        /// The spacing that can be used in VStack.
-        static let vStackSpacingOwnerCardView = 8.0
+        /// The default spacing that can be used between elements in View.
+        static let spacingBetweenElements = 8.0
     }
 }
