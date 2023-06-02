@@ -33,8 +33,8 @@ struct OwnerCardView: View {
                     )
                 )
                 Group {
-                    Label(phone, systemImage: Image.IconName.phone)
-                    Label(address, systemImage: Image.IconName.house)
+                    Label(phone, systemImage: .IconName.phone)
+                    Label(address, systemImage: .IconName.house)
                 }
                 .font(
                     .system(

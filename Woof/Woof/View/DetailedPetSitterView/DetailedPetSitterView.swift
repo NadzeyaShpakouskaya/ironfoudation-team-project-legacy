@@ -10,11 +10,11 @@ struct DetailPetSitterView: View {
             AvatarView(url: viewModel.imageURL)
             FiveStarRatingView(rating: viewModel.rating)
             TextWithIconLabelView(
-                iconName: Image.IconName.filledPerson,
+                iconName: .IconName.filledPerson,
                 text: viewModel.fullName
             )
             TextWithIconLabelView(
-                iconName: Image.IconName.phone,
+                iconName: .IconName.phone,
                 text: viewModel.phoneNumber
             )
             Text(viewModel.bio)

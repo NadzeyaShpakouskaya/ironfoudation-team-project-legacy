@@ -23,7 +23,7 @@ struct GeneralInfoSectionView: View {
                     } else {
                         HStack(spacing: 0) {
                             ForEach(0..<rating, id: \.self) { _ in
-                                Image(systemName: Image.IconName.filledStar)
+                                Image(systemName: .IconName.filledStar)
                             }
                         }
                     }
