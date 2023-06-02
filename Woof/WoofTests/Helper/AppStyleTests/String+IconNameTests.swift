@@ -1,7 +1,7 @@
 import Foundation
 import XCTest
 
-final class ImageIconNameTests: XCTestCase {
+final class StringIconNameTests: XCTestCase {
     func testAllIconNamesReturnCorrectValues() {
         let findSitterTabIconName = "magnifyingglass"
         let walkingsTabIconName = "pawprint"
