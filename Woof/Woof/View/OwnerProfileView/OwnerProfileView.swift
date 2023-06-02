@@ -13,23 +13,26 @@ struct OwnerProfileView: View {
                 if isEditing {
                     EditOwnerInformationView(name: $name, surname: $surname, phone: $phone, address: $address)
                 } else {
-                    Text("Owner Card View")
+                    OwnerCardView(name: "John", surname: "Boe", phone: "12345678", address: "happy str", avatarUrl: nil)
                 }
+                Spacer()
             }
             .padding()
-            .navigationBarItems(trailing:
-                Button(action: {
-                    isEditing.toggle()
-                }, label: {
-                    Text(isEditing ? "Save" : "Edit")
-                        .padding()
-                        .background(
-                            Capsule()
-                                .foregroundColor(Color.App.purpleDark)
-                        )
-                        .foregroundColor(Color.App.white)
-                })
-            )
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        isEditing.toggle()
+                    }, label: {
+                        Text(isEditing ? "Save" : "Edit")
+                            .padding()
+                            .background(
+                                Capsule()
+                                    .foregroundColor(Color.App.purpleDark)
+                            )
+                            .foregroundColor(Color.App.white)
+                    })
+                }
+            }
         }
     }
 }
