@@ -8,7 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added 
 
-- Add `OwnerCardView` as part of `OwnerInformationView`, `OwnerInformationView` to the Profile's tab in `MainTabView` - [#47](https://github.com/ios-course/ironfoudation-team-project/pull/47)
+- Add `OwnerProfileViewModel` for `OwnerProfileView` - [#88](https://github.com/ios-course/ironfoudation-team-project/pull/88)
 - Add `OwnerCardView`- [81](https://github.com/ios-course/ironfoudation-team-project/pull/81)
 
 ## [0.1.0] - 31.05.2023
@@ -29,5 +29,5 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Add template for PRs  - [#53](https://github.com/ios-course/ironfoudation-team-project/pull/53)
 - Add template for issues  - [#54](https://github.com/ios-course/ironfoudation-team-project/pull/54)
 - Add missed information to `CHANGELOG.md`  - [#56](https://github.com/ios-course/ironfoudation-team-project/pull/56)
-- Add the `KeyValueStorage` class to manage persistent data storage - [58](https://github.com/ios-course/ironfoudation-team-project/pull/58)
-- Add `EditOwnerInformationView` - [77](https://github.com/ios-course/ironfoudation-team-project/pull/77)
+- Add the `KeyValueStorage` class to manage persistent data storage - [#58](https://github.com/ios-course/ironfoudation-team-project/pull/58)
+- Add `EditOwnerInformationView` - [#77](https://github.com/ios-course/ironfoudation-team-project/pull/77)

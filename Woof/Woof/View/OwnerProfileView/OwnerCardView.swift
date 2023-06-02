@@ -59,7 +59,7 @@ struct OwnerCardView_Previews: PreviewProvider {
             surname: Owner.Dummy.laraCroft.surname,
             phone: Owner.Dummy.laraCroft.phone,
             address: Owner.Dummy.laraCroft.address,
-            avatarUrl: Owner.Dummy.laraCroft.avatarUrl
+            avatarUrl: Owner.Dummy.laraCroft.avatarURL
         )
     }
 }
