@@ -1,6 +1,6 @@
-import SwiftUI
+import Foundation
 
-extension Image {
+extension String {
     /**
      Represents the different icons used within the application.
      */
