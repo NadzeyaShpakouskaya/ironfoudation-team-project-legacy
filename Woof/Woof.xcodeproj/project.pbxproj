@@ -18,7 +18,6 @@
 		36C54AFC2A17A79200748023 /* KeyValueStorageLoadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C54AFB2A17A79200748023 /* KeyValueStorageLoadTests.swift */; };
 		EF16BB1E2A24D5FA007922C6 /* OwnerCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF16BB1D2A24D5FA007922C6 /* OwnerCardView.swift */; };
 		EF16BB262A24E101007922C6 /* Owner+Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF16BB252A24E101007922C6 /* Owner+Dummy.swift */; };
-		EF16BB2B2A26FB3E007922C6 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3673D6362A04F7FD009D699D /* Owner.swift */; };
 		EF303EBE2A1762CF0086065B /* FiveStarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF303EBD2A1762CF0086065B /* FiveStarRatingView.swift */; };
 		EF5A7F2F2A14504F00585616 /* DetailPetSitterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5A7F2E2A14504F00585616 /* DetailPetSitterViewModel.swift */; };
 		EF5A7F332A14563800585616 /* DetailedPetSitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5A7F322A14563800585616 /* DetailedPetSitterView.swift */; };
@@ -214,15 +213,6 @@
 			path = KeyValueStorage;
 			sourceTree = "<group>";
 		};
-		EF16BB242A24E0DC007922C6 /* Owner */ = {
-			isa = PBXGroup;
-			children = (
-				3673D6362A04F7FD009D699D /* Owner.swift */,
-				EF16BB252A24E101007922C6 /* Owner+Dummy.swift */,
-			);
-			path = Owner;
-			sourceTree = "<group>";
-		};
 		EF303EBF2A17AFA20086065B /* ReusableViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,6 +256,7 @@
 		FD14A2AA2A28685000362461 /* Owner */ = {
 			isa = PBXGroup;
 			children = (
+				EF16BB252A24E101007922C6 /* Owner+Dummy.swift */,
 				3673D6362A04F7FD009D699D /* Owner.swift */,
 			);
 			path = Owner;
@@ -692,7 +683,6 @@
 			files = (
 				36BEA7582A1621B10020F6AE /* KeyValueStorageSaveTests.swift in Sources */,
 				FD9802282A287670003DEE5C /* OwnerProfileViewModelGetTests.swift in Sources */,
-				EF16BB2B2A26FB3E007922C6 /* Owner.swift in Sources */,
 				FD8182302A20C3C300AE1016 /* KeyValueStorage+TestData.swift in Sources */,
 				36C54AFC2A17A79200748023 /* KeyValueStorageLoadTests.swift in Sources */,
 				FD02917A2A0E2C5000F88377 /* AppStyle+FontStyle.swift in Sources */,

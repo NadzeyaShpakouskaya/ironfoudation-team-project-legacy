@@ -8,7 +8,7 @@ extension Owner {
             name: "Kate",
             surname: "Anderson",
             phone: "phone",
-            avatarUrl: Bundle.main.url(forResource: "JohnAlisonAvatar", withExtension: "jpg"),
+            avatarURL: Bundle.main.url(forResource: "JohnAlisonAvatar", withExtension: "jpg"),
             address: "test address",
             rating: 3.2
         )

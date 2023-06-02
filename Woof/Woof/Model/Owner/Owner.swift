@@ -32,7 +32,7 @@ struct Owner: Identifiable, Codable {
      - name: The first name of the pet owner.
      - surname: The last name of the pet owner.
      - phone: The phone number of the pet owner.
-     - avatarUrl: The URL that provides an avatar image of the pet owner.
+     - avatarURL: The URL that provides an avatar image of the pet owner.
      - address: The address of the pet owner.
      - rating: The rating of the pet owner.
 
@@ -42,7 +42,7 @@ struct Owner: Identifiable, Codable {
         name: String,
         surname: String,
         phone: String,
-        avatarUrl: URL?,
+        avatarURL: URL?,
         address: String,
         rating: Double
     ) {
@@ -50,7 +50,7 @@ struct Owner: Identifiable, Codable {
         self.name = name
         self.surname = surname
         self.phone = phone
-        avatarURL = avatarUrl
+        self.avatarURL = avatarURL
         self.address = address
         self.rating = rating
     }
@@ -64,7 +64,7 @@ struct Owner: Identifiable, Codable {
      - `rating` is equal 0;
      - other parameters are specified with the empty string ("").
 
-     The new owner instance has a unique id.
+     Each instance of the new owner has a unique id.
      */
 
     init() {
@@ -72,7 +72,7 @@ struct Owner: Identifiable, Codable {
             name: "User",
             surname: "",
             phone: "",
-            avatarUrl: nil,
+            avatarURL: nil,
             address: "",
             rating: 0
         )
