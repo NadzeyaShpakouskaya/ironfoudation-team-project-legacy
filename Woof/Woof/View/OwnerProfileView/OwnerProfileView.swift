@@ -1,19 +1,23 @@
 import SwiftUI
 
 struct OwnerProfileView: View {
+    @ObservedObject var viewModel = OwnerProfileViewModel()
     @State private var isEditing = false
-    @State private var name = "John"
-    @State private var surname = "Doe"
-    @State private var phone = ""
-    @State private var address = ""
 
     var body: some View {
         NavigationView {
             VStack {
                 if isEditing {
-                    EditOwnerInformationView(name: $name, surname: $surname, phone: $phone, address: $address)
+                    EditOwnerInformationView(name: $viewModel.name,
+                                             surname: $viewModel.surname,
+                                             phone: $viewModel.phone,
+                                             address: $viewModel.address)
                 } else {
-                    OwnerCardView(name: "John", surname: "Boe", phone: "12345678", address: "happy str", avatarUrl: nil)
+                    OwnerCardView(name: viewModel.name,
+                                  surname: viewModel.surname,
+                                  phone: viewModel.phone,
+                                  address: viewModel.address,
+                                  avatarUrl: viewModel.avatarURL)
                 }
                 Spacer()
             }
@@ -21,7 +25,10 @@ struct OwnerProfileView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {
-                        isEditing.toggle()
+                        if !viewModel.name.isEmpty {
+                            viewModel.save()
+                            isEditing.toggle()
+                        }
                     }, label: {
                         Text(isEditing ? "Save" : "Edit")
                             .padding()
@@ -31,6 +38,7 @@ struct OwnerProfileView: View {
                             )
                             .foregroundColor(Color.App.white)
                     })
+                    .disabled(isEditing && viewModel.name.isEmpty)
                 }
             }
         }
