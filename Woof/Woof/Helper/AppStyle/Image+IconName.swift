@@ -21,5 +21,7 @@ extension Image {
         static let phone = "phone.fill"
         /// The icon used in places where picture of a person is required.
         static let filledPerson = "person.fill"
+        /// The icon used in places where picture of a house is required.
+        static let house = "house"
     }
 }
