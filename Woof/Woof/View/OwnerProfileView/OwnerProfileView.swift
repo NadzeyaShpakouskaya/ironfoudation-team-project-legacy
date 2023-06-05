@@ -29,7 +29,6 @@ struct OwnerProfileView: View {
             Spacer()
         }
         .padding(.horizontal)
-
         .overlay(alignment: .topTrailing) {
             Button(action: {
                 if isEditingMode {
