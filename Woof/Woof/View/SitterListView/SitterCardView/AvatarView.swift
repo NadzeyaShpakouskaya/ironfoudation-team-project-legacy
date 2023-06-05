@@ -14,7 +14,7 @@ struct AvatarView: View {
                         .stroke(lineWidth: AppStyle.UIElementConstant.borderStroke)
                 }
         } placeholder: {
-            Image(systemName: Image.IconName.avatarPlaceholder)
+            Image(systemName: .IconName.avatarPlaceholder)
                 .resizable()
         }
         .foregroundColor(Color.App.grayDark)
