@@ -14,8 +14,9 @@ The format is based on [Release_notes format](https://github.com/ios-course/iron
 
 ## [0.1.0]
 
+The current version allows the user to navigate through the app as a pet owner, see the static (stub) information about pet sitters, and see detailed information for the selected sitter.
+
 ### New features
+`List with compact information about sitters`: As a pet owner you can see a list of pet sitters. For every pet sitter, the following information is available: an avatar icon, full name, current rate, short bio, and rating.
 
-`Quicklook`: Pet owners can see a list of available pet sitters. For every pet sitter the following information is available: an avatar icon, full name, current rate, short bio, and rating.
-
-`Get detailed information about the pet sitter`: The app allows pet owners to get more information about the pet sitter by tapping them in the list.
+`Get detailed information about the pet sitter`: By tapping on the sitter row you can see detailed information about the selected pet sitter like full name, rating, phone number, and avatar.
