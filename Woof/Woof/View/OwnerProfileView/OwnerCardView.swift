@@ -24,7 +24,9 @@ struct OwnerCardView: View {
             VStack(alignment: .leading, spacing: AppStyle.UIElementConstant.spacingBetweenElements) {
                 Group {
                     Text(name)
+                        .lineLimit(1)
                     Text(surname)
+                        .lineLimit(1)
                 }
                 .font(
                     .system(
@@ -34,7 +36,9 @@ struct OwnerCardView: View {
                 )
                 Group {
                     Label(phone, systemImage: Image.IconName.phone)
+                        .lineLimit(1)
                     Label(address, systemImage: Image.IconName.house)
+                        .lineLimit(1)
                 }
                 .font(
                     .system(

@@ -5,7 +5,7 @@ struct OwnerProfileView: View {
     /// View model responsible to manage data from model layer
     @ObservedObject var viewModel = OwnerProfileViewModel()
 
-    /// Owner information editing status tracker
+    /// Owner information editing status
     @State private var isEditingMode = false
 
     var body: some View {
