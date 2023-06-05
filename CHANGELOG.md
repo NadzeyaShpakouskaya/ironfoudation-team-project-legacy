@@ -8,6 +8,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added 
 
+
+## [0.2.0] - 06.06.2023
+
+### Added 
+
 - Add `OwnerProfileViewModel` for `OwnerProfileView` - [#88](https://github.com/ios-course/ironfoudation-team-project/pull/88)
 - Add `OwnerCardView`- [81](https://github.com/ios-course/ironfoudation-team-project/pull/81)
 - Enhancement: make `IconName` extension of `String` instead of `Image` - [#95](https://github.com/ios-course/ironfoudation-team-project/pull/95)
