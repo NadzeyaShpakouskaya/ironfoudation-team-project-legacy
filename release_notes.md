@@ -6,15 +6,16 @@ The file describes all the changes, that are affected the usage of the applicati
 
 The format is based on [Release_notes format](https://github.com/ios-course/ironfoudation-team-project/wiki/Release_notes-format).
 
-## [0.2.0]
+## 0.2.0
 
 ### New features
 
 `Owner Profile`: Pet owners can add and update their personal information like name, surname, address, and phone number in `Profile` page.
+
 `New app icon`: It helps you easily find `Woof` app among others apps.
 
 
-## [0.1.0]
+## 0.1.0
 
 The current version allows the user to navigate through the app as a pet owner, see the static (stub) information about pet sitters, and see detailed information for the selected sitter.
 
