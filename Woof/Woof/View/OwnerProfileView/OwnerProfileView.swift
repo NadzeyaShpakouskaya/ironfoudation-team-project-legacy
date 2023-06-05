@@ -1,26 +1,30 @@
 import SwiftUI
 
-/// View which could be used to display or edit information about Owner
+/// View to display personal information about the owner.
 struct OwnerProfileView: View {
     /// View model responsible to manage data from model layer
     @ObservedObject var viewModel = OwnerProfileViewModel()
 
     /// Owner information editing status tracker
-    @State private var isEditingTracker = false
+    @State private var isEditingMode = false
 
     var body: some View {
         VStack {
-            if isEditingTracker {
-                EditOwnerInformationView(name: $viewModel.name,
-                                         surname: $viewModel.surname,
-                                         phone: $viewModel.phone,
-                                         address: $viewModel.address)
+            if isEditingMode {
+                EditOwnerInformationView(
+                    name: $viewModel.name,
+                    surname: $viewModel.surname,
+                    phone: $viewModel.phone,
+                    address: $viewModel.address
+                )
             } else {
-                OwnerCardView(name: viewModel.name,
-                              surname: viewModel.surname,
-                              phone: viewModel.phone,
-                              address: viewModel.address,
-                              avatarUrl: viewModel.avatarURL)
+                OwnerCardView(
+                    name: viewModel.name,
+                    surname: viewModel.surname,
+                    phone: viewModel.phone,
+                    address: viewModel.address,
+                    avatarUrl: viewModel.avatarURL
+                )
             }
             Spacer()
         }
@@ -28,12 +32,12 @@ struct OwnerProfileView: View {
 
         .overlay(alignment: .topTrailing) {
             Button(action: {
-                if !viewModel.name.isEmpty {
+                if isEditingMode {
                     viewModel.save()
-                    isEditingTracker.toggle()
                 }
+                isEditingMode.toggle()
             }, label: {
-                Text(isEditingTracker ? "Save" : "Edit")
+                Text(isEditingMode ? "Save" : "Edit")
                     .padding(.horizontal)
                     .background(
                         Capsule()
@@ -43,7 +47,7 @@ struct OwnerProfileView: View {
             })
             .padding()
             .padding(.horizontal)
-            .disabled(isEditingTracker && viewModel.name.isEmpty)
+            .disabled(isEditingMode && viewModel.name.isEmpty)
         }
     }
 }
