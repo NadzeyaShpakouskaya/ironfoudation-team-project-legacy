@@ -27,7 +27,7 @@ struct TextWithIconLabelView: View {
 struct ContactDetailsSectionView_Previews: PreviewProvider {
     static var previews: some View {
         TextWithIconLabelView(
-            iconName: Image.IconName.filledPerson,
+            iconName: .IconName.filledPerson,
             text: "Arnold Schwarzenegger"
         )
     }

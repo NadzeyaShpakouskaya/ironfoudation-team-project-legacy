@@ -17,19 +17,19 @@ struct OwnerMainTabView: View {
                 Group {
                     SitterListView()
                         .tabItem {
-                            Label("Sitters", systemImage: Image.IconName.findSitterTab)
+                            Label("Sitters", systemImage: .IconName.findSitterTab)
                         }
                         .tag(Tab.sitters)
 
                     Text("Walkings stub")
                         .tabItem {
-                            Label("Walkings", systemImage: Image.IconName.walkingsTab)
+                            Label("Walkings", systemImage: .IconName.walkingsTab)
                         }
                         .tag(Tab.walkings)
 
                     OwnerProfileView()
                         .tabItem {
-                            Label("Profile", systemImage: Image.IconName.profileTab)
+                            Label("Profile", systemImage: .IconName.profileTab)
                         }
                         .tag(Tab.profile)
                 }
