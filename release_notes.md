@@ -10,9 +10,9 @@ The format is based on [Release_notes format](https://github.com/ios-course/iron
 
 ### New features
 
-`Owner Profile`: Pet owners can add and update their personal information like name, surname, address, and phone number in `Profile` page.
+`Owner Profile`: Pet owners can add and update their personal information like name, surname, address, and phone number on `Profile` page.
 
-`New app icon`: It helps you easily find `Woof` app among others apps.
+`New app icon`: It helps you easily find `Woof` app among other apps.
 
 
 ## 0.1.0
