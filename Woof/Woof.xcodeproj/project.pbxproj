@@ -87,6 +87,10 @@
 		FDE0CEB02A00F8390023F784 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDE0CEAF2A00F8390023F784 /* Preview Assets.xcassets */; };
 		FDEE43C92A2F45B8007DE0A9 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE43C82A2F45B8007DE0A9 /* Preferences.swift */; };
 		FDEE43CB2A2F4602007DE0A9 /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE43CA2A2F4602007DE0A9 /* Role.swift */; };
+		FDEE43CD2A2F4E51007DE0A9 /* PreferencesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE43CC2A2F4E51007DE0A9 /* PreferencesTests.swift */; };
+		FDEE43CE2A2F4E56007DE0A9 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE43C82A2F45B8007DE0A9 /* Preferences.swift */; };
+		FDEE43CF2A2F4E58007DE0A9 /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE43CA2A2F4602007DE0A9 /* Role.swift */; };
+		FDEE43D12A2F525B007DE0A9 /* RoleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE43D02A2F525B007DE0A9 /* RoleTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,6 +172,8 @@
 		FDE0CEAF2A00F8390023F784 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FDEE43C82A2F45B8007DE0A9 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		FDEE43CA2A2F4602007DE0A9 /* Role.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
+		FDEE43CC2A2F4E51007DE0A9 /* PreferencesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesTests.swift; sourceTree = "<group>"; };
+		FDEE43D02A2F525B007DE0A9 /* RoleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +206,8 @@
 			isa = PBXGroup;
 			children = (
 				36BEA75A2A1621C00020F6AE /* KeyValueStorage */,
+				FDEE43CC2A2F4E51007DE0A9 /* PreferencesTests.swift */,
+				FDEE43D02A2F525B007DE0A9 /* RoleTests.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -747,6 +755,7 @@
 				FD37A9942A0B6E960001BABB /* FullNameTests.swift in Sources */,
 				FDCF49132A1CDA8800CD3BBB /* DetailPetSitterViewModelTests.swift in Sources */,
 				FDCF49142A1CDB1600CD3BBB /* DetailPetSitterViewModel.swift in Sources */,
+				FDEE43CD2A2F4E51007DE0A9 /* PreferencesTests.swift in Sources */,
 				FD98022A2A2878C1003DEE5C /* Owner+Test.swift in Sources */,
 				FDD143F72A052A11000BBA77 /* Color+AppSchemeTests.swift in Sources */,
 				1CE7E9CC2A24889B000A0509 /* KeyValueStorage+UnitTests.swift in Sources */,
@@ -759,6 +768,9 @@
 				FDD143FE2A052D5A000BBA77 /* Color+AppScheme.swift in Sources */,
 				FDD144012A0532D5000BBA77 /* String+IconNameTests.swift in Sources */,
 				FD02917B2A0E2C5300F88377 /* AppStyle+UIElementConstant.swift in Sources */,
+				FDEE43CE2A2F4E56007DE0A9 /* Preferences.swift in Sources */,
+				FDEE43D12A2F525B007DE0A9 /* RoleTests.swift in Sources */,
+				FDEE43CF2A2F4E58007DE0A9 /* Role.swift in Sources */,
 				FD37A9982A0B77A90001BABB /* NormalizeToZeroToFiveRangeTests.swift in Sources */,
 				FD14A2B42A286C5200362461 /* KeyValueStorage+Name.swift in Sources */,
 				FDD143FF2A052D5E000BBA77 /* String+IconName.swift in Sources */,

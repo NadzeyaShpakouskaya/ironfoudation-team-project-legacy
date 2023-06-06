@@ -6,4 +6,3 @@ struct Preferences: Codable {
     /// If role is not selected returns `nil`.
     var selectedRole: Role?
 }
-
