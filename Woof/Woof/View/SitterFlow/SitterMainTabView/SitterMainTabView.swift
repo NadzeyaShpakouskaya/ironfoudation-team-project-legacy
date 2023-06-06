@@ -2,8 +2,15 @@ import SwiftUI
 
 /// A view representing the main tab view for the sitter.
 struct SitterMainTabView: View {
+    // MARK: - Private interface
     @State private var selection: Tab = .schedule
 
+    private func customizeTabBar() {
+        let tabBarAppearance = UITabBar.appearance()
+        tabBarAppearance.unselectedItemTintColor = UIColor(Color.App.grayDark)
+    }
+
+    // MARK: - Public interface
     init() {
         customizeTabBar()
     }
@@ -35,14 +42,6 @@ struct SitterMainTabView: View {
             .navigationTitle(selection.header)
             .navigationBarTitleDisplayMode(.inline)
         }
-    }
-
-    /**
-     Customizes the appearance of the tab bar.
-     */
-    private func customizeTabBar() {
-        let tabBarAppearance = UITabBar.appearance()
-        tabBarAppearance.unselectedItemTintColor = UIColor(Color.App.grayDark)
     }
 }
 
