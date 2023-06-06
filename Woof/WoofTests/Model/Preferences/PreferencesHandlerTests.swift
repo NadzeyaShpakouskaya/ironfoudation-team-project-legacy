@@ -1,6 +1,16 @@
 import XCTest
 
 final class PreferencesHandlerTests: XCTestCase {
+    override func setUp() {
+        super.setUp()
+        cleanStorage()
+    }
+
+    override func tearDown() {
+        cleanStorage()
+        super.tearDown()
+    }
+
     func testSaveSelectedRoleExistInAPI() {
         _ = PreferencesHandler.saveSelectedRole(.sitter)
     }
@@ -9,22 +19,30 @@ final class PreferencesHandlerTests: XCTestCase {
         _ = PreferencesHandler.loadSelectedRole()
     }
 
-    func testSaveSelectedRoleReturnsTrue() {
-        XCTAssertTrue(PreferencesHandler.saveSelectedRole(.owner))
+    func testSaveSelectedRoleReturnsTrueWhenUsing() {
+        XCTAssertTrue(PreferencesHandler.saveSelectedRole(.sitter))
     }
 
     func testLoadSelectedRoleReturnsExpectedRole() {
-        let selectedRole: Role = .owner
-        _ = PreferencesHandler.saveSelectedRole(selectedRole)
+        _ = PreferencesHandler.saveSelectedRole(.owner)
 
-        XCTAssertEqual(PreferencesHandler.loadSelectedRole(), selectedRole)
+        XCTAssertEqual(PreferencesHandler.loadSelectedRole(), .owner)
     }
 
-    func testLoadSelectedRoleReturnsRewrittenNil() {
-        let selectedRole: Role = .sitter
-        _ = PreferencesHandler.saveSelectedRole(selectedRole)
-        _ = PreferencesHandler.saveSelectedRole(nil)
+    func testLoadSelectedRoleReturnsNilForNonExistingKey() {
+        XCTAssertNil(PreferencesHandler.loadSelectedRole())
+    }
 
-        XCTAssertEqual(PreferencesHandler.loadSelectedRole(), nil)
+    func testLoadSelectedRoleReturnsNilWhenRoleRewrittenByNil() {
+        let rewrittenRole: Role = .sitter
+        _ = PreferencesHandler.saveSelectedRole(.owner)
+        _ = PreferencesHandler.saveSelectedRole(rewrittenRole)
+
+        XCTAssertEqual(PreferencesHandler.loadSelectedRole(), rewrittenRole)
+    }
+
+    private func cleanStorage() {
+        let keyValueStorage = KeyValueStorage(KeyValueStorage.Name.preferences)
+        keyValueStorage.deleteData(for: KeyValueStorage.Key.userPreferences)
     }
 }

@@ -2,7 +2,7 @@ import Foundation
 
 enum PreferencesHandler {
     @discardableResult static func saveSelectedRole(_ selectedRole: Role?) -> Bool {
-        guard var preferences = loadPreferencesFromStorage() else { return false }
+        var preferences: Preferences = loadPreferencesFromStorage() ?? Preferences()
 
         preferences.selectedRole = selectedRole
 
