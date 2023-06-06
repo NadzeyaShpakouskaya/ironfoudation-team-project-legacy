@@ -6,6 +6,7 @@ final class StringIconNameTests: XCTestCase {
         let findSitterTabIconName = "magnifyingglass"
         let walkingsTabIconName = "pawprint"
         let profileTabIconName = "person.text.rectangle"
+        let scheduleTab = "calendar"
         let avatarPlaceholder = "person.circle"
         let filledStar = "star.fill"
         let unfilledStar = "star"
@@ -16,6 +17,7 @@ final class StringIconNameTests: XCTestCase {
         XCTAssertEqual(findSitterTabIconName, String.IconName.findSitterTab)
         XCTAssertEqual(walkingsTabIconName, String.IconName.walkingsTab)
         XCTAssertEqual(profileTabIconName, String.IconName.profileTab)
+        XCTAssertEqual(scheduleTab, String.IconName.scheduleTab)
         XCTAssertEqual(avatarPlaceholder, String.IconName.avatarPlaceholder)
         XCTAssertEqual(filledStar, String.IconName.filledStar)
         XCTAssertEqual(unfilledStar, String.IconName.unfilledStar)
