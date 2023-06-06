@@ -3,6 +3,7 @@ import SwiftUI
 /// A view representing the main tab view for the sitter.
 struct SitterMainTabView: View {
     // MARK: - Private interface
+
     @State private var selection: Tab = .schedule
 
     private func customizeTabBar() {
@@ -11,6 +12,7 @@ struct SitterMainTabView: View {
     }
 
     // MARK: - Public interface
+
     init() {
         customizeTabBar()
     }
@@ -48,5 +50,13 @@ struct SitterMainTabView: View {
 struct SitterMainTabview_Previews: PreviewProvider {
     static var previews: some View {
         SitterMainTabView()
+            .previewDevice(PreviewDevice(rawValue: "iPhone 14 Pro"))
+            .previewDisplayName("iPhone 14 Pro")
+        SitterMainTabView()
+            .previewDevice(PreviewDevice(rawValue: "iPhone 14 Pro Max"))
+            .previewDisplayName("iPhone 14 Pro Max")
+        SitterMainTabView()
+            .previewDevice(PreviewDevice(rawValue: "iPhone SE"))
+            .previewDisplayName("iPhone SE")
     }
 }
