@@ -1,9 +1,9 @@
 import Foundation
 
 extension SitterMainTabView {
-    /// Possible tabs in main screen for sitter side
+    /// Tabs in main screen for sitter side
     enum Tab {
-        /// The tab where the sitter can manage their schedule
+        /// The tab where the sitters can manage their schedule
         case schedule
         /// The tab where the list of walkings displays
         case walkings

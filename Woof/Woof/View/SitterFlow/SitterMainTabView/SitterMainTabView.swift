@@ -1,5 +1,6 @@
 import SwiftUI
 
+/// A view representing the main tab view for the sitter.
 struct SitterMainTabView: View {
     @State private var selection: Tab = .schedule
 
