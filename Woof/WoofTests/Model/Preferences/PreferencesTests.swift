@@ -1,24 +1,24 @@
 import XCTest
 
 final class PreferencesTests: XCTestCase {
-    func testPreferencesExistsInAPI() {
+    func testPreferencesExistInAPI() {
         _ = Preferences()
     }
 
-    func testPreferencesReturnsNilForSelectedRoleWhenNewInstancePreferencesInitialized() {
+    func testPreferencesReturnNilForSelectedRoleWhenNewInstancePreferencesInitialized() {
         let preferences = Preferences()
 
         XCTAssertNil(preferences.selectedRole)
     }
 
-    func testPreferencesReturnsExpectedValueForSelectedRoleWhenItChangedToSitterRole() {
+    func testPreferencesReturnExpectedValueForSelectedRoleWhenItChangedToSitterRole() {
         var preferences = Preferences()
         preferences.selectedRole = .sitter
 
         XCTAssertEqual(preferences.selectedRole, Role.sitter)
     }
 
-    func testPreferencesReturnsExpectedValueForSelectedRoleWhenItChangedToOwnerRole() {
+    func testPreferencesReturnExpectedValueForSelectedRoleWhenItChangedToOwnerRole() {
         var preferences = Preferences()
         preferences.selectedRole = .owner
 

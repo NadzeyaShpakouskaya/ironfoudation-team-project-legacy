@@ -206,8 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				36BEA75A2A1621C00020F6AE /* KeyValueStorage */,
-				FDEE43CC2A2F4E51007DE0A9 /* PreferencesTests.swift */,
-				FDEE43D02A2F525B007DE0A9 /* RoleTests.swift */,
+				FDEE43D22A2F5512007DE0A9 /* Preferences */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -546,6 +545,15 @@
 			children = (
 				FDEE43C82A2F45B8007DE0A9 /* Preferences.swift */,
 				FDEE43CA2A2F4602007DE0A9 /* Role.swift */,
+			);
+			path = Preferences;
+			sourceTree = "<group>";
+		};
+		FDEE43D22A2F5512007DE0A9 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				FDEE43CC2A2F4E51007DE0A9 /* PreferencesTests.swift */,
+				FDEE43D02A2F525B007DE0A9 /* RoleTests.swift */,
 			);
 			path = Preferences;
 			sourceTree = "<group>";

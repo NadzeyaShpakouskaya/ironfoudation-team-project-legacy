@@ -1,7 +1,7 @@
 import XCTest
 
 final class RoleTests: XCTestCase {
-    func testAllRolesExistsInAPI() {
+    func testAllRolesExistInAPI() {
         _ = Role.owner
         _ = Role.sitter
     }
