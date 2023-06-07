@@ -1,10 +1,13 @@
 import Foundation
 
-/// Provides the roles that can be chosen in the app.
+/// A role of a user in the app's session. A user can have one active role.
 enum Role: Codable {
-    /// Represents the owner role.
+    /// An owner of the pet(s).
     case owner
 
-    /// Represents the sitter role.
+    /// A sitter for the pet(s).
     case sitter
+    
+    /// Not specified role, when the user has not chosen any role yet.
+    case none
 }
