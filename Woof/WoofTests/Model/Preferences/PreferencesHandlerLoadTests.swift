@@ -21,7 +21,7 @@ final class PreferencesHandlerLoadTests: XCTestCase {
         XCTAssertEqual(PreferencesHandler.loadSelectedRole(), .owner)
     }
 
-    func testLoadSelectedRoleReturnsDefaultCaseForNonExistingPreferencesobject() {
+    func testLoadSelectedRoleReturnsDefaultCaseForNonExistingPreferencesObject() {
         XCTAssertEqual(PreferencesHandler.loadSelectedRole(), .none)
     }
 
