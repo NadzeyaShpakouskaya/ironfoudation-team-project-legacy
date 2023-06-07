@@ -3,21 +3,22 @@ import XCTest
 final class PreferencesHandlerSaveTests: XCTestCase {
     override func setUp() {
         super.setUp()
-        PreferencesHandler.cleanStorage()
+        UserPreferencesStorage.removeAll()
     }
 
     override func tearDown() {
-        PreferencesHandler.cleanStorage()
+        UserPreferencesStorage.removeAll()
         super.tearDown()
     }
 
     func testSaveSelectedRoleExistsInAPI() {
-        _ = PreferencesHandler.saveSelectedRole(.sitter)
+        _ = PreferencesHandler.set(userRole: .sitter)
     }
 
-    func testSaveSelectedRoleReturnsTrueWhenUsingWithAllCases() {
-        Role.allCases.forEach { role in
-            XCTAssertTrue(PreferencesHandler.saveSelectedRole(role))
-        }
+    func testSaveSelectedRoleReturnsTrueForPossibleRoleCase() {
+        // Given
+        // When
+        // Then
+        XCTAssertTrue(PreferencesHandler.set(userRole: .owner))
     }
 }

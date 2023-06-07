@@ -3,33 +3,43 @@ import XCTest
 final class PreferencesHandlerLoadTests: XCTestCase {
     override func setUp() {
         super.setUp()
-        PreferencesHandler.cleanStorage()
+        UserPreferencesStorage.removeAll()
     }
 
     override func tearDown() {
-        PreferencesHandler.cleanStorage()
+        UserPreferencesStorage.removeAll()
         super.tearDown()
     }
 
     func testLoadSelectedRoleExistsInAPI() {
-        _ = PreferencesHandler.loadSelectedRole()
+        _ = PreferencesHandler.getRole()
     }
 
     func testLoadSelectedRoleReturnsExpectedRole() {
-        _ = PreferencesHandler.saveSelectedRole(.owner)
+        // Given
+        // When
+        _ = PreferencesHandler.set(userRole: .owner)
 
-        XCTAssertEqual(PreferencesHandler.loadSelectedRole(), .owner)
+        // Then
+        XCTAssertEqual(PreferencesHandler.getRole(), .owner)
     }
 
     func testLoadSelectedRoleReturnsDefaultCaseForNonExistingPreferencesObject() {
-        XCTAssertEqual(PreferencesHandler.loadSelectedRole(), .none)
+        // Given
+        // When
+        // Then
+        XCTAssertEqual(PreferencesHandler.getRole(), .none)
     }
 
     func testLoadSelectedRoleReturnsExpectedRoleWhenRewrittenByNonDefaultCase() {
-        let rewrittenRole: Role = .sitter
-        _ = PreferencesHandler.saveSelectedRole(.owner)
-        _ = PreferencesHandler.saveSelectedRole(rewrittenRole)
+        // Given
+        let overriddenRole: Role = .sitter
 
-        XCTAssertEqual(PreferencesHandler.loadSelectedRole(), rewrittenRole)
+        // When
+        _ = PreferencesHandler.set(userRole: .owner)
+        _ = PreferencesHandler.set(userRole: overriddenRole)
+
+        // Then
+        XCTAssertEqual(PreferencesHandler.getRole(), overriddenRole)
     }
 }

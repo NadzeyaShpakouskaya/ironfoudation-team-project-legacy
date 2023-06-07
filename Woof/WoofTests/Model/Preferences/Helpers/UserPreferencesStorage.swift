@@ -1,6 +1,6 @@
 import Foundation
 
-extension PreferencesHandler {
+struct UserPreferencesStorage {
     /**
      Cleans the storage used for preferences.
      This method deletes the user preferences data from the key-value storage.
@@ -10,7 +10,7 @@ extension PreferencesHandler {
      PreferencesHandlerTestHelper.cleanStorage()
      ```
      */
-    static func cleanStorage() {
+    static func removeAll() {
         let keyValueStorage = KeyValueStorage(KeyValueStorage.Name.preferences)
         keyValueStorage.deleteData(for: KeyValueStorage.Key.userPreferences)
     }

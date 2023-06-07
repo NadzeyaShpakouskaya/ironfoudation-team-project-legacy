@@ -16,7 +16,7 @@
 		368BF0EC2A152FA500F3F750 /* KeyValueStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368BF0EB2A152FA500F3F750 /* KeyValueStorage.swift */; };
 		368BF0EF2A16103B00F3F750 /* KeyValueStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368BF0EB2A152FA500F3F750 /* KeyValueStorage.swift */; };
 		368F66612A308D2600C8F69D /* PreferencesHandlerLoadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368F66602A308D2600C8F69D /* PreferencesHandlerLoadTests.swift */; };
-		368F66632A308E4100C8F69D /* PreferencesHandlerTestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368F66622A308E4100C8F69D /* PreferencesHandlerTestHelper.swift */; };
+		368F66662A30BA7500C8F69D /* UserPreferencesStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368F66652A30BA7500C8F69D /* UserPreferencesStorage.swift */; };
 		36BEA7582A1621B10020F6AE /* KeyValueStorageSaveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BEA7572A1621B10020F6AE /* KeyValueStorageSaveTests.swift */; };
 		36C06F5A2A2F5AA600B8EBDF /* PreferencesHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C06F592A2F5AA600B8EBDF /* PreferencesHandler.swift */; };
 		36C06F5C2A2F5DCB00B8EBDF /* PreferencesHandlerSaveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C06F5B2A2F5DCB00B8EBDF /* PreferencesHandlerSaveTests.swift */; };
@@ -117,7 +117,7 @@
 		3673D6362A04F7FD009D699D /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		368BF0EB2A152FA500F3F750 /* KeyValueStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStorage.swift; sourceTree = "<group>"; };
 		368F66602A308D2600C8F69D /* PreferencesHandlerLoadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesHandlerLoadTests.swift; sourceTree = "<group>"; };
-		368F66622A308E4100C8F69D /* PreferencesHandlerTestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesHandlerTestHelper.swift; sourceTree = "<group>"; };
+		368F66652A30BA7500C8F69D /* UserPreferencesStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferencesStorage.swift; sourceTree = "<group>"; };
 		36BEA7572A1621B10020F6AE /* KeyValueStorageSaveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStorageSaveTests.swift; sourceTree = "<group>"; };
 		36C06F592A2F5AA600B8EBDF /* PreferencesHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesHandler.swift; sourceTree = "<group>"; };
 		36C06F5B2A2F5DCB00B8EBDF /* PreferencesHandlerSaveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesHandlerSaveTests.swift; sourceTree = "<group>"; };
@@ -209,6 +209,14 @@
 				1CE7E9CB2A24889B000A0509 /* KeyValueStorage+UnitTests.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		368F66642A30BA6100C8F69D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				368F66652A30BA7500C8F69D /* UserPreferencesStorage.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		36BEA7592A1621B70020F6AE /* Model */ = {
@@ -562,11 +570,11 @@
 		FDEE43D22A2F5512007DE0A9 /* Preferences */ = {
 			isa = PBXGroup;
 			children = (
+				368F66642A30BA6100C8F69D /* Helpers */,
 				FDEE43CC2A2F4E51007DE0A9 /* PreferencesTests.swift */,
 				FDEE43D02A2F525B007DE0A9 /* RoleTests.swift */,
 				36C06F5B2A2F5DCB00B8EBDF /* PreferencesHandlerSaveTests.swift */,
 				368F66602A308D2600C8F69D /* PreferencesHandlerLoadTests.swift */,
-				368F66622A308E4100C8F69D /* PreferencesHandlerTestHelper.swift */,
 			);
 			path = Preferences;
 			sourceTree = "<group>";
@@ -780,7 +788,7 @@
 				FDEE43CD2A2F4E51007DE0A9 /* PreferencesTests.swift in Sources */,
 				FD98022A2A2878C1003DEE5C /* Owner+Test.swift in Sources */,
 				FDD143F72A052A11000BBA77 /* Color+AppSchemeTests.swift in Sources */,
-				368F66632A308E4100C8F69D /* PreferencesHandlerTestHelper.swift in Sources */,
+				368F66662A30BA7500C8F69D /* UserPreferencesStorage.swift in Sources */,
 				1CE7E9CC2A24889B000A0509 /* KeyValueStorage+UnitTests.swift in Sources */,
 				FD2F7B322A0CE029008F6F49 /* Sitter.swift in Sources */,
 				FD02917C2A0E2CBC00F88377 /* AppStyle.swift in Sources */,

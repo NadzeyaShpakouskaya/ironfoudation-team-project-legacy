@@ -12,12 +12,12 @@ enum PreferencesHandler {
 
      - Returns: A boolean value indicating whether the saving operation was successful.
      */
-    @discardableResult static func saveSelectedRole(_ selectedRole: Role) -> Bool {
-        var preferences: Preferences = loadPreferencesFromStorage() ?? Preferences()
+    @discardableResult static func set(userRole: Role) -> Bool {
+        var preferences: Preferences = loadPreferences() ?? Preferences()
 
-        preferences.selectedRole = selectedRole
+        preferences.selectedRole = userRole
 
-        return savePreferencesToStorage(preferences)
+        return store(preferences)
     }
 
     /**
@@ -25,33 +25,33 @@ enum PreferencesHandler {
 
      - Returns: The selected role for the user in the app session. If the role couldn't be loaded, returns `.none`.
      */
-    static func loadSelectedRole() -> Role {
-        guard let preferences = loadPreferencesFromStorage() else { return .none }
-
-        return preferences.selectedRole
+    static func getRole() -> Role {
+        loadPreferences()?.selectedRole ?? .none
     }
 
     // MARK: - Private interface
 
-    private static func loadPreferencesFromStorage() -> Preferences? {
-        guard let data = KeyValueStorage(KeyValueStorage.Name.preferences)
-            .loadData(for: KeyValueStorage.Key.userPreferences) else {
-            return nil
-        }
-        guard let preferences = try? JSONDecoder().decode(Preferences.self, from: data) else {
+    private static func loadPreferences() -> Preferences? {
+        guard let data = preferencesStorage.loadData(for: preferencesKey) else {
             return nil
         }
 
-        return preferences
+        return try? JSONDecoder().decode(Preferences.self, from: data)
     }
 
-    private static func savePreferencesToStorage(_ preferences: Preferences) -> Bool {
+    private static func store(_ preferences: Preferences) -> Bool {
         guard let data = try? JSONEncoder().encode(preferences) else {
             return false
         }
-        let result = KeyValueStorage(KeyValueStorage.Name.preferences)
-            .save(data, for: KeyValueStorage.Key.userPreferences)
 
-        return result
+        return preferencesStorage.save(data, for: preferencesKey)
+    }
+
+    private static var preferencesStorage: KeyValueStorage {
+        KeyValueStorage(KeyValueStorage.Name.preferences)
+    }
+
+    private static var preferencesKey: String {
+        KeyValueStorage.Key.userPreferences
     }
 }
