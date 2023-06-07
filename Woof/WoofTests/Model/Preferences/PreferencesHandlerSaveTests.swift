@@ -12,6 +12,9 @@ final class PreferencesHandlerSaveTests: XCTestCase {
     }
 
     func testSaveSelectedRoleExistsInAPI() {
+        // Given
+        // When
+        // Then
         _ = PreferencesHandler.set(userRole: .sitter)
     }
 

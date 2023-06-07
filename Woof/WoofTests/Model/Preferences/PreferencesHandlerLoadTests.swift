@@ -12,7 +12,10 @@ final class PreferencesHandlerLoadTests: XCTestCase {
     }
 
     func testLoadSelectedRoleExistsInAPI() {
-        _ = PreferencesHandler.getRole()
+        // Given
+        // When
+        // Then
+        _ = PreferencesHandler.getUserRole()
     }
 
     func testLoadSelectedRoleReturnsExpectedRole() {
@@ -21,25 +24,25 @@ final class PreferencesHandlerLoadTests: XCTestCase {
         _ = PreferencesHandler.set(userRole: .owner)
 
         // Then
-        XCTAssertEqual(PreferencesHandler.getRole(), .owner)
+        XCTAssertEqual(PreferencesHandler.getUserRole(), .owner)
     }
 
     func testLoadSelectedRoleReturnsDefaultCaseForNonExistingPreferencesObject() {
         // Given
         // When
         // Then
-        XCTAssertEqual(PreferencesHandler.getRole(), .none)
+        XCTAssertEqual(PreferencesHandler.getUserRole(), .none)
     }
 
     func testLoadSelectedRoleReturnsExpectedRoleWhenRewrittenByNonDefaultCase() {
         // Given
         let overriddenRole: Role = .sitter
-
-        // When
         _ = PreferencesHandler.set(userRole: .owner)
+        
+        // When
         _ = PreferencesHandler.set(userRole: overriddenRole)
 
         // Then
-        XCTAssertEqual(PreferencesHandler.getRole(), overriddenRole)
+        XCTAssertEqual(PreferencesHandler.getUserRole(), overriddenRole)
     }
 }

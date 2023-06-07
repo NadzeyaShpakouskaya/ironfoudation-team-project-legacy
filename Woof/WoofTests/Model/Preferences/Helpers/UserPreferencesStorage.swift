@@ -1,6 +1,6 @@
 import Foundation
 
-struct UserPreferencesStorage {
+extension KeyValueStorage {
     /**
      Cleans the storage used for preferences.
      This method deletes the user preferences data from the key-value storage.
