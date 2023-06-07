@@ -15,7 +15,9 @@ final class PreferencesHandlerSaveTests: XCTestCase {
         _ = PreferencesHandler.saveSelectedRole(.sitter)
     }
 
-    func testSaveSelectedRoleReturnsTrueWhenUsing() {
-        XCTAssertTrue(PreferencesHandler.saveSelectedRole(.sitter))
+    func testSaveSelectedRoleReturnsTrueWhenUsingWithAllCases() {
+        Role.allCases.forEach { role in
+            XCTAssertTrue(PreferencesHandler.saveSelectedRole(role))
+        }
     }
 }
