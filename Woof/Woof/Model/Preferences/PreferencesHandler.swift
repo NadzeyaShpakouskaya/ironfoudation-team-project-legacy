@@ -32,7 +32,9 @@ enum PreferencesHandler {
 
         return selectedRole
     }
-
+    
+    // MARK: - Private interface
+    
     private static func loadPreferencesFromStorage() -> Preferences? {
         guard let data = KeyValueStorage(KeyValueStorage.Name.preferences)
             .loadData(for: KeyValueStorage.Key.userPreferences) else { return nil }
