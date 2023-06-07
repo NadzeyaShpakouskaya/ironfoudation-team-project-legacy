@@ -3,15 +3,15 @@ import XCTest
 final class PreferencesHandlerLoadTests: XCTestCase {
     override func setUp() {
         super.setUp()
-        PreferencesHandlerTestHelper.cleanStorage()
+        PreferencesHandler.cleanStorage()
     }
 
     override func tearDown() {
-        PreferencesHandlerTestHelper.cleanStorage()
+        PreferencesHandler.cleanStorage()
         super.tearDown()
     }
 
-    func testLoadSelectedRoleExistInAPI() {
+    func testLoadSelectedRoleExistsInAPI() {
         _ = PreferencesHandler.loadSelectedRole()
     }
 
@@ -21,7 +21,7 @@ final class PreferencesHandlerLoadTests: XCTestCase {
         XCTAssertEqual(PreferencesHandler.loadSelectedRole(), .owner)
     }
 
-    func testLoadSelectedRoleReturnsDefaultCaseForNonExistingKey() {
+    func testLoadSelectedRoleReturnsDefaultCaseForNonExistingPreferencesobject() {
         XCTAssertEqual(PreferencesHandler.loadSelectedRole(), .none)
     }
 

@@ -23,30 +23,35 @@ enum PreferencesHandler {
     /**
      Loads the selected role from user preferences.
 
-     - Returns: The selected role, or `.none` if no preferences are found.
+     - Returns: The selected role for the user in the app session. If the role couldn't be loaded, returns `.none`.
      */
     static func loadSelectedRole() -> Role {
         guard let preferences = loadPreferencesFromStorage() else { return .none }
 
-        let selectedRole = preferences.selectedRole
-
-        return selectedRole
+        return preferences.selectedRole
     }
-    
+
     // MARK: - Private interface
-    
+
     private static func loadPreferencesFromStorage() -> Preferences? {
         guard let data = KeyValueStorage(KeyValueStorage.Name.preferences)
-            .loadData(for: KeyValueStorage.Key.userPreferences) else { return nil }
+            .loadData(for: KeyValueStorage.Key.userPreferences) else {
+            return nil
+        }
+        guard let preferences = try? JSONDecoder().decode(Preferences.self, from: data) else {
+            return nil
+        }
 
-        guard let preferences = try? JSONDecoder().decode(Preferences.self, from: data) else { return nil }
         return preferences
     }
 
     private static func savePreferencesToStorage(_ preferences: Preferences) -> Bool {
-        guard let data = try? JSONEncoder().encode(preferences) else { return false }
+        guard let data = try? JSONEncoder().encode(preferences) else {
+            return false
+        }
         let result = KeyValueStorage(KeyValueStorage.Name.preferences)
             .save(data, for: KeyValueStorage.Key.userPreferences)
+
         return result
     }
 }

@@ -3,15 +3,15 @@ import XCTest
 final class PreferencesHandlerSaveTests: XCTestCase {
     override func setUp() {
         super.setUp()
-        PreferencesHandlerTestHelper.cleanStorage()
+        PreferencesHandler.cleanStorage()
     }
 
     override func tearDown() {
-        PreferencesHandlerTestHelper.cleanStorage()
+        PreferencesHandler.cleanStorage()
         super.tearDown()
     }
 
-    func testSaveSelectedRoleExistInAPI() {
+    func testSaveSelectedRoleExistsInAPI() {
         _ = PreferencesHandler.saveSelectedRole(.sitter)
     }
 
