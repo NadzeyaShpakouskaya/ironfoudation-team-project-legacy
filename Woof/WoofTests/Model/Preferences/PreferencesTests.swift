@@ -5,10 +5,10 @@ final class PreferencesTests: XCTestCase {
         _ = Preferences()
     }
 
-    func testPreferencesReturnNilForSelectedRoleWhenNewInstancePreferencesInitialized() {
+    func testPreferencesReturnNoneForSelectedRoleWhenNewInstancePreferencesInitialized() {
         let preferences = Preferences()
 
-        XCTAssertNil(preferences.selectedRole)
+        XCTAssertEqual(preferences.selectedRole, .none)
     }
 
     func testPreferencesReturnExpectedValueForSelectedRoleWhenItChangedToSitterRole() {
