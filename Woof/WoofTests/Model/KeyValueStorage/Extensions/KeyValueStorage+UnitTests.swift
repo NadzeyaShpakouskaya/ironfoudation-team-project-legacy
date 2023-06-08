@@ -4,6 +4,11 @@ extension KeyValueStorage {
         KeyValueStorage("Test-KeyValue-Storage")
     }
 
+    /// A storage for preferences
+    static var preferencesStorage: KeyValueStorage {
+        KeyValueStorage(KeyValueStorage.Name.preferences)
+    }
+
     /**
      Removes the associated data for all the test keys.
      If some test key isn’t found, method does nothing for that key.
@@ -12,5 +17,12 @@ extension KeyValueStorage {
         KeyValueStorage.TestKey.allCases.forEach {
             self.deleteData(for: $0.rawValue)
         }
+    }
+
+    /**
+     Removes the associated data for `userPreferences` key.
+     */
+    func removeAll() {
+        deleteData(for: KeyValueStorage.Key.userPreferences)
     }
 }

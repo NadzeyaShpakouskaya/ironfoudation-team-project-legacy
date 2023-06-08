@@ -2,7 +2,8 @@ import XCTest
 
 final class RoleTests: XCTestCase {
     func testAllRolesExistInAPI() {
-        _ = Role.owner
-        _ = Role.sitter
+        XCTAssertTrue(Role.allCases.contains(.owner))
+        XCTAssertTrue(Role.allCases.contains(.sitter))
+        XCTAssertTrue(Role.allCases.contains(.none))
     }
 }
