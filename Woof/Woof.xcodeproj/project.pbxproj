@@ -17,6 +17,7 @@
 		368BF0EF2A16103B00F3F750 /* KeyValueStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368BF0EB2A152FA500F3F750 /* KeyValueStorage.swift */; };
 		36BEA7582A1621B10020F6AE /* KeyValueStorageSaveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BEA7572A1621B10020F6AE /* KeyValueStorageSaveTests.swift */; };
 		36C54AFC2A17A79200748023 /* KeyValueStorageLoadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C54AFB2A17A79200748023 /* KeyValueStorageLoadTests.swift */; };
+		BA44C2FE2A31FA2D00193927 /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD0FC622A31D20800F59544 /* Rating.swift */; };
 		BAD0FC632A31D20800F59544 /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD0FC622A31D20800F59544 /* Rating.swift */; };
 		EF16BB1E2A24D5FA007922C6 /* OwnerCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF16BB1D2A24D5FA007922C6 /* OwnerCardView.swift */; };
 		EF16BB262A24E101007922C6 /* Owner+Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF16BB252A24E101007922C6 /* Owner+Dummy.swift */; };
@@ -773,6 +774,7 @@
 				FD14A2B52A286C5C00362461 /* KeyValueStorage+Key.swift in Sources */,
 				FD37A9942A0B6E960001BABB /* FullNameTests.swift in Sources */,
 				FDCF49132A1CDA8800CD3BBB /* DetailPetSitterViewModelTests.swift in Sources */,
+				BA44C2FE2A31FA2D00193927 /* Rating.swift in Sources */,
 				FDCF49142A1CDB1600CD3BBB /* DetailPetSitterViewModel.swift in Sources */,
 				FDEE43CD2A2F4E51007DE0A9 /* PreferencesTests.swift in Sources */,
 				FD98022A2A2878C1003DEE5C /* Owner+Test.swift in Sources */,
