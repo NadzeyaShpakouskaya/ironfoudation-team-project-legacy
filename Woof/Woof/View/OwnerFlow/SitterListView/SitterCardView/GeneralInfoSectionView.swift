@@ -17,7 +17,6 @@ struct GeneralInfoSectionView: View {
                     .bold()
                     .lineLimit(1)
                 FiveStarRatingView(rating: rating)
-                    .foregroundColor(Color.App.purpleDark)
             }
             Spacer()
             VStack {
