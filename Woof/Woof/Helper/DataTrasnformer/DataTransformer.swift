@@ -36,8 +36,9 @@ enum DataTransformer {
     /// If the value is less than 0, 0 is returned.
     /// If the value is greater than 5, 5 is returned.
     /// Otherwise, the rounded value is returned. The rounding rule is schoolbook rounding.
-    static func normalizeToZeroToFiveRange(_ value: Double) -> Int {
+    static func normalizeToZeroToFiveRange(_ value: Double) -> Rating {
         let roundedValue = Int(value.rounded(.toNearestOrAwayFromZero))
-        return max(0, min(roundedValue, 5))
+        let value = max(0, min(roundedValue, 5))
+        return value != 0 ? Rating.rated(Double(value)) : .unavailable
     }
 }
