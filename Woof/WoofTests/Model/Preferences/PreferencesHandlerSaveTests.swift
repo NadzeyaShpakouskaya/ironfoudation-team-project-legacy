@@ -1,13 +1,15 @@
 import XCTest
 
 final class PreferencesHandlerSaveTests: XCTestCase {
+    private var userPreferencesStorage = KeyValueStorage.preferencesStorage
+
     override func setUp() {
         super.setUp()
-        UserPreferencesStorage.removeAll()
+        userPreferencesStorage.removeAll()
     }
 
     override func tearDown() {
-        UserPreferencesStorage.removeAll()
+        userPreferencesStorage.removeAll()
         super.tearDown()
     }
 

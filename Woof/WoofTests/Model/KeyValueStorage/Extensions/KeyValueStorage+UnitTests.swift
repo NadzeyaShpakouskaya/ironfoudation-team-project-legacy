@@ -3,7 +3,8 @@ extension KeyValueStorage {
     static var test: KeyValueStorage {
         KeyValueStorage("Test-KeyValue-Storage")
     }
-    
+
+    /// A storage for preferences
     static var preferencesStorage: KeyValueStorage {
         KeyValueStorage(KeyValueStorage.Name.preferences)
     }
@@ -17,9 +18,11 @@ extension KeyValueStorage {
             self.deleteData(for: $0.rawValue)
         }
     }
-    
-    func removeAllFromPreferencesStorage() {
-        let preferencesStorage = KeyValueStorage(KeyValueStorage.Name.preferences)
-        preferencesStorage.deleteData(for: KeyValueStorage.Key.userPreferences)
+
+    /**
+     Removes the associated data for `userPreferences` key.
+     */
+    func removeAll() {
+        deleteData(for: KeyValueStorage.Key.userPreferences)
     }
 }
