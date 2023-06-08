@@ -5,7 +5,7 @@ struct GeneralInfoSectionView: View {
     let fullName: String
 
     /// The rating of the person.
-    let rating: Int
+    let rating: Rating
 
     /// The price associated with the person.
     let price: Double
@@ -35,7 +35,7 @@ struct GeneralInfoView_Previews: PreviewProvider {
     static var previews: some View {
         GeneralInfoSectionView(
             fullName: "Kate Anderson",
-            rating: 0,
+            rating: .unavailable,
             price: 18.78
         )
     }

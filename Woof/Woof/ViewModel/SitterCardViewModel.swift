@@ -9,7 +9,7 @@ final class SitterCardViewModel: ObservableObject {
     @Published var bio: String
 
     /// The rating of the sitter, on a scale from 0 to 5.
-    @Published var rating: Int
+    @Published var rating: Rating
 
     /// The price per hour charged by the sitter.
     @Published var price: Double
