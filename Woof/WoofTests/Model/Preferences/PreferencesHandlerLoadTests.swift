@@ -27,7 +27,7 @@ final class PreferencesHandlerLoadTests: XCTestCase {
         XCTAssertEqual(PreferencesHandler.getUserRole(), .owner)
     }
 
-    func testLoadSelectedRoleReturnsDefaultCaseForNonExistingPreferencesObject() {
+    func testLoadSelectedRoleReturnsDefaultCaseForEmptyStorage() {
         // Given
         // When
         // Then
@@ -38,7 +38,7 @@ final class PreferencesHandlerLoadTests: XCTestCase {
         // Given
         let overriddenRole: Role = .sitter
         _ = PreferencesHandler.set(userRole: .owner)
-        
+
         // When
         _ = PreferencesHandler.set(userRole: overriddenRole)
 
