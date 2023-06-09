@@ -22,6 +22,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Enhancement: make `IconName` extension of `String` instead of `Image` - [#95](https://github.com/ios-course/ironfoudation-team-project/pull/95)
 - Add icon image for the app [#96](https://github.com/ios-course/ironfoudation-team-project/pull/96)
 - Add `OwnerProfileView`- [#93](https://github.com/ios-course/ironfoudation-team-project/pull/93)
+- Add `CopyToClipboardLabel`. Add feature copy to clipboard the pet sitter's name and the phone number.
 
 ## [0.1.0] - 31.05.2023
 
