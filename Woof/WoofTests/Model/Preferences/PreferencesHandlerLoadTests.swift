@@ -1,50 +1,44 @@
 import XCTest
 
-final class PreferencesHandlerLoadTests: XCTestCase {
+final class PreferencesHandlerGetUserRoleTests: XCTestCase {
     private var userPreferencesStorage = KeyValueStorage.preferencesStorage
 
     override func setUp() {
         super.setUp()
-        userPreferencesStorage.removeAll()
+        userPreferencesStorage.deleteData(for: KeyValueStorage.Key.userPreferences)
     }
 
-    override func tearDown() {
-        userPreferencesStorage.removeAll()
-        super.tearDown()
+    func testExistsInAPI() {
+        PreferencesHandler.getUserRole()
     }
 
-    func testLoadSelectedRoleExistsInAPI() {
-        // Given
-        // When
-        // Then
-        _ = PreferencesHandler.getUserRole()
-    }
-
-    func testLoadSelectedRoleReturnsExpectedRole() {
-        // Given
-        // When
-        _ = PreferencesHandler.set(userRole: .owner)
-
-        // Then
-        XCTAssertEqual(PreferencesHandler.getUserRole(), .owner)
-    }
-
-    func testLoadSelectedRoleReturnsDefaultCaseForEmptyStorage() {
-        // Given
-        // When
-        // Then
+    func testReturnsNoneForEmptyStorage() {
         XCTAssertEqual(PreferencesHandler.getUserRole(), .none)
     }
 
-    func testLoadSelectedRoleReturnsExpectedRoleWhenRewrittenByNonDefaultCase() {
+    func testReturnsSavedRole() {
         // Given
-        let overriddenRole: Role = .sitter
-        _ = PreferencesHandler.set(userRole: .owner)
+        let role = Role.owner
+        PreferencesHandler.set(userRole: role)
 
         // When
-        _ = PreferencesHandler.set(userRole: overriddenRole)
+        let loadedRole = PreferencesHandler.getUserRole()
 
         // Then
-        XCTAssertEqual(PreferencesHandler.getUserRole(), overriddenRole)
+        XCTAssertEqual(loadedRole, role)
+    }
+
+    func testSavesLastRoleWhenSetMethodCalledMultiplyTimes() {
+        // Given
+        let repeatedRoles = Array(repeating: Role.allCases, count: 4).flatMap { $0 }
+        repeatedRoles.forEach {
+            PreferencesHandler.set(userRole: $0)
+        }
+
+        // When
+        let lastRole = PreferencesHandler.getUserRole()
+
+        // Then
+        XCTAssertEqual(lastRole, repeatedRoles.last)
     }
 }

@@ -18,11 +18,4 @@ extension KeyValueStorage {
             self.deleteData(for: $0.rawValue)
         }
     }
-
-    /**
-     Removes the associated data for `userPreferences` key.
-     */
-    func removeAll() {
-        deleteData(for: KeyValueStorage.Key.userPreferences)
-    }
 }
