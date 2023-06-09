@@ -13,10 +13,28 @@ struct DetailPetSitterView: View {
                 iconName: .IconName.filledPerson,
                 text: viewModel.fullName
             )
+            .contextMenu {
+                Button {
+                    viewModel.copyToClipboardText(viewModel.fullName)
+                } label: {
+                    CopyToClipboardLabel()
+                        .frame(maxWidth: 20)
+                }
+            }
+
             TextWithIconLabelView(
                 iconName: .IconName.phone,
                 text: viewModel.phoneNumber
             )
+            .contextMenu {
+                Button {
+                    viewModel.copyToClipboardText(viewModel.phoneNumber)
+                } label: {
+                    CopyToClipboardLabel()
+                        .frame(maxWidth: 20)
+                }
+            }
+
             Text(viewModel.bio)
             Spacer()
         }
