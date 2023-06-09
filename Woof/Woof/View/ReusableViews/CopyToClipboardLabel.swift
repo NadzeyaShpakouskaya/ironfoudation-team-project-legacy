@@ -1,6 +1,6 @@
 import SwiftUI
 
-/// A label for user interface items, consisting of an icon with two docs and with title `Copy`.
+/// A label consisting of an icon with two docs and the title `Copy`.
 struct CopyToClipboardLabel: View {
     // MARK: - Internal interface
 
