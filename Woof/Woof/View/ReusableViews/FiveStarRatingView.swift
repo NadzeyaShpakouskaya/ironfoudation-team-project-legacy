@@ -9,19 +9,21 @@ struct FiveStarRatingView: View {
 
     // MARK: Internal interface
 
-    /// The rating in the range from 0 to 5 stars.
-    /// The rating equals zero, if it's not specified.
-    let rating: Rating
+    /// A 5-star rating system, where 5 stars represent the highest rating
+    /// and 1 star represents the lowest rating.
+    let rating: StarsRating
 
     var body: some View {
-        HStack(spacing: 0) {
+        Group {
             switch rating {
             case .unavailable:
                 Text(noRatingText)
                     .font(Font.system(size: AppStyle.FontStyle.footnote.size))
             case let .rated(rating):
-                ForEach(1...Int(rating), id: \.self) { _ in
-                    Image(systemName: .IconName.filledStar)
+                HStack(spacing: 0) {
+                    ForEach(1...rating.rawValue, id: \.self) { _ in
+                        Image(systemName: .IconName.filledStar)
+                    }
                 }
             }
         }
@@ -32,12 +34,11 @@ struct FiveStarRatingView: View {
 struct RatingView_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            FiveStarRatingView(rating: .rated(5))
-            FiveStarRatingView(rating: .rated(4))
-            FiveStarRatingView(rating: .rated(3))
-            FiveStarRatingView(rating: .rated(2))
-            FiveStarRatingView(rating: .rated(1))
-            FiveStarRatingView(rating: .rated(0))
+            FiveStarRatingView(rating: .rated(.fiveStars))
+            FiveStarRatingView(rating: .rated(.fourStars))
+            FiveStarRatingView(rating: .rated(.threeStars))
+            FiveStarRatingView(rating: .rated(.twoStars))
+            FiveStarRatingView(rating: .rated(.oneStar))
             FiveStarRatingView(rating: .unavailable)
         }
     }

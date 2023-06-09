@@ -1,6 +1,6 @@
 import XCTest
 
-final class DetailPetSitterViewModelTests: XCTestCase {
+final class DetailSitterViewModelTests: XCTestCase {
     func testDetailPetSitterViewModelExistsInAPI() {
         let sitter = Sitter(
             id: UUID(),
@@ -31,7 +31,7 @@ final class DetailPetSitterViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel.fullName, "\(sitter.name) \(sitter.surname)")
         XCTAssertEqual(viewModel.phoneNumber, sitter.phone)
         XCTAssertEqual(viewModel.bio, sitter.bio)
-        XCTAssertEqual(viewModel.rating, .rated(sitter.rating))
+        XCTAssertEqual(viewModel.rating, .rated(.fourStars))
         XCTAssertNil(viewModel.imageURL)
     }
 }

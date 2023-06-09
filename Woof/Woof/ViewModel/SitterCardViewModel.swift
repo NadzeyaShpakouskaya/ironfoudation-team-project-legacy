@@ -8,8 +8,8 @@ final class SitterCardViewModel: ObservableObject {
     /// The additional information about the sitter.
     @Published var bio: String
 
-    /// The rating of the sitter, on a scale from 0 to 5.
-    @Published var rating: Rating
+    /// The rating of the sitter, on a scale from 1 to 5 star, or that the rating is not available.
+    @Published var rating: StarsRating
 
     /// The price per hour charged by the sitter.
     @Published var price: Double
@@ -23,7 +23,7 @@ final class SitterCardViewModel: ObservableObject {
     init(sitter: Sitter) {
         self.sitter = sitter
         fullName = DataTransformer.fullName(name: sitter.name, surname: sitter.surname)
-        rating = DataTransformer.normalizeToZeroToFiveRange(sitter.rating)
+        rating = DataTransformer.convertNumericValueToStarsRating(sitter.rating)
         price = sitter.pricePerHour
         imageURL = sitter.avatarUrl
         bio = sitter.bio

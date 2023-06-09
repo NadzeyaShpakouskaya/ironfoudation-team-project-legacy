@@ -6,7 +6,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Changed
+
+- implementation of `func convertNumericRatingValueToStarsRating` in `DataTransformer`
+- tests for `ConvertNumericRatingValueToStarsRatingTests`
+- type of property `rating` to `StarsRating` where needed
+
 ### Added 
+
+- Add `enum Stars` and `enum StarsRating` and use it into `FiveStarRatingView`[#127](https://github.com/ios-course/ironfoudation-team-project/pull/127)
 
 - Add `SitterMainTabView` for the sitter with stub view for tabs - [#108](https://github.com/ios-course/ironfoudation-team-project/pull/108)
 - Update storage keys and storage names to use with the `KeyValueStorage` - [#109](https://github.com/ios-course/ironfoudation-team-project/pull/109)

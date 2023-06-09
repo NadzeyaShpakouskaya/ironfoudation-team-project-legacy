@@ -29,16 +29,25 @@ enum DataTransformer {
             .capitalized
     }
 
-    /// Converts a numeric value to an integer within the range of 0 to 5, following the zero-to-five style.
+    /// Converts a numeric value to a rating corresponding to a 5-star rating.
     ///
     /// - Parameter value: The numeric value to be converted.
-    /// - Returns: An integer value within the range of 0 to 5.
-    /// If the value is less than 0, 0 is returned.
-    /// If the value is greater than 5, 5 is returned.
-    /// Otherwise, the rounded value is returned. The rounding rule is schoolbook rounding.
-    static func normalizeToZeroToFiveRange(_ value: Double) -> Rating {
+    /// - Returns: The rating from 1 to 5 stars from a 5-star rating, or information that the rating is unavailable.
+    /// If the value is less than or equal 0, returned `.unavailable` to indicate an unavailable rating.
+    /// If the value is between 1 and 5 (inclusive), returned the rating from 1 to 5 stars from a 5-star rating.
+    /// The rounding rule is schoolbook rounding.
+    ///
+    /// /// Example usage:
+    /// ```
+    /// let value = 3.7
+    /// let normalizedRating = Rating.normalizeToZeroToFiveRange(value)
+    /// // normalizedRating is Rating.rated(4)
+    /// ```
+    static func convertNumericValueToStarsRating(_ value: Double) -> StarsRating {
         let roundedValue = Int(value.rounded(.toNearestOrAwayFromZero))
-        let value = max(0, min(roundedValue, 5))
-        return value != 0 ? Rating.rated(Double(value)) : .unavailable
+        let ratingValue = max(0, min(roundedValue, 5))
+
+        guard let stars = Stars(rawValue: ratingValue), ratingValue != 0 else { return .unavailable }
+        return .rated(stars)
     }
 }
