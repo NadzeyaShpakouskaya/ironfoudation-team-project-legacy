@@ -20,7 +20,7 @@ final class PreferencesHandlerSaveTests: XCTestCase {
         _ = PreferencesHandler.set(userRole: .sitter)
     }
 
-    func testSaveSelectedRoleReturnsTrueForPossibleRoleCase() {
+    func testSaveSelectedRoleReturnsTrueForAvailableRoleCases() {
         // Given
         // When
         // Then
