@@ -18,7 +18,6 @@ struct DetailPetSitterView: View {
                     viewModel.copyToClipboardText(viewModel.fullName)
                 } label: {
                     CopyToClipboardLabel()
-                        .frame(maxWidth: 20)
                 }
             }
 
@@ -31,7 +30,6 @@ struct DetailPetSitterView: View {
                     viewModel.copyToClipboardText(viewModel.phoneNumber)
                 } label: {
                     CopyToClipboardLabel()
-                        .frame(maxWidth: 20)
                 }
             }
 
