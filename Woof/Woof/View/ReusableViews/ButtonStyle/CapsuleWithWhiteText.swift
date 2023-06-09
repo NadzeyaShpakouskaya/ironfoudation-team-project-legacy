@@ -7,14 +7,14 @@ import SwiftUI
 ///
 /// To configure the current button style for a view hierarchy, use the `buttonStyle(_:)` modifier.
 struct CapsuleWithWhiteText: ButtonStyle {
-    /// A capsule color.
-    let capsuleColor: Color
+    /// A background color.
+    let backgroundColor: Color
 
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .padding(.horizontal)
             .foregroundColor(Color.App.white)
-            .background(capsuleColor)
+            .background(backgroundColor)
             .clipShape(Capsule())
     }
 }
@@ -24,7 +24,7 @@ struct CapsuleWithWhiteText_Previews: PreviewProvider {
         Button("Press Me!") {}
             .buttonStyle(
                 CapsuleWithWhiteText(
-                    capsuleColor: Color.App.purpleDark
+                    backgroundColor: Color.App.purpleDark
                 )
             )
     }

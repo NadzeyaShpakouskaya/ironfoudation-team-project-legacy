@@ -38,7 +38,7 @@ struct OwnerProfileView: View {
             }
             .buttonStyle(
                 CapsuleWithWhiteText(
-                    capsuleColor: !viewModel.name.isEmpty ? Color.App.purpleDark : Color.App.grayDark
+                    backgroundColor: !viewModel.name.isEmpty ? Color.App.purpleDark : Color.App.grayDark
                 )
             )
             .padding()
