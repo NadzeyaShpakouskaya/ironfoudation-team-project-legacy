@@ -1,5 +1,4 @@
 import Foundation
-import SwiftUI
 
 /// The view model for a owner profile view that is responsible for preparing and providing data for it.
 final class OwnerProfileViewModel: ObservableObject {
@@ -17,11 +16,6 @@ final class OwnerProfileViewModel: ObservableObject {
 
     /// The URL of the owner's avatar image.
     @Published var avatarURL: URL?
-
-    /// The button color.
-    var buttonColor: Color {
-        !name.isEmpty ? activeButtonColor : inactiveButtonColor
-    }
 
     /**
      Initializes an instance of the `OwnerProfileViewModel` class.
@@ -62,8 +56,6 @@ final class OwnerProfileViewModel: ObservableObject {
 
     // MARK: - Private interface
 
-    private let activeButtonColor = Color.App.purpleDark
-    private let inactiveButtonColor = Color.App.grayDark
     private lazy var currentOwner: Owner = getCurrentOwner()
 
     private func loadOwnerFromStorage() -> Owner? {

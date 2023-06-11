@@ -36,11 +36,7 @@ struct OwnerProfileView: View {
                 }
                 isEditingMode.toggle()
             }
-            .buttonStyle(
-                CapsuleWithWhiteText(
-                    backgroundColor: viewModel.buttonColor
-                )
-            )
+            .buttonStyle(CapsuleWithWhiteText())
             .padding()
             .padding(.horizontal)
             .disabled(isEditingMode && viewModel.name.isEmpty)
