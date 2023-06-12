@@ -25,7 +25,7 @@ extension String {
         static let filledPerson = "person.fill"
         /// The icon used in places where picture of a house is required.
         static let house = "house"
-        /// The icon used to notate in the menu the copy to clipboard.
+        /// The icon used to indicate the copy to clipboard.
         static let doc = "doc.on.doc"
     }
 }

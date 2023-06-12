@@ -1,6 +1,6 @@
 import SwiftUI
 
-/// A label consisting of an icon with two docs and the title `Copy`.
+/// A label consisting of the icon with two docs and the title `Copy`.
 struct CopyToClipboardLabel: View {
     // MARK: - Internal interface
 
@@ -19,23 +19,6 @@ struct CopyToClipboardLabel: View {
 
 struct CopyToClipboardLabel_Previews: PreviewProvider {
     static var previews: some View {
-        VStack {
-            CopyToClipboardLabel()
-
-            Divider()
-
-            CopyToClipboardLabel()
-                .foregroundColor(.blue)
-                .font(.system(.subheadline))
-
-            Divider()
-
-            CopyToClipboardLabel()
-                .foregroundColor(.white)
-                .font(.system(.title))
-                .padding()
-                .background(Color.black)
-                .clipShape(RoundedRectangle(cornerRadius: 10))
-        }
+        CopyToClipboardLabel()
     }
 }

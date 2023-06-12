@@ -10,7 +10,7 @@ final class DetailPetSitterViewModelCopyToClipboardTextTests: XCTestCase {
         testViewModel.copyToClipboardText(textToCopy)
 
         // Then
-        XCTAssertEqual(UIPasteboard.general.string, textToCopy)
+        XCTAssertEqual(clipboard, textToCopy)
     }
 
     func testTheClipboardStoresEmptyStringWhenPassedEmptyString() {
@@ -23,7 +23,7 @@ final class DetailPetSitterViewModelCopyToClipboardTextTests: XCTestCase {
         testViewModel.copyToClipboardText(textToCopyTwo)
 
         // Then
-        XCTAssertEqual(UIPasteboard.general.string, textToCopyTwo)
+        XCTAssertEqual(clipboard, textToCopyTwo)
     }
 
     func testTheClipboardStoresALongTextWhenPassedLongText() {
@@ -34,7 +34,7 @@ final class DetailPetSitterViewModelCopyToClipboardTextTests: XCTestCase {
         testViewModel.copyToClipboardText(textToCopy)
 
         // Then
-        XCTAssertEqual(UIPasteboard.general.string, textToCopy)
+        XCTAssertEqual(clipboard, textToCopy)
     }
 
     func testTheClipboardStoresTheLastPassedText() {
@@ -47,10 +47,13 @@ final class DetailPetSitterViewModelCopyToClipboardTextTests: XCTestCase {
         testViewModel.copyToClipboardText(textToCopyTwo)
 
         // Then
-        XCTAssertEqual(UIPasteboard.general.string, textToCopyTwo)
+        XCTAssertEqual(clipboard, textToCopyTwo)
     }
 
     // MARK: - Private interface
 
     private let testViewModel = DetailSitterViewModel(sitter: Sitter.Dummy.emilyDoe)
+    private var clipboard: String? {
+        UIPasteboard.general.string
+    }
 }
