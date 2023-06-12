@@ -248,6 +248,7 @@
 			children = (
 				EF7B7EFF2A147D8300F00B4E /* TextWithIconLabelView.swift */,
 				EF303EBD2A1762CF0086065B /* FiveStarRatingView.swift */,
+				FD7F98A42A0E12290058DBEB /* AvatarView.swift */,
 			);
 			path = ReusableViews;
 			sourceTree = "<group>";
@@ -357,7 +358,6 @@
 			isa = PBXGroup;
 			children = (
 				FD7F989C2A0E04650058DBEB /* SitterCardView.swift */,
-				FD7F98A42A0E12290058DBEB /* AvatarView.swift */,
 				FD0291722A0E256F00F88377 /* GeneralInfoSectionView.swift */,
 				FD0291742A0E273500F88377 /* BioSectionView.swift */,
 			);

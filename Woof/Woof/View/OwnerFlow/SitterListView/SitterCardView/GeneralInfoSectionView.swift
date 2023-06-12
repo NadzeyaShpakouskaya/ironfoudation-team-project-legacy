@@ -16,18 +16,7 @@ struct GeneralInfoSectionView: View {
                 Text(fullName)
                     .bold()
                     .lineLimit(1)
-                Group {
-                    if rating == 0 {
-                        Text("not rated")
-                            .font(Font.system(size: AppStyle.FontStyle.footnote.size))
-                    } else {
-                        HStack(spacing: 0) {
-                            ForEach(0..<rating, id: \.self) { _ in
-                                Image(systemName: .IconName.filledStar)
-                            }
-                        }
-                    }
-                }.foregroundColor(Color.App.purpleDark)
+                FiveStarRatingView(rating: rating)
             }
             Spacer()
             VStack {
