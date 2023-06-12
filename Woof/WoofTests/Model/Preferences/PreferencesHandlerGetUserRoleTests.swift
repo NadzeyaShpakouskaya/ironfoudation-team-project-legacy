@@ -9,7 +9,7 @@ final class PreferencesHandlerGetUserRoleTests: XCTestCase {
     }
 
     func testExistsInAPI() {
-        PreferencesHandler.getUserRole()
+        _ = PreferencesHandler.getUserRole()
     }
 
     func testReturnsNoneForEmptyStorage() {

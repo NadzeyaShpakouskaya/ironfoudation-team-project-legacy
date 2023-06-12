@@ -27,7 +27,7 @@ enum PreferencesHandler {
 
      - Returns: The selected role for the user in the app session. If the role couldn't be loaded, returns `.none`.
      */
-    @discardableResult static func getUserRole() -> Role {
+    static func getUserRole() -> Role {
         loadPreferences()?.selectedRole ?? .none
     }
 
