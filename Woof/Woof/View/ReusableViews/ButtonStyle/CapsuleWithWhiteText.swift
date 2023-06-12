@@ -9,7 +9,7 @@ import SwiftUI
 ///
 /// To configure the current button style for a view hierarchy, use the `buttonStyle(_:)` modifier.
 struct CapsuleWithWhiteText: ButtonStyle {
-    @Environment(\.isEnabled) var isEnabled
+    @Environment(\.isEnabled) private var isEnabled
 
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
