@@ -11,7 +11,7 @@ struct FiveStarRatingView: View {
 
     /// A 5-star rating system, where 5 stars represent the highest rating
     /// and 1 star represents the lowest rating.
-    let rating: StarsRating
+    let rating: StarRating
 
     var body: some View {
         Group {

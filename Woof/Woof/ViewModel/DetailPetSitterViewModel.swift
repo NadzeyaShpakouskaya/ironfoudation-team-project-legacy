@@ -9,7 +9,7 @@ final class DetailSitterViewModel: ObservableObject {
     @Published var bio: String
 
     /// The rating of the sitter, on a scale from 1 to 5 star, or that the rating is not available.
-    @Published var rating: StarsRating
+    @Published var rating: StarRating
 
     /// The phone number of the sitter.
     @Published var phoneNumber: String

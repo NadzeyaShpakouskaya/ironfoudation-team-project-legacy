@@ -40,10 +40,10 @@ enum DataTransformer {
     /// /// Example usage:
     /// ```
     /// let value = 3.7
-    /// let normalizedRating = Rating.normalizeToZeroToFiveRange(value)
-    /// // normalizedRating is Rating.rated(4)
+    /// let convertedRating = StarRating.convertNumericValueToStarsRating(value)
+    /// // convertedRating is StarRating.rated(.fourStars)
     /// ```
-    static func convertNumericValueToStarsRating(_ value: Double) -> StarsRating {
+    static func convertNumericValueToStarsRating(_ value: Double) -> StarRating {
         let roundedValue = Int(value.rounded(.toNearestOrAwayFromZero))
         let ratingValue = max(0, min(roundedValue, 5))
 

@@ -5,7 +5,7 @@ struct GeneralInfoSectionView: View {
     let fullName: String
 
     /// The rating of the person.
-    let rating: StarsRating
+    let rating: StarRating
 
     /// The price associated with the person.
     let price: Double

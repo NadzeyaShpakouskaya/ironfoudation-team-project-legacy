@@ -29,7 +29,7 @@ final class ConvertNumericValueToStarsRatingTests: XCTestCase {
         XCTAssertEqual(DataTransformer.convertNumericValueToStarsRating(4.56), .rated(.fiveStars))
     }
 
-    func testConvertValueReturnsFiveStarsWhenValueBetweenMoreThenFiveProvided() {
+    func testConvertValueReturnsFiveStarsWhenValueMoreThenFiveProvided() {
         XCTAssertEqual(DataTransformer.convertNumericValueToStarsRating(124.56), .rated(.fiveStars))
     }
 }
