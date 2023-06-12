@@ -1,9 +1,11 @@
 import Foundation
 
 /**
- A type used for managing user preferences in an application.
+ A type used for managing user preferences in the application.
  */
 enum PreferencesHandler {
+    // MARK: - Internal interface
+    
     /**
      Saves the selected role as a user preference.
 
