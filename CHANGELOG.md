@@ -11,8 +11,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Add `SitterMainTabView` for the sitter with stub view for tabs - [#108](https://github.com/ios-course/ironfoudation-team-project/pull/108)
 - Update storage keys and storage names to use with the `KeyValueStorage` - [#109](https://github.com/ios-course/ironfoudation-team-project/pull/109)
 - Create `Preferences` model, enum `Role` - [#111](https://github.com/ios-course/ironfoudation-team-project/pull/111)
+- Move `AvatarView` file to the `ReusableViews` folder - [#136](https://github.com/ios-course/ironfoudation-team-project/pull/136)
 - Add `CopyToClipboardLabel`. Add feature copy to clipboard the pet sitter's name and the phone number. - [#134](https://github.com/ios-course/ironfoudation-team-project/pull/134)
 
+### Changed
+
+- Update the Authors section for the `README.md` file - [#139](https://github.com/ios-course/ironfoudation-team-project/pull/139)
 
 ## [0.2.0] - 05.06.2023
 
