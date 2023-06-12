@@ -12,6 +12,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Update storage keys and storage names to use with the `KeyValueStorage` - [#109](https://github.com/ios-course/ironfoudation-team-project/pull/109)
 - Create `Preferences` model, enum `Role` - [#111](https://github.com/ios-course/ironfoudation-team-project/pull/111)
 - Move `AvatarView` file to the `ReusableViews` folder - [#136](https://github.com/ios-course/ironfoudation-team-project/pull/136)
+- Add build schemes for the Woof and WoofTests targets - [#148](https://github.com/ios-course/ironfoudation-team-project/pull/148)
 
 ### Changed
 
