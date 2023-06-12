@@ -5,7 +5,7 @@ import Foundation
  */
 enum PreferencesHandler {
     // MARK: - Internal interface
-    
+
     /**
      Saves the selected role as a user preference.
 
