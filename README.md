@@ -46,3 +46,7 @@ You can contact the authors by the following GitHub's usernames:
 - Nadia Shpakouskaya: [@NadzeyaShpakouskaya](https://github.com/NadzeyaShpakouskaya)
 - Alex Zavadskiy: [@iBYarchitect](https://github.com/iBYarchitect)
 - Julya Kmita: [@julyakmita](https://github.com/julyakmita)
+- Marina Tihonovich: [@marinkman](https://github.com/marinkman)
+- Yuliya Nastiushkina: [@YuliaNastiushkina](https://github.com/YuliaNastiushkina)
+- Ivan Kirpichonok: [@kirpichonok](https://github.com/kirpichonok)     
+- Alex Levitski: [@levvaa](https://github.com/levvaa)
