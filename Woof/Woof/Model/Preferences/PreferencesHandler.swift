@@ -1,7 +1,8 @@
 import Foundation
 
 /**
- A type used for managing user preferences in the application.
+ A type that manages saving to and retrieving user preferences from
+ the local storage.
  */
 enum PreferencesHandler {
     // MARK: - Internal interface
@@ -15,7 +16,7 @@ enum PreferencesHandler {
      - Returns: A boolean value indicating whether the saving operation was successful.
      */
     @discardableResult static func set(userRole: Role) -> Bool {
-        var preferences: Preferences = loadPreferences() ?? Preferences()
+        var preferences = loadPreferences() ?? Preferences()
 
         preferences.selectedRole = userRole
 
@@ -23,9 +24,10 @@ enum PreferencesHandler {
     }
 
     /**
-     Loads the selected role from user preferences.
+     Loads the current role from user preferences.
 
-     - Returns: The selected role for the user in the app session. If the role couldn't be loaded, returns `.none`.
+     - Returns: The selected role for the user in the app session.
+     If the role couldn't be loaded or it's not in storage, returns .none.
      */
     static func getUserRole() -> Role {
         loadPreferences()?.selectedRole ?? .none

@@ -4,8 +4,8 @@ extension KeyValueStorage {
         KeyValueStorage("Test-KeyValue-Storage")
     }
 
-    /// A storage for preferences
-    static var preferencesStorage: KeyValueStorage {
+    /// A test storage with user preferences to use in the unit tests.
+    static var testPreferencesStorage: KeyValueStorage {
         KeyValueStorage(KeyValueStorage.Name.preferences)
     }
 

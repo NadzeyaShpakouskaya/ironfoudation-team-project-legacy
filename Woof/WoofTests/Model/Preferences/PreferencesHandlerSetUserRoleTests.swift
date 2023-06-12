@@ -1,7 +1,7 @@
 import XCTest
 
 final class PreferencesHandlerSetUserRoleTests: XCTestCase {
-    private var userPreferencesStorage = KeyValueStorage.preferencesStorage
+    private var userPreferencesStorage = KeyValueStorage.testPreferencesStorage
 
     override func setUp() {
         super.setUp()
@@ -12,13 +12,13 @@ final class PreferencesHandlerSetUserRoleTests: XCTestCase {
         PreferencesHandler.set(userRole: .sitter)
     }
 
-    func testReturnsTrueForEachAvailableRole() {
+    func testReturnsTrueWhenPassAllPossibleRoles() {
         Role.allCases.forEach {
             XCTAssertTrue(PreferencesHandler.set(userRole: $0))
         }
     }
 
-    func testSavesSitterRoleWhenOverriddenOwnerRole() {
+    func testOverridesThePreviouslySavedRole() {
         // Given
         let initialRole = Role.owner
         let overriddenRole = Role.sitter

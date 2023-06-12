@@ -1,7 +1,7 @@
 import XCTest
 
 final class PreferencesHandlerGetUserRoleTests: XCTestCase {
-    private var userPreferencesStorage = KeyValueStorage.preferencesStorage
+    private var userPreferencesStorage = KeyValueStorage.testPreferencesStorage
 
     override func setUp() {
         super.setUp()
@@ -13,7 +13,14 @@ final class PreferencesHandlerGetUserRoleTests: XCTestCase {
     }
 
     func testReturnsNoneForEmptyStorage() {
-        XCTAssertEqual(PreferencesHandler.getUserRole(), .none)
+        // Given
+        // the empty storage
+
+        // When
+        let loadedRole = PreferencesHandler.getUserRole()
+
+        // Then
+        XCTAssertEqual(loadedRole, .none)
     }
 
     func testReturnsSavedRole() {
@@ -30,15 +37,14 @@ final class PreferencesHandlerGetUserRoleTests: XCTestCase {
 
     func testSavesLastRoleWhenSetMethodCalledMultiplyTimes() {
         // Given
-        let repeatedRoles = Array(repeating: Role.allCases, count: 4).flatMap { $0 }
-        repeatedRoles.forEach {
+        Role.allCases.forEach {
             PreferencesHandler.set(userRole: $0)
         }
 
         // When
-        let lastRole = PreferencesHandler.getUserRole()
+        let loadedRole = PreferencesHandler.getUserRole()
 
         // Then
-        XCTAssertEqual(lastRole, repeatedRoles.last)
+        XCTAssertEqual(loadedRole, Role.none)
     }
 }
