@@ -8,10 +8,10 @@ enum PreferencesHandler {
     // MARK: - Internal interface
 
     /**
-     Saves the selected role as a user preference.
+     Saves the current role in the app.
 
      - Parameters:
-        - userRole: The selected role to be saved.
+        - userRole: The current role to be saved.
 
      - Returns: A boolean value indicating whether the saving operation was successful.
      */
@@ -24,10 +24,9 @@ enum PreferencesHandler {
     }
 
     /**
-     Loads the current role from user preferences.
+     Gets the current user role in the app.
 
-     - Returns: The selected role for the user in the app session.
-     If the role couldn't be loaded or it's not in storage, returns .none.
+     - Returns: The current role for the user in the app session. If no role is selected, returns `.none`.
      */
     static func getUserRole() -> Role {
         loadPreferences()?.selectedRole ?? .none

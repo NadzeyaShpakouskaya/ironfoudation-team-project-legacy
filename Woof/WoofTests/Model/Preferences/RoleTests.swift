@@ -7,7 +7,7 @@ final class RoleTests: XCTestCase {
         XCTAssertTrue(Role.allCases.contains(.none))
     }
 
-    func testExpectedRolesIncludedInAllCases() {
+    func testExpectedRolesEqualToIncludedInAllCases() {
         XCTAssertEqual(Set(Role.allCases), Set([Role.owner, Role.sitter, Role.none]))
     }
 }
