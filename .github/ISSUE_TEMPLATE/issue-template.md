@@ -1,11 +1,15 @@
 ---
-name: Issue template
+name: Regular issue
 about: Create a new issue for `Woof` project.
 title: ''
 labels: need more discussion
 assignees: ''
 
 ---
+
+<!-- This reference to the epic issue makes the navigation process more easily -->
+## This task is a part of the issue:
+ - #issue
 
 <!-- This references to the issues that block the current issue-->
 ## Depends on tasks:

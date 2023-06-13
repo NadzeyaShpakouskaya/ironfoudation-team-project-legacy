@@ -19,6 +19,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### Changed
 
 - Update the Authors section for the `README.md` file - [#139](https://github.com/ios-course/ironfoudation-team-project/pull/139)
+- Update the general issue template - [#149](https://github.com/ios-course/ironfoudation-team-project/pull/149)
+
 
 ## [0.2.0] - 05.06.2023
 
