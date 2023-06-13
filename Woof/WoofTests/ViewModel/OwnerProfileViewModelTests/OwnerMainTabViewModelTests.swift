@@ -1,8 +1,19 @@
-//
-//  OwnerMainTabViewModelTests.swift
-//  Woof
-//
-//  Created by Julya Kmita on 13/6/23.
-//
+import XCTest
 
-import Foundation
+final class OwnerMainTabViewModelTests: XCTestCase {
+    func testOwnerMainTabViewModelExistsInAPI() {
+        OwnerMainTabViewModel()
+    }
+
+    func testResertCurrentOwnerRoleMethodExistsInAPI() {
+        OwnerMainTabViewModel().resertCurrentOwnerRole()
+    }
+
+    func testResertCurrentOwnerRoleMethod() {
+        PreferencesHandler.set(userRole: .owner)
+        XCTAssertNotNil(PreferencesHandler.set(userRole: .owner))
+
+        OwnerMainTabViewModel().resertCurrentOwnerRole()
+        XCTAssertEqual(PreferencesHandler.getUserRole(), Role.none)
+    }
+}
