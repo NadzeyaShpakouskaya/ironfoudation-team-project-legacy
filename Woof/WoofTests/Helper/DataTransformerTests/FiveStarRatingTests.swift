@@ -1,35 +1,21 @@
 import XCTest
 
 final class FiveStarRatingTests: XCTestCase {
-    func testFiveStarRatingReturnsCaseUnavailableWhenNegativeValueProvided() {
+    func testReturnsExpectedStarsForTheGivenValues() {
         XCTAssertEqual(DataTransformer.fiveStarRating(for: -25.0), .unavailable)
-    }
-
-    func testFiveStarRatingReturnsCaseUnavailableWhenZeroValueProvided() {
         XCTAssertEqual(DataTransformer.fiveStarRating(for: 0), .unavailable)
-    }
-
-    func testFiveStarRatingReturnsCaseUnavailableWhenValueBetweenZeroAndOneHalfValueProvided() {
         XCTAssertEqual(DataTransformer.fiveStarRating(for: 0.35), .unavailable)
-    }
-
-    func testFiveStarRatingReturnsOneStarWhenOneHalfValueProvided() {
         XCTAssertEqual(DataTransformer.fiveStarRating(for: 0.5), .rated(.oneStar))
-    }
-
-    func testFiveStarRatingReturnsOneStarWhenValueBetweenOneHalfAndOneProvided() {
         XCTAssertEqual(DataTransformer.fiveStarRating(for: 0.99), .rated(.oneStar))
-    }
-
-    func testFiveStarRatingReturnsFourStarsWhenValueBetweenFourAndFourAndHalfProvided() {
-        XCTAssertEqual(DataTransformer.fiveStarRating(for: 4.26), .rated(.fourStars))
-    }
-
-    func testFiveStarRatingReturnsFiveStarsWhenValueBetweenFourAndHalfAndFiveProvided() {
-        XCTAssertEqual(DataTransformer.fiveStarRating(for: 4.56), .rated(.fiveStars))
-    }
-
-    func testFiveStarRatingReturnsFiveStarsWhenValueMoreThenFiveProvided() {
+        XCTAssertEqual(DataTransformer.fiveStarRating(for: 1.0), .rated(.oneStar))
+        XCTAssertEqual(DataTransformer.fiveStarRating(for: 1.5), .rated(.twoStars))
+        XCTAssertEqual(DataTransformer.fiveStarRating(for: 2.0), .rated(.twoStars))
+        XCTAssertEqual(DataTransformer.fiveStarRating(for: 2.5), .rated(.threeStars))
+        XCTAssertEqual(DataTransformer.fiveStarRating(for: 3.0), .rated(.threeStars))
+        XCTAssertEqual(DataTransformer.fiveStarRating(for: 3.5), .rated(.fourStars))
+        XCTAssertEqual(DataTransformer.fiveStarRating(for: 4.0), .rated(.fourStars))
+        XCTAssertEqual(DataTransformer.fiveStarRating(for: 4.5), .rated(.fiveStars))
+        XCTAssertEqual(DataTransformer.fiveStarRating(for: 5.0), .rated(.fiveStars))
         XCTAssertEqual(DataTransformer.fiveStarRating(for: 124.56), .rated(.fiveStars))
     }
 }

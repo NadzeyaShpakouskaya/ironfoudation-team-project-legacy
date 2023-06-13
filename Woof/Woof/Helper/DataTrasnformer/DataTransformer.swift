@@ -34,7 +34,7 @@ enum DataTransformer {
     /// - Parameter value: The numeric value to be converted.
     /// - Returns: The rating from 1 to 5 stars from a 5-star rating, if the value is between 1 and 5 (inclusive).
     /// The rounding rule is schoolbook rounding.
-    /// If the given value `<= 0`, returns `.unavailable` to indicate an unavailable rating.
+    /// If the given value <= 0, returns `.unavailable` to indicate an unavailable rating.
     ///
     /// /// Example usage:
     /// ```
@@ -44,9 +44,10 @@ enum DataTransformer {
     /// ```
     static func fiveStarRating(for value: Double) -> StarRating {
         let roundedValue = Int(value.rounded(.toNearestOrAwayFromZero))
-        let ratingValue = max(0, min(roundedValue, 5))
+        let rating = max(0, min(roundedValue, 5))
+        let stars = Stars(rawValue: rating)
 
-        guard let stars = Stars(rawValue: ratingValue), ratingValue != 0 else { return .unavailable }
+        guard let stars, rating > 0 else { return .unavailable }
         return .rated(stars)
     }
 }

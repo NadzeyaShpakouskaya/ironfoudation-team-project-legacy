@@ -16,7 +16,7 @@ struct GeneralInfoSectionView: View {
                 Text(fullName)
                     .bold()
                     .lineLimit(1)
-                FiveStarRatingView(rating: rating)
+                FiveStarRatingView(stars: rating)
             }
             Spacer()
             VStack {

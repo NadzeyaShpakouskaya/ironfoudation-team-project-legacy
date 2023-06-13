@@ -8,7 +8,7 @@ struct DetailPetSitterView: View {
     var body: some View {
         VStack {
             AvatarView(url: viewModel.imageURL)
-            FiveStarRatingView(rating: viewModel.rating)
+            FiveStarRatingView(stars: viewModel.rating)
             TextWithIconLabelView(
                 iconName: .IconName.filledPerson,
                 text: viewModel.fullName
