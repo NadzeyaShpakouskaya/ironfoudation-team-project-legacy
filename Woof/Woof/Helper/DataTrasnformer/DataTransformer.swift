@@ -34,7 +34,7 @@ enum DataTransformer {
     /// - Parameter value: The numeric value to be converted.
     /// - Returns: The rating from 1 to 5 stars from a 5-star rating, if the value is between 1 and 5 (inclusive).
     /// The rounding rule is schoolbook rounding.
-    /// If the given value <= 0, returns `.unavailable` to indicate an unavailable rating.
+    /// If the given value &lt;= 0, returns `.unavailable` to indicate an unavailable rating.
     ///
     /// /// Example usage:
     /// ```
