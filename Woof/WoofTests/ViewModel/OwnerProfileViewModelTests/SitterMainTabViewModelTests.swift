@@ -1,8 +1,19 @@
-//
-//  SitterMainTabViewModelTests.swift
-//  Woof
-//
-//  Created by Julya Kmita on 13/6/23.
-//
+import XCTest
 
-import Foundation
+final class SitterMainTabViewModelTests: XCTestCase {
+    func testSitterMainTabViewModelExistsInAPI() {
+        SitterMainTabViewModel()
+    }
+
+    func testResertCurrentSitterRoleMethodExistsInAPI() {
+        SitterMainTabViewModel().resertCurrentSitterRole()
+    }
+
+    func testResertCurrentSitterRoleMethod() {
+        PreferencesHandler.set(userRole: .sitter)
+        XCTAssertNotNil(PreferencesHandler.set(userRole: .sitter))
+
+        SitterMainTabViewModel().resertCurrentSitterRole()
+        XCTAssertEqual(PreferencesHandler.getUserRole(), Role.none)
+    }
+}
