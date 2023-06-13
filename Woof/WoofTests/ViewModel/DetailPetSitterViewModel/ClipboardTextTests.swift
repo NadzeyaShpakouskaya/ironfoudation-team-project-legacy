@@ -1,8 +1,7 @@
 import XCTest
 
-// swiftlint:disable:next type_name
-final class DetailPetSitterViewModelCopyToClipboardTextTests: XCTestCase {
-    func testThePassedTextIsCopiedToClipboard() {
+final class CopyToClipboardTextTests: XCTestCase {
+    func testTheClipboardStoresPassedString() {
         // Given
         let textToCopy = "a"
 
@@ -10,7 +9,7 @@ final class DetailPetSitterViewModelCopyToClipboardTextTests: XCTestCase {
         testViewModel.copyToClipboardText(textToCopy)
 
         // Then
-        XCTAssertEqual(clipboard, textToCopy)
+        XCTAssertEqual(textSavedInClipboard, textToCopy)
     }
 
     func testTheClipboardStoresEmptyStringWhenPassedEmptyString() {
@@ -23,7 +22,7 @@ final class DetailPetSitterViewModelCopyToClipboardTextTests: XCTestCase {
         testViewModel.copyToClipboardText(textToCopyTwo)
 
         // Then
-        XCTAssertEqual(clipboard, textToCopyTwo)
+        XCTAssertEqual(textSavedInClipboard, textToCopyTwo)
     }
 
     func testTheClipboardStoresALongTextWhenPassedLongText() {
@@ -34,7 +33,7 @@ final class DetailPetSitterViewModelCopyToClipboardTextTests: XCTestCase {
         testViewModel.copyToClipboardText(textToCopy)
 
         // Then
-        XCTAssertEqual(clipboard, textToCopy)
+        XCTAssertEqual(textSavedInClipboard, textToCopy)
     }
 
     func testTheClipboardStoresTheLastPassedText() {
@@ -47,13 +46,23 @@ final class DetailPetSitterViewModelCopyToClipboardTextTests: XCTestCase {
         testViewModel.copyToClipboardText(textToCopyTwo)
 
         // Then
-        XCTAssertEqual(clipboard, textToCopyTwo)
+        XCTAssertEqual(textSavedInClipboard, textToCopyTwo)
     }
 
     // MARK: - Private interface
 
-    private let testViewModel = DetailSitterViewModel(sitter: Sitter.Dummy.emilyDoe)
-    private var clipboard: String? {
+    private let testViewModel = DetailSitterViewModel(
+        sitter: Sitter(
+            id: UUID(),
+            name: "",
+            surname: "",
+            phone: "",
+            bio: "",
+            rating: 0,
+            pricePerHour: 0
+        )
+    )
+    private var textSavedInClipboard: String? {
         UIPasteboard.general.string
     }
 }
