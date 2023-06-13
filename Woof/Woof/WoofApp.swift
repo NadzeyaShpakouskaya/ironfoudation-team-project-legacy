@@ -2,7 +2,8 @@ import SwiftUI
 
 @main
 struct WoofApp: App {
-    @StateObject var viewModel = StartScreenViewModel()
+    /// View model responsible to manage the data and behavior of the views in `Scene`.
+    @StateObject private var viewModel = StartScreenViewModel()
 
     var body: some Scene {
         WindowGroup {
