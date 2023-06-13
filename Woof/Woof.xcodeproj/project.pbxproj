@@ -13,6 +13,7 @@
 		362732A22A1B800B0062E4B5 /* KeyValueStorageDeleteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362732A12A1B800A0062E4B5 /* KeyValueStorageDeleteTests.swift */; };
 		362F63062A28A8B6002A659B /* OwnerProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362F63052A28A8B6002A659B /* OwnerProfileView.swift */; };
 		365D3F252A387D5900EC9B30 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365D3F242A387D5900EC9B30 /* LoginViewModelTests.swift */; };
+		365D3F262A38876B00EC9B30 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365D3F242A387D5900EC9B30 /* LoginViewModelTests.swift */; };
 		3673D6372A04F7FD009D699D /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3673D6362A04F7FD009D699D /* Owner.swift */; };
 		368BF0EC2A152FA500F3F750 /* KeyValueStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368BF0EB2A152FA500F3F750 /* KeyValueStorage.swift */; };
 		368BF0EF2A16103B00F3F750 /* KeyValueStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368BF0EB2A152FA500F3F750 /* KeyValueStorage.swift */; };
@@ -851,6 +852,7 @@
 				FD7F989D2A0E04650058DBEB /* SitterCardView.swift in Sources */,
 				362F63062A28A8B6002A659B /* OwnerProfileView.swift in Sources */,
 				FD2FA22B2A129CA1002B618B /* SitterListViewModel.swift in Sources */,
+				365D3F262A38876B00EC9B30 /* LoginViewModelTests.swift in Sources */,
 				FDE0CEA92A00F8370023F784 /* WoofApp.swift in Sources */,
 				FD7F98A52A0E12290058DBEB /* AvatarView.swift in Sources */,
 				FD1FA3CC2A0A781E000A3A91 /* Sitter+Dummy.swift in Sources */,
