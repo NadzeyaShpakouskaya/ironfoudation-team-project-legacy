@@ -1,19 +1,19 @@
 import XCTest
 
 final class OwnerMainTabViewModelTests: XCTestCase {
-    func testOwnerMainTabViewModelExistsInAPI() {
-        _ = OwnerMainTabViewModel()
-    }
-
-    func testResetCurrentOwnerRoleMethodExistsInAPI() {
+    func testResetCurrentRoleMethodExistsInAPI() {
         OwnerMainTabViewModel().resetCurrentRole()
     }
 
-    func testResetCurrentOwnerRoleSuccessfullyChangesUserRoleToNone() {
-        PreferencesHandler.set(userRole: .owner)
-        XCTAssertNotNil(PreferencesHandler.set(userRole: .owner))
+    func testResetCurrentRoleSuccessfullyChangesUserRoleToNone() {
+        // Given
+        let initialRole = PreferencesHandler.set(userRole: .owner)
+        XCTAssertNotNil(initialRole)
 
+        // When
         OwnerMainTabViewModel().resetCurrentRole()
+
+        // Then
         XCTAssertEqual(PreferencesHandler.getUserRole(), Role.none)
     }
 }
