@@ -323,8 +323,6 @@
 				FD14A2B62A28709400362461 /* OwnerProfileViewModelSaveTests.swift */,
 				FD9802272A287670003DEE5C /* OwnerProfileViewModelGetTests.swift */,
 				FD9802292A2878C1003DEE5C /* Owner+Test.swift */,
-				EF95A04E2A38615E00E84ACD /* OwnerMainTabViewModelTests.swift */,
-				EF95A0522A38698900E84ACD /* SitterMainTabViewModelTests.swift */,
 			);
 			path = OwnerProfileViewModelTests;
 			sourceTree = "<group>";
@@ -464,6 +462,8 @@
 		FDCF49102A1CDA0A00CD3BBB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				EF95A0522A38698900E84ACD /* SitterMainTabViewModelTests.swift */,
+				EF95A04E2A38615E00E84ACD /* OwnerMainTabViewModelTests.swift */,
 				FDCF49122A1CDA8800CD3BBB /* DetailPetSitterViewModelTests.swift */,
 				FD14A2B82A2870A500362461 /* OwnerProfileViewModelTests */,
 			);

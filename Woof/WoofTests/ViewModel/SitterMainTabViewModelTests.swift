@@ -2,18 +2,18 @@ import XCTest
 
 final class SitterMainTabViewModelTests: XCTestCase {
     func testSitterMainTabViewModelExistsInAPI() {
-        SitterMainTabViewModel()
+        _ = SitterMainTabViewModel()
     }
 
-    func testResertCurrentSitterRoleMethodExistsInAPI() {
-        SitterMainTabViewModel().resertCurrentSitterRole()
+    func testResetCurrentSitterRoleMethodExistsInAPI() {
+        SitterMainTabViewModel().resetCurrentRole()
     }
 
-    func testResertCurrentSitterRoleMethod() {
+    func testResetCurrentRoleMethod() {
         PreferencesHandler.set(userRole: .sitter)
         XCTAssertNotNil(PreferencesHandler.set(userRole: .sitter))
 
-        SitterMainTabViewModel().resertCurrentSitterRole()
+        SitterMainTabViewModel().resetCurrentRole()
         XCTAssertEqual(PreferencesHandler.getUserRole(), Role.none)
     }
 }
