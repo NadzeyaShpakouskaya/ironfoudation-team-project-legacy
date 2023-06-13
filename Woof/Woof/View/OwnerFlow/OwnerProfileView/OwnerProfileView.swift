@@ -30,20 +30,13 @@ struct OwnerProfileView: View {
         }
         .padding(.horizontal)
         .overlay(alignment: .topTrailing) {
-            Button(action: {
+            Button(isEditingMode ? "Save" : "Edit") {
                 if isEditingMode {
                     viewModel.save()
                 }
                 isEditingMode.toggle()
-            }, label: {
-                Text(isEditingMode ? "Save" : "Edit")
-                    .padding(.horizontal)
-                    .background(
-                        Capsule()
-                            .foregroundColor(!viewModel.name.isEmpty ? Color.App.purpleDark : Color.App.grayDark)
-                    )
-                    .foregroundColor(Color.App.white)
-            })
+            }
+            .buttonStyle(CapsuleWithWhiteText())
             .padding()
             .padding(.horizontal)
             .disabled(isEditingMode && viewModel.name.isEmpty)
