@@ -1,17 +1,17 @@
-/// The units of measure in a 5-star rating.
+/// The unit of measure in a 5-star rating.
 enum Stars: Int {
     /// Value for one star.
     case oneStar = 1
 
-    /// Value for two star.
+    /// Value for two stars.
     case twoStars
 
-    /// Value for three star.
+    /// Value for three stars.
     case threeStars
 
-    /// Value for four star.
+    /// Value for four stars.
     case fourStars
 
-    /// Value for five star.
+    /// Value for five stars.
     case fiveStars
 }

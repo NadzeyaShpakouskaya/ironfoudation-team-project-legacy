@@ -32,18 +32,17 @@ enum DataTransformer {
     /// Converts a numeric value to a rating corresponding to a 5-star rating.
     ///
     /// - Parameter value: The numeric value to be converted.
-    /// - Returns: The rating from 1 to 5 stars from a 5-star rating, or information that the rating is unavailable.
-    /// If the value is less than or equal 0, returned `.unavailable` to indicate an unavailable rating.
-    /// If the value is between 1 and 5 (inclusive), returned the rating from 1 to 5 stars from a 5-star rating.
+    /// - Returns: The rating from 1 to 5 stars from a 5-star rating, if the value is between 1 and 5 (inclusive).
     /// The rounding rule is schoolbook rounding.
+    /// If the given value `<= 0`, returns `.unavailable` to indicate an unavailable rating.
     ///
     /// /// Example usage:
     /// ```
     /// let value = 3.7
-    /// let convertedRating = StarRating.convertNumericValueToStarsRating(value)
+    /// let convertedRating = StarRating.fiveStarRating(for: value)
     /// // convertedRating is StarRating.rated(.fourStars)
     /// ```
-    static func convertNumericValueToStarsRating(_ value: Double) -> StarRating {
+    static func fiveStarRating(for value: Double) -> StarRating {
         let roundedValue = Int(value.rounded(.toNearestOrAwayFromZero))
         let ratingValue = max(0, min(roundedValue, 5))
 

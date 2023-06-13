@@ -8,7 +8,7 @@ final class DetailSitterViewModel: ObservableObject {
     /// The additional information about the sitter.
     @Published var bio: String
 
-    /// The rating of the sitter, on a scale from 1 to 5 star, or that the rating is not available.
+    /// A 5-Star rating of the pet sitter.
     @Published var rating: StarRating
 
     /// The phone number of the sitter.
@@ -23,7 +23,7 @@ final class DetailSitterViewModel: ObservableObject {
     init(sitter: Sitter) {
         self.sitter = sitter
         fullName = DataTransformer.fullName(name: sitter.name, surname: sitter.surname)
-        rating = DataTransformer.convertNumericValueToStarsRating(sitter.rating)
+        rating = DataTransformer.fiveStarRating(for: sitter.rating)
         phoneNumber = sitter.phone
         imageURL = sitter.avatarUrl
         bio = sitter.bio

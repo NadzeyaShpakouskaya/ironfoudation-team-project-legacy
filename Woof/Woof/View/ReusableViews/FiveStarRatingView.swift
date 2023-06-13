@@ -4,13 +4,12 @@ import SwiftUI
 struct FiveStarRatingView: View {
     // MARK: Private interface
 
-    /// The text to display if the rating is not specified.
     private let noRatingText = "not rated"
+    private let spacingValue: CGFloat = 0
 
     // MARK: Internal interface
 
-    /// A 5-star rating system, where 5 stars represent the highest rating
-    /// and 1 star represents the lowest rating.
+    /// A 5-star rating.
     let rating: StarRating
 
     var body: some View {
@@ -20,7 +19,7 @@ struct FiveStarRatingView: View {
                 Text(noRatingText)
                     .font(Font.system(size: AppStyle.FontStyle.footnote.size))
             case let .rated(rating):
-                HStack(spacing: 0) {
+                HStack(spacing: spacingValue) {
                     ForEach(1...rating.rawValue, id: \.self) { _ in
                         Image(systemName: .IconName.filledStar)
                     }
