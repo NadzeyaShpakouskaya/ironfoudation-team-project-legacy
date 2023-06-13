@@ -96,6 +96,7 @@
 		FDEE43CE2A2F4E56007DE0A9 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE43C82A2F45B8007DE0A9 /* Preferences.swift */; };
 		FDEE43CF2A2F4E58007DE0A9 /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE43CA2A2F4602007DE0A9 /* Role.swift */; };
 		FDEE43D12A2F525B007DE0A9 /* RoleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE43D02A2F525B007DE0A9 /* RoleTests.swift */; };
+		FDEE43E02A386291007DE0A9 /* StartScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE43DF2A386291007DE0A9 /* StartScreenViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -183,6 +184,7 @@
 		FDEE43CA2A2F4602007DE0A9 /* Role.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
 		FDEE43CC2A2F4E51007DE0A9 /* PreferencesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesTests.swift; sourceTree = "<group>"; };
 		FDEE43D02A2F525B007DE0A9 /* RoleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleTests.swift; sourceTree = "<group>"; };
+		FDEE43DF2A386291007DE0A9 /* StartScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -542,6 +544,7 @@
 			isa = PBXGroup;
 			children = (
 				FD14A2A42A277FA400362461 /* OwnerProfileViewModel.swift */,
+				FDEE43DF2A386291007DE0A9 /* StartScreenViewModel.swift */,
 				FD1FA3C22A0A682E000A3A91 /* SitterCardViewModel.swift */,
 				EF5A7F2E2A14504F00585616 /* DetailPetSitterViewModel.swift */,
 				FD2FA22A2A129CA1002B618B /* SitterListViewModel.swift */,
@@ -824,6 +827,7 @@
 				FD1FA3B52A090916000A3A91 /* Sitter.swift in Sources */,
 				368BF0EC2A152FA500F3F750 /* KeyValueStorage.swift in Sources */,
 				FDD143E22A05233B000BBA77 /* String+IconName.swift in Sources */,
+				FDEE43E02A386291007DE0A9 /* StartScreenViewModel.swift in Sources */,
 				FD6A2E5D2A2EF69500934C3E /* SitterMainTabView.swift in Sources */,
 				FDD143C72A03BD48000BBA77 /* OwnerMainTabView.swift in Sources */,
 				FDEE43C92A2F45B8007DE0A9 /* Preferences.swift in Sources */,
