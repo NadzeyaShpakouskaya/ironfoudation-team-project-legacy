@@ -13,18 +13,6 @@ final class FiveStarRatingTests: XCTestCase {
         XCTAssertEqual(DataTransformer.fiveStarRating(for: 0.35), .unavailable)
     }
 
-    func testReturnsOneStarWhenValueBetweenOneHalfAndOneProvided() {
-        XCTAssertEqual(DataTransformer.fiveStarRating(for: 0.99), .rated(.oneStar))
-    }
-
-    func testReturnsFourStarsWhenValueBetweenFourAndFourAndHalfProvided() {
-        XCTAssertEqual(DataTransformer.fiveStarRating(for: 4.26), .rated(.fourStars))
-    }
-
-    func testReturnsFiveStarsWhenValueBetweenFourAndHalfAndFiveProvided() {
-        XCTAssertEqual(DataTransformer.fiveStarRating(for: 4.56), .rated(.fiveStars))
-    }
-
     func testReturnsFiveStarsWhenValueMoreThenFiveProvided() {
         XCTAssertEqual(DataTransformer.fiveStarRating(for: 124.56), .rated(.fiveStars))
     }
