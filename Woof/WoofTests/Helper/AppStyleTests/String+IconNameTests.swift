@@ -25,6 +25,6 @@ final class StringIconNameTests: XCTestCase {
         XCTAssertEqual(phone, String.IconName.phone)
         XCTAssertEqual(filledPerson, String.IconName.filledPerson)
         XCTAssertEqual(house, String.IconName.house)
-        XCTAssertEqual(doc, String.IconName.doc)
+        XCTAssertEqual(doc, String.IconName.twoDocuments)
     }
 }

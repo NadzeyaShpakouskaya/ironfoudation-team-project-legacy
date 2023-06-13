@@ -8,7 +8,7 @@ struct CopyToClipboardLabel: View {
         Label {
             Text(labelText)
         } icon: {
-            Image(systemName: String.IconName.doc)
+            Image(systemName: String.IconName.twoDocuments)
         }
     }
 

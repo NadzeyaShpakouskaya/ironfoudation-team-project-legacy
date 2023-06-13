@@ -26,6 +26,6 @@ extension String {
         /// The icon used in places where picture of a house is required.
         static let house = "house"
         /// The icon used for the image with two documents.
-        static let doc = "doc.on.doc"
+        static let twoDocuments = "doc.on.doc"
     }
 }
