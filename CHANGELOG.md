@@ -14,6 +14,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Move `AvatarView` file to the `ReusableViews` folder - [#136](https://github.com/ios-course/ironfoudation-team-project/pull/136)
 - Create `PreferencesHandler` model - [#115](https://github.com/ios-course/ironfoudation-team-project/pull/115)
 - Create `CapsuleWithWhiteText` as `ButtonStyle` and apply in the `OwnerProfileView` - [#135](https://github.com/ios-course/ironfoudation-team-project/pull/135)
+- Create view models: `SitterMainTabViewModel`, `OwnerMainTabViewModel` for main tab views - [#154](https://github.com/ios-course/ironfoudation-team-project/pull/154)
 
 ### Changed
 
