@@ -1,6 +1,6 @@
 import XCTest
 
-final class DetailSitterViewModelTests: XCTestCase {
+final class DetailPetSitterViewModelTests: XCTestCase {
     func testDetailPetSitterViewModelExistsInAPI() {
         let sitter = Sitter(
             id: UUID(),
