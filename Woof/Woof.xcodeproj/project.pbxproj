@@ -26,6 +26,9 @@
 		BA4561812A334A8A00C6E595 /* Stars.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4561802A334A8A00C6E595 /* Stars.swift */; };
 		BA4561822A334D2D00C6E595 /* Stars.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4561802A334A8A00C6E595 /* Stars.swift */; };
 		BAD0FC632A31D20800F59544 /* StarRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD0FC622A31D20800F59544 /* StarRating.swift */; };
+		9B2480392A3354D8000B66CD /* ClipboardTextTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2480382A3354D8000B66CD /* ClipboardTextTests.swift */; };
+		9B24803B2A336157000B66CD /* Sitter+Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1FA3CB2A0A781E000A3A91 /* Sitter+Dummy.swift */; };
+		9B480A5F2A330F29001A5A71 /* CopyToClipboardLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6498A72A31E7CA00004FB3 /* CopyToClipboardLabel.swift */; };
 		EF16BB1E2A24D5FA007922C6 /* OwnerCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF16BB1D2A24D5FA007922C6 /* OwnerCardView.swift */; };
 		EF16BB262A24E101007922C6 /* Owner+Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF16BB252A24E101007922C6 /* Owner+Dummy.swift */; };
 		EF303EBE2A1762CF0086065B /* FiveStarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF303EBD2A1762CF0086065B /* FiveStarRatingView.swift */; };
@@ -126,6 +129,8 @@
 		36C06F5B2A2F5DCB00B8EBDF /* PreferencesHandlerSetUserRoleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesHandlerSetUserRoleTests.swift; sourceTree = "<group>"; };
 		36C54AFB2A17A79200748023 /* KeyValueStorageLoadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStorageLoadTests.swift; sourceTree = "<group>"; };
 		9308D6122A31EFE40086193D /* CapsuleWithWhiteText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleWithWhiteText.swift; sourceTree = "<group>"; };
+		9B2480382A3354D8000B66CD /* ClipboardTextTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardTextTests.swift; sourceTree = "<group>"; };
+		9B6498A72A31E7CA00004FB3 /* CopyToClipboardLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyToClipboardLabel.swift; sourceTree = "<group>"; };
 		BA4561802A334A8A00C6E595 /* Stars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stars.swift; sourceTree = "<group>"; };
 		BAD0FC622A31D20800F59544 /* StarRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRating.swift; sourceTree = "<group>"; };
 		EF16BB1D2A24D5FA007922C6 /* OwnerCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerCardView.swift; sourceTree = "<group>"; };
@@ -266,6 +271,15 @@
 				BA4561802A334A8A00C6E595 /* Stars.swift */,
 			);
 			path = Rating;
+sourceTree = "<group>";
+		};
+		9B24803A2A33550A000B66CD /* DetailPetSitterViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FDCF49122A1CDA8800CD3BBB /* DetailPetSitterViewModelTests.swift */,
+				9B2480382A3354D8000B66CD /* ClipboardTextTests.swift */,
+			);
+			path = DetailPetSitterViewModel;
 			sourceTree = "<group>";
 		};
 		EF303EBF2A17AFA20086065B /* ReusableViews */ = {
@@ -275,6 +289,7 @@
 				EF7B7EFF2A147D8300F00B4E /* TextWithIconLabelView.swift */,
 				EF303EBD2A1762CF0086065B /* FiveStarRatingView.swift */,
 				FD7F98A42A0E12290058DBEB /* AvatarView.swift */,
+				9B6498A72A31E7CA00004FB3 /* CopyToClipboardLabel.swift */,
 			);
 			path = ReusableViews;
 			sourceTree = "<group>";
@@ -465,7 +480,7 @@
 		FDCF49102A1CDA0A00CD3BBB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				FDCF49122A1CDA8800CD3BBB /* DetailPetSitterViewModelTests.swift */,
+				9B24803A2A33550A000B66CD /* DetailPetSitterViewModel */,
 				FD14A2B82A2870A500362461 /* OwnerProfileViewModelTests */,
 			);
 			path = ViewModel;
@@ -823,10 +838,12 @@
 				FDEE43CF2A2F4E58007DE0A9 /* Role.swift in Sources */,
 				FD37A9982A0B77A90001BABB /* FiveStarRatingTests.swift in Sources */,
 				FD14A2B42A286C5200362461 /* KeyValueStorage+Name.swift in Sources */,
+				9B24803B2A336157000B66CD /* Sitter+Dummy.swift in Sources */,
 				FDD143FF2A052D5E000BBA77 /* String+IconName.swift in Sources */,
 				1CE7E9C92A247CF1000A0509 /* KeyValueStorageInitTests.swift in Sources */,
 				36199B0F2A1FB1C900725FC8 /* KeyValueStorage+TestKey.swift in Sources */,
 				368BF0EF2A16103B00F3F750 /* KeyValueStorage.swift in Sources */,
+				9B2480392A3354D8000B66CD /* ClipboardTextTests.swift in Sources */,
 				FD37A9952A0B6EA90001BABB /* DataTransformer.swift in Sources */,
 				FD6A2E632A2F072F00934C3E /* KeyValueStorage+NameTests.swift in Sources */,
 				FD2F7B342A0CE03B008F6F49 /* SitterCardViewModel.swift in Sources */,
@@ -863,6 +880,7 @@
 				FDDDA6882A25C3FE00839091 /* EditOwnerInformationView.swift in Sources */,
 				EF16BB1E2A24D5FA007922C6 /* OwnerCardView.swift in Sources */,
 				FD37A9902A0B65120001BABB /* DataTransformer.swift in Sources */,
+				9B480A5F2A330F29001A5A71 /* CopyToClipboardLabel.swift in Sources */,
 				FD7F989D2A0E04650058DBEB /* SitterCardView.swift in Sources */,
 				BAD0FC632A31D20800F59544 /* StarRating.swift in Sources */,
 				362F63062A28A8B6002A659B /* OwnerProfileView.swift in Sources */,
