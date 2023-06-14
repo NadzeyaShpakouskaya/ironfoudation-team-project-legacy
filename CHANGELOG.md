@@ -19,7 +19,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Add `CopyToClipboardLabel`. Add feature copy to clipboard the pet sitter's name and the phone number. - [#134](https://github.com/ios-course/ironfoudation-team-project/pull/134)
 - Add the `StartScreenViewModel` to get user role, update the `WoofApp` to show proper view based on user role - [#156](https://github.com/ios-course/ironfoudation-team-project/pull/156)
 - Create view models: `SitterMainTabViewModel`, `OwnerMainTabViewModel` for main tab views - [#154](https://github.com/ios-course/ironfoudation-team-project/pull/154)
-- Add the `SitterInfoCardView` - [#112](https://github.com/ios-course/ironfoudation-team-project/issues/112)
+- Add the `SitterInfoCardView` - [#112](https://github.com/ios-course/ironfoudation-team-project/pull/158)
 
 ### Changed
 
