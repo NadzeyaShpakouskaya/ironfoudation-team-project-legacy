@@ -10,15 +10,13 @@ final class LoginViewModelSetUserRoleTests: XCTestCase {
     }
 
     func testMethodExistsInAPI() {
-        testLoginViewModel.setUserRole()
+        testLoginViewModel.setUserRole(.none)
     }
 
     func testSetsUserRoleOnOwner() {
         // Given
-        testLoginViewModel.selectedRole = SelectedRole.owner
-
         // When
-        let result = testLoginViewModel.setUserRole()
+        let result = testLoginViewModel.setUserRole(.owner)
 
         // Then
         XCTAssertTrue(result)
@@ -27,10 +25,8 @@ final class LoginViewModelSetUserRoleTests: XCTestCase {
 
     func testSetsUserRoleOnSitter() {
         // Given
-        testLoginViewModel.selectedRole = .sitter
-
         // When
-        let result = testLoginViewModel.setUserRole()
+        let result = testLoginViewModel.setUserRole(.sitter)
 
         // Then
         XCTAssertTrue(result)
@@ -39,10 +35,8 @@ final class LoginViewModelSetUserRoleTests: XCTestCase {
 
     func testSetsUserRoleWithNone() {
         // Given
-        testLoginViewModel.selectedRole = .none
-
         // When
-        let result = testLoginViewModel.setUserRole()
+        let result = testLoginViewModel.setUserRole(.none)
 
         // Then
         XCTAssertFalse(result)
