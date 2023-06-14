@@ -25,5 +25,7 @@ extension String {
         static let filledPerson = "person.fill"
         /// The icon used in places where picture of a house is required.
         static let house = "house"
+        /// The icon used for the image with two documents.
+        static let twoDocuments = "doc.on.doc"
     }
 }

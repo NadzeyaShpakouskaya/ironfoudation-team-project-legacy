@@ -5,7 +5,7 @@ struct GeneralInfoSectionView: View {
     let fullName: String
 
     /// The rating of the person.
-    let rating: Int
+    let rating: StarRating
 
     /// The price associated with the person.
     let price: Double
@@ -16,7 +16,7 @@ struct GeneralInfoSectionView: View {
                 Text(fullName)
                     .bold()
                     .lineLimit(1)
-                FiveStarRatingView(rating: rating)
+                FiveStarRatingView(stars: rating)
             }
             Spacer()
             VStack {
@@ -35,7 +35,7 @@ struct GeneralInfoView_Previews: PreviewProvider {
     static var previews: some View {
         GeneralInfoSectionView(
             fullName: "Kate Anderson",
-            rating: 0,
+            rating: .unavailable,
             price: 18.78
         )
     }
