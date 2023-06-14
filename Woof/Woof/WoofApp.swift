@@ -10,7 +10,7 @@ struct WoofApp: App {
             switch viewModel.userRole {
             case .owner: OwnerMainTabView()
             case .sitter: SitterMainTabView()
-            case .none: LoginView()
+            case .none: Text("Temporary sing in screen")
             }
         }
     }
