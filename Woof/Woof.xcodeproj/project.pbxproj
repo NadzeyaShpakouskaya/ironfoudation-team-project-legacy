@@ -10,6 +10,8 @@
 		1CE7E9C92A247CF1000A0509 /* KeyValueStorageInitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE7E9C82A247CF1000A0509 /* KeyValueStorageInitTests.swift */; };
 		1CE7E9CC2A24889B000A0509 /* KeyValueStorage+UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE7E9CB2A24889B000A0509 /* KeyValueStorage+UnitTests.swift */; };
 		360E4DB42A39AD780006B752 /* DetailPetSitterViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360E4DB32A39AD780006B752 /* DetailPetSitterViewModelTests.swift */; };
+		360E4DB62A39C2E70006B752 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360E4DB52A39C2E70006B752 /* LoginView.swift */; };
+		360E4DBD2A39E58F0006B752 /* SelectedRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360E4DBC2A39E58F0006B752 /* SelectedRole.swift */; };
 		36199B0F2A1FB1C900725FC8 /* KeyValueStorage+TestKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36199B0E2A1FB1C900725FC8 /* KeyValueStorage+TestKey.swift */; };
 		362732A22A1B800B0062E4B5 /* KeyValueStorageDeleteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362732A12A1B800A0062E4B5 /* KeyValueStorageDeleteTests.swift */; };
 		362F63062A28A8B6002A659B /* OwnerProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362F63052A28A8B6002A659B /* OwnerProfileView.swift */; };
@@ -122,6 +124,8 @@
 		1CE7E9C82A247CF1000A0509 /* KeyValueStorageInitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStorageInitTests.swift; sourceTree = "<group>"; };
 		1CE7E9CB2A24889B000A0509 /* KeyValueStorage+UnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyValueStorage+UnitTests.swift"; sourceTree = "<group>"; };
 		360E4DB32A39AD780006B752 /* DetailPetSitterViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPetSitterViewModelTests.swift; sourceTree = "<group>"; };
+		360E4DB52A39C2E70006B752 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		360E4DBC2A39E58F0006B752 /* SelectedRole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedRole.swift; sourceTree = "<group>"; };
 		36199B0E2A1FB1C900725FC8 /* KeyValueStorage+TestKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyValueStorage+TestKey.swift"; sourceTree = "<group>"; };
 		362732A12A1B800A0062E4B5 /* KeyValueStorageDeleteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStorageDeleteTests.swift; sourceTree = "<group>"; };
 		362F63052A28A8B6002A659B /* OwnerProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerProfileView.swift; sourceTree = "<group>"; };
@@ -225,6 +229,15 @@
 				1CE7E9CB2A24889B000A0509 /* KeyValueStorage+UnitTests.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		360E4DBB2A39DF320006B752 /* LoginViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				36E97F162A2F42FD00030E3E /* LoginViewModel.swift */,
+				360E4DBC2A39E58F0006B752 /* SelectedRole.swift */,
+			);
+			path = LoginViewModel;
 			sourceTree = "<group>";
 		};
 		365D3F232A387D3200EC9B30 /* LoginViewModelTests */ = {
@@ -564,6 +577,7 @@
 		FDE0CEBA2A02691D0023F784 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				360E4DB52A39C2E70006B752 /* LoginView.swift */,
 				FD6A2E5A2A2EF65D00934C3E /* SitterFlow */,
 				EF303EBF2A17AFA20086065B /* ReusableViews */,
 				FD6A2E592A2EF62800934C3E /* OwnerFlow */,
@@ -586,11 +600,11 @@
 		FDE0CEBC2A02693A0023F784 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				360E4DBB2A39DF320006B752 /* LoginViewModel */,
 				FD14A2A42A277FA400362461 /* OwnerProfileViewModel.swift */,
 				FD1FA3C22A0A682E000A3A91 /* SitterCardViewModel.swift */,
 				EF5A7F2E2A14504F00585616 /* DetailPetSitterViewModel.swift */,
 				FD2FA22A2A129CA1002B618B /* SitterListViewModel.swift */,
-				36E97F162A2F42FD00030E3E /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -879,6 +893,7 @@
 				FD6A2E5D2A2EF69500934C3E /* SitterMainTabView.swift in Sources */,
 				FDD143C72A03BD48000BBA77 /* OwnerMainTabView.swift in Sources */,
 				FDEE43C92A2F45B8007DE0A9 /* Preferences.swift in Sources */,
+				360E4DB62A39C2E70006B752 /* LoginView.swift in Sources */,
 				EF16BB262A24E101007922C6 /* Owner+Dummy.swift in Sources */,
 				FD7F989F2A0E0D2C0058DBEB /* AppStyle.swift in Sources */,
 				FDD143CB2A03C629000BBA77 /* Color+AppScheme.swift in Sources */,
@@ -890,6 +905,7 @@
 				FDD143E02A051F96000BBA77 /* OwnerMainTabView+Tab.swift in Sources */,
 				FD1FA3C32A0A682E000A3A91 /* SitterCardViewModel.swift in Sources */,
 				36C06F5A2A2F5AA600B8EBDF /* PreferencesHandler.swift in Sources */,
+				360E4DBD2A39E58F0006B752 /* SelectedRole.swift in Sources */,
 				FD7F98A12A0E0E280058DBEB /* AppStyle+FontStyle.swift in Sources */,
 				FD2FA2292A129C53002B618B /* SitterListView.swift in Sources */,
 				3673D6372A04F7FD009D699D /* Owner.swift in Sources */,

@@ -10,7 +10,7 @@ final class LoginViewModelSetUserRoleTests: XCTestCase {
     }
 
     func testMethodExistsInAPI() {
-        _ = testLoginViewModel.set(.sitter)
+        testLoginViewModel.set(.sitter)
     }
 
     func testReturnsTrueWhenSetEveryPossibleRole() {
