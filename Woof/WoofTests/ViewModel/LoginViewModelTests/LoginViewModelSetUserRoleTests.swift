@@ -9,17 +9,17 @@ final class LoginViewModelSetUserRoleTests: XCTestCase {
         userPreferencesStorage.deleteData(for: KeyValueStorage.Key.userPreferences)
     }
 
-    func testExistsInAPI() {
+    func testMethodExistsInAPI() {
         _ = testLoginViewModel.set(.sitter)
     }
 
-    func testReturnsTrueWhenPassAllPossibleRoles() {
+    func testReturnsTrueWhenSetEveryPossibleRole() {
         Role.allCases.forEach {
             XCTAssertTrue(testLoginViewModel.set($0))
         }
     }
 
-    func testOverridesThePreviouslySavedRole() {
+    func testReturnsExpectedValueWhenOverridesThePreviouslySavedRole() {
         // Given
         let initialRole = Role.sitter
         let overriddenRole = Role.owner

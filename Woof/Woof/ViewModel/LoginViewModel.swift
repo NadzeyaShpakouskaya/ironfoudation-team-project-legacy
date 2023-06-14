@@ -1,11 +1,11 @@
 import Foundation
 
-/// An interface responsible for changing the current user role in the app on the `LoginView`.
+/// An interface providing for `the LoginView` to interact with the model layer.
 final class LoginViewModel: ObservableObject {
-    /// Requests model layer to save selected user role.
+    /// Requests the model layer to save the selected user role.
     ///
     /// - Parameter userRole: The role to be saved.
-    /// - Returns: A boolean indicating whether the operation was successful.
+    /// - Returns: A boolean value indicating whether the operation was successful.
     func set(_ userRole: Role) -> Bool {
         PreferencesHandler.set(userRole: userRole)
     }
