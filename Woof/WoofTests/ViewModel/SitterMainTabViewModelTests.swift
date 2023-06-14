@@ -5,10 +5,9 @@ final class SitterMainTabViewModelTests: XCTestCase {
         SitterMainTabViewModel().resetCurrentRole()
     }
 
-    func testResetCurrentRoleSuccessfullyChangesUserRoleToNone() {
+    func testResetCurrentRoleChangesUserRoleToNone() {
         // Given
-        let initialRole = PreferencesHandler.set(userRole: .sitter)
-        XCTAssertNotNil(initialRole)
+        PreferencesHandler.set(userRole: .sitter)
 
         // When
         SitterMainTabViewModel().resetCurrentRole()
