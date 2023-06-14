@@ -18,7 +18,6 @@ struct SitterInfoCardView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: AppStyle.UIElementConstant.spacingBetweenElements) {
-            
             HStack(alignment: .center) {
                 VStack(alignment: .leading, spacing: AppStyle.UIElementConstant.spacingBetweenElements) {
                     HStack {
@@ -37,7 +36,7 @@ struct SitterInfoCardView: View {
                     Label(phone, systemImage: .IconName.phone)
                         .lineLimit(linelimitForPhoneNumber)
                 }
-                
+
                 Spacer()
 
                 VStack {
