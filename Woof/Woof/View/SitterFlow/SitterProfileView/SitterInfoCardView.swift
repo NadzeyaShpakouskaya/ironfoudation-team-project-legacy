@@ -1,5 +1,6 @@
 import SwiftUI
 
+/// A view displaying information about the pet sitter.
 struct SitterInfoCardView: View {
     // MARK: - Internal interface
 
@@ -24,9 +25,9 @@ struct SitterInfoCardView: View {
                 VStack(alignment: .leading, spacing: AppStyle.UIElementConstant.spacingBetweenElements) {
                     HStack {
                         Text(name)
-                            .lineLimit(lineLimitForNameAndSurname)
+                            .lineLimit(lineLimitForName)
                         Text(surname)
-                            .lineLimit(lineLimitForNameAndSurname)
+                            .lineLimit(lineLimitForSurname)
                     }
                     .font(
                         .system(
@@ -69,7 +70,8 @@ struct SitterInfoCardView: View {
     // MARK: - Private interface
 
     private let perHourLabel = "per hour"
-    private let lineLimitForNameAndSurname = 1
+    private let lineLimitForName = 1
+    private let lineLimitForSurname = 1
     private let linelimitForPhoneNumber = 1
     private let linelimitForBio = 10
 }
