@@ -5,10 +5,9 @@ final class OwnerMainTabViewModelTests: XCTestCase {
         OwnerMainTabViewModel().resetCurrentRole()
     }
 
-    func testResetCurrentRoleSuccessfullyChangesUserRoleToNone() {
+    func testResetCurrentRoleChangesUserRoleToNone() {
         // Given
-        let initialRole = PreferencesHandler.set(userRole: .owner)
-        XCTAssertNotNil(initialRole)
+        PreferencesHandler.set(userRole: .owner)
 
         // When
         OwnerMainTabViewModel().resetCurrentRole()
