@@ -81,5 +81,27 @@ struct SitterInfoCardView_Previews: PreviewProvider {
             bio: Sitter.Dummy.emilyDoe.bio,
             ratePerHour: Sitter.Dummy.emilyDoe.pricePerHour
         )
+        .previewDevice(PreviewDevice(rawValue: "iPhone 14 Pro"))
+        .previewDisplayName("iPhone 14 Pro")
+
+        SitterInfoCardView(
+            name: Sitter.Dummy.emilyDoe.name,
+            surname: Sitter.Dummy.emilyDoe.surname,
+            phone: Sitter.Dummy.emilyDoe.phone,
+            bio: Sitter.Dummy.emilyDoe.bio,
+            ratePerHour: Sitter.Dummy.emilyDoe.pricePerHour
+        )
+        .previewDevice(PreviewDevice(rawValue: "iPhone 14 Pro Max"))
+        .previewDisplayName("iPhone 14 Pro Max")
+
+        SitterInfoCardView(
+            name: Sitter.Dummy.emilyDoe.name,
+            surname: Sitter.Dummy.emilyDoe.surname,
+            phone: Sitter.Dummy.emilyDoe.phone,
+            bio: Sitter.Dummy.emilyDoe.bio,
+            ratePerHour: Sitter.Dummy.emilyDoe.pricePerHour
+        )
+        .previewDevice(PreviewDevice(rawValue: "iPhone SE"))
+        .previewDisplayName("iPhone SE")
     }
 }
