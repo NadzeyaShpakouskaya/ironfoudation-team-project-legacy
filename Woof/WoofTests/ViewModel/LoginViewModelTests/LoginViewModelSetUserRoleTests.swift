@@ -10,26 +10,43 @@ final class LoginViewModelSetUserRoleTests: XCTestCase {
     }
 
     func testMethodExistsInAPI() {
-        testLoginViewModel.set(.sitter)
+        testLoginViewModel.setUserRole()
     }
 
-    func testReturnsTrueWhenSetEveryPossibleRole() {
-        Role.allCases.forEach {
-            XCTAssertTrue(testLoginViewModel.set($0))
-        }
-    }
-
-    func testReturnsExpectedValueWhenOverridesThePreviouslySavedRole() {
+    func testSetsUserRoleOnOwner() {
         // Given
-        let initialRole = Role.sitter
-        let overriddenRole = Role.owner
-        _ = testLoginViewModel.set(initialRole)
+        testLoginViewModel.selectedRole = SelectedRole.owner
 
         // When
-        _ = testLoginViewModel.set(overriddenRole)
+        let result = testLoginViewModel.setUserRole()
 
         // Then
-        XCTAssertNotEqual(PreferencesHandler.getUserRole(), initialRole)
-        XCTAssertEqual(PreferencesHandler.getUserRole(), overriddenRole)
+        XCTAssertTrue(result)
+        XCTAssertEqual(PreferencesHandler.getUserRole(), .owner)
+    }
+
+    func testSetsUserRoleOnSitter() {
+        // Given
+        testLoginViewModel.selectedRole = .sitter
+
+        // When
+        let result = testLoginViewModel.setUserRole()
+
+        // Then
+        XCTAssertTrue(result)
+        XCTAssertEqual(PreferencesHandler.getUserRole(), .sitter)
+    }
+
+    func testSetsUserRoleWithNone() {
+        // Given
+        testLoginViewModel.selectedRole = .none
+
+        // When
+        let result = testLoginViewModel.setUserRole()
+
+        // Then
+        XCTAssertFalse(result)
+        XCTAssertNotEqual(PreferencesHandler.getUserRole(), .owner)
+        XCTAssertNotEqual(PreferencesHandler.getUserRole(), .sitter)
     }
 }
