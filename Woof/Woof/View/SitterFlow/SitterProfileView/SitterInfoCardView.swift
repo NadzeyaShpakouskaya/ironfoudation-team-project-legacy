@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct SitterInfoCardView: View {
+    // MARK: - Internal interface
+
     /// The name of the pet sitter.
     let name: String
 
@@ -13,7 +15,7 @@ struct SitterInfoCardView: View {
     /// The brief information about the pet sitter.
     let bio: String
 
-    /// The price charged by the pet sitter per hour for dog walking.
+    /// The price charged by the pet sitter per hour for walking.
     let ratePerHour: Double
 
     var body: some View {
