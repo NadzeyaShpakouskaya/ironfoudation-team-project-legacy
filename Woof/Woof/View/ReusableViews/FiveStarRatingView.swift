@@ -4,23 +4,23 @@ import SwiftUI
 struct FiveStarRatingView: View {
     // MARK: Private interface
 
-    /// The text to display if the rating is not specified.
     private let noRatingText = "not rated"
+    private let spacingBetweenStars: CGFloat = 0
 
     // MARK: Internal interface
 
-    /// The rating in the range from 0 to 5 stars.
-    /// The rating equals zero, if it's not specified.
-    let rating: Int
+    /// A 5-star rating.
+    let stars: StarRating
 
     var body: some View {
         Group {
-            if rating == 0 {
+            switch stars {
+            case .unavailable:
                 Text(noRatingText)
                     .font(Font.system(size: AppStyle.FontStyle.footnote.size))
-            } else {
-                HStack(spacing: 0) {
-                    ForEach(1...rating, id: \.self) { _ in
+            case let .rated(stars):
+                HStack(spacing: spacingBetweenStars) {
+                    ForEach(1...stars.rawValue, id: \.self) { _ in
                         Image(systemName: .IconName.filledStar)
                     }
                 }
@@ -33,12 +33,12 @@ struct FiveStarRatingView: View {
 struct RatingView_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            FiveStarRatingView(rating: 5)
-            FiveStarRatingView(rating: 4)
-            FiveStarRatingView(rating: 3)
-            FiveStarRatingView(rating: 2)
-            FiveStarRatingView(rating: 1)
-            FiveStarRatingView(rating: 0)
+            FiveStarRatingView(stars: .rated(.fiveStars))
+            FiveStarRatingView(stars: .rated(.fourStars))
+            FiveStarRatingView(stars: .rated(.threeStars))
+            FiveStarRatingView(stars: .rated(.twoStars))
+            FiveStarRatingView(stars: .rated(.oneStar))
+            FiveStarRatingView(stars: .unavailable)
         }
     }
 }
