@@ -41,6 +41,15 @@
 		EF5A7F2F2A14504F00585616 /* DetailPetSitterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5A7F2E2A14504F00585616 /* DetailPetSitterViewModel.swift */; };
 		EF5A7F332A14563800585616 /* DetailedPetSitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5A7F322A14563800585616 /* DetailedPetSitterView.swift */; };
 		EF7B7F002A147D8300F00B4E /* TextWithIconLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B7EFF2A147D8300F00B4E /* TextWithIconLabelView.swift */; };
+		EF95A04A2A385FA600E84ACD /* OwnerMainTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF95A0492A385FA600E84ACD /* OwnerMainTabViewModel.swift */; };
+		EF95A04B2A385FA900E84ACD /* OwnerMainTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF95A0492A385FA600E84ACD /* OwnerMainTabViewModel.swift */; };
+		EF95A04D2A385FCF00E84ACD /* SitterMainTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF95A04C2A385FCF00E84ACD /* SitterMainTabViewModel.swift */; };
+		EF95A0502A38615E00E84ACD /* OwnerMainTabViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF95A04E2A38615E00E84ACD /* OwnerMainTabViewModelTests.swift */; };
+		EF95A0542A38698900E84ACD /* SitterMainTabViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF95A0522A38698900E84ACD /* SitterMainTabViewModelTests.swift */; };
+		EF95A0552A386A2300E84ACD /* SitterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2FA22A2A129CA1002B618B /* SitterListViewModel.swift */; };
+		EF95A0562A386A5F00E84ACD /* SitterMainTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF95A04C2A385FCF00E84ACD /* SitterMainTabViewModel.swift */; };
+		EF95A0572A386FCE00E84ACD /* Sitter+Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1FA3CB2A0A781E000A3A91 /* Sitter+Dummy.swift */; };
+		EF95A05B2A39B74100E84ACD /* DetailPetSitterViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCF49122A1CDA8800CD3BBB /* DetailPetSitterViewModelTests.swift */; };
 		FD0291732A0E256F00F88377 /* GeneralInfoSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0291722A0E256F00F88377 /* GeneralInfoSectionView.swift */; };
 		FD0291752A0E273500F88377 /* BioSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0291742A0E273500F88377 /* BioSectionView.swift */; };
 		FD0291772A0E2B0700F88377 /* AppStyle+FontStyleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0291762A0E2B0700F88377 /* AppStyle+FontStyleTests.swift */; };
@@ -108,6 +117,9 @@
 		FDEE43CE2A2F4E56007DE0A9 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE43C82A2F45B8007DE0A9 /* Preferences.swift */; };
 		FDEE43CF2A2F4E58007DE0A9 /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE43CA2A2F4602007DE0A9 /* Role.swift */; };
 		FDEE43D12A2F525B007DE0A9 /* RoleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE43D02A2F525B007DE0A9 /* RoleTests.swift */; };
+		FDEE43E02A386291007DE0A9 /* StartScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE43DF2A386291007DE0A9 /* StartScreenViewModel.swift */; };
+		FDEE43E22A38884A007DE0A9 /* StartScreenViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE43E12A38884A007DE0A9 /* StartScreenViewModelTests.swift */; };
+		FDEE43E32A388854007DE0A9 /* StartScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE43DF2A386291007DE0A9 /* StartScreenViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +161,10 @@
 		EF5A7F2E2A14504F00585616 /* DetailPetSitterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPetSitterViewModel.swift; sourceTree = "<group>"; };
 		EF5A7F322A14563800585616 /* DetailedPetSitterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedPetSitterView.swift; sourceTree = "<group>"; };
 		EF7B7EFF2A147D8300F00B4E /* TextWithIconLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextWithIconLabelView.swift; sourceTree = "<group>"; };
+		EF95A0492A385FA600E84ACD /* OwnerMainTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerMainTabViewModel.swift; sourceTree = "<group>"; };
+		EF95A04C2A385FCF00E84ACD /* SitterMainTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitterMainTabViewModel.swift; sourceTree = "<group>"; };
+		EF95A04E2A38615E00E84ACD /* OwnerMainTabViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerMainTabViewModelTests.swift; sourceTree = "<group>"; };
+		EF95A0522A38698900E84ACD /* SitterMainTabViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitterMainTabViewModelTests.swift; sourceTree = "<group>"; };
 		FD0291722A0E256F00F88377 /* GeneralInfoSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralInfoSectionView.swift; sourceTree = "<group>"; };
 		FD0291742A0E273500F88377 /* BioSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioSectionView.swift; sourceTree = "<group>"; };
 		FD0291762A0E2B0700F88377 /* AppStyle+FontStyleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppStyle+FontStyleTests.swift"; sourceTree = "<group>"; };
@@ -186,6 +202,7 @@
 		FD81822F2A20C3C300AE1016 /* KeyValueStorage+TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyValueStorage+TestData.swift"; sourceTree = "<group>"; };
 		FD9802272A287670003DEE5C /* OwnerProfileViewModelGetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerProfileViewModelGetTests.swift; sourceTree = "<group>"; };
 		FD9802292A2878C1003DEE5C /* Owner+Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Owner+Test.swift"; sourceTree = "<group>"; };
+		FDCF49122A1CDA8800CD3BBB /* DetailPetSitterViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailPetSitterViewModelTests.swift; path = WoofTests/ViewModel/DetailPetSitterViewModel/DetailPetSitterViewModelTests.swift; sourceTree = SOURCE_ROOT; };
 		FDD143C62A03BD48000BBA77 /* OwnerMainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerMainTabView.swift; sourceTree = "<group>"; };
 		FDD143CA2A03C629000BBA77 /* Color+AppScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+AppScheme.swift"; sourceTree = "<group>"; };
 		FDD143CC2A03E575000BBA77 /* Sitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sitter.swift; sourceTree = "<group>"; };
@@ -203,6 +220,8 @@
 		FDEE43CA2A2F4602007DE0A9 /* Role.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
 		FDEE43CC2A2F4E51007DE0A9 /* PreferencesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesTests.swift; sourceTree = "<group>"; };
 		FDEE43D02A2F525B007DE0A9 /* RoleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleTests.swift; sourceTree = "<group>"; };
+		FDEE43DF2A386291007DE0A9 /* StartScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewModel.swift; sourceTree = "<group>"; };
+		FDEE43E12A38884A007DE0A9 /* StartScreenViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,7 +312,7 @@
 		9B24803A2A33550A000B66CD /* DetailPetSitterViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				360E4DB32A39AD780006B752 /* DetailPetSitterViewModelTests.swift */,
+				FDCF49122A1CDA8800CD3BBB /* DetailPetSitterViewModelTests.swift */,
 				9B2480382A3354D8000B66CD /* ClipboardTextTests.swift */,
 			);
 			path = DetailPetSitterViewModel;
@@ -506,7 +525,10 @@
 		FDCF49102A1CDA0A00CD3BBB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				EF95A04E2A38615E00E84ACD /* OwnerMainTabViewModelTests.swift */,
+				EF95A0522A38698900E84ACD /* SitterMainTabViewModelTests.swift */,
 				9B24803A2A33550A000B66CD /* DetailPetSitterViewModel */,
+				FDEE43E12A38884A007DE0A9 /* StartScreenViewModelTests.swift */,
 				365D3F232A387D3200EC9B30 /* LoginViewModelTests */,
 				FD14A2B82A2870A500362461 /* OwnerProfileViewModelTests */,
 			);
@@ -602,9 +624,12 @@
 			children = (
 				360E4DBB2A39DF320006B752 /* LoginViewModel */,
 				FD14A2A42A277FA400362461 /* OwnerProfileViewModel.swift */,
+				FDEE43DF2A386291007DE0A9 /* StartScreenViewModel.swift */,
+				EF95A04C2A385FCF00E84ACD /* SitterMainTabViewModel.swift */,
 				FD1FA3C22A0A682E000A3A91 /* SitterCardViewModel.swift */,
 				EF5A7F2E2A14504F00585616 /* DetailPetSitterViewModel.swift */,
 				FD2FA22A2A129CA1002B618B /* SitterListViewModel.swift */,
+				EF95A0492A385FA600E84ACD /* OwnerMainTabViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -840,16 +865,23 @@
 				FD14A2B12A286BB800362461 /* OwnerProfileViewModelTests.swift in Sources */,
 				FD0291772A0E2B0700F88377 /* AppStyle+FontStyleTests.swift in Sources */,
 				FD0291792A0E2B2300F88377 /* AppStyle+UIElementConstantTests.swift in Sources */,
+				EF95A0572A386FCE00E84ACD /* Sitter+Dummy.swift in Sources */,
 				FD14A2B52A286C5C00362461 /* KeyValueStorage+Key.swift in Sources */,
 				FD37A9942A0B6E960001BABB /* FullNameTests.swift in Sources */,
+				FDEE43E22A38884A007DE0A9 /* StartScreenViewModelTests.swift in Sources */,
+				EF95A0502A38615E00E84ACD /* OwnerMainTabViewModelTests.swift in Sources */,
 				36C06F5D2A2F5DDB00B8EBDF /* PreferencesHandler.swift in Sources */,
 				BA4561822A334D2D00C6E595 /* Stars.swift in Sources */,
 				365D3F292A3888B100EC9B30 /* LoginViewModelSetUserRoleTests.swift in Sources */,
 				BA44C2FE2A31FA2D00193927 /* StarRating.swift in Sources */,
+				EF95A0542A38698900E84ACD /* SitterMainTabViewModelTests.swift in Sources */,
 				FDCF49142A1CDB1600CD3BBB /* DetailPetSitterViewModel.swift in Sources */,
+				EF95A05B2A39B74100E84ACD /* DetailPetSitterViewModelTests.swift in Sources */,
 				FDEE43CD2A2F4E51007DE0A9 /* PreferencesTests.swift in Sources */,
+				EF95A04B2A385FA900E84ACD /* OwnerMainTabViewModel.swift in Sources */,
 				FD98022A2A2878C1003DEE5C /* Owner+Test.swift in Sources */,
 				FDD143F72A052A11000BBA77 /* Color+AppSchemeTests.swift in Sources */,
+				EF95A0552A386A2300E84ACD /* SitterListViewModel.swift in Sources */,
 				360E4DB42A39AD780006B752 /* DetailPetSitterViewModelTests.swift in Sources */,
 				1CE7E9CC2A24889B000A0509 /* KeyValueStorage+UnitTests.swift in Sources */,
 				FD2F7B322A0CE029008F6F49 /* Sitter.swift in Sources */,
@@ -857,6 +889,7 @@
 				FD02917C2A0E2CBC00F88377 /* AppStyle.swift in Sources */,
 				FD14A2B72A28709400362461 /* OwnerProfileViewModelSaveTests.swift in Sources */,
 				FD2F7B332A0CE032008F6F49 /* Owner.swift in Sources */,
+				EF95A0562A386A5F00E84ACD /* SitterMainTabViewModel.swift in Sources */,
 				36C06F5C2A2F5DCB00B8EBDF /* PreferencesHandlerSetUserRoleTests.swift in Sources */,
 				368F66612A308D2600C8F69D /* PreferencesHandlerGetUserRoleTests.swift in Sources */,
 				FD14A2B22A286BBD00362461 /* OwnerProfileViewModel.swift in Sources */,
@@ -868,6 +901,7 @@
 				FDEE43D12A2F525B007DE0A9 /* RoleTests.swift in Sources */,
 				FDEE43CF2A2F4E58007DE0A9 /* Role.swift in Sources */,
 				FD37A9982A0B77A90001BABB /* FiveStarRatingTests.swift in Sources */,
+				FDEE43E32A388854007DE0A9 /* StartScreenViewModel.swift in Sources */,
 				FD14A2B42A286C5200362461 /* KeyValueStorage+Name.swift in Sources */,
 				9B24803B2A336157000B66CD /* Sitter+Dummy.swift in Sources */,
 				FDD143FF2A052D5E000BBA77 /* String+IconName.swift in Sources */,
@@ -890,6 +924,7 @@
 				FD1FA3B52A090916000A3A91 /* Sitter.swift in Sources */,
 				368BF0EC2A152FA500F3F750 /* KeyValueStorage.swift in Sources */,
 				FDD143E22A05233B000BBA77 /* String+IconName.swift in Sources */,
+				FDEE43E02A386291007DE0A9 /* StartScreenViewModel.swift in Sources */,
 				FD6A2E5D2A2EF69500934C3E /* SitterMainTabView.swift in Sources */,
 				FDD143C72A03BD48000BBA77 /* OwnerMainTabView.swift in Sources */,
 				FDEE43C92A2F45B8007DE0A9 /* Preferences.swift in Sources */,
@@ -917,9 +952,11 @@
 				9B480A5F2A330F29001A5A71 /* CopyToClipboardLabel.swift in Sources */,
 				FD7F989D2A0E04650058DBEB /* SitterCardView.swift in Sources */,
 				BAD0FC632A31D20800F59544 /* StarRating.swift in Sources */,
+				EF95A04D2A385FCF00E84ACD /* SitterMainTabViewModel.swift in Sources */,
 				362F63062A28A8B6002A659B /* OwnerProfileView.swift in Sources */,
 				FD2FA22B2A129CA1002B618B /* SitterListViewModel.swift in Sources */,
 				FDE0CEA92A00F8370023F784 /* WoofApp.swift in Sources */,
+				EF95A04A2A385FA600E84ACD /* OwnerMainTabViewModel.swift in Sources */,
 				FD7F98A52A0E12290058DBEB /* AvatarView.swift in Sources */,
 				FD1FA3CC2A0A781E000A3A91 /* Sitter+Dummy.swift in Sources */,
 				FDEE43CB2A2F4602007DE0A9 /* Role.swift in Sources */,
