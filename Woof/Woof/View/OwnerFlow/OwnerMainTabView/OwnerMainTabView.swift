@@ -38,37 +38,35 @@ struct OwnerMainTabView: View {
             .navigationTitle(selection.header)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                Button(navigationBarTrailingItemTitle) {
-                    alertIsShown.toggle()
-                }
                 NavigationLink(
-                    destination: OwnerMainTabView(),
-                    isActive: $logoutIsConfirmed,
-                    label: {
-                        EmptyView()
+                    destination: OwnerMainTabView()
+                        .navigationBarBackButtonHidden(true),
+                    isActive: $viewModel.logoutIsConfirmed
+                ) {
+                    Button(navigationBarTrailingItemTitle) {
+                        viewModel.alertIsShown.toggle()
                     }
-                )
+                }
             }
             .foregroundColor(.App.purpleDark)
 
-            .alert(alertTitle, isPresented: $alertIsShown) {
+            .alert(alertTitle, isPresented: $viewModel.alertIsShown) {
                 Button(continueButtonLabelText) {
-                    logoutIsConfirmed.toggle()
-                    // TODO: Add PreferenceHandler.set
+                    viewModel.logoutIsConfirmed.toggle()
+                    viewModel.resetCurrentRole()
                 }
                 Button(
                     cancelButtonLabelText,
                     role: .cancel
-                ) { alertIsShown.toggle() }
+                ) { viewModel.alertIsShown.toggle() }
             }
         }
     }
 
     // MARK: - Private interface
 
+    @State private var viewModel = OwnerMainTabViewModel()
     @State private var selection: Tab = .sitters
-    @State private var alertIsShown = false
-    @State private var logoutIsConfirmed = false
 
     private let navigationBarTrailingItemTitle = "Logout"
     private let continueButtonLabelText = "Continue"

@@ -6,4 +6,10 @@ final class SitterMainTabViewModel: ObservableObject {
     func resetCurrentRole() {
         PreferencesHandler.set(userRole: .none)
     }
+
+    /// Indicates that an alert in the view should be shown.
+    @Published var alertIsShown = false
+
+    /// Indicates that confirmation on logout was obtained.
+    @Published var logoutIsConfirmed = false
 }

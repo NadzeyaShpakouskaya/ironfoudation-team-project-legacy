@@ -6,4 +6,10 @@ final class OwnerMainTabViewModel: ObservableObject {
     func resetCurrentRole() {
         PreferencesHandler.set(userRole: .none)
     }
+
+    /// Indicates that confirmation on logout was obtained.
+    @Published var alertIsShown = false
+
+    /// Indicates that confirmation on logout was obtained.
+    @Published var logoutIsConfirmed = false
 }
