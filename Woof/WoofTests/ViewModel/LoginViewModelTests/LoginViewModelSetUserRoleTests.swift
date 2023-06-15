@@ -10,23 +10,59 @@ final class LoginViewModelSetUserRoleTests: XCTestCase {
     }
 
     func testMethodExistsInAPI() {
-        _ = testLoginViewModel.set(.sitter)
+        testLoginViewModel.set(.sitter)
     }
 
-    func testReturnsTrueWhenSetEveryPossibleRole() {
-        Role.allCases.forEach {
-            XCTAssertTrue(testLoginViewModel.set($0))
-        }
+    func testSuccessfullyOverwritesTheDefaultValueForTheOwnerRole() {
+        // Given
+        let initialRole = Role.none
+        let overriddenRole = Role.owner
+        testLoginViewModel.set(initialRole)
+
+        // When
+        testLoginViewModel.set(overriddenRole)
+
+        // Then
+        XCTAssertNotEqual(PreferencesHandler.getUserRole(), initialRole)
+        XCTAssertEqual(PreferencesHandler.getUserRole(), overriddenRole)
+    }
+
+    func testSuccessfullyOverwritesTheDefaultValueForTheSitterRole() {
+        // Given
+        let initialRole = Role.none
+        let overriddenRole = Role.sitter
+        testLoginViewModel.set(initialRole)
+
+        // When
+        testLoginViewModel.set(overriddenRole)
+
+        // Then
+        XCTAssertNotEqual(PreferencesHandler.getUserRole(), initialRole)
+        XCTAssertEqual(PreferencesHandler.getUserRole(), overriddenRole)
+    }
+
+    func testSuccessfullyOverwritesTheDefaultValueForTheNoneRole() {
+        // Given
+        let initialRole = Role.sitter
+        let overriddenRole = Role.none
+        testLoginViewModel.set(initialRole)
+
+        // When
+        testLoginViewModel.set(overriddenRole)
+
+        // Then
+        XCTAssertNotEqual(PreferencesHandler.getUserRole(), initialRole)
+        XCTAssertEqual(PreferencesHandler.getUserRole(), overriddenRole)
     }
 
     func testReturnsExpectedValueWhenOverridesThePreviouslySavedRole() {
         // Given
         let initialRole = Role.sitter
         let overriddenRole = Role.owner
-        _ = testLoginViewModel.set(initialRole)
+        testLoginViewModel.set(initialRole)
 
         // When
-        _ = testLoginViewModel.set(overriddenRole)
+        testLoginViewModel.set(overriddenRole)
 
         // Then
         XCTAssertNotEqual(PreferencesHandler.getUserRole(), initialRole)
