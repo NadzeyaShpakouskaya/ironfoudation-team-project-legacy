@@ -2,6 +2,16 @@ import SwiftUI
 
 /// A view to edit the sitter information.
 struct EditSitterInformationView: View {
+    // MARK: - Private interface
+
+    private let titleText = "Edit your information"
+    private let bioInformationPlaceholderText = "Enter information about yourself"
+    private let namePlaceholderText = "Enter your name"
+    private let surnamePlaceholderText = "Enter your surname"
+    private let pricePlaceholderText = "Enter your price per hour for walking"
+    private let phonePlaceholderText = "Enter your phone"
+    private let mandatoryPlaceholderText = "*Name is a mandatory field"
+
     // MARK: - Internal interface
 
     /// The name of the sitter.
@@ -43,16 +53,6 @@ struct EditSitterInformationView: View {
         .cornerRadius(AppStyle.UIElementConstant.cornerRadius)
     }
 }
-
-// MARK: - Private interface
-
-private let titleText = "Edit your information"
-private let bioInformationPlaceholderText = "Enter information about yourself"
-private let namePlaceholderText = "Enter your name"
-private let surnamePlaceholderText = "Enter your surname"
-private let pricePlaceholderText = "Enter your price per hour for walking"
-private let phonePlaceholderText = "Enter your phone"
-private let mandatoryPlaceholderText = "*Name is a mandatory field"
 
 struct EditSitterInformationView_Previews: PreviewProvider {
     static let viewWithFilledFields = EditSitterInformationView(
