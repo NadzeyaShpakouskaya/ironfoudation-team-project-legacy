@@ -6,7 +6,7 @@ struct TextEditorWithPlaceholder: View {
     @Binding var message: String
 
     /// The text that is shown in the text input field when it’s empty.
-    let placeholder: LocalizedStringKey
+    let placeholder: String
 
     var body: some View {
         ZStack(alignment: .topLeading) {
