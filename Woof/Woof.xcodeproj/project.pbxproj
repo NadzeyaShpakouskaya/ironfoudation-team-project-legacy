@@ -45,6 +45,8 @@
 		EF95A0562A386A5F00E84ACD /* SitterMainTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF95A04C2A385FCF00E84ACD /* SitterMainTabViewModel.swift */; };
 		EF95A0572A386FCE00E84ACD /* Sitter+Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1FA3CB2A0A781E000A3A91 /* Sitter+Dummy.swift */; };
 		EF95A05B2A39B74100E84ACD /* DetailPetSitterViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCF49122A1CDA8800CD3BBB /* DetailPetSitterViewModelTests.swift */; };
+		EF95A0692A3AC66400E84ACD /* TextEditorWithPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF95A0682A3AC66400E84ACD /* TextEditorWithPlaceholder.swift */; };
+		EF95A06B2A3AC6DF00E84ACD /* EditSitterInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF95A06A2A3AC6DF00E84ACD /* EditSitterInformationView.swift */; };
 		FD0291732A0E256F00F88377 /* GeneralInfoSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0291722A0E256F00F88377 /* GeneralInfoSectionView.swift */; };
 		FD0291752A0E273500F88377 /* BioSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0291742A0E273500F88377 /* BioSectionView.swift */; };
 		FD0291772A0E2B0700F88377 /* AppStyle+FontStyleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0291762A0E2B0700F88377 /* AppStyle+FontStyleTests.swift */; };
@@ -156,6 +158,8 @@
 		EF95A04C2A385FCF00E84ACD /* SitterMainTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitterMainTabViewModel.swift; sourceTree = "<group>"; };
 		EF95A04E2A38615E00E84ACD /* OwnerMainTabViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerMainTabViewModelTests.swift; sourceTree = "<group>"; };
 		EF95A0522A38698900E84ACD /* SitterMainTabViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitterMainTabViewModelTests.swift; sourceTree = "<group>"; };
+		EF95A0682A3AC66400E84ACD /* TextEditorWithPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditorWithPlaceholder.swift; sourceTree = "<group>"; };
+		EF95A06A2A3AC6DF00E84ACD /* EditSitterInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSitterInformationView.swift; sourceTree = "<group>"; };
 		FD0291722A0E256F00F88377 /* GeneralInfoSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralInfoSectionView.swift; sourceTree = "<group>"; };
 		FD0291742A0E273500F88377 /* BioSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioSectionView.swift; sourceTree = "<group>"; };
 		FD0291762A0E2B0700F88377 /* AppStyle+FontStyleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppStyle+FontStyleTests.swift"; sourceTree = "<group>"; };
@@ -317,6 +321,7 @@
 				EF303EBD2A1762CF0086065B /* FiveStarRatingView.swift */,
 				FD7F98A42A0E12290058DBEB /* AvatarView.swift */,
 				9B6498A72A31E7CA00004FB3 /* CopyToClipboardLabel.swift */,
+				EF95A0682A3AC66400E84ACD /* TextEditorWithPlaceholder.swift */,
 			);
 			path = ReusableViews;
 			sourceTree = "<group>";
@@ -457,6 +462,7 @@
 			children = (
 				BA4561832A39969000C6E595 /* SitterProfileView */,
 				FD6A2E5B2A2EF67A00934C3E /* SitterMainTabView */,
+				EF95A06A2A3AC6DF00E84ACD /* EditSitterInformationView.swift */,
 			);
 			path = SitterFlow;
 			sourceTree = "<group>";
@@ -908,6 +914,7 @@
 				EF16BB262A24E101007922C6 /* Owner+Dummy.swift in Sources */,
 				FD7F989F2A0E0D2C0058DBEB /* AppStyle.swift in Sources */,
 				FDD143CB2A03C629000BBA77 /* Color+AppScheme.swift in Sources */,
+				EF95A0692A3AC66400E84ACD /* TextEditorWithPlaceholder.swift in Sources */,
 				EF303EBE2A1762CF0086065B /* FiveStarRatingView.swift in Sources */,
 				FD14A2A52A277FA400362461 /* OwnerProfileViewModel.swift in Sources */,
 				FD0291732A0E256F00F88377 /* GeneralInfoSectionView.swift in Sources */,
@@ -915,6 +922,7 @@
 				FDD143E02A051F96000BBA77 /* OwnerMainTabView+Tab.swift in Sources */,
 				FD1FA3C32A0A682E000A3A91 /* SitterCardViewModel.swift in Sources */,
 				36C06F5A2A2F5AA600B8EBDF /* PreferencesHandler.swift in Sources */,
+				EF95A06B2A3AC6DF00E84ACD /* EditSitterInformationView.swift in Sources */,
 				FD7F98A12A0E0E280058DBEB /* AppStyle+FontStyle.swift in Sources */,
 				FD2FA2292A129C53002B618B /* SitterListView.swift in Sources */,
 				3673D6372A04F7FD009D699D /* Owner.swift in Sources */,
