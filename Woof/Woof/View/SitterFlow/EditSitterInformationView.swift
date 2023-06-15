@@ -34,12 +34,10 @@ struct EditSitterInformationView: View {
             }
         }
         .padding()
-
         .foregroundColor(.App.purpleDark)
         .textFieldStyle(.roundedBorder)
         .background(Color.App.purpleLight)
         .cornerRadius(AppStyle.UIElementConstant.cornerRadius)
-        .frame(maxWidth: .infinity)
     }
 }
 
@@ -64,6 +62,7 @@ struct EditSitterInformationView_Previews: PreviewProvider {
         }
         .previewDevice(PreviewDevice(rawValue: "iPhone 14"))
         .previewDisplayName("iPhone 14")
+
         VStack {
             EditSitterInformationView(
                 name: .constant("Chuck"),
@@ -83,6 +82,7 @@ struct EditSitterInformationView_Previews: PreviewProvider {
         }
         .previewDevice(PreviewDevice(rawValue: "iPhone 14 Pro Max"))
         .previewDisplayName("iPhone 14 Pro Max")
+
         VStack {
             EditSitterInformationView(
                 name: .constant("Chuck"),
