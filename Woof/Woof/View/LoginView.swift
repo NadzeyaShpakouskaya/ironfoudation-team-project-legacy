@@ -16,9 +16,6 @@ struct LoginView: View {
                         viewModel.set(.owner)
                         directToTheOwnerFlow.toggle()
                     }
-                    .buttonStyle(
-                        PurpleCapsuleOfInfinityWidth()
-                    )
                 }
                 NavigationLink(
                     destination: SitterMainTabView()
@@ -29,11 +26,9 @@ struct LoginView: View {
                         viewModel.set(.sitter)
                         directToTheSitterFlow.toggle()
                     }
-                    .buttonStyle(
-                        PurpleCapsuleOfInfinityWidth()
-                    )
                 }
             }
+            .buttonStyle(PurpleCapsuleOfInfinityWidth())
             .padding()
         }
     }
