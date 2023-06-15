@@ -55,63 +55,40 @@ private let phoneTextFieldText = "Enter your phone"
 private let mandatoryTextFieldText = "*Name is a mandatory field"
 
 struct EditSitterInformationView_Previews: PreviewProvider {
+    static let viewWithFilledFields = EditSitterInformationView(
+        name: .constant("Chuck"),
+        surname: .constant("Norris"),
+        phone: .constant("527637624567"),
+        bio: .constant("I have three dogs.I live in NY."),
+        pricePerHour: .constant("3.2")
+    )
+
+    static let viewWithEmptyFields = EditSitterInformationView(
+        name: .constant(""),
+        surname: .constant(""),
+        phone: .constant(""),
+        bio: .constant(""),
+        pricePerHour: .constant("")
+    )
+
     static var previews: some View {
         VStack {
-            EditSitterInformationView(
-                name: .constant("Chuck"),
-                surname: .constant("Norris"),
-                phone: .constant("527637624567"),
-                bio: .constant("I have three dogs.I live in NY."),
-                pricePerHour: .constant("3.2")
-            )
-
-            EditSitterInformationView(
-                name: .constant(""),
-                surname: .constant(""),
-                phone: .constant(""),
-                bio: .constant(""),
-                pricePerHour: .constant("")
-            )
+            viewWithFilledFields
+            viewWithEmptyFields
         }
         .previewDevice(PreviewDevice(rawValue: "iPhone 14"))
         .previewDisplayName("iPhone 14")
 
         VStack {
-            EditSitterInformationView(
-                name: .constant("Chuck"),
-                surname: .constant("Norris"),
-                phone: .constant("527637624567"),
-                bio: .constant("I have three dogs.I live in NY."),
-                pricePerHour: .constant("3.2")
-            )
-
-            EditSitterInformationView(
-                name: .constant(""),
-                surname: .constant(""),
-                phone: .constant(""),
-                bio: .constant(""),
-                pricePerHour: .constant("")
-            )
+            viewWithFilledFields
+            viewWithEmptyFields
         }
         .previewDevice(PreviewDevice(rawValue: "iPhone 14 Pro Max"))
         .previewDisplayName("iPhone 14 Pro Max")
 
         VStack {
-            EditSitterInformationView(
-                name: .constant("Chuck"),
-                surname: .constant("Norris"),
-                phone: .constant("527637624567"),
-                bio: .constant("I have three dogs.I live in NY."),
-                pricePerHour: .constant("3.2")
-            )
-
-            EditSitterInformationView(
-                name: .constant(""),
-                surname: .constant(""),
-                phone: .constant(""),
-                bio: .constant(""),
-                pricePerHour: .constant("")
-            )
+            viewWithFilledFields
+            viewWithEmptyFields
         }
         .previewDevice(PreviewDevice(rawValue: "iPhone SE"))
         .previewDisplayName("iPhone SE")
