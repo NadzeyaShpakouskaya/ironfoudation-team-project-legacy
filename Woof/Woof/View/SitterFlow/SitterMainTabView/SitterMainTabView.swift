@@ -2,15 +2,6 @@ import SwiftUI
 
 /// A view representing the main tab view for the sitter.
 struct SitterMainTabView: View {
-    // MARK: - Private interface
-
-    @State private var selection: Tab = .schedule
-
-    private func customizeTabBar() {
-        let tabBarAppearance = UITabBar.appearance()
-        tabBarAppearance.unselectedItemTintColor = UIColor(Color.App.grayDark)
-    }
-
     // MARK: - Public interface
 
     init() {
@@ -43,7 +34,47 @@ struct SitterMainTabView: View {
             .tint(Color.App.purpleDark)
             .navigationTitle(selection.header)
             .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                Button(navigationBarTrailingItemTitle) {
+                    alertIsShown.toggle()
+                }
+                NavigationLink(
+                    destination: OwnerMainTabView(),
+                    isActive: $logoutIsConformed,
+                    label: {
+                        EmptyView()
+                    }
+                )
+            }
+            .foregroundColor(.App.purpleDark)
+
+            .alert(alertTitle, isPresented: $alertIsShown) {
+                Button(continueButtonLabelText) {
+                    logoutIsConformed.toggle()
+                    // TODO: PreferenceHandler.set
+                }
+                Button(
+                    cancelButtonLabelText,
+                    role: .cancel
+                ) { alertIsShown.toggle() }
+            }
         }
+    }
+
+    // MARK: - Private interface
+
+    @State private var selection: Tab = .schedule
+    @State private var alertIsShown = false
+    @State private var logoutIsConformed = false
+
+    private let navigationBarTrailingItemTitle = "Logout"
+    private let continueButtonLabelText = "Continue"
+    private let cancelButtonLabelText = "Cancel"
+    private let alertTitle = "Do you really want to log out?"
+
+    private func customizeTabBar() {
+        let tabBarAppearance = UITabBar.appearance()
+        tabBarAppearance.unselectedItemTintColor = UIColor(Color.App.grayDark)
     }
 }
 

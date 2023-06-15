@@ -54,6 +54,7 @@ struct EditOwnerInformationView_Previews: PreviewProvider {
         }
         .previewDevice(PreviewDevice(rawValue: "iPhone 14"))
         .previewDisplayName("iPhone 14")
+
         VStack {
             EditOwnerInformationView(
                 name: .constant("Emily"),
