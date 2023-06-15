@@ -1,6 +1,6 @@
 import SwiftUI
 
-/// A view displaying TextEditor with a prompt text message for a user .
+/// A view displaying TextEditor with a prompt text message for a user.
 struct TextEditorWithPlaceholder: View {
     /// The text to be shown in the TextEditor.
     @Binding var message: String
