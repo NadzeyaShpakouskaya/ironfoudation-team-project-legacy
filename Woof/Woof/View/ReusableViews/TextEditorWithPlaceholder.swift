@@ -23,6 +23,9 @@ struct TextEditorWithPlaceholder: View {
 
 struct TextEditorWithPlaceholder_Previews: PreviewProvider {
     static var previews: some View {
-        TextEditorWithPlaceholder(message: .constant(""), placeholder: "Your Message")
+        TextEditorWithPlaceholder(
+            message: .constant(""),
+            placeholder: "Your Message"
+        )
     }
 }
