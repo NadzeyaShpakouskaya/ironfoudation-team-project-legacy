@@ -4,7 +4,7 @@ import Foundation
 final class LoginViewModel {
     /// Sets the current's user role in the app.
     ///
-    /// - Parameter userRole: The role to be set.
+    /// - Parameter userRole: The role to set.
     func set(_ userRole: Role) {
         PreferencesHandler.set(userRole: userRole)
     }
