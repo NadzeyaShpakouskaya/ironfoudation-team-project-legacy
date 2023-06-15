@@ -29,7 +29,7 @@ struct EditSitterInformationView: View {
                 .keyboardType(.phonePad)
             TextField(pricePlaceholderText, text: $pricePerHour)
                 .keyboardType(.decimalPad)
-            TextEditorWithPlaceholder(message: $bio, placeholder: bioInformationPlaceholderText)
+            TextEditorWithPlaceholder(text: $bio, placeholderText: bioInformationPlaceholderText)
                 .cornerRadius(AppStyle.UIElementConstant.cornerRadius)
 
             if name.isEmpty {
