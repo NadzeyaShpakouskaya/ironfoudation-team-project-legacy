@@ -1,7 +1,7 @@
 import Foundation
 
-/// An interface providing for `the LoginView` to interact with the model layer.
-final class LoginViewModel: ObservableObject {
+/// An interface that provides interaction between the `LoginView` and the model layer.
+final class LoginViewModel {
     /// Requests the model layer to save the selected user role.
     ///
     /// - Parameter userRole: The role to be saved.
