@@ -14,12 +14,15 @@ final class LoginViewModelSetUserRoleTests: XCTestCase {
     }
 
     func testSetsEveryPossibleRole() {
-        Role.allCases.forEach {
-            // Given When
-            testLoginViewModel.set($0)
-            
+        Role.allCases.forEach { role in
+            // Given
+            let expectedSavedRole = role
+
+            // When
+            testLoginViewModel.set(role)
+
             // Then
-            XCTAssertEqual($0, PreferencesHandler.getUserRole())
+            XCTAssertEqual(PreferencesHandler.getUserRole(), expectedSavedRole)
         }
     }
 
