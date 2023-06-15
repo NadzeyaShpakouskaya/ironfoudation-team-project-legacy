@@ -22,18 +22,18 @@ struct EditSitterInformationView: View {
 
     var body: some View {
         VStack {
-            Text(title)
-            TextField(nameTextFieldText, text: $name)
-            TextField(surnameTextFieldText, text: $surname)
-            TextField(phoneTextFieldText, text: $phone)
+            Text(titleText)
+            TextField(namePlaceholderText, text: $name)
+            TextField(surnamePlaceholderText, text: $surname)
+            TextField(phonePlaceholderText, text: $phone)
                 .keyboardType(.phonePad)
-            TextField(priceTextFieldText, text: $pricePerHour)
+            TextField(pricePlaceholderText, text: $pricePerHour)
                 .keyboardType(.decimalPad)
             TextEditorWithPlaceholder(message: $bio, placeholder: bioInformationPlaceholderText)
                 .cornerRadius(AppStyle.UIElementConstant.cornerRadius)
 
             if name.isEmpty {
-                Text(mandatoryTextFieldText)
+                Text(mandatoryPlaceholderText)
             }
         }
         .padding()
@@ -46,13 +46,13 @@ struct EditSitterInformationView: View {
 
 // MARK: - Private interface
 
-private let title = "Edit your information"
+private let titleText = "Edit your information"
 private let bioInformationPlaceholderText = "Enter information about yourself"
-private let nameTextFieldText = "Enter your name"
-private let surnameTextFieldText = "Enter your surname"
-private let priceTextFieldText = "Enter your price per hour for walking"
-private let phoneTextFieldText = "Enter your phone"
-private let mandatoryTextFieldText = "*Name is a mandatory field"
+private let namePlaceholderText = "Enter your name"
+private let surnamePlaceholderText = "Enter your surname"
+private let pricePlaceholderText = "Enter your price per hour for walking"
+private let phonePlaceholderText = "Enter your phone"
+private let mandatoryPlaceholderText = "*Name is a mandatory field"
 
 struct EditSitterInformationView_Previews: PreviewProvider {
     static let viewWithFilledFields = EditSitterInformationView(
