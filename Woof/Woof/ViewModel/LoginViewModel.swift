@@ -1,8 +1,8 @@
 import Foundation
 
-/// An interface that provides interaction between the `LoginView` and the model layer.
+/// The object that changes the state of the data in the model based on user actions in `LoginView`.
 final class LoginViewModel {
-    /// Requests the model layer to save the selected user role.
+    /// Sets the current's user role in the app.
     ///
     /// - Parameter userRole: The role to be saved.
     func set(_ userRole: Role) {

@@ -13,51 +13,19 @@ final class LoginViewModelSetUserRoleTests: XCTestCase {
         testLoginViewModel.set(.sitter)
     }
 
-    func testSuccessfullyOverwritesTheDefaultValueForTheOwnerRole() {
+    func testSetsEveryPossibleRole() {
+        Role.allCases.forEach {
+            // Given When
+            testLoginViewModel.set($0)
+            
+            // Then
+            XCTAssertEqual($0, PreferencesHandler.getUserRole())
+        }
+    }
+
+    func testOverridesSavedNoneRoleValueWithOwnerRoleValue() {
         // Given
         let initialRole = Role.none
-        let overriddenRole = Role.owner
-        testLoginViewModel.set(initialRole)
-
-        // When
-        testLoginViewModel.set(overriddenRole)
-
-        // Then
-        XCTAssertNotEqual(PreferencesHandler.getUserRole(), initialRole)
-        XCTAssertEqual(PreferencesHandler.getUserRole(), overriddenRole)
-    }
-
-    func testSuccessfullyOverwritesTheDefaultValueForTheSitterRole() {
-        // Given
-        let initialRole = Role.none
-        let overriddenRole = Role.sitter
-        testLoginViewModel.set(initialRole)
-
-        // When
-        testLoginViewModel.set(overriddenRole)
-
-        // Then
-        XCTAssertNotEqual(PreferencesHandler.getUserRole(), initialRole)
-        XCTAssertEqual(PreferencesHandler.getUserRole(), overriddenRole)
-    }
-
-    func testSuccessfullyOverwritesTheSitterRoleValueForDefault() {
-        // Given
-        let initialRole = Role.sitter
-        let overriddenRole = Role.none
-        testLoginViewModel.set(initialRole)
-
-        // When
-        testLoginViewModel.set(overriddenRole)
-
-        // Then
-        XCTAssertNotEqual(PreferencesHandler.getUserRole(), initialRole)
-        XCTAssertEqual(PreferencesHandler.getUserRole(), overriddenRole)
-    }
-
-    func testReturnsExpectedValueWhenOverridesThePreviouslySavedRole() {
-        // Given
-        let initialRole = Role.sitter
         let overriddenRole = Role.owner
         testLoginViewModel.set(initialRole)
 
