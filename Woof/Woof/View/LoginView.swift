@@ -40,8 +40,8 @@ struct LoginView: View {
     @State private var directToTheOwnerFlow = false
     @State private var directToTheSitterFlow = false
 
-    private let ownerButtonText = "I am an owner"
-    private let sitterButtonText = "I am a sitter"
+    private let ownerButtonText = "I am a pet owner"
+    private let sitterButtonText = "I am a pet sitter"
 }
 
 struct LoginView_Previews: PreviewProvider {
