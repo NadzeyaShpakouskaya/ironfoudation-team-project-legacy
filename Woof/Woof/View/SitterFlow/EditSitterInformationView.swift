@@ -26,6 +26,7 @@ struct EditSitterInformationView: View {
             TextField(nameTextFieldText, text: $name)
             TextField(surnameTextFieldText, text: $surname)
             TextField(phoneTextFieldText, text: $phone)
+                .keyboardType(.phonePad)
             TextField(priceTextFieldText, text: $pricePerHour)
                 .keyboardType(.decimalPad)
             TextEditorWithPlaceholder(message: $bio, placeholder: bioInformationPlaceholderText)
