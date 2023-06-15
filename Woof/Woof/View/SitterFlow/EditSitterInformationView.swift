@@ -2,6 +2,8 @@ import SwiftUI
 
 /// A view to edit the sitter information.
 struct EditSitterInformationView: View {
+    // MARK: - Internal interface
+
     /// The name of the sitter.
     @Binding var name: String
 
@@ -26,7 +28,7 @@ struct EditSitterInformationView: View {
             TextField("Enter your phone", text: $phone)
             TextField("Enter your price per hour for walking", text: $pricePerHour)
                 .keyboardType(.decimalPad)
-            TextEditorWithPlaceholder(message: $bio, placeholder: "Enter information about yourself")
+            TextEditorWithPlaceholder(message: $bio, placeholder: bioInformationPlaceholderText)
                 .cornerRadius(AppStyle.UIElementConstant.cornerRadius)
 
             if name.isEmpty {
@@ -40,6 +42,10 @@ struct EditSitterInformationView: View {
         .cornerRadius(AppStyle.UIElementConstant.cornerRadius)
     }
 }
+
+// MARK: - Private interface
+
+private let bioInformationPlaceholderText = "Enter information about yourself"
 
 struct EditSitterInformationView_Previews: PreviewProvider {
     static var previews: some View {
