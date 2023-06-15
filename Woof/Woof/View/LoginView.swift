@@ -1,7 +1,6 @@
 import SwiftUI
 
 /// A view that allows the user to select a role in the application.
-/// Based on the selected role, the user will be directed to the appropriate app flow.
 struct LoginView: View {
     // MARK: - Internal interface
 
