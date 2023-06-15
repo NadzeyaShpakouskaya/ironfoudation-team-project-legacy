@@ -26,6 +26,7 @@
 		36E97F172A2F42FD00030E3E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E97F162A2F42FD00030E3E /* LoginViewModel.swift */; };
 		9308D6132A31EFE40086193D /* CapsuleWithWhiteText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9308D6122A31EFE40086193D /* CapsuleWithWhiteText.swift */; };
 		93DDB06C2A3B30B100D7D97A /* PurpleCapsuleOfInfinityWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DDB06B2A3B30B100D7D97A /* PurpleCapsuleOfInfinityWidth.swift */; };
+		93DDB06E2A3B31E800D7D97A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DDB06D2A3B31E800D7D97A /* LoginView.swift */; };
 		9B2480392A3354D8000B66CD /* ClipboardTextTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2480382A3354D8000B66CD /* ClipboardTextTests.swift */; };
 		9B480A5F2A330F29001A5A71 /* CopyToClipboardLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6498A72A31E7CA00004FB3 /* CopyToClipboardLabel.swift */; };
 		BA44C2FE2A31FA2D00193927 /* StarRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD0FC622A31D20800F59544 /* StarRating.swift */; };
@@ -147,6 +148,7 @@
 		36E97F162A2F42FD00030E3E /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		9308D6122A31EFE40086193D /* CapsuleWithWhiteText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleWithWhiteText.swift; sourceTree = "<group>"; };
 		93DDB06B2A3B30B100D7D97A /* PurpleCapsuleOfInfinityWidth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurpleCapsuleOfInfinityWidth.swift; sourceTree = "<group>"; };
+		93DDB06D2A3B31E800D7D97A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		9B2480382A3354D8000B66CD /* ClipboardTextTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardTextTests.swift; sourceTree = "<group>"; };
 		9B6498A72A31E7CA00004FB3 /* CopyToClipboardLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyToClipboardLabel.swift; sourceTree = "<group>"; };
 		BA4561802A334A8A00C6E595 /* Stars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stars.swift; sourceTree = "<group>"; };
@@ -597,6 +599,7 @@
 		FDE0CEBA2A02691D0023F784 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				93DDB06D2A3B31E800D7D97A /* LoginView.swift */,
 				FD6A2E5A2A2EF65D00934C3E /* SitterFlow */,
 				EF303EBF2A17AFA20086065B /* ReusableViews */,
 				FD6A2E592A2EF62800934C3E /* OwnerFlow */,
@@ -949,6 +952,7 @@
 				362F63062A28A8B6002A659B /* OwnerProfileView.swift in Sources */,
 				93DDB06C2A3B30B100D7D97A /* PurpleCapsuleOfInfinityWidth.swift in Sources */,
 				FD2FA22B2A129CA1002B618B /* SitterListViewModel.swift in Sources */,
+				93DDB06E2A3B31E800D7D97A /* LoginView.swift in Sources */,
 				FDE0CEA92A00F8370023F784 /* WoofApp.swift in Sources */,
 				EF95A04A2A385FA600E84ACD /* OwnerMainTabViewModel.swift in Sources */,
 				BA4561872A3996BF00C6E595 /* SitterInfoCardView.swift in Sources */,
