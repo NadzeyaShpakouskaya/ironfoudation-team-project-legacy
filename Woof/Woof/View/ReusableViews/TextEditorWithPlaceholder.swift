@@ -1,11 +1,11 @@
 import SwiftUI
 
-/// A view displaying TextEditor with a prompt text message for a user.
+/// A view that displays a text input field with a prompt text message for a user.
 struct TextEditorWithPlaceholder: View {
-    /// The text to be shown in the TextEditor.
+    /// The text to be shown in the text input field.
     @Binding var message: String
 
-    /// The text that is shown in the textEditor when it’s empty.
+    /// The text that is shown in the text input field when it’s empty.
     let placeholder: LocalizedStringKey
 
     var body: some View {
