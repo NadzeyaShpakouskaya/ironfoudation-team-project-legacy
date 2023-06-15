@@ -16,10 +16,15 @@ struct TextEditorWithPlaceholder: View {
                     .foregroundColor(Color.gray)
             }
             TextEditor(text: $message)
-                .opacity(message.isEmpty ? 0.25 : 1)
+                .opacity(message.isEmpty ? opacityValueForEmptyTextEditor : opacityValueForFilledTextEditor)
         }
     }
 }
+
+// MARK: - Private interface
+
+private let opacityValueForEmptyTextEditor = 0.25
+private let opacityValueForFilledTextEditor = 1.0
 
 struct TextEditorWithPlaceholder_Previews: PreviewProvider {
     static var previews: some View {
