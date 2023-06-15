@@ -41,7 +41,7 @@ final class LoginViewModelSetUserRoleTests: XCTestCase {
         XCTAssertEqual(PreferencesHandler.getUserRole(), overriddenRole)
     }
 
-    func testSuccessfullyOverwritesTheDefaultValueForTheNoneRole() {
+    func testSuccessfullyOverwritesTheSitterRoleValueForDefault() {
         // Given
         let initialRole = Role.sitter
         let overriddenRole = Role.none
