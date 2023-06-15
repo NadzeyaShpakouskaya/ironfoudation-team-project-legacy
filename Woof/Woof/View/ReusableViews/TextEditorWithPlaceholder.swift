@@ -2,6 +2,11 @@ import SwiftUI
 
 /// A view that displays a text input field with a prompt text message for a user.
 struct TextEditorWithPlaceholder: View {
+    // MARK: - Private interface
+
+    private let emptyTextEditorOpacity = 0.25
+    private let filledTextEditorOpacity = 1.0
+
     // MARK: - Internal interface
 
     /// The text to be shown in the text input field.
@@ -22,11 +27,6 @@ struct TextEditorWithPlaceholder: View {
         }
     }
 }
-
-// MARK: - Private interface
-
-private let emptyTextEditorOpacity = 0.25
-private let filledTextEditorOpacity = 1.0
 
 struct TextEditorWithPlaceholder_Previews: PreviewProvider {
     static var previews: some View {
