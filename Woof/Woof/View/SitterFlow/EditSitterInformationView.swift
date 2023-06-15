@@ -22,11 +22,11 @@ struct EditSitterInformationView: View {
 
     var body: some View {
         VStack {
-            Text("Edit your information")
-            TextField("Enter your name", text: $name)
-            TextField("Enter your surname", text: $surname)
-            TextField("Enter your phone", text: $phone)
-            TextField("Enter your price per hour for walking", text: $pricePerHour)
+            Text(title)
+            TextField(nameTextFieldText, text: $name)
+            TextField(surnameTextFieldText, text: $surname)
+            TextField(phoneTextFieldText, text: $phone)
+            TextField(priceTextFieldText, text: $pricePerHour)
                 .keyboardType(.decimalPad)
             TextEditorWithPlaceholder(message: $bio, placeholder: bioInformationPlaceholderText)
                 .cornerRadius(AppStyle.UIElementConstant.cornerRadius)
@@ -45,7 +45,12 @@ struct EditSitterInformationView: View {
 
 // MARK: - Private interface
 
+private let title = "Edit your information"
 private let bioInformationPlaceholderText = "Enter information about yourself"
+private let nameTextFieldText = "Enter your name"
+private let surnameTextFieldText = "Enter your surname"
+private let priceTextFieldText = "Enter your price per hour for walking"
+private let phoneTextFieldText = "Enter your phone"
 
 struct EditSitterInformationView_Previews: PreviewProvider {
     static var previews: some View {
