@@ -245,6 +245,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		360E4DBB2A39DF320006B752 /* LoginViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				36E97F162A2F42FD00030E3E /* LoginViewModel.swift */,
+				360E4DBC2A39E58F0006B752 /* SelectedRole.swift */,
+			);
+			path = LoginViewModel;
+			sourceTree = "<group>";
+		};
 		365D3F232A387D3200EC9B30 /* LoginViewModelTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -616,6 +625,7 @@
 		FDE0CEBC2A02693A0023F784 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				360E4DBB2A39DF320006B752 /* LoginViewModel */,
 				FD14A2A42A277FA400362461 /* OwnerProfileViewModel.swift */,
 				FDEE43DF2A386291007DE0A9 /* StartScreenViewModel.swift */,
 				EF95A04C2A385FCF00E84ACD /* SitterMainTabViewModel.swift */,
@@ -902,6 +912,7 @@
 				368BF0EF2A16103B00F3F750 /* KeyValueStorage.swift in Sources */,
 				9B2480392A3354D8000B66CD /* ClipboardTextTests.swift in Sources */,
 				FD37A9952A0B6EA90001BABB /* DataTransformer.swift in Sources */,
+				360E4DBF2A39F4E00006B752 /* SelectedRole.swift in Sources */,
 				FD6A2E632A2F072F00934C3E /* KeyValueStorage+NameTests.swift in Sources */,
 				FD2F7B342A0CE03B008F6F49 /* SitterCardViewModel.swift in Sources */,
 			);
@@ -931,6 +942,7 @@
 				FDD143E02A051F96000BBA77 /* OwnerMainTabView+Tab.swift in Sources */,
 				FD1FA3C32A0A682E000A3A91 /* SitterCardViewModel.swift in Sources */,
 				36C06F5A2A2F5AA600B8EBDF /* PreferencesHandler.swift in Sources */,
+				360E4DBD2A39E58F0006B752 /* SelectedRole.swift in Sources */,
 				FD7F98A12A0E0E280058DBEB /* AppStyle+FontStyle.swift in Sources */,
 				FD2FA2292A129C53002B618B /* SitterListView.swift in Sources */,
 				3673D6372A04F7FD009D699D /* Owner.swift in Sources */,
