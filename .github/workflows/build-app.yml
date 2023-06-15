@@ -1,0 +1,18 @@
+name: build-app
+run-name: build app from the ${{ github.head_ref }} branch
+on: pull_request
+jobs:
+  build-woof-target:
+    runs-on: macos-13
+    steps:
+      - simulator 
+
+#  check-bats-version:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - uses: actions/checkout@v3
+#      - uses: actions/setup-node@v3
+#        with:
+#          node-version: '14'
+#      - run: npm install -g bats
+#      - run: bats -v
