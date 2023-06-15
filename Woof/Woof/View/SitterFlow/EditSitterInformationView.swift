@@ -33,7 +33,7 @@ struct EditSitterInformationView: View {
                 .cornerRadius(AppStyle.UIElementConstant.cornerRadius)
 
             if name.isEmpty {
-                Text("*Name is a mandatory field")
+                Text(mandatoryTextFieldText)
             }
         }
         .padding()
@@ -52,6 +52,7 @@ private let nameTextFieldText = "Enter your name"
 private let surnameTextFieldText = "Enter your surname"
 private let priceTextFieldText = "Enter your price per hour for walking"
 private let phoneTextFieldText = "Enter your phone"
+private let mandatoryTextFieldText = "*Name is a mandatory field"
 
 struct EditSitterInformationView_Previews: PreviewProvider {
     static var previews: some View {
