@@ -5,7 +5,7 @@ final class RoleFlowManagerTests: XCTestCase {
         _ = RoleFlowManager()
     }
 
-    func testUserRoleCanBeCalledInStartScreenViewModel() {
+    func testCurrentRoleCanBeCalledInRoleFlowManager() {
         _ = RoleFlowManager().currentRole
     }
 }

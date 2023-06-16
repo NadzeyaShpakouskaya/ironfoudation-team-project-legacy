@@ -26,10 +26,16 @@ final class SitterMainTabViewModelTests: XCTestCase {
     }
 
     func testIsAlertShownPropertyReturnsAssignedValue() {
+        // Given // When
         viewModel.isAlertShown = true
+        
+        // Then
         XCTAssertTrue(viewModel.isAlertShown)
 
+        // Given // When
         viewModel.isAlertShown = false
+        
+        // Then
         XCTAssertFalse(viewModel.isAlertShown)
     }
 
@@ -42,10 +48,16 @@ final class SitterMainTabViewModelTests: XCTestCase {
     }
 
     func testIsLogoutConfirmedPropertyReturnsAssignedValue() {
+        // Given // When
         viewModel.isLogoutConfirmed = true
+        
+        // Then
         XCTAssertTrue(viewModel.isLogoutConfirmed)
 
+        // Given // When
         viewModel.isLogoutConfirmed = false
+        
+        // Then
         XCTAssertFalse(viewModel.isLogoutConfirmed)
     }
 
