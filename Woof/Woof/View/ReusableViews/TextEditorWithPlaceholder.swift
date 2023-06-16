@@ -9,7 +9,7 @@ struct TextEditorWithPlaceholder: View {
 
     // MARK: - Internal interface
 
-    /// The text to be shown in the text input field.
+    /// The text to to edit the sitter information, shown in the text input field.
     @Binding var text: String
 
     /// The text that is shown in the text input field when it’s empty.
