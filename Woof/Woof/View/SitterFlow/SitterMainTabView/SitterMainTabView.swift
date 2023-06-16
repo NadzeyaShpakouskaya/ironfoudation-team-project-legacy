@@ -4,7 +4,7 @@ import SwiftUI
 struct SitterMainTabView: View {
     // MARK: - Internal interface
 
-    @EnvironmentObject var startVM: RoleFlowManager
+    @EnvironmentObject var roleFlowManager: RoleFlowManager
     @Environment(\.dismiss) var dismiss
 
     init() {
@@ -53,7 +53,7 @@ struct SitterMainTabView: View {
             .alert(alertTitle, isPresented: $viewModel.isAlertShown) {
                 Button(continueButtonLabelText) {
                     viewModel.isLogoutConfirmed.toggle()
-                    startVM.resetCurrentRole()
+                    roleFlowManager.resetCurrentRole()
                     dismiss()
                 }
                 Button(
