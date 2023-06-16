@@ -8,8 +8,8 @@ final class SitterMainTabViewModel: ObservableObject {
     }
 
     /// Indicates whether an alert should be shown in the view.
-    @Published var alertIsShown = false
+    @Published var isAlertShown = false
 
     /// Indicates whether the logout confirmation was obtained.
-    @Published var logoutIsConfirmed = false
+    @Published var isLogoutConfirmed = false
 }

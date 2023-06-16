@@ -41,25 +41,25 @@ struct SitterMainTabView: View {
                 NavigationLink(
                     destination: LoginView()
                         .navigationBarBackButtonHidden(true),
-                    isActive: $viewModel.logoutIsConfirmed
+                    isActive: $viewModel.isLogoutConfirmed
                 ) {
                     Button(navigationBarTrailingItemTitle) {
-                        viewModel.alertIsShown.toggle()
+                        viewModel.isAlertShown.toggle()
                     }
                 }
             }
             .foregroundColor(.App.purpleDark)
 
-            .alert(alertTitle, isPresented: $viewModel.alertIsShown) {
+            .alert(alertTitle, isPresented: $viewModel.isAlertShown) {
                 Button(continueButtonLabelText) {
-                    viewModel.logoutIsConfirmed.toggle()
+                    viewModel.isLogoutConfirmed.toggle()
                     startVM.resetCurrentRole()
                     dismiss()
                 }
                 Button(
                     cancelButtonLabelText,
                     role: .cancel
-                ) { viewModel.alertIsShown.toggle() }
+                ) { viewModel.isAlertShown.toggle() }
             }
         }
     }
