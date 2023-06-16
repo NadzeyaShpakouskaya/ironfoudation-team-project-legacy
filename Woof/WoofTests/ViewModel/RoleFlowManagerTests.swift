@@ -6,6 +6,6 @@ final class RoleFlowManagerTests: XCTestCase {
     }
 
     func testCurrentRoleCanBeCalledInRoleFlowManager() {
-        _ = RoleFlowManager().currentRole
+        _ = RoleFlowManager().userRole
     }
 }

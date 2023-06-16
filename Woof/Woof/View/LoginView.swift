@@ -16,7 +16,7 @@ struct LoginView: View {
                     isActive: $directToTheOwnerFlow
                 ) {
                     Button(ownerButtonText) {
-                        roleFlowManager.set(.owner)
+                        roleFlowManager.setOwnerRole()
                         directToTheOwnerFlow.toggle()
                     }
                 }
@@ -26,7 +26,7 @@ struct LoginView: View {
                     isActive: $directToTheSitterFlow
                 ) {
                     Button(sitterButtonText) {
-                        roleFlowManager.set(.sitter)
+                        roleFlowManager.setSitterRole()
                         directToTheSitterFlow.toggle()
                     }
                 }
@@ -37,8 +37,6 @@ struct LoginView: View {
     }
 
     // MARK: - Private interface
-
-    private var viewModel = LoginViewModel()
 
     @State private var directToTheOwnerFlow = false
     @State private var directToTheSitterFlow = false
