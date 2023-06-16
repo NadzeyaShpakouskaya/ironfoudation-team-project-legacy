@@ -4,6 +4,8 @@ import SwiftUI
 struct LoginView: View {
     // MARK: - Internal interface
 
+    @EnvironmentObject var startVM: StartScreenViewModel
+
     var body: some View {
         NavigationView {
             VStack {
@@ -13,7 +15,7 @@ struct LoginView: View {
                     isActive: $directToTheOwnerFlow
                 ) {
                     Button(ownerButtonText) {
-                        viewModel.set(.owner)
+                        startVM.set(.owner)
                         directToTheOwnerFlow.toggle()
                     }
                 }
@@ -23,7 +25,7 @@ struct LoginView: View {
                     isActive: $directToTheSitterFlow
                 ) {
                     Button(sitterButtonText) {
-                        viewModel.set(.sitter)
+                        startVM.set(.sitter)
                         directToTheSitterFlow.toggle()
                     }
                 }

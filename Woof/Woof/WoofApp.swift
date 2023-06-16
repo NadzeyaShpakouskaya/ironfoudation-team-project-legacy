@@ -9,8 +9,11 @@ struct WoofApp: App {
         WindowGroup {
             switch viewModel.userRole {
             case .owner: OwnerMainTabView()
+                .environmentObject(viewModel)
             case .sitter: SitterMainTabView()
+                .environmentObject(viewModel)
             case .none: LoginView()
+                .environmentObject(viewModel)
             }
         }
     }

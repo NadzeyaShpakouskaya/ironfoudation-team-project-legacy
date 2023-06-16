@@ -4,6 +4,9 @@ import SwiftUI
 struct SitterMainTabView: View {
     // MARK: - Public interface
 
+    @EnvironmentObject var startVM: StartScreenViewModel
+    @Environment(\.dismiss) var dismiss
+
     init() {
         customizeTabBar()
     }
@@ -50,7 +53,8 @@ struct SitterMainTabView: View {
             .alert(alertTitle, isPresented: $viewModel.alertIsShown) {
                 Button(continueButtonLabelText) {
                     viewModel.logoutIsConfirmed.toggle()
-                    viewModel.resetCurrentRole()
+                    startVM.resetCurrentRole()
+                    dismiss()
                 }
                 Button(
                     cancelButtonLabelText,

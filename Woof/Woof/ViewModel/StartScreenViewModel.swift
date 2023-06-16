@@ -9,4 +9,18 @@ final class StartScreenViewModel: ObservableObject {
     init() {
         userRole = PreferencesHandler.getUserRole()
     }
+
+    /// Resets the current user role in the app to the default value.
+    func resetCurrentRole() {
+        PreferencesHandler.set(userRole: .none)
+        userRole = .none
+    }
+
+    /// Sets the current's user role in the app.
+    ///
+    /// - Parameter userRole: The role to set.
+    func set(_ userRole: Role) {
+        PreferencesHandler.set(userRole: userRole)
+        self.userRole = userRole
+    }
 }
