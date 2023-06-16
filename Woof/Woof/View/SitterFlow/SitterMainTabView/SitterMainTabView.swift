@@ -2,7 +2,7 @@ import SwiftUI
 
 /// A view representing the main tab view for the sitter.
 struct SitterMainTabView: View {
-    // MARK: - Public interface
+    // MARK: - Internal interface
 
     @EnvironmentObject var startVM: RoleFlowManager
     @Environment(\.dismiss) var dismiss
