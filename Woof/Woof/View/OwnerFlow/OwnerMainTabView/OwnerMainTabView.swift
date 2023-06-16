@@ -46,7 +46,7 @@ struct OwnerMainTabView: View {
                         .navigationBarBackButtonHidden(true),
                     isActive: $viewModel.isLogoutConfirmed
                 ) {
-                    Button(navigationBarTrailingItemTitle) {
+                    Button(logoutButtonLabelText) {
                         viewModel.isAlertShown.toggle()
                     }
                 }
@@ -72,7 +72,7 @@ struct OwnerMainTabView: View {
     @StateObject private var viewModel = OwnerMainTabViewModel()
     @State private var selection: Tab = .sitters
 
-    private let navigationBarTrailingItemTitle = "Logout"
+    private let logoutButtonLabelText = "Logout"
     private let continueButtonLabelText = "Continue"
     private let cancelButtonLabelText = "Cancel"
     private let alertTitle = "Do you really want to log out?"
