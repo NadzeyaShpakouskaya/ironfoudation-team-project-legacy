@@ -39,7 +39,7 @@ struct OwnerMainTabView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 NavigationLink(
-                    destination: OwnerMainTabView()
+                    destination: LoginView()
                         .navigationBarBackButtonHidden(true),
                     isActive: $viewModel.logoutIsConfirmed
                 ) {
@@ -65,7 +65,7 @@ struct OwnerMainTabView: View {
 
     // MARK: - Private interface
 
-    @State private var viewModel = OwnerMainTabViewModel()
+    @StateObject private var viewModel = OwnerMainTabViewModel()
     @State private var selection: Tab = .sitters
 
     private let navigationBarTrailingItemTitle = "Logout"
