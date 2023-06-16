@@ -7,9 +7,9 @@ final class SitterMainTabViewModel: ObservableObject {
         PreferencesHandler.set(userRole: .none)
     }
 
-    /// Indicates that an alert in the view should be shown.
+    /// Indicates whether an alert should be shown in the view.
     @Published var alertIsShown = false
 
-    /// Indicates that confirmation on logout was obtained.
+    /// Indicates whether the logout confirmation was obtained.
     @Published var logoutIsConfirmed = false
 }
