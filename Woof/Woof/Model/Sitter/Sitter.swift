@@ -29,6 +29,7 @@ struct Sitter: Codable, Identifiable {
 
     /// The price per hour charged by the sitter.
     var pricePerHour: Double
+
     /**
      Creates a pet sitter instance with the specified parameters with the unique identifier.
 
