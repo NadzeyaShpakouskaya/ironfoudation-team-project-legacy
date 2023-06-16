@@ -22,6 +22,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Create view models: `SitterMainTabViewModel`, `OwnerMainTabViewModel` for main tab views - [#154](https://github.com/ios-course/ironfoudation-team-project/pull/154)
 - Add the `SitterInfoCardView` - [#112](https://github.com/ios-course/ironfoudation-team-project/pull/158)
 - Create `PurpleCapsuleOfInfinityWidth` as `ButtonStyle`. Create `LoginView` and apply in the `WoofApp` to display when running the app when the user role is not selected - [#160](https://github.com/ios-course/ironfoudation-team-project/pull/160)
+- Add ability to change the role using `Logout` button on the `SitterMainTabView` and `OwnerMainTabView` screens - [#161](https://github.com/ios-course/ironfoudation-team-project/pull/161)
 
 ### Changed
 
