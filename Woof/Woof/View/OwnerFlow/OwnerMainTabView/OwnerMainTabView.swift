@@ -7,6 +7,7 @@ import SwiftUI
 struct OwnerMainTabView: View {
     // MARK: - Internal interface
 
+    /// Responsible for managing and actual state of the current user role in the app.
     @EnvironmentObject var roleFlowManager: RoleFlowManager
     @Environment(\.dismiss) var dismiss
 

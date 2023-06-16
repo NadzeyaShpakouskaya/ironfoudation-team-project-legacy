@@ -4,7 +4,7 @@ import SwiftUI
 struct LoginView: View {
     // MARK: - Internal interface
 
-    /// Providers
+    /// Responsible for managing and actual state of the current user role in the app.
     @EnvironmentObject var roleFlowManager: RoleFlowManager
 
     var body: some View {
