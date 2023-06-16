@@ -1,11 +1,11 @@
 import Foundation
 
-/// Responsible for managing the data and behavior of the start screen view.
-final class StartScreenViewModel: ObservableObject {
+/// Responsible for managing and actual state of the current user role in the application.
+final class RoleFlowManager: ObservableObject {
     /// The user role that defines the app flow.
     @Published var userRole: Role
 
-    /// Initializes a new instance of the `StartScreenViewModel`.
+    /// Initializes a new instance of the `RoleFlowManager`.
     init() {
         userRole = PreferencesHandler.getUserRole()
     }

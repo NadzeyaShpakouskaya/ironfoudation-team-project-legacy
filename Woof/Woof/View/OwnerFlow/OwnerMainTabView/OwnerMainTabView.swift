@@ -7,7 +7,7 @@ import SwiftUI
 struct OwnerMainTabView: View {
     // MARK: - Internal interface
 
-    @EnvironmentObject var startVM: StartScreenViewModel
+    @EnvironmentObject var startVM: RoleFlowManager
     @Environment(\.dismiss) var dismiss
 
     init() {

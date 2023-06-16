@@ -4,7 +4,8 @@ import SwiftUI
 struct LoginView: View {
     // MARK: - Internal interface
 
-    @EnvironmentObject var startVM: StartScreenViewModel
+    /// Providers
+    @EnvironmentObject var roleFlowManager: RoleFlowManager
 
     var body: some View {
         NavigationView {
@@ -15,7 +16,7 @@ struct LoginView: View {
                     isActive: $directToTheOwnerFlow
                 ) {
                     Button(ownerButtonText) {
-                        startVM.set(.owner)
+                        roleFlowManager.set(.owner)
                         directToTheOwnerFlow.toggle()
                     }
                 }
@@ -25,7 +26,7 @@ struct LoginView: View {
                     isActive: $directToTheSitterFlow
                 ) {
                     Button(sitterButtonText) {
-                        startVM.set(.sitter)
+                        roleFlowManager.set(.sitter)
                         directToTheSitterFlow.toggle()
                     }
                 }

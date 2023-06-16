@@ -4,7 +4,7 @@ import SwiftUI
 struct SitterMainTabView: View {
     // MARK: - Public interface
 
-    @EnvironmentObject var startVM: StartScreenViewModel
+    @EnvironmentObject var startVM: RoleFlowManager
     @Environment(\.dismiss) var dismiss
 
     init() {
