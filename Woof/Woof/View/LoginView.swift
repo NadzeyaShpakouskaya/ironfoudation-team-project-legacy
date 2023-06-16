@@ -40,7 +40,7 @@ struct LoginView: View {
     @State private var directToTheOwnerFlow = false
     @State private var directToTheSitterFlow = false
 
-    private let ownerButtonText = "I am a pet owner"
+    private let ownerButtonText = "I am a pet owner hahaha"
     private let sitterButtonText = "I am a pet sitter"
 }
 
