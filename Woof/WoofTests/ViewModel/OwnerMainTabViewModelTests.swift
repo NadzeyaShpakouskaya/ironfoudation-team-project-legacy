@@ -25,7 +25,7 @@ final class OwnerMainTabViewModelTests: XCTestCase {
         _ = viewModel.alertIsShown
     }
 
-    func testAlertIsShownReturnsAssignedValue() {
+    func testAlertIsShownPropertyReturnsAssignedValue() {
         viewModel.alertIsShown = true
         XCTAssertTrue(viewModel.alertIsShown)
 
@@ -33,7 +33,7 @@ final class OwnerMainTabViewModelTests: XCTestCase {
         XCTAssertFalse(viewModel.alertIsShown)
     }
 
-    func testAlertIsShownReturnsFalseByDefault() {
+    func testAlertIsShownPropertyReturnsFalseByDefault() {
         XCTAssertFalse(viewModel.alertIsShown)
     }
 
@@ -41,7 +41,7 @@ final class OwnerMainTabViewModelTests: XCTestCase {
         _ = viewModel.logoutIsConfirmed
     }
 
-    func testLogoutIsConfirmedReturnsAssignedValue() {
+    func testLogoutIsConfirmedPropertyReturnsAssignedValue() {
         viewModel.logoutIsConfirmed = true
         XCTAssertTrue(viewModel.logoutIsConfirmed)
 
@@ -49,7 +49,7 @@ final class OwnerMainTabViewModelTests: XCTestCase {
         XCTAssertFalse(viewModel.logoutIsConfirmed)
     }
 
-    func testLogoutIsConfirmedReturnsFalseByDefault() {
+    func testLogoutIsConfirmedPropertyReturnsFalseByDefault() {
         XCTAssertFalse(viewModel.logoutIsConfirmed)
     }
 
