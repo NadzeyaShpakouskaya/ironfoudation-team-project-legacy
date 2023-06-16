@@ -12,8 +12,8 @@ final class RoleFlowManager: ObservableObject {
 
     /// Resets the current user role in the app to the default value.
     func resetCurrentRole() {
-        PreferencesHandler.set(userRole: .none)
         userRole = .none
+        PreferencesHandler.set(userRole: userRole)
     }
 
     /// Sets the owner role in the application.
