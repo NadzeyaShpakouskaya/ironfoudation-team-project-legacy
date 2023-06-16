@@ -38,6 +38,8 @@ struct LoginView: View {
 
     // MARK: - Private interface
 
+    private var viewModel = LoginViewModel()
+
     @State private var directToTheOwnerFlow = false
     @State private var directToTheSitterFlow = false
 

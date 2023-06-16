@@ -6,7 +6,7 @@ struct WoofApp: App {
 
     var body: some Scene {
         WindowGroup {
-            switch roleFlowManager.currentRole {
+            switch roleFlowManager.userRole {
             case .owner: OwnerMainTabView()
                 .environmentObject(roleFlowManager)
             case .sitter: SitterMainTabView()
