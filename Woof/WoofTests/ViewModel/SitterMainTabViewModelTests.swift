@@ -21,36 +21,36 @@ final class SitterMainTabViewModelTests: XCTestCase {
         XCTAssertEqual(PreferencesHandler.getUserRole(), Role.none)
     }
 
-    func testAlertIsShownPropertyExistsInAPI() {
-        _ = viewModel.alertIsShown
+    func testIsAlertShownPropertyExistsInAPI() {
+        _ = viewModel.isAlertShown
     }
 
-    func testAlertIsShownPropertyReturnsAssignedValue() {
-        viewModel.alertIsShown = true
-        XCTAssertTrue(viewModel.alertIsShown)
+    func testIsAlertShownPropertyReturnsAssignedValue() {
+        viewModel.isAlertShown = true
+        XCTAssertTrue(viewModel.isAlertShown)
 
-        viewModel.alertIsShown = false
-        XCTAssertFalse(viewModel.alertIsShown)
+        viewModel.isAlertShown = false
+        XCTAssertFalse(viewModel.isAlertShown)
     }
 
-    func testAlertIsShownPropertyReturnsFalseByDefault() {
-        XCTAssertFalse(viewModel.alertIsShown)
+    func testIsAlertShownPropertyReturnsFalseByDefault() {
+        XCTAssertFalse(viewModel.isAlertShown)
     }
 
-    func testLogoutIsConfirmedPropertyExistsInAPI() {
-        _ = viewModel.logoutIsConfirmed
+    func testIsLogoutConfirmedPropertyExistsInAPI() {
+        _ = viewModel.isLogoutConfirmed
     }
 
-    func testLogoutIsConfirmedPropertyReturnsAssignedValue() {
-        viewModel.logoutIsConfirmed = true
-        XCTAssertTrue(viewModel.logoutIsConfirmed)
+    func testIsLogoutConfirmedPropertyReturnsAssignedValue() {
+        viewModel.isLogoutConfirmed = true
+        XCTAssertTrue(viewModel.isLogoutConfirmed)
 
-        viewModel.logoutIsConfirmed = false
-        XCTAssertFalse(viewModel.logoutIsConfirmed)
+        viewModel.isLogoutConfirmed = false
+        XCTAssertFalse(viewModel.isLogoutConfirmed)
     }
 
-    func testLogoutIsConfirmedPropertyReturnsFalseByDefault() {
-        XCTAssertFalse(viewModel.logoutIsConfirmed)
+    func testIsLogoutConfirmedPropertyReturnsFalseByDefault() {
+        XCTAssertFalse(viewModel.isLogoutConfirmed)
     }
 
     // MARK: - Private interface

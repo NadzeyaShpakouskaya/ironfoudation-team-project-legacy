@@ -116,7 +116,7 @@
 		FDEE43CF2A2F4E58007DE0A9 /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE43CA2A2F4602007DE0A9 /* Role.swift */; };
 		FDEE43D12A2F525B007DE0A9 /* RoleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE43D02A2F525B007DE0A9 /* RoleTests.swift */; };
 		FDEE43E02A386291007DE0A9 /* RoleFlowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE43DF2A386291007DE0A9 /* RoleFlowManager.swift */; };
-		FDEE43E22A38884A007DE0A9 /* StartScreenViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE43E12A38884A007DE0A9 /* StartScreenViewModelTests.swift */; };
+		FDEE43E22A38884A007DE0A9 /* RoleFlowManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE43E12A38884A007DE0A9 /* RoleFlowManagerTests.swift */; };
 		FDEE43E32A388854007DE0A9 /* RoleFlowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE43DF2A386291007DE0A9 /* RoleFlowManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -219,7 +219,7 @@
 		FDEE43CC2A2F4E51007DE0A9 /* PreferencesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesTests.swift; sourceTree = "<group>"; };
 		FDEE43D02A2F525B007DE0A9 /* RoleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleTests.swift; sourceTree = "<group>"; };
 		FDEE43DF2A386291007DE0A9 /* RoleFlowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleFlowManager.swift; sourceTree = "<group>"; };
-		FDEE43E12A38884A007DE0A9 /* StartScreenViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewModelTests.swift; sourceTree = "<group>"; };
+		FDEE43E12A38884A007DE0A9 /* RoleFlowManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleFlowManagerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -521,7 +521,7 @@
 				EF95A04E2A38615E00E84ACD /* OwnerMainTabViewModelTests.swift */,
 				EF95A0522A38698900E84ACD /* SitterMainTabViewModelTests.swift */,
 				9B24803A2A33550A000B66CD /* DetailPetSitterViewModel */,
-				FDEE43E12A38884A007DE0A9 /* StartScreenViewModelTests.swift */,
+				FDEE43E12A38884A007DE0A9 /* RoleFlowManagerTests.swift */,
 				FD14A2B82A2870A500362461 /* OwnerProfileViewModelTests */,
 			);
 			path = ViewModel;
@@ -859,7 +859,7 @@
 				EF95A0572A386FCE00E84ACD /* Sitter+Dummy.swift in Sources */,
 				FD14A2B52A286C5C00362461 /* KeyValueStorage+Key.swift in Sources */,
 				FD37A9942A0B6E960001BABB /* FullNameTests.swift in Sources */,
-				FDEE43E22A38884A007DE0A9 /* StartScreenViewModelTests.swift in Sources */,
+				FDEE43E22A38884A007DE0A9 /* RoleFlowManagerTests.swift in Sources */,
 				EF95A0502A38615E00E84ACD /* OwnerMainTabViewModelTests.swift in Sources */,
 				36C06F5D2A2F5DDB00B8EBDF /* PreferencesHandler.swift in Sources */,
 				BA4561822A334D2D00C6E595 /* Stars.swift in Sources */,
