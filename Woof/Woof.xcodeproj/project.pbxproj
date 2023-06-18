@@ -26,6 +26,7 @@
 		36E97F172A2F42FD00030E3E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E97F162A2F42FD00030E3E /* LoginViewModel.swift */; };
 		9308D6132A31EFE40086193D /* CapsuleWithWhiteText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9308D6122A31EFE40086193D /* CapsuleWithWhiteText.swift */; };
 		9371BAC32A3F3334000980F9 /* UserRoleManagerResetCurrentRoleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9371BAC22A3F3333000980F9 /* UserRoleManagerResetCurrentRoleTests.swift */; };
+		9371BAC52A3F337B000980F9 /* UserRoleManagerSetOwnerRoleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9371BAC42A3F337B000980F9 /* UserRoleManagerSetOwnerRoleTests.swift */; };
 		93DDB06C2A3B30B100D7D97A /* PurpleCapsuleOfInfinityWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DDB06B2A3B30B100D7D97A /* PurpleCapsuleOfInfinityWidth.swift */; };
 		93DDB06E2A3B31E800D7D97A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DDB06D2A3B31E800D7D97A /* LoginView.swift */; };
 		9B2480392A3354D8000B66CD /* ClipboardTextTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2480382A3354D8000B66CD /* ClipboardTextTests.swift */; };
@@ -151,6 +152,7 @@
 		36E97F162A2F42FD00030E3E /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		9308D6122A31EFE40086193D /* CapsuleWithWhiteText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleWithWhiteText.swift; sourceTree = "<group>"; };
 		9371BAC22A3F3333000980F9 /* UserRoleManagerResetCurrentRoleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRoleManagerResetCurrentRoleTests.swift; sourceTree = "<group>"; };
+		9371BAC42A3F337B000980F9 /* UserRoleManagerSetOwnerRoleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRoleManagerSetOwnerRoleTests.swift; sourceTree = "<group>"; };
 		93DDB06B2A3B30B100D7D97A /* PurpleCapsuleOfInfinityWidth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurpleCapsuleOfInfinityWidth.swift; sourceTree = "<group>"; };
 		93DDB06D2A3B31E800D7D97A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		9B2480382A3354D8000B66CD /* ClipboardTextTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardTextTests.swift; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 			children = (
 				FDEE43E12A38884A007DE0A9 /* UserRoleManagerTests.swift */,
 				9371BAC22A3F3333000980F9 /* UserRoleManagerResetCurrentRoleTests.swift */,
+				9371BAC42A3F337B000980F9 /* UserRoleManagerSetOwnerRoleTests.swift */,
 			);
 			path = UserRoleManagerTests;
 			sourceTree = "<group>";
@@ -882,6 +885,7 @@
 				FD14A2B12A286BB800362461 /* OwnerProfileViewModelTests.swift in Sources */,
 				FD0291772A0E2B0700F88377 /* AppStyle+FontStyleTests.swift in Sources */,
 				9371BAC32A3F3334000980F9 /* UserRoleManagerResetCurrentRoleTests.swift in Sources */,
+				9371BAC52A3F337B000980F9 /* UserRoleManagerSetOwnerRoleTests.swift in Sources */,
 				FD0291792A0E2B2300F88377 /* AppStyle+UIElementConstantTests.swift in Sources */,
 				EF95A0572A386FCE00E84ACD /* Sitter+Dummy.swift in Sources */,
 				FD14A2B52A286C5C00362461 /* KeyValueStorage+Key.swift in Sources */,
