@@ -2,16 +2,22 @@ import SwiftUI
 
 @main
 struct WoofApp: App {
-    /// View model responsible to manage the data and behavior of the views in `Scene`.
-    @StateObject private var userRoleManager = UserRoleManager()
+    // MARK: - Internal interface
 
     var body: some Scene {
         WindowGroup {
             switch userRoleManager.userRole {
             case .owner: OwnerMainTabView()
+                .environmentObject(userRoleManager)
             case .sitter: SitterMainTabView()
+                .environmentObject(userRoleManager)
             case .none: LoginView()
+                .environmentObject(userRoleManager)
             }
         }
     }
+
+    // MARK: - Private interface
+
+    @StateObject private var userRoleManager = UserRoleManager()
 }
