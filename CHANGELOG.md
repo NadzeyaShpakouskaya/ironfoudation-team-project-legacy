@@ -23,6 +23,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Add the `SitterInfoCardView` - [#112](https://github.com/ios-course/ironfoudation-team-project/pull/158)
 - Create `PurpleCapsuleOfInfinityWidth` as `ButtonStyle`. Create `LoginView` and apply in the `WoofApp` to display when running the app when the user role is not selected - [#160](https://github.com/ios-course/ironfoudation-team-project/pull/160)
 - Add the `EditSitterInformationView` and the reusable element `TextEditorWithPlaceholder` - [#159](https://github.com/ios-course/ironfoudation-team-project/pull/159)
+- Change the class name from `StartScreenViewModel` to `UserRoleManager`. Add methods to the `UserRoleManager` to set and reset user's role in the application - [#166](https://github.com/ios-course/ironfoudation-team-project/pull/166)
 
 ### Changed
 
