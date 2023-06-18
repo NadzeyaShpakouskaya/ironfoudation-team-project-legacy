@@ -295,6 +295,14 @@
 			path = KeyValueStorage;
 			sourceTree = "<group>";
 		};
+		9371BAC12A3F323D000980F9 /* UserRoleManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				FDEE43E12A38884A007DE0A9 /* UserRoleManagerTests.swift */,
+			);
+			path = UserRoleManagerTests;
+			sourceTree = "<group>";
+		};
 		93B21C2D2A31EA1200610D82 /* ButtonStyle */ = {
 			isa = PBXGroup;
 			children = (
@@ -531,11 +539,11 @@
 		FDCF49102A1CDA0A00CD3BBB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				9371BAC12A3F323D000980F9 /* UserRoleManagerTests */,
 				EF95A04E2A38615E00E84ACD /* OwnerMainTabViewModelTests.swift */,
 				EF95A0522A38698900E84ACD /* SitterMainTabViewModelTests.swift */,
 				9B24803A2A33550A000B66CD /* DetailPetSitterViewModel */,
 				365D3F232A387D3200EC9B30 /* LoginViewModelTests */,
-				FDEE43E12A38884A007DE0A9 /* UserRoleManagerTests.swift */,
 				FD14A2B82A2870A500362461 /* OwnerProfileViewModelTests */,
 			);
 			path = ViewModel;

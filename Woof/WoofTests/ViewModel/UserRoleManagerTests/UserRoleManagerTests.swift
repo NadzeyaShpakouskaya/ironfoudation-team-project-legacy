@@ -1,6 +1,6 @@
 import XCTest
 
-final class StartScreenViewModelTests: XCTestCase {
+final class UserRoleManagerTests: XCTestCase {
     func testUserRoleManagerExistInAPI() {
         _ = UserRoleManager()
     }
