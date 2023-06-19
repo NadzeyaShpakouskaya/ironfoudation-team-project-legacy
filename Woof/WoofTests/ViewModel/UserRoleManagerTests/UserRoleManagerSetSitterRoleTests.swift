@@ -22,6 +22,7 @@ final class UserRoleManagerSetSitterRoleTests: XCTestCase {
 
         // Then
         XCTAssertEqual(userRoleManager.userRole, .sitter)
+        XCTAssertEqual(PreferencesHandler.getUserRole(), .sitter)
     }
 
     func testMethodOverridesTheSetOwnerRole() {
@@ -33,5 +34,6 @@ final class UserRoleManagerSetSitterRoleTests: XCTestCase {
 
         // Then
         XCTAssertEqual(userRoleManager.userRole, .sitter)
+        XCTAssertEqual(PreferencesHandler.getUserRole(), .sitter)
     }
 }

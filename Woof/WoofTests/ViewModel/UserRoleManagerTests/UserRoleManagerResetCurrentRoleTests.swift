@@ -22,6 +22,7 @@ final class UserRoleManagerResetCurrentRoleTests: XCTestCase {
 
         // Then
         XCTAssertEqual(userRoleManager.userRole, .none)
+        XCTAssertEqual(PreferencesHandler.getUserRole(), .none)
     }
 
     func testMethodResetsTheSitterRole() {
@@ -33,5 +34,6 @@ final class UserRoleManagerResetCurrentRoleTests: XCTestCase {
 
         // Then
         XCTAssertEqual(userRoleManager.userRole, .none)
+        XCTAssertEqual(PreferencesHandler.getUserRole(), .none)
     }
 }
