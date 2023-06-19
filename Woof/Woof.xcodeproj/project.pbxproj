@@ -646,13 +646,13 @@
 			isa = PBXGroup;
 			children = (
 				FDEE43DF2A386291007DE0A9 /* UserRoleViewModel.swift */,
-				FD14A2A42A277FA400362461 /* OwnerProfileViewModel.swift */,
+				EF95A0492A385FA600E84ACD /* OwnerMainTabViewModel.swift */,
 				EF95A04C2A385FCF00E84ACD /* SitterMainTabViewModel.swift */,
+				FD14A2A42A277FA400362461 /* OwnerProfileViewModel.swift */,
 				FD1FA3C22A0A682E000A3A91 /* SitterCardViewModel.swift */,
 				EF5A7F2E2A14504F00585616 /* DetailPetSitterViewModel.swift */,
 				FD2FA22A2A129CA1002B618B /* SitterListViewModel.swift */,
 				36E97F162A2F42FD00030E3E /* LoginViewModel.swift */,
-				EF95A0492A385FA600E84ACD /* OwnerMainTabViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";

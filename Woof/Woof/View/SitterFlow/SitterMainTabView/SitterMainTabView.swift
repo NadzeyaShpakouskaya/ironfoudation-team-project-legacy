@@ -2,16 +2,7 @@ import SwiftUI
 
 /// A view representing the main tab view for the sitter.
 struct SitterMainTabView: View {
-    // MARK: - Private interface
-
-    @State private var selection: Tab = .schedule
-
-    private func customizeTabBar() {
-        let tabBarAppearance = UITabBar.appearance()
-        tabBarAppearance.unselectedItemTintColor = UIColor(Color.App.grayDark)
-    }
-
-    // MARK: - Public interface
+    // MARK: - Internal interface
 
     init() {
         customizeTabBar()
@@ -43,7 +34,49 @@ struct SitterMainTabView: View {
             .tint(Color.App.purpleDark)
             .navigationTitle(selection.header)
             .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                NavigationLink(
+                    destination: LoginView()
+                        .navigationBarBackButtonHidden(true),
+                    isActive: $viewModel.isLogoutConfirmed
+                ) {
+                    Button(logoutButtonLabelText) {
+                        viewModel.isAlertShown.toggle()
+                    }
+                }
+            }
+            .foregroundColor(.App.purpleDark)
+
+            .alert(alertTitle, isPresented: $viewModel.isAlertShown) {
+                Button(continueButtonLabelText) {
+                    viewModel.isLogoutConfirmed.toggle()
+                    userRoleViewModel.resetCurrentRole()
+                    dismiss()
+                }
+                Button(
+                    cancelButtonLabelText,
+                    role: .cancel
+                ) { viewModel.isAlertShown.toggle() }
+            }
         }
+    }
+
+    // MARK: - Private interface
+
+    @StateObject private var viewModel = SitterMainTabViewModel()
+    @State private var selection: Tab = .schedule
+
+    @EnvironmentObject private var userRoleViewModel: UserRoleViewModel
+    @Environment(\.dismiss) private var dismiss
+
+    private let logoutButtonLabelText = "Logout"
+    private let continueButtonLabelText = "Continue"
+    private let cancelButtonLabelText = "Cancel"
+    private let alertTitle = "Do you really want to log out?"
+
+    private func customizeTabBar() {
+        let tabBarAppearance = UITabBar.appearance()
+        tabBarAppearance.unselectedItemTintColor = UIColor(Color.App.grayDark)
     }
 }
 
