@@ -10,9 +10,9 @@ The format is based on [Release_notes format](https://github.com/ios-course/iron
 
 ### New features
 
-`Log in`: Add possibility for user to select how to run the app - as a pet owner or a pet sitter.
+`Log in`: Add the possibility for the user to select how to run the app - as a pet owner or a pet sitter.
 
-`Logout`: The user are able to change the selected role (owner or sitter). The  Logout button is displayed in the navigation bar.
+`Logout`: The user are able to change the selected role (owner or sitter). The Logout button is displayed in the navigation bar.
 
 `Copy info`: Users are able to copy the name and the phone number of a pet sitter by a long tapping on the sitter's full name and phone information.
 
