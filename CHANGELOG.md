@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added 
 
+## [0.3.0] - 19.06.2023
+
+### Added
+
 - Add `enum Stars` and `enum StarRating` and use it into `FiveStarRatingView` and updated code that depends on these changes - [#127](https://github.com/ios-course/ironfoudation-team-project/pull/127)
 - Add `SitterMainTabView` for the sitter with stub view for tabs - [#108](https://github.com/ios-course/ironfoudation-team-project/pull/108)
 - Update storage keys and storage names to use with the `KeyValueStorage` - [#109](https://github.com/ios-course/ironfoudation-team-project/pull/109)
@@ -23,12 +27,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Add the `SitterInfoCardView` - [#112](https://github.com/ios-course/ironfoudation-team-project/pull/158)
 - Create `PurpleCapsuleOfInfinityWidth` as `ButtonStyle`. Create `LoginView` and apply in the `WoofApp` to display when running the app when the user role is not selected - [#160](https://github.com/ios-course/ironfoudation-team-project/pull/160)
 - Add the `EditSitterInformationView` and the reusable element `TextEditorWithPlaceholder` - [#159](https://github.com/ios-course/ironfoudation-team-project/pull/159)
+- Add ability to change the user role using `Logout` button on the `SitterMainTabView` and `OwnerMainTabView` screens - [#167](https://github.com/ios-course/ironfoudation-team-project/pull/167)
 - Add `SitterProfileViewModel` for `SitterProfileView` - [#164](https://github.com/ios-course/ironfoudation-team-project/pull/164)
 
 ### Changed
 
 - Update the Authors section for the `README.md` file - [#139](https://github.com/ios-course/ironfoudation-team-project/pull/139)
 - Update the general issue template - [#149](https://github.com/ios-course/ironfoudation-team-project/pull/149)
+- Change the class name from `StartScreenViewModel` to `UserRoleViewModel`. Add methods to the `UserRoleViewModel` to set and reset user's role in the application - [#166](https://github.com/ios-course/ironfoudation-team-project/pull/166)
 
 
 ## [0.2.0] - 05.06.2023
