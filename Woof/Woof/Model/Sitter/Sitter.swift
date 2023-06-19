@@ -20,7 +20,7 @@ struct Sitter: Codable, Identifiable {
     /// The URL of the sitter's avatar image.
     var avatarUrl: URL?
 
-    /// The additional information about the sitter, like his experience with dogs, favourite places for walks,
+    /// The additional information about the sitter, like his experience with dogs, favorite places for walks,
     /// special skills, certificates, etc.
     var bio: String
 
