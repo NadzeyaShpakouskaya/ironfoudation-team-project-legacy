@@ -25,6 +25,9 @@
 		36C54AFC2A17A79200748023 /* KeyValueStorageLoadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C54AFB2A17A79200748023 /* KeyValueStorageLoadTests.swift */; };
 		36E97F172A2F42FD00030E3E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E97F162A2F42FD00030E3E /* LoginViewModel.swift */; };
 		9308D6132A31EFE40086193D /* CapsuleWithWhiteText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9308D6122A31EFE40086193D /* CapsuleWithWhiteText.swift */; };
+		9371BAC32A3F3334000980F9 /* UserRoleViewModelResetCurrentRoleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9371BAC22A3F3333000980F9 /* UserRoleViewModelResetCurrentRoleTests.swift */; };
+		9371BAC52A3F337B000980F9 /* UserRoleViewModelSetOwnerRoleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9371BAC42A3F337B000980F9 /* UserRoleViewModelSetOwnerRoleTests.swift */; };
+		9371BAC72A3F33B7000980F9 /* UserRoleViewModelSetSitterRoleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9371BAC62A3F33B7000980F9 /* UserRoleViewModelSetSitterRoleTests.swift */; };
 		93DDB06C2A3B30B100D7D97A /* PurpleCapsuleOfInfinityWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DDB06B2A3B30B100D7D97A /* PurpleCapsuleOfInfinityWidth.swift */; };
 		93DDB06E2A3B31E800D7D97A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DDB06D2A3B31E800D7D97A /* LoginView.swift */; };
 		9B2480392A3354D8000B66CD /* ClipboardTextTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2480382A3354D8000B66CD /* ClipboardTextTests.swift */; };
@@ -118,9 +121,9 @@
 		FDEE43CE2A2F4E56007DE0A9 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE43C82A2F45B8007DE0A9 /* Preferences.swift */; };
 		FDEE43CF2A2F4E58007DE0A9 /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE43CA2A2F4602007DE0A9 /* Role.swift */; };
 		FDEE43D12A2F525B007DE0A9 /* RoleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE43D02A2F525B007DE0A9 /* RoleTests.swift */; };
-		FDEE43E02A386291007DE0A9 /* StartScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE43DF2A386291007DE0A9 /* StartScreenViewModel.swift */; };
-		FDEE43E22A38884A007DE0A9 /* StartScreenViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE43E12A38884A007DE0A9 /* StartScreenViewModelTests.swift */; };
-		FDEE43E32A388854007DE0A9 /* StartScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE43DF2A386291007DE0A9 /* StartScreenViewModel.swift */; };
+		FDEE43E02A386291007DE0A9 /* UserRoleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE43DF2A386291007DE0A9 /* UserRoleViewModel.swift */; };
+		FDEE43E22A38884A007DE0A9 /* UserRoleViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE43E12A38884A007DE0A9 /* UserRoleViewModelTests.swift */; };
+		FDEE43E32A388854007DE0A9 /* UserRoleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEE43DF2A386291007DE0A9 /* UserRoleViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +152,9 @@
 		36C54AFB2A17A79200748023 /* KeyValueStorageLoadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStorageLoadTests.swift; sourceTree = "<group>"; };
 		36E97F162A2F42FD00030E3E /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		9308D6122A31EFE40086193D /* CapsuleWithWhiteText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleWithWhiteText.swift; sourceTree = "<group>"; };
+		9371BAC22A3F3333000980F9 /* UserRoleViewModelResetCurrentRoleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRoleViewModelResetCurrentRoleTests.swift; sourceTree = "<group>"; };
+		9371BAC42A3F337B000980F9 /* UserRoleViewModelSetOwnerRoleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRoleViewModelSetOwnerRoleTests.swift; sourceTree = "<group>"; };
+		9371BAC62A3F33B7000980F9 /* UserRoleViewModelSetSitterRoleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRoleViewModelSetSitterRoleTests.swift; sourceTree = "<group>"; };
 		93DDB06B2A3B30B100D7D97A /* PurpleCapsuleOfInfinityWidth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurpleCapsuleOfInfinityWidth.swift; sourceTree = "<group>"; };
 		93DDB06D2A3B31E800D7D97A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		9B2480382A3354D8000B66CD /* ClipboardTextTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardTextTests.swift; sourceTree = "<group>"; };
@@ -223,8 +229,8 @@
 		FDEE43CA2A2F4602007DE0A9 /* Role.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
 		FDEE43CC2A2F4E51007DE0A9 /* PreferencesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesTests.swift; sourceTree = "<group>"; };
 		FDEE43D02A2F525B007DE0A9 /* RoleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleTests.swift; sourceTree = "<group>"; };
-		FDEE43DF2A386291007DE0A9 /* StartScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewModel.swift; sourceTree = "<group>"; };
-		FDEE43E12A38884A007DE0A9 /* StartScreenViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewModelTests.swift; sourceTree = "<group>"; };
+		FDEE43DF2A386291007DE0A9 /* UserRoleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRoleViewModel.swift; sourceTree = "<group>"; };
+		FDEE43E12A38884A007DE0A9 /* UserRoleViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRoleViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,6 +299,17 @@
 				FD14A2A82A27804F00362461 /* KeyValueStorage+Key.swift */,
 			);
 			path = KeyValueStorage;
+			sourceTree = "<group>";
+		};
+		9371BAC12A3F323D000980F9 /* UserRoleViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				FDEE43E12A38884A007DE0A9 /* UserRoleViewModelTests.swift */,
+				9371BAC22A3F3333000980F9 /* UserRoleViewModelResetCurrentRoleTests.swift */,
+				9371BAC42A3F337B000980F9 /* UserRoleViewModelSetOwnerRoleTests.swift */,
+				9371BAC62A3F33B7000980F9 /* UserRoleViewModelSetSitterRoleTests.swift */,
+			);
+			path = UserRoleViewModelTests;
 			sourceTree = "<group>";
 		};
 		93B21C2D2A31EA1200610D82 /* ButtonStyle */ = {
@@ -531,11 +548,11 @@
 		FDCF49102A1CDA0A00CD3BBB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				9371BAC12A3F323D000980F9 /* UserRoleViewModelTests */,
 				EF95A04E2A38615E00E84ACD /* OwnerMainTabViewModelTests.swift */,
 				EF95A0522A38698900E84ACD /* SitterMainTabViewModelTests.swift */,
 				9B24803A2A33550A000B66CD /* DetailPetSitterViewModel */,
 				365D3F232A387D3200EC9B30 /* LoginViewModelTests */,
-				FDEE43E12A38884A007DE0A9 /* StartScreenViewModelTests.swift */,
 				FD14A2B82A2870A500362461 /* OwnerProfileViewModelTests */,
 			);
 			path = ViewModel;
@@ -628,8 +645,8 @@
 		FDE0CEBC2A02693A0023F784 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				FDEE43DF2A386291007DE0A9 /* UserRoleViewModel.swift */,
 				FD14A2A42A277FA400362461 /* OwnerProfileViewModel.swift */,
-				FDEE43DF2A386291007DE0A9 /* StartScreenViewModel.swift */,
 				EF95A04C2A385FCF00E84ACD /* SitterMainTabViewModel.swift */,
 				FD1FA3C22A0A682E000A3A91 /* SitterCardViewModel.swift */,
 				EF5A7F2E2A14504F00585616 /* DetailPetSitterViewModel.swift */,
@@ -870,11 +887,14 @@
 				FD02917A2A0E2C5000F88377 /* AppStyle+FontStyle.swift in Sources */,
 				FD14A2B12A286BB800362461 /* OwnerProfileViewModelTests.swift in Sources */,
 				FD0291772A0E2B0700F88377 /* AppStyle+FontStyleTests.swift in Sources */,
+				9371BAC72A3F33B7000980F9 /* UserRoleViewModelSetSitterRoleTests.swift in Sources */,
+				9371BAC32A3F3334000980F9 /* UserRoleViewModelResetCurrentRoleTests.swift in Sources */,
+				9371BAC52A3F337B000980F9 /* UserRoleViewModelSetOwnerRoleTests.swift in Sources */,
 				FD0291792A0E2B2300F88377 /* AppStyle+UIElementConstantTests.swift in Sources */,
 				EF95A0572A386FCE00E84ACD /* Sitter+Dummy.swift in Sources */,
 				FD14A2B52A286C5C00362461 /* KeyValueStorage+Key.swift in Sources */,
 				FD37A9942A0B6E960001BABB /* FullNameTests.swift in Sources */,
-				FDEE43E22A38884A007DE0A9 /* StartScreenViewModelTests.swift in Sources */,
+				FDEE43E22A38884A007DE0A9 /* UserRoleViewModelTests.swift in Sources */,
 				EF95A0502A38615E00E84ACD /* OwnerMainTabViewModelTests.swift in Sources */,
 				36C06F5D2A2F5DDB00B8EBDF /* PreferencesHandler.swift in Sources */,
 				BA4561822A334D2D00C6E595 /* Stars.swift in Sources */,
@@ -906,7 +926,7 @@
 				FDEE43D12A2F525B007DE0A9 /* RoleTests.swift in Sources */,
 				FDEE43CF2A2F4E58007DE0A9 /* Role.swift in Sources */,
 				FD37A9982A0B77A90001BABB /* FiveStarRatingTests.swift in Sources */,
-				FDEE43E32A388854007DE0A9 /* StartScreenViewModel.swift in Sources */,
+				FDEE43E32A388854007DE0A9 /* UserRoleViewModel.swift in Sources */,
 				FD14A2B42A286C5200362461 /* KeyValueStorage+Name.swift in Sources */,
 				FDD143FF2A052D5E000BBA77 /* String+IconName.swift in Sources */,
 				1CE7E9C92A247CF1000A0509 /* KeyValueStorageInitTests.swift in Sources */,
@@ -928,7 +948,7 @@
 				FD1FA3B52A090916000A3A91 /* Sitter.swift in Sources */,
 				368BF0EC2A152FA500F3F750 /* KeyValueStorage.swift in Sources */,
 				FDD143E22A05233B000BBA77 /* String+IconName.swift in Sources */,
-				FDEE43E02A386291007DE0A9 /* StartScreenViewModel.swift in Sources */,
+				FDEE43E02A386291007DE0A9 /* UserRoleViewModel.swift in Sources */,
 				FD6A2E5D2A2EF69500934C3E /* SitterMainTabView.swift in Sources */,
 				FDD143C72A03BD48000BBA77 /* OwnerMainTabView.swift in Sources */,
 				FDEE43C92A2F45B8007DE0A9 /* Preferences.swift in Sources */,
