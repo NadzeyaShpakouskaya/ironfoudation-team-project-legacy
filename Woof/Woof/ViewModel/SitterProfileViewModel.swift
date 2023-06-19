@@ -1,6 +1,7 @@
 import Foundation
 
-/// The view model for a pet sitter profile view that is responsible for preparing and providing data for it.
+/// The view model for a pet sitter profile view is responsible for receiving and processing user actions
+/// to change model data and passes back the updated model data.
 final class SitterProfileViewModel: ObservableObject {
     // MARK: - Internal interface
 
