@@ -13,9 +13,6 @@ final class SitterProfileViewModel: ObservableObject {
     /// The phone of the pet sitter.
     @Published var phone: String = ""
 
-    /// The URL of the pet sitter's avatar image.
-    @Published var avatarUrl: URL?
-
     /// The additional information about the pet sitter, like his experience with dogs, favourite places for walks,
     /// special skills, certificates, etc.
     @Published var bio: String = ""
@@ -32,7 +29,6 @@ final class SitterProfileViewModel: ObservableObject {
         name = currentSitter.name
         surname = currentSitter.surname
         phone = currentSitter.phone
-        avatarUrl = currentSitter.avatarUrl
         bio = currentSitter.bio
         pricePerHour = currentSitter.pricePerHour
     }
@@ -42,7 +38,6 @@ final class SitterProfileViewModel: ObservableObject {
         currentSitter.name = name
         currentSitter.surname = surname
         currentSitter.phone = phone
-        currentSitter.avatarUrl = avatarUrl
         currentSitter.bio = bio
         currentSitter.pricePerHour = pricePerHour
 
