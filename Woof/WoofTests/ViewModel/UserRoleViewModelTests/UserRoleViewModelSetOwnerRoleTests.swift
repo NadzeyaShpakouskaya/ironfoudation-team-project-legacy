@@ -2,7 +2,7 @@ import XCTest
 
 final class UserRoleManagerSetOwnerRoleTests: XCTestCase {
     private var userPreferencesStorage = KeyValueStorage.testPreferencesStorage
-    private var userRoleManager = UserRoleManager()
+    private var userRoleViewModel = UserRoleViewModel()
 
     override func setUp() {
         super.setUp()
@@ -10,30 +10,30 @@ final class UserRoleManagerSetOwnerRoleTests: XCTestCase {
     }
 
     func testMethodExistsInAPI() {
-        userRoleManager.setOwnerRole()
+        userRoleViewModel.setOwnerRole()
     }
 
     func testMethodSetsTheOwnerRole() {
         // Given
-        userRoleManager.resetCurrentRole()
+        userRoleViewModel.resetCurrentRole()
 
         // When
-        userRoleManager.setOwnerRole()
+        userRoleViewModel.setOwnerRole()
 
         // Then
-        XCTAssertEqual(userRoleManager.userRole, .owner)
+        XCTAssertEqual(userRoleViewModel.userRole, .owner)
         XCTAssertEqual(PreferencesHandler.getUserRole(), .owner)
     }
 
     func testMethodOverridesTheSetSitterRole() {
         // Given
-        userRoleManager.setSitterRole()
+        userRoleViewModel.setSitterRole()
 
         // When
-        userRoleManager.setOwnerRole()
+        userRoleViewModel.setOwnerRole()
 
         // Then
-        XCTAssertEqual(userRoleManager.userRole, .owner)
+        XCTAssertEqual(userRoleViewModel.userRole, .owner)
         XCTAssertEqual(PreferencesHandler.getUserRole(), .owner)
     }
 }

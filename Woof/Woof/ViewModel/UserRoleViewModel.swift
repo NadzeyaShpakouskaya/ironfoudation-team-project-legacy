@@ -1,7 +1,7 @@
 import Foundation
 
 /// Responsible for managing and actual state of the current user role in the application.
-final class UserRoleManager: ObservableObject {
+final class UserRoleViewModel: ObservableObject {
     /// The current user role that defines the app flow.
     var userRole: Role {
         didSet {

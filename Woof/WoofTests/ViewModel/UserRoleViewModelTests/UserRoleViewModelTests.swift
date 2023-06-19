@@ -1,11 +1,11 @@
 import XCTest
 
-final class UserRoleManagerTests: XCTestCase {
+final class UserRoleViewModelTests: XCTestCase {
     func testUserRoleManagerExistInAPI() {
-        _ = UserRoleManager()
+        _ = UserRoleViewModel()
     }
 
     func testUserRoleCanBeCalledInUserRoleManager() {
-        _ = UserRoleManager().userRole
+        _ = UserRoleViewModel().userRole
     }
 }

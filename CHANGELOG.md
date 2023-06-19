@@ -28,7 +28,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 - Update the Authors section for the `README.md` file - [#139](https://github.com/ios-course/ironfoudation-team-project/pull/139)
 - Update the general issue template - [#149](https://github.com/ios-course/ironfoudation-team-project/pull/149)
-- Change the class name from `StartScreenViewModel` to `UserRoleManager`. Add methods to the `UserRoleManager` to set and reset user's role in the application - [#166](https://github.com/ios-course/ironfoudation-team-project/pull/166)
+- Change the class name from `StartScreenViewModel` to `UserRoleViewModel`. Add methods to the `UserRoleViewModel` to set and reset user's role in the application - [#166](https://github.com/ios-course/ironfoudation-team-project/pull/166)
 
 
 ## [0.2.0] - 05.06.2023

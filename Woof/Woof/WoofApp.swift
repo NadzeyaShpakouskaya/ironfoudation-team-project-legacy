@@ -6,18 +6,18 @@ struct WoofApp: App {
 
     var body: some Scene {
         WindowGroup {
-            switch userRoleManager.userRole {
+            switch userRoleViewModel.userRole {
             case .owner: OwnerMainTabView()
-                .environmentObject(userRoleManager)
+                .environmentObject(userRoleViewModel)
             case .sitter: SitterMainTabView()
-                .environmentObject(userRoleManager)
+                .environmentObject(userRoleViewModel)
             case .none: LoginView()
-                .environmentObject(userRoleManager)
+                .environmentObject(userRoleViewModel)
             }
         }
     }
 
     // MARK: - Private interface
 
-    @StateObject private var userRoleManager = UserRoleManager()
+    @StateObject private var userRoleViewModel = UserRoleViewModel()
 }
