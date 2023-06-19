@@ -22,7 +22,7 @@ final class SitterProfileViewModel: ObservableObject {
     @Published var pricePerHour: Double = 0
 
     /**
-     Initialises an instance of the `SitterProfileViewModel` class.
+     Initializes an instance of the `SitterProfileViewModel` class.
      */
     init() {
         currentSitter = getCurrentSitter()
@@ -51,7 +51,8 @@ final class SitterProfileViewModel: ObservableObject {
     /**
      Retrieves the current sitter from storage information that will be displayed in the view.
 
-        - Returns: The sitter instance from the storage if loading from the storage was successfully, otherwise new instance of `Sitter`.
+        - Returns: The sitter instance from the storage if loading from the storage was successfully,
+     otherwise new instance of `Sitter`.
      */
     func getCurrentSitter() -> Sitter {
         loadSitterFromStorage() ?? Sitter()
