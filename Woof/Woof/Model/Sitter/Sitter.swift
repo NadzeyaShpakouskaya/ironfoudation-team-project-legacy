@@ -32,6 +32,7 @@ struct Sitter: Codable, Identifiable {
 
     /**
      Creates a pet sitter instance with the specified parameters with the unique identifier.
+     Each instance of the new pet sitter has a unique id.
 
      - Parameters:
       - name: The first name of the pet sitter.
@@ -42,7 +43,6 @@ struct Sitter: Codable, Identifiable {
       - rating: The rating of the pet sitter.
       - pricePerHour: The price per hour charged by the pet sitter.
 
-     Each instance of the new pet sitter has a unique id.
      */
     init(
         name: String,
