@@ -8,6 +8,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added 
 
+- Add `SitterProfileViewModel` for `SitterProfileView` - [#164](https://github.com/ios-course/ironfoudation-team-project/pull/164)
+
+
 ## [0.3.0] - 19.06.2023
 
 ### Added
@@ -28,7 +31,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Create `PurpleCapsuleOfInfinityWidth` as `ButtonStyle`. Create `LoginView` and apply in the `WoofApp` to display when running the app when the user role is not selected - [#160](https://github.com/ios-course/ironfoudation-team-project/pull/160)
 - Add the `EditSitterInformationView` and the reusable element `TextEditorWithPlaceholder` - [#159](https://github.com/ios-course/ironfoudation-team-project/pull/159)
 - Add ability to change the user role using `Logout` button on the `SitterMainTabView` and `OwnerMainTabView` screens - [#167](https://github.com/ios-course/ironfoudation-team-project/pull/167)
-- Add `SitterProfileViewModel` for `SitterProfileView` - [#164](https://github.com/ios-course/ironfoudation-team-project/pull/164)
 
 ### Changed
 
