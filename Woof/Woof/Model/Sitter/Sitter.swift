@@ -66,7 +66,7 @@ struct Sitter: Codable, Identifiable {
     /**
      Creates a new pet sitter instance with the specified parameters described below.
 
-     The parameters of a new initialised instance are:
+     The parameters of a new initialized instance are:
      - `name` is hardcoded value `User`;
      - `avatarUrl` is nil;
      - `rating` is equal 0;
