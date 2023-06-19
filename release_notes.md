@@ -6,6 +6,7 @@ The file describes all the changes, that are affected the usage of the applicati
 
 The format is based on [Release_notes format](https://github.com/ios-course/ironfoudation-team-project/wiki/Release_notes-format).
 
+
 ## 0.3.0
 
 ### New features
@@ -15,6 +16,7 @@ The format is based on [Release_notes format](https://github.com/ios-course/iron
 `Logout`: The user are able to change the selected role (owner or sitter). The Logout button is displayed in the navigation bar.
 
 `Copy info`: Users are able to copy the name and the phone number of a pet sitter by a long tapping on the sitter's full name and phone information.
+
 
 ## 0.2.0
 
@@ -30,6 +32,7 @@ The format is based on [Release_notes format](https://github.com/ios-course/iron
 The current version allows the user to navigate through the app as a pet owner, see the static (stub) information about pet sitters, and see detailed information for the selected sitter.
 
 ### New features
+
 `List with compact information about sitters`: As a pet owner you can see a list of pet sitters. For every pet sitter, the following information is available: an avatar icon, full name, current rate, short bio, and rating.
 
 `Get detailed information about the pet sitter`: By tapping on the sitter row you can see detailed information about the selected pet sitter like full name, rating, phone number, and avatar.
