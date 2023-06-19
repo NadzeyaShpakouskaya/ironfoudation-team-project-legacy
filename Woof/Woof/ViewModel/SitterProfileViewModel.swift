@@ -50,8 +50,7 @@ final class SitterProfileViewModel: ObservableObject {
     /**
      Retrieves the current sitter from storage information that will be displayed in the view.
 
-        - Returns: The sitter instance from model layer or new instance of `Sitter`,
-     if loading from model layer is failed.
+        - Returns: The sitter instance from the storage if loading from the storage was successfully, otherwise new instance of `Sitter`.
      */
     func getCurrentSitter() -> Sitter {
         loadSitterFromStorage() ?? Sitter()
