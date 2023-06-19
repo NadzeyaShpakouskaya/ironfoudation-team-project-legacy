@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added 
 
+## [0.3.0] - 19.06.2023
+
+### Added
+
 - Add `enum Stars` and `enum StarRating` and use it into `FiveStarRatingView` and updated code that depends on these changes - [#127](https://github.com/ios-course/ironfoudation-team-project/pull/127)
 - Add `SitterMainTabView` for the sitter with stub view for tabs - [#108](https://github.com/ios-course/ironfoudation-team-project/pull/108)
 - Update storage keys and storage names to use with the `KeyValueStorage` - [#109](https://github.com/ios-course/ironfoudation-team-project/pull/109)
