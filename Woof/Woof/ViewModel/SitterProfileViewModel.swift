@@ -53,7 +53,7 @@ final class SitterProfileViewModel: ObservableObject {
     }
 
     /**
-     Returns the sitter information that will be displayed in view.
+     Retrieves the current sitter from storage information that will be displayed in the view.
 
         - Returns: The sitter instance from model layer or new instance of `Sitter`,
      if loading from model layer is failed.
