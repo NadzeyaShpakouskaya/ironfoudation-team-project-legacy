@@ -34,13 +34,13 @@ struct Sitter: Codable, Identifiable {
      Creates a pet sitter instance with the specified parameters with the unique identifier.
 
      - Parameters:
-     - name: The first name of the pet sitter.
-     - surname: The last name of the pet sitter.
-     - phone: The phone number of the pet sitter.
-     - avatarURL: The URL that provides an avatar image of the pet sitter.
-     - bio: The additional information about the pet sitter.
-     - rating: The rating of the pet sitter.
-     - pricePerHour: The price per hour charged by the pet sitter.
+      - name: The first name of the pet sitter.
+      - surname: The last name of the pet sitter.
+      - phone: The phone number of the pet sitter.
+      - avatarURL: The URL that provides an avatar image of the pet sitter.
+      - bio: The additional information about the pet sitter.
+      - rating: The rating of the pet sitter.
+      - pricePerHour: The price per hour charged by the pet sitter.
 
      Each instance of the new pet sitter has a unique id.
      */
