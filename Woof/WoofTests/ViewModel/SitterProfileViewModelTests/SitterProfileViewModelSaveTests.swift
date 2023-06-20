@@ -6,6 +6,7 @@ final class SitterProfileViewModelSaveTests: XCTestCase {
     }
 
     func testSaveMethodSuccessfullySavedChangedSitterProperties() {
+        // Given
         let viewModel = SitterProfileViewModel()
 
         let newName = Sitter.Test.johnSmith.name
@@ -19,8 +20,11 @@ final class SitterProfileViewModelSaveTests: XCTestCase {
         viewModel.phone = newPhone
         viewModel.bio = newBio
         viewModel.pricePerHour = String(newPricePerHour)
+
+        // When
         viewModel.save()
 
+        // Then
         guard let data = KeyValueStorage(KeyValueStorage.Name.currentSitter)
             .loadData(for: KeyValueStorage.Key.currentSitter) else {
             return
