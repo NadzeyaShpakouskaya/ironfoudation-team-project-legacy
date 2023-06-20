@@ -6,6 +6,7 @@ final class SitterProfileViewModelTests: XCTestCase {
     }
 
     func testSitterProfileViewModelInitializedWithLastSavedData() {
+        // Given
         let savingSitter = SitterProfileViewModel()
 
         let savedName = Sitter.Test.johnSmith.name
@@ -20,8 +21,10 @@ final class SitterProfileViewModelTests: XCTestCase {
         savingSitter.bio = savedBio
         savingSitter.pricePerHour = String(savedPricePerHour)
 
+        // When
         savingSitter.save()
 
+        // Then
         let newViewModel = SitterProfileViewModel()
 
         XCTAssertEqual(newViewModel.name, savedName)
