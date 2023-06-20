@@ -18,7 +18,7 @@ final class SitterProfileViewModelTests: XCTestCase {
         savingSitter.surname = savedSurname
         savingSitter.phone = savedPhone
         savingSitter.bio = savedBio
-        savingSitter.pricePerHour = savedPricePerHour
+        savingSitter.pricePerHour = String(savedPricePerHour)
 
         savingSitter.save()
 
@@ -28,6 +28,6 @@ final class SitterProfileViewModelTests: XCTestCase {
         XCTAssertEqual(newViewModel.surname, savedSurname)
         XCTAssertEqual(newViewModel.phone, savedPhone)
         XCTAssertEqual(newViewModel.bio, savedBio)
-        XCTAssertEqual(newViewModel.pricePerHour, savedPricePerHour)
+        XCTAssertEqual(newViewModel.pricePerHour, String(savedPricePerHour))
     }
 }
