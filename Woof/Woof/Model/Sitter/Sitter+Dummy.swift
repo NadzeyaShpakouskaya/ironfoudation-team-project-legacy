@@ -5,7 +5,6 @@ extension Sitter {
     enum Dummy {
         /// The instance of dummy sitter to use in preview of views.
         static let emilyDoe = Sitter(
-            id: UUID(),
             name: "Emily",
             surname: "Doe",
             phone: "1234567890",
@@ -24,7 +23,6 @@ extension Sitter {
         /// The instance of dummy sitter list to use in previews.
         static let sitters = [
             Sitter(
-                id: UUID(),
                 name: "Jane",
                 surname: "Smith",
                 phone: "0987654321",
@@ -34,7 +32,6 @@ extension Sitter {
                 pricePerHour: 20.0
             ),
             Sitter(
-                id: UUID(),
                 name: "John",
                 surname: "Alison",
                 phone: "1234567890",
@@ -44,7 +41,6 @@ extension Sitter {
                 pricePerHour: 15.0
             ),
             Sitter(
-                id: UUID(),
                 name: "Emily",
                 surname: "Doe",
                 phone: "9876543210",
@@ -54,7 +50,6 @@ extension Sitter {
                 pricePerHour: 25.0
             ),
             Sitter(
-                id: UUID(),
                 name: "Michael",
                 surname: "Brown",
                 phone: "0123456789",
@@ -64,7 +59,6 @@ extension Sitter {
                 pricePerHour: 18.0
             ),
             Sitter(
-                id: UUID(),
                 name: "Olivia",
                 surname: "Davis",
                 phone: "8765432109",
@@ -74,7 +68,6 @@ extension Sitter {
                 pricePerHour: 17.0
             ),
             Sitter(
-                id: UUID(),
                 name: "William",
                 surname: "Wilson",
                 phone: "5432109876",
@@ -86,7 +79,6 @@ extension Sitter {
                 pricePerHour: 19.0
             ),
             Sitter(
-                id: UUID(),
                 name: "Sophia",
                 surname: "Taylor",
                 phone: "9012345678",
@@ -95,7 +87,6 @@ extension Sitter {
                 rating: 3.8, pricePerHour: 22.0
             ),
             Sitter(
-                id: UUID(),
                 name: "James",
                 surname: "Anderson",
                 phone: "6789012345",
@@ -108,7 +99,6 @@ extension Sitter {
                 pricePerHour: 21.0
             ),
             Sitter(
-                id: UUID(),
                 name: "Ava",
                 surname: "Moore",
                 phone: "4567890123",
