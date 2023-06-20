@@ -74,7 +74,6 @@ struct Sitter: Codable, Identifiable {
 
      Each instance of the new pet sitter has a unique id.
      */
-
     init() {
         self.init(
             name: "User",
