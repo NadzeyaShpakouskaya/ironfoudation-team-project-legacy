@@ -25,20 +25,12 @@ final class SitterProfileViewModelSaveTests: XCTestCase {
         viewModel.save()
 
         // Then
-        guard let data = KeyValueStorage(KeyValueStorage.Name.currentSitter)
-            .loadData(for: KeyValueStorage.Key.currentSitter) else {
-            XCTFail("Unexpected storage error")
-            return
-        }
-        guard let currentSitter = try? JSONDecoder().decode(Sitter.self, from: data) else {
-            XCTFail("Unexpected decoding error")
-            return
-        }
+        let currentSitter = SitterProfileViewModel()
 
         XCTAssertEqual(currentSitter.name, newName)
         XCTAssertEqual(currentSitter.surname, newSurname)
         XCTAssertEqual(currentSitter.phone, newPhone)
         XCTAssertEqual(currentSitter.bio, newBio)
-        XCTAssertEqual(currentSitter.pricePerHour, newPricePerHour)
+        XCTAssertEqual(currentSitter.pricePerHour, String(newPricePerHour))
     }
 }
