@@ -42,7 +42,6 @@ struct Sitter: Codable, Identifiable {
       - bio: The additional information about the pet sitter.
       - rating: The rating of the pet sitter.
       - pricePerHour: The price per hour charged by the pet sitter.
-
      */
     init(
         name: String,
