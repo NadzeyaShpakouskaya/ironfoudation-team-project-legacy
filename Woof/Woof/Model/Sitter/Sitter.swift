@@ -64,6 +64,7 @@ struct Sitter: Codable, Identifiable {
 
     /**
      Creates a new pet sitter instance with the specified parameters described below.
+     Each instance of the new pet sitter has a unique id.
 
      The parameters of a new initialized instance are:
      - `name` is hardcoded value `User`;
@@ -71,8 +72,6 @@ struct Sitter: Codable, Identifiable {
      - `rating` is equal 0;
      - `pricePerHour`is equal 0;
      - other parameters are specified with the empty string ("").
-
-     Each instance of the new pet sitter has a unique id.
      */
     init() {
         self.init(
