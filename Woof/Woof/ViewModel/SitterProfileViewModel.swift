@@ -40,7 +40,9 @@ final class SitterProfileViewModel: ObservableObject {
         currentSitter.surname = surname
         currentSitter.phone = phone
         currentSitter.bio = bio
-        currentSitter.pricePerHour = Double(pricePerHour) ?? 0
+        if let newPricePerHour = Double(pricePerHour) {
+            currentSitter.pricePerHour = newPricePerHour
+        }
 
         guard let data = try? JSONEncoder().encode(currentSitter) else { return }
 
