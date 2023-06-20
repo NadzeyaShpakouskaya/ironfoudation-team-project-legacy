@@ -5,7 +5,7 @@ final class SitterProfileViewModelSaveTests: XCTestCase {
         SitterProfileViewModel().save()
     }
 
-    func testSaveMethodSuccessfullySavedModifiedSitterProperties() {
+    func testSaveMethodSuccessfullySavedChangedSitterProperties() {
         let viewModel = SitterProfileViewModel()
 
         let newName = Sitter.Test.johnSmith.name
