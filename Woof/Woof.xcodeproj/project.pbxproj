@@ -113,6 +113,9 @@
 		FDD144012A0532D5000BBA77 /* String+IconNameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD144002A0532D5000BBA77 /* String+IconNameTests.swift */; };
 		FDD538582A41D6C900331977 /* WoofProductionEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD538572A41D6C900331977 /* WoofProductionEndpoint.swift */; };
 		FDD5385A2A41DE0700331977 /* WoofProductionEndpoint+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD538592A41DE0700331977 /* WoofProductionEndpoint+Request.swift */; };
+		FDD5385D2A41FADF00331977 /* WoofProductionEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD5385C2A41FADF00331977 /* WoofProductionEndpointTests.swift */; };
+		FDD5385E2A41FAE500331977 /* WoofProductionEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD538572A41D6C900331977 /* WoofProductionEndpoint.swift */; };
+		FDD5385F2A41FAE800331977 /* WoofProductionEndpoint+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD538592A41DE0700331977 /* WoofProductionEndpoint+Request.swift */; };
 		FDDDA6882A25C3FE00839091 /* EditOwnerInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDDA6872A25C3FE00839091 /* EditOwnerInformationView.swift */; };
 		FDE0CEA92A00F8370023F784 /* WoofApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE0CEA82A00F8370023F784 /* WoofApp.swift */; };
 		FDE0CEAD2A00F8390023F784 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDE0CEAC2A00F8390023F784 /* Assets.xcassets */; };
@@ -224,6 +227,7 @@
 		FDD144002A0532D5000BBA77 /* String+IconNameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+IconNameTests.swift"; sourceTree = "<group>"; };
 		FDD538572A41D6C900331977 /* WoofProductionEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoofProductionEndpoint.swift; sourceTree = "<group>"; };
 		FDD538592A41DE0700331977 /* WoofProductionEndpoint+Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WoofProductionEndpoint+Request.swift"; sourceTree = "<group>"; };
+		FDD5385C2A41FADF00331977 /* WoofProductionEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoofProductionEndpointTests.swift; sourceTree = "<group>"; };
 		FDDDA6872A25C3FE00839091 /* EditOwnerInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditOwnerInformationView.swift; sourceTree = "<group>"; };
 		FDE0CEA52A00F8370023F784 /* Woof.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Woof.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDE0CEA82A00F8370023F784 /* WoofApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoofApp.swift; sourceTree = "<group>"; };
@@ -565,6 +569,7 @@
 		FDD143F52A052A11000BBA77 /* WoofTests */ = {
 			isa = PBXGroup;
 			children = (
+				FDD5385B2A41FAAF00331977 /* NetworkLayer */,
 				FDCF49102A1CDA0A00CD3BBB /* ViewModel */,
 				36BEA7592A1621B70020F6AE /* Model */,
 				FD1FA3CD2A0A7DDB000A3A91 /* Helper */,
@@ -577,6 +582,14 @@
 			children = (
 				FDD538572A41D6C900331977 /* WoofProductionEndpoint.swift */,
 				FDD538592A41DE0700331977 /* WoofProductionEndpoint+Request.swift */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		FDD5385B2A41FAAF00331977 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				FDD5385C2A41FADF00331977 /* WoofProductionEndpointTests.swift */,
 			);
 			path = NetworkLayer;
 			sourceTree = "<group>";
@@ -915,6 +928,7 @@
 				365D3F292A3888B100EC9B30 /* LoginViewModelSetUserRoleTests.swift in Sources */,
 				BA44C2FE2A31FA2D00193927 /* StarRating.swift in Sources */,
 				EF95A0542A38698900E84ACD /* SitterMainTabViewModelTests.swift in Sources */,
+				FDD5385F2A41FAE800331977 /* WoofProductionEndpoint+Request.swift in Sources */,
 				FDCF49142A1CDB1600CD3BBB /* DetailPetSitterViewModel.swift in Sources */,
 				EF95A05B2A39B74100E84ACD /* DetailPetSitterViewModelTests.swift in Sources */,
 				FDEE43CD2A2F4E51007DE0A9 /* PreferencesTests.swift in Sources */,
@@ -937,11 +951,13 @@
 				FDD144012A0532D5000BBA77 /* String+IconNameTests.swift in Sources */,
 				FD02917B2A0E2C5300F88377 /* AppStyle+UIElementConstant.swift in Sources */,
 				FDEE43CE2A2F4E56007DE0A9 /* Preferences.swift in Sources */,
+				FDD5385D2A41FADF00331977 /* WoofProductionEndpointTests.swift in Sources */,
 				FDEE43D12A2F525B007DE0A9 /* RoleTests.swift in Sources */,
 				FDEE43CF2A2F4E58007DE0A9 /* Role.swift in Sources */,
 				FD37A9982A0B77A90001BABB /* FiveStarRatingTests.swift in Sources */,
 				FDEE43E32A388854007DE0A9 /* UserRoleViewModel.swift in Sources */,
 				FD14A2B42A286C5200362461 /* KeyValueStorage+Name.swift in Sources */,
+				FDD5385E2A41FAE500331977 /* WoofProductionEndpoint.swift in Sources */,
 				FDD143FF2A052D5E000BBA77 /* String+IconName.swift in Sources */,
 				1CE7E9C92A247CF1000A0509 /* KeyValueStorageInitTests.swift in Sources */,
 				36199B0F2A1FB1C900725FC8 /* KeyValueStorage+TestKey.swift in Sources */,
