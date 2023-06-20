@@ -19,19 +19,19 @@ final class SitterProfileViewModel: ObservableObject {
     @Published var bio: String = ""
 
     /// The price per hour for walking charged by the pet sitter.
-    @Published var pricePerHour: Double = 0
+    @Published var pricePerHour: String = ""
 
     /**
      Initializes an instance of the `SitterProfileViewModel` class.
      */
     init() {
-        currentSitter = getCurrentSitter()
+        currentSitter = loadSitterFromStorage()
 
         name = currentSitter.name
         surname = currentSitter.surname
         phone = currentSitter.phone
         bio = currentSitter.bio
-        pricePerHour = currentSitter.pricePerHour
+        pricePerHour = String(currentSitter.pricePerHour)
     }
 
     /// Requests model layer to save modified data.
@@ -40,7 +40,7 @@ final class SitterProfileViewModel: ObservableObject {
         currentSitter.surname = surname
         currentSitter.phone = phone
         currentSitter.bio = bio
-        currentSitter.pricePerHour = pricePerHour
+        currentSitter.pricePerHour = Double(pricePerHour) ?? 0
 
         guard let data = try? JSONEncoder().encode(currentSitter) else { return }
 
@@ -48,27 +48,17 @@ final class SitterProfileViewModel: ObservableObject {
             .save(data, for: KeyValueStorage.Key.currentSitter)
     }
 
-    /**
-     Retrieves the current sitter from storage information that will be displayed in the view.
-
-        - Returns: The sitter instance from the storage if loading from the storage was successfully,
-     otherwise new instance of `Sitter`.
-     */
-    func getCurrentSitter() -> Sitter {
-        loadSitterFromStorage() ?? Sitter()
-    }
-
     // MARK: - Private interface
 
-    private lazy var currentSitter: Sitter = getCurrentSitter()
+    private lazy var currentSitter: Sitter = loadSitterFromStorage()
 
-    private func loadSitterFromStorage() -> Sitter? {
+    private func loadSitterFromStorage() -> Sitter {
         guard let data = KeyValueStorage(KeyValueStorage.Name.currentSitter)
             .loadData(for: KeyValueStorage.Key.currentSitter) else {
-            return nil
+            return Sitter()
         }
         guard let sitter = try? JSONDecoder().decode(Sitter.self, from: data) else {
-            return nil
+            return Sitter()
         }
 
         return sitter
