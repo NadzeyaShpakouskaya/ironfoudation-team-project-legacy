@@ -18,16 +18,21 @@ final class SitterProfileViewModelSaveTests: XCTestCase {
         viewModel.surname = newSurname
         viewModel.phone = newPhone
         viewModel.bio = newBio
-        viewModel.pricePerHour = newPricePerHour
-
+        viewModel.pricePerHour = String(newPricePerHour)
         viewModel.save()
 
-        let loadedSitter = viewModel.getCurrentSitter()
+        guard let data = KeyValueStorage(KeyValueStorage.Name.currentSitter)
+            .loadData(for: KeyValueStorage.Key.currentSitter) else {
+            return
+        }
+        guard let currentSitter = try? JSONDecoder().decode(Sitter.self, from: data) else {
+            return
+        }
 
-        XCTAssertEqual(loadedSitter.name, newName)
-        XCTAssertEqual(loadedSitter.surname, newSurname)
-        XCTAssertEqual(loadedSitter.phone, newPhone)
-        XCTAssertEqual(loadedSitter.bio, newBio)
-        XCTAssertEqual(loadedSitter.pricePerHour, newPricePerHour)
+        XCTAssertEqual(currentSitter.name, newName)
+        XCTAssertEqual(currentSitter.surname, newSurname)
+        XCTAssertEqual(currentSitter.phone, newPhone)
+        XCTAssertEqual(currentSitter.bio, newBio)
+        XCTAssertEqual(currentSitter.pricePerHour, newPricePerHour)
     }
 }
