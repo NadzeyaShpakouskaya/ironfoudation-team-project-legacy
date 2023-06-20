@@ -5,7 +5,7 @@ final class SitterProfileViewModelTests: XCTestCase {
         _ = SitterProfileViewModel()
     }
 
-    func testSitterProfileViewModelInitializedWithPreviouslySavedData() {
+    func testSitterProfileViewModelInitializedWithLastSavedData() {
         let savingSitter = SitterProfileViewModel()
 
         let savedName = Sitter.Test.johnSmith.name
