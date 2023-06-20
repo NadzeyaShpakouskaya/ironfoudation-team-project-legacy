@@ -46,7 +46,6 @@
 		EF4CBAF02A3C704300B4A223 /* Sitter+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4CBAEE2A3C704300B4A223 /* Sitter+Tests.swift */; };
 		EF4CBAF32A3C708E00B4A223 /* SitterProfileViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4CBAF12A3C708E00B4A223 /* SitterProfileViewModelTests.swift */; };
 		EF4CBAF62A3C712C00B4A223 /* SitterProfileViewModelSaveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4CBAF42A3C712C00B4A223 /* SitterProfileViewModelSaveTests.swift */; };
-		EF4CBAF92A3C722900B4A223 /* SitterProfileViewModelGetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4CBAF72A3C722900B4A223 /* SitterProfileViewModelGetTests.swift */; };
 		EF4CBAFA2A3C94F000B4A223 /* Sitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD143CC2A03E575000BBA77 /* Sitter.swift */; };
 		EF5A7F2F2A14504F00585616 /* DetailPetSitterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5A7F2E2A14504F00585616 /* DetailPetSitterViewModel.swift */; };
 		EF5A7F332A14563800585616 /* DetailedPetSitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5A7F322A14563800585616 /* DetailedPetSitterView.swift */; };
@@ -176,7 +175,6 @@
 		EF4CBAEE2A3C704300B4A223 /* Sitter+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sitter+Tests.swift"; sourceTree = "<group>"; };
 		EF4CBAF12A3C708E00B4A223 /* SitterProfileViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitterProfileViewModelTests.swift; sourceTree = "<group>"; };
 		EF4CBAF42A3C712C00B4A223 /* SitterProfileViewModelSaveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitterProfileViewModelSaveTests.swift; sourceTree = "<group>"; };
-		EF4CBAF72A3C722900B4A223 /* SitterProfileViewModelGetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitterProfileViewModelGetTests.swift; sourceTree = "<group>"; };
 		EF5A7F2E2A14504F00585616 /* DetailPetSitterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPetSitterViewModel.swift; sourceTree = "<group>"; };
 		EF5A7F322A14563800585616 /* DetailedPetSitterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedPetSitterView.swift; sourceTree = "<group>"; };
 		EF7B7EFF2A147D8300F00B4E /* TextWithIconLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextWithIconLabelView.swift; sourceTree = "<group>"; };
@@ -378,7 +376,6 @@
 				EF4CBAEE2A3C704300B4A223 /* Sitter+Tests.swift */,
 				EF4CBAF12A3C708E00B4A223 /* SitterProfileViewModelTests.swift */,
 				EF4CBAF42A3C712C00B4A223 /* SitterProfileViewModelSaveTests.swift */,
-				EF4CBAF72A3C722900B4A223 /* SitterProfileViewModelGetTests.swift */,
 			);
 			path = SitterProfileViewModelTests;
 			sourceTree = "<group>";
@@ -670,7 +667,6 @@
 			isa = PBXGroup;
 			children = (
 				FDEE43DF2A386291007DE0A9 /* UserRoleViewModel.swift */,
-				EF95A0492A385FA600E84ACD /* OwnerMainTabViewModel.swift */,
 				EF95A04C2A385FCF00E84ACD /* SitterMainTabViewModel.swift */,
 				FD14A2A42A277FA400362461 /* OwnerProfileViewModel.swift */,
 				FD1FA3C22A0A682E000A3A91 /* SitterCardViewModel.swift */,
@@ -960,7 +956,6 @@
 				1CE7E9C92A247CF1000A0509 /* KeyValueStorageInitTests.swift in Sources */,
 				36199B0F2A1FB1C900725FC8 /* KeyValueStorage+TestKey.swift in Sources */,
 				368BF0EF2A16103B00F3F750 /* KeyValueStorage.swift in Sources */,
-				EF4CBAF92A3C722900B4A223 /* SitterProfileViewModelGetTests.swift in Sources */,
 				EF4CBAF32A3C708E00B4A223 /* SitterProfileViewModelTests.swift in Sources */,
 				9B2480392A3354D8000B66CD /* ClipboardTextTests.swift in Sources */,
 				FD37A9952A0B6EA90001BABB /* DataTransformer.swift in Sources */,
