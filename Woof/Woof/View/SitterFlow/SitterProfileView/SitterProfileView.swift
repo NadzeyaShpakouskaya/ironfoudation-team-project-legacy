@@ -2,10 +2,10 @@ import SwiftUI
 
 struct SitterProfileView: View {
     // MARK: - Private interface
-    
+
     /// View model responsible to manage data from model layer.
     @ObservedObject var viewModel = SitterProfileViewModel()
-    
+
     var body: some View {
         VStack {
             if isEditingMode {
@@ -17,15 +17,15 @@ struct SitterProfileView: View {
                         bio: $viewModel.bio,
                         pricePerHour: $viewModel.pricePerHour
                     )
-                    
+
                     HStack {
                         Button("Save") {
                             viewModel.save()
                             isEditingMode.toggle()
                         }
-                        
+
                         Spacer()
-                        
+
                         Button("Cancel") {
                             isEditingMode.toggle()
                         }
@@ -44,7 +44,7 @@ struct SitterProfileView: View {
                         bio: viewModel.bio,
                         ratePerHour: viewModel.pricePerHour
                     )
-                    
+
                     Button("Edit") {
                         isEditingMode.toggle()
                     }
@@ -58,8 +58,9 @@ struct SitterProfileView: View {
             Spacer()
         }
     }
+
     // MARK: - Private interface
-    
+
     /// Sitter information editing status.
     @State private var isEditingMode = false
 }

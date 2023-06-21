@@ -78,6 +78,16 @@ struct SitterInfoCardView: View {
 
 struct SitterInfoCardView_Previews: PreviewProvider {
     static var previews: some View {
-        SitterCardView()
+        let viewModel = SitterProfileViewModel()
+
+        SitterInfoCardView(
+            name: viewModel.name,
+            surname: viewModel.surname,
+            phone: viewModel.phone,
+            bio: viewModel.bio,
+            ratePerHour: viewModel.pricePerHour
+        )
+        .previewDevice(PreviewDevice(rawValue: "iPhone 14 Pro"))
+        .previewDisplayName("iPhone 14 Pro")
     }
 }
