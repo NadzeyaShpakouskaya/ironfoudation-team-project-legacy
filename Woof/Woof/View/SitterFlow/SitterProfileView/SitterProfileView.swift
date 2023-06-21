@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct SitterProfileView: View {
-    // MARK: - Private interface
+    // MARK: - Internal interface
 
     /// View model responsible to manage data from model layer.
     @ObservedObject var viewModel = SitterProfileViewModel()
@@ -61,7 +61,6 @@ struct SitterProfileView: View {
 
     // MARK: - Private interface
 
-    /// Sitter information editing status.
     @State private var isEditingMode = false
 }
 
