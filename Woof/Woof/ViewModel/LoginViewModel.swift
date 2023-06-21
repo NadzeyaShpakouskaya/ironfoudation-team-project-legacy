@@ -5,10 +5,18 @@ final class LoginViewModel: ObservableObject {
     // MARK: - Internal interface
 
     /// Indicates whether the owner role is selected.
-    @Published var isTheOwnerRoleSelected = false
+    @Published var isTheOwnerRoleSelected = false {
+        didSet {
+            saveNewOwner()
+        }
+    }
 
     /// Indicates whether the sitter role is selected.
-    @Published var isTheSitterRoleSelected = false
+    @Published var isTheSitterRoleSelected = false {
+        didSet {
+            saveNewSitter()
+        }
+    }
 
     // MARK: - Private interface
 
