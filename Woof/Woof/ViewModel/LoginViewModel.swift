@@ -11,7 +11,7 @@ final class LoginViewModel: ObservableObject {
     /// The property publishes updates when the value is changed.
     @Published var isTheOwnerRoleSelected = false {
         didSet {
-            saveNewOwner()
+            createNewOwner()
         }
     }
 
@@ -22,16 +22,14 @@ final class LoginViewModel: ObservableObject {
     /// The property publishes updates when the value is changed.
     @Published var isTheSitterRoleSelected = false {
         didSet {
-            saveNewSitter()
+            createNewSitter()
         }
     }
 
     // MARK: - Private interface
 
-    private func saveNewOwner() {
-        let currentOwner = loadOwnerFromStorage()
-
-        guard currentOwner == nil else { return }
+    private func createNewOwner() {
+        guard !isTheCurrentOwnerExists else { return }
 
         let newOwner = Owner()
 
@@ -41,10 +39,8 @@ final class LoginViewModel: ObservableObject {
             .save(data, for: KeyValueStorage.Key.currentOwner)
     }
 
-    private func saveNewSitter() {
-        let currentSitter = loadSitterFromStorage()
-
-        guard currentSitter == nil else { return }
+    private func createNewSitter() {
+        guard !isTheCurrentOwnerExists else { return }
 
         let newSitter = Sitter()
 
@@ -54,27 +50,27 @@ final class LoginViewModel: ObservableObject {
             .save(data, for: KeyValueStorage.Key.currentSitter)
     }
 
-    private func loadOwnerFromStorage() -> Owner? {
+    private var isTheCurrentOwnerExists: Bool {
         guard let data = KeyValueStorage(KeyValueStorage.Name.currentOwner)
             .loadData(for: KeyValueStorage.Key.currentOwner) else {
-            return nil
+            return false
         }
         guard let owner = try? JSONDecoder().decode(Owner.self, from: data) else {
-            return nil
+            return false
         }
 
-        return owner
+        return true
     }
 
-    private func loadSitterFromStorage() -> Sitter? {
+    private var isTheCurrentSitterExists: Bool {
         guard let data = KeyValueStorage(KeyValueStorage.Name.currentSitter)
             .loadData(for: KeyValueStorage.Key.currentSitter) else {
-            return nil
+            return false
         }
         guard let sitter = try? JSONDecoder().decode(Sitter.self, from: data) else {
-            return nil
+            return false
         }
 
-        return sitter
+        return true
     }
 }
