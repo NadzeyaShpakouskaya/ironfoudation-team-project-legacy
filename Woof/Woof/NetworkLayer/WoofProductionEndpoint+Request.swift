@@ -2,7 +2,7 @@ import Foundation
 
 extension WoofProductionEndpoint {
     /// Defines different types of requests that can be made to the Woof API.
-    enum HTTPRequest {
+    enum Request {
         /// A request to get all sitters from the Woof API.
         case getAllSitters
 
@@ -14,17 +14,12 @@ extension WoofProductionEndpoint {
 
          - Returns: An `HTTPRequest` object representing the API request.
          */
-        var request: Request {
+        var request: HTTPRequest {
             switch self {
-            case .getAllSitters:
-                break
-            case .addNewSitter(_):
-                break
+            default: return HTTPRequest()
             }
-
-            return Request()
         }
     }
 }
 
-struct Request {}
+struct HTTPRequest {}

@@ -7,8 +7,8 @@ final class WoofProductionEndpointTests: XCTestCase {
         _ = WoofProductionEndpoint.authHeader
     }
 
-    func testWoofProductionEndpointHTTPRequestContainsRequestValueForAllCases() {
-        _ = WoofProductionEndpoint.HTTPRequest.getAllSitters.request
-        _ = WoofProductionEndpoint.HTTPRequest.addNewSitter(Data()).request
+    func testWoofProductionEndpointHTTPRequestContainsAllCases() {
+        _ = WoofProductionEndpoint.Request.getAllSitters
+        _ = WoofProductionEndpoint.Request.addNewSitter(Data())
     }
 }
