@@ -57,6 +57,7 @@ struct SitterProfileView: View {
             }
             Spacer()
         }
+        .padding(.horizontal)
     }
 
     // MARK: - Private interface
@@ -67,5 +68,15 @@ struct SitterProfileView: View {
 struct SitterProfileView_Previews: PreviewProvider {
     static var previews: some View {
         SitterProfileView()
+            .previewDevice(PreviewDevice(rawValue: "iPhone 14 Pro"))
+            .previewDisplayName("iPhone 14 Pro")
+
+        SitterProfileView()
+            .previewDevice(PreviewDevice(rawValue: "iPhone 14 Pro Max"))
+            .previewDisplayName("iPhone 14 Pro Max")
+
+        SitterProfileView()
+            .previewDevice(PreviewDevice(rawValue: "iPhone SE"))
+            .previewDisplayName("iPhone SE")
     }
 }
