@@ -107,7 +107,7 @@
 		FD7F98A52A0E12290058DBEB /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7F98A42A0E12290058DBEB /* AvatarView.swift */; };
 		FD8182302A20C3C300AE1016 /* KeyValueStorage+TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD81822F2A20C3C300AE1016 /* KeyValueStorage+TestData.swift */; };
 		FD907D432A42CF300020CFF0 /* SimpleNetworkService in Frameworks */ = {isa = PBXBuildFile; productRef = FD907D422A42CF300020CFF0 /* SimpleNetworkService */; };
-		FD907D452A42CFD40020CFF0 /* NetworkServiceStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD907D442A42CFD40020CFF0 /* NetworkServiceStub.swift */; };
+		FD907D492A4356180020CFF0 /* NetworkServiceIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD907D482A4356180020CFF0 /* NetworkServiceIntegrationTests.swift */; };
 		FD9802282A287670003DEE5C /* OwnerProfileViewModelGetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9802272A287670003DEE5C /* OwnerProfileViewModelGetTests.swift */; };
 		FD98022A2A2878C1003DEE5C /* Owner+Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9802292A2878C1003DEE5C /* Owner+Test.swift */; };
 		FDCF49142A1CDB1600CD3BBB /* DetailPetSitterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5A7F2E2A14504F00585616 /* DetailPetSitterViewModel.swift */; };
@@ -221,7 +221,7 @@
 		FD7F98A22A0E10510058DBEB /* AppStyle+UIElementConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppStyle+UIElementConstant.swift"; sourceTree = "<group>"; };
 		FD7F98A42A0E12290058DBEB /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		FD81822F2A20C3C300AE1016 /* KeyValueStorage+TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyValueStorage+TestData.swift"; sourceTree = "<group>"; };
-		FD907D442A42CFD40020CFF0 /* NetworkServiceStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceStub.swift; sourceTree = "<group>"; };
+		FD907D482A4356180020CFF0 /* NetworkServiceIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceIntegrationTests.swift; sourceTree = "<group>"; };
 		FD9802272A287670003DEE5C /* OwnerProfileViewModelGetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerProfileViewModelGetTests.swift; sourceTree = "<group>"; };
 		FD9802292A2878C1003DEE5C /* Owner+Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Owner+Test.swift"; sourceTree = "<group>"; };
 		FDCF49122A1CDA8800CD3BBB /* DetailPetSitterViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailPetSitterViewModelTests.swift; path = WoofTests/ViewModel/DetailPetSitterViewModel/DetailPetSitterViewModelTests.swift; sourceTree = SOURCE_ROOT; };
@@ -449,6 +449,7 @@
 			children = (
 				FD0291712A0E16DF00F88377 /* AppStyleTests */,
 				FD37A9962A0B76BA0001BABB /* DataTransformerTests */,
+				FD907D482A4356180020CFF0 /* NetworkServiceIntegrationTests.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -625,7 +626,6 @@
 			isa = PBXGroup;
 			children = (
 				FDE0CEA82A00F8370023F784 /* WoofApp.swift */,
-				FD907D442A42CFD40020CFF0 /* NetworkServiceStub.swift */,
 				FDE0CEBB2A0269280023F784 /* Model */,
 				FDE0CEBA2A02691D0023F784 /* View */,
 				FDE0CEBC2A02693A0023F784 /* ViewModel */,
@@ -934,6 +934,7 @@
 				BA4561822A334D2D00C6E595 /* Stars.swift in Sources */,
 				365D3F292A3888B100EC9B30 /* LoginViewModelSetUserRoleTests.swift in Sources */,
 				BA44C2FE2A31FA2D00193927 /* StarRating.swift in Sources */,
+				FD907D492A4356180020CFF0 /* NetworkServiceIntegrationTests.swift in Sources */,
 				EF95A0542A38698900E84ACD /* SitterMainTabViewModelTests.swift in Sources */,
 				FDCF49142A1CDB1600CD3BBB /* DetailPetSitterViewModel.swift in Sources */,
 				EF95A05B2A39B74100E84ACD /* DetailPetSitterViewModelTests.swift in Sources */,
@@ -1031,7 +1032,6 @@
 				EF7B7F002A147D8300F00B4E /* TextWithIconLabelView.swift in Sources */,
 				FD14A2A72A27803600362461 /* KeyValueStorage+Name.swift in Sources */,
 				EF5A7F2F2A14504F00585616 /* DetailPetSitterViewModel.swift in Sources */,
-				FD907D452A42CFD40020CFF0 /* NetworkServiceStub.swift in Sources */,
 				FD0291752A0E273500F88377 /* BioSectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
