@@ -750,6 +750,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				FD907D472A42FF870020CFF0 /* PBXTargetDependency */,
 			);
 			name = Woof;
 			packageProductDependencies = (
@@ -1038,6 +1039,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		FD907D472A42FF870020CFF0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = FD907D462A42FF870020CFF0 /* SimpleNetworkService */;
+		};
 		FDD143F92A052A11000BBA77 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FDE0CEA42A00F8370023F784 /* Woof */;
@@ -1319,6 +1324,11 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		FD907D422A42CF300020CFF0 /* SimpleNetworkService */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FD907D412A42CF300020CFF0 /* XCRemoteSwiftPackageReference "simple-network-service" */;
+			productName = SimpleNetworkService;
+		};
+		FD907D462A42FF870020CFF0 /* SimpleNetworkService */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FD907D412A42CF300020CFF0 /* XCRemoteSwiftPackageReference "simple-network-service" */;
 			productName = SimpleNetworkService;
