@@ -5,5 +5,11 @@ jobs:
   build-woof-target:
     runs-on: macos-13
     steps:
-      - uses: actions/checkout@v3
-      - run: ./scripts/build-ios-simulator.sh
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Set up swift
+        uses: swift-actions/setup-swift@v1
+        with:
+          swift-version: "5.8.0"
+      - name: Build iOS Simulator
+        run: ./scripts/build-ios-simulator.sh
