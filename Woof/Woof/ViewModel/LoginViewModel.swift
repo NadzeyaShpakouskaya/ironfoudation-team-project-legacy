@@ -5,6 +5,10 @@ final class LoginViewModel: ObservableObject {
     // MARK: - Internal interface
 
     /// Indicates whether the owner role is selected.
+    ///
+    /// Returns `true` if the owner role is selected, otherwise `false`.
+    ///
+    /// The property publishes updates when the value is changed.
     @Published var isTheOwnerRoleSelected = false {
         didSet {
             saveNewOwner()
@@ -12,6 +16,10 @@ final class LoginViewModel: ObservableObject {
     }
 
     /// Indicates whether the sitter role is selected.
+    ///
+    /// Returns `true` if the sitter role is selected, otherwise `false`.
+    ///
+    /// The property publishes updates when the value is changed.
     @Published var isTheSitterRoleSelected = false {
         didSet {
             saveNewSitter()
