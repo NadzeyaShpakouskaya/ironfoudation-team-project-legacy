@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### Added 
 
 - Add `SitterProfileViewModel` - [#164](https://github.com/ios-course/ironfoudation-team-project/pull/164)
+- Integrate `NetworkService` package into the `WoofApp` - [#188](https://github.com/ios-course/ironfoudation-team-project/pull/188)
 
 
 ## [0.3.0] - 19.06.2023
