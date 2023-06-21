@@ -1,11 +1,12 @@
 import Foundation
 
-/// The object that changes the state of the data in the model based on user actions in `LoginView`.
-final class LoginViewModel {
-    /// Sets the current's user role in the app.
-    ///
-    /// - Parameter userRole: The role to set.
-    func set(_ userRole: Role) {
-        PreferencesHandler.set(userRole: userRole)
-    }
+/// An interface is responsible for preparing and providing data for the `LoginView`.
+final class LoginViewModel: ObservableObject {
+    // MARK: - Internal interface
+    
+    /// Indicates whether the owner role is selected.
+    @Published var isTheOwnerRoleSelected = false
+    
+    /// Indicates whether the sitter role is selected.
+    @Published var isTheSitterRoleSelected = false
 }
