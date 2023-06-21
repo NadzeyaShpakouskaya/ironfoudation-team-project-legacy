@@ -9,8 +9,34 @@ final class LoginViewModel: ObservableObject {
 
     /// Indicates whether the sitter role is selected.
     @Published var isTheSitterRoleSelected = false
-    
+
     // MARK: - Private interface
+
+    private func saveNewOwner() {
+        let currentOwner = loadOwnerFromStorage()
+
+        guard currentOwner == nil else { return }
+
+        let newOwner = Owner()
+
+        guard let data = try? JSONEncoder().encode(newOwner) else { return }
+
+        KeyValueStorage(KeyValueStorage.Name.currentOwner)
+            .save(data, for: KeyValueStorage.Key.currentOwner)
+    }
+
+    private func saveNewSitter() {
+        let currentSitter = loadSitterFromStorage()
+
+        guard currentSitter == nil else { return }
+
+        let newSitter = Sitter()
+
+        guard let data = try? JSONEncoder().encode(newSitter) else { return }
+
+        KeyValueStorage(KeyValueStorage.Name.currentSitter)
+            .save(data, for: KeyValueStorage.Key.currentSitter)
+    }
 
     private func loadOwnerFromStorage() -> Owner? {
         guard let data = KeyValueStorage(KeyValueStorage.Name.currentOwner)
@@ -35,5 +61,4 @@ final class LoginViewModel: ObservableObject {
 
         return sitter
     }
-
 }
