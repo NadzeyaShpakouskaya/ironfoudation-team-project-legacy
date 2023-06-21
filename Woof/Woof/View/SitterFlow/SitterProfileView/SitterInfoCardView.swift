@@ -43,7 +43,7 @@ struct SitterInfoCardView: View {
                 Spacer()
 
                 VStack {
-                    Text(ratePerHour)
+                    Text(ratePerHour + defaultCurrency)
                     Text(perHourLabel)
                         .font(Font.system(size: AppStyle.FontStyle.footnote.size))
                 }
@@ -74,6 +74,7 @@ struct SitterInfoCardView: View {
     private let lineLimitForSurname = 1
     private let linelimitForPhoneNumber = 1
     private let linelimitForBio = 10
+    private let defaultCurrency = "$"
 }
 
 struct SitterInfoCardView_Previews: PreviewProvider {
