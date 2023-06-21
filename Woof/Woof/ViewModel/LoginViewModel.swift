@@ -33,7 +33,7 @@ final class LoginViewModel: ObservableObject {
             .loadData(for: KeyValueStorage.Key.currentOwner) else {
             return false
         }
-        guard let owner = try? JSONDecoder().decode(Owner.self, from: data) else {
+        guard (try? JSONDecoder().decode(Owner.self, from: data)) != nil else {
             return false
         }
 
@@ -45,13 +45,13 @@ final class LoginViewModel: ObservableObject {
             .loadData(for: KeyValueStorage.Key.currentSitter) else {
             return false
         }
-        guard let sitter = try? JSONDecoder().decode(Sitter.self, from: data) else {
+        guard (try? JSONDecoder().decode(Sitter.self, from: data)) != nil else {
             return false
         }
 
         return true
     }
-    
+
     private func createNewOwner() {
         guard !isTheCurrentOwnerExists else { return }
 
