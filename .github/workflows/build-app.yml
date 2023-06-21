@@ -3,13 +3,13 @@ run-name: build app from the ${{ github.head_ref }} branch
 on: pull_request
 jobs:
   build-woof-target:
-  runs-on: macos-13
-  steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
-    - name: Set up Xcode
-      uses: maxim-lobanov/setup-xcode@v1
-      with:
-        xcode-version: '14.3'
-    - name: Build iOS Simulator
-      run: ./scripts/build-ios-simulator.sh
+    runs-on: macos-13
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Set up Xcode
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: '14.3'
+      - name: Build iOS Simulator
+        run: ./scripts/build-ios-simulator.sh
