@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-APP_NAME=Woof
+APP_NAME="Woof"
 xcodebuild -project Woof/${APP_NAME}.xcodeproj \
            -scheme NetworkService
 xcodebuild -project Woof/${APP_NAME}.xcodeproj \
