@@ -1,5 +1,5 @@
 import SwiftUI
-// Test line
+
 @main
 struct WoofApp: App {
     // MARK: - Internal interface
