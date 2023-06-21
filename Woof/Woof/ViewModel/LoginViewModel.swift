@@ -28,28 +28,6 @@ final class LoginViewModel: ObservableObject {
 
     // MARK: - Private interface
 
-    private func createNewOwner() {
-        guard !isTheCurrentOwnerExists else { return }
-
-        let newOwner = Owner()
-
-        guard let data = try? JSONEncoder().encode(newOwner) else { return }
-
-        KeyValueStorage(KeyValueStorage.Name.currentOwner)
-            .save(data, for: KeyValueStorage.Key.currentOwner)
-    }
-
-    private func createNewSitter() {
-        guard !isTheCurrentOwnerExists else { return }
-
-        let newSitter = Sitter()
-
-        guard let data = try? JSONEncoder().encode(newSitter) else { return }
-
-        KeyValueStorage(KeyValueStorage.Name.currentSitter)
-            .save(data, for: KeyValueStorage.Key.currentSitter)
-    }
-
     private var isTheCurrentOwnerExists: Bool {
         guard let data = KeyValueStorage(KeyValueStorage.Name.currentOwner)
             .loadData(for: KeyValueStorage.Key.currentOwner) else {
@@ -72,5 +50,27 @@ final class LoginViewModel: ObservableObject {
         }
 
         return true
+    }
+    
+    private func createNewOwner() {
+        guard !isTheCurrentOwnerExists else { return }
+
+        let newOwner = Owner()
+
+        guard let data = try? JSONEncoder().encode(newOwner) else { return }
+
+        KeyValueStorage(KeyValueStorage.Name.currentOwner)
+            .save(data, for: KeyValueStorage.Key.currentOwner)
+    }
+
+    private func createNewSitter() {
+        guard !isTheCurrentOwnerExists else { return }
+
+        let newSitter = Sitter()
+
+        guard let data = try? JSONEncoder().encode(newSitter) else { return }
+
+        KeyValueStorage(KeyValueStorage.Name.currentSitter)
+            .save(data, for: KeyValueStorage.Key.currentSitter)
     }
 }
