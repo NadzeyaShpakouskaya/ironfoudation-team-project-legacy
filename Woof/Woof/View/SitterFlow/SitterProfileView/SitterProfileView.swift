@@ -1,5 +1,6 @@
 import SwiftUI
 
+/// View to display personal information about the sitter.
 struct SitterProfileView: View {
     // MARK: - Internal interface
 
@@ -19,15 +20,20 @@ struct SitterProfileView: View {
                     )
 
                     HStack {
-                        Button("Save") {
-                            viewModel.save()
-                            isEditingMode.toggle()
-                        }
+                        if isEditingMode {
+                            Button(cancelButtonLabelText) {
+                                cancelEditing()
+                                isEditingMode = false
+                            }
 
-                        Spacer()
+                            Spacer()
 
-                        Button("Cancel") {
-                            isEditingMode.toggle()
+                            Button(saveButtonLabelText) {
+                                viewModel.save()
+                                updateValues()
+                                isEditingMode = false
+                            }
+                            .disabled(viewModel.name.isEmpty)
                         }
                     }
                 }
@@ -35,6 +41,7 @@ struct SitterProfileView: View {
                 .buttonStyle(CapsuleWithWhiteText())
                 .background(Color.App.purpleLight)
                 .cornerRadius(AppStyle.UIElementConstant.cornerRadius)
+
             } else {
                 VStack {
                     SitterInfoCardView(
@@ -45,16 +52,16 @@ struct SitterProfileView: View {
                         ratePerHour: viewModel.pricePerHour
                     )
 
-                    Button("Edit") {
+                    Button(editButtonLabelText) {
                         isEditingMode.toggle()
                     }
-                    .disabled(viewModel.name.isEmpty)
                 }
                 .buttonStyle(CapsuleWithWhiteText())
                 .padding()
                 .background(Color.App.purpleLight)
                 .cornerRadius(AppStyle.UIElementConstant.cornerRadius)
             }
+
             Spacer()
         }
         .padding(.horizontal)
@@ -62,7 +69,27 @@ struct SitterProfileView: View {
 
     // MARK: - Private interface
 
+    private let cancelButtonLabelText = "Cancel"
+    private let saveButtonLabelText = "Save"
+    private let editButtonLabelText = "Edit"
     @State private var isEditingMode = false
+    @State private var viewModelCopy = SitterProfileViewModel()
+
+    private func cancelEditing() {
+        viewModel.name = viewModelCopy.name
+        viewModel.surname = viewModelCopy.surname
+        viewModel.phone = viewModelCopy.phone
+        viewModel.bio = viewModelCopy.bio
+        viewModel.pricePerHour = viewModelCopy.pricePerHour
+    }
+
+    private func updateValues() {
+        viewModelCopy.name = viewModel.name
+        viewModelCopy.surname = viewModel.surname
+        viewModelCopy.phone = viewModel.phone
+        viewModelCopy.bio = viewModel.bio
+        viewModelCopy.pricePerHour = viewModel.pricePerHour
+    }
 }
 
 struct SitterProfileView_Previews: PreviewProvider {
