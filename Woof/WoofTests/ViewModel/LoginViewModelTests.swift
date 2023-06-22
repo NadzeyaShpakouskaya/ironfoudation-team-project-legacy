@@ -22,7 +22,7 @@ final class LoginViewModelTests: XCTestCase {
         XCTAssertFalse(viewModel.isTheSitterRoleSelected)
     }
 
-    func testWhenIsTheOwnerRoleSelectedIsTrueTheNewOwnerIsCreatedIfTheCurrentOwnerDoesNotExist() {
+    func testWhenIsTheOwnerRoleSelectedSetToTrueTheNewOwnerIsCreatedIfTheCurrentOwnerDoesNotExist() {
         // Given
         let currentOwner = KeyValueStorage(KeyValueStorage.Name.currentOwner)
             .loadData(for: KeyValueStorage.Key.currentOwner)
@@ -38,7 +38,7 @@ final class LoginViewModelTests: XCTestCase {
         XCTAssertNotNil(newOwner)
     }
 
-    func testWhenIsTheOwnerRoleSelectedIsTrueNoNewOwnerIsCreatedIfTheCurrentOwnerAlreadyExist() {
+    func testWhenIsTheOwnerRoleSelectedSetToTrueNoNewOwnerIsCreatedIfTheCurrentOwnerAlreadyExist() {
         // Given
         viewModel.isTheOwnerRoleSelected = true
 
@@ -57,7 +57,7 @@ final class LoginViewModelTests: XCTestCase {
         XCTAssertEqual(currentOwner, newOwner)
     }
 
-    func testWhenIsTheSitterRoleSelectedIsTrueTheNewSitterIsCreatedIfTheCurrentSitterDoesNotExist() {
+    func testWhenIsTheSitterRoleSelectedSetToTrueTheNewSitterIsCreatedIfTheCurrentSitterDoesNotExist() {
         // Given
         let currentSitter = KeyValueStorage(KeyValueStorage.Name.currentSitter)
             .loadData(for: KeyValueStorage.Key.currentSitter)
@@ -73,7 +73,7 @@ final class LoginViewModelTests: XCTestCase {
         XCTAssertNotNil(newSitter)
     }
 
-    func testWhenIsTheSitterRoleSelectedIsTrueNoNewSitterIsCreatedIfTheCurrentSitterAlreadyExist() {
+    func testWhenIsTheSitterRoleSelectedSetToTrueNoNewSitterIsCreatedIfTheCurrentSitterAlreadyExist() {
         // Given
         viewModel.isTheSitterRoleSelected = true
 
