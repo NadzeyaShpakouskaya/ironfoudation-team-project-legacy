@@ -5,5 +5,9 @@ jobs:
   build-woof-target:
     runs-on: macos-13
     steps:
-      - uses: actions/checkout@v3
-      - run: ./scripts/build-ios-simulator.sh
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Setup environment
+        run: ./scripts/set-up-environment.sh
+      - name: Build iOS Simulator
+        run: ./scripts/build-ios-simulator.sh
