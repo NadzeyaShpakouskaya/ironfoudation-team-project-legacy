@@ -10,21 +10,21 @@ struct LoginView: View {
                 NavigationLink(
                     destination: OwnerMainTabView()
                         .navigationBarBackButtonHidden(true),
-                    isActive: $viewModel.isTheOwnerRoleSelected
+                    isActive: $viewModel.isOwnerRoleSelected
                 ) {
                     Button(ownerButtonText) {
                         userRoleViewModel.setOwnerRole()
-                        viewModel.isTheOwnerRoleSelected = true
+                        viewModel.isOwnerRoleSelected = true
                     }
                 }
                 NavigationLink(
                     destination: SitterMainTabView()
                         .navigationBarBackButtonHidden(true),
-                    isActive: $viewModel.isTheSitterRoleSelected
+                    isActive: $viewModel.isSitterRoleSelected
                 ) {
                     Button(sitterButtonText) {
                         userRoleViewModel.setSitterRole()
-                        viewModel.isTheSitterRoleSelected = true
+                        viewModel.isSitterRoleSelected = true
                     }
                 }
             }
