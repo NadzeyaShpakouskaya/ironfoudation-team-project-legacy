@@ -10,21 +10,21 @@ struct LoginView: View {
                 NavigationLink(
                     destination: OwnerMainTabView()
                         .navigationBarBackButtonHidden(true),
-                    isActive: $directToTheOwnerFlow
+                    isActive: $viewModel.isOwnerRoleSelected
                 ) {
                     Button(ownerButtonText) {
                         userRoleViewModel.setOwnerRole()
-                        directToTheOwnerFlow.toggle()
+                        viewModel.isOwnerRoleSelected = true
                     }
                 }
                 NavigationLink(
                     destination: SitterMainTabView()
                         .navigationBarBackButtonHidden(true),
-                    isActive: $directToTheSitterFlow
+                    isActive: $viewModel.isSitterRoleSelected
                 ) {
                     Button(sitterButtonText) {
                         userRoleViewModel.setSitterRole()
-                        directToTheSitterFlow.toggle()
+                        viewModel.isSitterRoleSelected = true
                     }
                 }
             }
@@ -37,8 +37,7 @@ struct LoginView: View {
 
     @EnvironmentObject private var userRoleViewModel: UserRoleViewModel
 
-    @State private var directToTheOwnerFlow = false
-    @State private var directToTheSitterFlow = false
+    @ObservedObject private var viewModel = LoginViewModel()
 
     private let ownerButtonText = "I am a pet owner"
     private let sitterButtonText = "I am a pet sitter"
