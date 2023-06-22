@@ -11,7 +11,9 @@ final class LoginViewModel: ObservableObject {
     /// The property publishes updates when the value is changed.
     @Published var isTheOwnerRoleSelected = false {
         didSet {
-            createNewOwner()
+            if !isTheCurrentOwnerExists {
+                createAndSaveNewOwner()
+            }
         }
     }
 
@@ -22,7 +24,9 @@ final class LoginViewModel: ObservableObject {
     /// The property publishes updates when the value is changed.
     @Published var isTheSitterRoleSelected = false {
         didSet {
-            createNewSitter()
+            if !isTheCurrentSitterExists {
+                createAndSaveNewSitter()
+            }
         }
     }
 
@@ -52,9 +56,7 @@ final class LoginViewModel: ObservableObject {
         return true
     }
 
-    private func createNewOwner() {
-        guard !isTheCurrentOwnerExists else { return }
-
+    private func createAndSaveNewOwner() {
         let newOwner = Owner()
 
         guard let data = try? JSONEncoder().encode(newOwner) else { return }
@@ -63,9 +65,7 @@ final class LoginViewModel: ObservableObject {
             .save(data, for: KeyValueStorage.Key.currentOwner)
     }
 
-    private func createNewSitter() {
-        guard !isTheCurrentOwnerExists else { return }
-
+    private func createAndSaveNewSitter() {
         let newSitter = Sitter()
 
         guard let data = try? JSONEncoder().encode(newSitter) else { return }

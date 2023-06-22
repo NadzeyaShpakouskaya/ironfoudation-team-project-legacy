@@ -14,7 +14,7 @@ struct LoginView: View {
                 ) {
                     Button(ownerButtonText) {
                         userRoleViewModel.setOwnerRole()
-                        viewModel.isTheOwnerRoleSelected.toggle()
+                        viewModel.isTheOwnerRoleSelected = true
                     }
                 }
                 NavigationLink(
@@ -24,7 +24,7 @@ struct LoginView: View {
                 ) {
                     Button(sitterButtonText) {
                         userRoleViewModel.setSitterRole()
-                        viewModel.isTheSitterRoleSelected.toggle()
+                        viewModel.isTheSitterRoleSelected = true
                     }
                 }
             }
