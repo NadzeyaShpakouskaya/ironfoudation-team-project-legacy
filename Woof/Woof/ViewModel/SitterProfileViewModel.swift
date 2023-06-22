@@ -52,7 +52,7 @@ final class SitterProfileViewModel: ObservableObject {
 
     // MARK: - Private interface
 
-    private lazy var currentSitter: Sitter = loadSitterFromStorage()
+    private(set) lazy var currentSitter: Sitter = loadSitterFromStorage()
 
     private func loadSitterFromStorage() -> Sitter {
         guard let data = KeyValueStorage(KeyValueStorage.Name.currentSitter)

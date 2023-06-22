@@ -30,7 +30,7 @@ struct SitterProfileView: View {
 
                             Button(saveButtonLabelText) {
                                 viewModel.save()
-                                updateValues()
+//                                updateValues()
                                 isEditingMode = false
                             }
                             .disabled(viewModel.name.isEmpty)
@@ -73,22 +73,13 @@ struct SitterProfileView: View {
     private let saveButtonLabelText = "Save"
     private let editButtonLabelText = "Edit"
     @State private var isEditingMode = false
-    @State private var viewModelCopy = SitterProfileViewModel()
 
     private func cancelEditing() {
-        viewModel.name = viewModelCopy.name
-        viewModel.surname = viewModelCopy.surname
-        viewModel.phone = viewModelCopy.phone
-        viewModel.bio = viewModelCopy.bio
-        viewModel.pricePerHour = viewModelCopy.pricePerHour
-    }
-
-    private func updateValues() {
-        viewModelCopy.name = viewModel.name
-        viewModelCopy.surname = viewModel.surname
-        viewModelCopy.phone = viewModel.phone
-        viewModelCopy.bio = viewModel.bio
-        viewModelCopy.pricePerHour = viewModel.pricePerHour
+        viewModel.name = viewModel.currentSitter.name
+        viewModel.surname = viewModel.currentSitter.surname
+        viewModel.phone = viewModel.currentSitter.phone
+        viewModel.bio = viewModel.currentSitter.bio
+        viewModel.pricePerHour = viewModel.currentSitter.pricePerHour.description
     }
 }
 
