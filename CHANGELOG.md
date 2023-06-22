@@ -12,6 +12,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Integrate `NetworkService` package into the `WoofApp` - [#188](https://github.com/ios-course/ironfoudation-team-project/pull/188)
 - Add the ability to create and save a new owner or sitter when choosing a role on the `LoginView` screen - [#192](https://github.com/ios-course/ironfoudation-team-project/pull/192)
 
+### Changed
+
+ - Update PR template [#194](https://github.com/ios-course/ironfoudation-team-project/pull/194)
+
 
 ## [0.3.0] - 19.06.2023
 
