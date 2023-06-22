@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "simple-network-service",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ios-course/simple-network-service.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "e7678dd6ef5129d6bcda3400f88e1216554ddd6a"
+      }
+    }
+  ],
+  "version" : 2
+}
