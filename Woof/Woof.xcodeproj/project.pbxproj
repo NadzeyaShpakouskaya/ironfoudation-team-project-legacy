@@ -561,12 +561,20 @@
 			path = TestData;
 			sourceTree = "<group>";
 		};
-		FD907D4A2A440D6B0020CFF0 /* PackageIntegration */ = {
+		FD907D4A2A440D6B0020CFF0 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				FD907D4B2A4456870020CFF0 /* NetworkService */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		FD907D4B2A4456870020CFF0 /* NetworkService */ = {
 			isa = PBXGroup;
 			children = (
 				FD907D482A4356180020CFF0 /* NetworkServiceIntegrationTests.swift */,
 			);
-			path = PackageIntegration;
+			path = NetworkService;
 			sourceTree = "<group>";
 		};
 		FDAA7BF52A0CB8E2007905CB /* DataTrasnformer */ = {
@@ -597,7 +605,7 @@
 				FDCF49102A1CDA0A00CD3BBB /* ViewModel */,
 				36BEA7592A1621B70020F6AE /* Model */,
 				FD1FA3CD2A0A7DDB000A3A91 /* Helper */,
-				FD907D4A2A440D6B0020CFF0 /* PackageIntegration */,
+				FD907D4A2A440D6B0020CFF0 /* ThirdParty */,
 			);
 			path = WoofTests;
 			sourceTree = "<group>";
