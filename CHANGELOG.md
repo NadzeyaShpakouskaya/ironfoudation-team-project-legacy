@@ -11,6 +11,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Add `SitterProfileViewModel` - [#164](https://github.com/ios-course/ironfoudation-team-project/pull/164)
 - Integrate `NetworkService` package into the `WoofApp` - [#188](https://github.com/ios-course/ironfoudation-team-project/pull/188)
 
+### Changed
+
+ - Update PR template [#194](https://github.com/ios-course/ironfoudation-team-project/pull/194)
+
 
 ## [0.3.0] - 19.06.2023
 
