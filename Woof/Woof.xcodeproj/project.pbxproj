@@ -449,7 +449,6 @@
 			children = (
 				FD0291712A0E16DF00F88377 /* AppStyleTests */,
 				FD37A9962A0B76BA0001BABB /* DataTransformerTests */,
-				FD907D482A4356180020CFF0 /* NetworkServiceIntegrationTests.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -562,6 +561,14 @@
 			path = TestData;
 			sourceTree = "<group>";
 		};
+		FD907D4A2A440D6B0020CFF0 /* PackageIntegration */ = {
+			isa = PBXGroup;
+			children = (
+				FD907D482A4356180020CFF0 /* NetworkServiceIntegrationTests.swift */,
+			);
+			path = PackageIntegration;
+			sourceTree = "<group>";
+		};
 		FDAA7BF52A0CB8E2007905CB /* DataTrasnformer */ = {
 			isa = PBXGroup;
 			children = (
@@ -590,6 +597,7 @@
 				FDCF49102A1CDA0A00CD3BBB /* ViewModel */,
 				36BEA7592A1621B70020F6AE /* Model */,
 				FD1FA3CD2A0A7DDB000A3A91 /* Helper */,
+				FD907D4A2A440D6B0020CFF0 /* PackageIntegration */,
 			);
 			path = WoofTests;
 			sourceTree = "<group>";
