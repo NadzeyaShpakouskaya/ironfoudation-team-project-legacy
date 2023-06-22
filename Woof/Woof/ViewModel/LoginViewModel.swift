@@ -11,8 +11,8 @@ final class LoginViewModel: ObservableObject {
     /// The property publishes updates when the value is changed.
     @Published var isTheOwnerRoleSelected = false {
         didSet {
-            if !isTheCurrentOwnerExists {
-                createAndSaveNewOwner()
+            if !isCurrentOwnerExists {
+                saveNewOwner()
             }
         }
     }
@@ -24,15 +24,15 @@ final class LoginViewModel: ObservableObject {
     /// The property publishes updates when the value is changed.
     @Published var isTheSitterRoleSelected = false {
         didSet {
-            if !isTheCurrentSitterExists {
-                createAndSaveNewSitter()
+            if !isCurrentSitterExists {
+                saveNewSitter()
             }
         }
     }
 
     // MARK: - Private interface
 
-    private var isTheCurrentOwnerExists: Bool {
+    private var isCurrentOwnerExists: Bool {
         guard let data = KeyValueStorage(KeyValueStorage.Name.currentOwner)
             .loadData(for: KeyValueStorage.Key.currentOwner) else {
             return false
@@ -44,7 +44,7 @@ final class LoginViewModel: ObservableObject {
         return true
     }
 
-    private var isTheCurrentSitterExists: Bool {
+    private var isCurrentSitterExists: Bool {
         guard let data = KeyValueStorage(KeyValueStorage.Name.currentSitter)
             .loadData(for: KeyValueStorage.Key.currentSitter) else {
             return false
@@ -56,7 +56,7 @@ final class LoginViewModel: ObservableObject {
         return true
     }
 
-    private func createAndSaveNewOwner() {
+    private func saveNewOwner() {
         let newOwner = Owner()
 
         guard let data = try? JSONEncoder().encode(newOwner) else { return }
@@ -65,7 +65,7 @@ final class LoginViewModel: ObservableObject {
             .save(data, for: KeyValueStorage.Key.currentOwner)
     }
 
-    private func createAndSaveNewSitter() {
+    private func saveNewSitter() {
         let newSitter = Sitter()
 
         guard let data = try? JSONEncoder().encode(newSitter) else { return }
