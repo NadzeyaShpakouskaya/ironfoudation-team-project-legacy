@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-      - name: Setup Xcode 14.3
-        run: sudo xcode-select --switch /Applications/Xcode_14.3.app
+      - name: Setup environment
+        run: ./scripts/set-up-environment.sh
       - name: Build iOS Simulator
         run: ./scripts/build-ios-simulator.sh
