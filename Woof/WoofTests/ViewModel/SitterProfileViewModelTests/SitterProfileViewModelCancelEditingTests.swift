@@ -9,28 +9,32 @@ final class SitterProfileViewModelCancelEditingTests: XCTestCase {
         // Given
         let viewModel = SitterProfileViewModel()
 
-        let newName = Sitter.Test.johnSmith.name
-        let newSurname = Sitter.Test.johnSmith.surname
-        let newPhone = Sitter.Test.johnSmith.phone
-        let newBio = Sitter.Test.johnSmith.bio
-        let newPricePerHour = Sitter.Test.johnSmith.pricePerHour
+        let originalName = viewModel.name
+        let originalSurname = viewModel.surname
+        let originalPhone = viewModel.phone
+        let originalBio = viewModel.bio
+        let originalPricePerHour = viewModel.pricePerHour
 
-        viewModel.name = newName
-        viewModel.surname = newSurname
-        viewModel.phone = newPhone
-        viewModel.bio = newBio
-        viewModel.pricePerHour = String(newPricePerHour)
+        viewModel.name = Sitter.Test.johnSmith.name
+        viewModel.surname = Sitter.Test.johnSmith.surname
+        viewModel.phone = Sitter.Test.johnSmith.phone
+        viewModel.bio = Sitter.Test.johnSmith.bio
+        viewModel.pricePerHour = String(Sitter.Test.johnSmith.pricePerHour)
 
         // When
         viewModel.cancelEditing()
 
-        // Than
-        let testSitter = SitterProfileViewModel()
+        // Then
+        XCTAssertEqual(viewModel.name, originalName)
+        XCTAssertEqual(viewModel.surname, originalSurname)
+        XCTAssertEqual(viewModel.phone, originalPhone)
+        XCTAssertEqual(viewModel.bio, originalBio)
+        XCTAssertEqual(viewModel.pricePerHour, String(originalPricePerHour))
 
-        XCTAssertEqual(viewModel.name, testSitter.name)
-        XCTAssertEqual(viewModel.surname, testSitter.surname)
-        XCTAssertEqual(viewModel.phone, testSitter.phone)
-        XCTAssertEqual(viewModel.bio, testSitter.bio)
-        XCTAssertEqual(viewModel.pricePerHour, String(testSitter.pricePerHour))
+        XCTAssertNotEqual(viewModel.name, Sitter.Test.johnSmith.name)
+        XCTAssertNotEqual(viewModel.surname, Sitter.Test.johnSmith.surname)
+        XCTAssertNotEqual(viewModel.phone, Sitter.Test.johnSmith.phone)
+        XCTAssertNotEqual(viewModel.bio, Sitter.Test.johnSmith.bio)
+        XCTAssertNotEqual(viewModel.pricePerHour, String(Sitter.Test.johnSmith.pricePerHour))
     }
 }
