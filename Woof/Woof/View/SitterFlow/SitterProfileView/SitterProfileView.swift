@@ -20,20 +20,18 @@ struct SitterProfileView: View {
                     )
 
                     HStack {
-                        if isEditingMode {
-                            Button(cancelButtonLabelText) {
-                                cancelEditing()
-                                isEditingMode = false
-                            }
-
-                            Spacer()
-
-                            Button(saveButtonLabelText) {
-                                viewModel.save()
-                                isEditingMode = false
-                            }
-                            .disabled(viewModel.name.isEmpty)
+                        Button(cancelButtonLabelText) {
+                            viewModel.cancel()
+                            isEditingMode = false
                         }
+
+                        Spacer()
+
+                        Button(saveButtonLabelText) {
+                            viewModel.save()
+                            isEditingMode = false
+                        }
+                        .disabled(viewModel.name.isEmpty)
                     }
                 }
                 .padding()
@@ -72,14 +70,6 @@ struct SitterProfileView: View {
     private let saveButtonLabelText = "Save"
     private let editButtonLabelText = "Edit"
     @State private var isEditingMode = false
-
-    private func cancelEditing() {
-        viewModel.name = viewModel.currentSitter.name
-        viewModel.surname = viewModel.currentSitter.surname
-        viewModel.phone = viewModel.currentSitter.phone
-        viewModel.bio = viewModel.currentSitter.bio
-        viewModel.pricePerHour = viewModel.currentSitter.pricePerHour.description
-    }
 }
 
 struct SitterProfileView_Previews: PreviewProvider {
