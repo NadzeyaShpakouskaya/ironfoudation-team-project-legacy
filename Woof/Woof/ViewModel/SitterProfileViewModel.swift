@@ -27,7 +27,7 @@ final class SitterProfileViewModel: ObservableObject {
     init() {
         currentSitter = loadSitterFromStorage()
 
-        storeInitialValues(currentSitter)
+        setInitialValues(currentSitter)
     }
 
     /// Requests model layer to save modified data.
@@ -48,7 +48,7 @@ final class SitterProfileViewModel: ObservableObject {
 
     /// Requests the model layer to cancel the editing mode and restore the original values.
     func cancelEditing() {
-        storeInitialValues(currentSitter)
+        setInitialValues(currentSitter)
     }
 
     // MARK: - Private interface
@@ -67,7 +67,7 @@ final class SitterProfileViewModel: ObservableObject {
         return sitter
     }
 
-    private func storeInitialValues(_ currentSitter: Sitter) {
+    private func setInitialValues(_ currentSitter: Sitter) {
         name = currentSitter.name
         surname = currentSitter.surname
         phone = currentSitter.phone
