@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 
-APP_NAME="Woof"
-xcodebuild -project Woof/${APP_NAME}.xcodeproj \
-           -target ${APP_NAME} \
+readonly APP_NAME="Woof"
+readonly IOS_SDK="16.4"
+
+xcodebuild -project ${APP_NAME}/${APP_NAME}.xcodeproj \
+           -scheme NetworkService
+xcodebuild -project ${APP_NAME}/${APP_NAME}.xcodeproj \
+           -scheme ${APP_NAME} \
            -configuration Release \
-           -sdk iphonesimulator16.2
+           -sdk iphonesimulator${IOS_SDK}
