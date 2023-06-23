@@ -1,4 +1,5 @@
 import Foundation
+import NetworkService
 
 extension WoofProductionEndpoint {
     /// Defines different types of requests that can be made to the Woof API.
@@ -22,4 +23,5 @@ extension WoofProductionEndpoint {
     }
 }
 
+// temporary stub, when HTTPRequest will be implemented in NetworkService, it can be removed.
 struct HTTPRequest {}
