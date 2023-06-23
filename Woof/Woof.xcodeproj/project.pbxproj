@@ -119,6 +119,9 @@
 		FDD143FE2A052D5A000BBA77 /* Color+AppScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD143CA2A03C629000BBA77 /* Color+AppScheme.swift */; };
 		FDD143FF2A052D5E000BBA77 /* String+IconName.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD143E12A05233B000BBA77 /* String+IconName.swift */; };
 		FDD144012A0532D5000BBA77 /* String+IconNameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD144002A0532D5000BBA77 /* String+IconNameTests.swift */; };
+		FDD790642A45732D007C1265 /* Obfuscator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD790632A45732D007C1265 /* Obfuscator.swift */; };
+		FDD790682A457984007C1265 /* SensitiveData.plist in Resources */ = {isa = PBXBuildFile; fileRef = FDD790672A457984007C1265 /* SensitiveData.plist */; };
+		FDD7906A2A4587B7007C1265 /* ObfuscatedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD790692A4587B7007C1265 /* ObfuscatedData.swift */; };
 		FDDDA6882A25C3FE00839091 /* EditOwnerInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDDA6872A25C3FE00839091 /* EditOwnerInformationView.swift */; };
 		FDE0CEA92A00F8370023F784 /* WoofApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE0CEA82A00F8370023F784 /* WoofApp.swift */; };
 		FDE0CEAD2A00F8390023F784 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDE0CEAC2A00F8390023F784 /* Assets.xcassets */; };
@@ -233,6 +236,9 @@
 		FDD143F42A052A11000BBA77 /* WoofTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WoofTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDD143F62A052A11000BBA77 /* Color+AppSchemeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+AppSchemeTests.swift"; sourceTree = "<group>"; };
 		FDD144002A0532D5000BBA77 /* String+IconNameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+IconNameTests.swift"; sourceTree = "<group>"; };
+		FDD790632A45732D007C1265 /* Obfuscator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Obfuscator.swift; sourceTree = "<group>"; };
+		FDD790672A457984007C1265 /* SensitiveData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SensitiveData.plist; sourceTree = "<group>"; };
+		FDD790692A4587B7007C1265 /* ObfuscatedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObfuscatedData.swift; sourceTree = "<group>"; };
 		FDDDA6872A25C3FE00839091 /* EditOwnerInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditOwnerInformationView.swift; sourceTree = "<group>"; };
 		FDE0CEA52A00F8370023F784 /* Woof.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Woof.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDE0CEA82A00F8370023F784 /* WoofApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoofApp.swift; sourceTree = "<group>"; };
@@ -602,6 +608,16 @@
 			path = WoofTests;
 			sourceTree = "<group>";
 		};
+		FDD790622A457316007C1265 /* Obfuscator */ = {
+			isa = PBXGroup;
+			children = (
+				FDD790632A45732D007C1265 /* Obfuscator.swift */,
+				FDD790692A4587B7007C1265 /* ObfuscatedData.swift */,
+				FDD790672A457984007C1265 /* SensitiveData.plist */,
+			);
+			path = Obfuscator;
+			sourceTree = "<group>";
+		};
 		FDDDA6862A25C3CD00839091 /* OwnerProfileView */ = {
 			isa = PBXGroup;
 			children = (
@@ -695,6 +711,7 @@
 		FDE0CEBD2A0269570023F784 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				FDD790622A457316007C1265 /* Obfuscator */,
 				FD0291702A0E16D000F88377 /* AppStyle */,
 				FDAA7BF52A0CB8E2007905CB /* DataTrasnformer */,
 			);
@@ -827,6 +844,7 @@
 				FDE0CEAD2A00F8390023F784 /* Assets.xcassets in Resources */,
 				FD2FA23B2A13BA20002B618B /* JaneSmithAvatar.jpg in Resources */,
 				FD2FA2382A13BA20002B618B /* OliviaDavisAvatar.jpg in Resources */,
+				FDD790682A457984007C1265 /* SensitiveData.plist in Resources */,
 				FD2FA23E2A13BA20002B618B /* JohnAlisonAvatar.jpg in Resources */,
 				FD2FA23D2A13BA20002B618B /* WilliamWilsonAvatar.jpg in Resources */,
 				FD2FA2392A13BA20002B618B /* MichaelBrownAvatar.jpg in Resources */,
@@ -996,6 +1014,7 @@
 				FDD143E22A05233B000BBA77 /* String+IconName.swift in Sources */,
 				FDEE43E02A386291007DE0A9 /* UserRoleViewModel.swift in Sources */,
 				FD6A2E5D2A2EF69500934C3E /* SitterMainTabView.swift in Sources */,
+				FDD7906A2A4587B7007C1265 /* ObfuscatedData.swift in Sources */,
 				FDD143C72A03BD48000BBA77 /* OwnerMainTabView.swift in Sources */,
 				FDEE43C92A2F45B8007DE0A9 /* Preferences.swift in Sources */,
 				EF16BB262A24E101007922C6 /* Owner+Dummy.swift in Sources */,
@@ -1041,6 +1060,7 @@
 				FD14A2A72A27803600362461 /* KeyValueStorage+Name.swift in Sources */,
 				EF5A7F2F2A14504F00585616 /* DetailPetSitterViewModel.swift in Sources */,
 				FD0291752A0E273500F88377 /* BioSectionView.swift in Sources */,
+				FDD790642A45732D007C1265 /* Obfuscator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
