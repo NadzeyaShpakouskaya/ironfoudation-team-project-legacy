@@ -30,7 +30,6 @@ struct SitterProfileView: View {
 
                             Button(saveButtonLabelText) {
                                 viewModel.save()
-//                                updateValues()
                                 isEditingMode = false
                             }
                             .disabled(viewModel.name.isEmpty)
