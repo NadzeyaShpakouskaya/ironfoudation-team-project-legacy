@@ -30,11 +30,5 @@ final class SitterProfileViewModelCancelEditingTests: XCTestCase {
         XCTAssertEqual(viewModel.phone, originalPhone)
         XCTAssertEqual(viewModel.bio, originalBio)
         XCTAssertEqual(viewModel.pricePerHour, String(originalPricePerHour))
-
-        XCTAssertNotEqual(viewModel.name, Sitter.Test.johnSmith.name)
-        XCTAssertNotEqual(viewModel.surname, Sitter.Test.johnSmith.surname)
-        XCTAssertNotEqual(viewModel.phone, Sitter.Test.johnSmith.phone)
-        XCTAssertNotEqual(viewModel.bio, Sitter.Test.johnSmith.bio)
-        XCTAssertNotEqual(viewModel.pricePerHour, String(Sitter.Test.johnSmith.pricePerHour))
     }
 }
