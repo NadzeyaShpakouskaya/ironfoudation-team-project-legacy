@@ -21,7 +21,7 @@ struct SitterProfileView: View {
 
                     HStack {
                         Button(cancelButtonLabelText) {
-                            viewModel.cancel()
+                            viewModel.cancelEditing()
                             isEditingMode = false
                         }
 

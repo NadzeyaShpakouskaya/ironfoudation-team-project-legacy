@@ -49,7 +49,7 @@ final class SitterProfileViewModel: ObservableObject {
         KeyValueStorage(KeyValueStorage.Name.currentSitter)
             .save(data, for: KeyValueStorage.Key.currentSitter)
     }
-    
+
     /// Requests the model layer to cancel the editing mode and restore the original values.
     func cancelEditing() {
         restoreOriginalValues(currentSitter)
