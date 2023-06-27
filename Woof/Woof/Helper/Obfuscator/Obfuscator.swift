@@ -8,12 +8,11 @@ class Obfuscator {
     }
 
     /**
-     This method obfuscates the string passed in using the salt specified during
-     Obfuscator initialization.
+     Takes a string and obfuscates it by XOR-ing it with a cipher.
 
-     - parameter string: the string to obfuscate
+     - Parameter string: The string to be obfuscated.
 
-     - returns: the obfuscated string in a byte array
+     - Returns: An array of UInt8 bytes representing the obfuscated string.
      */
     func bytesByObfuscatingString(string: String) -> [UInt8] {
         let text = [UInt8](string.utf8)
@@ -37,15 +36,14 @@ class Obfuscator {
     }
 
     /**
-     This method reveals the original string from the obfuscated
-     byte array passed in. The salt must be the same as the one
-     used to encrypt it in the first place.
+     Takes an array of obfuscated UInt8 bytes and reveals the original string by deobfuscating it using the cipher.
+     The cipher must be the same as the one used to encrypt it in the first place.
 
-     - parameter key: the byte array to reveal
+     - Parameter key: An array of obfuscated UInt8 bytes to decrypted.
 
-     - returns: the original string
+     - Returns: The original string revealed by deobfuscating the obfuscated bytes.
      */
-    func reveal(key: [UInt8]) -> String {
+    func reveal(key: [UInt8]) -> String? {
         let cipher = [UInt8](salt.utf8)
         let length = cipher.count
 
@@ -55,7 +53,11 @@ class Obfuscator {
             decrypted.append(symbol.element ^ cipher[symbol.offset % length])
         }
 
-        return String(bytes: decrypted, encoding: .utf8)!
+        if let revealedData = String(bytes: decrypted, encoding: .utf8) {
+            return revealedData
+        } else {
+            return nil
+        }
     }
 
     // MARK: - Private interface

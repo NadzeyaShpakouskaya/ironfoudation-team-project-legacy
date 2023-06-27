@@ -9,7 +9,9 @@ enum ObfuscatedData {
     static let key: [UInt8] = Obfuscator().bytesByObfuscatingString(string: Self.loadedKey)
     static let header: [UInt8] = Obfuscator().bytesByObfuscatingString(string: Self.loadedHeader)
 
-    // read the sensitive data from file and transform to dictionary
+    // MARK: Private interface
+
+    // read the sensitive data from file and transform to dictionary/
     private static func readData() -> [String: Any] {
         guard let infoPlistPath = Bundle.main.url(forResource: Self.fileName, withExtension: Self.fileExtension) else {
             return [:]
