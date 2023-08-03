@@ -8,6 +8,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added 
 
+- Add transparent layer for png application icon - [#195](https://github.com/ios-course/ironfoudation-team-project/pull/195)
+
 ## [0.3.0] - 19.06.2023
 
 ### Added
