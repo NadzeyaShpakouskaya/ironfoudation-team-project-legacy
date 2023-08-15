@@ -11,14 +11,22 @@ enum Obfuscator {
     ///  - salt: The salt used to obfuscate and reveal the string.
     /// - Returns: The original string revealed by deobfuscating the obfuscated bytes.
     /// - Throws: An `ObfuscatorError` if obfuscation was not successful.
-    /// - Complexity: O(*N*), where *N* is the length of the input string.
+    /// - Complexity: O(*N* + *M*), where *N* is the length of the input string and *M* is the
+    /// length of the salt.
     static func reveal(key: String, salt: String) throws -> String {
+        guard !key.isEmpty else { return "" }
+
         let keyAsSequenceOfBytes = try key.split(separator: " ").map { stringRepresentationOfUInt8 in
             guard let byte = UInt8(stringRepresentationOfUInt8) else { throw ObfuscatorError.nonInt8Value }
             return byte
         }
 
-        guard !keyAsSequenceOfBytes.isEmpty else { return "" }
+        if salt.isEmpty {
+            guard let decryptedString = String(bytes: keyAsSequenceOfBytes, encoding: .utf8) else {
+                throw ObfuscatorError.unconvertibleToString
+            }
+            return decryptedString
+        }
 
         let cipher = [UInt8](salt.utf8)
         let lengthOfCipher = cipher.count
