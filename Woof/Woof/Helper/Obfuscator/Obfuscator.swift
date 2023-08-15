@@ -1,3 +1,4 @@
+/// Provides methods to work with string obfuscation and deobfuscation.
 enum Obfuscator {
     // MARK: - Internal interface
 

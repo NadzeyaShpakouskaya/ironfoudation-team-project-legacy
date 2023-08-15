@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		199BC09E2A8B73B900824CC6 /* ObfuscatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199BC09D2A8B73B900824CC6 /* ObfuscatorTests.swift */; };
+		199BC0A12A8B748F00824CC6 /* Obfuscator+bytesByObfuscating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199BC0A02A8B748F00824CC6 /* Obfuscator+bytesByObfuscating.swift */; };
+		199BC0A22A8B793400824CC6 /* Obfuscator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD790632A45732D007C1265 /* Obfuscator.swift */; };
+		199BC0A32A8B850A00824CC6 /* ObfuscatorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD790692A4587B7007C1265 /* ObfuscatorError.swift */; };
 		1CE7E9C92A247CF1000A0509 /* KeyValueStorageInitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE7E9C82A247CF1000A0509 /* KeyValueStorageInitTests.swift */; };
 		1CE7E9CC2A24889B000A0509 /* KeyValueStorage+UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE7E9CB2A24889B000A0509 /* KeyValueStorage+UnitTests.swift */; };
 		36199B0F2A1FB1C900725FC8 /* KeyValueStorage+TestKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36199B0E2A1FB1C900725FC8 /* KeyValueStorage+TestKey.swift */; };
@@ -147,6 +151,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		199BC09D2A8B73B900824CC6 /* ObfuscatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObfuscatorTests.swift; sourceTree = "<group>"; };
+		199BC0A02A8B748F00824CC6 /* Obfuscator+bytesByObfuscating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Obfuscator+bytesByObfuscating.swift"; sourceTree = "<group>"; };
 		1CE7E9C82A247CF1000A0509 /* KeyValueStorageInitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStorageInitTests.swift; sourceTree = "<group>"; };
 		1CE7E9CB2A24889B000A0509 /* KeyValueStorage+UnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyValueStorage+UnitTests.swift"; sourceTree = "<group>"; };
 		36199B0E2A1FB1C900725FC8 /* KeyValueStorage+TestKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyValueStorage+TestKey.swift"; sourceTree = "<group>"; };
@@ -269,6 +275,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		199BC09F2A8B73C400824CC6 /* ObfuscatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				199BC09D2A8B73B900824CC6 /* ObfuscatorTests.swift */,
+				199BC0A02A8B748F00824CC6 /* Obfuscator+bytesByObfuscating.swift */,
+			);
+			path = ObfuscatorTests;
+			sourceTree = "<group>";
+		};
 		1CE7E9CA2A248875000A0509 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -445,6 +460,7 @@
 			children = (
 				FD0291712A0E16DF00F88377 /* AppStyleTests */,
 				FD37A9962A0B76BA0001BABB /* DataTransformerTests */,
+				199BC09F2A8B73C400824CC6 /* ObfuscatorTests */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -959,6 +975,7 @@
 				EF95A0542A38698900E84ACD /* SitterMainTabViewModelTests.swift in Sources */,
 				FDCF49142A1CDB1600CD3BBB /* DetailPetSitterViewModel.swift in Sources */,
 				EF95A05B2A39B74100E84ACD /* DetailPetSitterViewModelTests.swift in Sources */,
+				199BC0A12A8B748F00824CC6 /* Obfuscator+bytesByObfuscating.swift in Sources */,
 				935F23852A42D60A00820E7B /* LoginViewModelTests.swift in Sources */,
 				FDEE43CD2A2F4E51007DE0A9 /* PreferencesTests.swift in Sources */,
 				EF95A04B2A385FA900E84ACD /* OwnerMainTabViewModel.swift in Sources */,
@@ -969,6 +986,7 @@
 				FD2F7B322A0CE029008F6F49 /* Sitter.swift in Sources */,
 				365D3F2A2A38891D00EC9B30 /* LoginViewModel.swift in Sources */,
 				FD02917C2A0E2CBC00F88377 /* AppStyle.swift in Sources */,
+				199BC09E2A8B73B900824CC6 /* ObfuscatorTests.swift in Sources */,
 				FD14A2B72A28709400362461 /* OwnerProfileViewModelSaveTests.swift in Sources */,
 				FD2F7B332A0CE032008F6F49 /* Owner.swift in Sources */,
 				EF95A0562A386A5F00E84ACD /* SitterMainTabViewModel.swift in Sources */,
@@ -977,6 +995,7 @@
 				FD14A2B22A286BBD00362461 /* OwnerProfileViewModel.swift in Sources */,
 				362732A22A1B800B0062E4B5 /* KeyValueStorageDeleteTests.swift in Sources */,
 				FDD143FE2A052D5A000BBA77 /* Color+AppScheme.swift in Sources */,
+				199BC0A32A8B850A00824CC6 /* ObfuscatorError.swift in Sources */,
 				EF4CBAF02A3C704300B4A223 /* Sitter+Tests.swift in Sources */,
 				FDD144012A0532D5000BBA77 /* String+IconNameTests.swift in Sources */,
 				FD02917B2A0E2C5300F88377 /* AppStyle+UIElementConstant.swift in Sources */,
@@ -997,6 +1016,7 @@
 				FD6A2E632A2F072F00934C3E /* KeyValueStorage+NameTests.swift in Sources */,
 				EF4CBAF62A3C712C00B4A223 /* SitterProfileViewModelSaveTests.swift in Sources */,
 				FD2F7B342A0CE03B008F6F49 /* SitterCardViewModel.swift in Sources */,
+				199BC0A22A8B793400824CC6 /* Obfuscator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
