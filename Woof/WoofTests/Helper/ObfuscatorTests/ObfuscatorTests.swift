@@ -7,8 +7,8 @@ final class ObfuscatorTests: XCTestCase {
         let salt = ""
 
         // When
-        let obfuscatedString = Obfuscator.bytesByObfuscating(string: initialString, withSalt: salt)
-        let decryptedString = try Obfuscator.reveal(key: obfuscatedString, salt: salt)
+        let obfuscatedString = Obfuscator.bytesByObfuscating(string: initialString, with: salt)
+        let decryptedString = try Obfuscator.reveal(obfuscatedString, salt: salt)
 
         // Then
         XCTAssertEqual(initialString, decryptedString)
@@ -20,8 +20,8 @@ final class ObfuscatorTests: XCTestCase {
         let salt = "  "
 
         // When
-        let obfuscatedString = Obfuscator.bytesByObfuscating(string: initialString, withSalt: salt)
-        let decryptedString = try Obfuscator.reveal(key: obfuscatedString, salt: salt)
+        let obfuscatedString = Obfuscator.bytesByObfuscating(string: initialString, with: salt)
+        let decryptedString = try Obfuscator.reveal(obfuscatedString, salt: salt)
 
         // Then
         XCTAssertEqual(initialString, decryptedString)
@@ -34,8 +34,8 @@ final class ObfuscatorTests: XCTestCase {
         let salt = ""
 
         // When
-        let obfuscatedString = Obfuscator.bytesByObfuscating(string: initialString, withSalt: salt)
-        let decryptedString = try Obfuscator.reveal(key: obfuscatedString, salt: salt)
+        let obfuscatedString = Obfuscator.bytesByObfuscating(string: initialString, with: salt)
+        let decryptedString = try Obfuscator.reveal(obfuscatedString, salt: salt)
 
         // Then
         XCTAssertEqual(initialString, decryptedString)
@@ -48,8 +48,8 @@ final class ObfuscatorTests: XCTestCase {
         let salt = "Abc !@#$%^&*?_012"
 
         // When
-        let obfuscatedString = Obfuscator.bytesByObfuscating(string: initialString, withSalt: salt)
-        let decryptedString = try Obfuscator.reveal(key: obfuscatedString, salt: salt)
+        let obfuscatedString = Obfuscator.bytesByObfuscating(string: initialString, with: salt)
+        let decryptedString = try Obfuscator.reveal(obfuscatedString, salt: salt)
 
         // Then
         XCTAssertEqual(initialString, decryptedString)
@@ -62,8 +62,8 @@ final class ObfuscatorTests: XCTestCase {
         let salt = "Abc_!@#$%^&*?_012"
 
         // When
-        let obfuscatedString = Obfuscator.bytesByObfuscating(string: initialString, withSalt: salt)
-        let decryptedString = try Obfuscator.reveal(key: obfuscatedString, salt: salt)
+        let obfuscatedString = Obfuscator.bytesByObfuscating(string: initialString, with: salt)
+        let decryptedString = try Obfuscator.reveal(obfuscatedString, salt: salt)
 
         // Then
         XCTAssertEqual(initialString, decryptedString)

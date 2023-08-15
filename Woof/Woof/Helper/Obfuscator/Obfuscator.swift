@@ -7,41 +7,43 @@ enum Obfuscator {
     /// consist of ASCII representation of UInt8 numbers in base 10 separated by space.
     ///
     /// - Parameters:
-    ///  - key: The encrypted string value presented as a string with a sequence of ASCII
+    ///  - encryptedString: The encrypted string presented as a sequence of ASCII
     /// representations of UInt8 numbers in base 10 separated by space.
     ///  - salt: The salt used to obfuscate and reveal the string.
     /// - Returns: The original string revealed by deobfuscating the obfuscated bytes.
     /// - Throws: An `ObfuscatorError` if obfuscation was not successful.
     /// - Complexity: O(*N* + *M*), where *N* is the length of the input string and *M* is the
     /// length of the salt.
-    static func reveal(key: String, salt: String) throws -> String {
-        guard !key.isEmpty else { return "" }
+    static func reveal(_ encryptedString: String, salt: String) throws -> String {
+        guard !encryptedString.isEmpty else { return "" }
 
-        let keyAsSequenceOfBytes = try key.split(separator: " ").map { stringRepresentationOfUInt8 in
-            guard let byte = UInt8(stringRepresentationOfUInt8) else { throw ObfuscatorError.nonInt8Value }
-            return byte
-        }
+        let stringBytes = try convertToBytes(encryptedString)
+        var decryptedBytes = [UInt8]()
 
         if salt.isEmpty {
-            guard let decryptedString = String(bytes: keyAsSequenceOfBytes, encoding: .utf8) else {
-                throw ObfuscatorError.unconvertibleToString
+            decryptedBytes = stringBytes
+        } else {
+            let saltBytes = [UInt8](salt.utf8)
+            let saltBytesLength = saltBytes.count
+
+            for (index, byte) in stringBytes.enumerated() {
+                decryptedBytes.append(byte ^ saltBytes[index % saltBytesLength])
             }
-            return decryptedString
         }
 
-        let cipher = [UInt8](salt.utf8)
-        let lengthOfCipher = cipher.count
-
-        var decryptedSequenceOfBytes = [UInt8]()
-
-        for (index, byte) in keyAsSequenceOfBytes.enumerated() {
-            decryptedSequenceOfBytes.append(byte ^ cipher[index % lengthOfCipher])
-        }
-
-        guard let decryptedString = String(bytes: decryptedSequenceOfBytes, encoding: .utf8) else {
+        guard let decryptedString = String(bytes: decryptedBytes, encoding: .utf8) else {
             throw ObfuscatorError.unconvertibleToString
         }
 
         return decryptedString
+    }
+
+    // MARK: - Private interface
+
+    private static func convertToBytes(_ string: String) throws -> [UInt8] {
+        try string.split(separator: " ").map { ASCIIRepresentationOfNumber in
+            guard let byte = UInt8(ASCIIRepresentationOfNumber) else { throw ObfuscatorError.nonInt8Value }
+            return byte
+        }
     }
 }

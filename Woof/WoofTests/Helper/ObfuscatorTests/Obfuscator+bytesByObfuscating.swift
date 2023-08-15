@@ -5,33 +5,33 @@ extension Obfuscator {
     ///
     /// - Parameters:
     ///   - string: The string to obfuscate
-    ///   - withSalt: The salt used to obfuscate and reveal the string.
+    ///   - salt: The salt used to obfuscate and reveal the string.
     /// - Returns: The string that consist of ASCII representation of UInt8 numbers
     /// on base 10 separated by a space. Each number corresponds to one byte.
     /// - Complexity: O(*N* + *M*), where *N* is the length of the input string and *M* is the
     /// length of the salt.
-    static func bytesByObfuscating(string: String, withSalt: String) -> String {
+    static func bytesByObfuscating(string: String, with salt: String) -> String {
         guard !string.isEmpty else { return "" }
-        let stringAsSequenceOfBytes = [UInt8](string.utf8)
+        let stringBytes = [UInt8](string.utf8)
 
-        guard !withSalt.isEmpty else {
-            return convertToString(stringAsSequenceOfBytes)
+        guard !salt.isEmpty else {
+            return convertToString(stringBytes)
         }
-        let cipher = [UInt8](withSalt.utf8)
-        let cipherLength = cipher.count
+        let saltBytes = [UInt8](salt.utf8)
+        let saltBytesLength = saltBytes.count
 
-        var encrypted = [UInt8]()
+        var obfuscatedBytes = [UInt8]()
 
-        for (index, byte) in stringAsSequenceOfBytes.enumerated() {
-            encrypted.append(byte ^ cipher[index % cipherLength])
+        for (index, byte) in stringBytes.enumerated() {
+            obfuscatedBytes.append(byte ^ saltBytes[index % saltBytesLength])
         }
 
-        return convertToString(encrypted)
+        return convertToString(obfuscatedBytes)
     }
 
     // MARK: - Private interface
 
-    private static func convertToString(_ array: [UInt8]) -> String {
-        array.map { String($0) }.joined(separator: " ")
+    private static func convertToString(_ bytes: [UInt8]) -> String {
+        bytes.map { String($0) }.joined(separator: " ")
     }
 }
