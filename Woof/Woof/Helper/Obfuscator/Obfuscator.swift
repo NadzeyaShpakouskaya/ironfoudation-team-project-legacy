@@ -32,7 +32,7 @@ enum Obfuscator {
         }
 
         guard let decryptedString = String(bytes: decryptedBytes, encoding: .utf8) else {
-            throw ObfuscatorError.unconvertibleToString
+            throw ObfuscatorError.unconvertibleToString(decryptedBytes)
         }
 
         return decryptedString
@@ -42,7 +42,9 @@ enum Obfuscator {
 
     private static func convertToBytes(_ string: String) throws -> [UInt8] {
         try string.split(separator: " ").map { ASCIIRepresentationOfNumber in
-            guard let byte = UInt8(ASCIIRepresentationOfNumber) else { throw ObfuscatorError.nonInt8Value }
+            guard let byte = UInt8(ASCIIRepresentationOfNumber) else {
+                throw ObfuscatorError.unconvertibleToInt8(String(ASCIIRepresentationOfNumber))
+            }
             return byte
         }
     }
