@@ -11,6 +11,7 @@
 		199BC0A12A8B748F00824CC6 /* Obfuscator+bytesByObfuscating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199BC0A02A8B748F00824CC6 /* Obfuscator+bytesByObfuscating.swift */; };
 		199BC0A22A8B793400824CC6 /* Obfuscator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD790632A45732D007C1265 /* Obfuscator.swift */; };
 		199BC0A32A8B850A00824CC6 /* ObfuscatorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD790692A4587B7007C1265 /* ObfuscatorError.swift */; };
+		199BC0AA2A8CC3E400824CC6 /* ObfuscatorErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199BC0A92A8CC3E400824CC6 /* ObfuscatorErrorTests.swift */; };
 		1CE7E9C92A247CF1000A0509 /* KeyValueStorageInitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE7E9C82A247CF1000A0509 /* KeyValueStorageInitTests.swift */; };
 		1CE7E9CC2A24889B000A0509 /* KeyValueStorage+UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE7E9CB2A24889B000A0509 /* KeyValueStorage+UnitTests.swift */; };
 		36199B0F2A1FB1C900725FC8 /* KeyValueStorage+TestKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36199B0E2A1FB1C900725FC8 /* KeyValueStorage+TestKey.swift */; };
@@ -155,6 +156,7 @@
 /* Begin PBXFileReference section */
 		199BC09D2A8B73B900824CC6 /* ObfuscatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObfuscatorTests.swift; sourceTree = "<group>"; };
 		199BC0A02A8B748F00824CC6 /* Obfuscator+bytesByObfuscating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Obfuscator+bytesByObfuscating.swift"; sourceTree = "<group>"; };
+		199BC0A92A8CC3E400824CC6 /* ObfuscatorErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObfuscatorErrorTests.swift; sourceTree = "<group>"; };
 		1CE7E9C82A247CF1000A0509 /* KeyValueStorageInitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStorageInitTests.swift; sourceTree = "<group>"; };
 		1CE7E9CB2A24889B000A0509 /* KeyValueStorage+UnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyValueStorage+UnitTests.swift"; sourceTree = "<group>"; };
 		36199B0E2A1FB1C900725FC8 /* KeyValueStorage+TestKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyValueStorage+TestKey.swift"; sourceTree = "<group>"; };
@@ -286,6 +288,22 @@
 				199BC0A02A8B748F00824CC6 /* Obfuscator+bytesByObfuscating.swift */,
 			);
 			path = ObfuscatorTests;
+			sourceTree = "<group>";
+		};
+		199BC0A82A8CB51B00824CC6 /* ObfuscatorError */ = {
+			isa = PBXGroup;
+			children = (
+				FDD790692A4587B7007C1265 /* ObfuscatorError.swift */,
+			);
+			path = ObfuscatorError;
+			sourceTree = "<group>";
+		};
+		199BC0AB2A8CC3F300824CC6 /* ObfuscatorErrorTests */ = {
+			isa = PBXGroup;
+			children = (
+				199BC0A92A8CC3E400824CC6 /* ObfuscatorErrorTests.swift */,
+			);
+			path = ObfuscatorErrorTests;
 			sourceTree = "<group>";
 		};
 		1CE7E9CA2A248875000A0509 /* Extensions */ = {
@@ -468,6 +486,7 @@
 				FD0291712A0E16DF00F88377 /* AppStyleTests */,
 				FD37A9962A0B76BA0001BABB /* DataTransformerTests */,
 				199BC09F2A8B73C400824CC6 /* ObfuscatorTests */,
+				199BC0AB2A8CC3F300824CC6 /* ObfuscatorErrorTests */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -632,7 +651,7 @@
 			isa = PBXGroup;
 			children = (
 				FDD790632A45732D007C1265 /* Obfuscator.swift */,
-				FDD790692A4587B7007C1265 /* ObfuscatorError.swift */,
+				199BC0A82A8CB51B00824CC6 /* ObfuscatorError */,
 			);
 			path = Obfuscator;
 			sourceTree = "<group>";
@@ -991,6 +1010,7 @@
 				EF95A0552A386A2300E84ACD /* SitterListViewModel.swift in Sources */,
 				1CE7E9CC2A24889B000A0509 /* KeyValueStorage+UnitTests.swift in Sources */,
 				FD2F7B322A0CE029008F6F49 /* Sitter.swift in Sources */,
+				199BC0AA2A8CC3E400824CC6 /* ObfuscatorErrorTests.swift in Sources */,
 				365D3F2A2A38891D00EC9B30 /* LoginViewModel.swift in Sources */,
 				FD02917C2A0E2CBC00F88377 /* AppStyle.swift in Sources */,
 				199BC09E2A8B73B900824CC6 /* ObfuscatorTests.swift in Sources */,
