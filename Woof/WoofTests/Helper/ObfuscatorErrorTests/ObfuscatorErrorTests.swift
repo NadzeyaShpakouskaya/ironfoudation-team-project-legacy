@@ -1,22 +1,30 @@
 import XCTest
 
 final class ObfuscatorErrorTests: XCTestCase {
-    func testLocalizedDescriptionReturnsExpectedMessage() {
+    func testLocalizedDescriptionReturnsExpectedMessageForUnconvertibleToInt8Error() {
         // Given
         let testString = "a"
-        let testArray: [UInt8] = [1]
 
         // When
-        let unconvertibleToInt8Error = ObfuscatorError.unconvertibleToInt8(testString)
-        let unconvertibleToStringError = ObfuscatorError.unconvertibleToString(testArray)
+        let error = ObfuscatorError.unconvertibleToInt8(testString)
 
         // Then
         XCTAssertEqual(
-            unconvertibleToInt8Error.localizedDescription,
+            error.localizedDescription,
             "\(testString) can't be presented as UInt8 value."
         )
+    }
+
+    func testLocalizedDescriptionReturnsExpectedMessageForUnconvertibleToStringError() {
+        // Given
+        let testArray: [UInt8] = [1]
+
+        // When
+        let error = ObfuscatorError.unconvertibleToString(testArray)
+
+        // Then
         XCTAssertEqual(
-            unconvertibleToStringError.localizedDescription,
+            error.localizedDescription,
             """
             \(testArray)
             This bytes sequence can't be interpreted as a string.
