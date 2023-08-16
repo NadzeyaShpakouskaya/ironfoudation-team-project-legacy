@@ -290,14 +290,6 @@
 			path = ObfuscatorTests;
 			sourceTree = "<group>";
 		};
-		199BC0A82A8CB51B00824CC6 /* ObfuscatorError */ = {
-			isa = PBXGroup;
-			children = (
-				FDD790692A4587B7007C1265 /* ObfuscatorError.swift */,
-			);
-			path = ObfuscatorError;
-			sourceTree = "<group>";
-		};
 		199BC0AB2A8CC3F300824CC6 /* ObfuscatorErrorTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -651,7 +643,7 @@
 			isa = PBXGroup;
 			children = (
 				FDD790632A45732D007C1265 /* Obfuscator.swift */,
-				199BC0A82A8CB51B00824CC6 /* ObfuscatorError */,
+				FDD790692A4587B7007C1265 /* ObfuscatorError.swift */,
 			);
 			path = Obfuscator;
 			sourceTree = "<group>";
