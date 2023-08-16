@@ -17,7 +17,7 @@ struct SitterInfoCardView: View {
     let bio: String
 
     /// The price charged by the pet sitter per hour for walking.
-    let ratePerHour: Double
+    let ratePerHour: String
 
     var body: some View {
         VStack(alignment: .leading, spacing: AppStyle.UIElementConstant.spacingBetweenElements) {
@@ -43,7 +43,7 @@ struct SitterInfoCardView: View {
                 Spacer()
 
                 VStack {
-                    Text(ratePerHour, format: .currency(code: Locale.current.currencyCode ?? "USD"))
+                    Text(ratePerHour + defaultCurrency)
                     Text(perHourLabel)
                         .font(Font.system(size: AppStyle.FontStyle.footnote.size))
                 }
@@ -74,38 +74,21 @@ struct SitterInfoCardView: View {
     private let lineLimitForSurname = 1
     private let linelimitForPhoneNumber = 1
     private let linelimitForBio = 10
+    private let defaultCurrency = "$"
 }
 
 struct SitterInfoCardView_Previews: PreviewProvider {
     static var previews: some View {
+        let viewModel = SitterProfileViewModel()
+
         SitterInfoCardView(
-            name: Sitter.Dummy.emilyDoe.name,
-            surname: Sitter.Dummy.emilyDoe.surname,
-            phone: Sitter.Dummy.emilyDoe.phone,
-            bio: Sitter.Dummy.emilyDoe.bio,
-            ratePerHour: Sitter.Dummy.emilyDoe.pricePerHour
+            name: viewModel.name,
+            surname: viewModel.surname,
+            phone: viewModel.phone,
+            bio: viewModel.bio,
+            ratePerHour: viewModel.pricePerHour
         )
         .previewDevice(PreviewDevice(rawValue: "iPhone 14 Pro"))
         .previewDisplayName("iPhone 14 Pro")
-
-        SitterInfoCardView(
-            name: Sitter.Dummy.emilyDoe.name,
-            surname: Sitter.Dummy.emilyDoe.surname,
-            phone: Sitter.Dummy.emilyDoe.phone,
-            bio: Sitter.Dummy.emilyDoe.bio,
-            ratePerHour: Sitter.Dummy.emilyDoe.pricePerHour
-        )
-        .previewDevice(PreviewDevice(rawValue: "iPhone 14 Pro Max"))
-        .previewDisplayName("iPhone 14 Pro Max")
-
-        SitterInfoCardView(
-            name: Sitter.Dummy.emilyDoe.name,
-            surname: Sitter.Dummy.emilyDoe.surname,
-            phone: Sitter.Dummy.emilyDoe.phone,
-            bio: Sitter.Dummy.emilyDoe.bio,
-            ratePerHour: Sitter.Dummy.emilyDoe.pricePerHour
-        )
-        .previewDevice(PreviewDevice(rawValue: "iPhone SE"))
-        .previewDisplayName("iPhone SE")
     }
 }

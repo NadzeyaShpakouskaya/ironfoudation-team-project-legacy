@@ -40,7 +40,9 @@
 		BA4561812A334A8A00C6E595 /* Stars.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4561802A334A8A00C6E595 /* Stars.swift */; };
 		BA4561822A334D2D00C6E595 /* Stars.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4561802A334A8A00C6E595 /* Stars.swift */; };
 		BA4561872A3996BF00C6E595 /* SitterInfoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4561862A3996BF00C6E595 /* SitterInfoCardView.swift */; };
+		BA77BDBD2A45852D00CA76EA /* SitterProfileViewModelCancelEditingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA77BDBC2A45852D00CA76EA /* SitterProfileViewModelCancelEditingTests.swift */; };
 		BAD0FC632A31D20800F59544 /* StarRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD0FC622A31D20800F59544 /* StarRating.swift */; };
+		BAE74E922A42E1DD0083C68E /* SitterProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE74E912A42E1DD0083C68E /* SitterProfileView.swift */; };
 		EF16BB1E2A24D5FA007922C6 /* OwnerCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF16BB1D2A24D5FA007922C6 /* OwnerCardView.swift */; };
 		EF16BB262A24E101007922C6 /* Owner+Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF16BB252A24E101007922C6 /* Owner+Dummy.swift */; };
 		EF303EBE2A1762CF0086065B /* FiveStarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF303EBD2A1762CF0086065B /* FiveStarRatingView.swift */; };
@@ -177,7 +179,9 @@
 		9B6498A72A31E7CA00004FB3 /* CopyToClipboardLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyToClipboardLabel.swift; sourceTree = "<group>"; };
 		BA4561802A334A8A00C6E595 /* Stars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stars.swift; sourceTree = "<group>"; };
 		BA4561862A3996BF00C6E595 /* SitterInfoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitterInfoCardView.swift; sourceTree = "<group>"; };
+		BA77BDBC2A45852D00CA76EA /* SitterProfileViewModelCancelEditingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitterProfileViewModelCancelEditingTests.swift; sourceTree = "<group>"; };
 		BAD0FC622A31D20800F59544 /* StarRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRating.swift; sourceTree = "<group>"; };
+		BAE74E912A42E1DD0083C68E /* SitterProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitterProfileView.swift; sourceTree = "<group>"; };
 		EF16BB1D2A24D5FA007922C6 /* OwnerCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerCardView.swift; sourceTree = "<group>"; };
 		EF16BB252A24E101007922C6 /* Owner+Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Owner+Dummy.swift"; sourceTree = "<group>"; };
 		EF303EBD2A1762CF0086065B /* FiveStarRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveStarRatingView.swift; sourceTree = "<group>"; };
@@ -359,6 +363,8 @@
 			isa = PBXGroup;
 			children = (
 				BA4561862A3996BF00C6E595 /* SitterInfoCardView.swift */,
+				BAE74E912A42E1DD0083C68E /* SitterProfileView.swift */,
+				EF95A06A2A3AC6DF00E84ACD /* EditSitterInformationView.swift */,
 			);
 			path = SitterProfileView;
 			sourceTree = "<group>";
@@ -391,6 +397,7 @@
 				EF4CBAEE2A3C704300B4A223 /* Sitter+Tests.swift */,
 				EF4CBAF12A3C708E00B4A223 /* SitterProfileViewModelTests.swift */,
 				EF4CBAF42A3C712C00B4A223 /* SitterProfileViewModelSaveTests.swift */,
+				BA77BDBC2A45852D00CA76EA /* SitterProfileViewModelCancelEditingTests.swift */,
 			);
 			path = SitterProfileViewModelTests;
 			sourceTree = "<group>";
@@ -532,7 +539,6 @@
 			children = (
 				BA4561832A39969000C6E595 /* SitterProfileView */,
 				FD6A2E5B2A2EF67A00934C3E /* SitterMainTabView */,
-				EF95A06A2A3AC6DF00E84ACD /* EditSitterInformationView.swift */,
 			);
 			path = SitterFlow;
 			sourceTree = "<group>";
@@ -952,6 +958,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36BEA7582A1621B10020F6AE /* KeyValueStorageSaveTests.swift in Sources */,
+				BA77BDBD2A45852D00CA76EA /* SitterProfileViewModelCancelEditingTests.swift in Sources */,
 				FD9802282A287670003DEE5C /* OwnerProfileViewModelGetTests.swift in Sources */,
 				FD6A2E612A2F067E00934C3E /* KeyValueStorage+KeyTests.swift in Sources */,
 				FD8182302A20C3C300AE1016 /* KeyValueStorage+TestData.swift in Sources */,
@@ -1041,6 +1048,7 @@
 				36E97F172A2F42FD00030E3E /* LoginViewModel.swift in Sources */,
 				FD14A2A52A277FA400362461 /* OwnerProfileViewModel.swift in Sources */,
 				FD0291732A0E256F00F88377 /* GeneralInfoSectionView.swift in Sources */,
+				BAE74E922A42E1DD0083C68E /* SitterProfileView.swift in Sources */,
 				BA4561812A334A8A00C6E595 /* Stars.swift in Sources */,
 				FDD143E02A051F96000BBA77 /* OwnerMainTabView+Tab.swift in Sources */,
 				FD1FA3C32A0A682E000A3A91 /* SitterCardViewModel.swift in Sources */,
