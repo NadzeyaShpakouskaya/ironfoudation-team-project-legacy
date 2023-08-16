@@ -5,6 +5,3 @@
 ### Xcode
 xcuserdata/
 build/
-
-### Sensitive data
-SensitiveData.plist
