@@ -1,5 +1,7 @@
 #!/bin/bash
 
+path_to_obfuscated_key=$(cat "./path-to-obfuscated-key")
+
 if [ $# -eq 0 ]; then
     echo "Please provide a string to obfuscate as an argument."
     exit 1
@@ -47,4 +49,4 @@ obfuscate() {
 }
 
 encryptedResult=$(obfuscate "$1" "$salt")
-echo "$encryptedResult"
+echo "$encryptedResult" > "$path_to_obfuscated_key"
