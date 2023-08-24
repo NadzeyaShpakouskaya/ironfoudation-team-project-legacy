@@ -129,10 +129,8 @@
 		FDD790642A45732D007C1265 /* Obfuscator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD790632A45732D007C1265 /* Obfuscator.swift */; };
 		FDD7906A2A4587B7007C1265 /* ObfuscatorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD790692A4587B7007C1265 /* ObfuscatorError.swift */; };
 		FDD538582A41D6C900331977 /* WoofProductionEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD538572A41D6C900331977 /* WoofProductionEndpoint.swift */; };
-		FDD5385A2A41DE0700331977 /* WoofProductionEndpoint+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD538592A41DE0700331977 /* WoofProductionEndpoint+Request.swift */; };
 		FDD5385D2A41FADF00331977 /* WoofProductionEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD5385C2A41FADF00331977 /* WoofProductionEndpointTests.swift */; };
 		FDD5385E2A41FAE500331977 /* WoofProductionEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD538572A41D6C900331977 /* WoofProductionEndpoint.swift */; };
-		FDD5385F2A41FAE800331977 /* WoofProductionEndpoint+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD538592A41DE0700331977 /* WoofProductionEndpoint+Request.swift */; };
 		FDDDA6882A25C3FE00839091 /* EditOwnerInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDDA6872A25C3FE00839091 /* EditOwnerInformationView.swift */; };
 		FDE0CEA92A00F8370023F784 /* WoofApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE0CEA82A00F8370023F784 /* WoofApp.swift */; };
 		FDE0CEAD2A00F8390023F784 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDE0CEAC2A00F8390023F784 /* Assets.xcassets */; };
@@ -255,7 +253,6 @@
 		FDD790632A45732D007C1265 /* Obfuscator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Obfuscator.swift; sourceTree = "<group>"; };
 		FDD790692A4587B7007C1265 /* ObfuscatorError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObfuscatorError.swift; sourceTree = "<group>"; };
 		FDD538572A41D6C900331977 /* WoofProductionEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoofProductionEndpoint.swift; sourceTree = "<group>"; };
-		FDD538592A41DE0700331977 /* WoofProductionEndpoint+Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WoofProductionEndpoint+Request.swift"; sourceTree = "<group>"; };
 		FDD5385C2A41FADF00331977 /* WoofProductionEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoofProductionEndpointTests.swift; sourceTree = "<group>"; };
 		FDDDA6872A25C3FE00839091 /* EditOwnerInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditOwnerInformationView.swift; sourceTree = "<group>"; };
 		FDE0CEA52A00F8370023F784 /* Woof.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Woof.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -652,7 +649,6 @@
 			isa = PBXGroup;
 			children = (
 				FDD538572A41D6C900331977 /* WoofProductionEndpoint.swift */,
-				FDD538592A41DE0700331977 /* WoofProductionEndpoint+Request.swift */,
 			);
 			path = NetworkLayer;
 			sourceTree = "<group>";
@@ -1018,7 +1014,6 @@
 				BA44C2FE2A31FA2D00193927 /* StarRating.swift in Sources */,
 				FD907D492A4356180020CFF0 /* NetworkServiceIntegrationTests.swift in Sources */,
 				EF95A0542A38698900E84ACD /* SitterMainTabViewModelTests.swift in Sources */,
-				FDD5385F2A41FAE800331977 /* WoofProductionEndpoint+Request.swift in Sources */,
 				FDCF49142A1CDB1600CD3BBB /* DetailPetSitterViewModel.swift in Sources */,
 				EF95A05B2A39B74100E84ACD /* DetailPetSitterViewModelTests.swift in Sources */,
 				199BC0A12A8B748F00824CC6 /* Obfuscator+bytesByObfuscating.swift in Sources */,
@@ -1074,7 +1069,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF5A7F332A14563800585616 /* DetailedPetSitterView.swift in Sources */,
-				FDD5385A2A41DE0700331977 /* WoofProductionEndpoint+Request.swift in Sources */,
 				9308D6132A31EFE40086193D /* CapsuleWithWhiteText.swift in Sources */,
 				368BF0EC2A152FA500F3F750 /* KeyValueStorage.swift in Sources */,
 				FDD143E22A05233B000BBA77 /* String+IconName.swift in Sources */,
