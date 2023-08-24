@@ -19,6 +19,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
  - Update PR template [#194](https://github.com/ios-course/ironfoudation-team-project/pull/194)
 
+## [0.3.1] - 21.08.2023
+
+### Changed 
+
+- Changing the application icon in order to enable distributing releases through TestFlight. - [#198](https://github.com/ios-course/ironfoudation-team-project/pull/198)
 
 ## [0.3.0] - 19.06.2023
 
