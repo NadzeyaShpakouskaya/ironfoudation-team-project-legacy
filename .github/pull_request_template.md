@@ -20,11 +20,13 @@ Are there things in here that you’d particularly like people to pay close atte
 
 <!-- Go through the checklist below to verify that your PR is good and ready for review -->
 ## Checks to complete
+- [ ] The PR title has a conventional commit style (short and descriptive).
+- [ ] The PR description includes essential information that helps understand the purpose of the changes.
 - [ ] I've built and run my changes, and no warnings or errors occurred.
 - [ ] All existing tests passed with my changes.
 - [ ] My code follows our style guide.
 - [ ] I've performed a self-review of my code.
-- [ ] PR's title has a conventional commit style (short and descriptive).
 - [ ] Every non-private interface is documented properly.
 - [ ] I've added tests for my code (if it makes sense).
+- [ ] I've updated `CHANGELOG.md` file.
 - [ ] PR has assignee, reviewers, milestone, it is properly linked to the project and to the issue.

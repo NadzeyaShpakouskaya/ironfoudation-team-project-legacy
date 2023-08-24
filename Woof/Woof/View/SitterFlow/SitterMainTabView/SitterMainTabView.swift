@@ -24,7 +24,7 @@ struct SitterMainTabView: View {
                         }
                         .tag(Tab.walkings)
 
-                    Text("My profile")
+                    SitterProfileView()
                         .tabItem {
                             Label("Profile", systemImage: .IconName.profileTab)
                         }

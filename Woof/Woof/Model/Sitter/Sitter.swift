@@ -29,4 +29,59 @@ struct Sitter: Codable, Identifiable {
 
     /// The price per hour charged by the sitter.
     var pricePerHour: Double
+
+    /**
+     Creates a pet sitter instance with the specified parameters with the unique identifier.
+     Each instance of the new pet sitter has a unique id.
+
+     - Parameters:
+      - name: The first name of the pet sitter.
+      - surname: The last name of the pet sitter.
+      - phone: The phone number of the pet sitter.
+      - avatarURL: The URL that provides an avatar image of the pet sitter.
+      - bio: The additional information about the pet sitter.
+      - rating: The rating of the pet sitter.
+      - pricePerHour: The price per hour charged by the pet sitter.
+     */
+    init(
+        name: String,
+        surname: String,
+        phone: String,
+        avatarUrl: URL?,
+        bio: String,
+        rating: Double,
+        pricePerHour: Double
+    ) {
+        id = UUID()
+        self.name = name
+        self.surname = surname
+        self.phone = phone
+        self.avatarUrl = avatarUrl
+        self.bio = bio
+        self.rating = rating
+        self.pricePerHour = pricePerHour
+    }
+
+    /**
+     Creates a new pet sitter instance with the specified parameters described below.
+     Each instance of the new pet sitter has a unique id.
+
+     The parameters of a new initialized instance are:
+     - `name` is hardcoded value `User`;
+     - `avatarUrl` is nil;
+     - `rating` is equal 0;
+     - `pricePerHour`is equal 0;
+     - other parameters are specified with the empty string ("").
+     */
+    init() {
+        self.init(
+            name: "User",
+            surname: "",
+            phone: "",
+            avatarUrl: nil,
+            bio: "",
+            rating: 0,
+            pricePerHour: 0
+        )
+    }
 }
