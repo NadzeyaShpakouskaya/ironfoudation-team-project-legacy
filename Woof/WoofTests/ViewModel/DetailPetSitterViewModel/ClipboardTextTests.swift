@@ -53,10 +53,10 @@ final class CopyToClipboardTextTests: XCTestCase {
 
     private let testViewModel = DetailSitterViewModel(
         sitter: Sitter(
-            id: UUID(),
             name: "",
             surname: "",
             phone: "",
+            avatarUrl: nil,
             bio: "",
             rating: 0,
             pricePerHour: 0

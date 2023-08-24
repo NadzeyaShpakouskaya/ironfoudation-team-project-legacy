@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		199BC09E2A8B73B900824CC6 /* ObfuscatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199BC09D2A8B73B900824CC6 /* ObfuscatorTests.swift */; };
+		199BC0A12A8B748F00824CC6 /* Obfuscator+bytesByObfuscating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199BC0A02A8B748F00824CC6 /* Obfuscator+bytesByObfuscating.swift */; };
+		199BC0A22A8B793400824CC6 /* Obfuscator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD790632A45732D007C1265 /* Obfuscator.swift */; };
+		199BC0A32A8B850A00824CC6 /* ObfuscatorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD790692A4587B7007C1265 /* ObfuscatorError.swift */; };
+		199BC0AA2A8CC3E400824CC6 /* ObfuscatorErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199BC0A92A8CC3E400824CC6 /* ObfuscatorErrorTests.swift */; };
 		1CE7E9C92A247CF1000A0509 /* KeyValueStorageInitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE7E9C82A247CF1000A0509 /* KeyValueStorageInitTests.swift */; };
 		1CE7E9CC2A24889B000A0509 /* KeyValueStorage+UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE7E9CB2A24889B000A0509 /* KeyValueStorage+UnitTests.swift */; };
 		36199B0F2A1FB1C900725FC8 /* KeyValueStorage+TestKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36199B0E2A1FB1C900725FC8 /* KeyValueStorage+TestKey.swift */; };
 		362732A22A1B800B0062E4B5 /* KeyValueStorageDeleteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362732A12A1B800A0062E4B5 /* KeyValueStorageDeleteTests.swift */; };
 		362F63062A28A8B6002A659B /* OwnerProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362F63052A28A8B6002A659B /* OwnerProfileView.swift */; };
-		365D3F292A3888B100EC9B30 /* LoginViewModelSetUserRoleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365D3F272A3888B100EC9B30 /* LoginViewModelSetUserRoleTests.swift */; };
 		365D3F2A2A38891D00EC9B30 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E97F162A2F42FD00030E3E /* LoginViewModel.swift */; };
 		3673D6372A04F7FD009D699D /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3673D6362A04F7FD009D699D /* Owner.swift */; };
 		368BF0EC2A152FA500F3F750 /* KeyValueStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368BF0EB2A152FA500F3F750 /* KeyValueStorage.swift */; };
@@ -25,6 +29,7 @@
 		36C54AFC2A17A79200748023 /* KeyValueStorageLoadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C54AFB2A17A79200748023 /* KeyValueStorageLoadTests.swift */; };
 		36E97F172A2F42FD00030E3E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E97F162A2F42FD00030E3E /* LoginViewModel.swift */; };
 		9308D6132A31EFE40086193D /* CapsuleWithWhiteText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9308D6122A31EFE40086193D /* CapsuleWithWhiteText.swift */; };
+		935F23852A42D60A00820E7B /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935F23842A42D60A00820E7B /* LoginViewModelTests.swift */; };
 		9371BAC32A3F3334000980F9 /* UserRoleViewModelResetCurrentRoleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9371BAC22A3F3333000980F9 /* UserRoleViewModelResetCurrentRoleTests.swift */; };
 		9371BAC52A3F337B000980F9 /* UserRoleViewModelSetOwnerRoleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9371BAC42A3F337B000980F9 /* UserRoleViewModelSetOwnerRoleTests.swift */; };
 		9371BAC72A3F33B7000980F9 /* UserRoleViewModelSetSitterRoleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9371BAC62A3F33B7000980F9 /* UserRoleViewModelSetSitterRoleTests.swift */; };
@@ -36,10 +41,19 @@
 		BA4561812A334A8A00C6E595 /* Stars.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4561802A334A8A00C6E595 /* Stars.swift */; };
 		BA4561822A334D2D00C6E595 /* Stars.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4561802A334A8A00C6E595 /* Stars.swift */; };
 		BA4561872A3996BF00C6E595 /* SitterInfoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4561862A3996BF00C6E595 /* SitterInfoCardView.swift */; };
+		BA77BDBD2A45852D00CA76EA /* SitterProfileViewModelCancelEditingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA77BDBC2A45852D00CA76EA /* SitterProfileViewModelCancelEditingTests.swift */; };
 		BAD0FC632A31D20800F59544 /* StarRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD0FC622A31D20800F59544 /* StarRating.swift */; };
+		BAE74E922A42E1DD0083C68E /* SitterProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE74E912A42E1DD0083C68E /* SitterProfileView.swift */; };
 		EF16BB1E2A24D5FA007922C6 /* OwnerCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF16BB1D2A24D5FA007922C6 /* OwnerCardView.swift */; };
 		EF16BB262A24E101007922C6 /* Owner+Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF16BB252A24E101007922C6 /* Owner+Dummy.swift */; };
 		EF303EBE2A1762CF0086065B /* FiveStarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF303EBD2A1762CF0086065B /* FiveStarRatingView.swift */; };
+		EF4CBAEB2A3C6DCA00B4A223 /* SitterProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4CBAEA2A3C6DCA00B4A223 /* SitterProfileViewModel.swift */; };
+		EF4CBAEC2A3C6DCA00B4A223 /* SitterProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4CBAEA2A3C6DCA00B4A223 /* SitterProfileViewModel.swift */; };
+		EF4CBAEF2A3C704300B4A223 /* Sitter+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4CBAEE2A3C704300B4A223 /* Sitter+Tests.swift */; };
+		EF4CBAF02A3C704300B4A223 /* Sitter+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4CBAEE2A3C704300B4A223 /* Sitter+Tests.swift */; };
+		EF4CBAF32A3C708E00B4A223 /* SitterProfileViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4CBAF12A3C708E00B4A223 /* SitterProfileViewModelTests.swift */; };
+		EF4CBAF62A3C712C00B4A223 /* SitterProfileViewModelSaveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4CBAF42A3C712C00B4A223 /* SitterProfileViewModelSaveTests.swift */; };
+		EF4CBAFA2A3C94F000B4A223 /* Sitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD143CC2A03E575000BBA77 /* Sitter.swift */; };
 		EF5A7F2F2A14504F00585616 /* DetailPetSitterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5A7F2E2A14504F00585616 /* DetailPetSitterViewModel.swift */; };
 		EF5A7F332A14563800585616 /* DetailedPetSitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5A7F322A14563800585616 /* DetailedPetSitterView.swift */; };
 		EF7B7F002A147D8300F00B4E /* TextWithIconLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B7EFF2A147D8300F00B4E /* TextWithIconLabelView.swift */; };
@@ -69,7 +83,6 @@
 		FD14A2B42A286C5200362461 /* KeyValueStorage+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD14A2A62A27803600362461 /* KeyValueStorage+Name.swift */; };
 		FD14A2B52A286C5C00362461 /* KeyValueStorage+Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD14A2A82A27804F00362461 /* KeyValueStorage+Key.swift */; };
 		FD14A2B72A28709400362461 /* OwnerProfileViewModelSaveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD14A2B62A28709400362461 /* OwnerProfileViewModelSaveTests.swift */; };
-		FD1FA3B52A090916000A3A91 /* Sitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD143CC2A03E575000BBA77 /* Sitter.swift */; };
 		FD1FA3C32A0A682E000A3A91 /* SitterCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1FA3C22A0A682E000A3A91 /* SitterCardViewModel.swift */; };
 		FD1FA3CC2A0A781E000A3A91 /* Sitter+Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1FA3CB2A0A781E000A3A91 /* Sitter+Dummy.swift */; };
 		FD2F7B2D2A0CDC44008F6F49 /* EmilyDoeAvatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD2F7B2C2A0CDC44008F6F49 /* EmilyDoeAvatar.jpg */; };
@@ -100,6 +113,8 @@
 		FD7F98A32A0E10510058DBEB /* AppStyle+UIElementConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7F98A22A0E10510058DBEB /* AppStyle+UIElementConstant.swift */; };
 		FD7F98A52A0E12290058DBEB /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7F98A42A0E12290058DBEB /* AvatarView.swift */; };
 		FD8182302A20C3C300AE1016 /* KeyValueStorage+TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD81822F2A20C3C300AE1016 /* KeyValueStorage+TestData.swift */; };
+		FD907D432A42CF300020CFF0 /* SimpleNetworkService in Frameworks */ = {isa = PBXBuildFile; productRef = FD907D422A42CF300020CFF0 /* SimpleNetworkService */; };
+		FD907D492A4356180020CFF0 /* NetworkServiceIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD907D482A4356180020CFF0 /* NetworkServiceIntegrationTests.swift */; };
 		FD9802282A287670003DEE5C /* OwnerProfileViewModelGetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9802272A287670003DEE5C /* OwnerProfileViewModelGetTests.swift */; };
 		FD98022A2A2878C1003DEE5C /* Owner+Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9802292A2878C1003DEE5C /* Owner+Test.swift */; };
 		FDCF49142A1CDB1600CD3BBB /* DetailPetSitterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5A7F2E2A14504F00585616 /* DetailPetSitterViewModel.swift */; };
@@ -111,6 +126,8 @@
 		FDD143FE2A052D5A000BBA77 /* Color+AppScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD143CA2A03C629000BBA77 /* Color+AppScheme.swift */; };
 		FDD143FF2A052D5E000BBA77 /* String+IconName.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD143E12A05233B000BBA77 /* String+IconName.swift */; };
 		FDD144012A0532D5000BBA77 /* String+IconNameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD144002A0532D5000BBA77 /* String+IconNameTests.swift */; };
+		FDD790642A45732D007C1265 /* Obfuscator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD790632A45732D007C1265 /* Obfuscator.swift */; };
+		FDD7906A2A4587B7007C1265 /* ObfuscatorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD790692A4587B7007C1265 /* ObfuscatorError.swift */; };
 		FDDDA6882A25C3FE00839091 /* EditOwnerInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDDA6872A25C3FE00839091 /* EditOwnerInformationView.swift */; };
 		FDE0CEA92A00F8370023F784 /* WoofApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE0CEA82A00F8370023F784 /* WoofApp.swift */; };
 		FDE0CEAD2A00F8390023F784 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDE0CEAC2A00F8390023F784 /* Assets.xcassets */; };
@@ -137,12 +154,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		199BC09D2A8B73B900824CC6 /* ObfuscatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObfuscatorTests.swift; sourceTree = "<group>"; };
+		199BC0A02A8B748F00824CC6 /* Obfuscator+bytesByObfuscating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Obfuscator+bytesByObfuscating.swift"; sourceTree = "<group>"; };
+		199BC0A92A8CC3E400824CC6 /* ObfuscatorErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObfuscatorErrorTests.swift; sourceTree = "<group>"; };
 		1CE7E9C82A247CF1000A0509 /* KeyValueStorageInitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStorageInitTests.swift; sourceTree = "<group>"; };
 		1CE7E9CB2A24889B000A0509 /* KeyValueStorage+UnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyValueStorage+UnitTests.swift"; sourceTree = "<group>"; };
 		36199B0E2A1FB1C900725FC8 /* KeyValueStorage+TestKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyValueStorage+TestKey.swift"; sourceTree = "<group>"; };
 		362732A12A1B800A0062E4B5 /* KeyValueStorageDeleteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStorageDeleteTests.swift; sourceTree = "<group>"; };
 		362F63052A28A8B6002A659B /* OwnerProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerProfileView.swift; sourceTree = "<group>"; };
-		365D3F272A3888B100EC9B30 /* LoginViewModelSetUserRoleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelSetUserRoleTests.swift; sourceTree = "<group>"; };
 		3673D6362A04F7FD009D699D /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		368BF0EB2A152FA500F3F750 /* KeyValueStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStorage.swift; sourceTree = "<group>"; };
 		368F66602A308D2600C8F69D /* PreferencesHandlerGetUserRoleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesHandlerGetUserRoleTests.swift; sourceTree = "<group>"; };
@@ -152,6 +171,7 @@
 		36C54AFB2A17A79200748023 /* KeyValueStorageLoadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStorageLoadTests.swift; sourceTree = "<group>"; };
 		36E97F162A2F42FD00030E3E /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		9308D6122A31EFE40086193D /* CapsuleWithWhiteText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleWithWhiteText.swift; sourceTree = "<group>"; };
+		935F23842A42D60A00820E7B /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
 		9371BAC22A3F3333000980F9 /* UserRoleViewModelResetCurrentRoleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRoleViewModelResetCurrentRoleTests.swift; sourceTree = "<group>"; };
 		9371BAC42A3F337B000980F9 /* UserRoleViewModelSetOwnerRoleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRoleViewModelSetOwnerRoleTests.swift; sourceTree = "<group>"; };
 		9371BAC62A3F33B7000980F9 /* UserRoleViewModelSetSitterRoleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRoleViewModelSetSitterRoleTests.swift; sourceTree = "<group>"; };
@@ -161,10 +181,16 @@
 		9B6498A72A31E7CA00004FB3 /* CopyToClipboardLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyToClipboardLabel.swift; sourceTree = "<group>"; };
 		BA4561802A334A8A00C6E595 /* Stars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stars.swift; sourceTree = "<group>"; };
 		BA4561862A3996BF00C6E595 /* SitterInfoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitterInfoCardView.swift; sourceTree = "<group>"; };
+		BA77BDBC2A45852D00CA76EA /* SitterProfileViewModelCancelEditingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitterProfileViewModelCancelEditingTests.swift; sourceTree = "<group>"; };
 		BAD0FC622A31D20800F59544 /* StarRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRating.swift; sourceTree = "<group>"; };
+		BAE74E912A42E1DD0083C68E /* SitterProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitterProfileView.swift; sourceTree = "<group>"; };
 		EF16BB1D2A24D5FA007922C6 /* OwnerCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerCardView.swift; sourceTree = "<group>"; };
 		EF16BB252A24E101007922C6 /* Owner+Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Owner+Dummy.swift"; sourceTree = "<group>"; };
 		EF303EBD2A1762CF0086065B /* FiveStarRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveStarRatingView.swift; sourceTree = "<group>"; };
+		EF4CBAEA2A3C6DCA00B4A223 /* SitterProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitterProfileViewModel.swift; sourceTree = "<group>"; };
+		EF4CBAEE2A3C704300B4A223 /* Sitter+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sitter+Tests.swift"; sourceTree = "<group>"; };
+		EF4CBAF12A3C708E00B4A223 /* SitterProfileViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitterProfileViewModelTests.swift; sourceTree = "<group>"; };
+		EF4CBAF42A3C712C00B4A223 /* SitterProfileViewModelSaveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitterProfileViewModelSaveTests.swift; sourceTree = "<group>"; };
 		EF5A7F2E2A14504F00585616 /* DetailPetSitterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPetSitterViewModel.swift; sourceTree = "<group>"; };
 		EF5A7F322A14563800585616 /* DetailedPetSitterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedPetSitterView.swift; sourceTree = "<group>"; };
 		EF7B7EFF2A147D8300F00B4E /* TextWithIconLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextWithIconLabelView.swift; sourceTree = "<group>"; };
@@ -209,6 +235,7 @@
 		FD7F98A22A0E10510058DBEB /* AppStyle+UIElementConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppStyle+UIElementConstant.swift"; sourceTree = "<group>"; };
 		FD7F98A42A0E12290058DBEB /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		FD81822F2A20C3C300AE1016 /* KeyValueStorage+TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyValueStorage+TestData.swift"; sourceTree = "<group>"; };
+		FD907D482A4356180020CFF0 /* NetworkServiceIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceIntegrationTests.swift; sourceTree = "<group>"; };
 		FD9802272A287670003DEE5C /* OwnerProfileViewModelGetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerProfileViewModelGetTests.swift; sourceTree = "<group>"; };
 		FD9802292A2878C1003DEE5C /* Owner+Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Owner+Test.swift"; sourceTree = "<group>"; };
 		FDCF49122A1CDA8800CD3BBB /* DetailPetSitterViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailPetSitterViewModelTests.swift; path = WoofTests/ViewModel/DetailPetSitterViewModel/DetailPetSitterViewModelTests.swift; sourceTree = SOURCE_ROOT; };
@@ -220,6 +247,8 @@
 		FDD143F42A052A11000BBA77 /* WoofTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WoofTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDD143F62A052A11000BBA77 /* Color+AppSchemeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+AppSchemeTests.swift"; sourceTree = "<group>"; };
 		FDD144002A0532D5000BBA77 /* String+IconNameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+IconNameTests.swift"; sourceTree = "<group>"; };
+		FDD790632A45732D007C1265 /* Obfuscator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Obfuscator.swift; sourceTree = "<group>"; };
+		FDD790692A4587B7007C1265 /* ObfuscatorError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObfuscatorError.swift; sourceTree = "<group>"; };
 		FDDDA6872A25C3FE00839091 /* EditOwnerInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditOwnerInformationView.swift; sourceTree = "<group>"; };
 		FDE0CEA52A00F8370023F784 /* Woof.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Woof.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDE0CEA82A00F8370023F784 /* WoofApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoofApp.swift; sourceTree = "<group>"; };
@@ -245,26 +274,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD907D432A42CF300020CFF0 /* SimpleNetworkService in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		199BC09F2A8B73C400824CC6 /* ObfuscatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				199BC09D2A8B73B900824CC6 /* ObfuscatorTests.swift */,
+				199BC0A02A8B748F00824CC6 /* Obfuscator+bytesByObfuscating.swift */,
+			);
+			path = ObfuscatorTests;
+			sourceTree = "<group>";
+		};
+		199BC0AB2A8CC3F300824CC6 /* ObfuscatorErrorTests */ = {
+			isa = PBXGroup;
+			children = (
+				199BC0A92A8CC3E400824CC6 /* ObfuscatorErrorTests.swift */,
+			);
+			path = ObfuscatorErrorTests;
+			sourceTree = "<group>";
+		};
 		1CE7E9CA2A248875000A0509 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				1CE7E9CB2A24889B000A0509 /* KeyValueStorage+UnitTests.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		365D3F232A387D3200EC9B30 /* LoginViewModelTests */ = {
-			isa = PBXGroup;
-			children = (
-				365D3F272A3888B100EC9B30 /* LoginViewModelSetUserRoleTests.swift */,
-			);
-			path = LoginViewModelTests;
 			sourceTree = "<group>";
 		};
 		36BEA7592A1621B70020F6AE /* Model */ = {
@@ -334,6 +373,8 @@
 			isa = PBXGroup;
 			children = (
 				BA4561862A3996BF00C6E595 /* SitterInfoCardView.swift */,
+				BAE74E912A42E1DD0083C68E /* SitterProfileView.swift */,
+				EF95A06A2A3AC6DF00E84ACD /* EditSitterInformationView.swift */,
 			);
 			path = SitterProfileView;
 			sourceTree = "<group>";
@@ -358,6 +399,17 @@
 				EF95A0682A3AC66400E84ACD /* TextEditorWithPlaceholder.swift */,
 			);
 			path = ReusableViews;
+			sourceTree = "<group>";
+		};
+		EF4CBAED2A3C6FF100B4A223 /* SitterProfileViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF4CBAEE2A3C704300B4A223 /* Sitter+Tests.swift */,
+				EF4CBAF12A3C708E00B4A223 /* SitterProfileViewModelTests.swift */,
+				EF4CBAF42A3C712C00B4A223 /* SitterProfileViewModelSaveTests.swift */,
+				BA77BDBC2A45852D00CA76EA /* SitterProfileViewModelCancelEditingTests.swift */,
+			);
+			path = SitterProfileViewModelTests;
 			sourceTree = "<group>";
 		};
 		EF5A7F312A14561000585616 /* DetailedPetSitterView */ = {
@@ -425,6 +477,8 @@
 			children = (
 				FD0291712A0E16DF00F88377 /* AppStyleTests */,
 				FD37A9962A0B76BA0001BABB /* DataTransformerTests */,
+				199BC09F2A8B73C400824CC6 /* ObfuscatorTests */,
+				199BC0AB2A8CC3F300824CC6 /* ObfuscatorErrorTests */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -496,7 +550,6 @@
 			children = (
 				BA4561832A39969000C6E595 /* SitterProfileView */,
 				FD6A2E5B2A2EF67A00934C3E /* SitterMainTabView */,
-				EF95A06A2A3AC6DF00E84ACD /* EditSitterInformationView.swift */,
 			);
 			path = SitterFlow;
 			sourceTree = "<group>";
@@ -537,6 +590,22 @@
 			path = TestData;
 			sourceTree = "<group>";
 		};
+		FD907D4A2A440D6B0020CFF0 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				FD907D4B2A4456870020CFF0 /* NetworkService */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		FD907D4B2A4456870020CFF0 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				FD907D482A4356180020CFF0 /* NetworkServiceIntegrationTests.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
 		FDAA7BF52A0CB8E2007905CB /* DataTrasnformer */ = {
 			isa = PBXGroup;
 			children = (
@@ -549,11 +618,12 @@
 			isa = PBXGroup;
 			children = (
 				9371BAC12A3F323D000980F9 /* UserRoleViewModelTests */,
+				EF4CBAED2A3C6FF100B4A223 /* SitterProfileViewModelTests */,
 				EF95A04E2A38615E00E84ACD /* OwnerMainTabViewModelTests.swift */,
 				EF95A0522A38698900E84ACD /* SitterMainTabViewModelTests.swift */,
 				9B24803A2A33550A000B66CD /* DetailPetSitterViewModel */,
-				365D3F232A387D3200EC9B30 /* LoginViewModelTests */,
 				FD14A2B82A2870A500362461 /* OwnerProfileViewModelTests */,
+				935F23842A42D60A00820E7B /* LoginViewModelTests.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -564,8 +634,18 @@
 				FDCF49102A1CDA0A00CD3BBB /* ViewModel */,
 				36BEA7592A1621B70020F6AE /* Model */,
 				FD1FA3CD2A0A7DDB000A3A91 /* Helper */,
+				FD907D4A2A440D6B0020CFF0 /* ThirdParty */,
 			);
 			path = WoofTests;
+			sourceTree = "<group>";
+		};
+		FDD790622A457316007C1265 /* Obfuscator */ = {
+			isa = PBXGroup;
+			children = (
+				FDD790632A45732D007C1265 /* Obfuscator.swift */,
+				FDD790692A4587B7007C1265 /* ObfuscatorError.swift */,
+			);
+			path = Obfuscator;
 			sourceTree = "<group>";
 		};
 		FDDDA6862A25C3CD00839091 /* OwnerProfileView */ = {
@@ -653,6 +733,7 @@
 				EF5A7F2E2A14504F00585616 /* DetailPetSitterViewModel.swift */,
 				FD2FA22A2A129CA1002B618B /* SitterListViewModel.swift */,
 				36E97F162A2F42FD00030E3E /* LoginViewModel.swift */,
+				EF4CBAEA2A3C6DCA00B4A223 /* SitterProfileViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -660,6 +741,7 @@
 		FDE0CEBD2A0269570023F784 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				FDD790622A457316007C1265 /* Obfuscator */,
 				FD0291702A0E16D000F88377 /* AppStyle */,
 				FDAA7BF52A0CB8E2007905CB /* DataTrasnformer */,
 			);
@@ -723,8 +805,12 @@
 			buildRules = (
 			);
 			dependencies = (
+				FD907D472A42FF870020CFF0 /* PBXTargetDependency */,
 			);
 			name = Woof;
+			packageProductDependencies = (
+				FD907D422A42CF300020CFF0 /* SimpleNetworkService */,
+			);
 			productName = Woof;
 			productReference = FDE0CEA52A00F8370023F784 /* Woof.app */;
 			productType = "com.apple.product-type.application";
@@ -757,6 +843,9 @@
 				Base,
 			);
 			mainGroup = FDE0CE9C2A00F8370023F784;
+			packageReferences = (
+				FD907D412A42CF300020CFF0 /* XCRemoteSwiftPackageReference "simple-network-service" */,
+			);
 			productRefGroup = FDE0CEA62A00F8370023F784 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -880,6 +969,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36BEA7582A1621B10020F6AE /* KeyValueStorageSaveTests.swift in Sources */,
+				BA77BDBD2A45852D00CA76EA /* SitterProfileViewModelCancelEditingTests.swift in Sources */,
 				FD9802282A287670003DEE5C /* OwnerProfileViewModelGetTests.swift in Sources */,
 				FD6A2E612A2F067E00934C3E /* KeyValueStorage+KeyTests.swift in Sources */,
 				FD8182302A20C3C300AE1016 /* KeyValueStorage+TestData.swift in Sources */,
@@ -898,11 +988,13 @@
 				EF95A0502A38615E00E84ACD /* OwnerMainTabViewModelTests.swift in Sources */,
 				36C06F5D2A2F5DDB00B8EBDF /* PreferencesHandler.swift in Sources */,
 				BA4561822A334D2D00C6E595 /* Stars.swift in Sources */,
-				365D3F292A3888B100EC9B30 /* LoginViewModelSetUserRoleTests.swift in Sources */,
 				BA44C2FE2A31FA2D00193927 /* StarRating.swift in Sources */,
+				FD907D492A4356180020CFF0 /* NetworkServiceIntegrationTests.swift in Sources */,
 				EF95A0542A38698900E84ACD /* SitterMainTabViewModelTests.swift in Sources */,
 				FDCF49142A1CDB1600CD3BBB /* DetailPetSitterViewModel.swift in Sources */,
 				EF95A05B2A39B74100E84ACD /* DetailPetSitterViewModelTests.swift in Sources */,
+				199BC0A12A8B748F00824CC6 /* Obfuscator+bytesByObfuscating.swift in Sources */,
+				935F23852A42D60A00820E7B /* LoginViewModelTests.swift in Sources */,
 				FDEE43CD2A2F4E51007DE0A9 /* PreferencesTests.swift in Sources */,
 				EF95A04B2A385FA900E84ACD /* OwnerMainTabViewModel.swift in Sources */,
 				FD98022A2A2878C1003DEE5C /* Owner+Test.swift in Sources */,
@@ -910,8 +1002,10 @@
 				EF95A0552A386A2300E84ACD /* SitterListViewModel.swift in Sources */,
 				1CE7E9CC2A24889B000A0509 /* KeyValueStorage+UnitTests.swift in Sources */,
 				FD2F7B322A0CE029008F6F49 /* Sitter.swift in Sources */,
+				199BC0AA2A8CC3E400824CC6 /* ObfuscatorErrorTests.swift in Sources */,
 				365D3F2A2A38891D00EC9B30 /* LoginViewModel.swift in Sources */,
 				FD02917C2A0E2CBC00F88377 /* AppStyle.swift in Sources */,
+				199BC09E2A8B73B900824CC6 /* ObfuscatorTests.swift in Sources */,
 				FD14A2B72A28709400362461 /* OwnerProfileViewModelSaveTests.swift in Sources */,
 				FD2F7B332A0CE032008F6F49 /* Owner.swift in Sources */,
 				EF95A0562A386A5F00E84ACD /* SitterMainTabViewModel.swift in Sources */,
@@ -920,11 +1014,14 @@
 				FD14A2B22A286BBD00362461 /* OwnerProfileViewModel.swift in Sources */,
 				362732A22A1B800B0062E4B5 /* KeyValueStorageDeleteTests.swift in Sources */,
 				FDD143FE2A052D5A000BBA77 /* Color+AppScheme.swift in Sources */,
+				199BC0A32A8B850A00824CC6 /* ObfuscatorError.swift in Sources */,
+				EF4CBAF02A3C704300B4A223 /* Sitter+Tests.swift in Sources */,
 				FDD144012A0532D5000BBA77 /* String+IconNameTests.swift in Sources */,
 				FD02917B2A0E2C5300F88377 /* AppStyle+UIElementConstant.swift in Sources */,
 				FDEE43CE2A2F4E56007DE0A9 /* Preferences.swift in Sources */,
 				FDEE43D12A2F525B007DE0A9 /* RoleTests.swift in Sources */,
 				FDEE43CF2A2F4E58007DE0A9 /* Role.swift in Sources */,
+				EF4CBAEC2A3C6DCA00B4A223 /* SitterProfileViewModel.swift in Sources */,
 				FD37A9982A0B77A90001BABB /* FiveStarRatingTests.swift in Sources */,
 				FDEE43E32A388854007DE0A9 /* UserRoleViewModel.swift in Sources */,
 				FD14A2B42A286C5200362461 /* KeyValueStorage+Name.swift in Sources */,
@@ -932,10 +1029,13 @@
 				1CE7E9C92A247CF1000A0509 /* KeyValueStorageInitTests.swift in Sources */,
 				36199B0F2A1FB1C900725FC8 /* KeyValueStorage+TestKey.swift in Sources */,
 				368BF0EF2A16103B00F3F750 /* KeyValueStorage.swift in Sources */,
+				EF4CBAF32A3C708E00B4A223 /* SitterProfileViewModelTests.swift in Sources */,
 				9B2480392A3354D8000B66CD /* ClipboardTextTests.swift in Sources */,
 				FD37A9952A0B6EA90001BABB /* DataTransformer.swift in Sources */,
 				FD6A2E632A2F072F00934C3E /* KeyValueStorage+NameTests.swift in Sources */,
+				EF4CBAF62A3C712C00B4A223 /* SitterProfileViewModelSaveTests.swift in Sources */,
 				FD2F7B342A0CE03B008F6F49 /* SitterCardViewModel.swift in Sources */,
+				199BC0A22A8B793400824CC6 /* Obfuscator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -945,11 +1045,11 @@
 			files = (
 				EF5A7F332A14563800585616 /* DetailedPetSitterView.swift in Sources */,
 				9308D6132A31EFE40086193D /* CapsuleWithWhiteText.swift in Sources */,
-				FD1FA3B52A090916000A3A91 /* Sitter.swift in Sources */,
 				368BF0EC2A152FA500F3F750 /* KeyValueStorage.swift in Sources */,
 				FDD143E22A05233B000BBA77 /* String+IconName.swift in Sources */,
 				FDEE43E02A386291007DE0A9 /* UserRoleViewModel.swift in Sources */,
 				FD6A2E5D2A2EF69500934C3E /* SitterMainTabView.swift in Sources */,
+				FDD7906A2A4587B7007C1265 /* ObfuscatorError.swift in Sources */,
 				FDD143C72A03BD48000BBA77 /* OwnerMainTabView.swift in Sources */,
 				FDEE43C92A2F45B8007DE0A9 /* Preferences.swift in Sources */,
 				EF16BB262A24E101007922C6 /* Owner+Dummy.swift in Sources */,
@@ -960,6 +1060,7 @@
 				36E97F172A2F42FD00030E3E /* LoginViewModel.swift in Sources */,
 				FD14A2A52A277FA400362461 /* OwnerProfileViewModel.swift in Sources */,
 				FD0291732A0E256F00F88377 /* GeneralInfoSectionView.swift in Sources */,
+				BAE74E922A42E1DD0083C68E /* SitterProfileView.swift in Sources */,
 				BA4561812A334A8A00C6E595 /* Stars.swift in Sources */,
 				FDD143E02A051F96000BBA77 /* OwnerMainTabView+Tab.swift in Sources */,
 				FD1FA3C32A0A682E000A3A91 /* SitterCardViewModel.swift in Sources */,
@@ -986,18 +1087,26 @@
 				BA4561872A3996BF00C6E595 /* SitterInfoCardView.swift in Sources */,
 				FD7F98A52A0E12290058DBEB /* AvatarView.swift in Sources */,
 				FD1FA3CC2A0A781E000A3A91 /* Sitter+Dummy.swift in Sources */,
+				EF4CBAFA2A3C94F000B4A223 /* Sitter.swift in Sources */,
+				EF4CBAEB2A3C6DCA00B4A223 /* SitterProfileViewModel.swift in Sources */,
 				FDEE43CB2A2F4602007DE0A9 /* Role.swift in Sources */,
 				FD14A2A92A27804F00362461 /* KeyValueStorage+Key.swift in Sources */,
+				EF4CBAEF2A3C704300B4A223 /* Sitter+Tests.swift in Sources */,
 				EF7B7F002A147D8300F00B4E /* TextWithIconLabelView.swift in Sources */,
 				FD14A2A72A27803600362461 /* KeyValueStorage+Name.swift in Sources */,
 				EF5A7F2F2A14504F00585616 /* DetailPetSitterViewModel.swift in Sources */,
 				FD0291752A0E273500F88377 /* BioSectionView.swift in Sources */,
+				FDD790642A45732D007C1265 /* Obfuscator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		FD907D472A42FF870020CFF0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = FD907D462A42FF870020CFF0 /* SimpleNetworkService */;
+		};
 		FDD143F92A052A11000BBA77 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FDE0CEA42A00F8370023F784 /* Woof */;
@@ -1011,11 +1120,11 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0.3.0;
+				CURRENT_PROJECT_VERSION = 0.4.0;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIUserInterfaceStyle = "$(MARKETING_VERSION)";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				MARKETING_VERSION = 0.3.0;
+				MARKETING_VERSION = 0.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.iron.foundation.WoofTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1033,11 +1142,11 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0.3.0;
+				CURRENT_PROJECT_VERSION = 0.4.0;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIUserInterfaceStyle = "$(MARKETING_VERSION)";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				MARKETING_VERSION = 0.3.0;
+				MARKETING_VERSION = 0.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.iron.foundation.WoofTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1083,7 +1192,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 0.3.1;
+				CURRENT_PROJECT_VERSION = 0.4.0;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -1102,7 +1211,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				MARKETING_VERSION = 0.3.1;
+				MARKETING_VERSION = 0.4.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1145,7 +1254,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 0.3.1;
+				CURRENT_PROJECT_VERSION = 0.4.0;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1158,7 +1267,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				MARKETING_VERSION = 0.3.1;
+				MARKETING_VERSION = 0.4.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1174,7 +1283,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0.3.1;
+				CURRENT_PROJECT_VERSION = 0.4.0;
 				DEVELOPMENT_ASSET_PATHS = "\"Woof/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1189,7 +1298,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.3.1;
+				MARKETING_VERSION = 0.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.iron.foundation.Woof;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1207,7 +1316,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0.3.1;
+				CURRENT_PROJECT_VERSION = 0.4.0;
 				DEVELOPMENT_ASSET_PATHS = "\"Woof/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1222,7 +1331,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.3.1;
+				MARKETING_VERSION = 0.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.iron.foundation.Woof;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1265,6 +1374,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FD907D412A42CF300020CFF0 /* XCRemoteSwiftPackageReference "simple-network-service" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ios-course/simple-network-service.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FD907D422A42CF300020CFF0 /* SimpleNetworkService */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FD907D412A42CF300020CFF0 /* XCRemoteSwiftPackageReference "simple-network-service" */;
+			productName = SimpleNetworkService;
+		};
+		FD907D462A42FF870020CFF0 /* SimpleNetworkService */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FD907D412A42CF300020CFF0 /* XCRemoteSwiftPackageReference "simple-network-service" */;
+			productName = SimpleNetworkService;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FDE0CE9D2A00F8370023F784 /* Project object */;
 }

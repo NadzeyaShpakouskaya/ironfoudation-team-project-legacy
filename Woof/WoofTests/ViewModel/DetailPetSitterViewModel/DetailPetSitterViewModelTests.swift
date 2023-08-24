@@ -3,10 +3,10 @@ import XCTest
 final class DetailPetSitterViewModelTests: XCTestCase {
     func testDetailPetSitterViewModelExistsInAPI() {
         let sitter = Sitter(
-            id: UUID(),
             name: "Ann",
             surname: "Anderson",
             phone: "132451",
+            avatarUrl: nil,
             bio: "Some random text",
             rating: 4.7,
             pricePerHour: 14
@@ -17,10 +17,10 @@ final class DetailPetSitterViewModelTests: XCTestCase {
 
     func testDetailPetSitterViewModelPropertiesReturnsExpectedValues() {
         let sitter = Sitter(
-            id: UUID(),
             name: "Ann",
             surname: "Anderson",
             phone: "132451",
+            avatarUrl: nil,
             bio: "Some random text",
             rating: 4.0,
             pricePerHour: 14
