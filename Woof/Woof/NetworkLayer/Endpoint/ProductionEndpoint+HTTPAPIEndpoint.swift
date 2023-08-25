@@ -2,16 +2,8 @@ import Foundation
 import NetworkService
 
 ///  Defines the production endpoints for the Woof app's API.
-enum WoofProductionEndpoint: HTTPAPIEndpoint {
+extension ProductionEndpoint: HTTPAPIEndpoint {
     typealias Environment = APIEnvironment
-
-    // MARK: - Internal interface
-
-    /// Request to get a list of the available sitters from endpoint.
-    case getSitters
-
-    /// Request to add or update, if the sitter already exists, information about sitter on the endpoint.
-    case addNew(sitter: Sitter)
 
     static var networkEnvironment = Environment.production
 
@@ -42,8 +34,8 @@ enum WoofProductionEndpoint: HTTPAPIEndpoint {
 
     var headers: HTTPHeaders {
         switch Self.networkEnvironment {
-        case .production: return [Self.authHeader: Self.authKey ?? ""]
-        case .staging: return [Self.authHeader: Self.authKey ?? ""]
+        case .production: return [Self.obfuscatedHeader: Self.obfuscatedKey]
+        case .staging: return [Self.obfuscatedHeader: Self.obfuscatedKey]
         }
     }
 
@@ -55,10 +47,4 @@ enum WoofProductionEndpoint: HTTPAPIEndpoint {
     private static let authHeader = "x-hasura-admin-secret"
     private static let obfuscatedHeader = ""
     private static let obfuscatedKey = ""
-    private static let authKey = try? Obfuscator.reveal("", salt: "")
-}
-
-enum APIEnvironment {
-    case production
-    case staging
 }
