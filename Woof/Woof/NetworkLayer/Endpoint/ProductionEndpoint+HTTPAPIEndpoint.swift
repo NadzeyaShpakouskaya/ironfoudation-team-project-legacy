@@ -32,7 +32,7 @@ extension ProductionEndpoint: HTTPAPIEndpoint {
     }
 
     var headers: HTTPHeaders {
-        return [Self.authHeader: Self.revealedKey ]
+        [Self.authHeader: Self.revealedKey]
     }
 
     // MARK: - Private interface
@@ -41,10 +41,10 @@ extension ProductionEndpoint: HTTPAPIEndpoint {
     private static let authHeader = "x-hasura-admin-secret"
     private static let obfuscatedKey = ""
     private static let salt = ""
-    
+
     private static var revealedKey: String {
         do {
-           return try Obfuscator.reveal(Self.obfuscatedKey, salt: Self.salt)
+            return try Obfuscator.reveal(Self.obfuscatedKey, salt: Self.salt)
         } catch {}
         return ""
     }

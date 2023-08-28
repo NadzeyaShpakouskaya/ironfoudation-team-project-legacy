@@ -1,5 +1,5 @@
 /// Represents the possible environments for API communication.
-enum APIEnvironment {
+enum APIEnvironment: CaseIterable {
     /// The production environment for live, real-world data.
     case production
 
