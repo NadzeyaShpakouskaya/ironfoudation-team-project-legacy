@@ -503,6 +503,7 @@
 		FD2F7B2E2A0CDCCB008F6F49 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FD33034C2A9C84460091A4BA /* SensitiveData */,
 				FD2F7B2B2A0CDC09008F6F49 /* Images */,
 			);
 			path = Resources;
@@ -541,6 +542,13 @@
 				FD3303452A98BD980091A4BA /* ProductionEndpoint+HTTPAPIEndpoint.swift */,
 			);
 			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		FD33034C2A9C84460091A4BA /* SensitiveData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SensitiveData;
 			sourceTree = "<group>";
 		};
 		FD37A9962A0B76BA0001BABB /* DataTransformerTests */ = {
