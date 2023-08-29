@@ -37,7 +37,7 @@ extension ProductionEndpoint: HTTPAPIEndpoint {
 
     // MARK: - Private interface
 
-    private static let baseProdURL = URL(string: "https://woof-app.hasura.app/api/rest/")!
+    private static let baseProdURL = URL(string: "https://woof-app.hasura.app/api/rest/") ?? Bundle.main.bundleURL
     private static let authHeader = "x-hasura-admin-secret"
     private static let obfuscatedKey = ""
     private static let salt = ""
