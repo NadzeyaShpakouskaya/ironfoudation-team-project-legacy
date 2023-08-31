@@ -14,6 +14,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Add `SitterProfileView` to display and edit personal information about the sitter - [#190](https://github.com/ios-course/ironfoudation-team-project/pull/190)
 - Add `Obfuscator` enum with `reveal(_:_:)` method - [#196](https://github.com/ios-course/ironfoudation-team-project/pull/196) 
 - Add bash script `Obfuscator.sh` - [#197](https://github.com/ios-course/ironfoudation-team-project/pull/197)
+- Add `ProductionEndpoint`, `APIEnvironment` - [#199](https://github.com/ios-course/ironfoudation-team-project/pull/199)
 
 ### Changed
 
