@@ -2,7 +2,7 @@ import Foundation
 import NetworkService
 
 ///  Defines the production endpoints for the Woof app's API.
-extension ProductionEndpoint: HTTPAPIEndpoint {
+extension WoofAppEndpoint: HTTPAPIEndpoint {
     // MARK: - Internal interface
 
     typealias Environment = APIEnvironment
@@ -32,7 +32,12 @@ extension ProductionEndpoint: HTTPAPIEndpoint {
     }
 
     var headers: HTTPHeaders {
-        [Self.authHeader: Self.revealedKey]
+        switch Self.networkEnvironment {
+        case .production:
+            return [Self.authHeader: Self.revealedKey]
+        case .staging:
+            return [:]
+        }
     }
 
     // MARK: - Private interface
@@ -45,7 +50,8 @@ extension ProductionEndpoint: HTTPAPIEndpoint {
     private static var revealedKey: String {
         do {
             return try Obfuscator.reveal(obfuscatedKey, salt: salt)
-        } catch {}
-        return ""
+        } catch {
+            fatalError(error.localizedDescription)
+        }
     }
 }

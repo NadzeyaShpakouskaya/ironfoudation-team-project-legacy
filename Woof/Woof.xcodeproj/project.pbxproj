@@ -131,9 +131,9 @@
 		FDD143FE2A052D5A000BBA77 /* Color+AppScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD143CA2A03C629000BBA77 /* Color+AppScheme.swift */; };
 		FDD143FF2A052D5E000BBA77 /* String+IconName.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD143E12A05233B000BBA77 /* String+IconName.swift */; };
 		FDD144012A0532D5000BBA77 /* String+IconNameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD144002A0532D5000BBA77 /* String+IconNameTests.swift */; };
-		FDD538582A41D6C900331977 /* ProductionEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD538572A41D6C900331977 /* ProductionEndpoint.swift */; };
+		FDD538582A41D6C900331977 /* WoofAppEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD538572A41D6C900331977 /* WoofAppEndpoint.swift */; };
 		FDD5385D2A41FADF00331977 /* ProductionEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD5385C2A41FADF00331977 /* ProductionEndpointTests.swift */; };
-		FDD5385E2A41FAE500331977 /* ProductionEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD538572A41D6C900331977 /* ProductionEndpoint.swift */; };
+		FDD5385E2A41FAE500331977 /* WoofAppEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD538572A41D6C900331977 /* WoofAppEndpoint.swift */; };
 		FDD790642A45732D007C1265 /* Obfuscator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD790632A45732D007C1265 /* Obfuscator.swift */; };
 		FDD7906A2A4587B7007C1265 /* ObfuscatorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD790692A4587B7007C1265 /* ObfuscatorError.swift */; };
 		FDDDA6882A25C3FE00839091 /* EditOwnerInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDDA6872A25C3FE00839091 /* EditOwnerInformationView.swift */; };
@@ -258,7 +258,7 @@
 		FDD143F42A052A11000BBA77 /* WoofTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WoofTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDD143F62A052A11000BBA77 /* Color+AppSchemeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+AppSchemeTests.swift"; sourceTree = "<group>"; };
 		FDD144002A0532D5000BBA77 /* String+IconNameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+IconNameTests.swift"; sourceTree = "<group>"; };
-		FDD538572A41D6C900331977 /* ProductionEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductionEndpoint.swift; sourceTree = "<group>"; };
+		FDD538572A41D6C900331977 /* WoofAppEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoofAppEndpoint.swift; sourceTree = "<group>"; };
 		FDD5385C2A41FADF00331977 /* ProductionEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductionEndpointTests.swift; sourceTree = "<group>"; };
 		FDD790632A45732D007C1265 /* Obfuscator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Obfuscator.swift; sourceTree = "<group>"; };
 		FDD790692A4587B7007C1265 /* ObfuscatorError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObfuscatorError.swift; sourceTree = "<group>"; };
@@ -541,7 +541,7 @@
 		FD3303442A98BD540091A4BA /* Endpoint */ = {
 			isa = PBXGroup;
 			children = (
-				FDD538572A41D6C900331977 /* ProductionEndpoint.swift */,
+				FDD538572A41D6C900331977 /* WoofAppEndpoint.swift */,
 				FD3303452A98BD980091A4BA /* ProductionEndpoint+HTTPAPIEndpoint.swift */,
 			);
 			path = Endpoint;
@@ -1094,7 +1094,7 @@
 				FD37A9982A0B77A90001BABB /* FiveStarRatingTests.swift in Sources */,
 				FDEE43E32A388854007DE0A9 /* UserRoleViewModel.swift in Sources */,
 				FD14A2B42A286C5200362461 /* KeyValueStorage+Name.swift in Sources */,
-				FDD5385E2A41FAE500331977 /* ProductionEndpoint.swift in Sources */,
+				FDD5385E2A41FAE500331977 /* WoofAppEndpoint.swift in Sources */,
 				FDD143FF2A052D5E000BBA77 /* String+IconName.swift in Sources */,
 				1CE7E9C92A247CF1000A0509 /* KeyValueStorageInitTests.swift in Sources */,
 				FD3303512A9CAB210091A4BA /* APIEnvironment.swift in Sources */,
@@ -1152,7 +1152,7 @@
 				EF95A04D2A385FCF00E84ACD /* SitterMainTabViewModel.swift in Sources */,
 				362F63062A28A8B6002A659B /* OwnerProfileView.swift in Sources */,
 				93DDB06C2A3B30B100D7D97A /* PurpleCapsuleOfInfinityWidth.swift in Sources */,
-				FDD538582A41D6C900331977 /* ProductionEndpoint.swift in Sources */,
+				FDD538582A41D6C900331977 /* WoofAppEndpoint.swift in Sources */,
 				FD2FA22B2A129CA1002B618B /* SitterListViewModel.swift in Sources */,
 				93DDB06E2A3B31E800D7D97A /* LoginView.swift in Sources */,
 				FDE0CEA92A00F8370023F784 /* WoofApp.swift in Sources */,
