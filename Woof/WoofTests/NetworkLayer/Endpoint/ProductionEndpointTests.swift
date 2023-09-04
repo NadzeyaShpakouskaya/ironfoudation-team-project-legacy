@@ -1,8 +1,8 @@
 import NetworkService
 import XCTest
 
-final class ProductionEndpointTests: XCTestCase {
-    func testAllProductionEndpointPropertiesAreAvailable() {
+final class WoofAppEndpointTests: XCTestCase {
+    func testAllWoofAppEndpointPropertiesAreAvailable() {
         let _ = WoofAppEndpoint.networkEnvironment
     }
 }

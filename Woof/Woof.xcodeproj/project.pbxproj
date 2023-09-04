@@ -99,11 +99,11 @@
 		FD2FA23D2A13BA20002B618B /* WilliamWilsonAvatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD2FA2362A13BA20002B618B /* WilliamWilsonAvatar.jpg */; };
 		FD2FA23E2A13BA20002B618B /* JohnAlisonAvatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD2FA2372A13BA20002B618B /* JohnAlisonAvatar.jpg */; };
 		FD2FA2402A13BE87002B618B /* SophiaTaylorAvatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD2FA23F2A13BE87002B618B /* SophiaTaylorAvatar.jpg */; };
-		FD3303462A98BD980091A4BA /* ProductionEndpoint+HTTPAPIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3303452A98BD980091A4BA /* ProductionEndpoint+HTTPAPIEndpoint.swift */; };
+		FD3303462A98BD980091A4BA /* WoofAppEndpoint+HTTPAPIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3303452A98BD980091A4BA /* WoofAppEndpoint+HTTPAPIEndpoint.swift */; };
 		FD3303482A98BE730091A4BA /* APIEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3303472A98BE730091A4BA /* APIEnvironment.swift */; };
 		FD3303502A9CAB180091A4BA /* APIEnvironmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD33034F2A9CAB180091A4BA /* APIEnvironmentTests.swift */; };
 		FD3303512A9CAB210091A4BA /* APIEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3303472A98BE730091A4BA /* APIEnvironment.swift */; };
-		FD3303562AA0533D0091A4BA /* ProductionEndpoint+HTTPAPIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3303452A98BD980091A4BA /* ProductionEndpoint+HTTPAPIEndpoint.swift */; };
+		FD3303562AA0533D0091A4BA /* WoofAppEndpoint+HTTPAPIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3303452A98BD980091A4BA /* WoofAppEndpoint+HTTPAPIEndpoint.swift */; };
 		FD37A9902A0B65120001BABB /* DataTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD37A98F2A0B65120001BABB /* DataTransformer.swift */; };
 		FD37A9942A0B6E960001BABB /* FullNameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD37A9932A0B6E960001BABB /* FullNameTests.swift */; };
 		FD37A9952A0B6EA90001BABB /* DataTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD37A98F2A0B65120001BABB /* DataTransformer.swift */; };
@@ -230,7 +230,7 @@
 		FD2FA2362A13BA20002B618B /* WilliamWilsonAvatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WilliamWilsonAvatar.jpg; sourceTree = "<group>"; };
 		FD2FA2372A13BA20002B618B /* JohnAlisonAvatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = JohnAlisonAvatar.jpg; sourceTree = "<group>"; };
 		FD2FA23F2A13BE87002B618B /* SophiaTaylorAvatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SophiaTaylorAvatar.jpg; sourceTree = "<group>"; };
-		FD3303452A98BD980091A4BA /* ProductionEndpoint+HTTPAPIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductionEndpoint+HTTPAPIEndpoint.swift"; sourceTree = "<group>"; };
+		FD3303452A98BD980091A4BA /* WoofAppEndpoint+HTTPAPIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WoofAppEndpoint+HTTPAPIEndpoint.swift"; sourceTree = "<group>"; };
 		FD3303472A98BE730091A4BA /* APIEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEnvironment.swift; sourceTree = "<group>"; };
 		FD33034F2A9CAB180091A4BA /* APIEnvironmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEnvironmentTests.swift; sourceTree = "<group>"; };
 		FD37A98F2A0B65120001BABB /* DataTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransformer.swift; sourceTree = "<group>"; };
@@ -542,7 +542,7 @@
 			isa = PBXGroup;
 			children = (
 				FDD538572A41D6C900331977 /* WoofAppEndpoint.swift */,
-				FD3303452A98BD980091A4BA /* ProductionEndpoint+HTTPAPIEndpoint.swift */,
+				FD3303452A98BD980091A4BA /* WoofAppEndpoint+HTTPAPIEndpoint.swift */,
 			);
 			path = Endpoint;
 			sourceTree = "<group>";
@@ -1043,7 +1043,7 @@
 				FD02917A2A0E2C5000F88377 /* AppStyle+FontStyle.swift in Sources */,
 				FD14A2B12A286BB800362461 /* OwnerProfileViewModelTests.swift in Sources */,
 				FD0291772A0E2B0700F88377 /* AppStyle+FontStyleTests.swift in Sources */,
-				FD3303562AA0533D0091A4BA /* ProductionEndpoint+HTTPAPIEndpoint.swift in Sources */,
+				FD3303562AA0533D0091A4BA /* WoofAppEndpoint+HTTPAPIEndpoint.swift in Sources */,
 				9371BAC72A3F33B7000980F9 /* UserRoleViewModelSetSitterRoleTests.swift in Sources */,
 				9371BAC32A3F3334000980F9 /* UserRoleViewModelResetCurrentRoleTests.swift in Sources */,
 				9371BAC52A3F337B000980F9 /* UserRoleViewModelSetOwnerRoleTests.swift in Sources */,
@@ -1164,7 +1164,7 @@
 				EF4CBAEB2A3C6DCA00B4A223 /* SitterProfileViewModel.swift in Sources */,
 				FDEE43CB2A2F4602007DE0A9 /* Role.swift in Sources */,
 				FD14A2A92A27804F00362461 /* KeyValueStorage+Key.swift in Sources */,
-				FD3303462A98BD980091A4BA /* ProductionEndpoint+HTTPAPIEndpoint.swift in Sources */,
+				FD3303462A98BD980091A4BA /* WoofAppEndpoint+HTTPAPIEndpoint.swift in Sources */,
 				EF4CBAEF2A3C704300B4A223 /* Sitter+Tests.swift in Sources */,
 				EF7B7F002A147D8300F00B4E /* TextWithIconLabelView.swift in Sources */,
 				FD14A2A72A27803600362461 /* KeyValueStorage+Name.swift in Sources */,
