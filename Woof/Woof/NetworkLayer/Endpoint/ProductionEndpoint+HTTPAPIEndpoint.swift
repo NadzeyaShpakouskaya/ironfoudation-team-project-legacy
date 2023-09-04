@@ -44,7 +44,7 @@ extension ProductionEndpoint: HTTPAPIEndpoint {
 
     private static var revealedKey: String {
         do {
-            return try Obfuscator.reveal(Self.obfuscatedKey, salt: Self.salt)
+            return try Obfuscator.reveal(obfuscatedKey, salt: salt)
         } catch {}
         return ""
     }
