@@ -3,6 +3,6 @@ import XCTest
 
 final class ProductionEndpointTests: XCTestCase {
     func testAllProductionEndpointPropertiesAreAvailable() {
-        let _ = ProductionEndpoint.networkEnvironment
+        let _ = WoofAppEndpoint.networkEnvironment
     }
 }
