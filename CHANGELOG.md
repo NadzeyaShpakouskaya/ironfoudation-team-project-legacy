@@ -15,6 +15,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Add `Obfuscator` enum with `reveal(_:_:)` method - [#196](https://github.com/ios-course/ironfoudation-team-project/pull/196) 
 - Add bash script `Obfuscator.sh` - [#197](https://github.com/ios-course/ironfoudation-team-project/pull/197)
 - Add `ProductionEndpoint`, `APIEnvironment` - [#199](https://github.com/ios-course/ironfoudation-team-project/pull/199)
+- Add scripts to insert API-key to the build phase of the `Woof` target - [#202](https://github.com/ios-course/ironfoudation-team-project/pull/202)
 
 ### Changed
 
