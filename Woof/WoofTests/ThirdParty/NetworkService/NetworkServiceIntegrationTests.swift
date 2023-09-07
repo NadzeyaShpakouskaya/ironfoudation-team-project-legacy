@@ -3,6 +3,6 @@ import XCTest
 
 final class NetworkServiceIntegrationTests: XCTestCase {
     func testMethodTestUseFromNetworkServiceCanBeCalled() {
-        NetworkService().testUse()
+        _ = NetworkService<WoofAppEndpoint>.init()
     }
 }
