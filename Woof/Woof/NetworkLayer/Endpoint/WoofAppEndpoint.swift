@@ -1,2 +1,4 @@
 ///  Defines the production endpoints for the Woof app's API.
-enum WoofAppEndpoint {}
+enum WoofAppEndpoint {
+    case addNewSitter(Sitter)
+}
