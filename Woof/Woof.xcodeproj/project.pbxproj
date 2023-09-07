@@ -862,7 +862,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDE0CEB32A00F8390023F784 /* Build configuration list for PBXNativeTarget "Woof" */;
 			buildPhases = (
+				198A7E0B2AA86C6400903FED /* Insert salt and API key */,
 				FDE0CEA12A00F8370023F784 /* Sources */,
+				198A7E0C2AA8819800903FED /* Erase salt and API key */,
 				FDE0CEA22A00F8370023F784 /* Frameworks */,
 				FDE0CEA32A00F8370023F784 /* Resources */,
 				FDE0CEB82A011BA10023F784 /* Swiftlint */,
@@ -951,6 +953,44 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		198A7E0B2AA86C6400903FED /* Insert salt and API key */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Insert salt and API key";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\n\nfile_with_obfuscated_key=\"../scripts/obfuscator/api-key\"\nfile_with_salt=\"../scripts/obfuscator/salt\"\nfile_to_insert_key=\"./Woof/NetworkLayer/Endpoint/WoofAppEndpoint+HTTPAPIEndpoint.swift\"\n\nsalt=$(cat \"$file_with_salt\")\nobfuscated_key=$(cat \"$file_with_obfuscated_key\")\n\nsed -i.bak \"s/.*let obfuscatedKey =.*/    private static let obfuscatedKey = \\\"$obfuscated_key\\\"/\" \"$file_to_insert_key\"\nsed -i '' \"s/.*let salt =.*/    private static let salt = \\\"$salt\\\"/\" \"$file_to_insert_key\"\n";
+		};
+		198A7E0C2AA8819800903FED /* Erase salt and API key */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Erase salt and API key";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\n\nfile_to_erase_key=\"./Woof/NetworkLayer/Endpoint/WoofAppEndpoint+HTTPAPIEndpoint.swift\"\nbackup_file=\"$file_to_erase_key.bak\"\n\nif [ -f \"$backup_file\" ]; then\n    cp \"$backup_file\" \"$file_to_erase_key\"\n    echo \"Restored the original Swift file from backup.\"\n    rm \"$backup_file\"\nelse\n    echo \"Backup file not found. No changes were made.\"\nfi\n\n";
+		};
 		FD8182292A1F46B800AE1016 /* Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
