@@ -136,7 +136,7 @@
 		FDD143FF2A052D5E000BBA77 /* String+IconName.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD143E12A05233B000BBA77 /* String+IconName.swift */; };
 		FDD144012A0532D5000BBA77 /* String+IconNameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD144002A0532D5000BBA77 /* String+IconNameTests.swift */; };
 		FDD538582A41D6C900331977 /* WoofAppEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD538572A41D6C900331977 /* WoofAppEndpoint.swift */; };
-		FDD5385D2A41FADF00331977 /* ProductionEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD5385C2A41FADF00331977 /* ProductionEndpointTests.swift */; };
+		FDD5385D2A41FADF00331977 /* WoofAppEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD5385C2A41FADF00331977 /* WoofAppEndpointTests.swift */; };
 		FDD5385E2A41FAE500331977 /* WoofAppEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD538572A41D6C900331977 /* WoofAppEndpoint.swift */; };
 		FDD790642A45732D007C1265 /* Obfuscator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD790632A45732D007C1265 /* Obfuscator.swift */; };
 		FDD7906A2A4587B7007C1265 /* ObfuscatorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD790692A4587B7007C1265 /* ObfuscatorError.swift */; };
@@ -265,7 +265,7 @@
 		FDD143F62A052A11000BBA77 /* Color+AppSchemeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+AppSchemeTests.swift"; sourceTree = "<group>"; };
 		FDD144002A0532D5000BBA77 /* String+IconNameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+IconNameTests.swift"; sourceTree = "<group>"; };
 		FDD538572A41D6C900331977 /* WoofAppEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoofAppEndpoint.swift; sourceTree = "<group>"; };
-		FDD5385C2A41FADF00331977 /* ProductionEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductionEndpointTests.swift; sourceTree = "<group>"; };
+		FDD5385C2A41FADF00331977 /* WoofAppEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoofAppEndpointTests.swift; sourceTree = "<group>"; };
 		FDD790632A45732D007C1265 /* Obfuscator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Obfuscator.swift; sourceTree = "<group>"; };
 		FDD790692A4587B7007C1265 /* ObfuscatorError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObfuscatorError.swift; sourceTree = "<group>"; };
 		FDDDA6872A25C3FE00839091 /* EditOwnerInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditOwnerInformationView.swift; sourceTree = "<group>"; };
@@ -558,7 +558,7 @@
 		FD33034E2A9CAAFD0091A4BA /* Endpoint */ = {
 			isa = PBXGroup;
 			children = (
-				FDD5385C2A41FADF00331977 /* ProductionEndpointTests.swift */,
+				FDD5385C2A41FADF00331977 /* WoofAppEndpointTests.swift */,
 			);
 			path = Endpoint;
 			sourceTree = "<group>";
@@ -1137,7 +1137,7 @@
 				FDD144012A0532D5000BBA77 /* String+IconNameTests.swift in Sources */,
 				FD02917B2A0E2C5300F88377 /* AppStyle+UIElementConstant.swift in Sources */,
 				FDEE43CE2A2F4E56007DE0A9 /* Preferences.swift in Sources */,
-				FDD5385D2A41FADF00331977 /* ProductionEndpointTests.swift in Sources */,
+				FDD5385D2A41FADF00331977 /* WoofAppEndpointTests.swift in Sources */,
 				FDEE43D12A2F525B007DE0A9 /* RoleTests.swift in Sources */,
 				FDEE43CF2A2F4E58007DE0A9 /* Role.swift in Sources */,
 				EF4CBAEC2A3C6DCA00B4A223 /* SitterProfileViewModel.swift in Sources */,
