@@ -20,6 +20,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### Changed
 
  - Update PR template [#194](https://github.com/ios-course/ironfoudation-team-project/pull/194)
+ - Update revision of the `SimpleNetworkService` package in the project - [#204](https://github.com/ios-course/ironfoudation-team-project/pull/204)
 
 ## [0.3.1] - 21.08.2023
 
