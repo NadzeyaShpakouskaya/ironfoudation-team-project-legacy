@@ -35,6 +35,7 @@ final class WoofAppEndpointTests: XCTestCase {
         }
 
         switch task {
+        // swiftlint:disable:next empty_enum_arguments
         case .requestWithBodyParameters(_): break
         default: XCTFail("Wrong task type: expected `requestWithBodyParameters` task, but \(task) was settled")
         }
