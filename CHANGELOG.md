@@ -21,7 +21,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
  - Update PR template [#194](https://github.com/ios-course/ironfoudation-team-project/pull/194)
  - Update revision of the `SimpleNetworkService` package in the project - [#204](https://github.com/ios-course/ironfoudation-team-project/pull/204)
- - Fixing issues after running SwiftFormat and SwiftLint through the project [#206](https://github.com/ios-course/ironfoudation-team-project/pull/206)
 
 ## [0.3.1] - 21.08.2023
 
