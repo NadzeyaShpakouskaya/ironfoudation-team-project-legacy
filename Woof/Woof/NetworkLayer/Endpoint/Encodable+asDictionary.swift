@@ -7,8 +7,12 @@ extension Encodable {
     ///
     /// - Returns: A dictionary representation of the encoded object.
     func asDictionary() throws -> [String: Any] {
-        let data = try JSONEncoder().encode(self)
+        let encoder = JSONEncoder()
+        encoder.keyEncodingStrategy = .convertToSnakeCase
+
+        let data = try encoder.encode(self)
         let dictionary = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any]
+
         return dictionary ?? [:]
     }
 }
