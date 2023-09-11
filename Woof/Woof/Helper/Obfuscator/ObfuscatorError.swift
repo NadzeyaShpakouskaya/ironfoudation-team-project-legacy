@@ -13,7 +13,7 @@ enum ObfuscatorError: Error {
         switch self {
         case let .unconvertibleToInt8(value):
             return "\(value) can't be presented as UInt8 value."
-        case .unconvertibleToString(let bytes):
+        case let .unconvertibleToString(bytes):
             return """
             \(bytes)
             This bytes sequence can't be interpreted as a string.
