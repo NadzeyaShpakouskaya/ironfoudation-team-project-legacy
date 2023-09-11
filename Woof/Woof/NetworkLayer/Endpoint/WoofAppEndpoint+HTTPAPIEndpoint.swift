@@ -15,12 +15,14 @@ extension WoofAppEndpoint: HTTPAPIEndpoint {
 
     var path: String {
         switch self {
+        case .getAllSitters: return Path.getAllSitters
         case .addNewSitter: return Path.addNewSitter
         }
     }
 
     var task: HTTPTask {
         switch self {
+        case .getAllSitters: return .request
         case let .addNewSitter(parameters):
             return .requestWithBodyParameters(bodyParameters: parameters)
         }
@@ -28,6 +30,7 @@ extension WoofAppEndpoint: HTTPAPIEndpoint {
 
     var method: HTTPMethod {
         switch self {
+        case .getAllSitters: return .get
         case .addNewSitter: return .post
         }
     }
