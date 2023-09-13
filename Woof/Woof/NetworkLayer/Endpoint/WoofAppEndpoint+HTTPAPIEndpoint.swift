@@ -21,8 +21,8 @@ extension WoofAppEndpoint: HTTPAPIEndpoint {
 
     var task: HTTPTask {
         switch self {
-        case let .addNewSitter(sitter):
-            return .requestWithBodyParameters(bodyParameters: sitter.asDictionary())
+        case let .addNewSitter(parameters):
+            return .requestWithBodyParameters(bodyParameters: parameters)
         }
     }
 

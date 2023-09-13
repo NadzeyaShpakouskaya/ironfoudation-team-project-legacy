@@ -498,6 +498,7 @@
 		FD1FA3CD2A0A7DDB000A3A91 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				FDB2E4FB2AB1A8270014C7F7 /* EncodableExtensionTests */,
 				FD0291712A0E16DF00F88377 /* AppStyleTests */,
 				FD37A9962A0B76BA0001BABB /* DataTransformerTests */,
 				199BC09F2A8B73C400824CC6 /* ObfuscatorTests */,
@@ -554,7 +555,6 @@
 				FDD538572A41D6C900331977 /* WoofAppEndpoint.swift */,
 				FD3303452A98BD980091A4BA /* WoofAppEndpoint+HTTPAPIEndpoint.swift */,
 				FD3303572AA9BDA40091A4BA /* WoofAppEndpoint+Path.swift */,
-				FD3303592AA9D5DD0091A4BA /* Encodable+asDictionary.swift */,
 			);
 			path = Endpoint;
 			sourceTree = "<group>";
@@ -563,8 +563,6 @@
 			isa = PBXGroup;
 			children = (
 				FDD5385C2A41FADF00331977 /* WoofAppEndpointTests.swift */,
-				FDEB1B692AAEF6C600428CAA /* Encodable+AsDictionaryTests.swift */,
-				FD44E9702AB183AE0031BBB3 /* EncodableAsDictionaryTests+TestModels.swift */,
 			);
 			path = Endpoint;
 			sourceTree = "<group>";
@@ -672,6 +670,23 @@
 				FD37A98F2A0B65120001BABB /* DataTransformer.swift */,
 			);
 			path = DataTrasnformer;
+			sourceTree = "<group>";
+		};
+		FDB2E4FB2AB1A8270014C7F7 /* EncodableExtensionTests */ = {
+			isa = PBXGroup;
+			children = (
+				FDEB1B692AAEF6C600428CAA /* Encodable+AsDictionaryTests.swift */,
+				FD44E9702AB183AE0031BBB3 /* EncodableAsDictionaryTests+TestModels.swift */,
+			);
+			path = EncodableExtensionTests;
+			sourceTree = "<group>";
+		};
+		FDB2E4FC2AB1A84B0014C7F7 /* EncodableExtension */ = {
+			isa = PBXGroup;
+			children = (
+				FD3303592AA9D5DD0091A4BA /* Encodable+asDictionary.swift */,
+			);
+			path = EncodableExtension;
 			sourceTree = "<group>";
 		};
 		FDCF49102A1CDA0A00CD3BBB /* ViewModel */ = {
@@ -821,6 +836,7 @@
 		FDE0CEBD2A0269570023F784 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				FDB2E4FC2AB1A84B0014C7F7 /* EncodableExtension */,
 				FDD790622A457316007C1265 /* Obfuscator */,
 				FD0291702A0E16D000F88377 /* AppStyle */,
 				FDAA7BF52A0CB8E2007905CB /* DataTrasnformer */,

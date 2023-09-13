@@ -7,7 +7,7 @@ final class WoofAppEndpointTests: XCTestCase {
     }
 
     func testAllCasesForWoofAppEndpointExists() {
-        let _ = WoofAppEndpoint.addNewSitter(Sitter())
+        let _ = WoofAppEndpoint.addNewSitter(nil)
     }
 
     func testAddNewSitterEndpointIsConfiguredCorrectly() {
@@ -16,9 +16,9 @@ final class WoofAppEndpointTests: XCTestCase {
         let authHeader = "x-hasura-admin-secret"
 
         // When
-        let sitter = Sitter()
+        let parameters = Sitter().asDictionary()
 
-        let endpoint = WoofAppEndpoint.addNewSitter(sitter)
+        let endpoint = WoofAppEndpoint.addNewSitter(parameters)
 
         // Then
         XCTAssertEqual(endpoint.baseURL, baseProdURL)
