@@ -26,7 +26,7 @@ final class WoofAppEndpointTests: XCTestCase {
 
         // Then
         XCTAssertEqual(endpoint.baseURL, baseProdURL)
-        XCTAssertEqual(endpoint.path, EndpointPath.addNewSitter)
+        XCTAssertEqual(endpoint.path, WoofAppEndpoint.Path.addNewSitter)
         XCTAssertTrue(headers.keys.contains(authHeader))
 
         switch method {

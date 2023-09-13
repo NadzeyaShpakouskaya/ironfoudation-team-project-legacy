@@ -15,7 +15,7 @@ extension WoofAppEndpoint: HTTPAPIEndpoint {
 
     var path: String {
         switch self {
-        case .addNewSitter: return EndpointPath.addNewSitter
+        case .addNewSitter: return Path.addNewSitter
         }
     }
 

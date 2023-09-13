@@ -104,10 +104,10 @@
 		FD3303502A9CAB180091A4BA /* APIEnvironmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD33034F2A9CAB180091A4BA /* APIEnvironmentTests.swift */; };
 		FD3303512A9CAB210091A4BA /* APIEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3303472A98BE730091A4BA /* APIEnvironment.swift */; };
 		FD3303562AA0533D0091A4BA /* WoofAppEndpoint+HTTPAPIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3303452A98BD980091A4BA /* WoofAppEndpoint+HTTPAPIEndpoint.swift */; };
-		FD3303582AA9BDA40091A4BA /* EndpointPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3303572AA9BDA40091A4BA /* EndpointPath.swift */; };
+		FD3303582AA9BDA40091A4BA /* WoofAppEndpoint+Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3303572AA9BDA40091A4BA /* WoofAppEndpoint+Path.swift */; };
 		FD33035A2AA9D5DD0091A4BA /* Encodable+asDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3303592AA9D5DD0091A4BA /* Encodable+asDictionary.swift */; };
 		FD33035B2AA9DA640091A4BA /* Encodable+asDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3303592AA9D5DD0091A4BA /* Encodable+asDictionary.swift */; };
-		FD33035C2AA9DA6B0091A4BA /* EndpointPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3303572AA9BDA40091A4BA /* EndpointPath.swift */; };
+		FD33035C2AA9DA6B0091A4BA /* WoofAppEndpoint+Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3303572AA9BDA40091A4BA /* WoofAppEndpoint+Path.swift */; };
 		FD37A9902A0B65120001BABB /* DataTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD37A98F2A0B65120001BABB /* DataTransformer.swift */; };
 		FD37A9942A0B6E960001BABB /* FullNameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD37A9932A0B6E960001BABB /* FullNameTests.swift */; };
 		FD37A9952A0B6EA90001BABB /* DataTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD37A98F2A0B65120001BABB /* DataTransformer.swift */; };
@@ -239,7 +239,7 @@
 		FD3303452A98BD980091A4BA /* WoofAppEndpoint+HTTPAPIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WoofAppEndpoint+HTTPAPIEndpoint.swift"; sourceTree = "<group>"; };
 		FD3303472A98BE730091A4BA /* APIEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEnvironment.swift; sourceTree = "<group>"; };
 		FD33034F2A9CAB180091A4BA /* APIEnvironmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEnvironmentTests.swift; sourceTree = "<group>"; };
-		FD3303572AA9BDA40091A4BA /* EndpointPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointPath.swift; sourceTree = "<group>"; };
+		FD3303572AA9BDA40091A4BA /* WoofAppEndpoint+Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WoofAppEndpoint+Path.swift"; sourceTree = "<group>"; };
 		FD3303592AA9D5DD0091A4BA /* Encodable+asDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+asDictionary.swift"; sourceTree = "<group>"; };
 		FD37A98F2A0B65120001BABB /* DataTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransformer.swift; sourceTree = "<group>"; };
 		FD37A9932A0B6E960001BABB /* FullNameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullNameTests.swift; sourceTree = "<group>"; };
@@ -553,7 +553,7 @@
 			children = (
 				FDD538572A41D6C900331977 /* WoofAppEndpoint.swift */,
 				FD3303452A98BD980091A4BA /* WoofAppEndpoint+HTTPAPIEndpoint.swift */,
-				FD3303572AA9BDA40091A4BA /* EndpointPath.swift */,
+				FD3303572AA9BDA40091A4BA /* WoofAppEndpoint+Path.swift */,
 				FD3303592AA9D5DD0091A4BA /* Encodable+asDictionary.swift */,
 			);
 			path = Endpoint;
@@ -1092,7 +1092,7 @@
 				BA77BDBD2A45852D00CA76EA /* SitterProfileViewModelCancelEditingTests.swift in Sources */,
 				FD9802282A287670003DEE5C /* OwnerProfileViewModelGetTests.swift in Sources */,
 				FD6A2E612A2F067E00934C3E /* KeyValueStorage+KeyTests.swift in Sources */,
-				FD33035C2AA9DA6B0091A4BA /* EndpointPath.swift in Sources */,
+				FD33035C2AA9DA6B0091A4BA /* WoofAppEndpoint+Path.swift in Sources */,
 				FD8182302A20C3C300AE1016 /* KeyValueStorage+TestData.swift in Sources */,
 				36C54AFC2A17A79200748023 /* KeyValueStorageLoadTests.swift in Sources */,
 				FD02917A2A0E2C5000F88377 /* AppStyle+FontStyle.swift in Sources */,
@@ -1191,7 +1191,7 @@
 				FD0291732A0E256F00F88377 /* GeneralInfoSectionView.swift in Sources */,
 				BAE74E922A42E1DD0083C68E /* SitterProfileView.swift in Sources */,
 				BA4561812A334A8A00C6E595 /* Stars.swift in Sources */,
-				FD3303582AA9BDA40091A4BA /* EndpointPath.swift in Sources */,
+				FD3303582AA9BDA40091A4BA /* WoofAppEndpoint+Path.swift in Sources */,
 				FDD143E02A051F96000BBA77 /* OwnerMainTabView+Tab.swift in Sources */,
 				FD1FA3C32A0A682E000A3A91 /* SitterCardViewModel.swift in Sources */,
 				36C06F5A2A2F5AA600B8EBDF /* PreferencesHandler.swift in Sources */,
