@@ -27,13 +27,13 @@ final class WoofAppEndpointTests: XCTestCase {
 
         switch endpoint.method {
         case .post: break
-        default: XCTFail("Wrong method: expected `POST` method, but \(endpoint.method) was settled")
+        default: XCTFail("Unexpected scenario.")
         }
 
         switch endpoint.task {
         // swiftlint:disable:next empty_enum_arguments
         case .requestWithBodyParameters(_): break
-        default: XCTFail("Wrong task type: expected `requestWithBodyParameters` task, but \(endpoint.task) was settled")
+        default: XCTFail("Unexpected scenario.")
         }
     }
 }
