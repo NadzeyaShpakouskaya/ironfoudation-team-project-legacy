@@ -6,8 +6,7 @@ extension Encodable {
     /// values are the values of those properties.
     /// During converting the camel case notation of properties' names replace with the snake case notation.
     ///
-    /// - Throws: An error of type `Error` if encoding or serialization fails.
-    /// - Returns: A dictionary representation of the encoded object.
+    /// - Returns: A dictionary representation of the encoded object, or `nil` in case of failure of conversion.
     func asDictionary() -> [String: Any]? {
         let encoder = JSONEncoder()
         encoder.keyEncodingStrategy = .convertToSnakeCase
