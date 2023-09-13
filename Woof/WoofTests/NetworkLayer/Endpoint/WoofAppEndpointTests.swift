@@ -12,12 +12,9 @@ final class WoofAppEndpointTests: XCTestCase {
 
     func testAddNewSitterEndpointIsConfiguredCorrectly() {
         // Given
-        let baseProdURL = URL(string: "https://woof-app.hasura.app/api/rest/") ?? Bundle.main.bundleURL
-        let authHeader = "x-hasura-admin-secret"
-
-        // When
         let parameters = Sitter().asDictionary()
 
+        // When
         let endpoint = WoofAppEndpoint.addNewSitter(parameters)
 
         // Then
@@ -31,9 +28,33 @@ final class WoofAppEndpointTests: XCTestCase {
         }
 
         switch endpoint.task {
-        // swiftlint:disable:next empty_enum_arguments
-        case .requestWithBodyParameters(_): break
+        case .requestWithBodyParameters: break
         default: XCTFail("Unexpected scenario.")
         }
     }
+
+    func testGetAllSittersEndpointIsConfiguredCorrectly() {
+        // Given // When
+        let endpoint = WoofAppEndpoint.getAllSitters
+
+        // Then
+        XCTAssertEqual(endpoint.baseURL, baseProdURL)
+        XCTAssertEqual(endpoint.path, WoofAppEndpoint.Path.getAllSitters)
+        XCTAssertTrue(endpoint.headers.keys.contains(authHeader))
+
+        switch endpoint.method {
+        case .get: break
+        default: XCTFail("Unexpected scenario.")
+        }
+
+        switch endpoint.task {
+        case .request: break
+        default: XCTFail("Unexpected scenario.")
+        }
+    }
+
+    // MARK: - Private interface
+
+    private let baseProdURL = URL(string: "https://woof-app.hasura.app/api/rest/") ?? Bundle.main.bundleURL
+    private let authHeader = "x-hasura-admin-secret"
 }
