@@ -22,9 +22,7 @@ extension WoofAppEndpoint: HTTPAPIEndpoint {
     var task: HTTPTask {
         switch self {
         case let .addNewSitter(sitter):
-            // transform sitter to body parameters
-            let bodyParameters = try? sitter.asDictionary()
-            return .requestWithBodyParameters(bodyParameters: bodyParameters)
+            return .requestWithBodyParameters(bodyParameters: sitter.asDictionary())
         }
     }
 
