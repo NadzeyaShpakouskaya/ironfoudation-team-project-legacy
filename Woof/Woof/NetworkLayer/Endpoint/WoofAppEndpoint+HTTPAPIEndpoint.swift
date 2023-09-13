@@ -15,19 +15,20 @@ extension WoofAppEndpoint: HTTPAPIEndpoint {
 
     var path: String {
         switch self {
-        default: return ""
+        case .addNewSitter: return Path.addNewSitter
         }
     }
 
     var task: HTTPTask {
         switch self {
-        default: return .request
+        case let .addNewSitter(parameters):
+            return .requestWithBodyParameters(bodyParameters: parameters)
         }
     }
 
     var method: HTTPMethod {
         switch self {
-        default: return .get
+        case .addNewSitter: return .post
         }
     }
 
