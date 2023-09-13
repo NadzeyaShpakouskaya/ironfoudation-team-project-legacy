@@ -20,24 +20,20 @@ final class WoofAppEndpointTests: XCTestCase {
 
         let endpoint = WoofAppEndpoint.addNewSitter(sitter)
 
-        let method = endpoint.method
-        let task = endpoint.task
-        let headers = endpoint.headers
-
         // Then
         XCTAssertEqual(endpoint.baseURL, baseProdURL)
         XCTAssertEqual(endpoint.path, WoofAppEndpoint.Path.addNewSitter)
-        XCTAssertTrue(headers.keys.contains(authHeader))
+        XCTAssertTrue(endpoint.headers.keys.contains(authHeader))
 
-        switch method {
+        switch endpoint.method {
         case .post: break
-        default: XCTFail("Wrong method: expected `POST` method, but \(method) was settled")
+        default: XCTFail("Wrong method: expected `POST` method, but \(endpoint.method) was settled")
         }
 
-        switch task {
+        switch endpoint.task {
         // swiftlint:disable:next empty_enum_arguments
         case .requestWithBodyParameters(_): break
-        default: XCTFail("Wrong task type: expected `requestWithBodyParameters` task, but \(task) was settled")
+        default: XCTFail("Wrong task type: expected `requestWithBodyParameters` task, but \(endpoint.task) was settled")
         }
     }
 }
