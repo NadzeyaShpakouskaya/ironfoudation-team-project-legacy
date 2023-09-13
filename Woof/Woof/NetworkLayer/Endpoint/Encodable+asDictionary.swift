@@ -12,7 +12,7 @@ extension Encodable {
         encoder.keyEncodingStrategy = .convertToSnakeCase
         do {
             let data = try encoder.encode(self)
-            let dictionary = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any]
+            let dictionary = try JSONSerialization.jsonObject(with: data) as? [String: Any]
             return dictionary
         } catch {
             return nil
