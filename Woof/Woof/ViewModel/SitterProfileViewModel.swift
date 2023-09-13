@@ -1,4 +1,5 @@
 import Foundation
+import NetworkService
 
 /// The view model for a pet sitter profile view is responsible for receiving and processing user actions
 /// to change model data and passes back the updated model data.
@@ -20,6 +21,10 @@ final class SitterProfileViewModel: ObservableObject {
 
     /// The price per hour for walking charged by the pet sitter.
     @Published var pricePerHour: String = ""
+
+    @Published var isErrorOccurred: Bool = false
+    
+    let networkService = NetworkService<WoofAppEndpoint>()
 
     /**
      Initializes an instance of the `SitterProfileViewModel` class.
@@ -44,6 +49,21 @@ final class SitterProfileViewModel: ObservableObject {
 
         KeyValueStorage(KeyValueStorage.Name.currentSitter)
             .save(data, for: KeyValueStorage.Key.currentSitter)
+    }
+
+    func upload() async {
+        if hasChanges() {
+            do {
+                let endpoint = WoofAppEndpoint.addNewSitter(currentSitter.asDictionary())
+                _ = try await networkService.request(endpoint)
+                isErrorOccurred = false
+            } catch {
+                print("Network error: \(error)")
+                isErrorOccurred = true
+            }
+        } else {
+            isErrorOccurred = false
+        }
     }
 
     /// Requests the model layer to cancel the editing mode and restore the original values.
@@ -73,5 +93,13 @@ final class SitterProfileViewModel: ObservableObject {
         phone = currentSitter.phone
         bio = currentSitter.bio
         pricePerHour = String(currentSitter.pricePerHour)
+    }
+
+    private func hasChanges() -> Bool {
+        currentSitter.name != name ||
+            currentSitter.surname != surname ||
+            currentSitter.phone != phone ||
+            currentSitter.bio != bio ||
+            String(currentSitter.pricePerHour) != pricePerHour
     }
 }
