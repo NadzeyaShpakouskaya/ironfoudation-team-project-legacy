@@ -22,9 +22,8 @@ final class SitterProfileViewModel: ObservableObject {
     /// The price per hour for walking charged by the pet sitter.
     @Published var pricePerHour: String = ""
 
+    /// Indicating whether an error has occurred during the network operation.
     @Published var isErrorOccurred: Bool = false
-    
-    let networkService = NetworkService<WoofAppEndpoint>()
 
     /**
      Initializes an instance of the `SitterProfileViewModel` class.
@@ -51,18 +50,19 @@ final class SitterProfileViewModel: ObservableObject {
             .save(data, for: KeyValueStorage.Key.currentSitter)
     }
 
-    func upload() async {
-        if hasChanges() {
-            do {
-                let endpoint = WoofAppEndpoint.addNewSitter(currentSitter.asDictionary())
-                _ = try await networkService.request(endpoint)
-                isErrorOccurred = false
-            } catch {
-                print("Network error: \(error)")
+    /// Uploads the pet sitter's data to the backend server asynchronously.
+    ///
+    /// `isErrorOccurred` is set to `false`, indicating no errors.
+    /// If there is a network error during the upload,`isErrorOccurred` is set to `true`.
+    func upload() async throws {
+        do {
+            let endpoint = WoofAppEndpoint.addNewSitter(currentSitter.asDictionary())
+            _ = try await networkService.request(endpoint)
+        } catch {
+            await MainActor.run {
                 isErrorOccurred = true
             }
-        } else {
-            isErrorOccurred = false
+            throw error
         }
     }
 
@@ -74,6 +74,8 @@ final class SitterProfileViewModel: ObservableObject {
     // MARK: - Private interface
 
     private lazy var currentSitter: Sitter = loadSitterFromStorage()
+
+    private var networkService = NetworkService<WoofAppEndpoint>()
 
     private func loadSitterFromStorage() -> Sitter {
         guard let data = KeyValueStorage(KeyValueStorage.Name.currentSitter)
@@ -93,13 +95,5 @@ final class SitterProfileViewModel: ObservableObject {
         phone = currentSitter.phone
         bio = currentSitter.bio
         pricePerHour = String(currentSitter.pricePerHour)
-    }
-
-    private func hasChanges() -> Bool {
-        currentSitter.name != name ||
-            currentSitter.surname != surname ||
-            currentSitter.phone != phone ||
-            currentSitter.bio != bio ||
-            String(currentSitter.pricePerHour) != pricePerHour
     }
 }

@@ -14,6 +14,8 @@
 		199BC0AA2A8CC3E400824CC6 /* ObfuscatorErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199BC0A92A8CC3E400824CC6 /* ObfuscatorErrorTests.swift */; };
 		1CE7E9C92A247CF1000A0509 /* KeyValueStorageInitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE7E9C82A247CF1000A0509 /* KeyValueStorageInitTests.swift */; };
 		1CE7E9CC2A24889B000A0509 /* KeyValueStorage+UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE7E9CB2A24889B000A0509 /* KeyValueStorage+UnitTests.swift */; };
+		36162B642AB32758002391A1 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36162B632AB32758002391A1 /* MockURLProtocol.swift */; };
+		36162B672AB327BB002391A1 /* SitterProfileViewModelUploadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36162B662AB327BB002391A1 /* SitterProfileViewModelUploadTests.swift */; };
 		36199B0F2A1FB1C900725FC8 /* KeyValueStorage+TestKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36199B0E2A1FB1C900725FC8 /* KeyValueStorage+TestKey.swift */; };
 		362732A22A1B800B0062E4B5 /* KeyValueStorageDeleteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362732A12A1B800A0062E4B5 /* KeyValueStorageDeleteTests.swift */; };
 		362F63062A28A8B6002A659B /* OwnerProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362F63052A28A8B6002A659B /* OwnerProfileView.swift */; };
@@ -173,6 +175,8 @@
 		199BC0A92A8CC3E400824CC6 /* ObfuscatorErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObfuscatorErrorTests.swift; sourceTree = "<group>"; };
 		1CE7E9C82A247CF1000A0509 /* KeyValueStorageInitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStorageInitTests.swift; sourceTree = "<group>"; };
 		1CE7E9CB2A24889B000A0509 /* KeyValueStorage+UnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyValueStorage+UnitTests.swift"; sourceTree = "<group>"; };
+		36162B632AB32758002391A1 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
+		36162B662AB327BB002391A1 /* SitterProfileViewModelUploadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitterProfileViewModelUploadTests.swift; sourceTree = "<group>"; };
 		36199B0E2A1FB1C900725FC8 /* KeyValueStorage+TestKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyValueStorage+TestKey.swift"; sourceTree = "<group>"; };
 		362732A12A1B800A0062E4B5 /* KeyValueStorageDeleteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStorageDeleteTests.swift; sourceTree = "<group>"; };
 		362F63052A28A8B6002A659B /* OwnerProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerProfileView.swift; sourceTree = "<group>"; };
@@ -431,6 +435,7 @@
 				EF4CBAF12A3C708E00B4A223 /* SitterProfileViewModelTests.swift */,
 				EF4CBAF42A3C712C00B4A223 /* SitterProfileViewModelSaveTests.swift */,
 				BA77BDBC2A45852D00CA76EA /* SitterProfileViewModelCancelEditingTests.swift */,
+				36162B662AB327BB002391A1 /* SitterProfileViewModelUploadTests.swift */,
 			);
 			path = SitterProfileViewModelTests;
 			sourceTree = "<group>";
@@ -706,6 +711,7 @@
 		FDD143F52A052A11000BBA77 /* WoofTests */ = {
 			isa = PBXGroup;
 			children = (
+				36162B632AB32758002391A1 /* MockURLProtocol.swift */,
 				FDD5385B2A41FAAF00331977 /* NetworkLayer */,
 				FDCF49102A1CDA0A00CD3BBB /* ViewModel */,
 				36BEA7592A1621B70020F6AE /* Model */,
@@ -1117,6 +1123,7 @@
 				FD3303562AA0533D0091A4BA /* WoofAppEndpoint+HTTPAPIEndpoint.swift in Sources */,
 				9371BAC72A3F33B7000980F9 /* UserRoleViewModelSetSitterRoleTests.swift in Sources */,
 				9371BAC32A3F3334000980F9 /* UserRoleViewModelResetCurrentRoleTests.swift in Sources */,
+				36162B672AB327BB002391A1 /* SitterProfileViewModelUploadTests.swift in Sources */,
 				9371BAC52A3F337B000980F9 /* UserRoleViewModelSetOwnerRoleTests.swift in Sources */,
 				FD0291792A0E2B2300F88377 /* AppStyle+UIElementConstantTests.swift in Sources */,
 				EF95A0572A386FCE00E84ACD /* Sitter+Dummy.swift in Sources */,
@@ -1128,6 +1135,7 @@
 				FD3303502A9CAB180091A4BA /* APIEnvironmentTests.swift in Sources */,
 				EF95A0502A38615E00E84ACD /* OwnerMainTabViewModelTests.swift in Sources */,
 				36C06F5D2A2F5DDB00B8EBDF /* PreferencesHandler.swift in Sources */,
+				36162B642AB32758002391A1 /* MockURLProtocol.swift in Sources */,
 				BA4561822A334D2D00C6E595 /* Stars.swift in Sources */,
 				FD44E9712AB183AE0031BBB3 /* EncodableAsDictionaryTests+TestModels.swift in Sources */,
 				BA44C2FE2A31FA2D00193927 /* StarRating.swift in Sources */,
