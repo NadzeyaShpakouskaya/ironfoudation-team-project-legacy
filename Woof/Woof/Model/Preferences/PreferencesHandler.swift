@@ -23,10 +23,18 @@ enum PreferencesHandler {
         return store(preferences)
     }
 
-    @discardableResult static func setPresentedSitterFlowFirstTime(to state: Bool) -> Bool {
+    /**
+     Update the provided state of parameter `isSitterModifiedFirstTime` for the app preferences.
+
+     - Parameters:
+        - state: The current state to be saved.
+
+     - Returns: A boolean value indicating whether the saving operation was successful.
+     */
+    @discardableResult static func setSitterWillBeModifiedFirstTime(to state: Bool) -> Bool {
         var preferences = loadPreferences() ?? Preferences()
 
-        preferences.isPresentedSitterFlowFirstTime = state
+        preferences.isSitterModifiedFirstTime = state
 
         return store(preferences)
     }
@@ -40,7 +48,12 @@ enum PreferencesHandler {
         loadPreferences()?.selectedRole ?? .none
     }
 
-    static func getUserSettings() -> Preferences {
+    /**
+     Gets the current app preferences.
+
+     - Returns: The preferences for the app.
+     */
+    static func getAppSettings() -> Preferences {
         loadPreferences().self ?? Preferences()
     }
 

@@ -26,7 +26,7 @@ final class SitterProfileViewModel: ObservableObject {
     }
 
     var isPresentedFirstTime: Bool {
-        PreferencesHandler.getUserSettings().isPresentedSitterFlowFirstTime
+        PreferencesHandler.getAppSettings().isSitterModifiedFirstTime
     }
 
     /**
@@ -40,8 +40,8 @@ final class SitterProfileViewModel: ObservableObject {
 
     /// Requests model layer to save modified data.
     func save() {
-        PreferencesHandler.setPresentedSitterFlowFirstTime(to: false)
-        
+        PreferencesHandler.setSitterWillBeModifiedFirstTime(to: false)
+
         currentSitter.name = name
         currentSitter.surname = surname
         currentSitter.phone = phone
