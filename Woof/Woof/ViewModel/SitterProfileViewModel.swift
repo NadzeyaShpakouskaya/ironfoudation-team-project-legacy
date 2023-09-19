@@ -21,11 +21,13 @@ final class SitterProfileViewModel: ObservableObject {
     /// The price per hour for walking charged by the pet sitter.
     @Published var pricePerHour: String = ""
 
+    /// Indicates if the mandatory fields are empty.
     var mandatoryFieldsAreEmpty: Bool {
         name.isEmpty || phone.isEmpty
     }
 
-    var isPresentedFirstTime: Bool {
+    /// Indicates if the sitter information is modified first time.
+    var isModifiedFirstTime: Bool {
         PreferencesHandler.getAppSettings().isSitterModifiedFirstTime
     }
 

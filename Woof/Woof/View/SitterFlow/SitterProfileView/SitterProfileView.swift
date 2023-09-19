@@ -22,7 +22,7 @@ struct SitterProfileView: View {
                         Text(mandatoryPlaceholderText)
                             .padding(.vertical)
                     }
-                    if viewModel.isPresentedFirstTime {
+                    if viewModel.isModifiedFirstTime {
                         Button(saveButtonLabelText) {
                             viewModel.save()
                             isEditingMode = false
@@ -60,7 +60,7 @@ struct SitterProfileView: View {
                         bio: viewModel.bio,
                         ratePerHour: viewModel.pricePerHour
                     )
-                    if viewModel.isPresentedFirstTime {
+                    if viewModel.isModifiedFirstTime {
                         Button(editButtonLabelText) {
                             isEditingMode.toggle()
                         }
