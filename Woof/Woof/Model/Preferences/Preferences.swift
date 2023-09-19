@@ -4,4 +4,5 @@ import Foundation
 struct Preferences: Codable {
     /// The selected role for the user, by default is `none`
     var selectedRole: Role = .none
+    var isPresentedSitterFlowFirstTime = true
 }

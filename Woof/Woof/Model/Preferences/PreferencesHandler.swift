@@ -23,6 +23,14 @@ enum PreferencesHandler {
         return store(preferences)
     }
 
+    @discardableResult static func setPresentedSitterFlowFirstTime(to state: Bool) -> Bool {
+        var preferences = loadPreferences() ?? Preferences()
+
+        preferences.isPresentedSitterFlowFirstTime = state
+
+        return store(preferences)
+    }
+
     /**
      Gets the current user role in the app.
 
@@ -30,6 +38,10 @@ enum PreferencesHandler {
      */
     static func getUserRole() -> Role {
         loadPreferences()?.selectedRole ?? .none
+    }
+
+    static func getUserSettings() -> Preferences {
+        loadPreferences().self ?? Preferences()
     }
 
     // MARK: - Private interface
