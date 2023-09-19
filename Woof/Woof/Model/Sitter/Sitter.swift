@@ -35,6 +35,7 @@ struct Sitter: Codable, Identifiable, Equatable {
      Each instance of the new pet sitter has a unique id.
 
      - Parameters:
+      - id: The unique identifier for the sitter.
       - name: The first name of the pet sitter.
       - surname: The last name of the pet sitter.
       - phone: The phone number of the pet sitter.
@@ -44,6 +45,7 @@ struct Sitter: Codable, Identifiable, Equatable {
       - pricePerHour: The price per hour charged by the pet sitter.
      */
     init(
+        id: UUID = UUID(),
         name: String,
         surname: String,
         phone: String?,
@@ -52,7 +54,7 @@ struct Sitter: Codable, Identifiable, Equatable {
         rating: Double?,
         pricePerHour: Double?
     ) {
-        id = UUID()
+        self.id = id
         self.name = name
         self.surname = surname
         self.phone = phone
