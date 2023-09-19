@@ -16,6 +16,9 @@ struct SitterListView: View {
             }
         }
         .padding(AppStyle.UIElementConstant.minPadding)
+        .task {
+            await viewModel.fetchSitters()
+        }
     }
 }
 
