@@ -21,6 +21,14 @@ final class SitterProfileViewModel: ObservableObject {
     /// The price per hour for walking charged by the pet sitter.
     @Published var pricePerHour: String = ""
 
+    var mandatoryFieldsAreEmpty: Bool {
+        name.isEmpty || phone.isEmpty
+    }
+
+    var isPresentedFirstTime: Bool {
+        PreferencesHandler.getUserSettings().isPresentedSitterFlowFirstTime
+    }
+
     /**
      Initializes an instance of the `SitterProfileViewModel` class.
      */
@@ -32,6 +40,8 @@ final class SitterProfileViewModel: ObservableObject {
 
     /// Requests model layer to save modified data.
     func save() {
+        PreferencesHandler.setPresentedSitterFlowFirstTime(to: false)
+        
         currentSitter.name = name
         currentSitter.surname = surname
         currentSitter.phone = phone

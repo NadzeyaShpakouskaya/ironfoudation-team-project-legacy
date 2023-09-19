@@ -18,20 +18,32 @@ struct SitterProfileView: View {
                         bio: $viewModel.bio,
                         pricePerHour: $viewModel.pricePerHour
                     )
-
-                    HStack {
-                        Button(cancelButtonLabelText) {
-                            viewModel.cancelEditing()
-                            isEditingMode = false
-                        }
-
-                        Spacer()
-
+                    if viewModel.mandatoryFieldsAreEmpty {
+                        Text(mandatoryPlaceholderText)
+                            .padding(.vertical)
+                    }
+                    if viewModel.isPresentedFirstTime {
                         Button(saveButtonLabelText) {
                             viewModel.save()
                             isEditingMode = false
                         }
-                        .disabled(viewModel.name.isEmpty)
+                        .disabled(viewModel.mandatoryFieldsAreEmpty)
+                    } else {
+                        HStack {
+                            Group {
+                                Button(cancelButtonLabelText) {
+                                    viewModel.cancelEditing()
+                                    isEditingMode = false
+                                }
+
+                                Spacer()
+                            }
+                            Button(saveButtonLabelText) {
+                                viewModel.save()
+                                isEditingMode = false
+                            }
+                            .disabled(viewModel.mandatoryFieldsAreEmpty)
+                        }
                     }
                 }
                 .padding()
@@ -48,9 +60,10 @@ struct SitterProfileView: View {
                         bio: viewModel.bio,
                         ratePerHour: viewModel.pricePerHour
                     )
-
-                    Button(editButtonLabelText) {
-                        isEditingMode.toggle()
+                    if viewModel.isPresentedFirstTime {
+                        Button(editButtonLabelText) {
+                            isEditingMode.toggle()
+                        }
                     }
                 }
                 .buttonStyle(CapsuleWithWhiteText())
@@ -69,6 +82,7 @@ struct SitterProfileView: View {
     private let cancelButtonLabelText = "Cancel"
     private let saveButtonLabelText = "Save"
     private let editButtonLabelText = "Edit"
+    private let mandatoryPlaceholderText = "Fields with * are mandatory"
     @State private var isEditingMode = false
 }
 
