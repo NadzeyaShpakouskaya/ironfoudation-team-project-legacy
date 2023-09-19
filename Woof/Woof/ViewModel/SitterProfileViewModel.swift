@@ -86,8 +86,8 @@ final class SitterProfileViewModel: ObservableObject {
         surname = currentSitter?.surname ?? ""
         phone = currentSitter?.phone ?? ""
         bio = currentSitter?.bio ?? ""
-        if let currentSitter {
-            pricePerHour = String(currentSitter.pricePerHour)
+        if let pricePerHour = currentSitter?.pricePerHour {
+            self.pricePerHour = String(pricePerHour)
         } else {
             pricePerHour = ""
         }

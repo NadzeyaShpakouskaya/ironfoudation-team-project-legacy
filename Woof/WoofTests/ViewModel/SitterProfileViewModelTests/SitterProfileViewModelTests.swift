@@ -5,15 +5,15 @@ final class SitterProfileViewModelTests: XCTestCase {
         _ = SitterProfileViewModel()
     }
 
-    func testSitterProfileViewModelInitializedWithLastSavedData() {
+    func testSitterProfileViewModelInitializedWithLastSavedData() throws {
         // Given
         let savingSitter = SitterProfileViewModel()
 
         let savedName = Sitter.Test.johnSmith.name
         let savedSurname = Sitter.Test.johnSmith.surname
-        let savedPhone = Sitter.Test.johnSmith.phone
+        let savedPhone = try XCTUnwrap(Sitter.Test.johnSmith.phone)
         let savedBio = Sitter.Test.johnSmith.bio
-        let savedPricePerHour = Sitter.Test.johnSmith.pricePerHour
+        let savedPricePerHour = try XCTUnwrap(Sitter.Test.johnSmith.pricePerHour)
 
         savingSitter.name = savedName
         savingSitter.surname = savedSurname

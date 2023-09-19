@@ -5,7 +5,7 @@ final class SitterProfileViewModelCancelEditingTests: XCTestCase {
         SitterProfileViewModel().cancelEditing()
     }
 
-    func testCancelEditingMethodSuccessfullyRestoresOriginalSitterProperties() {
+    func testCancelEditingMethodSuccessfullyRestoresOriginalSitterProperties() throws {
         // Given
         let viewModel = SitterProfileViewModel()
 
@@ -17,9 +17,10 @@ final class SitterProfileViewModelCancelEditingTests: XCTestCase {
 
         viewModel.name = Sitter.Test.johnSmith.name
         viewModel.surname = Sitter.Test.johnSmith.surname
-        viewModel.phone = Sitter.Test.johnSmith.phone
+        viewModel.phone = try XCTUnwrap(Sitter.Test.johnSmith.phone)
         viewModel.bio = Sitter.Test.johnSmith.bio
-        viewModel.pricePerHour = String(Sitter.Test.johnSmith.pricePerHour)
+        let pricePerHour = try XCTUnwrap(Sitter.Test.johnSmith.pricePerHour)
+        viewModel.pricePerHour = String(pricePerHour)
 
         // When
         viewModel.cancelEditing()

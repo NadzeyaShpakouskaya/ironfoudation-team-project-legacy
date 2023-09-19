@@ -5,15 +5,15 @@ final class SitterProfileViewModelSaveTests: XCTestCase {
         SitterProfileViewModel().save()
     }
 
-    func testSaveMethodSuccessfullySavedChangedSitterProperties() {
+    func testSaveMethodSuccessfullySavedChangedSitterProperties() throws {
         // Given
         let viewModel = SitterProfileViewModel()
 
         let newName = Sitter.Test.johnSmith.name
         let newSurname = Sitter.Test.johnSmith.surname
-        let newPhone = Sitter.Test.johnSmith.phone
+        let newPhone = try XCTUnwrap(Sitter.Test.johnSmith.phone)
         let newBio = Sitter.Test.johnSmith.bio
-        let newPricePerHour = Sitter.Test.johnSmith.pricePerHour
+        let newPricePerHour = try XCTUnwrap(Sitter.Test.johnSmith.pricePerHour)
 
         viewModel.name = newName
         viewModel.surname = newSurname
