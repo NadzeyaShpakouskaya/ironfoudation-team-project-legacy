@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1934CC312AB9B70E001D5CB4 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1934CC302AB9B70E001D5CB4 /* MockURLProtocol.swift */; };
+		1934CC332AB9B79E001D5CB4 /* SitterListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1934CC322AB9B79E001D5CB4 /* SitterListViewModelTests.swift */; };
+		1934CC362AB9BC1E001D5CB4 /* DummyServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1934CC352AB9BC1E001D5CB4 /* DummyServerResponse.swift */; };
 		199BC09E2A8B73B900824CC6 /* ObfuscatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199BC09D2A8B73B900824CC6 /* ObfuscatorTests.swift */; };
 		199BC0A12A8B748F00824CC6 /* Obfuscator+bytesByObfuscating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199BC0A02A8B748F00824CC6 /* Obfuscator+bytesByObfuscating.swift */; };
 		199BC0A22A8B793400824CC6 /* Obfuscator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD790632A45732D007C1265 /* Obfuscator.swift */; };
@@ -173,6 +175,8 @@
 
 /* Begin PBXFileReference section */
 		1934CC302AB9B70E001D5CB4 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
+		1934CC322AB9B79E001D5CB4 /* SitterListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitterListViewModelTests.swift; sourceTree = "<group>"; };
+		1934CC352AB9BC1E001D5CB4 /* DummyServerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyServerResponse.swift; sourceTree = "<group>"; };
 		199BC09D2A8B73B900824CC6 /* ObfuscatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObfuscatorTests.swift; sourceTree = "<group>"; };
 		199BC0A02A8B748F00824CC6 /* Obfuscator+bytesByObfuscating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Obfuscator+bytesByObfuscating.swift"; sourceTree = "<group>"; };
 		199BC0A92A8CC3E400824CC6 /* ObfuscatorErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObfuscatorErrorTests.swift; sourceTree = "<group>"; };
@@ -311,6 +315,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1934CC342AB9BBF3001D5CB4 /* SitterListViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				1934CC322AB9B79E001D5CB4 /* SitterListViewModelTests.swift */,
+				1934CC352AB9BC1E001D5CB4 /* DummyServerResponse.swift */,
+			);
+			path = SitterListViewModelTests;
+			sourceTree = "<group>";
+		};
 		199BC09F2A8B73C400824CC6 /* ObfuscatorTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -713,6 +726,7 @@
 				EF4CBAED2A3C6FF100B4A223 /* SitterProfileViewModelTests */,
 				EF95A04E2A38615E00E84ACD /* OwnerMainTabViewModelTests.swift */,
 				EF95A0522A38698900E84ACD /* SitterMainTabViewModelTests.swift */,
+				1934CC342AB9BBF3001D5CB4 /* SitterListViewModelTests */,
 				9B24803A2A33550A000B66CD /* DetailPetSitterViewModel */,
 				FD14A2B82A2870A500362461 /* OwnerProfileViewModelTests */,
 				935F23842A42D60A00820E7B /* LoginViewModelTests.swift */,
@@ -1178,10 +1192,12 @@
 				362732A22A1B800B0062E4B5 /* KeyValueStorageDeleteTests.swift in Sources */,
 				FDD143FE2A052D5A000BBA77 /* Color+AppScheme.swift in Sources */,
 				199BC0A32A8B850A00824CC6 /* ObfuscatorError.swift in Sources */,
+				1934CC362AB9BC1E001D5CB4 /* DummyServerResponse.swift in Sources */,
 				EF4CBAF02A3C704300B4A223 /* Sitter+Tests.swift in Sources */,
 				FDD144012A0532D5000BBA77 /* String+IconNameTests.swift in Sources */,
 				FD02917B2A0E2C5300F88377 /* AppStyle+UIElementConstant.swift in Sources */,
 				FDEE43CE2A2F4E56007DE0A9 /* Preferences.swift in Sources */,
+				1934CC332AB9B79E001D5CB4 /* SitterListViewModelTests.swift in Sources */,
 				FDD5385D2A41FADF00331977 /* WoofAppEndpointTests.swift in Sources */,
 				FDEE43D12A2F525B007DE0A9 /* RoleTests.swift in Sources */,
 				FDEE43CF2A2F4E58007DE0A9 /* Role.swift in Sources */,
