@@ -1,7 +1,7 @@
 import NetworkService
 import XCTest
 
-final class SitterProfileViewModelUploadTests: XCTestCase {
+final class SitterProfileViewModelNetworkTests: XCTestCase {
     private var viewModel: SitterProfileViewModel!
 
     override func setUp() {
@@ -16,12 +16,14 @@ final class SitterProfileViewModelUploadTests: XCTestCase {
         super.tearDown()
     }
 
-    func testUploadSuccessfullyExecuted() async {
+    func testSuccessfulUploadDoesNotTriggerIsErrorOccurred() async throws {
+        // Given
+        let expectedStatusCode = 200
         MockURLProtocol.requestHandler = { request in
             let response = try XCTUnwrap(
                 HTTPURLResponse(
                     url: XCTUnwrap(request.url),
-                    statusCode: 200,
+                    statusCode: expectedStatusCode,
                     httpVersion: nil,
                     headerFields: nil
                 )
@@ -29,13 +31,15 @@ final class SitterProfileViewModelUploadTests: XCTestCase {
             return (response, nil)
         }
 
-        do {
-            try await viewModel.upload()
-            XCTAssertEqual(viewModel.isErrorOccurred, false)
-        } catch {}
+        // When
+        try await viewModel.upload()
+
+        // Then
+        XCTAssertEqual(viewModel.isErrorOccurred, false)
     }
 
     func testBadRequestStatusCodeInResponseTriggersError() async {
+        // Given // When
         MockURLProtocol.requestHandler = { request in
             let response = try XCTUnwrap(
                 HTTPURLResponse(
@@ -48,6 +52,7 @@ final class SitterProfileViewModelUploadTests: XCTestCase {
             return (response, nil)
         }
 
+        // Then
         do {
             try await viewModel.upload()
             XCTFail("Expected failure, but got success")
@@ -56,30 +61,8 @@ final class SitterProfileViewModelUploadTests: XCTestCase {
         }
     }
 
-    func testRandomErrorStatusCodeInResponseTriggersError() async {
-        let randomStatusCode = Int.random(in: 400...499)
-
-        MockURLProtocol.requestHandler = { request in
-            let response = try XCTUnwrap(
-                HTTPURLResponse(
-                    url: XCTUnwrap(request.url),
-                    statusCode: randomStatusCode,
-                    httpVersion: nil,
-                    headerFields: nil
-                )
-            )
-            return (response, nil)
-        }
-
-        do {
-            try await viewModel.upload()
-            XCTFail("Expected failure for status code \(randomStatusCode), but got success")
-        } catch {
-            XCTAssertEqual(viewModel.isErrorOccurred, true)
-        }
-    }
-
     func testAllErrorStatusCodesInResponseTriggersError() async {
+        // Given // When
         for statusCode in 400...499 {
             MockURLProtocol.requestHandler = { request in
                 let response = try XCTUnwrap(
@@ -93,6 +76,7 @@ final class SitterProfileViewModelUploadTests: XCTestCase {
                 return (response, nil)
             }
 
+            // Then
             do {
                 try await viewModel.upload()
                 XCTFail("Expected failure for status code \(statusCode), but got success")
@@ -103,6 +87,7 @@ final class SitterProfileViewModelUploadTests: XCTestCase {
     }
 
     func testUploadSitterDataToBackEndSendsExpectedNumberOfRequests() async {
+        // Given // When
         var requestCount = 0
 
         MockURLProtocol.requestHandler = { request in
@@ -119,6 +104,7 @@ final class SitterProfileViewModelUploadTests: XCTestCase {
             return (response, nil)
         }
 
+        // Then
         do {
             try await viewModel.upload()
         } catch {

@@ -28,6 +28,9 @@ struct SitterProfileView: View {
                         Spacer()
 
                         Button(saveButtonLabelText) {
+                            Task {
+                                try await viewModel.upload()
+                            }
                             viewModel.save()
                             isEditingMode = false
                         }

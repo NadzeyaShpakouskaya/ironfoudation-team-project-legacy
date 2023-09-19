@@ -52,12 +52,11 @@ final class SitterProfileViewModel: ObservableObject {
 
     /// Uploads the pet sitter's data to the backend server asynchronously.
     ///
-    /// `isErrorOccurred` is set to `false`, indicating no errors.
-    /// If there is a network error during the upload,`isErrorOccurred` is set to `true`.
+    /// - Throws: An error of type `Error` if a network error occurs during the upload process.
     func upload() async throws {
         do {
             let endpoint = WoofAppEndpoint.addNewSitter(currentSitter.asDictionary())
-            _ = try await networkService.request(endpoint)
+            _ = try await NetworkService<WoofAppEndpoint>().request(endpoint)
         } catch {
             await MainActor.run {
                 isErrorOccurred = true
@@ -74,8 +73,6 @@ final class SitterProfileViewModel: ObservableObject {
     // MARK: - Private interface
 
     private lazy var currentSitter: Sitter = loadSitterFromStorage()
-
-    private var networkService = NetworkService<WoofAppEndpoint>()
 
     private func loadSitterFromStorage() -> Sitter {
         guard let data = KeyValueStorage(KeyValueStorage.Name.currentSitter)
