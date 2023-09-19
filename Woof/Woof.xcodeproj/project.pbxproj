@@ -29,6 +29,8 @@
 		36C06F5D2A2F5DDB00B8EBDF /* PreferencesHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C06F592A2F5AA600B8EBDF /* PreferencesHandler.swift */; };
 		36C54AFC2A17A79200748023 /* KeyValueStorageLoadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C54AFB2A17A79200748023 /* KeyValueStorageLoadTests.swift */; };
 		36E97F172A2F42FD00030E3E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E97F162A2F42FD00030E3E /* LoginViewModel.swift */; };
+		36FA84A72AB9C22C00D85A6D /* SitterCodingKeysTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FA84A62AB9C22C00D85A6D /* SitterCodingKeysTests.swift */; };
+		36FA84A92AB9C26200D85A6D /* Sitter+CodingKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363528D52AB9ADF6009A21CF /* Sitter+CodingKeys.swift */; };
 		9308D6132A31EFE40086193D /* CapsuleWithWhiteText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9308D6122A31EFE40086193D /* CapsuleWithWhiteText.swift */; };
 		935F23852A42D60A00820E7B /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935F23842A42D60A00820E7B /* LoginViewModelTests.swift */; };
 		9371BAC32A3F3334000980F9 /* UserRoleViewModelResetCurrentRoleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9371BAC22A3F3333000980F9 /* UserRoleViewModelResetCurrentRoleTests.swift */; };
@@ -186,6 +188,7 @@
 		36C06F5B2A2F5DCB00B8EBDF /* PreferencesHandlerSetUserRoleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesHandlerSetUserRoleTests.swift; sourceTree = "<group>"; };
 		36C54AFB2A17A79200748023 /* KeyValueStorageLoadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStorageLoadTests.swift; sourceTree = "<group>"; };
 		36E97F162A2F42FD00030E3E /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		36FA84A62AB9C22C00D85A6D /* SitterCodingKeysTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitterCodingKeysTests.swift; sourceTree = "<group>"; };
 		9308D6122A31EFE40086193D /* CapsuleWithWhiteText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleWithWhiteText.swift; sourceTree = "<group>"; };
 		935F23842A42D60A00820E7B /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
 		9371BAC22A3F3333000980F9 /* UserRoleViewModelResetCurrentRoleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRoleViewModelResetCurrentRoleTests.swift; sourceTree = "<group>"; };
@@ -334,6 +337,7 @@
 		36BEA7592A1621B70020F6AE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				36FA84A82AB9C23100D85A6D /* Sitter */,
 				36BEA75A2A1621C00020F6AE /* KeyValueStorage */,
 				FDEE43D22A2F5512007DE0A9 /* Preferences */,
 			);
@@ -363,6 +367,14 @@
 				FD14A2A82A27804F00362461 /* KeyValueStorage+Key.swift */,
 			);
 			path = KeyValueStorage;
+			sourceTree = "<group>";
+		};
+		36FA84A82AB9C23100D85A6D /* Sitter */ = {
+			isa = PBXGroup;
+			children = (
+				36FA84A62AB9C22C00D85A6D /* SitterCodingKeysTests.swift */,
+			);
+			path = Sitter;
 			sourceTree = "<group>";
 		};
 		9371BAC12A3F323D000980F9 /* UserRoleViewModelTests */ = {
@@ -1112,6 +1124,7 @@
 				FD9802282A287670003DEE5C /* OwnerProfileViewModelGetTests.swift in Sources */,
 				FD6A2E612A2F067E00934C3E /* KeyValueStorage+KeyTests.swift in Sources */,
 				FD33035C2AA9DA6B0091A4BA /* WoofAppEndpoint+Path.swift in Sources */,
+				36FA84A92AB9C26200D85A6D /* Sitter+CodingKeys.swift in Sources */,
 				FD8182302A20C3C300AE1016 /* KeyValueStorage+TestData.swift in Sources */,
 				36C54AFC2A17A79200748023 /* KeyValueStorageLoadTests.swift in Sources */,
 				FD02917A2A0E2C5000F88377 /* AppStyle+FontStyle.swift in Sources */,
@@ -1125,6 +1138,7 @@
 				EF95A0572A386FCE00E84ACD /* Sitter+Dummy.swift in Sources */,
 				FD14A2B52A286C5C00362461 /* KeyValueStorage+Key.swift in Sources */,
 				FD37A9942A0B6E960001BABB /* FullNameTests.swift in Sources */,
+				36FA84A72AB9C22C00D85A6D /* SitterCodingKeysTests.swift in Sources */,
 				FDEE43E22A38884A007DE0A9 /* UserRoleViewModelTests.swift in Sources */,
 				FDEB1B6A2AAEF6C700428CAA /* Encodable+AsDictionaryTests.swift in Sources */,
 				FD33035B2AA9DA640091A4BA /* Encodable+asDictionary.swift in Sources */,
