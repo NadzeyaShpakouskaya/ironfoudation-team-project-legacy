@@ -18,7 +18,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Add scripts to insert API-key to the build phase of the `Woof` target - [#202](https://github.com/ios-course/ironfoudation-team-project/pull/202)
 - Add a new endpoint to `WoofAppEndpoint` for adding new sitter - [#205](https://github.com/ios-course/ironfoudation-team-project/pull/205)
 - Add a new endpoint to `WoofAppEndpoint` for receiving all the saved sitters - [#208](https://github.com/ios-course/ironfoudation-team-project/pull/208)
-- Add request to backend in `SitterProfileViewModel` to upload Sitter information - [#211](https://github.com/ios-course/ironfoudation-team-project/pull/211)
 - Add `CodingKeys` enum to map sitter properties to JSON keys - [#213](https://github.com/ios-course/ironfoudation-team-project/pull/213)
 
 ### Changed
