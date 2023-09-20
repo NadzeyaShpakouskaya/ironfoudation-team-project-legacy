@@ -54,7 +54,7 @@ final class SitterProfileViewModel: ObservableObject {
 
         KeyValueStorage(KeyValueStorage.Name.currentSitter)
             .save(data, for: KeyValueStorage.Key.currentSitter)
-        
+
         PreferencesHandler.setSitterWillBeModifiedFirstTime(to: false)
     }
 
