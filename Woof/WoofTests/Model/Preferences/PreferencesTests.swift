@@ -25,7 +25,7 @@ final class PreferencesTests: XCTestCase {
         XCTAssertEqual(preferences.selectedRole, Role.owner)
     }
 
-    func testPreferencesReturnTrueAsDefaultValueForisSitterModifiedFirstTime() {
+    func testPreferencesReturnTrueAsDefaultValueForIsSitterModifiedFirstTime() {
         XCTAssertTrue(Preferences().isSitterModifiedFirstTime)
     }
 }

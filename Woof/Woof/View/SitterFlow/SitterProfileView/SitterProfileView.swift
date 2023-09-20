@@ -18,7 +18,7 @@ struct SitterProfileView: View {
                         bio: $viewModel.bio,
                         pricePerHour: $viewModel.pricePerHour
                     )
-                    if viewModel.mandatoryFieldsAreEmpty {
+                    if viewModel.areMandatoryFieldsEmpty {
                         Text(mandatoryPlaceholderText)
                             .padding(.vertical)
                     }
@@ -27,7 +27,7 @@ struct SitterProfileView: View {
                             viewModel.save()
                             isEditingMode = false
                         }
-                        .disabled(viewModel.mandatoryFieldsAreEmpty)
+                        .disabled(viewModel.areMandatoryFieldsEmpty)
                     } else {
                         HStack {
                             Group {
@@ -42,7 +42,7 @@ struct SitterProfileView: View {
                                 viewModel.save()
                                 isEditingMode = false
                             }
-                            .disabled(viewModel.mandatoryFieldsAreEmpty)
+                            .disabled(viewModel.areMandatoryFieldsEmpty)
                         }
                     }
                 }

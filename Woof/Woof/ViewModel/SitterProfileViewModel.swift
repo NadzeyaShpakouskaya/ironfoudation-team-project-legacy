@@ -22,7 +22,7 @@ final class SitterProfileViewModel: ObservableObject {
     @Published var pricePerHour: String = ""
 
     /// Indicates if the mandatory fields are empty.
-    var mandatoryFieldsAreEmpty: Bool {
+    var areMandatoryFieldsEmpty: Bool {
         name.isEmpty || phone.isEmpty
     }
 
@@ -42,8 +42,6 @@ final class SitterProfileViewModel: ObservableObject {
 
     /// Requests model layer to save modified data.
     func save() {
-        PreferencesHandler.setSitterWillBeModifiedFirstTime(to: false)
-
         currentSitter.name = name
         currentSitter.surname = surname
         currentSitter.phone = phone
@@ -56,6 +54,8 @@ final class SitterProfileViewModel: ObservableObject {
 
         KeyValueStorage(KeyValueStorage.Name.currentSitter)
             .save(data, for: KeyValueStorage.Key.currentSitter)
+        
+        PreferencesHandler.setSitterWillBeModifiedFirstTime(to: false)
     }
 
     /// Requests the model layer to cancel the editing mode and restore the original values.

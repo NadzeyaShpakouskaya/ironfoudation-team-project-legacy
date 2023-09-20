@@ -51,7 +51,7 @@ enum PreferencesHandler {
     /**
      Gets the current app preferences.
 
-     - Returns: The preferences for the app.
+     - Returns: The preferences of the app.
      */
     static func getAppSettings() -> Preferences {
         loadPreferences().self ?? Preferences()
