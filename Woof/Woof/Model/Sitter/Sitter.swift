@@ -4,7 +4,7 @@ import Foundation
  A person who can walk with pet (or several pets) and provide service of walking for pet owners.
  Conforms to the `Codable` and `Identifiable` protocols.
  */
-struct Sitter: Codable, Identifiable {
+struct Sitter: Codable, Identifiable, Equatable {
     /// The unique identifier for the sitter.
     let id: UUID
 
