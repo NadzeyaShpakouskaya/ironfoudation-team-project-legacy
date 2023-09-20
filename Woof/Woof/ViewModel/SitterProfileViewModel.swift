@@ -37,7 +37,7 @@ final class SitterProfileViewModel: ObservableObject {
         setInitialValues(currentSitter)
     }
 
-    /// Requests model layer to save modified data.
+    /// Requests model layer to upload and save modified data.
     func save() async {
         var updatedSitter = currentSitter
 
