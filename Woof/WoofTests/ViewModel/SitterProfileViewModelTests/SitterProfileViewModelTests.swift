@@ -2,6 +2,16 @@ import NetworkService
 import XCTest
 
 final class SitterProfileViewModelTests: XCTestCase {
+    override func setUp() {
+        super.setUp()
+        URLProtocol.registerClass(MockURLProtocol.self)
+    }
+
+    override func tearDown() {
+        URLProtocol.unregisterClass(MockURLProtocol.self)
+        super.tearDown()
+    }
+
     func testSitterProfileViewModelCanBeInitialized() {
         _ = SitterProfileViewModel()
     }
@@ -9,6 +19,18 @@ final class SitterProfileViewModelTests: XCTestCase {
     func testSitterProfileViewModelInitializedWithLastSavedData() async {
         // Given
         let savingSitter = SitterProfileViewModel()
+
+        MockURLProtocol.requestHandler = { request in
+            let response = try XCTUnwrap(
+                HTTPURLResponse(
+                    url: XCTUnwrap(request.url),
+                    statusCode: 200,
+                    httpVersion: nil,
+                    headerFields: nil
+                )
+            )
+            return (response, nil)
+        }
 
         let savedName = Sitter.Test.johnSmith.name
         let savedSurname = Sitter.Test.johnSmith.surname
