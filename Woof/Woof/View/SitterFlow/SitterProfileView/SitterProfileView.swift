@@ -30,8 +30,10 @@ struct SitterProfileView: View {
                         Button(saveButtonLabelText) {
                             Task {
                                 await viewModel.save()
+                                if !viewModel.isErrorOccurred {
+                                    isEditingMode = false
+                                }
                             }
-                            isEditingMode = false
                         }
                         .disabled(viewModel.name.isEmpty)
                     }
@@ -74,7 +76,9 @@ struct SitterProfileView: View {
                     }
                 },
                 secondaryButton: .cancel(Text("Cancel")) {
+                    viewModel.cancelEditing()
                     viewModel.errorMessage = ""
+                    isEditingMode = false
                 }
             )
         }
