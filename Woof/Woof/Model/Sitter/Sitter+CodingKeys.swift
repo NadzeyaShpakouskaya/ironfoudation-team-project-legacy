@@ -1,5 +1,3 @@
-import Foundation
-
 extension Sitter {
     // Defines custom CodingKeys enum to map properties to JSON keys
     enum CodingKeys: String, CodingKey {
@@ -10,6 +8,6 @@ extension Sitter {
         case avatarUrl
         case bio
         case rating
-        case pricePerHour = "rate_per_hour"
+        case pricePerHour = "ratePerHour"
     }
 }

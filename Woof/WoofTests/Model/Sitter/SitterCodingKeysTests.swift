@@ -9,6 +9,6 @@ class SitterCodingKeysTests: XCTestCase {
         XCTAssertEqual(Sitter.CodingKeys.avatarUrl.rawValue, "avatarUrl")
         XCTAssertEqual(Sitter.CodingKeys.bio.rawValue, "bio")
         XCTAssertEqual(Sitter.CodingKeys.rating.rawValue, "rating")
-        XCTAssertEqual(Sitter.CodingKeys.pricePerHour.rawValue, "rate_per_hour")
+        XCTAssertEqual(Sitter.CodingKeys.pricePerHour.rawValue, "ratePerHour")
     }
 }
