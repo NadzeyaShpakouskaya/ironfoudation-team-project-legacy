@@ -1,5 +1,4 @@
 extension Sitter {
-    // Defines custom CodingKeys enum to map properties to JSON keys
     enum CodingKeys: String, CodingKey {
         case id
         case name
