@@ -124,7 +124,7 @@ final class SitterProfileViewModelSaveTests: XCTestCase {
         }
     }
 
-    func testUploadSitterDataToBackEndSendsExpectedNumberOfRequests() async {
+    func testSaveSendsExpectedNumberOfRequests() async {
         // Given
         var requestCount = 0
 
