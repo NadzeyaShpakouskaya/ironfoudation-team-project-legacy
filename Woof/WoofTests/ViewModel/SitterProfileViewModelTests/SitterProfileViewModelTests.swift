@@ -1,3 +1,4 @@
+import NetworkService
 import XCTest
 
 final class SitterProfileViewModelTests: XCTestCase {
@@ -5,7 +6,7 @@ final class SitterProfileViewModelTests: XCTestCase {
         _ = SitterProfileViewModel()
     }
 
-    func testSitterProfileViewModelInitializedWithLastSavedData() {
+    func testSitterProfileViewModelInitializedWithLastSavedData() async {
         // Given
         let savingSitter = SitterProfileViewModel()
 
@@ -22,7 +23,7 @@ final class SitterProfileViewModelTests: XCTestCase {
         savingSitter.pricePerHour = String(savedPricePerHour)
 
         // When
-        savingSitter.save()
+        await savingSitter.save()
 
         // Then
         let newViewModel = SitterProfileViewModel()

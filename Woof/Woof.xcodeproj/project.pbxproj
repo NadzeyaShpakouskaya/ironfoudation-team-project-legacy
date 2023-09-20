@@ -15,7 +15,6 @@
 		1CE7E9C92A247CF1000A0509 /* KeyValueStorageInitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE7E9C82A247CF1000A0509 /* KeyValueStorageInitTests.swift */; };
 		1CE7E9CC2A24889B000A0509 /* KeyValueStorage+UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE7E9CB2A24889B000A0509 /* KeyValueStorage+UnitTests.swift */; };
 		36162B642AB32758002391A1 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36162B632AB32758002391A1 /* MockURLProtocol.swift */; };
-		36162B672AB327BB002391A1 /* SitterProfileViewModelNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36162B662AB327BB002391A1 /* SitterProfileViewModelNetworkTests.swift */; };
 		36199B0F2A1FB1C900725FC8 /* KeyValueStorage+TestKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36199B0E2A1FB1C900725FC8 /* KeyValueStorage+TestKey.swift */; };
 		362732A22A1B800B0062E4B5 /* KeyValueStorageDeleteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362732A12A1B800A0062E4B5 /* KeyValueStorageDeleteTests.swift */; };
 		362F63062A28A8B6002A659B /* OwnerProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362F63052A28A8B6002A659B /* OwnerProfileView.swift */; };
@@ -29,6 +28,7 @@
 		36C06F5C2A2F5DCB00B8EBDF /* PreferencesHandlerSetUserRoleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C06F5B2A2F5DCB00B8EBDF /* PreferencesHandlerSetUserRoleTests.swift */; };
 		36C06F5D2A2F5DDB00B8EBDF /* PreferencesHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C06F592A2F5AA600B8EBDF /* PreferencesHandler.swift */; };
 		36C54AFC2A17A79200748023 /* KeyValueStorageLoadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C54AFB2A17A79200748023 /* KeyValueStorageLoadTests.swift */; };
+		36DD2FD82ABB35BB00EE3F57 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FA84AE2ABAE3A600D85A6D /* AppError.swift */; };
 		36E97F172A2F42FD00030E3E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E97F162A2F42FD00030E3E /* LoginViewModel.swift */; };
 		36FA84AF2ABAE3A600D85A6D /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FA84AE2ABAE3A600D85A6D /* AppError.swift */; };
 		9308D6132A31EFE40086193D /* CapsuleWithWhiteText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9308D6122A31EFE40086193D /* CapsuleWithWhiteText.swift */; };
@@ -177,7 +177,6 @@
 		1CE7E9C82A247CF1000A0509 /* KeyValueStorageInitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStorageInitTests.swift; sourceTree = "<group>"; };
 		1CE7E9CB2A24889B000A0509 /* KeyValueStorage+UnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyValueStorage+UnitTests.swift"; sourceTree = "<group>"; };
 		36162B632AB32758002391A1 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
-		36162B662AB327BB002391A1 /* SitterProfileViewModelNetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitterProfileViewModelNetworkTests.swift; sourceTree = "<group>"; };
 		36199B0E2A1FB1C900725FC8 /* KeyValueStorage+TestKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyValueStorage+TestKey.swift"; sourceTree = "<group>"; };
 		362732A12A1B800A0062E4B5 /* KeyValueStorageDeleteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStorageDeleteTests.swift; sourceTree = "<group>"; };
 		362F63052A28A8B6002A659B /* OwnerProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerProfileView.swift; sourceTree = "<group>"; };
@@ -445,7 +444,6 @@
 				EF4CBAF12A3C708E00B4A223 /* SitterProfileViewModelTests.swift */,
 				EF4CBAF42A3C712C00B4A223 /* SitterProfileViewModelSaveTests.swift */,
 				BA77BDBC2A45852D00CA76EA /* SitterProfileViewModelCancelEditingTests.swift */,
-				36162B662AB327BB002391A1 /* SitterProfileViewModelNetworkTests.swift */,
 			);
 			path = SitterProfileViewModelTests;
 			sourceTree = "<group>";
@@ -1123,6 +1121,7 @@
 			files = (
 				36BEA7582A1621B10020F6AE /* KeyValueStorageSaveTests.swift in Sources */,
 				BA77BDBD2A45852D00CA76EA /* SitterProfileViewModelCancelEditingTests.swift in Sources */,
+				36DD2FD82ABB35BB00EE3F57 /* AppError.swift in Sources */,
 				FD9802282A287670003DEE5C /* OwnerProfileViewModelGetTests.swift in Sources */,
 				FD6A2E612A2F067E00934C3E /* KeyValueStorage+KeyTests.swift in Sources */,
 				FD33035C2AA9DA6B0091A4BA /* WoofAppEndpoint+Path.swift in Sources */,
@@ -1134,7 +1133,6 @@
 				FD3303562AA0533D0091A4BA /* WoofAppEndpoint+HTTPAPIEndpoint.swift in Sources */,
 				9371BAC72A3F33B7000980F9 /* UserRoleViewModelSetSitterRoleTests.swift in Sources */,
 				9371BAC32A3F3334000980F9 /* UserRoleViewModelResetCurrentRoleTests.swift in Sources */,
-				36162B672AB327BB002391A1 /* SitterProfileViewModelNetworkTests.swift in Sources */,
 				9371BAC52A3F337B000980F9 /* UserRoleViewModelSetOwnerRoleTests.swift in Sources */,
 				FD0291792A0E2B2300F88377 /* AppStyle+UIElementConstantTests.swift in Sources */,
 				EF95A0572A386FCE00E84ACD /* Sitter+Dummy.swift in Sources */,

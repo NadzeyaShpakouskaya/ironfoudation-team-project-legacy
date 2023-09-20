@@ -35,6 +35,8 @@ final class SitterProfileViewModel: ObservableObject {
         currentSitter = loadSitterFromStorage()
 
         setInitialValues(currentSitter)
+
+        isErrorOccurred = false
     }
 
     /// Requests model layer to upload and save modified data.
@@ -55,11 +57,11 @@ final class SitterProfileViewModel: ObservableObject {
             if let data = try? JSONEncoder().encode(currentSitter) {
                 if KeyValueStorage(KeyValueStorage.Name.currentSitter)
                     .save(data, for: KeyValueStorage.Key.currentSitter) {
+                } else {
                     await MainActor.run {
                         isErrorOccurred = true
+                        handleError(.localSaveFailed)
                     }
-                } else {
-                    handleError(.localSaveFailed)
                 }
             }
         } catch {
