@@ -50,6 +50,7 @@ final class SitterListViewModelTests: XCTestCase {
 
     func testExample3() async throws {
         // Given
+        let data = try getData(fromJSON: "responseWithSitters")
         MockURLProtocol.requestHandler = { request in
             let url = try XCTUnwrap(request.url)
             let response = try XCTUnwrap(
@@ -60,7 +61,7 @@ final class SitterListViewModelTests: XCTestCase {
                     headerFields: nil
                 )
             )
-            return (response, DummyServerResponse.sittersData)
+            return (response, data)
         }
 
         // When
@@ -74,4 +75,13 @@ final class SitterListViewModelTests: XCTestCase {
 
     private var viewModel: SitterListViewModel!
     private let endpoint = WoofAppEndpoint.getAllSitters
+
+    private func getData(fromJSON fileName: String) throws -> Data? {
+        let bundle = Bundle(for: type(of: self))
+        guard let url = bundle.url(forResource: fileName, withExtension: "json") else {
+            XCTFail("Missing File: \(fileName).json")
+            return nil
+        }
+        return try? Data(contentsOf: url)
+    }
 }
