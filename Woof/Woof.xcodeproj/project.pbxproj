@@ -15,6 +15,7 @@
 		199BC0A22A8B793400824CC6 /* Obfuscator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD790632A45732D007C1265 /* Obfuscator.swift */; };
 		199BC0A32A8B850A00824CC6 /* ObfuscatorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD790692A4587B7007C1265 /* ObfuscatorError.swift */; };
 		199BC0AA2A8CC3E400824CC6 /* ObfuscatorErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199BC0A92A8CC3E400824CC6 /* ObfuscatorErrorTests.swift */; };
+		19B163DA2ABAC52300D4C155 /* Sitter+Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B163D92ABAC52300D4C155 /* Sitter+Hashable.swift */; };
 		1CE7E9C92A247CF1000A0509 /* KeyValueStorageInitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE7E9C82A247CF1000A0509 /* KeyValueStorageInitTests.swift */; };
 		1CE7E9CC2A24889B000A0509 /* KeyValueStorage+UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE7E9CB2A24889B000A0509 /* KeyValueStorage+UnitTests.swift */; };
 		36199B0F2A1FB1C900725FC8 /* KeyValueStorage+TestKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36199B0E2A1FB1C900725FC8 /* KeyValueStorage+TestKey.swift */; };
@@ -180,6 +181,7 @@
 		199BC09D2A8B73B900824CC6 /* ObfuscatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObfuscatorTests.swift; sourceTree = "<group>"; };
 		199BC0A02A8B748F00824CC6 /* Obfuscator+bytesByObfuscating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Obfuscator+bytesByObfuscating.swift"; sourceTree = "<group>"; };
 		199BC0A92A8CC3E400824CC6 /* ObfuscatorErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObfuscatorErrorTests.swift; sourceTree = "<group>"; };
+		19B163D92ABAC52300D4C155 /* Sitter+Hashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sitter+Hashable.swift"; sourceTree = "<group>"; };
 		1CE7E9C82A247CF1000A0509 /* KeyValueStorageInitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStorageInitTests.swift; sourceTree = "<group>"; };
 		1CE7E9CB2A24889B000A0509 /* KeyValueStorage+UnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyValueStorage+UnitTests.swift"; sourceTree = "<group>"; };
 		36199B0E2A1FB1C900725FC8 /* KeyValueStorage+TestKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyValueStorage+TestKey.swift"; sourceTree = "<group>"; };
@@ -315,6 +317,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		192210FB2ABDB3D200B9026D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				19B163D92ABAC52300D4C155 /* Sitter+Hashable.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		1934CC342AB9BBF3001D5CB4 /* SitterListViewModelTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -352,6 +362,7 @@
 		36BEA7592A1621B70020F6AE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				192210FB2ABDB3D200B9026D /* Extension */,
 				36FA84A82AB9C23100D85A6D /* Sitter */,
 				36BEA75A2A1621C00020F6AE /* KeyValueStorage */,
 				FDEE43D22A2F5512007DE0A9 /* Preferences */,
@@ -1173,6 +1184,7 @@
 				935F23852A42D60A00820E7B /* LoginViewModelTests.swift in Sources */,
 				1934CC312AB9B70E001D5CB4 /* MockURLProtocol.swift in Sources */,
 				FDEE43CD2A2F4E51007DE0A9 /* PreferencesTests.swift in Sources */,
+				19B163DA2ABAC52300D4C155 /* Sitter+Hashable.swift in Sources */,
 				EF95A04B2A385FA900E84ACD /* OwnerMainTabViewModel.swift in Sources */,
 				FD98022A2A2878C1003DEE5C /* Owner+Test.swift in Sources */,
 				FDD143F72A052A11000BBA77 /* Color+AppSchemeTests.swift in Sources */,
