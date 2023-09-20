@@ -25,6 +25,8 @@ final class SitterProfileViewModel: ObservableObject {
     /// Indicating whether an error has occurred during the network operation.
     @Published var isErrorOccurred: Bool = false
 
+    @Published var errorMessage: String = ""
+
     /**
      Initializes an instance of the `SitterProfileViewModel` class.
      */
@@ -35,33 +37,34 @@ final class SitterProfileViewModel: ObservableObject {
     }
 
     /// Requests model layer to save modified data.
-    func save() {
-        currentSitter.name = name
-        currentSitter.surname = surname
-        currentSitter.phone = phone
-        currentSitter.bio = bio
-        if let newPricePerHour = Double(pricePerHour) {
-            currentSitter.pricePerHour = newPricePerHour
-        }
+    func save() async {
+        var updatedSitter = currentSitter
 
-        guard let data = try? JSONEncoder().encode(currentSitter) else { return }
+        updatedSitter.name = name
+        updatedSitter.surname = surname
+        updatedSitter.phone = phone
+        updatedSitter.bio = bio
+        updatedSitter.pricePerHour = Double(pricePerHour) ?? currentSitter.pricePerHour
 
-        KeyValueStorage(KeyValueStorage.Name.currentSitter)
-            .save(data, for: KeyValueStorage.Key.currentSitter)
-    }
-
-    /// Uploads the pet sitter's data to the backend server asynchronously.
-    ///
-    /// - Throws: An error of type `Error` if a network error occurs during the upload process.
-    func upload() async throws {
         do {
-            let endpoint = WoofAppEndpoint.addNewSitter(currentSitter.asDictionary())
-            _ = try await NetworkService<WoofAppEndpoint>().request(endpoint)
+            try await upload(updatedSitter)
+
+            currentSitter = updatedSitter
+
+            if let data = try? JSONEncoder().encode(currentSitter) {
+                if KeyValueStorage(KeyValueStorage.Name.currentSitter)
+                    .save(data, for: KeyValueStorage.Key.currentSitter) {
+                    isErrorOccurred = false
+                } else {
+//                    isErrorOccurred = true
+                    handleError(.localSaveFailed)
+                }
+            }
         } catch {
             await MainActor.run {
                 isErrorOccurred = true
+                handleError(.uploadFailed)
             }
-            throw error
         }
     }
 
@@ -73,6 +76,27 @@ final class SitterProfileViewModel: ObservableObject {
     // MARK: - Private interface
 
     private lazy var currentSitter: Sitter = loadSitterFromStorage()
+
+    private func upload(_ sitter: Sitter) async throws {
+        let endpoint = WoofAppEndpoint.addNewSitter(sitter.asDictionary())
+        _ = try await NetworkService<WoofAppEndpoint>().request(endpoint)
+    }
+
+//    private func upload() async {
+//        do {
+//            let endpoint = WoofAppEndpoint.addNewSitter(currentSitter.asDictionary())
+//            _ = try await NetworkService<WoofAppEndpoint>().request(endpoint)
+//        } catch {
+//            await MainActor.run {
+//                isErrorOccurred = true
+//            }
+//        }
+//    }
+
+    private func handleError(_ error: AppError) {
+        errorMessage = error.errorDescription
+        isErrorOccurred = true
+    }
 
     private func loadSitterFromStorage() -> Sitter {
         guard let data = KeyValueStorage(KeyValueStorage.Name.currentSitter)

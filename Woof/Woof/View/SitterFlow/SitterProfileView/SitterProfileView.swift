@@ -29,9 +29,8 @@ struct SitterProfileView: View {
 
                         Button(saveButtonLabelText) {
                             Task {
-                                try await viewModel.upload()
+                                await viewModel.save()
                             }
-                            viewModel.save()
                             isEditingMode = false
                         }
                         .disabled(viewModel.name.isEmpty)
@@ -65,6 +64,20 @@ struct SitterProfileView: View {
             Spacer()
         }
         .padding(.horizontal)
+        .alert(isPresented: $viewModel.isErrorOccurred) {
+            Alert(
+                title: Text("Error"),
+                message: Text(viewModel.errorMessage),
+                primaryButton: .default(Text("Try Again")) {
+                    Task {
+                        await viewModel.save()
+                    }
+                },
+                secondaryButton: .cancel(Text("Cancel")) {
+                    viewModel.errorMessage = ""
+                }
+            )
+        }
     }
 
     // MARK: - Private interface
