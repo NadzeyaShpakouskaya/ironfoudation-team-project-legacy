@@ -19,6 +19,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Add a new endpoint to `WoofAppEndpoint` for adding new sitter - [#205](https://github.com/ios-course/ironfoudation-team-project/pull/205)
 - Add request to backend in `SitterProfileViewModel` to upload Sitter information - [#211](https://github.com/ios-course/ironfoudation-team-project/pull/211)
 - Add a new endpoint to `WoofAppEndpoint` for receiving all the saved sitters - [#208](https://github.com/ios-course/ironfoudation-team-project/pull/208)
+- Add `CodingKeys` for `Sitter` model - [#213](https://github.com/ios-course/ironfoudation-team-project/pull/213)
 
 ### Changed
 

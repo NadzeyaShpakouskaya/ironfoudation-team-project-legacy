@@ -70,7 +70,7 @@ final class EncodableAsDictionaryTests: XCTestCase {
         XCTAssertEqual(dictionary["avatar_url"] as? String, Bundle.main.bundleURL.description)
         XCTAssertEqual(dictionary["bio"] as? String, "Bio")
         XCTAssertEqual(dictionary["rating"] as? Double, 4.5)
-        XCTAssertEqual(dictionary["price_per_hour"] as? Double, 24.5)
+        XCTAssertEqual(dictionary["rate_per_hour"] as? Double, 24.5)
 
         XCTAssertEqual(dictionary.count, 8)
     }
