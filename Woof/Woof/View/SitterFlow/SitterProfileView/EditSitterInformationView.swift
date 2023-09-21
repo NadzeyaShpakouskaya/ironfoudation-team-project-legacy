@@ -6,10 +6,11 @@ struct EditSitterInformationView: View {
 
     private let titleText = "Edit your information"
     private let bioInformationPlaceholderText = "Enter information about yourself"
-    private let namePlaceholderText = "Enter your name *"
+    private let namePlaceholderText = "Enter your name"
     private let surnamePlaceholderText = "Enter your surname"
     private let pricePlaceholderText = "Enter your price per hour for walking"
-    private let phonePlaceholderText = "Enter your phone *"
+    private let phonePlaceholderText = "Enter your phone"
+    private let mandatoryPlaceholderText = "*Name is a mandatory field"
 
     // MARK: - Internal interface
 
@@ -40,6 +41,10 @@ struct EditSitterInformationView: View {
                 .keyboardType(.decimalPad)
             TextEditorWithPlaceholder(text: $bio, placeholderText: bioInformationPlaceholderText)
                 .cornerRadius(AppStyle.UIElementConstant.cornerRadius)
+
+            if name.isEmpty {
+                Text(mandatoryPlaceholderText)
+            }
         }
         .padding()
         .foregroundColor(.App.purpleDark)

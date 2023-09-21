@@ -1,13 +1,6 @@
 import XCTest
 
 final class SitterProfileViewModelSaveTests: XCTestCase {
-    private var userPreferencesStorage = KeyValueStorage.testPreferencesStorage
-
-    override func setUp() {
-        super.setUp()
-        userPreferencesStorage.deleteData(for: KeyValueStorage.Key.userPreferences)
-    }
-
     func testSaveMethodExistsInAPI() {
         SitterProfileViewModel().save()
     }
@@ -39,6 +32,5 @@ final class SitterProfileViewModelSaveTests: XCTestCase {
         XCTAssertEqual(currentSitter.phone, newPhone)
         XCTAssertEqual(currentSitter.bio, newBio)
         XCTAssertEqual(currentSitter.pricePerHour, String(newPricePerHour))
-        XCTAssertFalse(PreferencesHandler.getAppSettings().isSitterModifiedFirstTime)
     }
 }

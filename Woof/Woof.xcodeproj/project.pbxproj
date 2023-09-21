@@ -130,8 +130,6 @@
 		FD907D492A4356180020CFF0 /* NetworkServiceIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD907D482A4356180020CFF0 /* NetworkServiceIntegrationTests.swift */; };
 		FD9802282A287670003DEE5C /* OwnerProfileViewModelGetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9802272A287670003DEE5C /* OwnerProfileViewModelGetTests.swift */; };
 		FD98022A2A2878C1003DEE5C /* Owner+Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9802292A2878C1003DEE5C /* Owner+Test.swift */; };
-		FDA0AA0D2AB9754400969238 /* SetSitterWillBeModifiedFirstTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA0AA0C2AB9754400969238 /* SetSitterWillBeModifiedFirstTimeTests.swift */; };
-		FDA0AA102AB979FD00969238 /* GetAppSettingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA0AA0F2AB979FD00969238 /* GetAppSettingsTests.swift */; };
 		FDCF49142A1CDB1600CD3BBB /* DetailPetSitterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5A7F2E2A14504F00585616 /* DetailPetSitterViewModel.swift */; };
 		FDD143C72A03BD48000BBA77 /* OwnerMainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD143C62A03BD48000BBA77 /* OwnerMainTabView.swift */; };
 		FDD143CB2A03C629000BBA77 /* Color+AppScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD143CA2A03C629000BBA77 /* Color+AppScheme.swift */; };
@@ -265,8 +263,6 @@
 		FD907D482A4356180020CFF0 /* NetworkServiceIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceIntegrationTests.swift; sourceTree = "<group>"; };
 		FD9802272A287670003DEE5C /* OwnerProfileViewModelGetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerProfileViewModelGetTests.swift; sourceTree = "<group>"; };
 		FD9802292A2878C1003DEE5C /* Owner+Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Owner+Test.swift"; sourceTree = "<group>"; };
-		FDA0AA0C2AB9754400969238 /* SetSitterWillBeModifiedFirstTimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetSitterWillBeModifiedFirstTimeTests.swift; sourceTree = "<group>"; };
-		FDA0AA0F2AB979FD00969238 /* GetAppSettingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAppSettingsTests.swift; sourceTree = "<group>"; };
 		FDCF49122A1CDA8800CD3BBB /* DetailPetSitterViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailPetSitterViewModelTests.swift; path = WoofTests/ViewModel/DetailPetSitterViewModel/DetailPetSitterViewModelTests.swift; sourceTree = SOURCE_ROOT; };
 		FDD143C62A03BD48000BBA77 /* OwnerMainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerMainTabView.swift; sourceTree = "<group>"; };
 		FDD143CA2A03C629000BBA77 /* Color+AppScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+AppScheme.swift"; sourceTree = "<group>"; };
@@ -683,17 +679,6 @@
 			path = NetworkService;
 			sourceTree = "<group>";
 		};
-		FDA0AA0E2AB979A800969238 /* PreferenceHandlerTests */ = {
-			isa = PBXGroup;
-			children = (
-				36C06F5B2A2F5DCB00B8EBDF /* PreferencesHandlerSetUserRoleTests.swift */,
-				368F66602A308D2600C8F69D /* PreferencesHandlerGetUserRoleTests.swift */,
-				FDA0AA0C2AB9754400969238 /* SetSitterWillBeModifiedFirstTimeTests.swift */,
-				FDA0AA0F2AB979FD00969238 /* GetAppSettingsTests.swift */,
-			);
-			path = PreferenceHandlerTests;
-			sourceTree = "<group>";
-		};
 		FDAA7BF52A0CB8E2007905CB /* DataTrasnformer */ = {
 			isa = PBXGroup;
 			children = (
@@ -889,7 +874,8 @@
 			children = (
 				FDEE43CC2A2F4E51007DE0A9 /* PreferencesTests.swift */,
 				FDEE43D02A2F525B007DE0A9 /* RoleTests.swift */,
-				FDA0AA0E2AB979A800969238 /* PreferenceHandlerTests */,
+				36C06F5B2A2F5DCB00B8EBDF /* PreferencesHandlerSetUserRoleTests.swift */,
+				368F66602A308D2600C8F69D /* PreferencesHandlerGetUserRoleTests.swift */,
 			);
 			path = Preferences;
 			sourceTree = "<group>";
@@ -1154,7 +1140,6 @@
 				FD37A9942A0B6E960001BABB /* FullNameTests.swift in Sources */,
 				36FA84A72AB9C22C00D85A6D /* SitterCodingKeysTests.swift in Sources */,
 				FDEE43E22A38884A007DE0A9 /* UserRoleViewModelTests.swift in Sources */,
-				FDA0AA102AB979FD00969238 /* GetAppSettingsTests.swift in Sources */,
 				FDEB1B6A2AAEF6C700428CAA /* Encodable+AsDictionaryTests.swift in Sources */,
 				FD33035B2AA9DA640091A4BA /* Encodable+asDictionary.swift in Sources */,
 				FD3303502A9CAB180091A4BA /* APIEnvironmentTests.swift in Sources */,
@@ -1175,7 +1160,6 @@
 				FDD143F72A052A11000BBA77 /* Color+AppSchemeTests.swift in Sources */,
 				EF95A0552A386A2300E84ACD /* SitterListViewModel.swift in Sources */,
 				1CE7E9CC2A24889B000A0509 /* KeyValueStorage+UnitTests.swift in Sources */,
-				FDA0AA0D2AB9754400969238 /* SetSitterWillBeModifiedFirstTimeTests.swift in Sources */,
 				FD2F7B322A0CE029008F6F49 /* Sitter.swift in Sources */,
 				199BC0AA2A8CC3E400824CC6 /* ObfuscatorErrorTests.swift in Sources */,
 				365D3F2A2A38891D00EC9B30 /* LoginViewModel.swift in Sources */,

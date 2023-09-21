@@ -1,13 +1,6 @@
 import XCTest
 
 final class SitterProfileViewModelCancelEditingTests: XCTestCase {
-    private var userPreferencesStorage = KeyValueStorage.testPreferencesStorage
-
-    override func setUp() {
-        super.setUp()
-        userPreferencesStorage.deleteData(for: KeyValueStorage.Key.userPreferences)
-    }
-
     func testCancelEditingMethodExistsInAPI() {
         SitterProfileViewModel().cancelEditing()
     }
@@ -37,6 +30,5 @@ final class SitterProfileViewModelCancelEditingTests: XCTestCase {
         XCTAssertEqual(viewModel.phone, originalPhone)
         XCTAssertEqual(viewModel.bio, originalBio)
         XCTAssertEqual(viewModel.pricePerHour, String(originalPricePerHour))
-        XCTAssertTrue(PreferencesHandler.getAppSettings().isSitterModifiedFirstTime)
     }
 }

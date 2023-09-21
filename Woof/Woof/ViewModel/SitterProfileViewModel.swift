@@ -21,16 +21,6 @@ final class SitterProfileViewModel: ObservableObject {
     /// The price per hour for walking charged by the pet sitter.
     @Published var pricePerHour: String = ""
 
-    /// Indicates if the mandatory fields are empty.
-    var areMandatoryFieldsEmpty: Bool {
-        name.isEmpty || phone.isEmpty
-    }
-
-    /// Indicates if the sitter information is modified first time.
-    var isModifiedFirstTime: Bool {
-        PreferencesHandler.getAppSettings().isSitterModifiedFirstTime
-    }
-
     /**
      Initializes an instance of the `SitterProfileViewModel` class.
      */
@@ -54,8 +44,6 @@ final class SitterProfileViewModel: ObservableObject {
 
         KeyValueStorage(KeyValueStorage.Name.currentSitter)
             .save(data, for: KeyValueStorage.Key.currentSitter)
-
-        PreferencesHandler.setSitterWillBeModifiedFirstTime(to: false)
     }
 
     /// Requests the model layer to cancel the editing mode and restore the original values.
