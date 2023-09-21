@@ -63,12 +63,12 @@ struct SitterProfileView: View {
             Spacer()
         }
         .padding(.horizontal)
-        .alert("Error", isPresented: $viewModel.isErrorOccurred, actions: {
-            Button("Cancel", action: {
+        .alert(alertTitle, isPresented: $viewModel.isErrorOccurred, actions: {
+            Button(cancelButtonLabelText, action: {
                 viewModel.cancelEditing()
                 isEditingMode = false
             })
-            Button("Try Again", action: {
+            Button(tryAgainButtonLabelText, action: {
                 Task {
                     await viewModel.save()
                 }
@@ -83,6 +83,8 @@ struct SitterProfileView: View {
     private let cancelButtonLabelText = "Cancel"
     private let saveButtonLabelText = "Save"
     private let editButtonLabelText = "Edit"
+    private let tryAgainButtonLabelText = "Try Again"
+    private let alertTitle = "Error"
     @State private var isEditingMode = false
 }
 

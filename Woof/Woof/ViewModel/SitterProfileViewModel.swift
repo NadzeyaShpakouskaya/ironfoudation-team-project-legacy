@@ -76,12 +76,11 @@ final class SitterProfileViewModel: ObservableObject {
     }
 
     private func saveLocally(_ sitter: Sitter) async {
-        if let data = try? JSONEncoder().encode(sitter) {
-            if KeyValueStorage(KeyValueStorage.Name.currentSitter)
-                .save(data, for: KeyValueStorage.Key.currentSitter) {
-            } else {
-                await handleError(.localSaveFailed)
-            }
+        guard let data = try? JSONEncoder().encode(sitter),
+              KeyValueStorage(KeyValueStorage.Name.currentSitter)
+              .save(data, for: KeyValueStorage.Key.currentSitter) else {
+            await handleError(.saveLocallyFailed)
+            return
         }
     }
 

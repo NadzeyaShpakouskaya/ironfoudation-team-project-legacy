@@ -18,7 +18,7 @@ final class SitterProfileViewModelTests: XCTestCase {
 
     func testSitterProfileViewModelInitializedWithLastSavedData() async {
         // Given
-        let savingSitter = SitterProfileViewModel()
+        let savingSitterViewModel = SitterProfileViewModel()
 
         MockURLProtocol.requestHandler = { request in
             let response = try XCTUnwrap(
@@ -38,14 +38,14 @@ final class SitterProfileViewModelTests: XCTestCase {
         let savedBio = Sitter.Test.johnSmith.bio
         let savedPricePerHour = Sitter.Test.johnSmith.pricePerHour
 
-        savingSitter.name = savedName
-        savingSitter.surname = savedSurname
-        savingSitter.phone = savedPhone
-        savingSitter.bio = savedBio
-        savingSitter.pricePerHour = String(savedPricePerHour)
+        savingSitterViewModel.name = savedName
+        savingSitterViewModel.surname = savedSurname
+        savingSitterViewModel.phone = savedPhone
+        savingSitterViewModel.bio = savedBio
+        savingSitterViewModel.pricePerHour = String(savedPricePerHour)
 
         // When
-        await savingSitter.save()
+        await savingSitterViewModel.save()
 
         // Then
         let newViewModel = SitterProfileViewModel()
