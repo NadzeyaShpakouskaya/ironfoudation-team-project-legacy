@@ -63,6 +63,15 @@ struct SitterProfileView: View {
             Spacer()
         }
         .padding(.horizontal)
+        .overlay(
+            Group {
+                if viewModel.isSavingData {
+                    Color.white.opacity(opacityLevelForProgressViewBackground)
+                    ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle())
+                }
+            }
+        )
         .alert(alertTitle, isPresented: $viewModel.isErrorOccurred, actions: {
             Button(cancelButtonLabelText, action: {
                 viewModel.cancelEditing()
@@ -85,6 +94,7 @@ struct SitterProfileView: View {
     private let editButtonLabelText = "Edit"
     private let tryAgainButtonLabelText = "Try Again"
     private let alertTitle = "Error"
+    private let opacityLevelForProgressViewBackground = 0.4
     @State private var isEditingMode = false
 }
 

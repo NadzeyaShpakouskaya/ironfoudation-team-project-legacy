@@ -25,6 +25,9 @@ final class SitterProfileViewModel: ObservableObject {
     /// Indicating whether an error has occurred during the network operation.
     @Published var isErrorOccurred = false
 
+    /// Indicating the status of the saving operation.
+    @Published var isSavingData = false
+
     /**
      Initializes an instance of the `SitterProfileViewModel` class.
      */
@@ -36,6 +39,10 @@ final class SitterProfileViewModel: ObservableObject {
 
     /// Requests model layer to upload and save modified data.
     func save() async {
+        await MainActor.run {
+            isSavingData = true
+        }
+
         var updatedSitter = currentSitter
 
         updatedSitter.name = name
@@ -52,6 +59,9 @@ final class SitterProfileViewModel: ObservableObject {
             await saveLocally(currentSitter)
         } catch {
             await handleError(.uploadFailed)
+        }
+        await MainActor.run {
+            isSavingData = false
         }
     }
 
