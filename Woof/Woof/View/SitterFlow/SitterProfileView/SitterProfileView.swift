@@ -27,11 +27,15 @@ struct SitterProfileView: View {
 
                         Spacer()
 
+                        if viewModel.mandatoryFieldsAreEmpty {
+                            Text(mandatoryPlaceholderText)
+                                .padding(.vertical)
+                        }
                         Button(saveButtonLabelText) {
                             viewModel.save()
                             isEditingMode = false
                         }
-                        .disabled(viewModel.name.isEmpty)
+                        .disabled(viewModel.mandatoryFieldsAreEmpty)
                     }
                 }
                 .padding()
@@ -71,6 +75,7 @@ struct SitterProfileView: View {
     private let cancelButtonLabelText = "Cancel"
     private let saveButtonLabelText = "Save"
     private let editButtonLabelText = "Edit"
+    private let mandatoryPlaceholderText = "Fields with * are mandatory"
     @State private var isEditingMode = false
 }
 
