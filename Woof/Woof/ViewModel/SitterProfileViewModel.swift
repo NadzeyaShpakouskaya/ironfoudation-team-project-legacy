@@ -24,54 +24,67 @@ final class SitterProfileViewModel: ObservableObject {
     /**
      Initializes an instance of the `SitterProfileViewModel` class.
      */
-    init() {
-        currentSitter = loadSitterFromStorage()
 
-        setInitialValues(currentSitter)
+    init() {
+        if let sitter = loadSitterFromStorage() {
+            currentSitter = sitter
+            resetFields()
+            sitterIsSet = true
+        }
     }
 
     /// Requests model layer to save modified data.
     func save() {
-        currentSitter.name = name
-        currentSitter.surname = surname
-        currentSitter.phone = phone
-        currentSitter.bio = bio
-        if let newPricePerHour = Double(pricePerHour) {
-            currentSitter.pricePerHour = newPricePerHour
+        var newSitter = Sitter()
+        newSitter.name = name
+        newSitter.surname = surname
+        newSitter.phone = phone
+        newSitter.bio = bio
+        newSitter.pricePerHour = Double(pricePerHour) ?? 0
+
+        guard let data = try? JSONEncoder().encode(newSitter) else {
+            fatalError("Decoding failed.")
         }
 
-        guard let data = try? JSONEncoder().encode(currentSitter) else { return }
+        guard KeyValueStorage(KeyValueStorage.Name.currentSitter)
+            .save(data, for: KeyValueStorage.Key.currentSitter) else {
+            fatalError("Saving to the local storage failed.")
+        }
 
-        KeyValueStorage(KeyValueStorage.Name.currentSitter)
-            .save(data, for: KeyValueStorage.Key.currentSitter)
+        currentSitter = newSitter
     }
 
     /// Requests the model layer to cancel the editing mode and restore the original values.
     func cancelEditing() {
-        setInitialValues(currentSitter)
+        resetFields()
     }
 
     // MARK: - Private interface
 
-    private lazy var currentSitter: Sitter = loadSitterFromStorage()
-
-    private func loadSitterFromStorage() -> Sitter {
-        guard let data = KeyValueStorage(KeyValueStorage.Name.currentSitter)
-            .loadData(for: KeyValueStorage.Key.currentSitter) else {
-            return Sitter()
+    /// Indicates whether there is a saved sitter.
+    private(set) var sitterIsSet = false
+    private var currentSitter: Sitter? {
+        didSet {
+            sitterIsSet = true
         }
-        guard let sitter = try? JSONDecoder().decode(Sitter.self, from: data) else {
-            return Sitter()
-        }
-
-        return sitter
     }
 
-    private func setInitialValues(_ currentSitter: Sitter) {
-        name = currentSitter.name
-        surname = currentSitter.surname
-        phone = currentSitter.phone
-        bio = currentSitter.bio
-        pricePerHour = String(currentSitter.pricePerHour)
+    private func loadSitterFromStorage() -> Sitter? {
+        guard let data = KeyValueStorage(KeyValueStorage.Name.currentSitter)
+            .loadData(for: KeyValueStorage.Key.currentSitter) else { return nil }
+
+        return try? JSONDecoder().decode(Sitter.self, from: data)
+    }
+
+    private func resetFields() {
+        name = currentSitter?.name ?? ""
+        surname = currentSitter?.surname ?? ""
+        phone = currentSitter?.phone ?? ""
+        bio = currentSitter?.bio ?? ""
+        if let currentSitter {
+            pricePerHour = String(currentSitter.pricePerHour)
+        } else {
+            pricePerHour = ""
+        }
     }
 }

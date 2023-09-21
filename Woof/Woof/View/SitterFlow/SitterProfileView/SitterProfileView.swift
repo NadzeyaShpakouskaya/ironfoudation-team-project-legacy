@@ -5,7 +5,7 @@ struct SitterProfileView: View {
     // MARK: - Internal interface
 
     /// View model responsible to manage data from model layer.
-    @ObservedObject var viewModel = SitterProfileViewModel()
+    @StateObject var viewModel = SitterProfileViewModel()
 
     var body: some View {
         VStack {
@@ -49,8 +49,10 @@ struct SitterProfileView: View {
                         ratePerHour: viewModel.pricePerHour
                     )
 
-                    Button(editButtonLabelText) {
-                        isEditingMode.toggle()
+                    if !viewModel.sitterIsSet {
+                        Button(editButtonLabelText) {
+                            isEditingMode.toggle()
+                        }
                     }
                 }
                 .buttonStyle(CapsuleWithWhiteText())
