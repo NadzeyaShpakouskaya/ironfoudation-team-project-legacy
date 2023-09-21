@@ -23,10 +23,7 @@ final class SitterProfileViewModel: ObservableObject {
     @Published var pricePerHour: String = ""
 
     /// Indicating whether an error has occurred during the network operation.
-    @Published var isErrorOccurred: Bool = false
-
-    /// Detailed error information for the user.
-    @Published var errorMessage: String = ""
+    @Published var isErrorOccurred = false
 
     /**
      Initializes an instance of the `SitterProfileViewModel` class.
@@ -35,8 +32,6 @@ final class SitterProfileViewModel: ObservableObject {
         currentSitter = loadSitterFromStorage()
 
         setInitialValues(currentSitter)
-
-        isErrorOccurred = false
     }
 
     /// Requests model layer to upload and save modified data.
@@ -54,21 +49,9 @@ final class SitterProfileViewModel: ObservableObject {
 
             currentSitter = updatedSitter
 
-            if let data = try? JSONEncoder().encode(currentSitter) {
-                if KeyValueStorage(KeyValueStorage.Name.currentSitter)
-                    .save(data, for: KeyValueStorage.Key.currentSitter) {
-                } else {
-                    await MainActor.run {
-                        isErrorOccurred = true
-                        handleError(.localSaveFailed)
-                    }
-                }
-            }
+            await saveLocally(currentSitter)
         } catch {
-            await MainActor.run {
-                isErrorOccurred = true
-                handleError(.uploadFailed)
-            }
+            await handleError(.uploadFailed)
         }
     }
 
@@ -81,14 +64,29 @@ final class SitterProfileViewModel: ObservableObject {
 
     private lazy var currentSitter: Sitter = loadSitterFromStorage()
 
+    private(set) var errorMessage = "" {
+        didSet {
+            isErrorOccurred = !errorMessage.isEmpty
+        }
+    }
+
     private func upload(_ sitter: Sitter) async throws {
         let endpoint = WoofAppEndpoint.addNewSitter(sitter.asDictionary())
         _ = try await NetworkService<WoofAppEndpoint>().request(endpoint)
     }
 
-    private func handleError(_ error: AppError) {
+    private func saveLocally(_ sitter: Sitter) async {
+        if let data = try? JSONEncoder().encode(sitter) {
+            if KeyValueStorage(KeyValueStorage.Name.currentSitter)
+                .save(data, for: KeyValueStorage.Key.currentSitter) {
+            } else {
+                await handleError(.localSaveFailed)
+            }
+        }
+    }
+
+    @MainActor private func handleError(_ error: AppError) {
         errorMessage = error.errorDescription
-        isErrorOccurred = true
     }
 
     private func loadSitterFromStorage() -> Sitter {
@@ -109,5 +107,6 @@ final class SitterProfileViewModel: ObservableObject {
         phone = currentSitter.phone
         bio = currentSitter.bio
         pricePerHour = String(currentSitter.pricePerHour)
+        errorMessage = ""
     }
 }

@@ -1,12 +1,13 @@
 import Foundation
 
-/// Represents custom errors that can occur in the Woof app
+/// Represents custom error that can occur in the Woof app.
 enum AppError: Error {
     /// An error when attempting to save data locally on the user's device.
     case localSaveFailed
     /// An error when attempting to upload data to the remote server.
     case uploadFailed
 
+    /// Text description of possible errors.
     var errorDescription: String {
         switch self {
         case .localSaveFailed:

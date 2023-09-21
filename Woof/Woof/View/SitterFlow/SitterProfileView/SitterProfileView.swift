@@ -5,7 +5,7 @@ struct SitterProfileView: View {
     // MARK: - Internal interface
 
     /// View model responsible to manage data from model layer.
-    @ObservedObject var viewModel = SitterProfileViewModel()
+    @StateObject var viewModel = SitterProfileViewModel()
 
     var body: some View {
         VStack {
@@ -30,9 +30,6 @@ struct SitterProfileView: View {
                         Button(saveButtonLabelText) {
                             Task {
                                 await viewModel.save()
-                                if !viewModel.isErrorOccurred {
-                                    isEditingMode = false
-                                }
                             }
                         }
                         .disabled(viewModel.name.isEmpty)
@@ -66,22 +63,19 @@ struct SitterProfileView: View {
             Spacer()
         }
         .padding(.horizontal)
-        .alert(isPresented: $viewModel.isErrorOccurred) {
-            Alert(
-                title: Text("Error"),
-                message: Text(viewModel.errorMessage),
-                primaryButton: .default(Text("Try Again")) {
-                    Task {
-                        await viewModel.save()
-                    }
-                },
-                secondaryButton: .cancel(Text("Cancel")) {
-                    viewModel.cancelEditing()
-                    viewModel.errorMessage = ""
-                    isEditingMode = false
+        .alert("Error", isPresented: $viewModel.isErrorOccurred, actions: {
+            Button("Cancel", action: {
+                viewModel.cancelEditing()
+                isEditingMode = false
+            })
+            Button("Try Again", action: {
+                Task {
+                    await viewModel.save()
                 }
-            )
-        }
+            })
+        }, message: {
+            Text(viewModel.errorMessage)
+        })
     }
 
     // MARK: - Private interface
