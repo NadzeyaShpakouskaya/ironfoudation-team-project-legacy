@@ -16,9 +16,9 @@ final class SitterListViewModelTests: XCTestCase {
 
     // MARK: - Tests
 
-    func testAfterFetchSittersHasCompletedViewModelStoresSittersWhichSentFromServer() async throws {
+    func testViewModelStoresSittersWhichSentFromServer() async throws {
         // Given
-        let data = try getData(fromJSON: "responseWithSitters")
+        let data = try getData(fromJSON: "DataWithSitters")
         MockURLProtocol.requestHandler = { request in
             let url = try XCTUnwrap(request.url)
             let response = try XCTUnwrap(
@@ -36,10 +36,10 @@ final class SitterListViewModelTests: XCTestCase {
         await viewModel.fetchSitters()
 
         // Then
-        XCTAssertEqual(Set(viewModel.sitters), DummyServerResponse.sitters)
+        XCTAssertEqual(Set(viewModel.sitters), DummyServerResponseData.sitters)
     }
 
-    func testAfterFetchSittersHasCompletedViewModelStoresInitialValueWhenResponseFromServerHasNoSittersData() async throws {
+    func testViewModelStoresInitialValueWhenResponseFromServerHasNoSittersData() async throws {
         // Given
         MockURLProtocol.requestHandler = { request in
             let url = try XCTUnwrap(request.url)
@@ -61,7 +61,7 @@ final class SitterListViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel.sitters, [])
     }
 
-    func testAfterFetchSittersHasCompletedViewModelStoresInitialValueWhenResponseFromServerContainsDataNotConvertableIntoSitters() async throws {
+    func testViewModelStoresInitialValueWhenResponseFromServerContainsNotConvertableIntoSittersData() async throws {
         // Given
         MockURLProtocol.requestHandler = { request in
             let url = try XCTUnwrap(request.url)
@@ -83,7 +83,7 @@ final class SitterListViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel.sitters, [])
     }
 
-    func testAfterFetchSittersHasCompletedViewModelStoresInitialValueWhenResponseFromServerIsNotSuccessful() async throws {
+    func testViewModelStoresInitialValueWhenResponseFromServerIsNotSuccessful() async throws {
         // Given
         MockURLProtocol.requestHandler = { request in
             let url = try XCTUnwrap(request.url)

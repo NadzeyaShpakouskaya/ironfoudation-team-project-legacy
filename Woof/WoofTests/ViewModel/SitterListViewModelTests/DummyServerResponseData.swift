@@ -1,7 +1,9 @@
 import Foundation
 
 // swiftlint:disable force_unwrapping
-enum DummyServerResponse {
+/// Type with a dummy sitter's data for tests.
+enum DummyServerResponseData {
+    /// The expected result list of sitters that corresponds to the JSON data from the file "DataWithSitters".
     static let sitters = Set([
         Sitter(
             id: UUID(uuidString: "13a92add-96b0-48cd-a54b-eca012456c65")!,

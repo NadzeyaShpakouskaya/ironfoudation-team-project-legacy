@@ -10,15 +10,15 @@
 		192210F92ABDA1B800B9026D /* Sitter+Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192210F82ABDA1B800B9026D /* Sitter+Decoder.swift */; };
 		1934CC312AB9B70E001D5CB4 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1934CC302AB9B70E001D5CB4 /* MockURLProtocol.swift */; };
 		1934CC332AB9B79E001D5CB4 /* SitterListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1934CC322AB9B79E001D5CB4 /* SitterListViewModelTests.swift */; };
-		1934CC362AB9BC1E001D5CB4 /* DummyServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1934CC352AB9BC1E001D5CB4 /* DummyServerResponse.swift */; };
+		1934CC362AB9BC1E001D5CB4 /* DummyServerResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1934CC352AB9BC1E001D5CB4 /* DummyServerResponseData.swift */; };
 		199BC09E2A8B73B900824CC6 /* ObfuscatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199BC09D2A8B73B900824CC6 /* ObfuscatorTests.swift */; };
 		199BC0A12A8B748F00824CC6 /* Obfuscator+bytesByObfuscating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199BC0A02A8B748F00824CC6 /* Obfuscator+bytesByObfuscating.swift */; };
 		199BC0A22A8B793400824CC6 /* Obfuscator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD790632A45732D007C1265 /* Obfuscator.swift */; };
 		199BC0A32A8B850A00824CC6 /* ObfuscatorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD790692A4587B7007C1265 /* ObfuscatorError.swift */; };
 		199BC0AA2A8CC3E400824CC6 /* ObfuscatorErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199BC0A92A8CC3E400824CC6 /* ObfuscatorErrorTests.swift */; };
 		19B163DA2ABAC52300D4C155 /* Sitter+Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B163D92ABAC52300D4C155 /* Sitter+Hashable.swift */; };
-		19B163DD2ABB1A6300D4C155 /* responseWithSitters.json in Resources */ = {isa = PBXBuildFile; fileRef = 19B163DC2ABB1A6300D4C155 /* responseWithSitters.json */; };
-		19B163DE2ABB24E500D4C155 /* responseWithSitters.json in Resources */ = {isa = PBXBuildFile; fileRef = 19B163DC2ABB1A6300D4C155 /* responseWithSitters.json */; };
+		19B163DD2ABB1A6300D4C155 /* DataWithSitters.json in Resources */ = {isa = PBXBuildFile; fileRef = 19B163DC2ABB1A6300D4C155 /* DataWithSitters.json */; };
+		19B163DE2ABB24E500D4C155 /* DataWithSitters.json in Resources */ = {isa = PBXBuildFile; fileRef = 19B163DC2ABB1A6300D4C155 /* DataWithSitters.json */; };
 		19B407072ABDD68F00054D2E /* Sitter+Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192210F82ABDA1B800B9026D /* Sitter+Decoder.swift */; };
 		1CE7E9C92A247CF1000A0509 /* KeyValueStorageInitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE7E9C82A247CF1000A0509 /* KeyValueStorageInitTests.swift */; };
 		1CE7E9CC2A24889B000A0509 /* KeyValueStorage+UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE7E9CB2A24889B000A0509 /* KeyValueStorage+UnitTests.swift */; };
@@ -182,12 +182,12 @@
 		192210F82ABDA1B800B9026D /* Sitter+Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sitter+Decoder.swift"; sourceTree = "<group>"; };
 		1934CC302AB9B70E001D5CB4 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		1934CC322AB9B79E001D5CB4 /* SitterListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitterListViewModelTests.swift; sourceTree = "<group>"; };
-		1934CC352AB9BC1E001D5CB4 /* DummyServerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyServerResponse.swift; sourceTree = "<group>"; };
+		1934CC352AB9BC1E001D5CB4 /* DummyServerResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyServerResponseData.swift; sourceTree = "<group>"; };
 		199BC09D2A8B73B900824CC6 /* ObfuscatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObfuscatorTests.swift; sourceTree = "<group>"; };
 		199BC0A02A8B748F00824CC6 /* Obfuscator+bytesByObfuscating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Obfuscator+bytesByObfuscating.swift"; sourceTree = "<group>"; };
 		199BC0A92A8CC3E400824CC6 /* ObfuscatorErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObfuscatorErrorTests.swift; sourceTree = "<group>"; };
 		19B163D92ABAC52300D4C155 /* Sitter+Hashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sitter+Hashable.swift"; sourceTree = "<group>"; };
-		19B163DC2ABB1A6300D4C155 /* responseWithSitters.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = responseWithSitters.json; sourceTree = "<group>"; };
+		19B163DC2ABB1A6300D4C155 /* DataWithSitters.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DataWithSitters.json; sourceTree = "<group>"; };
 		1CE7E9C82A247CF1000A0509 /* KeyValueStorageInitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStorageInitTests.swift; sourceTree = "<group>"; };
 		1CE7E9CB2A24889B000A0509 /* KeyValueStorage+UnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyValueStorage+UnitTests.swift"; sourceTree = "<group>"; };
 		36199B0E2A1FB1C900725FC8 /* KeyValueStorage+TestKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyValueStorage+TestKey.swift"; sourceTree = "<group>"; };
@@ -335,7 +335,7 @@
 			isa = PBXGroup;
 			children = (
 				1934CC322AB9B79E001D5CB4 /* SitterListViewModelTests.swift */,
-				1934CC352AB9BC1E001D5CB4 /* DummyServerResponse.swift */,
+				1934CC352AB9BC1E001D5CB4 /* DummyServerResponseData.swift */,
 			);
 			path = SitterListViewModelTests;
 			sourceTree = "<group>";
@@ -360,7 +360,7 @@
 		19B163DB2ABB19E400D4C155 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				19B163DC2ABB1A6300D4C155 /* responseWithSitters.json */,
+				19B163DC2ABB1A6300D4C155 /* DataWithSitters.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1018,7 +1018,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19B163DD2ABB1A6300D4C155 /* responseWithSitters.json in Resources */,
+				19B163DD2ABB1A6300D4C155 /* DataWithSitters.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1035,7 +1035,7 @@
 				FD2FA23E2A13BA20002B618B /* JohnAlisonAvatar.jpg in Resources */,
 				FD2FA23D2A13BA20002B618B /* WilliamWilsonAvatar.jpg in Resources */,
 				FD2FA2392A13BA20002B618B /* MichaelBrownAvatar.jpg in Resources */,
-				19B163DE2ABB24E500D4C155 /* responseWithSitters.json in Resources */,
+				19B163DE2ABB24E500D4C155 /* DataWithSitters.json in Resources */,
 				FD2F7B2D2A0CDC44008F6F49 /* EmilyDoeAvatar.jpg in Resources */,
 				FD2FA23C2A13BA20002B618B /* JamesAndersonAvatar.jpg in Resources */,
 			);
@@ -1222,7 +1222,7 @@
 				362732A22A1B800B0062E4B5 /* KeyValueStorageDeleteTests.swift in Sources */,
 				FDD143FE2A052D5A000BBA77 /* Color+AppScheme.swift in Sources */,
 				199BC0A32A8B850A00824CC6 /* ObfuscatorError.swift in Sources */,
-				1934CC362AB9BC1E001D5CB4 /* DummyServerResponse.swift in Sources */,
+				1934CC362AB9BC1E001D5CB4 /* DummyServerResponseData.swift in Sources */,
 				EF4CBAF02A3C704300B4A223 /* Sitter+Tests.swift in Sources */,
 				FDD144012A0532D5000BBA77 /* String+IconNameTests.swift in Sources */,
 				FD02917B2A0E2C5300F88377 /* AppStyle+UIElementConstant.swift in Sources */,
