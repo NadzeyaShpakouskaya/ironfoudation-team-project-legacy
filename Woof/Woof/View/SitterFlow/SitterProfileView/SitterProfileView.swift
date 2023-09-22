@@ -33,6 +33,9 @@ struct SitterProfileView: View {
                         Button(saveButtonLabelText) {
                             Task {
                                 await viewModel.save()
+                                if !viewModel.isErrorOccurred {
+                                    isEditingMode = false
+                                }
                             }
                         }
                         .disabled(viewModel.mandatoryFieldsAreEmpty)
@@ -88,6 +91,9 @@ struct SitterProfileView: View {
                 Button(tryAgainButtonLabelText) {
                     Task {
                         await viewModel.save()
+                        if !viewModel.isErrorOccurred {
+                            isEditingMode = false
+                        }
                     }
                 }
             },
