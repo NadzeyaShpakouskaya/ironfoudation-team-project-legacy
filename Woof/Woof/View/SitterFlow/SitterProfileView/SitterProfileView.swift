@@ -66,25 +66,30 @@ struct SitterProfileView: View {
         .overlay(
             Group {
                 if viewModel.isSavingData {
-                    Color.white.opacity(opacityLevelForProgressViewBackground)
+                    Color.white.opacity(AppStyle.UIElementConstant.opacityLevelForProgressViewBackground)
                     ProgressView()
                         .progressViewStyle(CircularProgressViewStyle())
                 }
             }
         )
-        .alert(alertTitle, isPresented: $viewModel.isErrorOccurred, actions: {
-            Button(cancelButtonLabelText, action: {
-                viewModel.cancelEditing()
-                isEditingMode = false
-            })
-            Button(tryAgainButtonLabelText, action: {
-                Task {
-                    await viewModel.save()
+        .alert(
+            alertTitle,
+            isPresented: $viewModel.isErrorOccurred,
+            actions: {
+                Button(cancelButtonLabelText) {
+                    viewModel.cancelEditing()
+                    isEditingMode = false
                 }
-            })
-        }, message: {
-            Text(viewModel.errorMessage)
-        })
+                Button(tryAgainButtonLabelText) {
+                    Task {
+                        await viewModel.save()
+                    }
+                }
+            },
+            message: {
+                Text(viewModel.errorMessage)
+            }
+        )
     }
 
     // MARK: - Private interface
@@ -94,7 +99,6 @@ struct SitterProfileView: View {
     private let editButtonLabelText = "Edit"
     private let tryAgainButtonLabelText = "Try Again"
     private let alertTitle = "Error"
-    private let opacityLevelForProgressViewBackground = 0.4
     @State private var isEditingMode = false
 }
 

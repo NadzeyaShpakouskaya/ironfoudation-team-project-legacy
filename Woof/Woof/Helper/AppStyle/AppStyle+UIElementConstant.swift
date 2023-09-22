@@ -17,5 +17,8 @@ extension AppStyle {
 
         /// The default spacing that can be used between elements in View.
         static let spacingBetweenElements = 8.0
+
+        /// Opacity level for progress view background
+        static let opacityLevelForProgressViewBackground = 0.4
     }
 }

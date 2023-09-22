@@ -38,10 +38,8 @@ final class SitterProfileViewModel: ObservableObject {
     }
 
     /// Requests model layer to upload and save modified data.
-    func save() async {
-        await MainActor.run {
-            isSavingData = true
-        }
+    @MainActor func save() async {
+        isSavingData = true
 
         var updatedSitter = currentSitter
 
@@ -53,16 +51,13 @@ final class SitterProfileViewModel: ObservableObject {
 
         do {
             try await upload(updatedSitter)
-
             currentSitter = updatedSitter
-
-            await saveLocally(currentSitter)
+            try await saveLocally(currentSitter)
         } catch {
-            await handleError(.uploadFailed)
+            handleError(error)
         }
-        await MainActor.run {
-            isSavingData = false
-        }
+
+        isSavingData = false
     }
 
     /// Requests the model layer to cancel the editing mode and restore the original values.
@@ -82,28 +77,35 @@ final class SitterProfileViewModel: ObservableObject {
 
     private func upload(_ sitter: Sitter) async throws {
         let endpoint = WoofAppEndpoint.addNewSitter(sitter.asDictionary())
-        _ = try await NetworkService<WoofAppEndpoint>().request(endpoint)
-    }
 
-    private func saveLocally(_ sitter: Sitter) async {
-        guard let data = try? JSONEncoder().encode(sitter),
-              KeyValueStorage(KeyValueStorage.Name.currentSitter)
-              .save(data, for: KeyValueStorage.Key.currentSitter) else {
-            await handleError(.saveLocallyFailed)
-            return
+        do {
+            _ = try await NetworkService<WoofAppEndpoint>().request(endpoint)
+        } catch {
+            throw AppError.uploadFailed
         }
     }
 
-    @MainActor private func handleError(_ error: AppError) {
-        errorMessage = error.errorDescription
+    private func saveLocally(_ sitter: Sitter) async throws {
+        guard let data = try? JSONEncoder().encode(sitter),
+              KeyValueStorage(KeyValueStorage.Name.currentSitter)
+              .save(data, for: KeyValueStorage.Key.currentSitter) else {
+            throw AppError.saveLocallyFailed
+        }
+    }
+
+    @MainActor private func handleError(_ error: Error) {
+        guard let appError = error as? AppError else {
+            errorMessage = "An error occurred."
+            return
+        }
+
+        errorMessage = appError.errorDescription
     }
 
     private func loadSitterFromStorage() -> Sitter {
         guard let data = KeyValueStorage(KeyValueStorage.Name.currentSitter)
-            .loadData(for: KeyValueStorage.Key.currentSitter) else {
-            return Sitter()
-        }
-        guard let sitter = try? JSONDecoder().decode(Sitter.self, from: data) else {
+            .loadData(for: KeyValueStorage.Key.currentSitter),
+            let sitter = try? JSONDecoder().decode(Sitter.self, from: data) else {
             return Sitter()
         }
 

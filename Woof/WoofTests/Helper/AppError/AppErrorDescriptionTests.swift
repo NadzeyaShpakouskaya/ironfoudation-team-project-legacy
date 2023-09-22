@@ -1,7 +1,7 @@
 import XCTest
 
 final class AppErrorDescriptionTests: XCTestCase {
-    func testErrorDescriptionReturnExpectedString() {
+    func testErrorDescriptionReturnsExpectedString() {
         // Given
         let saveLocallyFailedDescription = "Oops! We couldn't save your data on your device."
         let uploadFailedDescription = "Oops! We couldn't upload your data to our server."
