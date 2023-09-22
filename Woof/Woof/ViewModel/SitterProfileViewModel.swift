@@ -48,12 +48,12 @@ final class SitterProfileViewModel: ObservableObject {
         newSitter.pricePerHour = Double(pricePerHour) ?? 0
 
         guard let data = try? JSONEncoder().encode(newSitter) else {
-            fatalError("Decoding failed.")
+            return
         }
 
         guard KeyValueStorage(KeyValueStorage.Name.currentSitter)
             .save(data, for: KeyValueStorage.Key.currentSitter) else {
-            fatalError("Saving to the local storage failed.")
+            return
         }
 
         currentSitter = newSitter
