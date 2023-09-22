@@ -4,9 +4,6 @@ import SwiftUI
 struct SitterProfileView: View {
     // MARK: - Internal interface
 
-    /// View model responsible to manage data from model layer.
-    @StateObject var viewModel = SitterProfileViewModel()
-
     var body: some View {
         VStack {
             if isEditingMode {
@@ -19,23 +16,27 @@ struct SitterProfileView: View {
                         pricePerHour: $viewModel.pricePerHour
                     )
 
-                    HStack {
-                        Button(cancelButtonLabelText) {
-                            viewModel.cancelEditing()
-                            isEditingMode = false
-                        }
-
-                        Spacer()
-
+                    VStack {
                         if viewModel.mandatoryFieldsAreEmpty {
                             Text(mandatoryPlaceholderText)
                                 .padding(.vertical)
+                                .font(.system(.footnote))
                         }
-                        Button(saveButtonLabelText) {
-                            viewModel.save()
-                            isEditingMode = false
+
+                        HStack {
+                            Button(cancelButtonLabelText) {
+                                viewModel.cancelEditing()
+                                isEditingMode = false
+                            }
+
+                            Spacer()
+
+                            Button(saveButtonLabelText) {
+                                viewModel.save()
+                                isEditingMode = false
+                            }
+                            .disabled(viewModel.mandatoryFieldsAreEmpty)
                         }
-                        .disabled(viewModel.mandatoryFieldsAreEmpty)
                     }
                 }
                 .padding()
@@ -72,6 +73,8 @@ struct SitterProfileView: View {
 
     // MARK: - Private interface
 
+    /// View model responsible to manage data from model layer.
+    @StateObject private var viewModel = SitterProfileViewModel()
     private let cancelButtonLabelText = "Cancel"
     private let saveButtonLabelText = "Save"
     private let editButtonLabelText = "Edit"
