@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		192210F92ABDA1B800B9026D /* Sitter+Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192210F82ABDA1B800B9026D /* Sitter+Decoder.swift */; };
 		1934CC312AB9B70E001D5CB4 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1934CC302AB9B70E001D5CB4 /* MockURLProtocol.swift */; };
 		1934CC332AB9B79E001D5CB4 /* SitterListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1934CC322AB9B79E001D5CB4 /* SitterListViewModelTests.swift */; };
 		1934CC362AB9BC1E001D5CB4 /* DummyServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1934CC352AB9BC1E001D5CB4 /* DummyServerResponse.swift */; };
@@ -18,6 +19,7 @@
 		19B163DA2ABAC52300D4C155 /* Sitter+Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B163D92ABAC52300D4C155 /* Sitter+Hashable.swift */; };
 		19B163DD2ABB1A6300D4C155 /* responseWithSitters.json in Resources */ = {isa = PBXBuildFile; fileRef = 19B163DC2ABB1A6300D4C155 /* responseWithSitters.json */; };
 		19B163DE2ABB24E500D4C155 /* responseWithSitters.json in Resources */ = {isa = PBXBuildFile; fileRef = 19B163DC2ABB1A6300D4C155 /* responseWithSitters.json */; };
+		19B407072ABDD68F00054D2E /* Sitter+Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192210F82ABDA1B800B9026D /* Sitter+Decoder.swift */; };
 		1CE7E9C92A247CF1000A0509 /* KeyValueStorageInitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE7E9C82A247CF1000A0509 /* KeyValueStorageInitTests.swift */; };
 		1CE7E9CC2A24889B000A0509 /* KeyValueStorage+UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE7E9CB2A24889B000A0509 /* KeyValueStorage+UnitTests.swift */; };
 		36199B0F2A1FB1C900725FC8 /* KeyValueStorage+TestKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36199B0E2A1FB1C900725FC8 /* KeyValueStorage+TestKey.swift */; };
@@ -177,6 +179,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		192210F82ABDA1B800B9026D /* Sitter+Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sitter+Decoder.swift"; sourceTree = "<group>"; };
 		1934CC302AB9B70E001D5CB4 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		1934CC322AB9B79E001D5CB4 /* SitterListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitterListViewModelTests.swift; sourceTree = "<group>"; };
 		1934CC352AB9BC1E001D5CB4 /* DummyServerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyServerResponse.swift; sourceTree = "<group>"; };
@@ -542,6 +545,7 @@
 			children = (
 				FDD143CC2A03E575000BBA77 /* Sitter.swift */,
 				363528D52AB9ADF6009A21CF /* Sitter+CodingKeys.swift */,
+				192210F82ABDA1B800B9026D /* Sitter+Decoder.swift */,
 				FD1FA3CB2A0A781E000A3A91 /* Sitter+Dummy.swift */,
 			);
 			path = Sitter;
@@ -1228,6 +1232,7 @@
 				FDEE43D12A2F525B007DE0A9 /* RoleTests.swift in Sources */,
 				FDEE43CF2A2F4E58007DE0A9 /* Role.swift in Sources */,
 				EF4CBAEC2A3C6DCA00B4A223 /* SitterProfileViewModel.swift in Sources */,
+				19B407072ABDD68F00054D2E /* Sitter+Decoder.swift in Sources */,
 				FD37A9982A0B77A90001BABB /* FiveStarRatingTests.swift in Sources */,
 				FDEE43E32A388854007DE0A9 /* UserRoleViewModel.swift in Sources */,
 				FD14A2B42A286C5200362461 /* KeyValueStorage+Name.swift in Sources */,
@@ -1299,6 +1304,7 @@
 				BA4561872A3996BF00C6E595 /* SitterInfoCardView.swift in Sources */,
 				FD7F98A52A0E12290058DBEB /* AvatarView.swift in Sources */,
 				FD1FA3CC2A0A781E000A3A91 /* Sitter+Dummy.swift in Sources */,
+				192210F92ABDA1B800B9026D /* Sitter+Decoder.swift in Sources */,
 				FD33035A2AA9D5DD0091A4BA /* Encodable+asDictionary.swift in Sources */,
 				EF4CBAFA2A3C94F000B4A223 /* Sitter.swift in Sources */,
 				EF4CBAEB2A3C6DCA00B4A223 /* SitterProfileViewModel.swift in Sources */,
