@@ -8,6 +8,7 @@ final class SitterListViewModel: ObservableObject {
     /// The list of sitters to show.
     @Published var sitters: [Sitter] = []
 
+    /// Fetches data about sitters from the remote server.
     func fetchSitters() async {
         do {
             let data = try await NetworkService().request(WoofAppEndpoint.getAllSitters)
