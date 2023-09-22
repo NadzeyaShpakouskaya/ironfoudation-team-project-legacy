@@ -16,39 +16,7 @@ final class SitterListViewModelTests: XCTestCase {
 
     // MARK: - Tests
 
-    func testExample() async throws {
-        // Given
-        MockURLProtocol.requestHandler = { request in
-            let url = try XCTUnwrap(request.url)
-            let response = try XCTUnwrap(
-                HTTPURLResponse(
-                    url: url,
-                    statusCode: 200,
-                    httpVersion: nil,
-                    headerFields: nil
-                )
-            )
-            return (response, nil)
-        }
-    }
-
-    func testExample2() async throws {
-        // Given
-        MockURLProtocol.requestHandler = { request in
-            let url = try XCTUnwrap(request.url)
-            let response = try XCTUnwrap(
-                HTTPURLResponse(
-                    url: url,
-                    statusCode: 200,
-                    httpVersion: nil,
-                    headerFields: nil
-                )
-            )
-            return (response, Data())
-        }
-    }
-
-    func testExample3() async throws {
+    func testAfterFetchSittersHasCompletedViewModelStoresSittersWhichSentFromServer() async throws {
         // Given
         let data = try getData(fromJSON: "responseWithSitters")
         MockURLProtocol.requestHandler = { request in
@@ -69,6 +37,72 @@ final class SitterListViewModelTests: XCTestCase {
 
         // Then
         XCTAssertEqual(Set(viewModel.sitters), DummyServerResponse.sitters)
+    }
+
+    func testAfterFetchSittersHasCompletedViewModelStoresInitialValueWhenResponseFromServerHasNoSittersData() async throws {
+        // Given
+        MockURLProtocol.requestHandler = { request in
+            let url = try XCTUnwrap(request.url)
+            let response = try XCTUnwrap(
+                HTTPURLResponse(
+                    url: url,
+                    statusCode: 200,
+                    httpVersion: nil,
+                    headerFields: nil
+                )
+            )
+            return (response, nil)
+        }
+
+        // When
+        await viewModel.fetchSitters()
+
+        // Then
+        XCTAssertEqual(viewModel.sitters, [])
+    }
+
+    func testAfterFetchSittersHasCompletedViewModelStoresInitialValueWhenResponseFromServerContainsDataNotConvertableIntoSitters() async throws {
+        // Given
+        MockURLProtocol.requestHandler = { request in
+            let url = try XCTUnwrap(request.url)
+            let response = try XCTUnwrap(
+                HTTPURLResponse(
+                    url: url,
+                    statusCode: 200,
+                    httpVersion: nil,
+                    headerFields: nil
+                )
+            )
+            return (response, Data())
+        }
+
+        // When
+        await viewModel.fetchSitters()
+
+        // Then
+        XCTAssertEqual(viewModel.sitters, [])
+    }
+
+    func testAfterFetchSittersHasCompletedViewModelStoresInitialValueWhenResponseFromServerIsNotSuccessful() async throws {
+        // Given
+        MockURLProtocol.requestHandler = { request in
+            let url = try XCTUnwrap(request.url)
+            let response = try XCTUnwrap(
+                HTTPURLResponse(
+                    url: url,
+                    statusCode: 400,
+                    httpVersion: nil,
+                    headerFields: nil
+                )
+            )
+            return (response, nil)
+        }
+
+        // When
+        await viewModel.fetchSitters()
+
+        // Then
+        XCTAssertEqual(Set(viewModel.sitters), [])
     }
 
     // MARK: - Private interface
