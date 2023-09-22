@@ -7,11 +7,11 @@ enum DummyServerResponse {
             id: UUID(uuidString: "13a92add-96b0-48cd-a54b-eca012456c65")!,
             name: "",
             surname: "",
-            phone: nil,
+            phone: "",
             avatarUrl: nil,
             bio: "",
-            rating: nil,
-            pricePerHour: nil
+            rating: 0,
+            pricePerHour: 0
         ),
         Sitter(
             id: UUID(uuidString: "ce41d154-d1e3-4d14-9e6a-e30f7220f389")!,

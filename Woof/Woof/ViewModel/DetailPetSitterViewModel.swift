@@ -24,8 +24,8 @@ final class DetailSitterViewModel: ObservableObject {
     init(sitter: Sitter) {
         self.sitter = sitter
         fullName = DataTransformer.fullName(name: sitter.name, surname: sitter.surname)
-        rating = DataTransformer.fiveStarRating(for: sitter.rating ?? 0)
-        phoneNumber = sitter.phone ?? ""
+        rating = DataTransformer.fiveStarRating(for: sitter.rating)
+        phoneNumber = sitter.phone
         imageURL = sitter.avatarUrl
         bio = sitter.bio
     }

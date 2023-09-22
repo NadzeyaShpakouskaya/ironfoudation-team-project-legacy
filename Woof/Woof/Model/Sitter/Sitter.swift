@@ -15,7 +15,7 @@ struct Sitter: Codable, Identifiable, Equatable {
     var surname: String
 
     /// The phone number of the sitter.
-    var phone: String?
+    var phone: String
 
     /// The URL of the sitter's avatar image.
     var avatarUrl: URL?
@@ -25,10 +25,10 @@ struct Sitter: Codable, Identifiable, Equatable {
     var bio: String
 
     /// The rating of the sitter.
-    var rating: Double?
+    var rating: Double
 
     /// The price per hour charged by the sitter.
-    var pricePerHour: Double?
+    var pricePerHour: Double
 
     /**
      Creates a pet sitter instance with the specified parameters with the unique identifier.
@@ -48,11 +48,11 @@ struct Sitter: Codable, Identifiable, Equatable {
         id: UUID = UUID(),
         name: String,
         surname: String,
-        phone: String?,
+        phone: String,
         avatarUrl: URL?,
         bio: String,
-        rating: Double?,
-        pricePerHour: Double?
+        rating: Double,
+        pricePerHour: Double
     ) {
         self.id = id
         self.name = name
