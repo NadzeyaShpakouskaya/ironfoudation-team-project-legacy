@@ -13,14 +13,12 @@ final class SitterListViewModel: ObservableObject {
             let data = try await NetworkService().request(WoofAppEndpoint.getAllSitters)
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
+            let decodedResponseData = try decoder.decode([String: [Sitter]?].self, from: data)
 
-            guard let decodedResponseData = try? decoder.decode([String: [Sitter]?].self, from: data),
-                  decodedResponseData.count == 1,
-                  let sitters = decodedResponseData.values.first as? [Sitter] else {
-                return
-            }
+            guard decodedResponseData.count == 1,
+                  let sitters = decodedResponseData.values.first as? [Sitter] else { return }
 
             await MainActor.run { self.sitters = sitters }
-        } catch {}
+        } catch { return }
     }
 }
