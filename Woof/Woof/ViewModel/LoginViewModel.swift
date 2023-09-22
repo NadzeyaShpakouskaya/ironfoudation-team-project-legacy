@@ -22,13 +22,7 @@ final class LoginViewModel: ObservableObject {
     /// Returns `true` if the sitter role is selected, otherwise `false`.
     ///
     /// The property publishes updates when the value is changed.
-    @Published var isSitterRoleSelected = false {
-        didSet {
-            if !isCurrentSitterExists {
-                saveNewSitter()
-            }
-        }
-    }
+    @Published var isSitterRoleSelected = false
 
     // MARK: - Private interface
 

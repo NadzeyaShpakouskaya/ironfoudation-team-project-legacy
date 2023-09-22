@@ -28,31 +28,40 @@ final class SitterProfileViewModel: ObservableObject {
     /// Indicating the status of the saving operation.
     @Published var isSavingData = false
 
+    /// Indicates if the mandatory fields are empty.
+    var mandatoryFieldsAreEmpty: Bool {
+        name.isEmpty || phone.isEmpty
+    }
+
     /**
      Initializes an instance of the `SitterProfileViewModel` class.
      */
-    init() {
-        currentSitter = loadSitterFromStorage()
 
-        setInitialValues(currentSitter)
+    init() {
+        if let sitter = loadSitterFromStorage() {
+            currentSitter = sitter
+            resetFields()
+            sitterIsSet = true
+        }
     }
 
     /// Requests model layer to upload and save modified data.
     @MainActor func save() async {
         isSavingData = true
 
-        var updatedSitter = currentSitter
-
-        updatedSitter.name = name
-        updatedSitter.surname = surname
-        updatedSitter.phone = phone
-        updatedSitter.bio = bio
-        updatedSitter.pricePerHour = Double(pricePerHour) ?? currentSitter.pricePerHour
+        var newSitter = Sitter()
+        newSitter.name = name
+        newSitter.surname = surname
+        newSitter.phone = phone
+        newSitter.bio = bio
+        newSitter.pricePerHour = Double(pricePerHour) ?? 0
 
         do {
-            try await upload(updatedSitter)
-            currentSitter = updatedSitter
-            try await saveLocally(currentSitter)
+            try await upload(newSitter)
+            currentSitter = newSitter
+            if let currentSitter {
+                try await saveLocally(currentSitter)
+            }
         } catch {
             handleError(error)
         }
@@ -62,12 +71,10 @@ final class SitterProfileViewModel: ObservableObject {
 
     /// Requests the model layer to cancel the editing mode and restore the original values.
     func cancelEditing() {
-        setInitialValues(currentSitter)
+        resetFields()
     }
 
     // MARK: - Private interface
-
-    private lazy var currentSitter: Sitter = loadSitterFromStorage()
 
     private(set) var errorMessage = "" {
         didSet {
@@ -102,22 +109,30 @@ final class SitterProfileViewModel: ObservableObject {
         errorMessage = appError.errorDescription
     }
 
-    private func loadSitterFromStorage() -> Sitter {
-        guard let data = KeyValueStorage(KeyValueStorage.Name.currentSitter)
-            .loadData(for: KeyValueStorage.Key.currentSitter),
-            let sitter = try? JSONDecoder().decode(Sitter.self, from: data) else {
-            return Sitter()
+    /// Indicates whether there is a saved sitter.
+    private(set) var sitterIsSet = false
+    private var currentSitter: Sitter? {
+        didSet {
+            sitterIsSet = true
         }
-
-        return sitter
     }
 
-    private func setInitialValues(_ currentSitter: Sitter) {
-        name = currentSitter.name
-        surname = currentSitter.surname
-        phone = currentSitter.phone
-        bio = currentSitter.bio
-        pricePerHour = String(currentSitter.pricePerHour)
-        errorMessage = ""
+    private func loadSitterFromStorage() -> Sitter? {
+        guard let data = KeyValueStorage(KeyValueStorage.Name.currentSitter)
+            .loadData(for: KeyValueStorage.Key.currentSitter) else { return nil }
+
+        return try? JSONDecoder().decode(Sitter.self, from: data)
+    }
+
+    private func resetFields() {
+        name = currentSitter?.name ?? ""
+        surname = currentSitter?.surname ?? ""
+        phone = currentSitter?.phone ?? ""
+        bio = currentSitter?.bio ?? ""
+        if let currentSitter {
+            pricePerHour = String(currentSitter.pricePerHour)
+        } else {
+            pricePerHour = ""
+        }
     }
 }
