@@ -4,9 +4,6 @@ import SwiftUI
 struct SitterProfileView: View {
     // MARK: - Internal interface
 
-    /// View model responsible to manage data from model layer.
-    @ObservedObject var viewModel = SitterProfileViewModel()
-
     var body: some View {
         VStack {
             if isEditingMode {
@@ -18,6 +15,12 @@ struct SitterProfileView: View {
                         bio: $viewModel.bio,
                         pricePerHour: $viewModel.pricePerHour
                     )
+
+                    if viewModel.mandatoryFieldsAreEmpty {
+                        Text(mandatoryPlaceholderText)
+                            .padding(.vertical)
+                            .font(.system(.footnote))
+                    }
 
                     HStack {
                         Button(cancelButtonLabelText) {
@@ -31,7 +34,7 @@ struct SitterProfileView: View {
                             viewModel.save()
                             isEditingMode = false
                         }
-                        .disabled(viewModel.name.isEmpty)
+                        .disabled(viewModel.mandatoryFieldsAreEmpty)
                     }
                 }
                 .padding()
@@ -49,8 +52,10 @@ struct SitterProfileView: View {
                         ratePerHour: viewModel.pricePerHour
                     )
 
-                    Button(editButtonLabelText) {
-                        isEditingMode.toggle()
+                    if !viewModel.sitterIsSet {
+                        Button(editButtonLabelText) {
+                            isEditingMode.toggle()
+                        }
                     }
                 }
                 .buttonStyle(CapsuleWithWhiteText())
@@ -66,9 +71,12 @@ struct SitterProfileView: View {
 
     // MARK: - Private interface
 
+    /// View model responsible to manage data from model layer.
+    @StateObject private var viewModel = SitterProfileViewModel()
     private let cancelButtonLabelText = "Cancel"
     private let saveButtonLabelText = "Save"
     private let editButtonLabelText = "Edit"
+    private let mandatoryPlaceholderText = "Fields with * are mandatory"
     @State private var isEditingMode = false
 }
 
