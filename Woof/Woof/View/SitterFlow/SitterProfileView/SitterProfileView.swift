@@ -16,27 +16,25 @@ struct SitterProfileView: View {
                         pricePerHour: $viewModel.pricePerHour
                     )
 
-                    VStack {
-                        if viewModel.mandatoryFieldsAreEmpty {
-                            Text(mandatoryPlaceholderText)
-                                .padding(.vertical)
-                                .font(.system(.footnote))
+                    if viewModel.mandatoryFieldsAreEmpty {
+                        Text(mandatoryPlaceholderText)
+                            .padding(.vertical)
+                            .font(.system(.footnote))
+                    }
+
+                    HStack {
+                        Button(cancelButtonLabelText) {
+                            viewModel.cancelEditing()
+                            isEditingMode = false
                         }
 
-                        HStack {
-                            Button(cancelButtonLabelText) {
-                                viewModel.cancelEditing()
-                                isEditingMode = false
-                            }
+                        Spacer()
 
-                            Spacer()
-
-                            Button(saveButtonLabelText) {
-                                viewModel.save()
-                                isEditingMode = false
-                            }
-                            .disabled(viewModel.mandatoryFieldsAreEmpty)
+                        Button(saveButtonLabelText) {
+                            viewModel.save()
+                            isEditingMode = false
                         }
+                        .disabled(viewModel.mandatoryFieldsAreEmpty)
                     }
                 }
                 .padding()
