@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1912607B2AC08C9300F43D94 /* AllSittersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1912607A2AC08C9300F43D94 /* AllSittersResponse.swift */; };
+		1912607C2AC08CA100F43D94 /* AllSittersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1912607A2AC08C9300F43D94 /* AllSittersResponse.swift */; };
 		192210F92ABDA1B800B9026D /* Sitter+Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192210F82ABDA1B800B9026D /* Sitter+Decoder.swift */; };
 		1934CC312AB9B70E001D5CB4 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1934CC302AB9B70E001D5CB4 /* MockURLProtocol.swift */; };
 		1934CC332AB9B79E001D5CB4 /* SitterListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1934CC322AB9B79E001D5CB4 /* SitterListViewModelTests.swift */; };
@@ -179,6 +181,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1912607A2AC08C9300F43D94 /* AllSittersResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllSittersResponse.swift; sourceTree = "<group>"; };
 		192210F82ABDA1B800B9026D /* Sitter+Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sitter+Decoder.swift"; sourceTree = "<group>"; };
 		1934CC302AB9B70E001D5CB4 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		1934CC322AB9B79E001D5CB4 /* SitterListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitterListViewModelTests.swift; sourceTree = "<group>"; };
@@ -323,6 +326,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		191260792AC08C9300F43D94 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				1912607A2AC08C9300F43D94 /* AllSittersResponse.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
 		192210FB2ABDB3D200B9026D /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -776,8 +787,9 @@
 		FDD538562A41D66800331977 /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
-				FD3303522A9CABE50091A4BA /* Environment */,
+				191260792AC08C9300F43D94 /* DataModel */,
 				FD3303442A98BD540091A4BA /* Endpoint */,
+				FD3303522A9CABE50091A4BA /* Environment */,
 			);
 			path = NetworkLayer;
 			sourceTree = "<group>";
@@ -1170,6 +1182,7 @@
 				FD9802282A287670003DEE5C /* OwnerProfileViewModelGetTests.swift in Sources */,
 				FD6A2E612A2F067E00934C3E /* KeyValueStorage+KeyTests.swift in Sources */,
 				FD33035C2AA9DA6B0091A4BA /* WoofAppEndpoint+Path.swift in Sources */,
+				1912607C2AC08CA100F43D94 /* AllSittersResponse.swift in Sources */,
 				36FA84A92AB9C26200D85A6D /* Sitter+CodingKeys.swift in Sources */,
 				FD8182302A20C3C300AE1016 /* KeyValueStorage+TestData.swift in Sources */,
 				36C54AFC2A17A79200748023 /* KeyValueStorageLoadTests.swift in Sources */,
@@ -1285,6 +1298,7 @@
 				FD7F98A12A0E0E280058DBEB /* AppStyle+FontStyle.swift in Sources */,
 				FD2FA2292A129C53002B618B /* SitterListView.swift in Sources */,
 				3673D6372A04F7FD009D699D /* Owner.swift in Sources */,
+				1912607B2AC08C9300F43D94 /* AllSittersResponse.swift in Sources */,
 				FD7F98A32A0E10510058DBEB /* AppStyle+UIElementConstant.swift in Sources */,
 				FD6A2E5F2A2EF6C200934C3E /* SitterMainTabView+Tab.swift in Sources */,
 				FDDDA6882A25C3FE00839091 /* EditOwnerInformationView.swift in Sources */,
