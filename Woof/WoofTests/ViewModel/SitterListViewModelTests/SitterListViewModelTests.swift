@@ -41,6 +41,9 @@ final class SitterListViewModelTests: XCTestCase {
 
     func testViewModelStoresInitialValueWhenResponseFromServerHasNoSittersData() async throws {
         // Given
+        let listOfSitters = Array(DummyServerResponseData.sitters)
+        viewModel.sitters = listOfSitters
+
         MockURLProtocol.requestHandler = { request in
             let url = try XCTUnwrap(request.url)
             let response = try XCTUnwrap(
@@ -58,11 +61,14 @@ final class SitterListViewModelTests: XCTestCase {
         await viewModel.fetchSitters()
 
         // Then
-        XCTAssertEqual(viewModel.sitters, [])
+        XCTAssertEqual(viewModel.sitters, listOfSitters)
     }
 
     func testViewModelStoresInitialValueWhenResponseFromServerContainsNotConvertableIntoSittersData() async throws {
         // Given
+        let listOfSitters = Array(DummyServerResponseData.sitters)
+        viewModel.sitters = listOfSitters
+
         MockURLProtocol.requestHandler = { request in
             let url = try XCTUnwrap(request.url)
             let response = try XCTUnwrap(
@@ -80,11 +86,14 @@ final class SitterListViewModelTests: XCTestCase {
         await viewModel.fetchSitters()
 
         // Then
-        XCTAssertEqual(viewModel.sitters, [])
+        XCTAssertEqual(viewModel.sitters, listOfSitters)
     }
 
     func testViewModelStoresInitialValueWhenResponseFromServerIsNotSuccessful() async throws {
         // Given
+        let listOfSitters = Array(DummyServerResponseData.sitters)
+        viewModel.sitters = listOfSitters
+
         MockURLProtocol.requestHandler = { request in
             let url = try XCTUnwrap(request.url)
             let response = try XCTUnwrap(
@@ -102,7 +111,7 @@ final class SitterListViewModelTests: XCTestCase {
         await viewModel.fetchSitters()
 
         // Then
-        XCTAssertEqual(Set(viewModel.sitters), [])
+        XCTAssertEqual(viewModel.sitters, listOfSitters)
     }
 
     // MARK: - Private interface
