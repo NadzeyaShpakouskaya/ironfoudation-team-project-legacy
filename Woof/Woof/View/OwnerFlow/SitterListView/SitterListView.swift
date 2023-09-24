@@ -2,7 +2,7 @@ import SwiftUI
 
 /// A view displaying the list of sitters.
 struct SitterListView: View {
-// MARK: - Internal interface
+    // MARK: - Internal interface
 
     var body: some View {
         ScrollView {
@@ -19,8 +19,9 @@ struct SitterListView: View {
             await viewModel.fetchSitters()
         }
     }
-    
+
     // MARK: - Private interface
+
     /// The view model responsible for providing data to the view.
     @StateObject private var viewModel = SitterListViewModel()
 }
