@@ -17,8 +17,8 @@
 		199BC0A32A8B850A00824CC6 /* ObfuscatorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD790692A4587B7007C1265 /* ObfuscatorError.swift */; };
 		199BC0AA2A8CC3E400824CC6 /* ObfuscatorErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199BC0A92A8CC3E400824CC6 /* ObfuscatorErrorTests.swift */; };
 		19B163DA2ABAC52300D4C155 /* Sitter+Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B163D92ABAC52300D4C155 /* Sitter+Hashable.swift */; };
-		19B163DD2ABB1A6300D4C155 /* DataWithSitters.json in Resources */ = {isa = PBXBuildFile; fileRef = 19B163DC2ABB1A6300D4C155 /* DataWithSitters.json */; };
-		19B163DE2ABB24E500D4C155 /* DataWithSitters.json in Resources */ = {isa = PBXBuildFile; fileRef = 19B163DC2ABB1A6300D4C155 /* DataWithSitters.json */; };
+		19B163DD2ABB1A6300D4C155 /* MockSittersData.json in Resources */ = {isa = PBXBuildFile; fileRef = 19B163DC2ABB1A6300D4C155 /* MockSittersData.json */; };
+		19B163DE2ABB24E500D4C155 /* MockSittersData.json in Resources */ = {isa = PBXBuildFile; fileRef = 19B163DC2ABB1A6300D4C155 /* MockSittersData.json */; };
 		19B407072ABDD68F00054D2E /* Sitter+Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192210F82ABDA1B800B9026D /* Sitter+Decoder.swift */; };
 		1CE7E9C92A247CF1000A0509 /* KeyValueStorageInitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE7E9C82A247CF1000A0509 /* KeyValueStorageInitTests.swift */; };
 		1CE7E9CC2A24889B000A0509 /* KeyValueStorage+UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE7E9CB2A24889B000A0509 /* KeyValueStorage+UnitTests.swift */; };
@@ -187,7 +187,7 @@
 		199BC0A02A8B748F00824CC6 /* Obfuscator+bytesByObfuscating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Obfuscator+bytesByObfuscating.swift"; sourceTree = "<group>"; };
 		199BC0A92A8CC3E400824CC6 /* ObfuscatorErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObfuscatorErrorTests.swift; sourceTree = "<group>"; };
 		19B163D92ABAC52300D4C155 /* Sitter+Hashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sitter+Hashable.swift"; sourceTree = "<group>"; };
-		19B163DC2ABB1A6300D4C155 /* DataWithSitters.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DataWithSitters.json; sourceTree = "<group>"; };
+		19B163DC2ABB1A6300D4C155 /* MockSittersData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockSittersData.json; sourceTree = "<group>"; };
 		1CE7E9C82A247CF1000A0509 /* KeyValueStorageInitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStorageInitTests.swift; sourceTree = "<group>"; };
 		1CE7E9CB2A24889B000A0509 /* KeyValueStorage+UnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyValueStorage+UnitTests.swift"; sourceTree = "<group>"; };
 		36199B0E2A1FB1C900725FC8 /* KeyValueStorage+TestKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyValueStorage+TestKey.swift"; sourceTree = "<group>"; };
@@ -360,7 +360,7 @@
 		19B163DB2ABB19E400D4C155 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				19B163DC2ABB1A6300D4C155 /* DataWithSitters.json */,
+				19B163DC2ABB1A6300D4C155 /* MockSittersData.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1018,7 +1018,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19B163DD2ABB1A6300D4C155 /* DataWithSitters.json in Resources */,
+				19B163DD2ABB1A6300D4C155 /* MockSittersData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1035,7 +1035,7 @@
 				FD2FA23E2A13BA20002B618B /* JohnAlisonAvatar.jpg in Resources */,
 				FD2FA23D2A13BA20002B618B /* WilliamWilsonAvatar.jpg in Resources */,
 				FD2FA2392A13BA20002B618B /* MichaelBrownAvatar.jpg in Resources */,
-				19B163DE2ABB24E500D4C155 /* DataWithSitters.json in Resources */,
+				19B163DE2ABB24E500D4C155 /* MockSittersData.json in Resources */,
 				FD2F7B2D2A0CDC44008F6F49 /* EmilyDoeAvatar.jpg in Resources */,
 				FD2FA23C2A13BA20002B618B /* JamesAndersonAvatar.jpg in Resources */,
 			);

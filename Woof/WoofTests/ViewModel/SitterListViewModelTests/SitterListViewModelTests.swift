@@ -18,7 +18,7 @@ final class SitterListViewModelTests: XCTestCase {
 
     func testViewModelStoresSittersWhichSentFromServer() async throws {
         // Given
-        let data = try getData(fromJSON: "DataWithSitters")
+        let data = try getData(fromJSON: "MockSittersData")
         MockURLProtocol.requestHandler = { request in
             let url = try XCTUnwrap(request.url)
             let response = try XCTUnwrap(
