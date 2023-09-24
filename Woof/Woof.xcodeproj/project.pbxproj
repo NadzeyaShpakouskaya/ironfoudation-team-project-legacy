@@ -13,6 +13,7 @@
 		1934CC312AB9B70E001D5CB4 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1934CC302AB9B70E001D5CB4 /* MockURLProtocol.swift */; };
 		1934CC332AB9B79E001D5CB4 /* SitterListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1934CC322AB9B79E001D5CB4 /* SitterListViewModelTests.swift */; };
 		1934CC362AB9BC1E001D5CB4 /* DummyServerResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1934CC352AB9BC1E001D5CB4 /* DummyServerResponseData.swift */; };
+		195041602AC0902E00575F45 /* AllSittersResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1950415F2AC0902E00575F45 /* AllSittersResponseTests.swift */; };
 		199BC09E2A8B73B900824CC6 /* ObfuscatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199BC09D2A8B73B900824CC6 /* ObfuscatorTests.swift */; };
 		199BC0A12A8B748F00824CC6 /* Obfuscator+bytesByObfuscating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199BC0A02A8B748F00824CC6 /* Obfuscator+bytesByObfuscating.swift */; };
 		199BC0A22A8B793400824CC6 /* Obfuscator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD790632A45732D007C1265 /* Obfuscator.swift */; };
@@ -186,6 +187,7 @@
 		1934CC302AB9B70E001D5CB4 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		1934CC322AB9B79E001D5CB4 /* SitterListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitterListViewModelTests.swift; sourceTree = "<group>"; };
 		1934CC352AB9BC1E001D5CB4 /* DummyServerResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyServerResponseData.swift; sourceTree = "<group>"; };
+		1950415F2AC0902E00575F45 /* AllSittersResponseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllSittersResponseTests.swift; sourceTree = "<group>"; };
 		199BC09D2A8B73B900824CC6 /* ObfuscatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObfuscatorTests.swift; sourceTree = "<group>"; };
 		199BC0A02A8B748F00824CC6 /* Obfuscator+bytesByObfuscating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Obfuscator+bytesByObfuscating.swift"; sourceTree = "<group>"; };
 		199BC0A92A8CC3E400824CC6 /* ObfuscatorErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObfuscatorErrorTests.swift; sourceTree = "<group>"; };
@@ -349,6 +351,14 @@
 				1934CC352AB9BC1E001D5CB4 /* DummyServerResponseData.swift */,
 			);
 			path = SitterListViewModelTests;
+			sourceTree = "<group>";
+		};
+		1950415E2AC0902E00575F45 /* DataModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				1950415F2AC0902E00575F45 /* AllSittersResponseTests.swift */,
+			);
+			path = DataModelTests;
 			sourceTree = "<group>";
 		};
 		199BC09F2A8B73C400824CC6 /* ObfuscatorTests */ = {
@@ -797,6 +807,7 @@
 		FDD5385B2A41FAAF00331977 /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				1950415E2AC0902E00575F45 /* DataModelTests */,
 				FD33034E2A9CAAFD0091A4BA /* Endpoint */,
 				FD3303532A9CAC030091A4BA /* Environment */,
 				1934CC302AB9B70E001D5CB4 /* MockURLProtocol.swift */,
@@ -1256,6 +1267,7 @@
 				36199B0F2A1FB1C900725FC8 /* KeyValueStorage+TestKey.swift in Sources */,
 				368BF0EF2A16103B00F3F750 /* KeyValueStorage.swift in Sources */,
 				EF4CBAF32A3C708E00B4A223 /* SitterProfileViewModelTests.swift in Sources */,
+				195041602AC0902E00575F45 /* AllSittersResponseTests.swift in Sources */,
 				9B2480392A3354D8000B66CD /* ClipboardTextTests.swift in Sources */,
 				FD37A9952A0B6EA90001BABB /* DataTransformer.swift in Sources */,
 				FD6A2E632A2F072F00934C3E /* KeyValueStorage+NameTests.swift in Sources */,
