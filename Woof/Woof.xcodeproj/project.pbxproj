@@ -7,11 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1912607B2AC08C9300F43D94 /* AllSittersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1912607A2AC08C9300F43D94 /* AllSittersResponse.swift */; };
+		1912607C2AC08CA100F43D94 /* AllSittersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1912607A2AC08C9300F43D94 /* AllSittersResponse.swift */; };
+		192210F92ABDA1B800B9026D /* Sitter+Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192210F82ABDA1B800B9026D /* Sitter+Decoder.swift */; };
+		1934CC312AB9B70E001D5CB4 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1934CC302AB9B70E001D5CB4 /* MockURLProtocol.swift */; };
+		1934CC332AB9B79E001D5CB4 /* SitterListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1934CC322AB9B79E001D5CB4 /* SitterListViewModelTests.swift */; };
+		1934CC362AB9BC1E001D5CB4 /* DummyServerResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1934CC352AB9BC1E001D5CB4 /* DummyServerResponseData.swift */; };
+		195041602AC0902E00575F45 /* AllSittersResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1950415F2AC0902E00575F45 /* AllSittersResponseTests.swift */; };
 		199BC09E2A8B73B900824CC6 /* ObfuscatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199BC09D2A8B73B900824CC6 /* ObfuscatorTests.swift */; };
 		199BC0A12A8B748F00824CC6 /* Obfuscator+bytesByObfuscating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199BC0A02A8B748F00824CC6 /* Obfuscator+bytesByObfuscating.swift */; };
 		199BC0A22A8B793400824CC6 /* Obfuscator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD790632A45732D007C1265 /* Obfuscator.swift */; };
 		199BC0A32A8B850A00824CC6 /* ObfuscatorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD790692A4587B7007C1265 /* ObfuscatorError.swift */; };
 		199BC0AA2A8CC3E400824CC6 /* ObfuscatorErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199BC0A92A8CC3E400824CC6 /* ObfuscatorErrorTests.swift */; };
+		19B163DA2ABAC52300D4C155 /* Sitter+Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B163D92ABAC52300D4C155 /* Sitter+Hashable.swift */; };
+		19B163DD2ABB1A6300D4C155 /* MockSittersData.json in Resources */ = {isa = PBXBuildFile; fileRef = 19B163DC2ABB1A6300D4C155 /* MockSittersData.json */; };
+		19B163DE2ABB24E500D4C155 /* MockSittersData.json in Resources */ = {isa = PBXBuildFile; fileRef = 19B163DC2ABB1A6300D4C155 /* MockSittersData.json */; };
+		19B407072ABDD68F00054D2E /* Sitter+Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192210F82ABDA1B800B9026D /* Sitter+Decoder.swift */; };
 		1CE7E9C92A247CF1000A0509 /* KeyValueStorageInitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE7E9C82A247CF1000A0509 /* KeyValueStorageInitTests.swift */; };
 		1CE7E9CC2A24889B000A0509 /* KeyValueStorage+UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE7E9CB2A24889B000A0509 /* KeyValueStorage+UnitTests.swift */; };
 		36162B642AB32758002391A1 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36162B632AB32758002391A1 /* MockURLProtocol.swift */; };
@@ -176,9 +187,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1912607A2AC08C9300F43D94 /* AllSittersResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllSittersResponse.swift; sourceTree = "<group>"; };
+		192210F82ABDA1B800B9026D /* Sitter+Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sitter+Decoder.swift"; sourceTree = "<group>"; };
+		1934CC302AB9B70E001D5CB4 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
+		1934CC322AB9B79E001D5CB4 /* SitterListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitterListViewModelTests.swift; sourceTree = "<group>"; };
+		1934CC352AB9BC1E001D5CB4 /* DummyServerResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyServerResponseData.swift; sourceTree = "<group>"; };
+		1950415F2AC0902E00575F45 /* AllSittersResponseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllSittersResponseTests.swift; sourceTree = "<group>"; };
 		199BC09D2A8B73B900824CC6 /* ObfuscatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObfuscatorTests.swift; sourceTree = "<group>"; };
 		199BC0A02A8B748F00824CC6 /* Obfuscator+bytesByObfuscating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Obfuscator+bytesByObfuscating.swift"; sourceTree = "<group>"; };
 		199BC0A92A8CC3E400824CC6 /* ObfuscatorErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObfuscatorErrorTests.swift; sourceTree = "<group>"; };
+		19B163D92ABAC52300D4C155 /* Sitter+Hashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sitter+Hashable.swift"; sourceTree = "<group>"; };
+		19B163DC2ABB1A6300D4C155 /* MockSittersData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockSittersData.json; sourceTree = "<group>"; };
 		1CE7E9C82A247CF1000A0509 /* KeyValueStorageInitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStorageInitTests.swift; sourceTree = "<group>"; };
 		1CE7E9CB2A24889B000A0509 /* KeyValueStorage+UnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyValueStorage+UnitTests.swift"; sourceTree = "<group>"; };
 		36162B632AB32758002391A1 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
@@ -318,6 +337,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		191260792AC08C9300F43D94 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				1912607A2AC08C9300F43D94 /* AllSittersResponse.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		192210FB2ABDB3D200B9026D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				19B163D92ABAC52300D4C155 /* Sitter+Hashable.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		1934CC342AB9BBF3001D5CB4 /* SitterListViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				1934CC322AB9B79E001D5CB4 /* SitterListViewModelTests.swift */,
+				1934CC352AB9BC1E001D5CB4 /* DummyServerResponseData.swift */,
+			);
+			path = SitterListViewModelTests;
+			sourceTree = "<group>";
+		};
+		1950415E2AC0902E00575F45 /* DataModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				1950415F2AC0902E00575F45 /* AllSittersResponseTests.swift */,
+			);
+			path = DataModelTests;
+			sourceTree = "<group>";
+		};
 		199BC09F2A8B73C400824CC6 /* ObfuscatorTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -333,6 +385,14 @@
 				199BC0A92A8CC3E400824CC6 /* ObfuscatorErrorTests.swift */,
 			);
 			path = ObfuscatorErrorTests;
+			sourceTree = "<group>";
+		};
+		19B163DB2ABB19E400D4C155 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				19B163DC2ABB1A6300D4C155 /* MockSittersData.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		1CE7E9CA2A248875000A0509 /* Extensions */ = {
@@ -355,6 +415,7 @@
 		36BEA7592A1621B70020F6AE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				192210FB2ABDB3D200B9026D /* Extension */,
 				36FA84A82AB9C23100D85A6D /* Sitter */,
 				36BEA75A2A1621C00020F6AE /* KeyValueStorage */,
 				FDEE43D22A2F5512007DE0A9 /* Preferences */,
@@ -531,6 +592,7 @@
 			children = (
 				FDD143CC2A03E575000BBA77 /* Sitter.swift */,
 				363528D52AB9ADF6009A21CF /* Sitter+CodingKeys.swift */,
+				192210F82ABDA1B800B9026D /* Sitter+Decoder.swift */,
 				FD1FA3CB2A0A781E000A3A91 /* Sitter+Dummy.swift */,
 			);
 			path = Sitter;
@@ -738,6 +800,7 @@
 				EF4CBAED2A3C6FF100B4A223 /* SitterProfileViewModelTests */,
 				EF95A04E2A38615E00E84ACD /* OwnerMainTabViewModelTests.swift */,
 				EF95A0522A38698900E84ACD /* SitterMainTabViewModelTests.swift */,
+				1934CC342AB9BBF3001D5CB4 /* SitterListViewModelTests */,
 				9B24803A2A33550A000B66CD /* DetailPetSitterViewModel */,
 				FD14A2B82A2870A500362461 /* OwnerProfileViewModelTests */,
 				935F23842A42D60A00820E7B /* LoginViewModelTests.swift */,
@@ -753,6 +816,7 @@
 				FDCF49102A1CDA0A00CD3BBB /* ViewModel */,
 				36BEA7592A1621B70020F6AE /* Model */,
 				FD1FA3CD2A0A7DDB000A3A91 /* Helper */,
+				19B163DB2ABB19E400D4C155 /* Resources */,
 				FD907D4A2A440D6B0020CFF0 /* ThirdParty */,
 			);
 			path = WoofTests;
@@ -761,8 +825,9 @@
 		FDD538562A41D66800331977 /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
-				FD3303522A9CABE50091A4BA /* Environment */,
+				191260792AC08C9300F43D94 /* DataModel */,
 				FD3303442A98BD540091A4BA /* Endpoint */,
+				FD3303522A9CABE50091A4BA /* Environment */,
 			);
 			path = NetworkLayer;
 			sourceTree = "<group>";
@@ -770,8 +835,10 @@
 		FDD5385B2A41FAAF00331977 /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				1950415E2AC0902E00575F45 /* DataModelTests */,
 				FD33034E2A9CAAFD0091A4BA /* Endpoint */,
 				FD3303532A9CAC030091A4BA /* Environment */,
+				1934CC302AB9B70E001D5CB4 /* MockURLProtocol.swift */,
 			);
 			path = NetworkLayer;
 			sourceTree = "<group>";
@@ -1003,6 +1070,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19B163DD2ABB1A6300D4C155 /* MockSittersData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1019,6 +1087,7 @@
 				FD2FA23E2A13BA20002B618B /* JohnAlisonAvatar.jpg in Resources */,
 				FD2FA23D2A13BA20002B618B /* WilliamWilsonAvatar.jpg in Resources */,
 				FD2FA2392A13BA20002B618B /* MichaelBrownAvatar.jpg in Resources */,
+				19B163DE2ABB24E500D4C155 /* MockSittersData.json in Resources */,
 				FD2F7B2D2A0CDC44008F6F49 /* EmilyDoeAvatar.jpg in Resources */,
 				FD2FA23C2A13BA20002B618B /* JamesAndersonAvatar.jpg in Resources */,
 			);
@@ -1154,6 +1223,7 @@
 				FD9802282A287670003DEE5C /* OwnerProfileViewModelGetTests.swift in Sources */,
 				FD6A2E612A2F067E00934C3E /* KeyValueStorage+KeyTests.swift in Sources */,
 				FD33035C2AA9DA6B0091A4BA /* WoofAppEndpoint+Path.swift in Sources */,
+				1912607C2AC08CA100F43D94 /* AllSittersResponse.swift in Sources */,
 				36FA84A92AB9C26200D85A6D /* Sitter+CodingKeys.swift in Sources */,
 				FD8182302A20C3C300AE1016 /* KeyValueStorage+TestData.swift in Sources */,
 				36C54AFC2A17A79200748023 /* KeyValueStorageLoadTests.swift in Sources */,
@@ -1185,7 +1255,9 @@
 				EF95A05B2A39B74100E84ACD /* DetailPetSitterViewModelTests.swift in Sources */,
 				199BC0A12A8B748F00824CC6 /* Obfuscator+bytesByObfuscating.swift in Sources */,
 				935F23852A42D60A00820E7B /* LoginViewModelTests.swift in Sources */,
+				1934CC312AB9B70E001D5CB4 /* MockURLProtocol.swift in Sources */,
 				FDEE43CD2A2F4E51007DE0A9 /* PreferencesTests.swift in Sources */,
+				19B163DA2ABAC52300D4C155 /* Sitter+Hashable.swift in Sources */,
 				EF95A04B2A385FA900E84ACD /* OwnerMainTabViewModel.swift in Sources */,
 				FD98022A2A2878C1003DEE5C /* Owner+Test.swift in Sources */,
 				FDD143F72A052A11000BBA77 /* Color+AppSchemeTests.swift in Sources */,
@@ -1206,14 +1278,17 @@
 				362732A22A1B800B0062E4B5 /* KeyValueStorageDeleteTests.swift in Sources */,
 				FDD143FE2A052D5A000BBA77 /* Color+AppScheme.swift in Sources */,
 				199BC0A32A8B850A00824CC6 /* ObfuscatorError.swift in Sources */,
+				1934CC362AB9BC1E001D5CB4 /* DummyServerResponseData.swift in Sources */,
 				EF4CBAF02A3C704300B4A223 /* Sitter+Tests.swift in Sources */,
 				FDD144012A0532D5000BBA77 /* String+IconNameTests.swift in Sources */,
 				FD02917B2A0E2C5300F88377 /* AppStyle+UIElementConstant.swift in Sources */,
 				FDEE43CE2A2F4E56007DE0A9 /* Preferences.swift in Sources */,
+				1934CC332AB9B79E001D5CB4 /* SitterListViewModelTests.swift in Sources */,
 				FDD5385D2A41FADF00331977 /* WoofAppEndpointTests.swift in Sources */,
 				FDEE43D12A2F525B007DE0A9 /* RoleTests.swift in Sources */,
 				FDEE43CF2A2F4E58007DE0A9 /* Role.swift in Sources */,
 				EF4CBAEC2A3C6DCA00B4A223 /* SitterProfileViewModel.swift in Sources */,
+				19B407072ABDD68F00054D2E /* Sitter+Decoder.swift in Sources */,
 				FD37A9982A0B77A90001BABB /* FiveStarRatingTests.swift in Sources */,
 				FDEE43E32A388854007DE0A9 /* UserRoleViewModel.swift in Sources */,
 				FD14A2B42A286C5200362461 /* KeyValueStorage+Name.swift in Sources */,
@@ -1225,6 +1300,7 @@
 				36199B0F2A1FB1C900725FC8 /* KeyValueStorage+TestKey.swift in Sources */,
 				368BF0EF2A16103B00F3F750 /* KeyValueStorage.swift in Sources */,
 				EF4CBAF32A3C708E00B4A223 /* SitterProfileViewModelTests.swift in Sources */,
+				195041602AC0902E00575F45 /* AllSittersResponseTests.swift in Sources */,
 				9B2480392A3354D8000B66CD /* ClipboardTextTests.swift in Sources */,
 				FD37A9952A0B6EA90001BABB /* DataTransformer.swift in Sources */,
 				FD6A2E632A2F072F00934C3E /* KeyValueStorage+NameTests.swift in Sources */,
@@ -1267,6 +1343,7 @@
 				FD7F98A12A0E0E280058DBEB /* AppStyle+FontStyle.swift in Sources */,
 				FD2FA2292A129C53002B618B /* SitterListView.swift in Sources */,
 				3673D6372A04F7FD009D699D /* Owner.swift in Sources */,
+				1912607B2AC08C9300F43D94 /* AllSittersResponse.swift in Sources */,
 				FD7F98A32A0E10510058DBEB /* AppStyle+UIElementConstant.swift in Sources */,
 				FD6A2E5F2A2EF6C200934C3E /* SitterMainTabView+Tab.swift in Sources */,
 				FDDDA6882A25C3FE00839091 /* EditOwnerInformationView.swift in Sources */,
@@ -1287,6 +1364,7 @@
 				BA4561872A3996BF00C6E595 /* SitterInfoCardView.swift in Sources */,
 				FD7F98A52A0E12290058DBEB /* AvatarView.swift in Sources */,
 				FD1FA3CC2A0A781E000A3A91 /* Sitter+Dummy.swift in Sources */,
+				192210F92ABDA1B800B9026D /* Sitter+Decoder.swift in Sources */,
 				FD33035A2AA9D5DD0091A4BA /* Encodable+asDictionary.swift in Sources */,
 				EF4CBAFA2A3C94F000B4A223 /* Sitter.swift in Sources */,
 				EF4CBAEB2A3C6DCA00B4A223 /* SitterProfileViewModel.swift in Sources */,
