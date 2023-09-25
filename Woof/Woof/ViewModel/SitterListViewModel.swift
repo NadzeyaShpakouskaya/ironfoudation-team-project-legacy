@@ -1,25 +1,28 @@
 import Foundation
+import NetworkService
 
 /// An interface is responsible for preparing and providing data for the `SitterListView`.
 final class SitterListViewModel: ObservableObject {
+    // MARK: - Internal interface
+
     /// The list of sitters to show.
     @Published var sitters: [Sitter] = []
 
     /// The state of loading data from server.
     @Published var state = LoadingState.notInitiated
 
-    /// Initializes a new instance of the `SitterListViewModel`
-    init() {
-        Task {
-            await fetchSitters()
-        }
-    }
-
+    /// Fetches data about sitters from the remote server.
     @MainActor func fetchSitters() async {
         state = .inProgress
         do {
-            try await Task.sleep(nanoseconds: 2_000_000_000)
-            sitters = Sitter.Dummy.sitters
+            let data = try await NetworkService().request(WoofAppEndpoint.getAllSitters)
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            let allSittersResponse = try decoder.decode(AllSittersResponse.self, from: data)
+
+            if let sitters = allSittersResponse.petSitters {
+                self.sitters = sitters
+            }
         } catch {
             state = .loadingFailed
         }

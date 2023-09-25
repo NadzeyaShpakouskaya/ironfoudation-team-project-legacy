@@ -2,6 +2,8 @@ import SwiftUI
 
 /// A view displaying the list of sitters.
 struct SitterListView: View {
+    // MARK: - Internal interface
+
     var body: some View {
         Group {
             switch viewModel.state {
