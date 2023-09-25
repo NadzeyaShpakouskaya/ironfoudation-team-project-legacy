@@ -28,7 +28,7 @@ final class SitterProfileViewModel: ObservableObject {
     /// Indicating the status of the saving operation.
     @Published var isSavingData = false
 
-    /// Indicating to change the editing mode.
+    /// Indicating to change the view display mode.
     @Published var isEditingMode = false
 
     /// Indicates if the mandatory fields are empty.
@@ -62,15 +62,12 @@ final class SitterProfileViewModel: ObservableObject {
         do {
             try await upload(newSitter)
             try await saveLocally(newSitter)
+            currentSitter = newSitter
+            isEditingMode = false
         } catch {
             handleError(error)
         }
-
-        if !isErrorOccurred {
-            isEditingMode = false
-            currentSitter = newSitter
-        }
-
+        
         isSavingData = false
     }
 
