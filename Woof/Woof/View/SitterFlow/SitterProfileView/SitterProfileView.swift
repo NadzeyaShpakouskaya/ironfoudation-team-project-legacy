@@ -6,7 +6,7 @@ struct SitterProfileView: View {
 
     var body: some View {
         VStack {
-            if isEditingMode {
+            if viewModel.isEditingMode {
                 VStack {
                     EditSitterInformationView(
                         name: $viewModel.name,
@@ -25,7 +25,6 @@ struct SitterProfileView: View {
                     HStack {
                         Button(cancelButtonLabelText) {
                             viewModel.cancelEditing()
-                            isEditingMode = false
                         }
 
                         Spacer()
@@ -33,9 +32,6 @@ struct SitterProfileView: View {
                         Button(saveButtonLabelText) {
                             Task {
                                 await viewModel.save()
-                                if !viewModel.isErrorOccurred {
-                                    isEditingMode = false
-                                }
                             }
                         }
                         .disabled(viewModel.mandatoryFieldsAreEmpty)
@@ -58,7 +54,7 @@ struct SitterProfileView: View {
 
                     if !viewModel.sitterIsSet {
                         Button(editButtonLabelText) {
-                            isEditingMode.toggle()
+                            viewModel.isEditingMode.toggle()
                         }
                     }
                 }
@@ -86,14 +82,10 @@ struct SitterProfileView: View {
             actions: {
                 Button(cancelButtonLabelText) {
                     viewModel.cancelEditing()
-                    isEditingMode = false
                 }
                 Button(tryAgainButtonLabelText) {
                     Task {
                         await viewModel.save()
-                        if !viewModel.isErrorOccurred {
-                            isEditingMode = false
-                        }
                     }
                 }
             },
@@ -113,7 +105,6 @@ struct SitterProfileView: View {
     private let tryAgainButtonLabelText = "Try Again"
     private let alertTitle = "Error"
     private let mandatoryPlaceholderText = "Fields with * are mandatory"
-    @State private var isEditingMode = false
 }
 
 struct SitterProfileView_Previews: PreviewProvider {

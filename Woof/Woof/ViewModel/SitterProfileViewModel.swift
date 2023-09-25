@@ -28,6 +28,9 @@ final class SitterProfileViewModel: ObservableObject {
     /// Indicating the status of the saving operation.
     @Published var isSavingData = false
 
+    /// Indicating to change the editing mode.
+    @Published var isEditingMode = false
+
     /// Indicates if the mandatory fields are empty.
     var mandatoryFieldsAreEmpty: Bool {
         name.isEmpty || phone.isEmpty
@@ -58,10 +61,14 @@ final class SitterProfileViewModel: ObservableObject {
 
         do {
             try await upload(newSitter)
-            currentSitter = newSitter
             try await saveLocally(newSitter)
         } catch {
             handleError(error)
+        }
+
+        if !isErrorOccurred {
+            isEditingMode = false
+            currentSitter = newSitter
         }
 
         isSavingData = false
@@ -70,6 +77,7 @@ final class SitterProfileViewModel: ObservableObject {
     /// Requests the model layer to cancel the editing mode and restore the original values.
     func cancelEditing() {
         resetFields()
+        isEditingMode = false
     }
 
     // MARK: - Private interface
