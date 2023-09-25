@@ -11,9 +11,18 @@ final class SitterListViewModel: ObservableObject {
     /// The state of loading data from server.
     @Published var state = LoadingState.notInitiated
 
+    init() {
+        Task {
+            await fetchSitters()
+        }
+    }
+
     /// Fetches data about sitters from the remote server.
-    @MainActor func fetchSitters() async {
-        state = .inProgress
+    func fetchSitters() async {
+        await MainActor.run {
+            state = .inProgress
+        }
+
         do {
             let data = try await NetworkService().request(WoofAppEndpoint.getAllSitters)
             let decoder = JSONDecoder()
@@ -21,11 +30,15 @@ final class SitterListViewModel: ObservableObject {
             let allSittersResponse = try decoder.decode(AllSittersResponse.self, from: data)
 
             if let sitters = allSittersResponse.petSitters {
-                self.sitters = sitters
+                await MainActor.run {
+                    self.sitters = sitters
+                    state = .loaded
+                }
             }
         } catch {
-            state = .loadingFailed
+            await MainActor.run {
+                state = .loadingFailed
+            }
         }
-        state = .loaded
     }
 }
