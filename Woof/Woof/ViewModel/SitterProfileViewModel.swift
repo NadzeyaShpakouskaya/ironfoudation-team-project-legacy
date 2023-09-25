@@ -67,7 +67,7 @@ final class SitterProfileViewModel: ObservableObject {
         } catch {
             handleError(error)
         }
-        
+
         isSavingData = false
     }
 
