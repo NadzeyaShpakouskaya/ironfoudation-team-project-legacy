@@ -59,9 +59,7 @@ final class SitterProfileViewModel: ObservableObject {
         do {
             try await upload(newSitter)
             currentSitter = newSitter
-            if let currentSitter {
-                try await saveLocally(currentSitter)
-            }
+            try await saveLocally(newSitter)
         } catch {
             handleError(error)
         }
@@ -76,9 +74,18 @@ final class SitterProfileViewModel: ObservableObject {
 
     // MARK: - Private interface
 
+    /// Detailed error information for the user.
     private(set) var errorMessage = "" {
         didSet {
             isErrorOccurred = !errorMessage.isEmpty
+        }
+    }
+
+    /// Indicates whether there is a saved sitter.
+    private(set) var sitterIsSet = false
+    private var currentSitter: Sitter? {
+        didSet {
+            sitterIsSet = true
         }
     }
 
@@ -107,14 +114,6 @@ final class SitterProfileViewModel: ObservableObject {
         }
 
         errorMessage = appError.errorDescription
-    }
-
-    /// Indicates whether there is a saved sitter.
-    private(set) var sitterIsSet = false
-    private var currentSitter: Sitter? {
-        didSet {
-            sitterIsSet = true
-        }
     }
 
     private func loadSitterFromStorage() -> Sitter? {

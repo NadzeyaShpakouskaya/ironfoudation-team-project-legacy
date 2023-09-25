@@ -80,30 +80,9 @@ final class SitterProfileViewModelSaveTests: XCTestCase {
         XCTAssertEqual(viewModel.isErrorOccurred, false)
     }
 
-    func testSaveMethodHandlesErrorStatusCode() async {
-        // Given
-        MockURLProtocol.requestHandler = { request in
-            let response = try XCTUnwrap(
-                HTTPURLResponse(
-                    url: XCTUnwrap(request.url),
-                    statusCode: 400,
-                    httpVersion: nil,
-                    headerFields: nil
-                )
-            )
-            return (response, nil)
-        }
-
-        // When
-        await viewModel.save()
-
-        // Then
-        XCTAssertEqual(viewModel.isErrorOccurred, true)
-    }
-
     func testAllErrorStatusCodesInResponseTriggersError() async {
         // Given
-        for statusCode in 400...499 {
+        for statusCode in [300, 400, 401, 402, 500] {
             MockURLProtocol.requestHandler = { request in
                 let response = try XCTUnwrap(
                     HTTPURLResponse(
@@ -146,6 +125,6 @@ final class SitterProfileViewModelSaveTests: XCTestCase {
         await viewModel.save()
 
         // Then
-        XCTAssertEqual(requestCount, 1, "Expected 1 request, but got \(requestCount) requests.")
+        XCTAssertEqual(requestCount, 1)
     }
 }
