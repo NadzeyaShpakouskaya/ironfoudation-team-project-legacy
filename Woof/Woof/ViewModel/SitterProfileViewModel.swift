@@ -35,6 +35,13 @@ final class SitterProfileViewModel: ObservableObject {
     var mandatoryFieldsAreEmpty: Bool {
         name.isEmpty || phone.isEmpty
     }
+    
+    /// Detailed error information for the user.
+    private(set) var errorMessage = "" {
+        didSet {
+            isErrorOccurred = !errorMessage.isEmpty
+        }
+    }
 
     /**
      Initializes an instance of the `SitterProfileViewModel` class.
@@ -78,13 +85,6 @@ final class SitterProfileViewModel: ObservableObject {
     }
 
     // MARK: - Private interface
-
-    /// Detailed error information for the user.
-    private(set) var errorMessage = "" {
-        didSet {
-            isErrorOccurred = !errorMessage.isEmpty
-        }
-    }
 
     /// Indicates whether there is a saved sitter.
     private(set) var sitterIsSet = false
