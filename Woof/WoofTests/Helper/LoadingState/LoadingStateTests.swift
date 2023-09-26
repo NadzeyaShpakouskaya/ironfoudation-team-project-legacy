@@ -1,7 +1,6 @@
 import XCTest
 
 final class LoadingStateTests: XCTestCase {
-
     func testAllLoadingStatesExistInAPI() {
         // Given
         let setOfLoadingStates = Set(LoadingState.allCases)
@@ -11,11 +10,10 @@ final class LoadingStateTests: XCTestCase {
             .notInitiated,
             .inProgress,
             .loaded,
-            .loadingFailed
+            .loadingFailed,
         ]
 
         // Then
         XCTAssertEqual(setOfLoadingStates, expectedLoadingStates)
     }
-
 }

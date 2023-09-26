@@ -114,6 +114,52 @@ final class SitterListViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel.sitters, listOfSitters)
     }
 
+    func testViewModelStateChangedToExpectedStateWhenDataFetchedSuccessfully() async throws {
+        // Given
+        let data = try getData(fromJSON: "MockSittersData")
+        MockURLProtocol.requestHandler = { request in
+            let url = try XCTUnwrap(request.url)
+            let response = try XCTUnwrap(
+                HTTPURLResponse(
+                    url: url,
+                    statusCode: 200,
+                    httpVersion: nil,
+                    headerFields: nil
+                )
+            )
+            return (response, data)
+        }
+
+        // When
+        await viewModel.fetchSitters()
+
+        // Then
+        XCTAssertEqual(viewModel.state, .loaded)
+    }
+
+    func testViewModelStateChangedToExpectedStateWhenDataFetchingFailed() async throws {
+        // Given
+
+        MockURLProtocol.requestHandler = { request in
+            let url = try XCTUnwrap(request.url)
+            let response = try XCTUnwrap(
+                HTTPURLResponse(
+                    url: url,
+                    statusCode: 400,
+                    httpVersion: nil,
+                    headerFields: nil
+                )
+            )
+            return (response, nil)
+        }
+
+        // When
+        await viewModel.fetchSitters()
+
+        // Then
+        XCTAssertEqual(viewModel.state, .loadingFailed)
+    }
+
     // MARK: - Private interface
 
     private var viewModel: SitterListViewModel!
