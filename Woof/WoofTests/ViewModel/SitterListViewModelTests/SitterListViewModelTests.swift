@@ -134,7 +134,8 @@ final class SitterListViewModelTests: XCTestCase {
         await viewModel.fetchSitters()
 
         // Then
-        XCTAssertEqual(viewModel.state, .loaded)
+        XCTAssertEqual(viewModel.errorMessage, "")
+        XCTAssertFalse(viewModel.isLoading)
     }
 
     func testViewModelStateChangedToExpectedStateWhenDataFetchingFailed() async throws {
@@ -157,7 +158,8 @@ final class SitterListViewModelTests: XCTestCase {
         await viewModel.fetchSitters()
 
         // Then
-        XCTAssertEqual(viewModel.state, .loadingFailed)
+        XCTAssertEqual(viewModel.errorMessage, AppError.downloadFailed.errorDescription)
+        XCTAssertFalse(viewModel.isLoading)
     }
 
     // MARK: - Private interface
