@@ -22,7 +22,7 @@ struct SitterListView: View {
 
                 }.padding(AppStyle.UIElementConstant.minPadding)
             default:
-                VStack(spacing: wideSpacingSize) {
+                VStack(spacing: AppStyle.UIElementConstant.wideSpacingSize) {
                     Text(errorMessage)
                     Button(tryAgainButtonText) {
                         Task {
@@ -41,7 +41,6 @@ struct SitterListView: View {
 
     private let errorMessage = "Couldn't load data"
     private let tryAgainButtonText = "Try again"
-    private let wideSpacingSize = 20.0
 }
 
 struct SitterListView_Previews: PreviewProvider {

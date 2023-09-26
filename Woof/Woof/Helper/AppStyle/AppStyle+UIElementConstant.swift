@@ -20,5 +20,8 @@ extension AppStyle {
 
         /// Opacity level for progress view background
         static let opacityLevelForProgressViewBackground = 0.4
+
+        /// The wide spacing size.
+        static let wideSpacingSize = 20.0
     }
 }
