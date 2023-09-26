@@ -8,8 +8,15 @@ final class SitterListViewModel: ObservableObject {
     /// The list of sitters to show.
     @Published var sitters: [Sitter] = []
 
-    /// The state of loading data from server.
-    @Published var state = LoadingState.notInitiated
+    /// Indicates if loading data is in progress.
+    @Published var isLoading = false {
+        didSet {
+            errorMessage = isLoading ? "" : errorMessage
+        }
+    }
+
+    /// Detailed error information for the user.
+    @Published var errorMessage: String = ""
 
     init() {
         Task {
@@ -19,9 +26,7 @@ final class SitterListViewModel: ObservableObject {
 
     /// Fetches data about sitters from the remote server.
     func fetchSitters() async {
-        await MainActor.run {
-            state = .inProgress
-        }
+        await MainActor.run { isLoading = true }
 
         do {
             let data = try await NetworkService().request(WoofAppEndpoint.getAllSitters)
@@ -32,13 +37,30 @@ final class SitterListViewModel: ObservableObject {
             if let sitters = allSittersResponse.petSitters {
                 await MainActor.run {
                     self.sitters = sitters
-                    state = .loaded
                 }
             }
         } catch {
-            await MainActor.run {
-                state = .loadingFailed
+            if let error = error as? URLError, error.code == .notConnectedToInternet {
+                await MainActor.run {
+                    handleError(AppError.noInternetConnection)
+                }
+            } else {
+                await MainActor.run {
+                    handleError(AppError.downloadFailed)
+                }
             }
         }
+
+        await MainActor.run { isLoading = false }
+    }
+
+    @MainActor private func handleError(_ error: Error) {
+        guard let appError = error as? AppError else {
+            errorMessage = "An error occurred."
+            return
+        }
+
+        errorMessage = appError.errorDescription
+        isLoading = false
     }
 }

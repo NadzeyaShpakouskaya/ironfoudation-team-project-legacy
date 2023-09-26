@@ -6,11 +6,7 @@ struct SitterListView: View {
 
     var body: some View {
         Group {
-            switch viewModel.state {
-            case .inProgress:
-                ProgressView()
-                    .foregroundColor(.App.purpleDark)
-            case .loaded:
+            if viewModel.errorMessage.isEmpty {
                 ScrollView {
                     ForEach(viewModel.sitters) { sitter in
                         NavigationLink {
@@ -19,17 +15,23 @@ struct SitterListView: View {
                             SitterCardView(viewModel: SitterCardViewModel(sitter: sitter))
                         }
                     }
-
-                }.padding(AppStyle.UIElementConstant.minPadding)
-            default:
+                }
+                .padding(AppStyle.UIElementConstant.minPadding)
+            } else {
                 VStack(spacing: AppStyle.UIElementConstant.wideSpacingSize) {
-                    Text(errorMessage)
+                    Text(viewModel.errorMessage)
                     Button(tryAgainButtonText) {
                         Task {
                             await viewModel.fetchSitters()
                         }
                     }.buttonStyle(CapsuleWithWhiteText())
                 }
+            }
+        }
+        .overlay {
+            if viewModel.isLoading {
+                ProgressView()
+                    .foregroundColor(.App.purpleDark)
             }
         }
     }
@@ -39,7 +41,6 @@ struct SitterListView: View {
     /// The view model responsible for providing data to the view.
     @StateObject private var viewModel = SitterListViewModel()
 
-    private let errorMessage = "Couldn't load data"
     private let tryAgainButtonText = "Try again"
 }
 
