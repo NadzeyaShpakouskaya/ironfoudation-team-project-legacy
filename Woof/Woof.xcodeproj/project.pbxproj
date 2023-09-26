@@ -128,6 +128,7 @@
 		FD33035C2AA9DA6B0091A4BA /* WoofAppEndpoint+Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3303572AA9BDA40091A4BA /* WoofAppEndpoint+Path.swift */; };
 		FD34FCF22ABDA71D00C29D49 /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD34FCF12ABDA71D00C29D49 /* LoadingState.swift */; };
 		FD34FCF32AC18A1D00C29D49 /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD34FCF12ABDA71D00C29D49 /* LoadingState.swift */; };
+		FD34FCF62AC2C65D00C29D49 /* LoadingStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD34FCF52AC2C65D00C29D49 /* LoadingStateTests.swift */; };
 		FD37A9902A0B65120001BABB /* DataTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD37A98F2A0B65120001BABB /* DataTransformer.swift */; };
 		FD37A9942A0B6E960001BABB /* FullNameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD37A9932A0B6E960001BABB /* FullNameTests.swift */; };
 		FD37A9952A0B6EA90001BABB /* DataTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD37A98F2A0B65120001BABB /* DataTransformer.swift */; };
@@ -275,6 +276,7 @@
 		FD3303572AA9BDA40091A4BA /* WoofAppEndpoint+Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WoofAppEndpoint+Path.swift"; sourceTree = "<group>"; };
 		FD3303592AA9D5DD0091A4BA /* Encodable+asDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+asDictionary.swift"; sourceTree = "<group>"; };
 		FD34FCF12ABDA71D00C29D49 /* LoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingState.swift; sourceTree = "<group>"; };
+		FD34FCF52AC2C65D00C29D49 /* LoadingStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingStateTests.swift; sourceTree = "<group>"; };
 		FD37A98F2A0B65120001BABB /* DataTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransformer.swift; sourceTree = "<group>"; };
 		FD37A9932A0B6E960001BABB /* FullNameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullNameTests.swift; sourceTree = "<group>"; };
 		FD37A9972A0B77A90001BABB /* FiveStarRatingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveStarRatingTests.swift; sourceTree = "<group>"; };
@@ -602,6 +604,7 @@
 		FD1FA3CD2A0A7DDB000A3A91 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				FD34FCF42AC2C63B00C29D49 /* LoadingState */,
 				3619FD3A2ABC696B00E9D56D /* AppError */,
 				FDB2E4FB2AB1A8270014C7F7 /* EncodableExtensionTests */,
 				FD0291712A0E16DF00F88377 /* AppStyleTests */,
@@ -692,6 +695,14 @@
 			isa = PBXGroup;
 			children = (
 				FD34FCF12ABDA71D00C29D49 /* LoadingState.swift */,
+			);
+			path = LoadingState;
+			sourceTree = "<group>";
+		};
+		FD34FCF42AC2C63B00C29D49 /* LoadingState */ = {
+			isa = PBXGroup;
+			children = (
+				FD34FCF52AC2C65D00C29D49 /* LoadingStateTests.swift */,
 			);
 			path = LoadingState;
 			sourceTree = "<group>";
@@ -1305,6 +1316,7 @@
 				FDD5385E2A41FAE500331977 /* WoofAppEndpoint.swift in Sources */,
 				FDD143FF2A052D5E000BBA77 /* String+IconName.swift in Sources */,
 				1CE7E9C92A247CF1000A0509 /* KeyValueStorageInitTests.swift in Sources */,
+				FD34FCF62AC2C65D00C29D49 /* LoadingStateTests.swift in Sources */,
 				FD3303512A9CAB210091A4BA /* APIEnvironment.swift in Sources */,
 				36199B0F2A1FB1C900725FC8 /* KeyValueStorage+TestKey.swift in Sources */,
 				368BF0EF2A16103B00F3F750 /* KeyValueStorage.swift in Sources */,
