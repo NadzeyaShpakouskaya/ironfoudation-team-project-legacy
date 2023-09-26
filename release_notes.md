@@ -6,6 +6,13 @@ The file describes all the changes, that are affected the usage of the applicati
 
 The format is based on [Release_notes format](https://github.com/ios-course/ironfoudation-team-project/wiki/Release_notes-format).
 
+## 0.4.0
+
+### New features
+
+`User profile`: Add the ability for sitters and owners to enter information about themselves. The entered information is saved after the app is closed.
+ 
+`Connect pet sitters and pet owners`: Add a connection to the remote server what enables pet owners to have a list of registered pet sitters.
 
 ## 0.3.0
 
