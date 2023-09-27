@@ -28,7 +28,7 @@ As a pet sitter, you can provide the service of walks using your own schedule, p
 
 ## Installation
 
-### For version 0.4.0 and above
+### For version 0.4.0
 
 1. Click [Here](https://apps.apple.com/us/app/testflight/id899247664?mt=8) to find the TestFlight application in the AppStore
 
