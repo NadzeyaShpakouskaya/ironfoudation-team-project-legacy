@@ -12,7 +12,7 @@ The format is based on [Release_notes format](https://github.com/ios-course/iron
 
 `User profile`: Add the ability for sitters and owners to enter information about themselves. The entered information is saved after the app is closed.
  
-`Connect pet sitters and pet owners`: Add a connection to the remote server what enables pet owners to have a list of registered pet sitters.
+`Find your sitter`: If you have a furry friend, you can easily browse through our list of  pet sitters to find the one that best suits your needs.
 
 ## 0.3.0
 
