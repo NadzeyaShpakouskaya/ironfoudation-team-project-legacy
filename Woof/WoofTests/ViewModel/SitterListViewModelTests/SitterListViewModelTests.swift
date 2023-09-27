@@ -114,7 +114,7 @@ final class SitterListViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel.sitters, listOfSitters)
     }
 
-    func testViewModelStateChangedToExpectedStateWhenDataFetchedSuccessfully() async throws {
+    func testViewModelChangesToExpectedStateWhenDataFetchedSuccessfully() async throws {
         // Given
         let data = try getData(fromJSON: "MockSittersData")
         MockURLProtocol.requestHandler = { request in
@@ -138,7 +138,7 @@ final class SitterListViewModelTests: XCTestCase {
         XCTAssertFalse(viewModel.isLoading)
     }
 
-    func testViewModelStateChangedToExpectedStateWhenDataFetchingFailed() async throws {
+    func testViewModelChangesToExpectedStateWhenDataFetchingFailed() async throws {
         // Given
 
         MockURLProtocol.requestHandler = { request in
