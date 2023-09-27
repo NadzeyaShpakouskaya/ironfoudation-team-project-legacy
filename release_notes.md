@@ -6,6 +6,13 @@ The file describes all the changes, that are affected the usage of the applicati
 
 The format is based on [Release_notes format](https://github.com/ios-course/ironfoudation-team-project/wiki/Release_notes-format).
 
+## 0.4.0
+
+### New features
+
+`Create a Sitter Profile`: Join us as a sitter and start earning money with your pet care skills!
+ 
+`Find your sitter`: If you have a furry friend, you can easily browse through our list of  pet sitters to find the one that best suits your needs.
 
 ## 0.3.0
 
