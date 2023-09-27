@@ -28,6 +28,32 @@ As a pet sitter, you can provide the service of walks using your own schedule, p
 
 ## Installation
 
+### For version 0.4.0 and above
+
+1. Click [Here](https://apps.apple.com/us/app/testflight/id899247664?mt=8) to find the TestFlight application in the AppStore
+
+1. Click “Download” to install the TestFlight application.
+
+1. After installation, open the application. A TestFlight app notification appears asking for permission to send notifications. Click “Allow” to receive notifications about app updates.
+
+1. On the “Welcome” screen, click the “Continue” button. You can now install the Woof mobile app. Follow the link below: https://testflight.apple.com/join/mGNJXIwt
+
+1. Click “Start Testing” in Step 2 to open the installation prompt in the TestFlight app.
+
+1. The invitation screen for the Woof app will appear with a description of the app. Click “Accept” to accept the invitation to our beta testing program.
+
+1. After accepting the invitation, click “Install” to install the Woof application.
+
+1. You can then open the Woof application by clicking the “Open” button.
+
+1. Finally, you will see a screen with the application version and changelog; here we publish what has been updated in the current version. Click “Next” to continue.
+
+1. Click “Start Testing” to complete the installation process.
+
+1. You will see the “Welcome” screen of the Woof app. Choose role and start using the application.
+
+### For versions 0.1.0 - 0.3.1
+
 **Pre-requisites**: _installed Xcode with the version specified under the [current dev environment](#current-dev-environment)._
 
 1. Go to the [Releases](https://github.com/ios-course/ironfoudation-team-project/releases) section in the current repository.
