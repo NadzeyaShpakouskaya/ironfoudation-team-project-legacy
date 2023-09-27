@@ -28,6 +28,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
  - Update revision of the `SimpleNetworkService` package in the project - [#204](https://github.com/ios-course/ironfoudation-team-project/pull/204)
  - Update `SitterProfileView` to allow the user to enter profile info only once - [#212](https://github.com/ios-course/ironfoudation-team-project/pull/212)
  - Update `SitterListView` to present a loading indicator and occurring errors - [#218](https://github.com/ios-course/ironfoudation-team-project/pull/218)
+ - Bump `Current Project Version` and `Marketing Version` to 0.5.0 - [#219](https://github.com/ios-course/ironfoudation-team-project/pull/219)
 
 ## [0.3.1] - 21.08.2023
 
