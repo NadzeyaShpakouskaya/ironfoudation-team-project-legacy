@@ -8,6 +8,9 @@ struct SitterListView: View {
         Group {
             if viewModel.errorMessage.isEmpty {
                 ScrollView {
+                    if viewModel.sitters.isEmpty {
+                        Text(noAvailableSittersMessage)
+                    }
                     ForEach(viewModel.sitters) { sitter in
                         NavigationLink {
                             DetailPetSitterView(viewModel: DetailSitterViewModel(sitter: sitter))
@@ -42,6 +45,7 @@ struct SitterListView: View {
     @StateObject private var viewModel = SitterListViewModel()
 
     private let tryAgainButtonText = "Try again"
+    private let noAvailableSittersMessage = "There are no available sitters right now."
 }
 
 struct SitterListView_Previews: PreviewProvider {

@@ -44,9 +44,7 @@ final class SitterListViewModel: ObservableObject {
                 ? AppError.noInternetConnection
                 : AppError.downloadFailed
 
-            await MainActor.run {
-                handleError(error)
-            }
+            await MainActor.run { handleError(error) }
         }
 
         await MainActor.run { isLoading = false }
