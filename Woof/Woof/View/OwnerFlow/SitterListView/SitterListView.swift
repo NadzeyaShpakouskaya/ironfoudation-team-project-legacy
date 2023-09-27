@@ -5,18 +5,37 @@ struct SitterListView: View {
     // MARK: - Internal interface
 
     var body: some View {
-        ScrollView {
-            ForEach(viewModel.sitters) { sitter in
-                NavigationLink {
-                    DetailPetSitterView(viewModel: DetailSitterViewModel(sitter: sitter))
-                } label: {
-                    SitterCardView(viewModel: SitterCardViewModel(sitter: sitter))
+        Group {
+            if viewModel.errorMessage.isEmpty {
+                ScrollView {
+                    if viewModel.sitters.isEmpty {
+                        Text(noAvailableSittersMessage)
+                    }
+                    ForEach(viewModel.sitters) { sitter in
+                        NavigationLink {
+                            DetailPetSitterView(viewModel: DetailSitterViewModel(sitter: sitter))
+                        } label: {
+                            SitterCardView(viewModel: SitterCardViewModel(sitter: sitter))
+                        }
+                    }
+                }
+                .padding(AppStyle.UIElementConstant.minPadding)
+            } else {
+                VStack(spacing: AppStyle.UIElementConstant.wideSpacingSize) {
+                    Text(viewModel.errorMessage)
+                    Button(tryAgainButtonText) {
+                        Task {
+                            await viewModel.fetchSitters()
+                        }
+                    }.buttonStyle(CapsuleWithWhiteText())
                 }
             }
         }
-        .padding(AppStyle.UIElementConstant.minPadding)
-        .task {
-            await viewModel.fetchSitters()
+        .overlay {
+            if viewModel.isLoading {
+                ProgressView()
+                    .foregroundColor(.App.purpleDark)
+            }
         }
     }
 
@@ -24,6 +43,9 @@ struct SitterListView: View {
 
     /// The view model responsible for providing data to the view.
     @StateObject private var viewModel = SitterListViewModel()
+
+    private let tryAgainButtonText = "Try again"
+    private let noAvailableSittersMessage = "There are no available sitters right now."
 }
 
 struct SitterListView_Previews: PreviewProvider {

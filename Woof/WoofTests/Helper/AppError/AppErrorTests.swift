@@ -9,6 +9,8 @@ final class AppErrorTests: XCTestCase {
         let expectedAppErrors: Set<AppError> = [
             .saveLocallyFailed,
             .uploadFailed,
+            .downloadFailed,
+            .noInternetConnection,
         ]
 
         // Then
