@@ -1,6 +1,6 @@
 # WOOF application 
 
-⚠️ The app is under active development.
+⚠️ The application is under active development.
 
 ## Current dev environment 
 
@@ -22,7 +22,7 @@
 
 The repo contains the source code of the `Woof` application.
 The `Woof` application is an iOS app that provides the opportunity to connect dog owners and pet sitters to build trusted relationships between them.
-You can use the app in 2 modes: like a pet owner or like a pet sitter.
+You can use the application in 2 modes: like a pet owner or like a pet sitter.
 As a pet owner, you can find a sitter for your pet(s) and manage a schedule of your pets' walks, which makes the process of caring for your lovely doggies easier.
 As a pet sitter, you can provide the service of walks using your own schedule, prices, and other requirements, if needed.
 
@@ -34,11 +34,11 @@ As a pet sitter, you can provide the service of walks using your own schedule, p
 
 1. Click “Download” to install the TestFlight application.
 
-1. After installation, open the application. A TestFlight app notification appears asking for permission to send notifications. Click “Allow” to receive notifications about app updates.
+1. After installation, open the application. A TestFlight app notification appears asking for permission to send notifications. Click “Allow” to receive notifications about application updates.
 
-1. On the “Welcome” screen, click the “Continue” button. You can now install the Woof mobile app. Follow the link below: https://testflight.apple.com/join/mGNJXIwt
+1. On the “Welcome” screen, click the “Continue” button. You can now install the Woof mobile application. Follow the link below: https://testflight.apple.com/join/mGNJXIwt
 
-1. The invitation screen for the Woof app will appear with a description of the app. Click “Accept” to accept the invitation to our beta testing program.
+1. The invitation screen for the Woof application will appear with a description of the application. Click “Accept” to accept the invitation to our beta testing program.
 
 1. After accepting the invitation, click “Install” to install the Woof application.
 
@@ -48,7 +48,7 @@ As a pet sitter, you can provide the service of walks using your own schedule, p
 
 1. Click “Start Testing” to complete the installation process.
 
-1. You will see the “Welcome” screen of the Woof app. Choose role and start using the application.
+1. You will see the “Welcome” screen of the Woof application. Choose role and start using the application.
 
 ### For versions 0.1.0 - 0.3.1
 
@@ -61,7 +61,7 @@ As a pet sitter, you can provide the service of walks using your own schedule, p
 1. Navigate into the downloaded folder and open the `Woof.xcodeproj` file in Xcode.
 1. Select your device as a run destination for the project. If you don't know how to run the app on a real device, please check the [documentation](https://developer.apple.com/documentation/xcode/running-your-app-in-simulator-or-on-a-device).
 1. Press the `Run` button.
-1. Profit! Enjoy the app. 🥳
+1. Profit! Enjoy the application. 🥳
 
 ## Authors
 
