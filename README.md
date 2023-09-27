@@ -30,25 +30,23 @@ As a pet sitter, you can provide the service of walks using your own schedule, p
 
 ### For version 0.4.0
 
-1. Click [Here](https://apps.apple.com/us/app/testflight/id899247664?mt=8) to find the TestFlight application in the AppStore
+**Pre-requisites**:
 
-1. Click “Download” to install the TestFlight application.
+Installed `TestFlight`. If you don't how to install the `TestFlight` please follow the next steps:
+1. Click [here](ttps://apps.apple.com/us/app/testflight/id899247664?mt=8) to find the `TestFlight` application in the `AppStore`.
+1. Click `Download` to install the `TestFlight` application.
+1. After installation, open the application. A `TestFlight` notification appears asking for permission to send notifications. Click `Allow` to receive notifications about app updates.
+1. On the `Welcome` screen, click the `Continue` button. 
 
-1. After installation, open the application. A TestFlight app notification appears asking for permission to send notifications. Click “Allow” to receive notifications about application updates.
+**Installation process**:
 
-1. On the “Welcome” screen, click the “Continue” button. You can now install the Woof mobile application. Follow the link below: https://testflight.apple.com/join/mGNJXIwt
-
-1. The invitation screen for the Woof application will appear with a description of the application. Click “Accept” to accept the invitation to our beta testing program.
-
-1. After accepting the invitation, click “Install” to install the Woof application.
-
-1. You can then open the Woof application by clicking the “Open” button.
-
-1. Finally, you will see a screen with the application version and changelog; here we publish what has been updated in the current version. Click “Next” to continue.
-
-1. Click “Start Testing” to complete the installation process.
-
-1. You will see the “Welcome” screen of the Woof application. Choose role and start using the application.
+1. You can now install the `Woof` mobile app following the link below: https://testflight.apple.com/join/mGNJXIwt
+1. The invitation screen for the `Woof` application will appear with a description of the application. Click `Accept` to accept the invitation to our beta testing program.
+1. After accepting the invitation, click `Install` to install the `Woof` application.
+1. You can then open the `Woof` application by clicking the `Open` button.
+1. Finally, you will see a screen with the application version and changelog, here we publish what has been updated in the current version. Click `Next` to continue.
+1. Click `Start Testing` to complete the installation process.
+1. Now you can use the `Woof` application. Choose role and enjoy the application.
 
 ### For versions 0.1.0 - 0.3.1
 
