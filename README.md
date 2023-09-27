@@ -38,8 +38,6 @@ As a pet sitter, you can provide the service of walks using your own schedule, p
 
 1. On the “Welcome” screen, click the “Continue” button. You can now install the Woof mobile app. Follow the link below: https://testflight.apple.com/join/mGNJXIwt
 
-1. Click “Start Testing” in Step 2 to open the installation prompt in the TestFlight app.
-
 1. The invitation screen for the Woof app will appear with a description of the app. Click “Accept” to accept the invitation to our beta testing program.
 
 1. After accepting the invitation, click “Install” to install the Woof application.
