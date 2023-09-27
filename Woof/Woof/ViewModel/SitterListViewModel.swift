@@ -40,19 +40,19 @@ final class SitterListViewModel: ObservableObject {
                 }
             }
         } catch {
-            if let error = error as? URLError, error.code == .notConnectedToInternet {
-                await MainActor.run {
-                    handleError(AppError.noInternetConnection)
-                }
-            } else {
-                await MainActor.run {
-                    handleError(AppError.downloadFailed)
-                }
+            let error = (error as? URLError)?.code == .notConnectedToInternet
+                ? AppError.noInternetConnection
+                : AppError.downloadFailed
+
+            await MainActor.run {
+                handleError(error)
             }
         }
 
         await MainActor.run { isLoading = false }
     }
+
+    // MARK: - Private interface
 
     @MainActor private func handleError(_ error: Error) {
         guard let appError = error as? AppError else {
@@ -61,6 +61,5 @@ final class SitterListViewModel: ObservableObject {
         }
 
         errorMessage = appError.errorDescription
-        isLoading = false
     }
 }
