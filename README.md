@@ -1,6 +1,6 @@
 # WOOF application 
 
-⚠️ The application is under active development.
+⚠️ The application development continues in this [repo](https://github.com/IronFoundation/iOS-Woof).
 
 ## Current dev environment 
 
